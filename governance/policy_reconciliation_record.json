@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "created_at_utc": "2026-10-07T01:21:00Z",
+  "topic": "HITL Ambiguity Margin & Divergence Threshold Policy Reconciliation",
+  "branch": "feat/hitl-margin-autonomous-bypass-20261006",
+  "authority_status": "CHARACTERIZED_AND_FROZEN",
+  "reconciliation_summary": {
+    "effective_runtime_ambiguity_threshold": 0.30,
+    "registry_declared_ambiguity_threshold": 0.15,
+    "effective_divergence_threshold": 0.20,
+    "reconciliation_policy": "Characterization adheres strictly to effective runtime snapshot 0.30 for ambiguity gating and 0.20 for divergence arbitration. Permanent convergence in governance/policy_registry.yaml or pyproject.toml requires explicit governance approval and is deferred to formal policy change."
+  },
+  "surface_inventory": [
+    {
+      "surface": "governance_policy_registry",
+      "file_path": "governance/policy_registry.yaml",
+      "parameter_id": "INV-HITL-AMBIGUITY-MARGIN",
+      "threshold": 0.15,
+      "unit": "fraction",
+      "status": "FROZEN_PENDING_GOVERNED_RATIFICATION"
+    },
+    {
+      "surface": "governance_policy_registry",
+      "file_path": "governance/policy_registry.yaml",
+      "parameter_id": "INV-HITL-DIVERGENCE-MARGIN",
+      "threshold": 0.20,
+      "unit": "fraction",
+      "status": "ALIGNED"
+    },
+    {
+      "surface": "pyproject_toml",
+      "file_path": "pyproject.toml",
+      "parameter_id": "tool.nee.budgets.hitl_ambiguity_margin_threshold",
+      "threshold": 0.15,
+      "unit": "fraction",
+      "status": "FROZEN_PENDING_GOVERNED_RATIFICATION"
+    },
+    {
+      "surface": "pyproject_toml",
+      "file_path": "pyproject.toml",
+      "parameter_id": "tool.nee.budgets.hitl_divergence_margin_threshold",
+      "threshold": 0.20,
+      "unit": "fraction",
+      "status": "ALIGNED"
+    },
+    {
+      "surface": "runtime_parameters_json",
+      "file_path": "config/runtime/parameters.json",
+      "parameter_id": "hitl.ambiguity_margin_threshold",
+      "threshold": 0.30,
+      "unit": "fraction",
+      "status": "ACTIVE_RUNTIME_SSOT"
+    },
+    {
+      "surface": "runtime_parameters_json",
+      "file_path": "config/runtime/parameters.json",
+      "parameter_id": "hitl.divergence_margin_threshold",
+      "threshold": 0.20,
+      "unit": "fraction",
+      "status": "ACTIVE_RUNTIME_SSOT"
+    },
+    {
+      "surface": "parameters_python_accessor",
+      "file_path": "dual_pipeline/parameters.py",
+      "parameter_id": "get_hitl_ambiguity_margin_threshold()",
+      "threshold": 0.30,
+      "unit": "fraction",
+      "status": "ACTIVE_RUNTIME_SSOT"
+    },
+    {
+      "surface": "parameters_python_accessor",
+      "file_path": "dual_pipeline/parameters.py",
+      "parameter_id": "get_hitl_divergence_margin_threshold()",
+      "threshold": 0.20,
+      "unit": "fraction",
+      "status": "ACTIVE_RUNTIME_SSOT"
+    },
+    {
+      "surface": "rules_hitl_decisions",
+      "file_path": ".agents/rules/hitl-decisions.md",
+      "parameter_id": "Ambiguity Gating (SSOT Margin Rule)",
+      "threshold": 0.30,
+      "unit": "fraction",
+      "status": "ACTIVE_RULE_SSOT"
+    },
+    {
+      "surface": "agents_md_rules",
+      "file_path": "AGENTS.md",
+      "parameter_id": "HITL Decision Invariant",
+      "threshold": 0.30,
+      "unit": "fraction",
+      "status": "ACTIVE_RULE_SSOT"
+    }
+  ],
+  "mathematical_characterization_probes": [
+    {
+      "probe_id": "PROBE_INCIDENT_CANDIDATE_095_052",
+      "scores": [0.95, 0.52],
+      "margin": 0.43,
+      "ambiguity_threshold": 0.30,
+      "needs_operator_decision": false,
+      "surface_hitl_evaluator": false,
+      "entropy_2_options": 0.9374,
+      "cardinality": 2,
+      "notes": "Decisive margin: 43% strictly exceeds 30% ambiguity threshold. Surface HITL is False."
+    },
+    {
+      "probe_id": "PROBE_BOUNDARY_EQUAL_THRESHOLD_090_060",
+      "scores": [0.90, 0.60],
+      "margin": 0.30,
+      "ambiguity_threshold": 0.30,
+      "needs_operator_decision": true,
+      "surface_hitl_evaluator": true,
+      "entropy_2_options": 0.9710,
+      "cardinality": 2,
+      "notes": "Exact boundary condition: spread == 0.30 requires operator review (inclusive boundary)."
+    },
+    {
+      "probe_id": "PROBE_AMBIGUOUS_WITHIN_THRESHOLD_090_065",
+      "scores": [0.90, 0.65],
+      "margin": 0.25,
+      "ambiguity_threshold": 0.30,
+      "needs_operator_decision": true,
+      "surface_hitl_evaluator": true,
+      "entropy_2_options": 0.9812,
+      "cardinality": 2,
+      "notes": "Spread is 25% <= 30% ambiguity threshold; requires operator review."
+    }
+  ]
+}

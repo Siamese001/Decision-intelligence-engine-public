@@ -105,10 +105,37 @@ QUERY_TRIGGER_PATTERNS = (
     re.compile(r"^/query\b", re.IGNORECASE),
 )
 
-DOMAIN_ENTITY_PATTERNS = re.compile(
-    r"\b(NEE|Apex Global|Dan\s+Okray|Stephan|Amit\s+Ayer|Rewire|Project\s+Lens|Project\s+Nexus|Project\s+Jarvis|APEX_TRANS|NEA|Digital\s+Sherpa|DocIQ|HRIT|Conduit)\b",
-    re.IGNORECASE,
-)
+def _build_domain_entity_pattern() -> re.Pattern[str]:
+    """Dynamically build domain entity matcher from config/governance/project_registry.json SSOT."""
+    tokens: set[str] = {"NEE", "Apex Global"}
+    reg_path = Path(__file__).resolve().parent.parent / "config" / "governance" / "project_registry.json"
+    if reg_path.is_file():
+        try:
+            data = json.loads(reg_path.read_text(encoding="utf-8"))
+            domains = data.get("domains", {})
+            for dom_key, dom_val in domains.items():
+                if isinstance(dom_key, str) and len(dom_key) >= 3:
+                    tokens.add(dom_key)
+                if isinstance(dom_val, dict):
+                    for ws in (dom_val.get("workstreams") or {}).values():
+                        if isinstance(ws, dict):
+                            for k in ("short_id", "display_name"):
+                                val = ws.get(k)
+                                if isinstance(val, str) and len(val.strip()) >= 3:
+                                    tokens.add(val.strip())
+                            for alias in ws.get("aliases") or ():
+                                if isinstance(alias, str) and len(alias.strip()) >= 4:
+                                    tokens.add(alias.strip())
+            for kp in data.get("known_projects") or ():
+                if isinstance(kp, str) and len(kp.strip()) >= 3:
+                    tokens.add(kp.strip())
+        except Exception:
+            pass
+    escaped = sorted((re.escape(t).replace(r"\ ", r"\s+") for t in tokens if t), key=len, reverse=True)
+    return re.compile(r"\b(" + "|".join(escaped) + r")\b", re.IGNORECASE)
+
+
+DOMAIN_ENTITY_PATTERNS = _build_domain_entity_pattern()
 
 COMMAND_ONLY_PATTERNS = re.compile(
     r"^(?:continue\b|status\b|git\b|test\b|run\b|pr\b|commit\b|rebase\b|wave\b|w\d+\b|rca\b|did\s+this\b|explain\b|does\b|show\b)",

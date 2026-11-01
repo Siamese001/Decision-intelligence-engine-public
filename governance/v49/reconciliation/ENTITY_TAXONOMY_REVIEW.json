@@ -1,0 +1,14 @@
+{
+  "identity_changes": 0,
+  "public_entities_kept_distinct": [
+    "Apex Global, Inc.",
+    "Florida Power & Light",
+    "Apex Global Resources",
+    "Apex Global Transmission",
+    "Apex Global Partners / successor public naming where applicable",
+    "Apex Global Analytics / NEA — internal/public equivalence not assumed",
+    "NEE IT — internal group; no public equivalent assumed"
+  ],
+  "rule": "No internal graph entity is merged with a public entity by name similarity or contextual proximity.",
+  "status": "pass"
+}

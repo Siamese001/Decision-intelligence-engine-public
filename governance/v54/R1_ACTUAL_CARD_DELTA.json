@@ -1,0 +1,163 @@
+{
+  "approval_decision_id": "AD-V54-EDO-AUTHORITY-BOUNDARY-2026-001",
+  "approved_card_proposal_sha256": "e8e1bf3649331a618a2d59cd06ac6d10a63203edf56a990344ee39dbb7145d22",
+  "body_change_count": 3,
+  "canonical_serialization_sha256": "3780118e0850b1fa421a4dc4b8a634032158dc421662203de652eecbad919c4a",
+  "card_count": 6,
+  "cards": [
+    {
+      "actual_after_sha256": "4c6afaef7ffe30139181e55d5c1ccd970aad93e052d138e306e0010bb2158221",
+      "approved_after_sha256": "4c6afaef7ffe30139181e55d5c1ccd970aad93e052d138e306e0010bb2158221",
+      "before_sha256": "4c6afaef7ffe30139181e55d5c1ccd970aad93e052d138e306e0010bb2158221",
+      "body_changed": false,
+      "card_id": "NEE_02",
+      "exact_match": true,
+      "impact_types": [
+        "routing"
+      ],
+      "path": "cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md",
+      "routing_changes": [
+        {
+          "object_id": "route_9a494ca7e0a062b37286d4ea",
+          "object_type": "canonical_route",
+          "operation_type": "retire"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "61abbe614b37d164dad7b1be25aa05a06da0eaec3a7a0d465a78a13a13a5330e",
+      "approved_after_sha256": "61abbe614b37d164dad7b1be25aa05a06da0eaec3a7a0d465a78a13a13a5330e",
+      "before_sha256": "0728e3bca29ba5bd8043d457a58edfe841d6cca2868e861ea9980a10f3890c3b",
+      "body_changed": true,
+      "card_id": "NEE_06",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "org_boundary",
+        "provenance"
+      ],
+      "path": "cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md",
+      "routing_changes": []
+    },
+    {
+      "actual_after_sha256": "103889e6a93da2d00a41779708e6ff2311a91b0bb23543b36a42d488bbd8de8d",
+      "approved_after_sha256": "103889e6a93da2d00a41779708e6ff2311a91b0bb23543b36a42d488bbd8de8d",
+      "before_sha256": "1b8ae2358efa6943a513b2f10d644decc8144bb3b794a1166cdca5acaac4d33a",
+      "body_changed": true,
+      "card_id": "NEE_10",
+      "exact_match": true,
+      "impact_types": [
+        "stakeholder",
+        "org_boundary",
+        "routing"
+      ],
+      "path": "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+      "routing_changes": [
+        {
+          "object_id": "route_v54_e5035f05b2d278947a2cc7734b5155d4",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v54_9aec1986fb0af3e7f54f499392b61e26",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "33ae967450fa6bf1409be5d222505a4bcd660ec46b27d2e02b5ec9ac4e1a3353",
+      "approved_after_sha256": "33ae967450fa6bf1409be5d222505a4bcd660ec46b27d2e02b5ec9ac4e1a3353",
+      "before_sha256": "33ae967450fa6bf1409be5d222505a4bcd660ec46b27d2e02b5ec9ac4e1a3353",
+      "body_changed": false,
+      "card_id": "NEE_11",
+      "exact_match": true,
+      "impact_types": [
+        "routing"
+      ],
+      "path": "cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+      "routing_changes": [
+        {
+          "object_id": "route_4db8ca265822921ddd229577",
+          "object_type": "canonical_route",
+          "operation_type": "retire"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "e5bc86b14c0430468e7632ef4d4e8a81bd63d32fc1d7b8bff3c7af265e0fcc69",
+      "approved_after_sha256": "e5bc86b14c0430468e7632ef4d4e8a81bd63d32fc1d7b8bff3c7af265e0fcc69",
+      "before_sha256": "3eb7cd785d31754b6a7cfcb16fff1c6bf43f05167e9bae9bf2aa39d218fc8a8a",
+      "body_changed": true,
+      "card_id": "NEE_13",
+      "exact_match": true,
+      "impact_types": [
+        "authority",
+        "currentness",
+        "org_boundary",
+        "routing"
+      ],
+      "path": "cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md",
+      "routing_changes": [
+        {
+          "object_id": "route_699e311f6d86c62b303fc04f",
+          "object_type": "canonical_route",
+          "operation_type": "retire"
+        },
+        {
+          "object_id": "route_v54_9c203f44f911447951af64075f30e9da",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v54_2d994bae20d17f4d4f4e989849206ec0",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v54_64e8364d23e0acbcf806d428ffd57581",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v54_118edb3fe7807f617d52004e6b0f04c8",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v54_778ad44294b93e8733df6121ea2a8d45",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v54_77d389a089e7ea11b06db1c747cb841e",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "e5d5915acac35b461d9c4ab4c90a1dc5bc3933652a5b8ac4baf21f89d137c66a",
+      "approved_after_sha256": "e5d5915acac35b461d9c4ab4c90a1dc5bc3933652a5b8ac4baf21f89d137c66a",
+      "before_sha256": "e5d5915acac35b461d9c4ab4c90a1dc5bc3933652a5b8ac4baf21f89d137c66a",
+      "body_changed": false,
+      "card_id": "NEE_16",
+      "exact_match": true,
+      "impact_types": [
+        "routing"
+      ],
+      "path": "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+      "routing_changes": [
+        {
+          "object_id": "route_cc7a4df86ac86f59b62c27b7",
+          "object_type": "canonical_route",
+          "operation_type": "retire"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-07-14T16:20:00Z",
+  "implementation_id": "R1-V54-EDO-AUTHORITY-BOUNDARY-2026-001",
+  "route_only_count": 3,
+  "unlisted_cards_unchanged": true
+}

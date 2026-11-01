@@ -1,0 +1,95 @@
+"""Engineering Output Governance Package.
+
+Enforces concise, behavior-grounded completion reporting across engineering turns,
+governed tools, and delivery surfaces under .agents/rules/engineering-output.md.
+"""
+
+from .counter import (
+    MAX_ENGINEERING_CHARS,
+    MAX_ENGINEERING_WORDS,
+    MAX_PROGRESS_WORDS,
+    TARGET_MAX_WORDS,
+    TARGET_MIN_WORDS,
+    TARGET_WORDS,
+    count_characters,
+    count_words,
+    find_forbidden_jargon_sections,
+    find_forbidden_process_sections,
+    normalize_text,
+    strip_deliverable_urls,
+    validate_progress_update,
+    validate_text_limits,
+)
+from .models import (
+    ExecutionEnvironment,
+    Observation,
+    RouteType,
+    ValidationResult,
+)
+from .delivery import (
+    BASELINE_AUTHORED_CHARS,
+    BASELINE_AUTHORED_WORDS,
+    DeliveryResult,
+    DeliverySurface,
+    EnforcementAuthority,
+    compute_content_digest,
+    deliver_output,
+    measure_output_reduction,
+)
+from .renderer import (
+    render_concise_response,
+    render_deliverables_completion,
+    render_failure_response,
+    render_plan_only_response,
+)
+from .verifier import (
+    validate_engineering_response,
+    verify_crash_not_disguised,
+    verify_deliverable_links,
+    verify_mutation_and_promotion_proof,
+    verify_observation_completeness,
+    verify_observation_freshness,
+    verify_rollback_observation,
+    verify_state_change,
+)
+
+__all__ = [
+    "BASELINE_AUTHORED_CHARS",
+    "BASELINE_AUTHORED_WORDS",
+    "DeliveryResult",
+    "DeliverySurface",
+    "EnforcementAuthority",
+    "ExecutionEnvironment",
+    "MAX_ENGINEERING_CHARS",
+    "MAX_ENGINEERING_WORDS",
+    "MAX_PROGRESS_WORDS",
+    "Observation",
+    "RouteType",
+    "TARGET_MAX_WORDS",
+    "TARGET_MIN_WORDS",
+    "TARGET_WORDS",
+    "ValidationResult",
+    "compute_content_digest",
+    "count_characters",
+    "count_words",
+    "deliver_output",
+    "find_forbidden_jargon_sections",
+    "find_forbidden_process_sections",
+    "measure_output_reduction",
+    "normalize_text",
+    "render_concise_response",
+    "render_deliverables_completion",
+    "render_failure_response",
+    "render_plan_only_response",
+    "strip_deliverable_urls",
+    "validate_engineering_response",
+    "validate_progress_update",
+    "validate_text_limits",
+    "verify_crash_not_disguised",
+    "verify_deliverable_links",
+    "verify_mutation_and_promotion_proof",
+    "verify_observation_completeness",
+    "verify_observation_freshness",
+    "verify_rollback_observation",
+    "verify_state_change",
+]

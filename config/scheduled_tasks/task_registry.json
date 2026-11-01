@@ -210,6 +210,17 @@
       ],
       "coverage_rules": {
         "targets": [
+          "**/*",
+          "scripts/",
+          "tools/",
+          "automations/",
+          "dual_pipeline/",
+          "storage/",
+          "pipeline_a_intake/",
+          "pipeline_b_extraction/",
+          "pipeline_c_retrieval/",
+          "contracts/",
+          "migrations/",
           "governance/policy_registry.yaml",
           "governance/decision_intelligence/",
           "config/prompts/synthesis/stages/",

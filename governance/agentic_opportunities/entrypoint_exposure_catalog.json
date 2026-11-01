@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_id": "urn:nee:catalog:entrypoint-exposure:wave1",
+  "generated_at": "2026-10-08T19:00:00Z",
+  "workflows": [
+    {
+      "workflow_id": "WF-01-LIVE-RECORDING",
+      "domain": "live_copilot",
+      "modality": "audio/transcript",
+      "producer_entrypoint": "nee.py record-meeting",
+      "consumer_readback": "dual_pipeline.answer_ledger.AnswerLedger / live transcript events",
+      "evaluator_kind": "deterministic_oracle",
+      "evaluator_identity": "dual_pipeline.live_meeting_recorder_core.grounding_verifier",
+      "mutation_boundary": "session_event_queue / memory_context",
+      "evidence_level": "entrypoint_qualified",
+      "rollback_mechanism": "session abort / uncommitted audio discard"
+    },
+    {
+      "workflow_id": "WF-02-DOCUMENT-INTAKE",
+      "domain": "document_ingestion",
+      "modality": "notes/documents/attachments",
+      "producer_entrypoint": "nee.py ingest-document",
+      "consumer_readback": "dual_pipeline.canonical_pipeline.lifecycle / source_manifest",
+      "evaluator_kind": "structural_heuristic",
+      "evaluator_identity": "dual_pipeline.document_pipeline_core.preflight.PreflightChecker",
+      "mutation_boundary": "sandbox conversion cache / intake staging",
+      "evidence_level": "source_bound",
+      "rollback_mechanism": "staging cache purge / transaction rollback"
+    },
+    {
+      "workflow_id": "WF-03-CANONICAL-INGESTION",
+      "domain": "canonical_nee",
+      "modality": "ingestion",
+      "producer_entrypoint": "nee.py ingest-meeting",
+      "consumer_readback": "CANONICAL_GRAPH.db assertions / Merkle receipts",
+      "evaluator_kind": "deterministic_oracle",
+      "evaluator_identity": "tools.validate_output_hierarchy / C01-C19 gates",
+      "mutation_boundary": "CANONICAL_GRAPH.db via Universal Write Gateway",
+      "evidence_level": "source_bound",
+      "rollback_mechanism": "UWG atomic transaction rollback / active pair revert"
+    },
+    {
+      "workflow_id": "WF-04-QUERY-AND-DECISION",
+      "domain": "query_decision_intelligence",
+      "modality": "query/copilot",
+      "producer_entrypoint": "nee.py query",
+      "consumer_readback": "AnswerLedger / decision frame evaluation report",
+      "evaluator_kind": "semantic_judge",
+      "evaluator_identity": "dual_pipeline.evals.answer_eval_core.judge.evaluate_with_semantic_judge",
+      "mutation_boundary": "read-only snapshot / AnswerLedger append",
+      "evidence_level": "entrypoint_qualified",
+      "rollback_mechanism": "ledger record quarantine / query cache eviction"
+    },
+    {
+      "workflow_id": "WF-05-DECISION-FRAME-SERVICE",
+      "domain": "decision_intelligence",
+      "modality": "decisions",
+      "producer_entrypoint": "DecisionService.evaluate_decision",
+      "consumer_readback": "typed decision frame / option ranking ledger",
+      "evaluator_kind": "deterministic_oracle",
+      "evaluator_identity": "dual_pipeline.decision_service_core.service.DecisionValidator",
+      "mutation_boundary": "hitl_decision_ledger.sqlite / read-only decision frames",
+      "evidence_level": "model_qualified",
+      "rollback_mechanism": "frame revocation / audit tombstone"
+    },
+    {
+      "workflow_id": "WF-06-GRAPH-MAINTENANCE",
+      "domain": "graph_maintenance",
+      "modality": "maintenance",
+      "producer_entrypoint": "tools.govern_learning_proposals",
+      "consumer_readback": "maintenance_swarm audit trail / dry-run diffs",
+      "evaluator_kind": "deterministic_oracle",
+      "evaluator_identity": "dual_pipeline.maintenance_swarm.HarmPlanner",
+      "mutation_boundary": "candidate maintenance branch / dry-run sandbox",
+      "evidence_level": "component_level",
+      "rollback_mechanism": "candidate release abort / proposal retraction"
+    },
+    {
+      "workflow_id": "WF-07-RELEASE-GATEWAY",
+      "domain": "release_lifecycle",
+      "modality": "release",
+      "producer_entrypoint": "tools.release_governance.py promote",
+      "consumer_readback": "active_pair.json / 11 BGE-M3 qualification gates",
+      "evaluator_kind": "deterministic_oracle",
+      "evaluator_identity": "dual_pipeline.retrieval_release_core.evaluator",
+      "mutation_boundary": "active_pair pointer / universal write gateway",
+      "evidence_level": "entrypoint_qualified",
+      "rollback_mechanism": "previous active pair pointer restoration"
+    },
+    {
+      "workflow_id": "WF-08-GOVERNED-CLI-MCP",
+      "domain": "governed_interfaces",
+      "modality": "CLI/MCP",
+      "producer_entrypoint": "nee.py CLI / mcp_server",
+      "consumer_readback": "standard streams / RFC 8259 structured JSON-RPC responses",
+      "evaluator_kind": "structural_heuristic",
+      "evaluator_identity": "tools.validate_mcp_design / runtime_tool_adapter",
+      "mutation_boundary": "governed tool dispatch / zero unauthorized side effects",
+      "evidence_level": "entrypoint_qualified",
+      "rollback_mechanism": "fail-closed command exit / transaction abort"
+    }
+  ],
+  "evaluators": {
+    "structural_heuristic": {
+      "kind": "structural_heuristic",
+      "description": "Rule-based structural scoring inspecting citation count and seeds; does NOT verify semantic truthfulness or relevance.",
+      "qualifies_policy_promotion": false
+    },
+    "deterministic_oracle": {
+      "kind": "deterministic_oracle",
+      "description": "Deterministic AST, schema, or cryptographic verifier with binary pass/fail outcomes.",
+      "qualifies_policy_promotion": true
+    },
+    "semantic_judge": {
+      "kind": "semantic_judge",
+      "description": "Blinded semantic evaluation over held-out datasets measuring grounding, contradiction absence, and intent coverage.",
+      "qualifies_policy_promotion": true
+    }
+  },
+  "rollout_controls": {
+    "tiers": [
+      {
+        "tier_id": "ISOLATED_QUALIFICATION",
+        "description": "Hermetic sandbox test evaluation on frozen holdout split; zero production side effects.",
+        "requires_operator_approval": false,
+        "requires_predecessor_locks": true
+      },
+      {
+        "tier_id": "NARROW_OPERATOR_PILOT",
+        "description": "Explicit operator-authorized pilot limited to specific named projects or users.",
+        "requires_operator_approval": true,
+        "requires_predecessor_locks": true
+      },
+      {
+        "tier_id": "BROAD_APPROVED_COHORT",
+        "description": "Broad deployment across all authorized operational surfaces with real-time guardrail monitoring.",
+        "requires_operator_approval": true,
+        "requires_predecessor_locks": true
+      }
+    ],
+    "fail_closed_policy": "Any guardrail violation or missing authority immediately rolls back capability to ISOLATED_QUALIFICATION or DISABLED."
+  }
+}

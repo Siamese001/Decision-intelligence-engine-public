@@ -1,0 +1,404 @@
+{
+  "actual_card_diff_sha256": "9175674415870a148385a4bb5fa0f7dbff2691937c195df9d88e7af737764828",
+  "actual_graph_delta_sha256": "c09818c22df0918fbcf94d1ea762ee71ab03b96a762d6d1cc527ce0712857836",
+  "affected_card_ids": [
+    "NEE_07",
+    "NEE_12",
+    "NEE_16",
+    "NEE_22",
+    "NEE_99"
+  ],
+  "approval_decision_id": "AD-V53-SHERPA-ANDY-LILLIAN-2026-001",
+  "approval_precedes_first_write": true,
+  "approved_card_diff_sha256": "a33c083d2321413d38ec9e4bb67430eee965d4cd5dd91cf80b3559c7ab24c9c2",
+  "approved_graph_delta_sha256": "12dc925855f4bceca22cda2dfe87af1dfa11541f7678db16d9f161d21c55c59a",
+  "automatic_release_state_activation": {
+    "decision_id": "PD-51.1-AUTO-PROMOTION-AFTER-R1-O1",
+    "result": "approved_current",
+    "separate_promotion_step": false
+  },
+  "baseline_graph_sha256": "d2fccfee82f5b944a0eedc5cf99dff34f2f22385a143cadb4218e0231b489b44",
+  "baseline_immutability_result": "PASS",
+  "baseline_zip_sha256": "98ea24a563b7815593b65f92730ed22e32adf464b5860bc715f3f6ee49ed3284",
+  "card_conformance": {
+    "c1": "4/4",
+    "control_policy": "1/1",
+    "result": "PASS",
+    "unlisted_non_policy_card_changes": 0
+  },
+  "component_counts": {
+    "alias": {
+      "after": 429,
+      "before": 429,
+      "delta": 0
+    },
+    "assertion": {
+      "after": 1682,
+      "before": 1670,
+      "delta": 12
+    },
+    "assertion_evidence": {
+      "after": 1720,
+      "before": 1697,
+      "delta": 23
+    },
+    "canonical_alias": {
+      "after": 424,
+      "before": 424,
+      "delta": 0
+    },
+    "canonical_route": {
+      "after": 3940,
+      "before": 3890,
+      "delta": 50
+    },
+    "card": {
+      "after": 19,
+      "before": 19,
+      "delta": 0
+    },
+    "claim": {
+      "after": 580,
+      "before": 568,
+      "delta": 12
+    },
+    "edge": {
+      "after": 1069,
+      "before": 1069,
+      "delta": 0
+    },
+    "evidence_item": {
+      "after": 1614,
+      "before": 1602,
+      "delta": 12
+    },
+    "legacy_claim_assertion_map": {
+      "after": 580,
+      "before": 568,
+      "delta": 12
+    },
+    "legacy_edge_assertion_map": {
+      "after": 1069,
+      "before": 1069,
+      "delta": 0
+    },
+    "node": {
+      "after": 652,
+      "before": 652,
+      "delta": 0
+    },
+    "node_card_map": {
+      "after": 1628,
+      "before": 1628,
+      "delta": 0
+    },
+    "node_state": {
+      "after": 652,
+      "before": 652,
+      "delta": 0
+    },
+    "search_document": {
+      "after": 2262,
+      "before": 2250,
+      "delta": 12
+    },
+    "source": {
+      "after": 173,
+      "before": 172,
+      "delta": 1
+    },
+    "source_version": {
+      "after": 173,
+      "before": 172,
+      "delta": 1
+    },
+    "validation": {
+      "after": 184,
+      "before": 182,
+      "delta": 2
+    }
+  },
+  "drift_result": "no_drift",
+  "first_canonical_write_at": "2026-07-13T22:48:34Z",
+  "g1_inline_output_sha256": "e500b9e48e4b459c619b920793036f9124e1b32c4128c5fe4d2c48f794eb82ce",
+  "generated_at": "2026-07-13T22:48:36Z",
+  "graph_operation_conformance": "139/139 exact",
+  "implementation_id": "R1-V53-SHERPA-ANDY-LILLIAN-2026-001",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Reframe the gap using July 13 evidence; distinguish existing offline/nightly practice from unresolved in-path runtime assurance and add the shared scorecard implication.",
+        "card": "NEE_07",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Lillian Le and Andy Kilinskis meeting evidence plus existing Brien Muschett feedback; source attribution and artifact gaps remain explicit.",
+        "retrieval_improvement": "Directly answers AI-SDLC maturity, offline-versus-runtime classification, and evaluation-control questions from the canonical eval card."
+      },
+      {
+        "addition": "Add platform lessons on in-house eval ownership, invisible foundational work, and evidence required for reported AI-assisted cycle-time gains.",
+        "card": "NEE_12",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "July 13 participant-attributed statements; no independent metric or vendor-status inference.",
+        "retrieval_improvement": "Improves platform-pattern retrieval for vendor dependency, foundational delivery, and AI-assisted engineering evidence."
+      },
+      {
+        "addition": "Register source hash, date, participants, authority boundary, cold pointer, and unresolved Brian/Brien identity.",
+        "card": "NEE_16",
+        "change_type": "body+frontmatter",
+        "defense_or_evidence": "Exact input SHA-256 and user participant correction; no raw note is proposed for a successor package.",
+        "retrieval_improvement": "Enables deterministic provenance and identity-boundary lookup for every July 13 claim."
+      },
+      {
+        "addition": "Update Sherpa current-state posture to source-attributed offline/nightly capability with artifact, runtime-authority, and scorecard gaps still open.",
+        "card": "NEE_22",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "July 13 meeting notes, current SOW scope, and existing Brien Muschett runtime/system-eval direction.",
+        "retrieval_improvement": "Improves current Sherpa architecture and evaluation retrieval without overstating implementation maturity."
+      },
+      {
+        "addition": "Clarify that direct natural-language approval after a passed Phase A Gate O1 surface is sufficient; the system binds exact hashes.",
+        "card": "NEE_99",
+        "change_type": "control_policy",
+        "defense_or_evidence": "Explicit user instruction in the current conversation; PD-53 records the approved prospective rule.",
+        "retrieval_improvement": "Future update workflows no longer require the user to copy formulaic digest wording while exact machine binding and fail-closed ambiguity controls remain."
+      }
+    ],
+    "graph_delta_rows": [
+      {
+        "baseline": "172",
+        "change": "Implemented exactly: +1 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "source",
+        "delta": "1",
+        "graph_component": "Sources",
+        "proposed_or_actual": "173",
+        "retrieval_rationale": "Adds exact-match retrieval and provenance for the July 13 Sherpa discussion with scoped authority and a cold pointer."
+      },
+      {
+        "baseline": "172",
+        "change": "Implemented exactly: +1 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "source_version",
+        "delta": "1",
+        "graph_component": "Source versions",
+        "proposed_or_actual": "173",
+        "retrieval_rationale": "Binds content hash, date precision, authority, scope, and posture so lineage traversal reaches the exact source version."
+      },
+      {
+        "baseline": "1602",
+        "change": "Implemented exactly: +12 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "evidence_item",
+        "delta": "12",
+        "graph_component": "Evidence items",
+        "proposed_or_actual": "1614",
+        "retrieval_rationale": "Adds exact line-level evidence locators for participant-attributed Sherpa evaluation, SDLC, visibility, and velocity statements."
+      },
+      {
+        "baseline": "652",
+        "change": "Implemented exactly: no row-count change.",
+        "component_key": "node",
+        "delta": "0",
+        "graph_component": "Nodes",
+        "proposed_or_actual": "652",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "652",
+        "change": "Implemented exactly: no row-count change.",
+        "component_key": "node_state",
+        "delta": "0",
+        "graph_component": "Node states",
+        "proposed_or_actual": "652",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "429",
+        "change": "Implemented exactly: no row-count change.",
+        "component_key": "alias",
+        "delta": "0",
+        "graph_component": "Aliases",
+        "proposed_or_actual": "429",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "424",
+        "change": "Implemented exactly: no row-count change.",
+        "component_key": "canonical_alias",
+        "delta": "0",
+        "graph_component": "Canonical aliases",
+        "proposed_or_actual": "424",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1069",
+        "change": "Implemented exactly: no row-count change.",
+        "component_key": "edge",
+        "delta": "0",
+        "graph_component": "Edges",
+        "proposed_or_actual": "1069",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "568",
+        "change": "Implemented exactly: +12 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "claim",
+        "delta": "12",
+        "graph_component": "Claims",
+        "proposed_or_actual": "580",
+        "retrieval_rationale": "Adds source-attributed and explicitly marked synthesis statements that answer Sherpa eval maturity, nearline/runtime classification, delivery evidence, and scorecard questions."
+      },
+      {
+        "baseline": "1670",
+        "change": "Implemented exactly: +12 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "assertion",
+        "delta": "12",
+        "graph_component": "Assertions",
+        "proposed_or_actual": "1682",
+        "retrieval_rationale": "Makes each new claim evidence-linked, temporally scoped, currentness-aware, and decision-safe for typed graph retrieval."
+      },
+      {
+        "baseline": "1697",
+        "change": "Implemented exactly: +23 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "assertion_evidence",
+        "delta": "23",
+        "graph_component": "Assertion-evidence links",
+        "proposed_or_actual": "1720",
+        "retrieval_rationale": "Enables citation and lineage traversal from each assertion to exact July 13 lines and existing Brien Muschett evidence."
+      },
+      {
+        "baseline": "568",
+        "change": "Implemented exactly: +12 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "legacy_claim_assertion_map",
+        "delta": "12",
+        "graph_component": "Claim-assertion lineage maps",
+        "proposed_or_actual": "580",
+        "retrieval_rationale": "Preserves compatibility lookup from legacy claim IDs to canonical assertion IDs."
+      },
+      {
+        "baseline": "1069",
+        "change": "Implemented exactly: no row-count change.",
+        "component_key": "legacy_edge_assertion_map",
+        "delta": "0",
+        "graph_component": "Edge-assertion lineage maps",
+        "proposed_or_actual": "1069",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "3890",
+        "change": "Implemented exactly: +50 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "canonical_route",
+        "delta": "50",
+        "graph_component": "Canonical routes",
+        "proposed_or_actual": "3940",
+        "retrieval_rationale": "Routes every new claim and assertion to its primary and supporting card homes for deterministic synthesis retrieval."
+      },
+      {
+        "baseline": "1628",
+        "change": "Implemented exactly: no row-count change.",
+        "component_key": "node_card_map",
+        "delta": "0",
+        "graph_component": "Node-to-card mappings",
+        "proposed_or_actual": "1628",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "182",
+        "change": "Implemented exactly: +2 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "validation",
+        "delta": "2",
+        "graph_component": "Validations",
+        "proposed_or_actual": "184",
+        "retrieval_rationale": "Updates existing Sherpa evidence questions and adds owned, dated closures for the shared velocity scorecard and unresolved Brian/Brien identity."
+      },
+      {
+        "baseline": "2250",
+        "change": "Implemented exactly: +12 row(s); exact adds/updates are listed in the G1 operation inventory.",
+        "component_key": "search_document",
+        "delta": "12",
+        "graph_component": "Search documents",
+        "proposed_or_actual": "2262",
+        "retrieval_rationale": "Indexes the new canonical claims for lexical retrieval of offline harness, nightly evaluation, runtime constraints, foundational work, and KPI gaps."
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "No nodes are added; claims attach to existing Sherpa and AI-SDLC nodes.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No node or alias is added. Andy Kilinskis, Lillian Le, Amit Ayer, and Brien Muschett reuse existing identities; Brian remains unresolved.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "5 candidate groups → 5 candidate groups (+0; 0 new high-impact duplicates)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No edge is added or changed.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No relationship vocabulary or edge family is added.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All 12 implemented claims have a subject, source, confidence, HITL, evidence, canonical assertion map, and active route.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The new material source has a 64-character fingerprint and content hash, exact date posture, authority rank, scope, and allowed-use posture.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All new time-sensitive assertions use the exact 2026-07-13 meeting date and retain source-attributed currentness boundaries.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No Brian alias or identity mapping is implemented; an owned validation keeps the spelling unresolved.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 → 0 (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The two new P1 items have named owners and valid due dates; existing P0/P1 hygiene is preserved.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0.0000% (0/112 undated) → 0.0000% (0/114 undated) (+0.0000 pp; +2 open items, all owned and dated)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All 21 permanent retrieval cases pass on the baseline and simulated proposal; five focused Sherpa supplemental queries also pass.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0 failures / 21 cases → 0 failures / 21 cases (+0 failures)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "inline_output_gate_result": "pass",
+  "lineage_currentness_audience_hitl_results": "PASS — source-attributed claims are evidence-linked; Brian identity remains explicitly unresolved and blocked for person-specific use.",
+  "packaging_gate_result": "pass",
+  "protocol_change": {
+    "decision_id": "PD-53-NATURAL-LANGUAGE-APPROVAL-BINDING",
+    "prospective": true,
+    "status": "approved_active"
+  },
+  "r1_inline_output_sha256": "c605a19a85b3ca86ffb80680c6fc3474a6ec09695ebf4a378e761ff65422e759",
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

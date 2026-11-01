@@ -1,0 +1,53 @@
+{
+  "approved_card_proposal_sha256": "d6ed976c73c17bc99ab86fe3a775ab9610755dcd6eacdf6a1207005900101d7a",
+  "baseline_zip_sha256": "608409bdc6a092b86cd10a877af70789efb1b227aa4c1d93c11f1ad990b15c00",
+  "canonical_serialization_sha256": "af273a87e8c2c33d294f9eac43f95e65a880305fad919a493f46855c2566d79a",
+  "cards": [
+    {
+      "actual_after_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+      "actual_body_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+      "approved_after_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+      "approved_body_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+      "before_sha256": "4f1885acfa7f82c577abb4506cdbd52c343cabbc404f37d198670d705e8a1697",
+      "card_id": "NEE_99",
+      "conforms": true,
+      "frontmatter_changes": {
+        "body_sha256": {
+          "after": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+          "before": "c736087c1ef6c646b3ae3b5a54b43074e5285f36434bcf24ccb0fce2e826ce70"
+        },
+        "last_updated": {
+          "after": "2026-07-14",
+          "before": "2026-07-13"
+        },
+        "package": {
+          "after": "NEE_v55",
+          "before": "NEE_v53"
+        },
+        "policy_version": {
+          "after": "55.0",
+          "before": "53.0"
+        }
+      },
+      "path": "cards/NEE_99_Project_Instructions.md",
+      "routing_changes": []
+    }
+  ],
+  "change_class": "C6 protocol amendment to canonical policy card",
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "generated_at_utc": "2026-07-14T18:31:48Z",
+  "generated_mirror": {
+    "actual_after_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+    "approved_after_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+    "before_sha256": "c736087c1ef6c646b3ae3b5a54b43074e5285f36434bcf24ccb0fce2e826ce70",
+    "body_identical_to_NEE_99": true,
+    "conforms": true,
+    "path": "PROJECT_INSTRUCTIONS.md"
+  },
+  "non_policy_card_delta": 0,
+  "record_id": "R1-PD55-ACTUAL-CARD-DELTA-2026-07-14-001",
+  "stage": "R1",
+  "status": "implemented_conforming",
+  "unapproved_card_changes": 0,
+  "unlisted_cards_unchanged": true
+}

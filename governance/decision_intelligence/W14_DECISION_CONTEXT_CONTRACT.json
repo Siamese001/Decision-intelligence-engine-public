@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_decision_context_contract",
+  "contract_id": "nee-decision-intelligence-decision-context",
+  "contract_version": "2026-08-10.2",
+  "status": "IMPLEMENTED_PROVIDER_FREE_W5_GUARDED_NO_GRAPH_MIGRATION",
+  "purpose": "Assemble a source-bound, time-aware context for an initiative decision without treating a projection as a canonical fact or an approved recommendation.",
+  "inputs": {
+    "scope": "A canonical initiative or capability identifier.",
+    "observations": "W3 immutable source-bound observations for explicitly requested dimensions.",
+    "strategic_evidence": "W6 reviewed evidence packets for explicitly requested claims.",
+    "audience": "One requested audience; client and restricted content are never combined.",
+    "as_of": "The point in valid time at which status and evidence are evaluated.",
+    "known_at": "The information cutoff; future-recorded, future-captured, or revoked material is unavailable.",
+    "authorization_context": "Authenticated principal with a closed-world granted audience and classification clearance.",
+    "reference_monitor": "Immutable source-assertion resolver and non-bypassable pre-projection access control."
+  },
+  "projection_states": [
+    "CANDIDATE_READY_WITH_COUNTEREVIDENCE",
+    "CANDIDATE_WITH_GAPS",
+    "HITL_REQUIRED",
+    "STALE_OR_UNKNOWN"
+  ],
+  "invariants": [
+    "Every required observation dimension is projected using the W3 temporal rules.",
+    "Every requested strategic claim is projected using the W6 evidence and audience rules.",
+    "A missing, expired, or future required observation never becomes a current status.",
+    "A conflict in a required observation or a W6 HITL requirement blocks decision readiness.",
+    "A support-only strategic claim remains candidate-only and visibly exposes the counterevidence gap.",
+    "The projection exposes source assertion IDs for every observation and evidence packet it relies on.",
+    "The projection is a read-only derived artifact; it cannot write graph state, approve a recommendation, or activate a release."
+  ],
+  "state_rules": {
+    "candidate_ready_with_counterevidence": "All required dimensions are CURRENT and each requested claim is READY_WITH_COUNTEREVIDENCE.",
+    "candidate_with_gaps": "All required dimensions are CURRENT and at least one requested claim is READY_SUPPORT_ONLY; recommendation posture remains CANDIDATE_ONLY.",
+    "hitl_required": "Any required observation is CONFLICT or any requested claim is HITL_REQUIRED.",
+    "stale_or_unknown": "Any required observation is STALE_OR_UNKNOWN or any requested claim is STALE_OR_UNKNOWN."
+  },
+  "gate": {
+    "provider_calls_allowed": 0,
+    "graph_mutations_allowed": 0,
+    "release_activation_allowed": false,
+    "required_cases": [
+      "current observations with reviewed support and counterevidence",
+      "support-only strategic evidence",
+      "missing or expired required observation",
+      "conflicting required observation",
+      "unreviewed strategic evidence",
+      "source assertion lineage visibility"
+    ]
+  },
+  "dependency_posture": {
+    "w3_temporal_observations": "required",
+    "w6_strategic_evidence": "required",
+    "w12_approved_migration": "not required for the provider-free projection; required before writing target concepts to the active graph",
+    "w5_trust_foundation": "required before any W14 output is projected"
+  }
+}

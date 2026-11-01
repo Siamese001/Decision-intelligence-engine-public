@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_w5_trust_foundation_contract",
+  "contract_id": "nee-decision-intelligence-w5-trust-foundation",
+  "contract_version": "2026-08-10.1",
+  "status": "IMPLEMENTED_PROVIDER_FREE_CANDIDATE_ONLY",
+  "purpose": "Make every Decision Intelligence read source-resolved, authorization-scoped, bitemporal, and fail-closed before a derived status, briefing, or candidate answer is emitted.",
+  "scope": {
+    "included": [
+      "W3 temporal observation projection",
+      "W4 daily intelligence input projection",
+      "W6 strategic evidence projection",
+      "W14 decision context",
+      "W15 use case evaluation",
+      "retrieval and sidecar pre-projection adapter"
+    ],
+    "excluded": [
+      "graph mutation",
+      "release activation",
+      "production QueryEngine routing integration",
+      "client release authorization"
+    ]
+  },
+  "reference_monitor": {
+    "module": "dual_pipeline.reference_monitor",
+    "source_assertion_registry": {
+      "required_fields": [
+        "source_assertion_id",
+        "source_id",
+        "source_version_id",
+        "snapshot_digest",
+        "content_digest",
+        "locator.kind",
+        "locator.value",
+        "locator.quote_digest",
+        "extraction_run_id",
+        "classification",
+        "audiences",
+        "source_as_of",
+        "captured_at",
+        "revoked_at"
+      ],
+      "unknown_or_missing_lineage": "fail_closed"
+    },
+    "request_requirements": [
+      "authenticated AuthorizationContext",
+      "one closed-world requested audience granted to the authenticated principal",
+      "classification clearance",
+      "valid_at as_of",
+      "known_at cutoff"
+    ],
+    "derived_label_rule": "classification is the strictest cited-source classification; audiences are the exact source-ACL intersection constrained by that classification; caller-supplied labels cannot widen either value.",
+    "temporal_rule": "A projection may use an item only when item.recorded_at, source_as_of, and source captured_at are at or before known_at, and the source is not revoked at known_at.",
+    "projection_rule": "Filter before projecting values, source IDs, evidence IDs, titles, gaps, counts, sidecar content, or multi-hop content."
+  },
+  "security_invariants": [
+    "A client audience never receives private, restricted, or ungranted source material.",
+    "A future-recorded or future-captured source never appears in an as-known-at projection.",
+    "A revoked source is excluded at and after revocation.",
+    "An unknown source assertion, unknown audience, missing authenticated principal, or label mismatch fails closed.",
+    "Conflicting concurrent observations remain CONFLICT until explicitly superseded; latest timestamp alone is not resolution.",
+    "Derived Decision Intelligence remains candidate-only and cannot write the graph."
+  ],
+  "runtime_gate": {
+    "command": ".venv\\Scripts\\python.exe tools\\run_w5_trust_foundation_evaluation.py",
+    "required_cases": [
+      "client_private_status_leakage",
+      "client_private_daily_brief_leakage",
+      "classification_and_audience_tampering",
+      "future_recorded_knowledge",
+      "future_capture_and_revocation",
+      "retrieval_multihop_sidecar_filter",
+      "unknown_lineage_and_principal_denial"
+    ],
+    "provider_calls_allowed": 0,
+    "graph_mutations_allowed": 0,
+    "release_activation_allowed": false,
+    "pass_condition": "Every adversarial case passes and the checked graph hash is unchanged."
+  },
+  "next_gate": "W5.1 semantic expansion may begin only after a valid W5.0 runtime receipt is recorded. W7 production query routing remains blocked until its exact runtime registry, source resolver, and independent client-safety qualification are bound."
+}

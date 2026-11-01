@@ -1,0 +1,40 @@
+{
+  "baseline_graph_sha256": "4eb895a6b79eba6b57d1092f169ee9145371255137c9a70e2dda6d9022ce480b",
+  "baseline_zip_sha256": "a7bd45c1835cceeecc8d6be89e26cf512f22e34418f3e28eb767180f4e98d6c4",
+  "canonical_serialization_sha256": "bb424067bf689913ebdc754c353fd1113a3487003563bf0563bddc375722a906",
+  "component_counts": {
+    "action": 0,
+    "alias": 0,
+    "claim": 0,
+    "controlled_state_change": 0,
+    "edge": 0,
+    "evidence": 0,
+    "migration": 0,
+    "node": 0,
+    "node_card_map": 0,
+    "register_row": 0,
+    "source": 0,
+    "validation": 0
+  },
+  "generated_at": "2026-07-11T13:26:15Z",
+  "input_artifact_hashes": {
+    "PD-47_mandatory_graph_change_metric_gate_review.md": "495a87c69942ca3c0e88a47e32868a793322a36cc76dd5682652753611140826"
+  },
+  "notes": [
+    "This is a C6 protocol-only activation under Section 6.5.",
+    "The v46 account graph, graph migrations, schema, ontology, and relationship vocabulary remain byte-identical.",
+    "The mandatory graph-change metric table is prospective and applies to future semantic graph changes."
+  ],
+  "operations": [],
+  "policy_sha256": "917f5128160397f8ec583e8c58c00d4d21c06472b228f00c2888588b375cdf84",
+  "proposal_id": "G1-PD-47-CONTROL-ACTIVATION-ZERO-GRAPH",
+  "proposal_type": "proposed_graph_delta",
+  "scope": "Account knowledge graph and all meaning-bearing graph/register rows",
+  "status": "approved_zero_change",
+  "zero_change_declarations": {
+    "graph_database_byte_identical_to_v46": true,
+    "graph_migrations_byte_identical_to_v46": true,
+    "no_graph_export_regenerated_from_new_semantics": true,
+    "no_semantic_graph_delta_applied": true
+  }
+}

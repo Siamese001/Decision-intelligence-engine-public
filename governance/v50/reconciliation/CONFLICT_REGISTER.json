@@ -1,0 +1,10 @@
+{
+  "new_unresolved_conflicts": 0,
+  "status": "PASS",
+  "superseded_prior_chakra_priority_records": [
+    "edge_chakra_v20_prioritizes_ai_sdlc",
+    "claim_chakra_v20_ai_sdlc_priority",
+    "asrt_edge_4d0d49f0a60256fca2196eae",
+    "asrt_claim_claim_chakra_v20_ai_sdlc_priority"
+  ]
+}

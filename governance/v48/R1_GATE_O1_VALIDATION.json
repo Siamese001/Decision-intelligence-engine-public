@@ -1,0 +1,43 @@
+{
+  "card_reconciliation": "PASS",
+  "card_row_count": 20,
+  "count_reconciliation_failures": [],
+  "gate_id": "O1-R1-V48-INTEGRATED-001",
+  "graph_row_count": 20,
+  "headers": [
+    [
+      "Graph component",
+      "Baseline",
+      "Proposed / actual",
+      "Delta",
+      "What changed",
+      "Retrieval rationale"
+    ],
+    [
+      "Metric",
+      "Result",
+      "Pass threshold",
+      "Status",
+      "Comment / required improvement"
+    ],
+    [
+      "Card",
+      "Addition",
+      "Change type",
+      "Defense / evidence",
+      "Retrieval improvement"
+    ]
+  ],
+  "inline_output_sha256": "c64d9f545e94f6acb7916c7a38e85a46078af205cc41654b323bd77bdf52e562",
+  "metric_failures": [],
+  "metric_row_count": 10,
+  "nonzero_delta_rationale_failures": [],
+  "result": "PASS",
+  "table_count": 3,
+  "table_order": [
+    "Graph Delta and Retrieval Impact",
+    "Mandatory Graph Metrics",
+    "Card Additions and Retrieval Impact"
+  ],
+  "zero_delta_rationale_failures": []
+}

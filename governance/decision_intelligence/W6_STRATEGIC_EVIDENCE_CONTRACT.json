@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_strategic_evidence_contract",
+  "contract_id": "nee-decision-intelligence-strategic-evidence",
+  "contract_version": "2026-08-15.1",
+  "status": "IMPLEMENTED_PROVIDER_FREE_W5_GUARDED_SOURCE_BOUND",
+  "purpose": "Keep strategic synthesis traceable to source-bound evidence while exposing counterevidence, audience boundaries, expiry, falsification gaps, and immutable citation integrity.",
+  "evidence_roles": [
+    "supporting",
+    "counterevidence",
+    "context"
+  ],
+  "review_states": [
+    "SOURCE_BOUND",
+    "UNREVIEWED",
+    "REVIEWED",
+    "REJECTED",
+    "EXPIRED",
+    "CONFLICTED"
+  ],
+  "required_fields": [
+    "evidence_id",
+    "claim_id",
+    "evidence_role",
+    "content",
+    "source_assertion_ids",
+    "source_as_of",
+    "recorded_at",
+    "expires_at",
+    "classification",
+    "audiences",
+    "review_state",
+    "reviewed_by",
+    "reviewed_at",
+    "falsification_tests"
+  ],
+  "projection_required_fields": {
+    "citation_bindings": [
+      "source_assertion_id",
+      "snapshot_digest",
+      "content_digest",
+      "locator",
+      "claim_digest"
+    ],
+    "claim_digest_definition": "sha256 digest of {claim_id, evidence_role, content}; integrity binding only, not semantic entailment"
+  },
+  "temporal_and_review_rules": [
+    "source_as_of, recorded_at, and expires_at use ISO-8601 dates or timestamps.",
+    "recorded_at must not precede source_as_of; expires_at must be after recorded_at.",
+    "An expired packet is not active evidence and is reported as EXPIRED.",
+    "REJECTED evidence is never included in a synthesis workspace.",
+    "SOURCE_BOUND evidence may support a candidate answer without a reviewer identity or review timestamp; UNREVIEWED or CONFLICTED legacy evidence remains non-authoritative.",
+    "A strategic claim with supporting evidence must expose at least one falsification test.",
+    "A synthesis must expose whether counterevidence exists; absence is not proof of support.",
+    "W5 verifies immutable source lineage, strictest classification, audience intersection, authenticated principal, and known_at before any packet content or evidence ID is visible.",
+    "Projection resolves every source_assertion_id against the immutable W5 registry and derives exact citation_bindings; unknown lineage, digest mismatch, locator tampering, source-set mismatch, and claim-content mismatch fail closed before evidence IDs, source IDs, or content can be projected.",
+    "citation_bindings prove deterministic integrity to the cited source envelope; they do not assert natural-language entailment.",
+    "Evidence packets remain source-bound; synthesis is a candidate derived artifact, not a canonical fact."
+  ],
+  "projection_states": [
+    "READY_WITH_COUNTEREVIDENCE",
+    "READY_SUPPORT_ONLY",
+    "HITL_REQUIRED",
+    "STALE_OR_UNKNOWN"
+  ],
+  "projection_rules": {
+    "ready_with_counterevidence": "At least one active source-bound supporting packet and one active source-bound counterevidence packet are present, with falsification tests exposed.",
+    "ready_support_only": "Active source-bound supporting evidence exists but no active source-bound counterevidence exists; retain a visible gap and candidate-only posture.",
+    "hitl_required": "Conflicted material evidence, an audience violation, or a missing falsification test blocks recommendation readiness.",
+    "stale_or_unknown": "No active source-bound supporting evidence remains at the requested as-of time. Do not fabricate a strategic conclusion."
+  },
+  "graph_migration_posture": {
+    "current_graph_action": "NO_MUTATION_IN_W6",
+    "target_storage": "immutable evidence_packet and derived synthesis_workspace records linked to source assertions",
+    "authority": "Synthesis remains candidate-only and does not alter graph or release state."
+  },
+  "gate": {
+    "provider_calls_allowed": 0,
+    "graph_mutations_allowed": 0,
+    "release_activation_allowed": false,
+    "required_cases": [
+      "source-bound support and counterevidence",
+      "support-only gap",
+      "expired evidence",
+      "legacy untrusted evidence",
+      "conflicted evidence",
+      "missing falsification test",
+      "audience boundary violation",
+      "missing supporting evidence"
+      ,"unknown source lineage"
+      ,"tampered citation digest"
+      ,"tampered citation locator"
+      ,"claim-content digest mismatch"
+    ],
+    "w5_dependency": "W5_TRUST_FOUNDATION_CONTRACT.json"
+  }
+}

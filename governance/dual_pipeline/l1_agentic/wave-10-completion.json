@@ -1,0 +1,72 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "l1-wave-10-completion",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "fbd6539887990631a2d9864912eb61b9f3c8e2e9e0dd8aeea0f13628f51a77c8"},
+  "wave_id": "W10",
+  "program_id": "NEE-KG-DUAL-PIPELINE-01",
+  "branch": "codex/l1-agentic-gap-analysis",
+  "base_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "result_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "predecessor_receipt_digest": "d9f0e3be336113a7810e25bba3fd8318a857e08d479a49289664181002ef32b2",
+  "changed_files": [
+    "contracts/dual_pipeline/schemas/ingestion-l1-control-policy.schema.json",
+    "contracts/dual_pipeline/schemas/ingestion-plan-v2.schema.json",
+    "contracts/dual_pipeline/schemas/ingestion-plan-step-receipt.schema.json",
+    "contracts/dual_pipeline/schemas/ingestion-plan-checkpoint.schema.json",
+    "contracts/dual_pipeline/fixtures/valid/ingestion-l1-control-policy.json",
+    "contracts/dual_pipeline/fixtures/valid/ingestion-plan-v2.json",
+    "contracts/dual_pipeline/fixtures/valid/ingestion-plan-step-receipt.json",
+    "contracts/dual_pipeline/fixtures/valid/ingestion-plan-checkpoint.json",
+    "contracts/dual_pipeline/fixtures/invalid/ingestion-l1-control-policy-enabled.json",
+    "contracts/dual_pipeline/fixtures/invalid/ingestion-plan-v2-authority.json",
+    "contracts/dual_pipeline/fixtures/invalid/ingestion-plan-step-receipt-provider-call.json",
+    "contracts/dual_pipeline/fixtures/invalid/ingestion-plan-checkpoint-open.json",
+    "contracts/dual_pipeline/contract_inventory.json",
+    "requirements/ingestion-l1-control-policy.json",
+    "dual_pipeline/ingestion_planning.py",
+    "tools/validate_dual_pipeline_contracts.py",
+    "tests/test_l1_ingestion_plan_contracts.py",
+    "documentation/L1_AGENTIC_AUGMENTATION_GAP_ANALYSIS.md",
+    "reports/l1_agentic_augmentation/wave-10/l1-agentic-wave-10-20260806/ingestion-plan-v2-evaluation.json",
+    "governance/dual_pipeline/l1_agentic/wave-10-completion.json"
+  ],
+  "contract_inventory_digest": "447119fcdf54c223eae4b606ee669f8e58f8d0e5f8a448cca39b767f086bf3b0",
+  "policy_digest": "4ebe60b16f39189550444c5811d094af3b590091ec6321eec04242b624d01545",
+  "commands": [
+    {"command": ".\\.venv\\Scripts\\python.exe -m py_compile dual_pipeline/ingestion_planning.py", "exit_code": 0, "status": "PASS", "skipped": 0, "timed_out": false},
+    {"command": ".\\.venv\\Scripts\\python.exe -m unittest -q tests.test_l1_ingestion_plan_contracts tests.test_ingestion_l2_boundary tests.test_conditional_ingestion_reasoning tests.test_l1_provider_boundary", "exit_code": 0, "status": "PASS", "skipped": 0, "timed_out": false},
+    {"command": ".\\.venv\\Scripts\\python.exe tools/validate_dual_pipeline_contracts.py", "exit_code": 0, "status": "PASS", "skipped": 0, "timed_out": false}
+  ],
+  "provider_initialization_count": 0,
+  "provider_call_count": 0,
+  "graph_mutation_count": 0,
+  "next_wave_authorized": true,
+  "artifacts": [
+    "ingestion-l1-control-policy",
+    "ingestion-plan-v2",
+    "ingestion-plan-step-receipt",
+    "ingestion-plan-checkpoint",
+    "reports/l1_agentic_augmentation/wave-10/l1-agentic-wave-10-20260806/ingestion-plan-v2-evaluation.json"
+  ],
+  "exit_gate_verdicts": {
+    "wave9_predecessor_terminal": true,
+    "contracts_and_fixtures_validate": true,
+    "candidate_and_lifecycle_obligations_compiled": true,
+    "proposal_only": true,
+    "intake_v1_runtime_unchanged": true,
+    "provider_calls_zero": true,
+    "graph_mutations_zero": true,
+    "shadow_ledger_only_next": true
+  },
+  "rollback_control": "Keep ingestion L1 policy off and leave the v2 compiler unimported by the intake executor. Remove the Wave 10 contract/compiler surface as one unit if it is no longer needed; do not use plan v2 to authorize a provider call, disposition, mutation, release, or activation.",
+  "cache_namespace_disposition": "No ingestion cache, checkpoint persistence, runtime namespace, or execution ledger was created in Wave 10.",
+  "extensions": {
+    "execution_posture": "NO_RUNTIME_EXECUTION",
+    "evaluation_report_sha256": "e720fae7e834e0976d8739cd5802ecb7600d5a3acc5dee363b6f66e27c1d4fca",
+    "evaluation_report_digest": "e0cadea3fbd03e37955d13e2257fc3fbf835bd1cda211a3a90cee84caffaec7c",
+    "ingestion_planning_sha256": "dff59053fec5c67a9414c1b0fa3c2b45b373e543326dff49f10bbc04cb3d6ff4",
+    "contract_validator_sha256": "d332ac16579f750c511d5ee4d527bb426fdf5a45e57ffb2c7f16723b08998497",
+    "documentation_sha256": "298ac11ad7342ab6e9cc47bce227137fb1bcb25806649a7e0960a6b138a687f0"
+  }
+}

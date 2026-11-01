@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_use_case_contract",
+  "contract_id": "nee-decision-intelligence-use-case-evaluation",
+  "contract_version": "2026-08-10.2",
+  "status": "IMPLEMENTED_PROVIDER_FREE_W5_GUARDED_NO_GRAPH_MIGRATION",
+  "purpose": "Evaluate whether high-value decision questions have enough current, source-bound context to permit a candidate-only answer and identify the exact missing evidence when they do not.",
+  "required_use_case_fields": [
+    "use_case_id",
+    "question",
+    "scope_id",
+    "audience",
+    "required_dimensions",
+    "claim_ids",
+    "candidate_answer_sections"
+  ],
+  "answer_states": [
+    "CANDIDATE_ANSWER_READY",
+    "CANDIDATE_ANSWER_WITH_GAPS",
+    "BLOCKED_HITL_REQUIRED",
+    "BLOCKED_STALE_OR_UNKNOWN"
+  ],
+  "invariants": [
+    "A use case delegates status and strategic-evidence safety to the W14 decision-context projection.",
+    "Candidate answers always retain CANDIDATE_ONLY posture and source assertion lineage.",
+    "A missing, stale, future, or conflicting required observation cannot support a candidate answer.",
+    "Unreviewed or conflicted strategic evidence blocks the candidate answer and identifies HITL as the path forward.",
+    "A support-only claim may support a candidate answer only when its counterevidence gap is conspicuous.",
+    "A use case cannot expose an answer section not declared in its contract.",
+    "This evaluator does not call a provider, write graph state, make a recommendation final, or activate a release."
+  ],
+  "state_rules": {
+    "candidate_answer_ready": "W14 returns CANDIDATE_READY_WITH_COUNTEREVIDENCE.",
+    "candidate_answer_with_gaps": "W14 returns CANDIDATE_WITH_GAPS; every gap is disclosed in the candidate answer contract.",
+    "blocked_hitl_required": "W14 returns HITL_REQUIRED.",
+    "blocked_stale_or_unknown": "W14 returns STALE_OR_UNKNOWN."
+  },
+  "gate": {
+    "provider_calls_allowed": 0,
+    "graph_mutations_allowed": 0,
+    "release_activation_allowed": false,
+    "required_cases": [
+      "AI-PDLC POV candidate answer with counterevidence",
+      "AI productivity metric candidate answer with a visible evidence gap",
+      "missing project status blocks answer readiness",
+      "conflicting project status requires HITL",
+      "unreviewed evidence requires HITL",
+      "candidate-answer section contract enforcement"
+    ]
+  },
+  "dependencies": {
+    "w14_decision_context": "required",
+    "w3_temporal_observations": "transitive required",
+    "w6_strategic_evidence": "transitive required",
+    "w12_approved_migration": "not required for this provider-free evaluator; required before target-graph writes",
+    "w5_trust_foundation": "transitive required through W14"
+  }
+}

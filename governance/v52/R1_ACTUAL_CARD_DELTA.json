@@ -1,0 +1,658 @@
+{
+  "approval_decision_id": "AD-V52-UPLOADED-MATERIALS-2026-001",
+  "approved_card_proposal_sha256": "7d3cd99d409e4083963d6c8b0987c59310b13f8ef28fb1af075cce587432b5b4",
+  "byte_edit_count": 9,
+  "canonical_serialization_sha256": "782186124e20bacf98562f338e2861d34ab557947e27323490e5815cff8af732",
+  "card_count": 11,
+  "cards": [
+    {
+      "actual_after_sha256": "4c6afaef7ffe30139181e55d5c1ccd970aad93e052d138e306e0010bb2158221",
+      "approved_after_sha256": "4c6afaef7ffe30139181e55d5c1ccd970aad93e052d138e306e0010bb2158221",
+      "before_sha256": "450405cb85d273d57be772ea36945eb77a20a68cc5e787c8ae3ba75a62026b79",
+      "byte_changed": true,
+      "card_id": "NEE_02",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "currentness",
+        "risk",
+        "action",
+        "allowed_use",
+        "routing",
+        "provenance"
+      ],
+      "path": "cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md",
+      "route_only": false,
+      "routing_changes": [
+        {
+          "object_id": "route_v52_15b81de74d58e8ab0bbfd12d1d94af",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_1cab6353089e56a043e19eed499982",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_2eaa9a97bec18ba34d14570d7c4cfd",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_398170e42ec55c76e954d2985fb39f",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_39b59139a73c4b936d19ab0543cc7f",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_43c7b461f65d96bdfe5607dece8b2c",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_46149801afd12bfe44da8a3b2332cb",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_4b83ae01cdd3ddd28e8b09e3bfa805",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_5183222cd6ff70fc152c201091b5b2",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_56e12a7fd773905321f069ece401f7",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_70ddc78cab9d7456865fa41d902a2a",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_7e638cfb1e22517f382304b5814b4e",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_823d04b634df0092645f739cd33b4e",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_83e8efcf2c2f6c57ba75304c784e4e",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_87253b37980b291af99daeec272bcc",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_9575218dcc0293b163e33e0cffbebd",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_9b8dfad69943bf970fc0c5a5113fea",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_a806b10d048ade106d38c4739a1c0b",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_aa744884b376f6936b76461199f2f3",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_be03cc0df6472af6435e4f0ca9ded0",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_cac4c01029b8b4e53ef11efc975976",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_cea6839c4c4d2961e3b510e426a6de",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_f6bfa55882eebbc61a807f909cabee",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_f72212a5359e94acef71613ea25a24",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "f17c949ce52c8eeed13fa6cc36702c9ce47de6175403acc94a753ff6c79356f5",
+      "approved_after_sha256": "f17c949ce52c8eeed13fa6cc36702c9ce47de6175403acc94a753ff6c79356f5",
+      "before_sha256": "92e865d20fca1547fd43fec364d26548cd08093ba657c10944d267cd635fc47e",
+      "byte_changed": true,
+      "card_id": "NEE_03",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "currentness",
+        "risk",
+        "action",
+        "allowed_use",
+        "routing",
+        "provenance"
+      ],
+      "path": "cards/NEE_03_SOW_Commercial_and_Contract_Guardrails.md",
+      "route_only": false,
+      "routing_changes": [
+        {
+          "object_id": "route_v52_18617277b870bb66162443791d6c2a",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_8d19ff9a82a378ad4075dc627e46e1",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_a56a1d3d4d26a3eaaba475b4ab301e",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_d3da28ee17f5a64e9122aff4ebd680",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_fe0bee213a2949a89cb8bbf6d16bd4",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "29a78f5b75b7c35542aabf2357ae0b4c90c787fe975dbf3ee54a4d424622d834",
+      "approved_after_sha256": "29a78f5b75b7c35542aabf2357ae0b4c90c787fe975dbf3ee54a4d424622d834",
+      "before_sha256": "1be34f3212a436a77f2dfeae9b2b8960c326c7c1522461413282edef34d4ae8f",
+      "byte_changed": true,
+      "card_id": "NEE_04",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "currentness",
+        "risk",
+        "action",
+        "allowed_use",
+        "routing",
+        "provenance"
+      ],
+      "path": "cards/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md",
+      "route_only": false,
+      "routing_changes": [
+        {
+          "object_id": "route_v52_0f443e14021df86b0a7624579d88d1",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_ab511274b034443308972c842b5c2b",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_b695ebb401a8672e2057a02ad304df",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_d3aaeee315f98141ab2eb11115aa79",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "2183dafde77dc64f05071372821b0aa1ef92d21f51ba05650a78566c1a9ab847",
+      "approved_after_sha256": "2183dafde77dc64f05071372821b0aa1ef92d21f51ba05650a78566c1a9ab847",
+      "before_sha256": "73a9648cc875c9ff05650b92f13eda325254597892f25d25d933cd4778d9408a",
+      "byte_changed": true,
+      "card_id": "NEE_07",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "currentness",
+        "risk",
+        "action",
+        "allowed_use",
+        "routing",
+        "provenance"
+      ],
+      "path": "cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md",
+      "route_only": false,
+      "routing_changes": [
+        {
+          "object_id": "route_v52_20019ea5f7b2f4556cff54b9fc1007",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_369de4384f8c4badf07611d62e1eda",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_448c9e624228b7015addc8fa078f8f",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_463e03f85bdca850cd80a556a5e683",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_6951168f2c8edda4189b0572f5307d",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_6a6a0d70eaad4452204e4eb5a5b008",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_9663caf3d92aa92a948548a5915700",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_c1d6d7bbd9188c78182c1e4210873d",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_d37db4d017a63cf1cc313580b044df",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_f4d4b119c278f686ea4ef45afa2d72",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "ada7e22848e9d3613463dc969ceba6bf8faeec7bbd031067c68544c36a7c824c",
+      "approved_after_sha256": "ada7e22848e9d3613463dc969ceba6bf8faeec7bbd031067c68544c36a7c824c",
+      "before_sha256": "90238fab380e08f47dc08cf4958a115946101903e75218d9a9b2197200d4964f",
+      "byte_changed": true,
+      "card_id": "NEE_09",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "currentness",
+        "risk",
+        "action",
+        "allowed_use",
+        "routing",
+        "provenance"
+      ],
+      "path": "cards/NEE_09_Utility_Thought_Leadership_and_REWIRE_AMWE_Agenda.md",
+      "route_only": false,
+      "routing_changes": [
+        {
+          "object_id": "route_v49_324bd802d86fd1749aa26d4e5548",
+          "object_type": "canonical_route",
+          "operation_type": "update"
+        },
+        {
+          "object_id": "route_v49_d5975526b9d35160d2ab168ff65d",
+          "object_type": "canonical_route",
+          "operation_type": "update"
+        },
+        {
+          "object_id": "route_v52_51a34be0677f130f3231ad52e89040",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_f0a32f784aa7641b6591b2f058c84c",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "1b8ae2358efa6943a513b2f10d644decc8144bb3b794a1166cdca5acaac4d33a",
+      "approved_after_sha256": "1b8ae2358efa6943a513b2f10d644decc8144bb3b794a1166cdca5acaac4d33a",
+      "before_sha256": "1b8ae2358efa6943a513b2f10d644decc8144bb3b794a1166cdca5acaac4d33a",
+      "byte_changed": false,
+      "card_id": "NEE_10",
+      "exact_match": true,
+      "impact_types": [
+        "route"
+      ],
+      "path": "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+      "route_only": true,
+      "routing_changes": [
+        {
+          "card_id": "NEE_10",
+          "change_type": "existing_route_impact",
+          "description": "No new node-card mapping or card-body edit; approved currentness changes become visible through the existing route.",
+          "supporting_graph_items": [
+            "workstream_dociq",
+            "workstream_eva",
+            "workstream_fcdb",
+            "workstream_flexai",
+            "workstream_lens",
+            "workstream_nuclear_scheduling",
+            "workstream_outage",
+            "workstream_pd_conduit",
+            "workstream_regai",
+            "workstream_ssup",
+            "workstream_swarm"
+          ]
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "33ae967450fa6bf1409be5d222505a4bcd660ec46b27d2e02b5ec9ac4e1a3353",
+      "approved_after_sha256": "33ae967450fa6bf1409be5d222505a4bcd660ec46b27d2e02b5ec9ac4e1a3353",
+      "before_sha256": "79ee9beb915fc5531cb648dc7c59238e3b40d7717f8844f671c3a90e2b7e2723",
+      "byte_changed": true,
+      "card_id": "NEE_11",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "currentness",
+        "risk",
+        "action",
+        "allowed_use",
+        "routing",
+        "provenance"
+      ],
+      "path": "cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+      "route_only": false,
+      "routing_changes": [
+        {
+          "object_id": "route_v52_10a77dac098a04b30f9f7c12798207",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_2d70f52c8353b628bfabbeca94e7cf",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_305144d69cbe734c67c8cf3e4e694a",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_3fd2c040c82a6dddc8247c556cec5a",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_8a334a55d9009064a73a41b45dcaa7",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_b891c0dd9b727b5e044e06b545883f",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_bb53d4a36aa33f6bf04cb54d7d8ba9",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_eac42c0cdcfbe668af5ca735f6ea5a",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "3eb7cd785d31754b6a7cfcb16fff1c6bf43f05167e9bae9bf2aa39d218fc8a8a",
+      "approved_after_sha256": "3eb7cd785d31754b6a7cfcb16fff1c6bf43f05167e9bae9bf2aa39d218fc8a8a",
+      "before_sha256": "24a92da43cb8ca9c70100fd6a4dfaa9d7fdfecfa1e5e6320f35ab17f679cabe8",
+      "byte_changed": true,
+      "card_id": "NEE_13",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "currentness",
+        "risk",
+        "action",
+        "allowed_use",
+        "routing",
+        "provenance"
+      ],
+      "path": "cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md",
+      "route_only": false,
+      "routing_changes": [
+        {
+          "object_id": "route_v52_09e42ad379a120f14c9bb09a990234",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_150ee2bc69b72c25e7dc0cd9736925",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_1fb8c3d68af4e656f5404521aa411d",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_25259477c4db88b5c6960064cef8ae",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_31ec5634d5ae0f0a7b6080d288c843",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_3a0fde05dcb80d0c82c96473695726",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_3d72efffc71b83c7b4b24b278c66e3",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_41be730af8b8d4dac5d1d664d32603",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_47fc653434d9c93151a760753991a5",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_7eb5995dfea4592e40de35d20a0fcf",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_85f8be229b456df3f622a5ec0a209c",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_ad2fb76a0bd956bf59d2d0c032215a",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_f414741741bb90701f3cdc142ef863",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "3955b5c65b527400728864601f158e2547042b45d437298f1a6441482ec7d2ae",
+      "approved_after_sha256": "3955b5c65b527400728864601f158e2547042b45d437298f1a6441482ec7d2ae",
+      "before_sha256": "75b96bbf9f6665e08999ff8661fd99b058a416e7ff2d2c275b88209ef1af1d99",
+      "byte_changed": true,
+      "card_id": "NEE_14",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "currentness",
+        "risk",
+        "action",
+        "allowed_use",
+        "routing",
+        "provenance"
+      ],
+      "path": "cards/NEE_14_Trading_ETRM_and_Pricing_Models.md",
+      "route_only": false,
+      "routing_changes": [
+        {
+          "object_id": "route_v52_1ce7572ab89b8e71b927f0ee6555d8",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_6356fc3707e8050e8179427d48cac6",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_65011ad6c4645a1df97ba88cb49688",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_917322441a7b5bd16f450c66d0d2c4",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_f827f4b9d3460d6de6504948a35d1b",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_fdc48238424dd7e5b317593d7da8cf",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "cd87a80292ee6ea88dbd8aa2ae28d4c0536268ef9a2c36d2e7c36b74cd7c26db",
+      "approved_after_sha256": "cd87a80292ee6ea88dbd8aa2ae28d4c0536268ef9a2c36d2e7c36b74cd7c26db",
+      "before_sha256": "cd87a80292ee6ea88dbd8aa2ae28d4c0536268ef9a2c36d2e7c36b74cd7c26db",
+      "byte_changed": false,
+      "card_id": "NEE_15",
+      "exact_match": true,
+      "impact_types": [
+        "route"
+      ],
+      "path": "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md",
+      "route_only": true,
+      "routing_changes": [
+        {
+          "card_id": "NEE_15",
+          "change_type": "existing_route_impact",
+          "description": "No new node-card mapping or card-body edit; approved currentness changes become visible through the existing route.",
+          "supporting_graph_items": [
+            "workstream_pd_conduit"
+          ]
+        }
+      ]
+    },
+    {
+      "actual_after_sha256": "af803c25f3f09cc60e16fa6645e05a0a4fe8f99cdfce74b74a6a9e87f33c871f",
+      "approved_after_sha256": "af803c25f3f09cc60e16fa6645e05a0a4fe8f99cdfce74b74a6a9e87f33c871f",
+      "before_sha256": "fa0b5e4dd80a2245ec87aae972fad6954006754c238e6ade09eb0ee4797925a5",
+      "byte_changed": true,
+      "card_id": "NEE_16",
+      "exact_match": true,
+      "impact_types": [
+        "interpretation",
+        "currentness",
+        "risk",
+        "action",
+        "allowed_use",
+        "routing",
+        "provenance"
+      ],
+      "path": "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+      "route_only": false,
+      "routing_changes": [
+        {
+          "object_id": "route_v52_188cc9c53f61f2a2d4a4c2b113611a",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_4e83aa403c362cab0f7c8566d67c5c",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_54001c0c13d74613d420d711298b40",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_99e72b9613cd743a36466c872c075a",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_c1334e797dc83dd95c3a7742b49bb5",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        },
+        {
+          "object_id": "route_v52_c3b41c7abf41f0bc51b06b7f2cb704",
+          "object_type": "canonical_route",
+          "operation_type": "add"
+        }
+      ]
+    }
+  ],
+  "implementation_id": "R1-V52-UPLOADED-MATERIALS-2026-001",
+  "route_only_count": 2,
+  "status": "PASS",
+  "unlisted_cards_unchanged": true
+}

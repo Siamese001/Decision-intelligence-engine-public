@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "graph_source_id": "source_v49_ext_ap_nextera_dominion_2026_05_18",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-01"
+    },
+    {
+      "graph_source_id": "source_v49_ext_reuters_nextera_google_cloud_2025_12_08",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-02"
+    },
+    {
+      "graph_source_id": "source_v49_ext_reuters_duane_arnold_google_2025_10_27",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-03"
+    },
+    {
+      "graph_source_id": "source_v49_ext_nrc_duane_arnold_restart_2026_07_13",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-04"
+    },
+    {
+      "graph_source_id": "source_v49_ext_scrum_guide_2020",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-05"
+    },
+    {
+      "graph_source_id": "source_v49_ext_opm_structured_interviews_2026_07_13",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-06"
+    },
+    {
+      "graph_source_id": "source_v49_ext_opm_work_samples_2026_07_13",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-07"
+    },
+    {
+      "graph_source_id": "source_v49_ext_metr_dev_productivity_rct_2025_07_12",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-08"
+    },
+    {
+      "graph_source_id": "source_v49_ext_google_enterprise_ai_rct_2024_10_16",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-09"
+    },
+    {
+      "graph_source_id": "source_v49_ext_reuters_pjm_google_ai_2025_04_10",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-10"
+    },
+    {
+      "graph_source_id": "source_v49_ext_reuters_miso_microsoft_2026_01_06",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-11"
+    },
+    {
+      "graph_source_id": "source_v49_ext_reuters_inl_microsoft_nuclear_ai_2025_07_16",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-12"
+    },
+    {
+      "graph_source_id": "source_v49_ext_emerald_grid_interactive_dc_2025_07_01",
+      "result": "no exact title or URL duplicate",
+      "source_id": "S49-13"
+    }
+  ],
+  "status": "pass",
+  "v42_nonduplication": "Existing GOV.UK, NIST, OWASP, OpenTelemetry, Google Cloud product, DORA, AAPOR, NIST OT and DOE sources were not re-ingested."
+}

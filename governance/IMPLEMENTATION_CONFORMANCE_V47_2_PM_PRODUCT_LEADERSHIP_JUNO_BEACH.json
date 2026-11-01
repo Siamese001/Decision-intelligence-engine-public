@@ -1,0 +1,554 @@
+{
+  "actual_card_diff_sha256": "50c2d6405b2e8f05156f7dde585413f6f3af5f14bd0fd4f83eb646807155dc15",
+  "actual_card_state_sha256": "7da4b0e291e0ab5595cc886d1a7cddd389b6e824aead3ddf31a972bd87ea5ba2",
+  "actual_graph_delta_sha256": "8ca1e7c0e878411c9188315cd82cc32f531516c1bf3477e4252c5deb2188efdc",
+  "actual_graph_operations_sha256": "443608e3987e59be6a1ecdb62859a6f9bb7120fbabcdc2646ead81def9dcbdd4",
+  "affected_card_ids": [
+    "NEE_00",
+    "NEE_06",
+    "NEE_10",
+    "NEE_15",
+    "NEE_16",
+    "NEE_99"
+  ],
+  "approval_chronology": {
+    "approved_at": "2026-07-11T21:01:57Z",
+    "first_canonical_write_at": "2026-07-11T21:01:59Z",
+    "result": "pass",
+    "source_order": "The user approval turn and validated approval record precede the first semantic graph/card write."
+  },
+  "approval_decision_id": "AD-47.2-PM-PRODUCT-LEADERSHIP-JUNO-BEACH",
+  "approved_card_diff_sha256": "50c2d6405b2e8f05156f7dde585413f6f3af5f14bd0fd4f83eb646807155dc15",
+  "approved_card_state_sha256": "7da4b0e291e0ab5595cc886d1a7cddd389b6e824aead3ddf31a972bd87ea5ba2",
+  "approved_graph_delta_sha256": "8ca1e7c0e878411c9188315cd82cc32f531516c1bf3477e4252c5deb2188efdc",
+  "approved_graph_operations_sha256": "443608e3987e59be6a1ecdb62859a6f9bb7120fbabcdc2646ead81def9dcbdd4",
+  "baseline_immutability_result": {
+    "baseline_graph_sha256": "4eb895a6b79eba6b57d1092f169ee9145371255137c9a70e2dda6d9022ce480b",
+    "baseline_zip_sha256_after": "bc524c0f45bc98ff19f07d51e5def0b5d9384b6779ff9cb9b322a58c74849a6d",
+    "baseline_zip_sha256_before": "bc524c0f45bc98ff19f07d51e5def0b5d9384b6779ff9cb9b322a58c74849a6d",
+    "status": "pass"
+  },
+  "card_conformance": {
+    "changed_paths": [
+      "cards/NEE_00_Authority_Source_Map_and_Synthesis_Protocol.md",
+      "cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md",
+      "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+      "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md",
+      "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+      "cards/NEE_99_Project_Instructions.md"
+    ],
+    "declared_policy_body_hash_matches": true,
+    "exact_hash_match": true,
+    "policy_mirror_body_identical": true,
+    "unlisted_cards_unchanged": true
+  },
+  "changed_file_count": 56,
+  "changed_file_inventory": [
+    "CHANGELOG.md",
+    "MANIFEST.md",
+    "PROJECT_INSTRUCTIONS.md",
+    "QA_REPORT.md",
+    "README.md",
+    "approvals/AD-47.2-PM-PRODUCT-LEADERSHIP-JUNO-BEACH.json",
+    "approvals/PD-47.2-LINKEDIN-NAME-SPELLING-AUTHORITY.json",
+    "cards/NEE_00_Authority_Source_Map_and_Synthesis_Protocol.md",
+    "cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md",
+    "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+    "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md",
+    "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+    "cards/NEE_99_Project_Instructions.md",
+    "exports/open_questions.csv",
+    "exports/p0_p1_action_register.csv",
+    "exports/p1_validation_sprint_plan.csv",
+    "exports/source_lineage.csv",
+    "exports/source_request_matrix.csv",
+    "exports/stakeholder_map.csv",
+    "exports/v47_2_alias_delta.csv",
+    "exports/v47_2_answer_packet_regression.json",
+    "exports/v47_2_answer_packet_regression.md",
+    "exports/v47_2_card_change_matrix.csv",
+    "exports/v47_2_claim_confidence_hitl_matrix.csv",
+    "exports/v47_2_claim_confidence_hitl_summary.csv",
+    "exports/v47_2_claim_delta.csv",
+    "exports/v47_2_daily_ingest_event_delta.csv",
+    "exports/v47_2_edge_delta.csv",
+    "exports/v47_2_graph_delta_summary.csv",
+    "exports/v47_2_graph_delta_summary.json",
+    "exports/v47_2_graph_delta_summary.md",
+    "exports/v47_2_hitl_claim_validation_queue.csv",
+    "exports/v47_2_lancey_lunch_brief.md",
+    "exports/v47_2_node_card_map_delta.csv",
+    "exports/v47_2_node_delta.csv",
+    "exports/v47_2_p0_p1_action_register_delta.csv",
+    "exports/v47_2_p1_validation_sprint_delta.csv",
+    "exports/v47_2_policy_change_diff.md",
+    "exports/v47_2_qa_summary.json",
+    "exports/v47_2_regeneration_summary.json",
+    "exports/v47_2_source_delta.csv",
+    "exports/v47_2_source_request_delta.csv",
+    "exports/v47_2_validation_delta.csv",
+    "exports/validation_queue.csv",
+    "governance/IMPLEMENTATION_CONFORMANCE_V47_2_PM_PRODUCT_LEADERSHIP_JUNO_BEACH.json",
+    "governance/PROTOCOL_DECISION_PD-47.2_LINKEDIN_NAME_SPELLING_AUTHORITY.md",
+    "governance/implementation/ACTUAL_V47_2_CARD_DELTA.json",
+    "governance/implementation/ACTUAL_V47_2_GRAPH_DELTA.json",
+    "governance/inline/V47_2_G1_INLINE_GATE_OUTPUT.md",
+    "governance/inline/V47_2_R1_INLINE_GATE_OUTPUT.md",
+    "governance/proposals/C1_PM_PRODUCT_LEADERSHIP_JUNO_BEACH_2026_07_11.json",
+    "governance/proposals/G1_PM_PRODUCT_LEADERSHIP_JUNO_BEACH_2026_07_11.json",
+    "governance/proposals/PD-47.2-LINKEDIN-NAME-SPELLING-AUTHORITY.json",
+    "graph/migrations/v47_2_pm_product_leadership_juno_beach_and_linkedin_name_spelling.sql",
+    "graph/nee_graph.sqlite",
+    "inputs/user_chat_evidence_2026-07-11.md"
+  ],
+  "component_counts": {
+    "alias": {
+      "after": 393,
+      "before": 393,
+      "delta": 0
+    },
+    "claim": {
+      "after": "520 / 477",
+      "before": "515 / 472",
+      "delta": "+5 / +5"
+    },
+    "claim_confidence_hitl_matrix": {
+      "after": 520,
+      "before": 515,
+      "delta": 5
+    },
+    "claim_confidence_hitl_summary": {
+      "after": 27,
+      "before": 27,
+      "delta": 0
+    },
+    "claim_hitl_validation_queue": {
+      "after": 371,
+      "before": 369,
+      "delta": 2
+    },
+    "daily_ingest_event": {
+      "after": 28,
+      "before": 27,
+      "delta": 1
+    },
+    "edge": {
+      "after": "1026 / 1000",
+      "before": "1021 / 995",
+      "delta": "+5 / +5"
+    },
+    "node": {
+      "after": 632,
+      "before": 628,
+      "delta": 4
+    },
+    "node_card_map": {
+      "after": 1566,
+      "before": 1555,
+      "delta": 11
+    },
+    "p0_p1_action_register": {
+      "after": 93,
+      "before": 92,
+      "delta": 1
+    },
+    "p1_validation_sprint": {
+      "after": 96,
+      "before": 94,
+      "delta": 2
+    },
+    "source": {
+      "after": 147,
+      "before": 143,
+      "delta": 4
+    },
+    "source_request_matrix": {
+      "after": 64,
+      "before": 62,
+      "delta": 2
+    },
+    "validation": {
+      "after": 173,
+      "before": 171,
+      "delta": 2
+    }
+  },
+  "drift_result": "none",
+  "first_canonical_write_at": "2026-07-11T21:01:59Z",
+  "g1_inline_output_sha256": "e7cd1e69b6a62e9cc6f4bf72c28fec396b9b4e4155d690a5220370ff2a1e1b78",
+  "generated_at": "2026-07-11T21:02:00Z",
+  "implementation_id": "I1-V47.2-PM-PRODUCT-LEADERSHIP-JUNO-BEACH-2026-07-11",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Add exact-proposition user-confirmation boundaries and the LinkedIn display-name spelling authority rule.",
+        "card": "NEE_00",
+        "change_type": "body",
+        "defense_or_evidence": "Explicit user confirmations/instruction dated 2026-07-11; no role, identity, or location inference beyond the stated propositions.",
+        "retrieval_improvement": "Authority ranking can distinguish exact user confirmation and display-name spelling authority from identity, role, and currentness evidence."
+      },
+      {
+        "addition": "Add attributed Rich Product Manager leadership-gap and UX research-cadence hypotheses plus two surgical validations.",
+        "card": "NEE_06",
+        "change_type": "body",
+        "defense_or_evidence": "User-attributed internal feedback; existing product-leadership and fast-user-evidence principles already provide the correct card home.",
+        "retrieval_improvement": "Operating-model queries retrieve the specific business-value and minimum-evidence questions without presenting them as formal NEA policy."
+      },
+      {
+        "addition": "Add Lancey’s confirmed NEA Product Manager/Juno Beach context, July 14 lunch, sent outreach status, and the remaining PM-priority output.",
+        "card": "NEE_10",
+        "change_type": "body",
+        "defense_or_evidence": "Direct user confirmation and action context; Colleen roster assignments remain separately source-attributed.",
+        "retrieval_improvement": "Stakeholder queries return Lancey as the confirmed anchor and keep all additional Juno Beach priorities explicitly unknown until team validation."
+      },
+      {
+        "addition": "Resolve Juno Beach spelling for Lancey context; add LinkedIn display-name spelling rule; preserve Nick/Nicholas as separate pending profile resolution.",
+        "card": "NEE_15",
+        "change_type": "body",
+        "defense_or_evidence": "Explicit user spelling instruction and direct Lancey location context; no identity merge evidence.",
+        "retrieval_improvement": "Name resolution uses the correctly matched LinkedIn display name while collision handling prevents nickname similarity from merging records."
+      },
+      {
+        "addition": "Register four chat-source authority boundaries and state that Colleen’s roster is reconciliation-only, not re-ingested.",
+        "card": "NEE_16",
+        "change_type": "body",
+        "defense_or_evidence": "Exact user evidence plus immutable baseline comparison.",
+        "retrieval_improvement": "Provenance lookup separates confirmation, private action, attributed feedback, and policy instruction and prevents duplicate roster lineage."
+      },
+      {
+        "addition": "Activate the LinkedIn display-name spelling authority protocol in the proposed 47.2 policy state and register PD-47.2.",
+        "card": "NEE_99",
+        "change_type": "control_policy",
+        "defense_or_evidence": "Explicit user request is valid problem evidence; activation remains contingent on exact digest-bound G1/C1 approval.",
+        "retrieval_improvement": "Identity queries gain a deterministic spelling source after profile resolution while retaining fail-closed separation of spelling, identity, role, and currentness."
+      }
+    ],
+    "graph_delta_rows": [
+      {
+        "baseline": "143",
+        "change": "Add four separately scoped chat sources for exact Lancey confirmation, private lunch/outreach context, attributed Rich/UX feedback, and the LinkedIn spelling instruction.",
+        "component_key": "source",
+        "delta": "4",
+        "graph_component": "Sources",
+        "proposed_or_actual": "147",
+        "retrieval_rationale": "Lineage separates confirmed facts, private actions, attributed feedback, and policy instruction so retrieval can rank each by its actual authority."
+      },
+      {
+        "baseline": "628",
+        "change": "Add four source nodes; update Lancey and Juno Beach in place without adding duplicate person or location nodes.",
+        "component_key": "node",
+        "delta": "4",
+        "graph_component": "Nodes",
+        "proposed_or_actual": "632",
+        "retrieval_rationale": "Exact source-node lookup improves provenance while in-place Lancey/Juno updates preserve canonical identity and prevent duplicate entity retrieval."
+      },
+      {
+        "baseline": "393",
+        "change": "No alias or canonical-name mutation; Nick and Nicholas remain separate pending profile resolution.",
+        "component_key": "alias",
+        "delta": "0",
+        "graph_component": "Aliases",
+        "proposed_or_actual": "393",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1021 / 995",
+        "change": "Add five active provenance/context/feedback edges using existing relationship types; add no new edge vocabulary.",
+        "component_key": "edge",
+        "delta": "+5 / +5",
+        "graph_component": "Edges (total / active)",
+        "proposed_or_actual": "1026 / 1000",
+        "retrieval_rationale": "Context, feedback-source, and source-lineage edges enable relationship-aware retrieval without converting attributed feedback into formal policy or merging identities."
+      },
+      {
+        "baseline": "515 / 472",
+        "change": "Add five active claims: Lancey role, Lancey Juno context, attributed Rich PM gap, UX cadence constraint, and LinkedIn display-name spelling rule.",
+        "component_key": "claim",
+        "delta": "+5 / +5",
+        "graph_component": "Claims (total / active)",
+        "proposed_or_actual": "520 / 477",
+        "retrieval_rationale": "Claim-level posture lets answers distinguish confirmed facts from attributed hypotheses and applies the spelling rule without inferring identity equivalence."
+      },
+      {
+        "baseline": "171",
+        "change": "Add two P1 validations and narrow the existing Nick/Nicholas question; row count rises by two.",
+        "component_key": "validation",
+        "delta": "2",
+        "graph_component": "Validation queue",
+        "proposed_or_actual": "173",
+        "retrieval_rationale": "Open-question retrieval now targets the additional Juno Beach PM shortlist and the exact PM decision/evidence standard while preserving the unresolved Nick/Nicholas boundary."
+      },
+      {
+        "baseline": "1555",
+        "change": "Add eleven routes from the four source nodes to NEE_00, NEE_06, NEE_10, NEE_15, NEE_16, and NEE_99.",
+        "component_key": "node_card_map",
+        "delta": "11",
+        "graph_component": "Node-card routes",
+        "proposed_or_actual": "1566",
+        "retrieval_rationale": "Routes send role/location questions to stakeholder cards, PM expectations to the operating-model card, identity rules to glossary/policy, and all new evidence to provenance."
+      },
+      {
+        "baseline": "92",
+        "change": "Add the July 14 Lancey lunch action with owner, due date, evidence boundary, and expected output.",
+        "component_key": "p0_p1_action_register",
+        "delta": "1",
+        "graph_component": "P0/P1 action register",
+        "proposed_or_actual": "93",
+        "retrieval_rationale": "Action lookup returns a concrete next step and prevents the sent outreach from being mistaken for a validated PM priority list."
+      },
+      {
+        "baseline": "94",
+        "change": "Add two sprint items for the Juno PM priority map and the cross-location Product Manager operating standard.",
+        "component_key": "p1_validation_sprint",
+        "delta": "2",
+        "graph_component": "P1 validation sprint",
+        "proposed_or_actual": "96",
+        "retrieval_rationale": "Sprint retrieval exposes owners, dates, blocked use, and target artifacts for the two material unknowns."
+      },
+      {
+        "baseline": "62",
+        "change": "Add two evidence-request rows identifying the authoritative internal sources needed to close the P1 questions.",
+        "component_key": "source_request_matrix",
+        "delta": "2",
+        "graph_component": "Source-request matrix",
+        "proposed_or_actual": "64",
+        "retrieval_rationale": "Source-selection retrieval directs the user to Dan, Stephane, Andrew, Lancey, and accountable NEA leadership instead of guessing from an undated roster or public web data."
+      },
+      {
+        "baseline": "27",
+        "change": "Add one governed ingest event summarizing the bounded chat delta and the explicit no-duplicate treatment for Colleen’s roster.",
+        "component_key": "daily_ingest_event",
+        "delta": "1",
+        "graph_component": "Daily ingest events",
+        "proposed_or_actual": "28",
+        "retrieval_rationale": "Ingest-history lookup can distinguish this chat delta from the earlier Colleen workbook ingest and prevent duplicate evidence creation."
+      },
+      {
+        "baseline": "515",
+        "change": "Add one confidence/HITL row for each of the five claims.",
+        "component_key": "claim_confidence_hitl_matrix",
+        "delta": "5",
+        "graph_component": "Claim confidence/HITL matrix",
+        "proposed_or_actual": "520",
+        "retrieval_rationale": "Safety-aware retrieval can use confirmed Lancey/spelling claims internally while blocking Rich/UX interpretations from formal use until P1 validation."
+      },
+      {
+        "baseline": "369",
+        "change": "Add two P1 HITL review rows for the Rich-attributed Product Manager gap and UX research-cadence constraint.",
+        "component_key": "claim_hitl_validation_queue",
+        "delta": "2",
+        "graph_component": "Claim HITL validation queue",
+        "proposed_or_actual": "371",
+        "retrieval_rationale": "HITL queue retrieval keeps high-materiality attributed feedback from being surfaced as validated NEA policy."
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "All four new source nodes have approved card routes; three also have explicit graph relationships. No new operational orphan was introduced.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Lancey and Juno Beach were updated in place; no person, location, Product Manager, or Nick/Nicholas identity duplicate was added.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "0 → 0 (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All five approved active relationships are new evidence-specific triples; no duplicate proposed triple exists.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Existing edge types only; rare active edge types are 50/1000. FEEDBACK_SOURCE_FOR now has two active uses.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "5.13% → 5.00% (-0.13 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Every active claim has a subject, dated source, canonical card route, evidence posture, confidence, materiality, and HITL fields.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100.00% → 100.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "144/147 sources have dates; all four material V47.2 chat sources have complete date, authority, posture, scope, and cold-reference metadata.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "97.90% → 97.96% (+0.06 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "455/477 active claims link to dated sources; every new claim is explicitly dated and scope-bounded.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "95.33% → 95.39% (+0.06 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No merge or canonical rename occurred. Nick and Nicholas remain separate; the open validation now requires correct profile resolution before spelling normalization.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 → 0 (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The two new P1 validations and July 14 action have explicit future due dates; no overdue P0/P1 item was introduced.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The five approved cases preserve unknown handling for the PM shortlist, Rich/UX scope, Colleen roster currentness, Nick/Nicholas identity, and LinkedIn role/currentness boundaries.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0/5 → 0/5 (+0)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "inline_output_gate_result": "pass",
+  "limitations": [
+    "Candidate only; no approved_current promotion.",
+    "Additional Juno Beach PM names and the Rich/UX operating standard remain P1 validation items."
+  ],
+  "lineage_currentness_audience_hitl_results": {
+    "additional_juno_pm_names_confirmed": 0,
+    "aliases_added": 0,
+    "allowed_audiences": [
+      "private_user",
+      "internal_account_team"
+    ],
+    "canonical_renames": 0,
+    "claims_added": 5,
+    "colleen_roster_reingested": false,
+    "hitl_queue_rows_added": 2,
+    "identity_merges": 0,
+    "lancey_exact_propositions_confirmed": true,
+    "new_p1_validations": 2,
+    "rich_ux_feedback_formal_policy": false,
+    "sources_added": 4,
+    "status": "pass"
+  },
+  "packaging_gate_result": "pass",
+  "r1_inline_output_sha256": "149d6ee896dc5fcd3da4cb05c47c2c251be633e7a956a98e471f041fb5f78480",
+  "release_state": "candidate",
+  "schema_and_integrity_results": {
+    "card_spine_unchanged": true,
+    "claim_fts_parity": true,
+    "foreign_key_violations": 0,
+    "migration_replay_foreign_keys": 0,
+    "migration_replay_integrity": "ok",
+    "migration_replay_semantic_tables_match": true,
+    "node_fts_parity": true,
+    "ontology_unchanged": true,
+    "relationship_vocabulary_unchanged": true,
+    "schema_unchanged": true,
+    "sqlite_integrity": "ok"
+  },
+  "semantic_diff": {
+    "status": "pass",
+    "tables": {
+      "alias": {
+        "added": 0,
+        "baseline_rows": 393,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 393
+      },
+      "claim": {
+        "added": 5,
+        "baseline_rows": 515,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 520
+      },
+      "claim_confidence_hitl_matrix": {
+        "added": 5,
+        "baseline_rows": 515,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 520
+      },
+      "claim_confidence_hitl_summary": {
+        "baseline_rows": 27,
+        "controlled_state_changed": true,
+        "work_rows": 27
+      },
+      "daily_ingest_event": {
+        "added": 1,
+        "baseline_rows": 27,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 28
+      },
+      "edge": {
+        "added": 5,
+        "baseline_rows": 1021,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 1026
+      },
+      "node": {
+        "added": 4,
+        "baseline_rows": 628,
+        "changed": 2,
+        "removed": 0,
+        "work_rows": 632
+      },
+      "node_card_map": {
+        "added": 11,
+        "baseline_rows": 1555,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 1566
+      },
+      "p0_p1_action_register": {
+        "added": 1,
+        "baseline_rows": 92,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 93
+      },
+      "p1_validation_sprint": {
+        "added": 2,
+        "baseline_rows": 94,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 96
+      },
+      "source": {
+        "added": 4,
+        "baseline_rows": 143,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 147
+      },
+      "source_request_matrix": {
+        "added": 2,
+        "baseline_rows": 62,
+        "changed": 0,
+        "removed": 0,
+        "work_rows": 64
+      },
+      "validation_queue": {
+        "added": 2,
+        "baseline_rows": 171,
+        "changed": 1,
+        "removed": 0,
+        "work_rows": 173
+      }
+    },
+    "unapproved": []
+  },
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

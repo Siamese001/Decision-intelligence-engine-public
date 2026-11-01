@@ -1,0 +1,1133 @@
+{
+  "approved_operation_count": 125,
+  "exact_match_count": 125,
+  "failures": [],
+  "operations": [
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 1,
+      "object_type": "source",
+      "operation_type": "add",
+      "proposed_id": "source_v54_user_edo_authority_boundary_2026_07_14"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 2,
+      "object_type": "source_version",
+      "operation_type": "add",
+      "proposed_id": "srcver_source_v54_user_edo_authority_boundary_2026_07_14_v1"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 3,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v54_edo_june15_authority"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 4,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v54_edo_pod4_retirement"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 5,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v54_edo_enterprise_boundary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 6,
+      "object_type": "source",
+      "operation_type": "update",
+      "proposed_id": "source_edo_status_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 7,
+      "object_type": "source_version",
+      "operation_type": "update",
+      "proposed_id": "srcver_source_edo_status_2026_06_15_v1"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 8,
+      "object_type": "node",
+      "operation_type": "update",
+      "proposed_id": "org_edo"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 9,
+      "object_type": "node",
+      "operation_type": "update",
+      "proposed_id": "org_nee_it"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 10,
+      "object_type": "node",
+      "operation_type": "update",
+      "proposed_id": "org_nee"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 11,
+      "object_type": "node",
+      "operation_type": "retire",
+      "proposed_id": "workstream_edo_data_products_pod"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 12,
+      "object_type": "node",
+      "operation_type": "update",
+      "proposed_id": "source_edo_status_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 13,
+      "object_type": "node_state",
+      "operation_type": "update",
+      "proposed_id": "org_edo"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 14,
+      "object_type": "node_state",
+      "operation_type": "update",
+      "proposed_id": "org_nee_it"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 15,
+      "object_type": "node_state",
+      "operation_type": "update",
+      "proposed_id": "org_nee"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 16,
+      "object_type": "node_state",
+      "operation_type": "update",
+      "proposed_id": "workstream_edo_data_products_pod"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 17,
+      "object_type": "node_state",
+      "operation_type": "update",
+      "proposed_id": "source_edo_status_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 18,
+      "object_type": "alias",
+      "operation_type": "update",
+      "proposed_id": "alias_v29_edo_data_products_pod"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 19,
+      "object_type": "alias",
+      "operation_type": "update",
+      "proposed_id": "alias_v31_edo_all_hands_data_products"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 20,
+      "object_type": "canonical_alias",
+      "operation_type": "retire",
+      "proposed_id": "calias_6829e05df1d5bfc33dc57c10"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 21,
+      "object_type": "canonical_alias",
+      "operation_type": "retire",
+      "proposed_id": "calias_acef7b67b10162013321967f"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 22,
+      "object_type": "edge",
+      "operation_type": "add",
+      "proposed_id": "edge_v54_org_nee_has_horizontal_layer_org_edo"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 23,
+      "object_type": "legacy_edge_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "edge_v54_org_nee_has_horizontal_layer_org_edo"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 24,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_e0daa44d245df45dfc0a97b0d1e3d2d0|ev_v54_edo_enterprise_boundary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 25,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v54_9c203f44f911447951af64075f30e9da"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 26,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_e0daa44d245df45dfc0a97b0d1e3d2d0"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 27,
+      "object_type": "edge",
+      "operation_type": "add",
+      "proposed_id": "edge_v54_source_edo_status_dated_snapshot_of_org_edo"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 28,
+      "object_type": "legacy_edge_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "edge_v54_source_edo_status_dated_snapshot_of_org_edo"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 29,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_6aa6d732d4d6a8d92af4f63bf8ed8287|ev_v54_edo_june15_authority"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 30,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v54_2d994bae20d17f4d4f4e989849206ec0"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 31,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_6aa6d732d4d6a8d92af4f63bf8ed8287"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 32,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_6aa6d732d4d6a8d92af4f63bf8ed8287|ev_legacy_claim_claim_v36_edo_eight_workstream_program_view_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 33,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v54_64e8364d23e0acbcf806d428ffd57581"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 34,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v54_edo_enterprise_wide_boundary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 35,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v54_edo_enterprise_wide_boundary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 36,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_659172d5bd4d300c4098ba70836fe734|ev_v54_edo_enterprise_boundary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 37,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v54_118edb3fe7807f617d52004e6b0f04c8"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 38,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_659172d5bd4d300c4098ba70836fe734"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 39,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v54_778ad44294b93e8733df6121ea2a8d45"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 40,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v54_edo_pod4_retired_from_current_model"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 41,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v54_edo_pod4_retired_from_current_model"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 42,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_ac98e15a07faaf29d10180ef251bb8f3|ev_v54_edo_pod4_retirement"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 43,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_ac98e15a07faaf29d10180ef251bb8f3|ev_legacy_claim_claim_v36_edo_eight_workstream_program_view_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 44,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v54_77d389a089e7ea11b06db1c747cb841e"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 45,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_ac98e15a07faaf29d10180ef251bb8f3"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 46,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v54_e5035f05b2d278947a2cc7734b5155d4"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 47,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v54_josh_millar_edo_leadership"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 48,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v54_josh_millar_edo_leadership"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 49,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_e4a780a918314d26ad59b3549b18f825|ev_legacy_claim_claim_v25_stakeholder_josh_millar_summary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 50,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_e4a780a918314d26ad59b3549b18f825|ev_v54_edo_enterprise_boundary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 51,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v54_9aec1986fb0af3e7f54f499392b61e26"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 52,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_v54_e4a780a918314d26ad59b3549b18f825"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 53,
+      "object_type": "claim",
+      "operation_type": "update",
+      "proposed_id": "claim_v36_edo_eight_workstream_program_view_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 54,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_claim_v36_edo_eight_workstream_program_view_2026_06_15|ev_v54_edo_june15_authority"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 55,
+      "object_type": "assertion",
+      "operation_type": "update",
+      "proposed_id": "asrt_claim_claim_v36_edo_eight_workstream_program_view_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 56,
+      "object_type": "claim",
+      "operation_type": "update",
+      "proposed_id": "claim_v23_dan_operating_model"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 57,
+      "object_type": "assertion",
+      "operation_type": "update",
+      "proposed_id": "asrt_claim_claim_v23_dan_operating_model"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 58,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v23_edo_operates_under_nee_it"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 59,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_de814dea90b6619bb3950928"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 60,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v25_org_edo_sits_under_org_nee_it"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 61,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_88f9f3907019c56017b4998f"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 62,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v29_edo_data_products_related_asset"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 63,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_716cffa2f8d9f234c1365f1c"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 64,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v29_edo_data_products_related_ec"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 65,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_5554916871f6ea1b95b0cc4a"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 66,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v29_edo_rebrand_alias_activation"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 67,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_f0605e7a2b1c079fab4fc239"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 68,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v31_edo_snapshot_data_products"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 69,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_a82277de7141ca5ca48d093e"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 70,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v31_edo_snapshot_data_marketplace"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 71,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_ca5f1884d0fab68fc47a68a7"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 72,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v31_edo_snapshot_digital_thread"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 73,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_9be4f97df358bc6ae82090e3"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 74,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v31_edo_snapshot_dqt"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 75,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_e79843a924945fd5acab7977"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 76,
+      "object_type": "edge",
+      "operation_type": "supersede",
+      "proposed_id": "edge_v31_edo_snapshot_rebrand_activation"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 77,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_edge_d0a0f7bcad7d2a8f32f8e9a9"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 78,
+      "object_type": "claim",
+      "operation_type": "supersede",
+      "proposed_id": "claim_v25_stakeholder_josh_millar_summary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 79,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_claim_claim_v25_stakeholder_josh_millar_summary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 80,
+      "object_type": "claim",
+      "operation_type": "supersede",
+      "proposed_id": "claim_v29_edo_data_products_reconciled_status"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 81,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_claim_claim_v29_edo_data_products_reconciled_status"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 82,
+      "object_type": "claim",
+      "operation_type": "supersede",
+      "proposed_id": "claim_v29_edo_pod_structure_snapshot"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 83,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_claim_claim_v29_edo_pod_structure_snapshot"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 84,
+      "object_type": "claim",
+      "operation_type": "supersede",
+      "proposed_id": "claim_v31_all_hands_edo_subworkstream_snapshot"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 85,
+      "object_type": "assertion",
+      "operation_type": "supersede",
+      "proposed_id": "asrt_claim_claim_v31_all_hands_edo_subworkstream_snapshot"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 86,
+      "object_type": "validation",
+      "operation_type": "update",
+      "proposed_id": "validation_v23_edo_edp_lineage_p1"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 87,
+      "object_type": "validation",
+      "operation_type": "update",
+      "proposed_id": "validation_v29_edo_pod_structure_reconcile_p1"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 88,
+      "object_type": "canonical_route",
+      "operation_type": "retire",
+      "proposed_id": "route_9a494ca7e0a062b37286d4ea"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 89,
+      "object_type": "node_card_map",
+      "operation_type": "remove",
+      "proposed_id": "workstream_edo_data_products_pod|NEE_02"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 90,
+      "object_type": "canonical_route",
+      "operation_type": "retire",
+      "proposed_id": "route_4db8ca265822921ddd229577"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 91,
+      "object_type": "node_card_map",
+      "operation_type": "remove",
+      "proposed_id": "workstream_edo_data_products_pod|NEE_11"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 92,
+      "object_type": "canonical_route",
+      "operation_type": "retire",
+      "proposed_id": "route_699e311f6d86c62b303fc04f"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 93,
+      "object_type": "node_card_map",
+      "operation_type": "remove",
+      "proposed_id": "workstream_edo_data_products_pod|NEE_13"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 94,
+      "object_type": "canonical_route",
+      "operation_type": "retire",
+      "proposed_id": "route_cc7a4df86ac86f59b62c27b7"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 95,
+      "object_type": "node_card_map",
+      "operation_type": "remove",
+      "proposed_id": "workstream_edo_data_products_pod|NEE_16"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 96,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_node_org_edo"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 97,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_node_org_nee_it"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 98,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_node_org_nee"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 99,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_node_workstream_edo_data_products_pod"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 100,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_node_source_edo_status_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 101,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_claim_claim_v36_edo_eight_workstream_program_view_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 102,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_claim_claim_v23_dan_operating_model"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 103,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_claim_claim_v54_edo_enterprise_wide_boundary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 104,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_assertion_asrt_v54_659172d5bd4d300c4098ba70836fe734"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 105,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_claim_claim_v54_edo_pod4_retired_from_current_model"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 106,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_assertion_asrt_v54_ac98e15a07faaf29d10180ef251bb8f3"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 107,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_claim_claim_v54_josh_millar_edo_leadership"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 108,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_assertion_asrt_v54_e4a780a918314d26ad59b3549b18f825"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 109,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_assertion_asrt_v54_e0daa44d245df45dfc0a97b0d1e3d2d0"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 110,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_assertion_asrt_v54_6aa6d732d4d6a8d92af4f63bf8ed8287"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 111,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_assertion_asrt_claim_claim_v36_edo_eight_workstream_program_view_2026_06_15"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 112,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_de814dea90b6619bb3950928"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 113,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_88f9f3907019c56017b4998f"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 114,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_716cffa2f8d9f234c1365f1c"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 115,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_5554916871f6ea1b95b0cc4a"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 116,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_f0605e7a2b1c079fab4fc239"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 117,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_a82277de7141ca5ca48d093e"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 118,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_ca5f1884d0fab68fc47a68a7"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 119,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_9be4f97df358bc6ae82090e3"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 120,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_e79843a924945fd5acab7977"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 121,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_assertion_asrt_edge_d0a0f7bcad7d2a8f32f8e9a9"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 122,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_claim_claim_v25_stakeholder_josh_millar_summary"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 123,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_claim_claim_v29_edo_data_products_reconciled_status"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 124,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_claim_claim_v29_edo_pod_structure_snapshot"
+    },
+    {
+      "after_match": true,
+      "before_match": true,
+      "exact_match": true,
+      "index": 125,
+      "object_type": "search_document",
+      "operation_type": "update",
+      "proposed_id": "search_claim_claim_v31_all_hands_edo_subworkstream_snapshot"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,70 @@
+{
+  "account_graph_delta": "zero",
+  "alternatives_considered": [
+    {
+      "alternative": "Documentation-only instruction",
+      "decision": "rejected",
+      "reason": "Would repeat the v47 enforcement gap."
+    },
+    {
+      "alternative": "Allow flexible narrative around the tables",
+      "decision": "rejected",
+      "reason": "Would recreate excessive and inconsistent gate output."
+    },
+    {
+      "alternative": "Generate and fail-closed validate exactly three tables",
+      "decision": "selected",
+      "reason": "Creates a compact, deterministic, reviewable decision surface."
+    }
+  ],
+  "approval_source": "User conversation: after specifying the exact three required outputs, the user instructed “V47.1 with gates and inline output gates”.",
+  "baseline_graph_sha256": "4eb895a6b79eba6b57d1092f169ee9145371255137c9a70e2dda6d9022ce480b",
+  "baseline_policy_body_sha256": "ea94485dd1206891c4b4317083ee7a83c2eb902fbdd7cc585b4d31e95fc6fe68",
+  "baseline_policy_card_sha256": "b5b542aa990405358328c8040afa85678d52710f0be5e9adcdd8c4dd274f767f",
+  "baseline_zip_sha256": "4bc0ae8709f979a272d1d248116b37900b01f72ca40803052a1819853c77fa24",
+  "canonical_serialization_sha256": "afcfa949755115c38db28b146b8453402ccb4ba75796513b53a56162a853ae10",
+  "classification": "C6 protocol change",
+  "generated_at": "2026-07-11T15:07:43Z",
+  "non_policy_card_delta": "zero",
+  "problem": "Gate reviews could satisfy file-level controls while omitting, burying, or over-expanding the user-visible decision surface. The v47 metric table was policy text but the executable gate did not generate or validate the rendered output.",
+  "proposal_id": "PD-47.1-THREE-TABLE-INLINE-OUTPUT-GATE",
+  "risks_and_controls": [
+    {
+      "control": "Machine-readable rows are part of the proposal/conformance and the tool reports the first exact failure.",
+      "risk": "A valid semantic proposal is blocked by malformed display data"
+    },
+    {
+      "control": "The rendered file must equal tool output byte-for-byte and its hash is bound.",
+      "risk": "A metric is manually altered in chat"
+    },
+    {
+      "control": "Expected card IDs are derived from C1, control exceptions, and graph card routes.",
+      "risk": "Route-only card impact is omitted"
+    },
+    {
+      "control": "Evidence remains mandatory but is filed separately; only the inline decision surface is constrained.",
+      "risk": "The strict output hides necessary evidence"
+    }
+  ],
+  "rollback": "Restore v47 policy, tool, templates, and tests; remove PD-47.1 control artifacts. No account graph or non-policy card rollback is required.",
+  "scope": [
+    "cards/NEE_99_Project_Instructions.md",
+    "PROJECT_INSTRUCTIONS.md",
+    "tools/nee_pre_mutation_gate.py",
+    "tools/README.md",
+    "tests/test_nee_pre_mutation_gate.py",
+    "governance/templates/*.json",
+    "approval, protocol-decision, conformance, QA, release, diff, inline-output, and manifest records"
+  ],
+  "selected_decision": [
+    "Render exactly three inline tables in fixed order: graph delta and retrieval impact; mandatory graph metrics; card additions and retrieval impact.",
+    "File all other assessments, operation inventories, reconciliations, digests, and approval material outside the inline gate body.",
+    "Generate the three tables from machine-readable proposal or conformance rows.",
+    "Validate exact Markdown, graph count arithmetic, component completeness, fixed metric names/order/thresholds/status, affected-card reconciliation, and non-generic retrieval rationales.",
+    "Bind the G1 inline-output hash to approval and the R1 inline-output hash to conformance; block packaging when either output is missing or invalid."
+  ],
+  "target_package": "NEE_v47.1",
+  "target_policy_body_sha256": "b784a88893bea7dee2861ff1cb6e77f4ea04f322216e57b04c4c69da4dd9702e",
+  "target_policy_card_sha256": "11bc9acfc576803ffb963bac907c6b589f0b88c199406e4964b48d3ca79cef21",
+  "target_policy_version": "47.1"
+}

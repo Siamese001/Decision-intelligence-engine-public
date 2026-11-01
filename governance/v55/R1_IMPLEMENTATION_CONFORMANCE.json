@@ -1,0 +1,68 @@
+{
+  "actual_card_delta_sha256": "af273a87e8c2c33d294f9eac43f95e65a880305fad919a493f46855c2566d79a",
+  "actual_graph_delta_sha256": "730e762e557737adc8448178a70295d03554bd8b849b316fa410e8cff6803b86",
+  "approval_chronology": {
+    "approval_precedes_first_canonical_write": true,
+    "approval_received_at_utc": "2026-07-14T18:24:41Z",
+    "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+    "first_canonical_write_at_utc": "2026-07-14T18:28:17Z",
+    "first_canonical_writes": [
+      "PROJECT_INSTRUCTIONS.md",
+      "cards/NEE_99_Project_Instructions.md"
+    ],
+    "prewrite_revalidation_at_utc": "2026-07-14T18:27:37Z",
+    "status": "PASS"
+  },
+  "approval_record_sha256": "738f5748345b3026e545fb654f726e28694556b5613eb0ef50149799dcbdc33b",
+  "approved_envelope": {
+    "baseline_NEE_99_sha256": "4f1885acfa7f82c577abb4506cdbd52c343cabbc404f37d198670d705e8a1697",
+    "baseline_graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+    "baseline_policy_sha256": "c736087c1ef6c646b3ae3b5a54b43074e5285f36434bcf24ccb0fce2e826ce70",
+    "baseline_zip_filename": "NEE_v54.0_edo_authority_boundary_HITL(2).zip",
+    "baseline_zip_sha256": "608409bdc6a092b86cd10a877af70789efb1b227aa4c1d93c11f1ad990b15c00",
+    "card_proposal_sha256": "d6ed976c73c17bc99ab86fe3a775ab9610755dcd6eacdf6a1207005900101d7a",
+    "g1_inline_output_sha256": "ed76033b149f883ae5d93cbcc730a2b205a7f9c26999cefaab3127687a3f49af",
+    "graph_proposal_sha256": "c0b3d1687b29caa8fc8714b44b7381c699473e0fd7252c24d1394dcfece621e7",
+    "input_artifact_hashes": {
+      "user_instruction_2026-07-14": "0508c2f43a6bb00691b364cd78e858f20bb5279530bedc9f06beae3bd49b4855"
+    },
+    "proposed_NEE_99_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+    "proposed_policy_body_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+    "review_bundle_zip_sha256": "79c396ad2bf0a890892f98c65b241f6f2af1b7bfa1844c4bcbb10379f066b520"
+  },
+  "canonical_NEE_99_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+  "canonical_serialization_sha256": "13dc892f0822b765570718858b62febdf9f458010af98460de8554b9284d7ba1",
+  "change_class": "C6 protocol-only activation",
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "deferred_propagation": "NEE_00 and broader non-policy synthesis/control artifacts remain unchanged and require a separately authorized full-system release.",
+  "gate_o1": {
+    "sha256": "ed76033b149f883ae5d93cbcc730a2b205a7f9c26999cefaab3127687a3f49af",
+    "stage": "R1",
+    "status": "PASS",
+    "table_count": 3
+  },
+  "generated_at_utc": "2026-07-14T18:34:45Z",
+  "graph_delta": 0,
+  "graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "implementation_drift": "none",
+  "non_policy_card_delta": 0,
+  "policy_body_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+  "record_id": "R1-PD55-IMPLEMENTATION-CONFORMANCE-2026-07-14-001",
+  "release": "NEE_v55",
+  "release_state_on_pass": "approved_current",
+  "release_version": "55.0",
+  "rollback_or_forward_repair": "Restore exact V54 NEE_99 and root-mirror bytes, mark PD-55 superseded, preserve audit evidence, and issue a separately governed forward repair.",
+  "semantic_files_changed": [
+    "PROJECT_INSTRUCTIONS.md",
+    "cards/NEE_99_Project_Instructions.md"
+  ],
+  "status": "PASS",
+  "tests": {
+    "baseline_immutability": "PASS",
+    "inherited_v54_account_knowledge_acceptance": "7/7 PASS",
+    "pre_mutation_gate_unit_tests": "19/19 PASS",
+    "sqlite_integrity": "PASS",
+    "v55_policy_acceptance": "31/31 PASS"
+  },
+  "unapproved_semantic_file_changes": []
+}

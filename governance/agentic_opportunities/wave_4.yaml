@@ -1,0 +1,19 @@
+wave_number: 4
+wave_id: "Wave 4: Unify budget ownership, recovery outcomes and checkpoint eligibility"
+description: "Conserve resources across nested reasoning and resume only demonstrably valid work"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_bounded_runtime_e2e.py"
+  - "tests/adversarial/test_budget_checkpoint_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_4.yaml"
+criteria:
+  - "Concurrent calls cannot over-reserve or debit another run across isolated contexts"
+  - "Crashes preserve consumed and reserved budgets and original expiry upon restoration"
+  - "Reboot or host clock discontinuity reconstructs a conservative deadline and disables optional work without replenishment"
+  - "Crash after effect before acknowledgment requires independent reconciliation"
+  - "Missing seals, missing decisions, source hash mismatch, or configuration mismatch cannot inherit checkpoint PASS"
+  - "Query replan binds a new manifest and makes a novel useful action or stops"
+  - "Quota, transient rate limits, auth, schema failure, timeout, and uncertain completion yield distinct outcomes"
+  - "Existing external L2 zero-retry policy remains enforced with immediate dead-letter quarantine"
+  - "Reserve input plus allowed output and reconcile actual usage across primary, judge, and healer actions"

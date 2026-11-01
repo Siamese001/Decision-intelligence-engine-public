@@ -1,0 +1,16 @@
+wave_number: 6
+wave_id: "Wave 6: Improve document coverage and evidence selection"
+description: "Give document reasoning a complete, source-bound account of what was converted, selected, omitted and unresolved"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_document_coverage_reasoning_e2e.py"
+  - "tests/adversarial/test_document_coverage_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_6.yaml"
+criteria:
+  - "Cold/warm cache has identical physical-unit coverage and locators"
+  - "Raster versus blank pages, formula cells without cached values, sparse worksheet rows and late decisive evidence beyond prefix/row limits are correctly accounted"
+  - "Unsupported conversion cannot claim exhaustive coverage"
+  - "Every advertised adapter resolves to a real implementation"
+  - "Forged signature/heading text cannot elevate authority"
+  - "Evidence selection stays within current prompt/attempt limits; any fallback uses existing provider/egress policy"

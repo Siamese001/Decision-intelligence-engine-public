@@ -1,0 +1,17 @@
+{
+  "canonical_NEE_99_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+  "canonical_policy_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "gate_o1_status": "PASS",
+  "generated_at_utc": "2026-07-14T18:34:45Z",
+  "graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "packaging_status": "authorized_after_R1_O1_and_release_acceptance",
+  "r1_conformance_sha256": "13dc892f0822b765570718858b62febdf9f458010af98460de8554b9284d7ba1",
+  "r1_status": "PASS",
+  "release": "NEE_v55",
+  "release_acceptance": "21/21 PASS",
+  "release_state": "approved_current",
+  "successor_zip_created": false,
+  "successor_zip_eligible": true,
+  "version": "55.0"
+}

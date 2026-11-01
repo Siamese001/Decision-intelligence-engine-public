@@ -1,0 +1,15 @@
+wave_number: 10
+wave_id: "Wave 10: Direct graph maintenance using measured harm and discriminating evidence"
+description: "Use verified failed questions and knowledge-health findings to select read-only investigation and accurate, bounded maintenance proposals"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_knowledge_harm_learning_e2e.py"
+  - "tests/adversarial/test_knowledge_maintenance_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_10.yaml"
+criteria:
+  - "Cross-generation joins and duplicate event recurrence are rejected"
+  - "Frequency never proves truth; multi-valued predicates and disjoint validity intervals do not trigger destructive supersession"
+  - "Freshness detection reads a snapshot; dry-run mutations occur only in an isolated candidate container"
+  - "Canonical assertion and search-document identity mappings, retained provenance, sidecar, and cache consequences are checked"
+  - "Missing evidence yields acquisition or deferral; graph changes retain exact approval and UWG release authority"

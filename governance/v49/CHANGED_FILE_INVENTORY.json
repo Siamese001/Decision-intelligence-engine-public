@@ -1,0 +1,715 @@
+{
+  "baseline_package": "NEE_v48.2",
+  "candidate_package": "NEE_v49",
+  "canonical_serialization_sha256": "9a568a6ef4f40b40881f13211240ca74460ffde0c68379c671cb12c33d37d19d",
+  "changed_file_count_excluding_self_and_manifest": 100,
+  "excluded_late_package_control_files": [
+    "MANIFEST.md",
+    "governance/v49/CHANGED_FILE_INVENTORY.json",
+    "manifest.json"
+  ],
+  "files": [
+    {
+      "after_sha256": "55d27bd66a382a644112460d468d9566db384ea6173b82333add97800c0ba333",
+      "before_sha256": "62519b86bab4e247c8f5945bde8ad96dbd4bd7999d1d6f01dd60dc2b8c4aa290",
+      "change_type": "modify",
+      "path": "CHANGELOG.md",
+      "semantic_class": "package_control_or_preserved_artifact"
+    },
+    {
+      "after_sha256": "e64d63ec59bf99f6c47f505ce532053ee1d1295b932d6c6d95a13d0ae254462a",
+      "before_sha256": "2b449d34c5443c5b6efb72bcca4301f459aacb2ea6384ffa39f505de4cd8aa7d",
+      "change_type": "modify",
+      "path": "QA_REPORT.md",
+      "semantic_class": "package_control_or_preserved_artifact"
+    },
+    {
+      "after_sha256": "66c5977b9f317604b8a40cb4e14c55893a7f058f6f0da08c3ed15e55403ba605",
+      "before_sha256": "60f6b803907927e9beff2016d25e75ed5d6ec16c04d87a75df4ef879cde44d7d",
+      "change_type": "modify",
+      "path": "README.md",
+      "semantic_class": "package_control_or_preserved_artifact"
+    },
+    {
+      "after_sha256": "9e47b3b355bfa00419b48f3ab3b93da0ae16191293b8eb68ebf1f9f39a87e617",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "approvals/v49/APPROVAL_BUNDLE_MANIFEST.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "dc581fdae715999b68260aba1ac70c15e0ee1b7e66c8bf6db6dae3908b27dcaa",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "approvals/v49/APPROVAL_RECORD.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "4ef803597e3b480c3d123f146bf50d929261cdcfbf9f44fd3e6c24905af26940",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "approvals/v49/C1_V49_PROPOSED_CARD_DELTA.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "649c2814ad748fb119b4115b543b29b3021cd0760c5c3a2af1f39f4b1a7a32fa",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "approvals/v49/EXACT_APPROVAL_STATEMENT.txt",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "e3f28d8d72fa92fe4b70f692cf56b3d6e2ffb75161692f54e2424d103d0e6069",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "approvals/v49/G1_GATE_O1_INLINE_TABLES.md",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "a20925ccd1a1229373b091f49b74bb8350a61c414102c9d24b2fa76f76cb4db8",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "approvals/v49/G1_V49_PROPOSED_GRAPH_DELTA.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "4009dd74a8f01287f87c4bf0d2defa827e5f5d211846b9ac170a97c075d34c20",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "approvals/v49/GATE_O1_VALIDATION.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "917b6f8193a58b6892572d1160805fb3a4966d064f9cf44306784494cc2673d3",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "approvals/v49/INTEGRATED_APPROVAL_REQUEST.md",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "344d7cef3129efea4b5e6e13a2479aeca49d02abbe6f75f96cbf9d6fa235dfb6",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "approvals/v49/PREWRITE_REVALIDATION.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "b4bf74dfb6f88a3ad96fa704c83a5d48995d18e80ecf78ae40acc3ce1ad1f582",
+      "before_sha256": "ee7bcff7d4029f87811c01e3f27b1d30ec832e85b78070a899fc88c6f20265fc",
+      "change_type": "modify",
+      "path": "database/canonical_database.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "0d545919a5baf482b80fa739755fedf698a0986d1000b96c528e534857649e3a",
+      "before_sha256": "0929e78bd2944781f9f3aa3310a96ba474d5c519608ea2c714632b444c2785b7",
+      "change_type": "modify",
+      "path": "database/database_inventory.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "0d545919a5baf482b80fa739755fedf698a0986d1000b96c528e534857649e3a",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "database/database_inventory_v49.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "812cee161e357de814f9686492cd41bf116b026c9497f6cb8e6bba73d06ceb8d",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "database/object_inventory_v49.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "92ab1415394b37b17308635189a0b72d4d4980273e7f97a1a8a34027ab818e6f",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "database/schema_v49.sql",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "b940481c2ff6ed437785d44afee5772f2d1fc4e0c5ac1ab8ddf59e3d30d93e34",
+      "before_sha256": "f108155e1d24d8e64343a0a0188a729c2fa969228ce0134bccc8ced6a9955760",
+      "change_type": "modify",
+      "path": "database/table_row_counts.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "b940481c2ff6ed437785d44afee5772f2d1fc4e0c5ac1ab8ddf59e3d30d93e34",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "database/table_row_counts_v49.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "47c81b6f451c04b93eb15d2e83b4a78801960a419eb9c424fef9e3795b2ce506",
+      "before_sha256": "21cd73edebe946ad81454b02432584a4fabfe5cbb689fa45d913cdf4aa2531d4",
+      "change_type": "modify",
+      "path": "exports/source_lineage.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "383fa8d032848fb20bb00312dac430a01558de83e717cbf4817c9ac406893e1b",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/source_version_lineage.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "de6cd65adaafb88216ae10668097e9918ba0510545e2274c87f6ef7a4646e4bc",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_answer_packets.jsonl",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "23eefb9147ed9f52565d6149d2e4a417c56acdc1d09972bdaab0b5f610ca10e9",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_assertion_delta.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "64554830e4746fceb5adfd135526aa5e29cdb0b1280fffea7b4a818726284d24",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_assertion_evidence_delta.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "9c0dc12d786b7cd0e582126bc51259fd15830e60b9cb6876b83f4ea0a6a357b5",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_candidate_repair_records.jsonl",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "d689670d7b152385d25270ac5530802dfb8ddd3471c561cda0ddc7289bb2f575",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_card_change_matrix.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "148e05e0dc90424540438efdd63ed8bf97d2df43d59a382066c5a166d738863b",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_consulting_si_benchmark.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "1007d48bdb23e2f515a42538d11adf1291cb40644c558354a07ac8343f905c20",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_evidence_delta.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "4010031236ecebaec0a19457aa95c6b08d6602809ecd639c1565b058155bada2",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_external_research_findings.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "2d97fcf87550e9941c139b1ae107dbe4fab991e6d53da917baaef458ade5a9f8",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_external_research_findings.jsonl",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "0ba27b6e6c6c22c188599ad1a8fa595218571f7de095f61aace63b6e42684d3c",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_external_source_register.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "10ffeb1d23f1e02702fbd41e276397711c91f3d0f06dc1881f3e401b8df1d04f",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_external_source_register.jsonl",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "9288cdd460da47e546f34511ab757d802e3f409460b98eb7ea3bd6d2b8b9f405",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_gap_to_research_routing_matrix.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "64ef682742b770ab06e93c4c40305f61b3bbc211985e6e40db5f9edb812b6fa8",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_gap_to_research_routing_matrix.jsonl",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "396b74d91d51325a7ea3e5e298ffe80e235f784ea8e6bea735daa9bd429cc309",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_graph_delta_summary.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "0ddbc04cba2f187bc65f05aee20da305b27cf3fde92b85b4a95ea3fccc740a21",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_graph_delta_summary.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "d612a11a48e5a53fb75257c94d8cc264c660bb522634bf939e61a8d9c13468b7",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_graph_delta_summary.md",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "9f754250ab73e805e2d993eeff605835c5077b9d9628d19a1ecd7a7a00695dbb",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_internal_evidence_request_queue.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "5c20e3c07e75b8456d2040d7de484a5a92f0fbb8f2920867f7b64c673e2d0f0c",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_nee_public_fact_pack.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "d9953b3e2dc7f1fad8fd9d444eba69e3fd2fa0d2d1cd4ccd7c4b817880de0ea2",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_route_delta.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "c31f6974ed56288343d2f6831ef81de5c45c1efabf8f190e4c6ca772b5509ac0",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_search_document_delta.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "cb220fb9bcc020bcb1a7082e336c6795020b04f61fe4a18c433d00b7a81fdfe2",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_search_limitations.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "2277d05c5e7b02270d31bead204f83323f8c52b562f65cdb00f891ad6027ba70",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_source_delta.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "513d67e113f8ab891381025d683ddfad1b1e5989e52828e66cf76620f5590490",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_source_version_delta.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "a7c51e83487f62e2b1ab63218959495fc3f359c54e12de3567265b32fcf8f67a",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_utility_peer_benchmark.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "68919c9da5740aa62c47622bdd9427b1213f941aba8d5b2da8ac5d27e8a25b5e",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "exports/v49_v42_incremental_delta.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "52d093048f30daac4006489a74414e25f7688b8c294685f041b8fff34ee4e4f5",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/BASELINE_IMMUTABILITY.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "e92c5c1ca37df6d2d826f77c64efe622d8f58998a8c1b0ff826f5078c5039d7f",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/IMPLEMENTATION_NORMALIZATION_RECORD.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "89b7da6ef058465ca982227084bfd41dc1607b77f6a63ab690aae581d087ffb0",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/R1_ACTUAL_CARD_DELTA.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "fddf5bfe2d94587f5ef3b8b093605a2acc8f3f931781052043a7b048d657eac9",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/R1_ACTUAL_GRAPH_DELTA.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "cc6f971f38f1604104e358b19cf6b4ae0af523c245e22bc5a2a4572f71a97019",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/R1_BUILD_RESULT.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "e3f28d8d72fa92fe4b70f692cf56b3d6e2ffb75161692f54e2424d103d0e6069",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/R1_GATE_O1_INLINE_TABLES.md",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "f74a3eb5885e02380d15e1ab786e8c1e88de8b0c027e463cffbc4d71c262ff1b",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/R1_GATE_O1_VALIDATION.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "98aba0d4cd326e64bb0f1c284536b656c5b27a546bfb335f245ad0062c5ebb7c",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/R1_IMPLEMENTATION_CONFORMANCE.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "26cf5b520611889db4cd2bd2470a8269efda9830d22dd99640017501c1560d91",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/reconciliation/AUTHORITY_CURRENTNESS_REVIEW.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "2705bf46d5ce1513ec4d3aecc722ef9642620c4767738b9d6d68405cf5835849",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/reconciliation/CONFLICT_REGISTER.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "3cb5d4698c1c1494e22fb97e6fe56a7e734a3568515953fc70f2c4ba1b06d4e8",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/reconciliation/ENTITY_TAXONOMY_REVIEW.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "f908f19074bf3dac02edfa412c8db63e386f83d9eab4b0c120c0d42e74e9c0bc",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/reconciliation/IDENTITY_NO_MERGE_DECLARATION.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "135961ef3b5ca537d843047b1915a67efe8239f17c1a0527378a796542541826",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/reconciliation/SOURCE_DEDUPLICATION.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "a3c822e52b7035c17b634a20ba380e3cdaa2e1a8df142e206582cc2b348fc003",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "governance/v49/reconciliation/V42_INCREMENTAL_REVIEW.json",
+      "semantic_class": "governance_control"
+    },
+    {
+      "after_sha256": "fdd7015357f41bc8a3ee8424522f4199c95be9352b8df269c7af7e230a0fdb05",
+      "before_sha256": "b6b10223b7c6f25eed890df932f0dca50dc0ed47b5d57cb30f3f2f1df01f6ea6",
+      "change_type": "modify",
+      "path": "graph/nee_graph.sqlite",
+      "semantic_class": "canonical_graph"
+    },
+    {
+      "after_sha256": "420402eeff52538aad737853589ddd5117dc09d57d0b573a73f659c187c8bd58",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "inputs/v49_phase_a_review_bundle_pointer.json",
+      "semantic_class": "governed_input_pointer"
+    },
+    {
+      "after_sha256": "1e1c9ff7a22f575c69c40df98f5a8f9637342c4d5d135a549f92bd0c10b11249",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "metrics/graph_health_table_v49.csv",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "6606e2525361fa123174aa9030c459b1c48eb5ba36ae65b1d29fe4c71829121a",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "metrics/graph_health_table_v49.md",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "5061e4410814040d4e7be6fa9489cecbb7c230dbf05e2d49931ef8e7e7be9f4b",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "metrics/metrics_v49.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "975666bf8d9d1c8cf48b9d464e9242fce07c8e59c5caf8cbb9d4d7a3a5fac7d4",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "migrations/0004_v49_external_evidence_gap_routing/README.md",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "105ebc41343cd2052c32aeeaa43d8dce2b502bd2a3a704f51ca61948561cf661",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "migrations/0004_v49_external_evidence_gap_routing/forward.py",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "699cfff260e78dec5cc9a5b66f461883bb9f2618beca85ac709c226be7de482c",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "migrations/0004_v49_external_evidence_gap_routing/migration.py",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "105ebc41343cd2052c32aeeaa43d8dce2b502bd2a3a704f51ca61948561cf661",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "migrations/0004_v49_external_evidence_gap_routing/rollback.py",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "105ebc41343cd2052c32aeeaa43d8dce2b502bd2a3a704f51ca61948561cf661",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "migrations/0004_v49_external_evidence_gap_routing/validate.py",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "9acd29adbacc363443845c31ba21ea5803b53ebfe8314c0edfafc8577a5199e3",
+      "before_sha256": "881043dd3d6c3c0be8e0c69acfc470a1523ba67b2d75435005d7ff514d1cdd9c",
+      "change_type": "modify",
+      "path": "migrations/README.md",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "bbb286592ff5169f89faa3c9ccae1687946b57c43e2a768b77175486c8aec232",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "migrations/apply_v49.py",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "a34f269f781f09ec9fc06f75780be1dec57c9b3b3ba30ccbbacef15538529cd6",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "migrations/rollback_v49.py",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "830a8f20241a689e53ba9009fba4215d8b95755bfafae0f0fa33f8030316f0f3",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "migrations/validate_v49.py",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "9bcae8468fdb02162d66e22d63adcf11f9c8cce6079de04371650ca53323ae61",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "performance/benchmark_v49.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "984cf6eeef6a75e6619ce8f7dcdf60f6250bfe525708ae67389d05b3ecf10ba6",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "performance/benchmark_v49.md",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "984cf6eeef6a75e6619ce8f7dcdf60f6250bfe525708ae67389d05b3ecf10ba6",
+      "before_sha256": "4b8f7c9a4db327169796e08576220ebb503f27f42cdab17587a9ef052868e724",
+      "change_type": "modify",
+      "path": "performance/performance_report.md",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "9bcae8468fdb02162d66e22d63adcf11f9c8cce6079de04371650ca53323ae61",
+      "before_sha256": "0b8e8a669f20c2efd3c47cdba347e582595a1aec2f8d96448c1c4acd2d420095",
+      "change_type": "modify",
+      "path": "performance/performance_results.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "17c25da35f0fa5d4ef1bb8357af22e128f4878eb075f112c197620219503afeb",
+      "before_sha256": "878af1bb9f879e6565b9b60edf15afe0f8fe0d47a11dd5d5aabbc1b9c0865303",
+      "change_type": "modify",
+      "path": "release_gate_report.md",
+      "semantic_class": "package_control_or_preserved_artifact"
+    },
+    {
+      "after_sha256": "eb5dc21dc3d65f175142a5144ba490c156ae337ae3d2688985b078fc6860625d",
+      "before_sha256": "1adea6612ba0b11c912396483139202bd3aeaa72abb6f600cf6a64147a7fe198",
+      "change_type": "modify",
+      "path": "release_notes.md",
+      "semantic_class": "package_control_or_preserved_artifact"
+    },
+    {
+      "after_sha256": "ee47278352b0a7c62cf6a4a1e9c7eda9061e1da318c0fe92058c2341744d1e21",
+      "before_sha256": "5fd0bea2e654c0e2de0b89b1456a8a88d8b2eb2fa0c87cc87bf8d373d7057ca9",
+      "change_type": "modify",
+      "path": "release_state.json",
+      "semantic_class": "package_control_or_preserved_artifact"
+    },
+    {
+      "after_sha256": "bcace3ff325c14d255b8f30c2163095300db08f2d98d4d8456103065ea402899",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/V48_2_VS_V49_COMPARISON.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "4a8b4f3de57b1053fa64470727cf838de70150caa230aea1f458fef1f70bf6f7",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/V48_2_VS_V49_COMPARISON.md",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "98aba0d4cd326e64bb0f1c284536b656c5b27a546bfb335f245ad0062c5ebb7c",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/V49_CONFORMANCE_REPORT.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "91b304aa09b3a0e460933356e84ad1fbdadb193ec96869a839f4df3e102dbe67",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/V49_CONFORMANCE_REPORT.md",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "f725046378053808d92aae51e6c7a899d3850a72cf2f6d22d575df55100f7df9",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/V49_EXTERNAL_EVIDENCE_GAP_RESEARCH.md",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "003afd2a4f7cc40720f4e216cf9b64df5a2563281f02aae39cc9257becb48bc9",
+      "before_sha256": "d649c459f46d1d50fcc050d986ffe49b5e9459f042cbbd3be36f3a834aab332d",
+      "change_type": "modify",
+      "path": "reports/backup_restore_evidence.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "003afd2a4f7cc40720f4e216cf9b64df5a2563281f02aae39cc9257becb48bc9",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/backup_restore_evidence_v49.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "de1677de3f84f783c5dc8848422d42b80c8daeee889d1da5a9249a0a083faac1",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/migration_evidence_v49.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "d8e3680fbb3e35b9fa87544bfabc494732163a1b025c6d4f13720350ae12b9d4",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/package_integrity_v49.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "f4b4ea35a8a7ef1abadca1d4090365e712395315164d2410fc0b2fd6b701a29d",
+      "before_sha256": "b1fdb3b0e772d83b0001f8ee4861794cec864661a41bf303feb2ed3974a2809e",
+      "change_type": "modify",
+      "path": "reports/release_gate_results.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "f4b4ea35a8a7ef1abadca1d4090365e712395315164d2410fc0b2fd6b701a29d",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/release_gate_results_v49.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "17c25da35f0fa5d4ef1bb8357af22e128f4878eb075f112c197620219503afeb",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "reports/release_gate_v49.md",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "ddf906e9785e0623cb372475ed048afa7c748a1a8ef74c194c324b7190ff726d",
+      "before_sha256": "d8bce6bcaad00d1c4333e952c18b316ec4703c0bd228f3b227da9690b3ce0002",
+      "change_type": "modify",
+      "path": "retrieval_tests/retrieval_results.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "ddf906e9785e0623cb372475ed048afa7c748a1a8ef74c194c324b7190ff726d",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "retrieval_tests/retrieval_results_v49.json",
+      "semantic_class": "generated_derivative_or_evidence"
+    },
+    {
+      "after_sha256": "b6b10223b7c6f25eed890df932f0dca50dc0ed47b5d57cb30f3f2f1df01f6ea6",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "rollback/baseline/nee_graph_v48.2.sqlite",
+      "semantic_class": "package_control_or_preserved_artifact"
+    },
+    {
+      "after_sha256": "4a9136c79e118e28c89624380ead15b444e1e3a39ed75febfa3d91b60ef13f6f",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "rollback/baseline/nee_graph_v48.2.sqlite.sha256",
+      "semantic_class": "package_control_or_preserved_artifact"
+    },
+    {
+      "after_sha256": "9953ee10657fcfe1a129f82efda3a7069123b8f63882b41d8c934cf2b95e35c2",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "tests/run_v49_acceptance.py",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "ca69771ccf8a0892139c13c355f4a3f2315ca11799af884dd0e5d809719a0afb",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "tests/v49_acceptance_report.md",
+      "semantic_class": "tooling_or_test"
+    },
+    {
+      "after_sha256": "c2c88910bc424aedf382ab354c5fae9bd451ac3f0e3ce8cc5ef70cac95165f97",
+      "before_sha256": null,
+      "change_type": "add",
+      "path": "tests/v49_acceptance_results.json",
+      "semantic_class": "tooling_or_test"
+    }
+  ],
+  "generated_at": "2026-07-13T08:06:19Z",
+  "record_id": "CHANGED-FILES-V49-001"
+}

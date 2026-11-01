@@ -1,0 +1,16 @@
+{
+  "canonical_card_normalization": "none; exact approved bytes",
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "policy_body_normalization": "none; exact approved bytes",
+  "release_control_normalization": [
+    "Computed approval, chronology, actual-delta, QA, manifest, and packaging hashes.",
+    "Created version-specific acceptance and conformance records without changing account knowledge."
+  ],
+  "resolved_implementation_check_issue": {
+    "approval_envelope_changed": false,
+    "issue": "The first mirror comparison removed the frontmatter separator and the following blank line, causing a false-negative body comparison.",
+    "policy_bytes_changed_during_resolution": false,
+    "resolution": "The parser now removes only the closing delimiter line and preserves the blank line that is part of the body-identical root mirror."
+  },
+  "status": "PASS"
+}

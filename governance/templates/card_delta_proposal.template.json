@@ -1,0 +1,36 @@
+{
+  "baseline_zip_sha256": "<sha256>",
+  "canonical_serialization_sha256": "<sha256 excluding this field>",
+  "cards": [
+    {
+      "before_sha256": "<sha256>",
+      "card_id": "<NEE_xx>",
+      "frontmatter_changes": {},
+      "impact_types": [],
+      "path": "cards/<filename>.md",
+      "proposed_after_sha256": "<sha256>",
+      "rationale": "<why>",
+      "rollback_or_forward_repair": "<instructions>",
+      "routing_changes": [],
+      "supporting_graph_items": [],
+      "unified_or_section_diff": "<exact diff>"
+    }
+  ],
+  "generated_at": "<RFC3339>",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "<concise addition or route>",
+        "card": "<NEE_xx>",
+        "change_type": "<body|frontmatter|route|body+route|frontmatter+route|body+frontmatter|body+frontmatter+route|control_policy|no_change>",
+        "defense_or_evidence": "<why this exact addition is supported>",
+        "retrieval_improvement": "<exact-match, routing, lineage, disambiguation, ranking, or safety mechanism>"
+      }
+    ]
+  },
+  "policy_sha256": "<sha256>",
+  "proposal_id": "C1-<stable-id>",
+  "proposal_type": "proposed_card_delta",
+  "status": "proposed",
+  "unlisted_cards_unchanged": true
+}

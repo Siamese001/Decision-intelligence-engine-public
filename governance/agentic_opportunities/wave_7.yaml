@@ -1,0 +1,15 @@
+wave_number: 7
+wave_id: "Wave 7: Integrate NEE component repair and selective advisory depth"
+description: "Turn observed failures into the smallest useful permitted repair, preserving accepted artifacts and authorization"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_nee_selective_reasoning_e2e.py"
+  - "tests/adversarial/test_nee_repair_scope_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_7.yaml"
+criteria:
+  - "An appendix-only failure changes only that component; approved upstream corrections invalidate exactly their dependents"
+  - "Repeated defects/no change stop without more paid synthesis"
+  - "Restart cannot reset attempts or reuse stale approval"
+  - "Mixed easy/hard candidate packets cover every candidate exactly once while allocating advisory effort only to useful subsets"
+  - "Speaker ambiguity remains human-controlled; advisory never changes deterministic authority/disposition"

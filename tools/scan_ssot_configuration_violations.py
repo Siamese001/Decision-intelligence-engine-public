@@ -188,22 +188,18 @@ def check_model_registry_approved_models_parity(repo_root: Optional[Path] = None
 
 
 def _find_target_python_files(files: Optional[Sequence[str]]) -> List[Path]:
+    from tools.ssot_config_engine.discovery import discover_governed_python_files
+
+    self_resolved = Path(__file__).resolve()
     if files is not None:
         target_paths = []
         for f in files:
             p = REPO_ROOT / f if not Path(f).is_absolute() else Path(f)
-            if p.is_file() and p.suffix == ".py" and p.resolve() != Path(__file__).resolve():
+            if p.is_file() and p.suffix == ".py" and p.resolve() != self_resolved:
                 target_paths.append(p)
         return target_paths
 
-    target_paths = []
-    for root, _dirs, fs in os.walk(REPO_ROOT / "dual_pipeline"):
-        if any(skip in root for skip in ("__pycache__", ".pytest_cache")):
-            continue
-        for fname in fs:
-            if fname.endswith(".py"):
-                target_paths.append(Path(root) / fname)
-    return target_paths
+    return [p for p in discover_governed_python_files(REPO_ROOT) if p.resolve() != self_resolved]
 
 
 def _scan_single_file_for_violations(path: Path, patterns: Sequence[Tuple[re.Pattern, str]]) -> List[str]:

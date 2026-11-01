@@ -1,0 +1,19 @@
+{
+  "allowed_normalizations": [
+    "Create one approval-derived governance_approval control row with reference AD-V50-PartnerAdvisory-PDLC-STRATEGIC-PARTNER-2026-001 after the exact approval statement is received, binding the actual baseline, G1, C1, O1, approval-statement, and release hashes.",
+    "Insert the 27 intended canonical assertions initially as candidate/needs_review/retrieval-ineligible, attach supporting evidence, then explicitly promote them to the proposal-specified canonical/accepted/retrieval-eligible state under the scoped approval.",
+    "Serialize JSON arrays/objects into existing SQLite TEXT/JSON columns without semantic change; SQLite search_rowid, FTS shadow bytes, release timestamps, generated manifests, and post-implementation hashes may be generated deterministically after approval."
+  ],
+  "applied": [
+    "one approval-derived governance_approval row",
+    "candidate-first promotion of 27 canonical assertions",
+    "canonical JSON serialization in SQLite TEXT columns",
+    "SQLite-assigned search_rowid/FTS shadow bytes",
+    "release timestamps, manifests, hashes, and ZIP checksum",
+    "Use a path-only changed-file inventory and place per-file hashes in manifest.json; the external ZIP checksum covers manifest.json and avoids recursive self-hashes."
+  ],
+  "approval_record_sha256": "c31cb4cb6234b7b9c3a92ee3fbba8b427f79272f902d80d456582d5f7f90b5d8",
+  "approval_reference": "AD-V50-PartnerAdvisory-PDLC-STRATEGIC-PARTNER-2026-001",
+  "status": "PASS",
+  "unapproved_normalizations": []
+}

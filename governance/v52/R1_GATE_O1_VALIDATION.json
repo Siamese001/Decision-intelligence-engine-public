@@ -1,0 +1,13 @@
+{
+  "all_metric_rows_pass": true,
+  "card_rows": 11,
+  "generated_at": "2026-07-13T19:49:41Z",
+  "graph_rows": 18,
+  "inline_output_sha256": "63fb103aed7e0aa823e96b58cf114b621b73dd9307a6088a7807deb1c2dca0ee",
+  "metric_rows": 10,
+  "reconciles_to_approved_counts": true,
+  "rendered_byte_for_byte_from_machine_rows": true,
+  "stage": "R1",
+  "status": "pass",
+  "table_count": 3
+}

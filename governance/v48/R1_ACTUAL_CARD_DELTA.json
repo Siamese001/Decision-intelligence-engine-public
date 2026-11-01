@@ -1,0 +1,154 @@
+{
+  "actual_card_count": 19,
+  "approved_c1_canonical_sha256": "bc643ccabd9e769d2bc2cf60b01a489dfb8f38553e6d793051ce6cf7d4c058f9",
+  "baseline_card_count": 19,
+  "canonical_route_count": 3620,
+  "canonical_serialization_sha256": "9d3ea2c211759b44a53b0e33e8e30720760e1338603de6d2e126d2c49e6e2ded",
+  "card_body_delta": 0,
+  "card_rows": [
+    {
+      "addition": "30 canonical_route rows (20 node, 5 claim, 5 assertion)",
+      "card": "NEE_00 \u2014 Authority, Source Map, and Synthesis Protocol",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "11 canonical_route rows (5 node, 3 claim, 3 assertion)",
+      "card": "NEE_01 \u2014 Executive Account Thesis",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "328 canonical_route rows (56 node, 69 claim, 203 assertion)",
+      "card": "NEE_02 \u2014 Portfolio Status and Project Dossiers",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "115 canonical_route rows (56 node, 28 claim, 31 assertion)",
+      "card": "NEE_03 \u2014 SOW, Commercial, and Contract Guardrails",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "215 canonical_route rows (97 node, 57 claim, 61 assertion)",
+      "card": "NEE_04 \u2014 NEA Q3 Capacity, Charters, and Strategic Capacity Lens",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "30 canonical_route rows (18 node, 6 claim, 6 assertion)",
+      "card": "NEE_05 \u2014 Chakra Meeting Synthesis, Q3 Prerequisites, and Q4 Solutioning",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "170 canonical_route rows (69 node, 42 claim, 59 assertion)",
+      "card": "NEE_06 \u2014 Co-Delivery / Co-Hydrated Operating Model",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "216 canonical_route rows (86 node, 62 claim, 68 assertion)",
+      "card": "NEE_07 \u2014 AI SDLC, Evals, Survey, and Control Framework",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "34 canonical_route rows (14 node, 9 claim, 11 assertion)",
+      "card": "NEE_08 \u2014 Monthly Strategic Engineering Connection",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "80 canonical_route rows (29 node, 25 claim, 26 assertion)",
+      "card": "NEE_09 \u2014 Utility Thought Leadership and Project Atlas / AM&WE Agenda",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "514 canonical_route rows (311 node, 72 claim, 131 assertion)",
+      "card": "NEE_10 \u2014 Stakeholders, Champions, Org, Credentialing, Open Questions",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "125 canonical_route rows (103 node, 10 claim, 12 assertion)",
+      "card": "NEE_11 \u2014 Cross-Workstream Synthesis and Reuse Map",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "103 canonical_route rows (50 node, 24 claim, 29 assertion)",
+      "card": "NEE_12 \u2014 AI Hub, Sherpa, DevHub, PGD Platform Lessons",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "153 canonical_route rows (117 node, 18 claim, 18 assertion)",
+      "card": "NEE_13 \u2014 EDO Data Product and Operating Model Patterns",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "7 canonical_route rows (3 node, 2 claim, 2 assertion)",
+      "card": "NEE_14 \u2014 Trading / ETRM and Pricing Models",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "196 canonical_route rows (138 node, 29 claim, 29 assertion)",
+      "card": "NEE_15 \u2014 Glossary, Aliases, and Name Resolution",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "388 canonical_route rows (352 node, 18 claim, 18 assertion)",
+      "card": "NEE_16 \u2014 Source Provenance and Cold Archive Pointer",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "85 canonical_route rows (29 node, 28 claim, 28 assertion)",
+      "card": "NEE_22 \u2014 Project Beacon / A2A / Platform Advisor Context",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "42 canonical_route rows (13 node, 13 claim, 16 assertion)",
+      "card": "NEE_99 \u2014 Project Instructions",
+      "change_type": "route_only",
+      "defense_or_evidence": "Card file and card-table row remain byte-identical; routes were deterministically generated from preserved node_card_map, claim.card_id, and a unique subject primary route where one exists.",
+      "retrieval_improvement": "Provides one auditable route lookup while preserving the existing card meaning and blocking ambiguous primary selection."
+    },
+    {
+      "addition": "778 canonical_route rows",
+      "card": "No canonical card \u2014 intentionally unrouted assertions",
+      "change_type": "route_only",
+      "defense_or_evidence": "No unique evidence-backed primary card exists for these assertion subjects; no card was fabricated and all legacy mappings remain available.",
+      "retrieval_improvement": "Forces explicit no-route handling instead of arbitrary routing and supports safe abstention."
+    }
+  ],
+  "changed_card_files": [],
+  "record_id": "R1-V48-ACTUAL-CARD-DELTA-001",
+  "record_type": "actual_card_delta",
+  "status": "implemented_conformant"
+}

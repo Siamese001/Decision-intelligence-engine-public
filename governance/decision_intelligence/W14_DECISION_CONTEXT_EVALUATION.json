@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_w14_evaluation",
+  "wave": "W14",
+  "status": "COMPLETE_PROVIDER_FREE_NO_GRAPH_MIGRATION",
+  "purpose": "Prove that decision contexts remain time-aware, evidence-bound, audience-aware, and candidate-only before any query-generation or graph-migration work.",
+  "implemented_artifacts": {
+    "contract": {
+      "path": "governance/decision_intelligence/W14_DECISION_CONTEXT_CONTRACT.json",
+      "sha256": "0595f01c9575027378b1632c84e43456da1c829c794fc7a95dc0da3e005b3274"
+    },
+    "projection": {
+      "path": "dual_pipeline/decision_context.py",
+      "sha256": "f54d5a659bb66154233e8ef32a81cc3581337003cfb59bbfde1d46be67e44e96"
+    },
+    "regression_tests": {
+      "path": "tests/test_decision_context.py",
+      "sha256": "6ed8a9cc4edc9281a81fac1fd66b13f247f2f3f850f09367b7e5e569feb86fb0",
+      "result": "PASS"
+    }
+  },
+  "proven_cases": [
+    "Current status plus reviewed support and counterevidence is candidate-ready, never an approved recommendation.",
+    "Support-only evidence remains candidate-only and exposes the counterevidence gap.",
+    "Missing or expired required status is STALE_OR_UNKNOWN.",
+    "Conflicting required status and unreviewed strategic evidence require HITL.",
+    "The projection exposes the source assertion IDs behind included observations and evidence."
+  ],
+  "verification": {
+    "command": ".venv\\Scripts\\python.exe tools\\run_ci_gates.py --profile deterministic --output-root .local\\w14-decision-context-20260810\\ci",
+    "result": "PASS",
+    "tests_run": 91,
+    "automatic_workflow_evaluation": {
+      "result_sha256": "c117fe4e1985ac050830a8f642907945ca25e972348ffc2d2b797bd85b07445a",
+      "case_count": 6,
+      "failed_case_count": 0
+    },
+    "provider_calls": 0,
+    "graph_mutations": 0,
+    "release_activation": false
+  },
+  "active_graph": {
+    "changed_by_w14": false,
+    "posture": "No decision context is written to the active graph. W12 approval-bound migration remains the only path to target-graph mutation."
+  },
+  "next_gate": "W15 query/use-case evaluation over candidate-only decision contexts"
+}

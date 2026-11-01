@@ -1,0 +1,25 @@
+{
+  "acceptance": {
+    "passed": 17,
+    "total": 17
+  },
+  "approval_decision_id": "AD-V48.2-PartnerAdvisory-NEA-PARTNERSHIP-2026-001",
+  "backup_restore": "PASS",
+  "candidate_database_sha256": "b6b10223b7c6f25eed890df932f0dca50dc0ed47b5d57cb30f3f2f1df01f6ea6",
+  "first_canonical_write_at": "2026-07-12T21:40:55Z",
+  "implementation_id": "IMP-V48.2-PartnerAdvisory-NEA-PARTNERSHIP-001",
+  "metrics": "PASS",
+  "migration": "PASS",
+  "operation_count": 75,
+  "performance": "PASS",
+  "release_gate": {
+    "passed": 19,
+    "total": 19
+  },
+  "release_state": "candidate",
+  "retrieval": {
+    "passed": 21,
+    "total": 21
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "account_graph_delta": "zero",
+  "baseline_graph_sha256": "4eb895a6b79eba6b57d1092f169ee9145371255137c9a70e2dda6d9022ce480b",
+  "baseline_zip_sha256": "a7bd45c1835cceeecc8d6be89e26cf512f22e34418f3e28eb767180f4e98d6c4",
+  "canonical_serialization_sha256": "6a8790d61f706654c8470a2d45a07f907faad9db33bdb450f720249368dccfd4",
+  "classification": "C6 protocol change",
+  "generated_at": "2026-07-11T00:00:00-04:00",
+  "non_policy_card_delta": "zero",
+  "placement": "Insert after Section 11.2 Gate G1 proposal requirements and cross-reference in Gate R1 QA/definition of done.",
+  "policy_body_sha256": "917f5128160397f8ec583e8c58c00d4d21c06472b228f00c2888588b375cdf84",
+  "proposal_id": "PD-47-MANDATORY-GRAPH-CHANGE-METRIC-GATE",
+  "proposed_change": "### Mandatory graph-change metric gate\n\nEvery Gate G1 proposal and Gate R1 conformance report for a semantic graph change must include this table. Use `N/A` only with a written reason. A failed row blocks implementation or release unless an explicit, pre-approved exception exists.\n\n| Metric | Result | Pass threshold | Status | Comment / required improvement |\n|---|---:|---:|---|---|\n| Operational orphan rate |  | ≤5% and no increase |  | Identify and connect or justify new orphans |\n| Duplicate node count |  | 0 new high-impact duplicates |  | Merge only through approved identity controls |\n| Duplicate edge rate |  | ≤1% unexplained and no increase |  | Consolidate repeated relationships or separate evidence |\n| Rare edge-type rate |  | ≤25% or no increase |  | Reuse approved vocabulary; justify new edge types |\n| Claim completeness |  | 100% |  | Require subject, source, route, confidence, and HITL |\n| Source metadata completeness |  | ≥95%; 100% for material sources |  | Add date, authority, scope, and posture |\n| Temporal completeness |  | ≥90% and no decrease |  | Add effective/currentness posture for time-sensitive facts |\n| High-impact identity collisions |  | 0 unresolved |  | Keep candidates separate and open validation |\n| P0/P1 SLA breach rate |  | 0% |  | Assign one owner and due date; resolve or block use |\n| Decision-safe answer regression |  | 0 regression on approved test set |  | Correct retrieval, ranking, wording, or unknown handling |\n\nReport both baseline and proposed/actual values in `Result` using `before → after (delta)`. Comments must explain every failure, exception, or material movement, including the corrective action and accountable owner.\n",
+  "rationale": "Make graph-health metrics a mandatory, blocking before/after output for every semantic graph change.",
+  "rollback": "Remove the inserted subsection and Gate R1 cross-reference.",
+  "scope": [
+    "PROJECT_INSTRUCTIONS.md",
+    "cards/NEE_99_Project_Instructions.md"
+  ]
+}

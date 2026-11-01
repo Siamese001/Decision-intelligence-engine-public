@@ -1,0 +1,60 @@
+{
+  "actual_card_state_sha256": "7da4b0e291e0ab5595cc886d1a7cddd389b6e824aead3ddf31a972bd87ea5ba2",
+  "approval_decision_id": "AD-47.2-PM-PRODUCT-LEADERSHIP-JUNO-BEACH",
+  "approved_c1_digest": "50c2d6405b2e8f05156f7dde585413f6f3af5f14bd0fd4f83eb646807155dc15",
+  "cards": [
+    {
+      "after_sha256": "3d5471267fc701828c851ea34a25bf6879e26fd5e66225d19a04bcca7c4d3098",
+      "approved_after_sha256": "3d5471267fc701828c851ea34a25bf6879e26fd5e66225d19a04bcca7c4d3098",
+      "before_sha256": "4ca5fbc3e12f11b5e391b9c4950cabfd4d4c3dff0a2ea19c561ac829c2861ed5",
+      "card_id": "NEE_00",
+      "exact_match": true,
+      "path": "cards/NEE_00_Authority_Source_Map_and_Synthesis_Protocol.md"
+    },
+    {
+      "after_sha256": "a036dce5c62d51f41e551184c6379c308f017dcd85a9d0b1418a7b7c016def65",
+      "approved_after_sha256": "a036dce5c62d51f41e551184c6379c308f017dcd85a9d0b1418a7b7c016def65",
+      "before_sha256": "5ff6df77f22e478a90e7d21fcf07d34be3d41295909d14190d25ee73c6089a38",
+      "card_id": "NEE_06",
+      "exact_match": true,
+      "path": "cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md"
+    },
+    {
+      "after_sha256": "f0d1b5b4f042ae5bd3ac02d131b68c348c951ad15fab3352877d2f5d1c040345",
+      "approved_after_sha256": "f0d1b5b4f042ae5bd3ac02d131b68c348c951ad15fab3352877d2f5d1c040345",
+      "before_sha256": "ab3b0c470c05a45e4072eb796b36e3a3ecc901f23a241573760770484208c49d",
+      "card_id": "NEE_10",
+      "exact_match": true,
+      "path": "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md"
+    },
+    {
+      "after_sha256": "e00d4498fc4a67a358cd4f1b1abb0852457958c3cb06f9d10132784ba42aa6f4",
+      "approved_after_sha256": "e00d4498fc4a67a358cd4f1b1abb0852457958c3cb06f9d10132784ba42aa6f4",
+      "before_sha256": "c6b5a782d58c04db5ae3f7edd84c452bb664c8ffc4a609b9cffa46d2a2b5caa9",
+      "card_id": "NEE_15",
+      "exact_match": true,
+      "path": "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md"
+    },
+    {
+      "after_sha256": "097131a93cbb585f9f615a519174adf7a2a6ead45041a7a4ca9955328e8292f9",
+      "approved_after_sha256": "097131a93cbb585f9f615a519174adf7a2a6ead45041a7a4ca9955328e8292f9",
+      "before_sha256": "b7b3db7d6606407d6812c47d767a41f7222dde3aa14956e35db126b62a0d603f",
+      "card_id": "NEE_16",
+      "exact_match": true,
+      "path": "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md"
+    },
+    {
+      "after_sha256": "e09f60241146d071d31daa9febb1d7578c850e9287b1352710e55a5a3f9f4da1",
+      "approved_after_sha256": "e09f60241146d071d31daa9febb1d7578c850e9287b1352710e55a5a3f9f4da1",
+      "before_sha256": "1d255d35deb0ff21f43dabd4355a449c465211119ba220f4d1185fb0cb0a3e1f",
+      "card_id": "NEE_99",
+      "exact_match": true,
+      "path": "cards/NEE_99_Project_Instructions.md"
+    }
+  ],
+  "exact_match": true,
+  "generated_at": "2026-07-11T21:02:00Z",
+  "implementation_id": "I1-V47.2-PM-PRODUCT-LEADERSHIP-JUNO-BEACH-2026-07-11",
+  "unapproved_card_changes": [],
+  "unlisted_cards_unchanged": true
+}

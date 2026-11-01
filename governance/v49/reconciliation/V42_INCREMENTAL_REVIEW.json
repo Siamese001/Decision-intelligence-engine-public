@@ -1,0 +1,121 @@
+{
+  "already_covered": [
+    "NIST AI RMF and secure AI/software development",
+    "Agentic security",
+    "AI provenance, versioning and observability",
+    "Production-readiness review",
+    "Agent evaluation and trajectory/workflow evaluation",
+    "Permission-aware retrieval and lifecycle controls",
+    "Multidisciplinary teams and user-needs evidence",
+    "Gemini configuration/no-code/full-code escalation",
+    "Utility and OT cybersecurity guardrails"
+  ],
+  "incremental_findings": [
+    "Developer productivity measurement",
+    "NEE public company strategy and partnerships",
+    "Product leadership accountability",
+    "Engineering assessment",
+    "Utility AI production exemplars"
+  ],
+  "rows": [
+    {
+      "domain": "NIST AI RMF and secure AI/software development",
+      "incremental_delta": "No stronger incremental evidence retained in this bounded review.",
+      "proposed_graph_action": "none",
+      "supporting_sources": "v42 E1-E3",
+      "v42_delta_status": "already_covered_v42"
+    },
+    {
+      "domain": "Agentic security",
+      "incremental_delta": "No non-duplicative standard update retained.",
+      "proposed_graph_action": "none",
+      "supporting_sources": "v42 E4",
+      "v42_delta_status": "already_covered_v42"
+    },
+    {
+      "domain": "AI provenance, versioning and observability",
+      "incremental_delta": "No non-duplicative standard update retained.",
+      "proposed_graph_action": "none",
+      "supporting_sources": "v42 E5",
+      "v42_delta_status": "already_covered_v42"
+    },
+    {
+      "domain": "Production-readiness review",
+      "incremental_delta": "No stronger incremental case retained.",
+      "proposed_graph_action": "none",
+      "supporting_sources": "v42 E6",
+      "v42_delta_status": "already_covered_v42"
+    },
+    {
+      "domain": "Agent evaluation and trajectory/workflow evaluation",
+      "incremental_delta": "No stronger incremental standard retained.",
+      "proposed_graph_action": "none",
+      "supporting_sources": "v42 E7-E8",
+      "v42_delta_status": "already_covered_v42"
+    },
+    {
+      "domain": "Permission-aware retrieval and lifecycle controls",
+      "incremental_delta": "No non-duplicative control update retained.",
+      "proposed_graph_action": "none",
+      "supporting_sources": "v42 E13-E17",
+      "v42_delta_status": "already_covered_v42"
+    },
+    {
+      "domain": "Multidisciplinary teams and user-needs evidence",
+      "incremental_delta": "GOV.UK user-needs and multidisciplinary-team sources already exist in the graph; no duplicate ingest proposed.",
+      "proposed_graph_action": "none",
+      "supporting_sources": "v42 E18-E20",
+      "v42_delta_status": "already_covered_v42"
+    },
+    {
+      "domain": "Developer productivity measurement",
+      "incremental_delta": "Add two bounded randomized trials with conflicting context-specific effects; retain both and prohibit universal productivity claims.",
+      "proposed_graph_action": "candidate source/evidence/assertion rows where listed",
+      "supporting_sources": "S49-08; S49-09",
+      "v42_delta_status": "incremental"
+    },
+    {
+      "domain": "Gemini configuration/no-code/full-code escalation",
+      "incremental_delta": "Current Google product documentation already retained through July 2026; no duplicate ingest proposed.",
+      "proposed_graph_action": "none",
+      "supporting_sources": "v42 E9-E12",
+      "v42_delta_status": "already_covered_v42"
+    },
+    {
+      "domain": "Utility and OT cybersecurity guardrails",
+      "incremental_delta": "NIST OT and DOE C2M2 already retained; no new applicability claim proposed.",
+      "proposed_graph_action": "none",
+      "supporting_sources": "v42 E26-E27",
+      "v42_delta_status": "already_covered_v42"
+    },
+    {
+      "domain": "NEE public company strategy and partnerships",
+      "incremental_delta": "Add current Apex Global-Dominion, Google Cloud, and Duane Arnold public facts with strict public/private boundaries.",
+      "proposed_graph_action": "candidate source/evidence/assertion rows where listed",
+      "supporting_sources": "S49-01 to S49-04",
+      "v42_delta_status": "incremental"
+    },
+    {
+      "domain": "Product leadership accountability",
+      "incremental_delta": "Add Scrum-defined Product Owner accountability as a bounded reference; broad outcome and fast-evidence principles were already represented.",
+      "proposed_graph_action": "candidate source/evidence/assertion rows where listed",
+      "supporting_sources": "S49-05",
+      "v42_delta_status": "incremental"
+    },
+    {
+      "domain": "Engineering assessment",
+      "incremental_delta": "Add OPM structured-interview and work-sample controls without validating NEE staffing practice.",
+      "proposed_graph_action": "candidate source/evidence/assertion rows where listed",
+      "supporting_sources": "S49-06; S49-07",
+      "v42_delta_status": "incremental"
+    },
+    {
+      "domain": "Utility AI production exemplars",
+      "incremental_delta": "Add PJM, MISO, nuclear-permitting and grid-interactive data-center examples with announced/pilot/outcome status separated.",
+      "proposed_graph_action": "candidate source/evidence/assertion rows where listed",
+      "supporting_sources": "S49-10 to S49-13",
+      "v42_delta_status": "incremental"
+    }
+  ],
+  "status": "pass"
+}

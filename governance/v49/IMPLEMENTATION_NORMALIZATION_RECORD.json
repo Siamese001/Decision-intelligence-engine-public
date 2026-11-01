@@ -1,0 +1,26 @@
+{
+  "allowances_applied": [
+    {
+      "field": "source.notes",
+      "implementation": "Canonical JSON serialization of the exact approved nested object; no fields omitted."
+    },
+    {
+      "field": "assertion.allowed_audiences_json / qualifiers_json / legacy_record_ids_json",
+      "implementation": "Canonical JSON serialization into existing TEXT/JSON columns."
+    },
+    {
+      "field": "search_document.search_rowid and FTS shadow bytes",
+      "implementation": "SQLite-generated derivative values; semantic identifiers and retrieval eligibility match the proposal exactly."
+    },
+    {
+      "field": "assertion.approval_reference",
+      "implementation": "Remained null exactly as proposed; no governance_approval graph row was added."
+    }
+  ],
+  "approval_decision_id": "AD-V49-EXTERNAL-EVIDENCE-GAP-ROUTING-2026-001",
+  "candidate_database_sha256": "fdd7015357f41bc8a3ee8424522f4199c95be9352b8df269c7af7e230a0fdb05",
+  "material_drift": false,
+  "out_of_envelope_changes": [],
+  "record_id": "NORM-V49-EXTERNAL-EVIDENCE-001",
+  "status": "PASS"
+}

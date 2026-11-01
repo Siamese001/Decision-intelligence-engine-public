@@ -1,0 +1,192 @@
+{
+  "baseline_graph_sha256": "4eb895a6b79eba6b57d1092f169ee9145371255137c9a70e2dda6d9022ce480b",
+  "baseline_zip_sha256": "001a4755ae7fb76350da06988ffcb69c7fe513151c46e6ff95d9a1bf1ccc3755",
+  "canonical_serialization_sha256": "b32bf586c0fb85df3bf0b96a44f6a1e8b4e25c96cbb32319f3c54d6fb75c1eec",
+  "component_counts": {
+    "alias": {
+      "after": "393",
+      "before": "393",
+      "delta": "+0"
+    },
+    "claim": {
+      "after": "515 / 472",
+      "before": "515 / 472",
+      "delta": "+0 / +0"
+    },
+    "edge": {
+      "after": "1,021 / 995",
+      "before": "1,021 / 995",
+      "delta": "+0 / +0"
+    },
+    "node": {
+      "after": "628",
+      "before": "628",
+      "delta": "+0"
+    },
+    "node_card_map": {
+      "after": "1,555",
+      "before": "1,555",
+      "delta": "+0"
+    },
+    "source": {
+      "after": "143",
+      "before": "143",
+      "delta": "+0"
+    },
+    "validation": {
+      "after": "171",
+      "before": "171",
+      "delta": "+0"
+    }
+  },
+  "generated_at": "2026-07-11T16:31:05Z",
+  "inline_gate_output": {
+    "graph_delta_rows": [
+      {
+        "baseline": "143",
+        "change": "No source records changed.",
+        "component_key": "source",
+        "delta": "+0",
+        "graph_component": "Sources",
+        "proposed_or_actual": "143",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "628",
+        "change": "No graph nodes changed.",
+        "component_key": "node",
+        "delta": "+0",
+        "graph_component": "Nodes",
+        "proposed_or_actual": "628",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "393",
+        "change": "No aliases changed.",
+        "component_key": "alias",
+        "delta": "+0",
+        "graph_component": "Aliases",
+        "proposed_or_actual": "393",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1,021 / 995",
+        "change": "No relationships changed.",
+        "component_key": "edge",
+        "delta": "+0 / +0",
+        "graph_component": "Edges — total / active",
+        "proposed_or_actual": "1,021 / 995",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "515 / 472",
+        "change": "No claims changed.",
+        "component_key": "claim",
+        "delta": "+0 / +0",
+        "graph_component": "Claims — total / active",
+        "proposed_or_actual": "515 / 472",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "171",
+        "change": "No validation items changed.",
+        "component_key": "validation",
+        "delta": "+0",
+        "graph_component": "Validation items",
+        "proposed_or_actual": "171",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1,555",
+        "change": "No routes changed.",
+        "component_key": "node_card_map",
+        "delta": "+0",
+        "graph_component": "Node-to-card mappings",
+        "proposed_or_actual": "1,555",
+        "retrieval_rationale": "NA"
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "0 → 0 (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "5.13% → 5.13% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100% → 100% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "97.90% → 97.90% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "95.33% → 95.33% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 → 0 (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; V47.1 values remain unchanged and Gate O1 enforcement passed.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0/5 → 0/5 (+0)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "operations": [],
+  "policy_sha256": "b784a88893bea7dee2861ff1cb6e77f4ea04f322216e57b04c4c69da4dd9702e",
+  "proposal_id": "G1-PD-47.1.1-ZERO-GRAPH-DELTA",
+  "proposal_type": "proposed_graph_delta",
+  "status": "approved_zero_change",
+  "zero_change_declarations": {
+    "account_graph_database_byte_identical_to_v47_1": true,
+    "graph_migrations_byte_identical_to_v47_1": true,
+    "schema_ontology_relationship_vocabulary_unchanged": true
+  }
+}

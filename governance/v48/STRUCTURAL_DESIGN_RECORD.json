@@ -1,0 +1,403 @@
+{
+  "alternatives_considered": [
+    {
+      "alternative": "No change",
+      "rejected_because": "Leaves invalid-state prevention, evidence multiplicity, temporal currentness, routing authority, and operational controls unresolved."
+    },
+    {
+      "alternative": "Replace SQLite with a graph platform",
+      "rejected_because": "Explicitly outside scope and unnecessary for this dataset and governance model."
+    },
+    {
+      "alternative": "Big-bang replacement schema",
+      "rejected_because": "Creates unacceptable migration, rollback, lineage, and retrieval-regression risk."
+    },
+    {
+      "alternative": "Additive compatibility-first SQLite hardening",
+      "selected_because": "Preserves IDs and history, supports per-wave rollback, and allows measured authority cutover."
+    }
+  ],
+  "approval_statement_required": null,
+  "architecture_recommendation": "APPROVE_WITH_CONDITIONS",
+  "baseline": {
+    "graph_path": "NEE_v47.2/graph/nee_graph.sqlite",
+    "graph_sha256": "2a55957f0164140eef2bbb519c94b12a5f5bbc3a206faf13d4cc9d69d4274f09",
+    "hardening_plan_sha256": "7221329bcbe75c1afadde4f151ce4947bd3785089f857d47a3bd0551fd8dca7e",
+    "policy_body_mirror_sha256": "17d0c5d6aeafc2b2c0be371cc2a738a6733419bba77a1c31df58e102c829dfa9",
+    "policy_file_sha256": "e09f60241146d071d31daa9febb1d7578c850e9287b1352710e55a5a3f9f4da1",
+    "policy_path": "NEE_v47.2/cards/NEE_99_Project_Instructions.md",
+    "schema_dump_sha256": "c409bf341b693255d93cc3baf04659b3a79ebbef5dec6c25ac51d6feb6940580",
+    "selected_package": "NEE_v47.2(1).zip",
+    "selected_package_state": "candidate",
+    "selection_authority": "explicit_user_direction",
+    "views_dump_sha256": "07710d0aae7a8fb66c709cca6d4d91fda4f2612e01a1416b78e32ca43860a198",
+    "zip_file_count": 542,
+    "zip_sha256": "68fcaf1f634608d769bfa93827dc26c24fe892253dc8cd9e6a761673d8744a27",
+    "zip_size_bytes": 4459719
+  },
+  "baseline_specific_adjustments": [
+    "Replace every V47.1.1 baseline reference in the supplied plan with the exact uploaded V47.2 ZIP hash, not merely the filename or internal predecessor hash.",
+    "Record that the selected V47.2 package is a candidate chosen explicitly by the user; using it as baseline does not promote it.",
+    "Keep the existing ten-row NEE Gate O1 metric table unchanged and add the fifteen-row V48 Graph Health table as a separate wave-report artifact.",
+    "Distinguish exact duplicate edges from same-triple records carrying distinct source/evidence scope; only unexplained exact duplicates are invalid.",
+    "Treat raw normalized alias collisions and duplicate-node candidates as review candidates, never automatic merges.",
+    "Preserve all 239 legacy node-status strings in legacy_status_text while introducing controlled lifecycle/currentness/validation/approval fields.",
+    "Do not use graph/schema.sql as the rebuild authority because its object order begins with indexes before tables; derive the authoritative schema inventory from sqlite_master and migrations.",
+    "Do not fabricate due dates for the eight open P0/P1 rows lacking dates; they remain explicit release blockers until evidence or an approved operational rule supplies dates.",
+    "Benchmark superseded-row leakage before creating current-state views; existing v_stakeholder_map and v_hitl_items include superseded records."
+  ],
+  "canonical_serialization_sha256": "734312a292832e455a67c62885924bd33363f52bb5c3fd3ea7755ac2c53942e1",
+  "classification": {
+    "program": "C5 structural change",
+    "wave_0": "read-only analysis and control-workspace creation; zero canonical graph and card mutation",
+    "waves_1_to_7": "separate approval-bound implementation waves with applicable G1/C1 and R1 gates"
+  },
+  "decision_scope_requested": [
+    "Approve this architecture and authorize Wave 0 only against the exact uploaded baseline hash.",
+    "Create an isolated V48 working workspace and immutable baseline copy.",
+    "Generate executable manifests, SQLite inventory, integrity results, metric definitions/results, and retrieval baselines.",
+    "Run Wave 0 measurements twice and require byte-identical deterministic outputs.",
+    "Produce the exact Wave 0 completion report and stop."
+  ],
+  "generated_at": "2026-07-12T01:42:36Z",
+  "not_authorized_by_this_decision": [
+    "Any canonical graph row mutation, canonical card edit, schema migration, ontology migration, data backfill, or FTS/ranking change.",
+    "Any implementation from Waves 1 through 7.",
+    "Creation of an NEE_v48.0 release ZIP.",
+    "Promotion of V47.2 or any future package to approved_current."
+  ],
+  "problem_evidence": [
+    "SQLite integrity and quick checks pass, but PRAGMA foreign_keys is off by default and only six foreign-key definitions exist.",
+    "The database has zero CHECK constraints, zero triggers, only five explicit indexes, and PRAGMA user_version is zero.",
+    "Claims have one source pointer and no normalized assertion/evidence model; no evidence table exists.",
+    "Node type, edge type, status, and source type are free text; 239 distinct node status values and 118 active edge types exist.",
+    "Known views include superseded claim/edge rows, so current-state retrieval is not authoritative.",
+    "FTS is currently synchronized by content, but no database triggers enforce future synchronization.",
+    "Three normalized alias collision groups, six normalized duplicate-node candidate groups, and eight open P0/P1 validations without due dates require explicit handling; none may be silently merged or assigned fabricated dates."
+  ],
+  "read_only_baseline_observations": {
+    "aliases": {
+      "collision_entity_links": 6,
+      "collision_groups": 3,
+      "examples": {
+        "datastewardprogram": [
+          "sow_v17_edo_activation_operating_model_detail",
+          "workstream_edo_activation"
+        ],
+        "fplswarm": [
+          "model_v17_nea_q3_pod_charter_roster",
+          "workstream_swarm"
+        ],
+        "unifiers3api": [
+          "source_pack_v17_edo_rfp_maximo_unifier",
+          "workstream_substation_onboarding"
+        ]
+      }
+    },
+    "counts": {
+      "active_claims": 477,
+      "active_edges": 1000,
+      "active_nodes": 628,
+      "alias": 393,
+      "card": 19,
+      "claim": 520,
+      "edge": 1026,
+      "node": 632,
+      "node_card_map": 1566,
+      "source": 147,
+      "superseded_claims": 43,
+      "superseded_edges": 26,
+      "validation_queue": 173
+    },
+    "coverage": {
+      "claim_dated_denominator": 477,
+      "claim_dated_numerator": 455,
+      "claim_provenance_pct": 100.0,
+      "claim_temporal_by_dated_source_pct": 95.3878,
+      "edge_dated_denominator": 1000,
+      "edge_dated_numerator": 993,
+      "edge_provenance_pct": 100.0,
+      "edge_temporal_by_dated_source_pct": 99.3
+    },
+    "duplicates": {
+      "active_full_signature_extra_rows": 0,
+      "active_full_signature_groups": 0,
+      "active_triple_duplicate_rate_pct": 3.2,
+      "active_triple_extra_rows": 32,
+      "active_triple_groups": 29,
+      "normalized_node_candidate_groups": 6,
+      "normalized_node_candidate_rows": 12,
+      "normalized_node_examples": {
+        "source|neatechleadq2weeklystatuspacket": [
+          [
+            "source_nea_status_2026_06_22",
+            "NEA Tech Lead Q2 Weekly Status Packet"
+          ],
+          [
+            "source_nea_status_2026_06_29",
+            "NEA Tech Lead Q2 Weekly Status Packet"
+          ]
+        ],
+        "stakeholder|amandaknarr": [
+          [
+            "person_amanda_knarr",
+            "Amanda Knarr"
+          ],
+          [
+            "stakeholder_amanda_knarr",
+            "Amanda Knarr"
+          ]
+        ],
+        "stakeholder|gordonpaynter": [
+          [
+            "person_gordon_paynter",
+            "Gordon Paynter"
+          ],
+          [
+            "stakeholder_gordon_paynter",
+            "Gordon Paynter"
+          ]
+        ],
+        "workstream|customerai": [
+          [
+            "workstream_customer_ai",
+            "Customer.AI"
+          ],
+          [
+            "q3_charter_customer_ai",
+            "Customer AI"
+          ]
+        ],
+        "workstream|fcdb": [
+          [
+            "workstream_fcdb",
+            "FCDB"
+          ],
+          [
+            "q3_charter_fcdb",
+            "FCDB"
+          ]
+        ],
+        "workstream|nuclearscheduling": [
+          [
+            "workstream_nuclear_scheduling",
+            "Nuclear Scheduling"
+          ],
+          [
+            "q3_charter_nuclear_scheduling",
+            "Nuclear Scheduling"
+          ]
+        ]
+      }
+    },
+    "fts": {
+      "claim_extra_in_fts": 0,
+      "claim_missing_from_fts": 0,
+      "claim_text_mismatch": 0,
+      "node_extra_in_fts": 0,
+      "node_missing_from_fts": 0,
+      "node_text_mismatch": 0
+    },
+    "graph_structure": {
+      "average_degree": 3.1847,
+      "connected_components": 96,
+      "degree_outlier_count": 7,
+      "degree_outlier_threshold_mean_plus_3sd": 23.4154,
+      "largest_component_nodes": 519,
+      "largest_component_pct": 82.6433,
+      "max_degree": 110
+    },
+    "integrity": {
+      "foreign_key_violations": 0,
+      "integrity_check": [
+        "ok"
+      ],
+      "quick_check": [
+        "ok"
+      ]
+    },
+    "orphans": {
+      "operational_count": 17,
+      "operational_rate_pct": 2.707,
+      "raw_count": 85,
+      "raw_rate_pct": 13.535
+    },
+    "quality": {
+      "active_claims_without_card": 0,
+      "active_claims_without_source": 0,
+      "active_claims_without_subject": 0,
+      "active_edges_without_source": 0,
+      "active_self_loops": 0,
+      "edges_missing_type_active": 0,
+      "nodes_missing_type": 0,
+      "source_rows_without_date": 3
+    },
+    "references": {
+      "alias_missing_source_ref": 0,
+      "claim_bad_supersession_ref": 0,
+      "claim_missing_card_ref": 0,
+      "claim_missing_source_ref": 0,
+      "claim_missing_subject_ref": 0,
+      "edge_bad_supersession_ref": 0,
+      "edge_missing_from_node": 0,
+      "edge_missing_source_ref": 0,
+      "edge_missing_to_node": 0,
+      "validation_missing_claim_ref": 0,
+      "validation_missing_edge_ref": 0,
+      "validation_missing_node_ref": 0
+    },
+    "routing": {
+      "active_claims_total": 477,
+      "claims_with_card": 477,
+      "max_card_routes_per_node": 15,
+      "nodes_with_multiple_card_routes": 437,
+      "tables_with_card_route_text": 14
+    },
+    "schema": {
+      "check_constraint_occurrences": 0,
+      "foreign_key_definitions": 6,
+      "foreign_keys_connection_default": 0,
+      "indexes_explicit": 5,
+      "journal_mode": "delete",
+      "tables": 39,
+      "triggers": 0,
+      "user_version": 0,
+      "views": 29
+    },
+    "validations": {
+      "open_p0_p1": 113,
+      "open_p0_p1_missing_due_date": 8,
+      "open_p0_p1_missing_owner": 0
+    },
+    "view_leakage": {
+      "v_hitl_items_superseded_claim_rows": 10,
+      "v_hitl_items_superseded_edge_rows": 11,
+      "v_sow_status_index_superseded_edge_rows": 0,
+      "v_stakeholder_map_superseded_edge_rows": 12
+    },
+    "vocab": {
+      "edge_type_count_active": 118,
+      "node_status_distinct_including_blank": 239,
+      "node_type_count": 31,
+      "one_off_edge_row_rate_pct": 5.0,
+      "one_off_edge_types": 50,
+      "source_type_count": 46,
+      "validation_status_count": 3
+    }
+  },
+  "record_id": "SDR-V48-SQLITE-KG-HARDENING-001",
+  "record_type": "structural_design_review",
+  "risks_and_controls": [
+    {
+      "control": "one authoritative view per operation, compatibility interfaces marked derived, and cutover gates",
+      "risk": "dual authority during transition"
+    },
+    {
+      "control": "append-only mapping, source hashes, row parity, no silent deletion, and rollback tests",
+      "risk": "legacy semantic loss"
+    },
+    {
+      "control": "EXPLAIN QUERY PLAN plus before/after latency and index-use evidence",
+      "risk": "performance regression"
+    },
+    {
+      "control": "candidate-only probabilistic matching and reversible human-reviewed merge/split",
+      "risk": "false entity merge"
+    },
+    {
+      "control": "bitemporal filtering, current-state views, forbidden-result tests, and safe abstention",
+      "risk": "stale current answers"
+    },
+    {
+      "control": "per-wave exact proposal digests, hard-stop on out-of-envelope changes, and separate R1 conformance",
+      "risk": "approval drift"
+    }
+  ],
+  "selected_design": {
+    "authoritative_model": {
+      "assertion": "a new atomic assertion layer becomes the authority for statements, canonical facts, literal values, and entity-object relationships.",
+      "claim_compatibility": "the legacy claim table is retained and mapped through legacy_claim_assertion_map; it is not silently promoted.",
+      "entity": "node remains the stable entity-identity table; existing node IDs are preserved.",
+      "evidence": "evidence_item plus assertion_evidence support multiple supporting or contradicting evidence items with exact source locations.",
+      "relationship_retrieval": "v_canonical_edge is generated from eligible canonical assertions; the legacy edge table is preserved for lineage and compatibility until cutover.",
+      "routing": "canonical_route becomes the one authoritative route; existing route columns/tables become validated derivatives or compatibility interfaces.",
+      "search": "an approved search_document projection feeds an external-content FTS5 index with synchronization triggers and leakage tests.",
+      "source": "source remains the source registry and gains deterministic fingerprint/version controls."
+    },
+    "compatibility_strategy": "do not delete legacy tables during migration; expose compatibility views and validate row/hash parity before authority changes",
+    "id_strategy": "preserve all existing IDs; generate new IDs deterministically from namespace, stable natural key, source fingerprint, and versioned algorithm",
+    "identity_strategy": "deterministic match first; probabilistic matches create candidates only; merge/split is audited and reversible",
+    "migration_pattern": "additive-first shadow tables, deterministic backfill, validation, compatibility views, controlled authority cutover, and reversible rollback/forward repair",
+    "temporal_strategy": "bitemporal valid-time and transaction-time fields with precision/estimated/unknown flags; current and historical views are separate",
+    "transaction_strategy": "BEGIN IMMEDIATE for canonical promotion; deferred reads; all multi-table writes include audit and rollback as one transaction"
+  },
+  "status": "proposed_for_explicit_user_approval",
+  "wave_0_acceptance": {
+    "baseline_zip_hash_unchanged": true,
+    "canonical_graph_and_card_delta": "zero",
+    "failure_behavior": "stop and report FAIL; do not proceed to Wave 1",
+    "manifest_coverage": "100%",
+    "metric_execution": "all required metrics directly from SQLite",
+    "metric_reproducibility": "two consecutive runs byte-identical",
+    "retrieval_baseline": "all competency categories recorded",
+    "sqlite_integrity_capture": "required"
+  },
+  "wave_contract": [
+    {
+      "authorization_after_approval": "YES",
+      "canonical_mutation": "NO",
+      "name": "Baseline Protection and Executable Measurement",
+      "stop_after": "mandatory",
+      "wave": 0
+    },
+    {
+      "authorization_after_approval": "NO - new exact G1 required",
+      "canonical_mutation": "schema/constraints only within approved envelope",
+      "name": "SQLite Integrity and Invalid-State Prevention",
+      "stop_after": "mandatory",
+      "wave": 1
+    },
+    {
+      "authorization_after_approval": "NO - new exact G1/C1 as applicable",
+      "canonical_mutation": "registry and controlled-state migration",
+      "name": "Semantic Registries and Controlled Vocabulary",
+      "stop_after": "mandatory",
+      "wave": 2
+    },
+    {
+      "authorization_after_approval": "NO - new exact G1/C1 as applicable",
+      "canonical_mutation": "new assertion/evidence layer and conservative legacy mapping",
+      "name": "Atomic Assertions, Evidence, and Provenance",
+      "stop_after": "mandatory",
+      "wave": 3
+    },
+    {
+      "authorization_after_approval": "NO - new exact G1/C1 as applicable",
+      "canonical_mutation": "temporal and identity controls",
+      "name": "Time, Identity, Aliases, and Entity Resolution",
+      "stop_after": "mandatory",
+      "wave": 4
+    },
+    {
+      "authorization_after_approval": "NO - new exact G1/C1 as applicable",
+      "canonical_mutation": "authority cutover and search/routing changes",
+      "name": "Retrieval, Routing, Ranking, and FTS5",
+      "stop_after": "mandatory",
+      "wave": 5
+    },
+    {
+      "authorization_after_approval": "NO - new exact G1/C1 as applicable",
+      "canonical_mutation": "pipeline/audit/backup operations",
+      "name": "Ingestion, Idempotency, Auditability, and Operations",
+      "stop_after": "mandatory",
+      "wave": 6
+    },
+    {
+      "authorization_after_approval": "NO - release approval and R1 required",
+      "canonical_mutation": "release-only approved changes",
+      "name": "Evaluation, Performance, Release Gate, and V48 Packaging",
+      "stop_after": "mandatory",
+      "wave": 7
+    }
+  ]
+}

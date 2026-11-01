@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_w13_evaluation",
+  "wave": "W13",
+  "status": "COMPLETE_NO_GRAPH_MIGRATION",
+  "purpose": "Establish an executable v2 target semantic contract while preserving the active graph until the approval-bound W12 migration lifecycle is authorized.",
+  "active_graph": {
+    "path": ".local/main/runtime-bge-m3-sherpa-strategic-20260729/generations/generation-combined-remediation-1d2b1a2f0c1e77c644b734c6acb3/graph.sqlite",
+    "sha256": "5ce434c5cb819b66bbd39278573fda0645c7edf0377e132b138bf7ac86f9f184",
+    "changed_by_w13": false
+  },
+  "implemented_artifacts": {
+    "contract": {
+      "path": "governance/decision_intelligence/W13_SEMANTIC_SPINE_V2_CONTRACT.json",
+      "sha256": "e75ec0ffc704c0f1a927fc2213541f4914d0da332e57f33a478ae53b2dcff9df"
+    },
+    "validator": {
+      "path": "dual_pipeline/semantic_spine_v2.py",
+      "sha256": "8aee3a6c96925327b8efe5fa33b6544031d34b463017ec35ccd93835d376195d"
+    },
+    "tests": {
+      "path": "tests/test_semantic_spine_v2.py",
+      "sha256": "a506011ac61f8f0d8c2cf8bdee8199f2e3448f2c41a7b787a53d9155ab30b8e2",
+      "result": "PASS"
+    }
+  },
+  "enforced_target_rules": [
+    "Ownership and leadership are distinct typed relations; OWNS_OR_LEADS is forbidden in v2.",
+    "Generic RELATED_TO cannot express a decision relationship.",
+    "Every v2 relationship has non-empty source assertion IDs.",
+    "PartnerAdvisory support must identify a bounded support scope; ALL and UNSPECIFIED are rejected.",
+    "Status, metric, dependency, and readiness assertions are observations with time and source qualifiers.",
+    "Decision and derived artifacts cannot become canonical evidence through this contract."
+  ],
+  "verification": {
+    "command": ".venv\\Scripts\\python.exe -m unittest tests.test_semantic_spine_v2 tests.test_temporal_observations tests.test_strategic_evidence tests.test_ci_gates",
+    "result": "PASS",
+    "tests_run": 24,
+    "provider_calls": 0,
+    "graph_mutations": 0,
+    "release_activation": false
+  },
+  "legacy_graph_audit": {
+    "command": ".venv\\Scripts\\python.exe tools\\audit_decision_intelligence_semantic_spine.py --graph <active-graph> --output .local/w13-semantic-spine-v2-20260810/w2-debt-audit.json",
+    "result": "EXPECTED_FAIL",
+    "audit_sha256": "41d1b15a867786f72b7ed61789b4a37fa61743028fe5b28f6eef4075007a64be",
+    "remaining_debt": {
+      "legacy_or_unparsed_assertions": 459,
+      "compound_predicates": ["OWNS_OR_LEADS"],
+      "generic_or_provenance_predicates": ["HAS_CLAIM_TEXT", "RELATED_TO"],
+      "missing_target_node_types": 12
+    },
+    "interpretation": "W13 intentionally did not normalize the active graph. This debt remains controlled W12 migration scope."
+  },
+  "next_gate": "W12 exact human-decision resolution and approval-bound migration lifecycle"
+}

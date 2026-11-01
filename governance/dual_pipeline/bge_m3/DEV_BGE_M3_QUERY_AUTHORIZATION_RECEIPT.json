@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_type": "bge-m3-development-query-authorization",
+  "generated_at": "2026-07-22T15:04:21Z",
+  "status": "PASS",
+  "scope": "development-only",
+  "production_qualified": false,
+  "git": {
+    "branch": "main",
+    "implementation_commit": "c38235e6ec5dc68747dc8cae1a441bb139ade290",
+    "implementation_tree": "9ef0e95e6d2740f3a17b7b2263348cacc6f874f6"
+  },
+  "credential_audit": {
+    "repository_env_files_found": 0,
+    "required_api_keys": [],
+    "process_variables_present": {
+      "ANTHROPIC_API_KEY": false,
+      "AZURE_OPENAI_API_KEY": false,
+      "AZURE_OPENAI_ENDPOINT": false,
+      "COHERE_API_KEY": false,
+      "HF_TOKEN": false,
+      "HUGGINGFACE_TOKEN": false,
+      "OPENAI_API_KEY": false
+    },
+    "external_provider_calls": 0,
+    "network_required": false,
+    "credentials_created": false
+  },
+  "authorization": {
+    "backend_selector": "bge-m3-dev",
+    "explicit_gate": "--allow-dev-bge-m3",
+    "backend_id": "flagembedding-bge-m3-dev",
+    "authorization_context": null,
+    "authorization_token_id": null,
+    "production_trust_policy_status": "UNCONFIGURED",
+    "production_boundary_changed": false
+  },
+  "model": {
+    "model_id": "BAAI/bge-m3",
+    "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "model_manifest_digest": "a598d96187ae03e498914543ca2637b95ef61c496faf4d5d9e471764f893905e",
+    "offline": true,
+    "cuda_runtime": "12.8",
+    "device": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU",
+    "compute_capability": [
+      12,
+      0
+    ]
+  },
+  "execution": {
+    "runtime_root": "C:\\NEE\\dev\\bge-m3-query-smoke-v1",
+    "evidence_root": "C:\\NEE\\evidence\\bge-m3-dev-query-smoke-v1",
+    "fixture": "contracts/dual_pipeline/fixtures/valid/copilot-meeting.json",
+    "fixture_sha256": "7ae98a7d20f2f18b75a5f1c2cbf3fec92fbe1dce2bb2ad655db0d4bc86b66e35",
+    "demo_status": "PASS",
+    "intake": {
+      "run_id": "run-intake-83e7aee9b1ebbbdb575bfc24",
+      "status": "COMPLETED",
+      "provider_call_count": 0,
+      "production_qualified": false,
+      "graph_mutation_count": 0,
+      "hitl_decision_count": 0
+    },
+    "activation": {
+      "status": "ACTIVE",
+      "generation_id": "generation-af7aeb402d5e9e256782eae39ecd",
+      "production_qualified": false,
+      "authorization": null
+    },
+    "query": {
+      "run_id": "run-query-3cdd9665693c109c6f27cdb84c",
+      "trace_id": "402118ff64b28f26733c5fe91e7f424e",
+      "status": "COMPLETED",
+      "x3_outcome": "X3D_ALLOW_FINISH",
+      "production_qualified": false,
+      "dense_executed": true,
+      "sparse_executed": true,
+      "colbert_executed": true,
+      "lane_blending": false,
+      "graph_mutation_count": 0,
+      "approved_record_count": 20,
+      "candidate_record_count": 10,
+      "learning_event_count": 43,
+      "audit_status": "PASS",
+      "missing_stages": []
+    },
+    "rollback": {
+      "status": "ROLLED_BACK",
+      "restored_generation_id": "generation-bootstrap-91cf84562c5425b0f92fce74a07c",
+      "restored_graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+      "production_qualified": false,
+      "authorization": null
+    }
+  },
+  "artifact_sha256": {
+    "active_pair": "9225de9ca00bfaef0e39393c68892e983992c3763eeb153de1ee3a631797abfd",
+    "intake_summary": "440ee1a6f8290afb617e3c33584f2ef9b92d051e248e19747acb543baa3ae6dc",
+    "validated_request": "c43cf2b1824296aa209b1906cecb02be418d103904594fd17491a7d53b703c9a",
+    "query_summary_and_answer": "b81ac1175b05cc5a8c201a4993147045e4e743cb148e16d758e2b1c2a083c5f4",
+    "query_plan": "8757aa834723109d3c6e31e77c728273021393ea7d6ac6f5b534b7b49c952de4",
+    "evidence_packet": "a85e963856b9153e06ed63f2113f0f19be1f1c291eb8b70f9ea8dc8cdaf115d4",
+    "release_receipt": "24ce2960d9812693181ae7fd3de1e52361f9055130d68039cfddc41435cee57c",
+    "activation_receipt": "5dd382fb530feacaa1ff5f5480eb1ca2846acc8cb171c52eb1918932b8f5fd87",
+    "rollback_receipt": "ce19425fbc5f3b99acb8548fbee573a58ce39ae6dbc4f3fa7a2a6372c072208b",
+    "seed_graph": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f"
+  },
+  "verification": {
+    "unit_tests": {
+      "command": ".\\.venv\\Scripts\\python.exe -m unittest discover -v",
+      "tests_run": 118,
+      "duration_seconds": 467.257,
+      "result": "OK"
+    },
+    "contract_validation": {
+      "status": "PASS",
+      "schemas": 15,
+      "artifact_contracts": 14,
+      "valid_fixtures": 14,
+      "invalid_fixtures_rejected": 9,
+      "provider_calls": 0,
+      "runtime_mutations": 0
+    },
+    "exact_runtime_lock": "PASS",
+    "pip_check": "PASS",
+    "cuda_tensor_probe": "PASS",
+    "tracked_secret_scan": "PASS"
+  },
+  "non_claims": [
+    "This receipt does not authorize production use.",
+    "No API key, JWT, public key, private key, or production trust anchor was created.",
+    "No external model or answer provider was called.",
+    "No active production graph/index pair was changed.",
+    "Development artifacts cannot satisfy the production BGE-M3 backend binding."
+  ],
+  "receipt_digest": "a6e11080a0dbb4a339a1a1ec07ebbf4a40956881266cc78012efccc53dbb7d33"
+}

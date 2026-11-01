@@ -1,0 +1,15 @@
+wave_number: 5
+wave_id: "Wave 5: Make query and decision reasoning obligation-driven"
+description: "Carry user decision frames into retrieval, distinguish relevance from support, and select next discriminating evidence action"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_decision_evidence_recovery_e2e.py"
+  - "tests/adversarial/test_decision_support_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_5.yaml"
+criteria:
+  - "Identical question with different options/criteria/constraints/time horizon produces distinct sealed evidence requirements"
+  - "A missing authorized record outside initial candidates can be retrieved once within shared budget"
+  - "Wrong entity, polarity, direction, time or citation-only relevance remains unsupported"
+  - "No unstated preference is invented; NO_DECISION and a concrete discriminating question remain valid results"
+  - "Comparison mode preserves baseline output; combined pre/post-L2 loops respect one budget"

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_type": "wave_runtime_receipt",
+  "wave": "Wave 3",
+  "wave_title": "Decomposed Multi-Micro-Judge & Hardened Rubrics",
+  "executed_at": "2026-09-09T19:07:19.463268+00:00",
+  "runtime_environment": "c:\\Git\\decision-intelligence-engine\\.venv\\Scripts\\python.exe",
+  "terminal_result": "PASS",
+  "wave_status": "COMPLETE",
+  "acceptance_criteria": {
+    "decomposed_micro_judges": "PASS (MicroJudgeForensic, MicroJudgeRecap, MicroJudgeGraph implemented with dedicated rubric dimensions)",
+    "concurrent_execution": "PASS (All 3 micro-judges executed concurrently via ThreadPoolExecutor)",
+    "subsecond_reconciliation": "PASS (CrossArtifactReconciler executes deterministic MM/DD/YYYY, entity prefix, and mutation budget <=25 checks)",
+    "grounding_citations": "PASS (Micro-judges return structured citations for any score deductions)",
+    "runner_integration": "PASS (run_llm_judge in scripts/run_fpl_rewire_pipeline.py wired to DecomposedMultiJudge)",
+    "unit_tests": "PASS (3/3 tests in tests/test_llm_judge.py passing in 0.07s)"
+  },
+  "scope_inputs": {
+    "dual_pipeline/llm_judge.py": "e3ff3e24dc23b25ea016cdebc9764697e898758c87928b5b28c300be030177b8",
+    "tests/test_llm_judge.py": "9bf676b312318bea813653b49324907ece7baf1662a95700b6b3cb6dd11224f2",
+    "scripts/run_fpl_rewire_pipeline.py": "6a4653a765c67cc1337828be104790b9089be3bb93779c70b225ea2c53874f2f"
+  },
+  "telemetry": {
+    "micro_judges_count": 3,
+    "cross_reconciler_checks": [
+      "MM/DD/YYYY date enforcement",
+      "Schema version 5.7",
+      "Mutation budget <= 25",
+      "Allowed entity prefixes",
+      "Prior context overwrite binding"
+    ],
+    "execution_mode": "DECOMPOSED_CONCURRENT"
+  },
+  "receipt_digest": "f45c2d96bca273b11a6ccc6a941307478200980dae1b1672f6429a41f752d46a"
+}

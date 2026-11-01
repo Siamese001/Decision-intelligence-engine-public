@@ -1,0 +1,11 @@
+{
+  "approval_decision_id": "AD-V51-IDENTITY-ROLE-STANDARDS-2026-001",
+  "card_edits": "13/13",
+  "database_sha256": "c802383576a6556aff228ac46c36f8ad66ce440aebe21e7420bc893cb78cf781",
+  "g1_o1_sha256": "e54d6d8bdba6580de153a06682541cb1e59ca72e4ac4616c96cd918b8971c421",
+  "graph_operations": "563/563",
+  "r1_o1_sha256": "9dd98e16f0c46862a9b72c65643f275d6694672a879e4fda1068abe1976fc4ad",
+  "release_state": "approved_current",
+  "separate_promotion_step": false,
+  "status": "PASS"
+}

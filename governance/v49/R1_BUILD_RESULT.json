@@ -1,0 +1,11 @@
+{
+  "approval_decision_id": "AD-V49-EXTERNAL-EVIDENCE-GAP-ROUTING-2026-001",
+  "c1_sha256": "35a5febfb0e20ad5f32fa4ee2d746e2736e426682b51edbb740ee1c22563c137",
+  "candidate_database_sha256": "fdd7015357f41bc8a3ee8424522f4199c95be9352b8df269c7af7e230a0fdb05",
+  "g1_o1_sha256": "e3f28d8d72fa92fe4b70f692cf56b3d6e2ffb75161692f54e2424d103d0e6069",
+  "g1_sha256": "78afcfa635f391714584a41cc43357e15a8a772531301d30a13026d1f7940692",
+  "operation_count": 116,
+  "r1_o1_sha256": "e3f28d8d72fa92fe4b70f692cf56b3d6e2ffb75161692f54e2424d103d0e6069",
+  "release_state": "candidate",
+  "status": "PASS"
+}

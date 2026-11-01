@@ -1,0 +1,90 @@
+{
+  "apply_1": {
+    "database_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+    "result": "PASS",
+    "status": "applied",
+    "validation": {
+      "approval": 1,
+      "assertion": 1687,
+      "canonical_edges": 638,
+      "claim": 583,
+      "current_assertions": 1085,
+      "decision_safe_assertions": 702,
+      "eligible_search": 1352,
+      "fk": [],
+      "integrity": [
+        "ok"
+      ],
+      "result": "PASS",
+      "route": 3948,
+      "search": 2271,
+      "source": 174,
+      "validation": 184
+    }
+  },
+  "apply_2": {
+    "database_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+    "result": "PASS",
+    "status": "applied",
+    "validation": {
+      "approval": 1,
+      "assertion": 1687,
+      "canonical_edges": 638,
+      "claim": 583,
+      "current_assertions": 1085,
+      "decision_safe_assertions": 702,
+      "eligible_search": 1352,
+      "fk": [],
+      "integrity": [
+        "ok"
+      ],
+      "result": "PASS",
+      "route": 3948,
+      "search": 2271,
+      "source": 174,
+      "validation": 184
+    }
+  },
+  "result": "PASS",
+  "rollback": {
+    "database_sha256": "5c326c4825c9ad3621a014361257f13d8fa4a9637196d6473281af06ae03d7a3",
+    "result": "PASS",
+    "status": "rolled_back"
+  },
+  "validate_1": {
+    "approval": 1,
+    "assertion": 1687,
+    "canonical_edges": 638,
+    "claim": 583,
+    "current_assertions": 1085,
+    "decision_safe_assertions": 702,
+    "eligible_search": 1352,
+    "fk": [],
+    "integrity": [
+      "ok"
+    ],
+    "result": "PASS",
+    "route": 3948,
+    "search": 2271,
+    "source": 174,
+    "validation": 184
+  },
+  "validate_2": {
+    "approval": 1,
+    "assertion": 1687,
+    "canonical_edges": 638,
+    "claim": 583,
+    "current_assertions": 1085,
+    "decision_safe_assertions": 702,
+    "eligible_search": 1352,
+    "fk": [],
+    "integrity": [
+      "ok"
+    ],
+    "result": "PASS",
+    "route": 3948,
+    "search": 2271,
+    "source": 174,
+    "validation": 184
+  }
+}

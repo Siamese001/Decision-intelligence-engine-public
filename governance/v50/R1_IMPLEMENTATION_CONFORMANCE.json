@@ -1,0 +1,521 @@
+{
+  "actual_card_diff_sha256": "6ec999cae19b94176027dc78ce7a28adc2fef75a513142364266d2b83a48f31c",
+  "actual_graph_delta_sha256": "5dd1cdd8c8787b3c734a21c7fb6a38e226b565094499532399291c5e72080f0a",
+  "affected_card_ids": [
+    "NEE_01",
+    "NEE_05",
+    "NEE_06",
+    "NEE_07",
+    "NEE_08",
+    "NEE_10",
+    "NEE_11",
+    "NEE_16"
+  ],
+  "approval_decision_id": "AD-V50-PartnerAdvisory-PDLC-STRATEGIC-PARTNER-2026-001",
+  "approved_card_diff_sha256": "d0dfa45dd9af55e207173f8075d15a47c73fcddf875dd537c6d1e0a1fc8c56fe",
+  "approved_graph_delta_sha256": "01af0ad050f81920483d8df85a9160a726793ea2c574edf71e611246c27a9ab4",
+  "baseline_immutability_result": "pass",
+  "changed_file_inventory": [
+    "CHANGELOG.md",
+    "MANIFEST.md",
+    "QA_REPORT.md",
+    "README.md",
+    "approvals/v50/APPROVAL_BUNDLE_MANIFEST.json",
+    "approvals/v50/APPROVAL_RECORD.json",
+    "approvals/v50/APPROVAL_VALIDATION.json",
+    "approvals/v50/AUTHORITY_DELTA_VALIDATION.json",
+    "approvals/v50/BASELINE_AND_INPUT_HASHES.json",
+    "approvals/v50/C1_PROPOSED_CARD_DELTA.json",
+    "approvals/v50/EXACT_APPROVAL_STATEMENT.txt",
+    "approvals/v50/FINAL_PHASE_A_VERIFICATION.json",
+    "approvals/v50/G1_GATE_O1_INLINE_TABLES.md",
+    "approvals/v50/G1_PROPOSED_GRAPH_DELTA.json",
+    "approvals/v50/GATE_O1_VALIDATION.json",
+    "approvals/v50/IDENTITY_AND_ATTRIBUTION_REVIEW.json",
+    "approvals/v50/INTEGRATED_APPROVAL_REQUEST.md",
+    "approvals/v50/PREWRITE_REVALIDATION.json",
+    "approvals/v50/README.md",
+    "approvals/v50/RETRIEVAL_BASELINE_RESULTS.json",
+    "approvals/v50/RETRIEVAL_SIMULATED_RESULTS.json",
+    "approvals/v50/SCRATCH_SIMULATION_RESULTS.json",
+    "approvals/v50/SOURCE_RECONCILIATION.json",
+    "approvals/v50/STRATEGIC_SEMANTICS_REVIEW.json",
+    "cards/NEE_01_Executive_Account_Thesis.md",
+    "cards/NEE_05_Chakra_Synthesis_and_August_Rebaseline.md",
+    "cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md",
+    "cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md",
+    "cards/NEE_08_Monthly_Strategic_Engineering_Partner_Forum.md",
+    "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+    "cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+    "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+    "database/canonical_database.json",
+    "database/database_inventory.json",
+    "database/database_inventory_v50.json",
+    "database/object_inventory.csv",
+    "database/object_inventory_v50.csv",
+    "database/schema_v50.sql",
+    "database/table_row_counts.csv",
+    "database/table_row_counts_v50.csv",
+    "exports/source_lineage.csv",
+    "exports/source_version_lineage.csv",
+    "exports/stakeholder_map.csv",
+    "exports/v50_assertion_delta.csv",
+    "exports/v50_assertion_evidence_delta.csv",
+    "exports/v50_canonical_route_delta.csv",
+    "exports/v50_card_change_matrix.csv",
+    "exports/v50_claim_delta.csv",
+    "exports/v50_edge_delta.csv",
+    "exports/v50_evidence_item_delta.csv",
+    "exports/v50_graph_delta_summary.csv",
+    "exports/v50_graph_delta_summary.json",
+    "exports/v50_graph_delta_summary.md",
+    "exports/v50_legacy_claim_assertion_map_delta.csv",
+    "exports/v50_legacy_edge_assertion_map_delta.csv",
+    "exports/v50_node_card_map_delta.csv",
+    "exports/v50_node_delta.csv",
+    "exports/v50_node_state_delta.csv",
+    "exports/v50_qa_summary.json",
+    "exports/v50_search_document_delta.csv",
+    "exports/v50_source_delta.csv",
+    "exports/v50_source_version_delta.csv",
+    "governance/v50/BASELINE_IMMUTABILITY.json",
+    "governance/v50/CHANGED_FILE_INVENTORY.json",
+    "governance/v50/IMPLEMENTATION_NORMALIZATION_RECORD.json",
+    "governance/v50/R1_ACTUAL_CARD_DELTA.json",
+    "governance/v50/R1_ACTUAL_GRAPH_DELTA.json",
+    "governance/v50/R1_BUILD_RESULT.json",
+    "governance/v50/R1_GATE_O1_INLINE_TABLES.md",
+    "governance/v50/R1_GATE_O1_VALIDATION.json",
+    "governance/v50/R1_IMPLEMENTATION_CONFORMANCE.json",
+    "governance/v50/reconciliation/AUTHORITY_CURRENTNESS_REVIEW.json",
+    "governance/v50/reconciliation/CONFLICT_REGISTER.json",
+    "governance/v50/reconciliation/IDENTITY_NO_MERGE_DECLARATION.json",
+    "governance/v50/reconciliation/SOURCE_DEDUPLICATION.json",
+    "governance/v50/reconciliation/STRATEGIC_SEMANTICS_BOUNDARY.json",
+    "graph/nee_graph.sqlite",
+    "inputs/v50_pdlc_strategic_partner_source_pointer.json",
+    "manifest.json",
+    "metrics/graph_health_table.csv",
+    "metrics/graph_health_table.md",
+    "metrics/graph_health_table_v50.csv",
+    "metrics/graph_health_table_v50.md",
+    "metrics/metrics_run_1.json",
+    "metrics/metrics_v50.json",
+    "migrations/0005_v50_slalom_pdlc_strategic_partner/README.md",
+    "migrations/0005_v50_slalom_pdlc_strategic_partner/forward.py",
+    "migrations/0005_v50_slalom_pdlc_strategic_partner/migration.py",
+    "migrations/0005_v50_slalom_pdlc_strategic_partner/rollback.py",
+    "migrations/0005_v50_slalom_pdlc_strategic_partner/validate.py",
+    "migrations/apply_v50.py",
+    "migrations/rollback_v50.py",
+    "migrations/validate_v50.py",
+    "release_gate_report.md",
+    "release_notes.md",
+    "release_state.json",
+    "reports/V49_VS_V50_COMPARISON.json",
+    "reports/V49_VS_V50_COMPARISON.md",
+    "reports/V50_CONFORMANCE_REPORT.json",
+    "reports/V50_CONFORMANCE_REPORT.md",
+    "reports/migration_evidence_v50.json",
+    "reports/package_integrity_v50.json",
+    "reports/r1_conformance_summary.json",
+    "reports/release_gate_results.json",
+    "reports/release_gate_results_v50.json",
+    "reports/release_gate_v50.md",
+    "retrieval_tests/exact_delta_authority_v50.json",
+    "retrieval_tests/retrieval_results.json",
+    "retrieval_tests/retrieval_results_v50.json",
+    "retrieval_tests/run_v50_retrieval_suite.py",
+    "rollback/baseline/nee_graph_v49.sqlite",
+    "rollback/baseline/nee_graph_v49.sqlite.sha256",
+    "tests/run_v50_acceptance.py",
+    "tests/v50_acceptance_report.md",
+    "tests/v50_acceptance_results.json"
+  ],
+  "component_counts": {
+    "alias": {
+      "after": "393",
+      "before": "393",
+      "delta": "0"
+    },
+    "assertion": {
+      "after": "1606",
+      "before": "1566",
+      "delta": "40"
+    },
+    "assertion_evidence": {
+      "after": "1624",
+      "before": "1578",
+      "delta": "46"
+    },
+    "canonical_route": {
+      "after": "3711 / 2901",
+      "before": "3652 / 2842",
+      "delta": "59 / 59"
+    },
+    "claim": {
+      "after": "524 / 480",
+      "before": "520 / 477",
+      "delta": "4 / 3"
+    },
+    "edge": {
+      "after": "1049 / 1022",
+      "before": "1026 / 1000",
+      "delta": "23 / 22"
+    },
+    "evidence_item": {
+      "after": "1586",
+      "before": "1578",
+      "delta": "8"
+    },
+    "legacy_claim_assertion_map": {
+      "after": "524",
+      "before": "520",
+      "delta": "4"
+    },
+    "legacy_edge_assertion_map": {
+      "after": "1049",
+      "before": "1026",
+      "delta": "23"
+    },
+    "node": {
+      "after": "641 / 637",
+      "before": "632 / 628",
+      "delta": "9 / 9"
+    },
+    "node_card_map": {
+      "after": "1581",
+      "before": "1566",
+      "delta": "15"
+    },
+    "node_state": {
+      "after": "641",
+      "before": "632",
+      "delta": "9"
+    },
+    "search_document": {
+      "after": "2175 / 1258",
+      "before": "2126 / 1223",
+      "delta": "49 / 35"
+    },
+    "source": {
+      "after": "164",
+      "before": "161",
+      "delta": "3"
+    },
+    "source_version": {
+      "after": "164",
+      "before": "161",
+      "delta": "3"
+    },
+    "validation": {
+      "after": "174",
+      "before": "174",
+      "delta": "0"
+    }
+  },
+  "drift_result": "none",
+  "first_canonical_write_at": "2026-07-13T11:32:03Z",
+  "g1_inline_output_sha256": "ec29fa1358e32d8d61c3f8384f0e9f4031cf8cd249b2fa26af64ad54b4604e05",
+  "implementation_id": "R1-V50-PartnerAdvisory-PDLC-STRATEGIC-PARTNER-001",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Correct strategic thesis to PartnerAdvisory-led AI-PDLC thought leadership that demonstrates strategic-partner value beyond staff augmentation.",
+        "card": "NEE_01",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Direct user clarification dated 2026-07-13 plus exact PartnerAdvisory deck slide evidence; card text preserves directional, audience, currentness, and non-implementation boundaries.",
+        "retrieval_improvement": "Card-scoped exact-match and semantic retrieval now distinguishes PartnerAdvisory-led thought leadership, co-hydrated design input, current implementation, Chakra posture, Jon Perkins role, and the reusable PDLC pattern corridor."
+      },
+      {
+        "addition": "Correct Chakra framing, replace the joint/request implication, and make AI-PDLC a planned PartnerAdvisory design input to Q4 solutioning.",
+        "card": "NEE_05",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Direct user clarification dated 2026-07-13 plus exact PartnerAdvisory deck slide evidence; card text preserves directional, audience, currentness, and non-implementation boundaries.",
+        "retrieval_improvement": "Card-scoped exact-match and semantic retrieval now distinguishes PartnerAdvisory-led thought leadership, co-hydrated design input, current implementation, Chakra posture, Jon Perkins role, and the reusable PDLC pattern corridor."
+      },
+      {
+        "addition": "Add the AI-PDLC design-input corridor and explicit no-current-implementation boundary for the co-hydrated model.",
+        "card": "NEE_06",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Direct user clarification dated 2026-07-13 plus exact PartnerAdvisory deck slide evidence; card text preserves directional, audience, currentness, and non-implementation boundaries.",
+        "retrieval_improvement": "Card-scoped exact-match and semantic retrieval now distinguishes PartnerAdvisory-led thought leadership, co-hydrated design input, current implementation, Chakra posture, Jon Perkins role, and the reusable PDLC pattern corridor."
+      },
+      {
+        "addition": "Add source-attributed slide patterns for context architecture, specification-driven development, role evolution, change orchestration, enablement, and bottleneck risk.",
+        "card": "NEE_07",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Direct user clarification dated 2026-07-13 plus exact PartnerAdvisory deck slide evidence; card text preserves directional, audience, currentness, and non-implementation boundaries.",
+        "retrieval_improvement": "Card-scoped exact-match and semantic retrieval now distinguishes PartnerAdvisory-led thought leadership, co-hydrated design input, current implementation, Chakra posture, Jon Perkins role, and the reusable PDLC pattern corridor."
+      },
+      {
+        "addition": "Add AI-PDLC as a planned thought-leadership input after the strategic-connection vehicle and shareability are confirmed.",
+        "card": "NEE_08",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Direct user clarification dated 2026-07-13 plus exact PartnerAdvisory deck slide evidence; card text preserves directional, audience, currentness, and non-implementation boundaries.",
+        "retrieval_improvement": "Card-scoped exact-match and semantic retrieval now distinguishes PartnerAdvisory-led thought leadership, co-hydrated design input, current implementation, Chakra posture, Jon Perkins role, and the reusable PDLC pattern corridor."
+      },
+      {
+        "addition": "Add Jon Perkins as internal PartnerAdvisory Managing Director with the exact LinkedIn pointer and explicit authorship/ownership non-claims.",
+        "card": "NEE_10",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Direct user clarification dated 2026-07-13 plus exact PartnerAdvisory deck slide evidence; card text preserves directional, audience, currentness, and non-implementation boundaries.",
+        "retrieval_improvement": "Card-scoped exact-match and semantic retrieval now distinguishes PartnerAdvisory-led thought leadership, co-hydrated design input, current implementation, Chakra posture, Jon Perkins role, and the reusable PDLC pattern corridor."
+      },
+      {
+        "addition": "Add five reusable AI-PDLC pattern/risk objects and their cross-workstream integration corridor.",
+        "card": "NEE_11",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Direct user clarification dated 2026-07-13 plus exact PartnerAdvisory deck slide evidence; card text preserves directional, audience, currentness, and non-implementation boundaries.",
+        "retrieval_improvement": "Card-scoped exact-match and semantic retrieval now distinguishes PartnerAdvisory-led thought leadership, co-hydrated design input, current implementation, Chakra posture, Jon Perkins role, and the reusable PDLC pattern corridor."
+      },
+      {
+        "addition": "Add exact provenance for five deck screenshots, the user strategic-framing source, Jon role confirmation, and the pointer-only LinkedIn source.",
+        "card": "NEE_16",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Direct user clarification dated 2026-07-13 plus exact PartnerAdvisory deck slide evidence; card text preserves directional, audience, currentness, and non-implementation boundaries.",
+        "retrieval_improvement": "Card-scoped exact-match and semantic retrieval now distinguishes PartnerAdvisory-led thought leadership, co-hydrated design input, current implementation, Chakra posture, Jon Perkins role, and the reusable PDLC pattern corridor."
+      }
+    ],
+    "graph_delta_rows": [
+      {
+        "baseline": "161",
+        "change": "Add three scoped sources: PartnerAdvisory PDLC/Chakra strategic-framing clarification, Jon Perkins role confirmation, and pointer-only LinkedIn URL.",
+        "component_key": "source",
+        "delta": "3",
+        "graph_component": "Sources",
+        "proposed_or_actual": "164",
+        "retrieval_rationale": "Exact source-ID and lineage traversal distinguish user-confirmed intent/role from pointer-only LinkedIn evidence and dated deck content."
+      },
+      {
+        "baseline": "161",
+        "change": "Add immutable versions for all three new sources with fingerprints, hashes, date, authority, scope, and posture.",
+        "component_key": "source_version",
+        "delta": "3",
+        "graph_component": "Source versions",
+        "proposed_or_actual": "164",
+        "retrieval_rationale": "Immutable version hashes and scoped posture support deterministic evidence-lineage traversal and currentness control."
+      },
+      {
+        "baseline": "632 / 628",
+        "change": "Add three source nodes, Jon Perkins, four PDLC pattern nodes, and one bottleneck risk; update the existing AI-PDLC POV description/status.",
+        "component_key": "node",
+        "delta": "9 / 9",
+        "graph_component": "Nodes — total / active",
+        "proposed_or_actual": "641 / 637",
+        "retrieval_rationale": "Exact entity/pattern retrieval and graph traversal now expose Jon Perkins plus durable role, specification, change, assistant-architecture, and bottleneck concepts without collapsing them into generic AI-PDLC."
+      },
+      {
+        "baseline": "632",
+        "change": "Add approved/current internal states for the nine new nodes.",
+        "component_key": "node_state",
+        "delta": "9",
+        "graph_component": "Node states",
+        "proposed_or_actual": "641",
+        "retrieval_rationale": "State filtering makes approved internal patterns retrievable while preserving publication and currentness boundaries."
+      },
+      {
+        "baseline": "393",
+        "change": "No alias or merge operation.",
+        "component_key": "alias",
+        "delta": "0",
+        "graph_component": "Aliases",
+        "proposed_or_actual": "393",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1026 / 1000",
+        "change": "Add 23 governed relationships across strategic-partner positioning, Q4 solutioning, context, role evolution, specification-driven development, change, metrics, Jon/PartnerAdvisory, and source lineage; supersede one over-strong Chakra-priority edge.",
+        "component_key": "edge",
+        "delta": "23 / 22",
+        "graph_component": "Edges — total / active",
+        "proposed_or_actual": "1049 / 1022",
+        "retrieval_rationale": "Relationship traversal connects AI-PDLC to strategic-partner positioning, fixed-capacity risk, Q4 co-hydrated solutioning, reuse, metrics, and PartnerAdvisory leadership while removing the over-strong Chakra-priority path from current retrieval."
+      },
+      {
+        "baseline": "520 / 477",
+        "change": "Add four user-confirmed claims and supersede the over-strong Chakra-priority claim.",
+        "component_key": "claim",
+        "delta": "4 / 3",
+        "graph_component": "Claims — total / active",
+        "proposed_or_actual": "524 / 480",
+        "retrieval_rationale": "Current claim retrieval now answers who is prioritizing PDLC, why, what it informs, what is not implemented, and Jon Perkins role without implying Chakra adoption or deck ownership."
+      },
+      {
+        "baseline": "174",
+        "change": "No validation-queue rows change.",
+        "component_key": "validation",
+        "delta": "0",
+        "graph_component": "Validation items",
+        "proposed_or_actual": "174",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1566",
+        "change": "Add 15 meaningful routes for new source, stakeholder, pattern, and risk nodes.",
+        "component_key": "node_card_map",
+        "delta": "15",
+        "graph_component": "Node-to-card mappings",
+        "proposed_or_actual": "1581",
+        "retrieval_rationale": "Card routing improves scoped retrieval from Chakra, operating-model, AI-SDLC, stakeholder, reuse, forum, and provenance contexts."
+      },
+      {
+        "baseline": "1566",
+        "change": "Add 40 evidence-backed assertions (23 edge, 4 claim, 13 direct slide details) and supersede two prior assertions while preserving history.",
+        "component_key": "assertion",
+        "delta": "40",
+        "graph_component": "Canonical assertion rows",
+        "proposed_or_actual": "1606",
+        "retrieval_rationale": "Atomic source-attributed and approved-synthesis assertions enable exact predicate/literal retrieval while supersession prevents contradictory current answers."
+      },
+      {
+        "baseline": "1578",
+        "change": "Add five exact slide locators, two direct user-confirmation locators, and one pointer-only LinkedIn locator.",
+        "component_key": "evidence_item",
+        "delta": "8",
+        "graph_component": "Evidence items",
+        "proposed_or_actual": "1586",
+        "retrieval_rationale": "Exact slide/hash, conversation-proposition, and URL locators provide deterministic citation and provenance traversal."
+      },
+      {
+        "baseline": "1578",
+        "change": "Link every new assertion to evidence and add six exact slide locators to existing broad AI-PDLC assertions.",
+        "component_key": "assertion_evidence",
+        "delta": "46",
+        "graph_component": "Assertion-evidence links",
+        "proposed_or_actual": "1624",
+        "retrieval_rationale": "Support links enable evidence-first retrieval and distinguish direct user confirmation, deck evidence, and pointer-only provenance."
+      },
+      {
+        "baseline": "1026",
+        "change": "Map each new legacy edge to its canonical assertion.",
+        "component_key": "legacy_edge_assertion_map",
+        "delta": "23",
+        "graph_component": "Legacy edge-to-assertion maps",
+        "proposed_or_actual": "1049",
+        "retrieval_rationale": "Bidirectional lineage keeps legacy edge consumers synchronized with canonical assertion retrieval."
+      },
+      {
+        "baseline": "520",
+        "change": "Map each new legacy claim to its canonical assertion.",
+        "component_key": "legacy_claim_assertion_map",
+        "delta": "4",
+        "graph_component": "Legacy claim-to-assertion maps",
+        "proposed_or_actual": "524",
+        "retrieval_rationale": "Bidirectional lineage keeps legacy claim consumers synchronized with canonical assertion retrieval."
+      },
+      {
+        "baseline": "3652 / 2842",
+        "change": "Add primary assertion/claim routes and node routes across NEE_01, NEE_05, NEE_06, NEE_07, NEE_08, NEE_10, NEE_11, and NEE_16.",
+        "component_key": "canonical_route",
+        "delta": "59 / 59",
+        "graph_component": "Canonical routes — total / active",
+        "proposed_or_actual": "3711 / 2901",
+        "retrieval_rationale": "Primary and secondary routes improve card-scoped ranking and prevent strategically material PDLC/Jon records from being orphaned."
+      },
+      {
+        "baseline": "2126 / 1223",
+        "change": "Add synchronized node, claim, and assertion projections; update the AI-PDLC POV projection and suppress superseded Chakra-priority projections from current retrieval.",
+        "component_key": "search_document",
+        "delta": "49 / 35",
+        "graph_component": "Search documents — total / eligible",
+        "proposed_or_actual": "2175 / 1258",
+        "retrieval_rationale": "Eligible projections improve exact/semantic search for current approved intent and patterns; historical or candidate slide details remain bounded, and superseded Chakra-priority wording is suppressed from decision-safe retrieval."
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "All nine new nodes have purposeful routes and/or evidence-backed relationships; no operational orphan is added.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Normalized-name and semantic overlap checks found no existing Jon Perkins or exact new pattern/risk nodes; no identity merge or alias promotion is proposed.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "6 quarantined candidate groups → 6 quarantined candidate groups (+0 new high-impact duplicates)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Every new relationship uses a distinct subject, predicate, object, scope, or source; one over-strong legacy relationship is superseded rather than duplicated.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No new relationship vocabulary is introduced; all additions reuse registered predicates and approved domain/range combinations.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All four new claims have subject, source, mapped assertion, evidence, confidence, HITL, and active primary card route; the superseded claim remains historically traceable.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Each new material source version has a 64-character fingerprint/content hash, exact date, authority rank, scope, posture, and immutable source pointer.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All current strategic, role, source-lineage, and pattern assertions have exact valid-from dates; slide details remain explicitly historical to 2026-06-11.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Jon Perkins is added from direct user confirmation and an exact URL pointer; no baseline person is merged and no authorship, ownership, reporting, or decision-right inference is made.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 unresolved canonical collisions → 0 unresolved canonical collisions (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No validation rows, owners, priorities, or due dates change.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0/110 breaches (0.0000%) → 0/110 breaches (0.0000%) (+0 breaches)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The permanent 21-case compatibility and decision-safety suite passes on the disposable simulation; new PDLC/Jon records do not disturb unrelated entity, status, ownership, conflict, or abstention answers.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0 failures / 21 cases → 0 failures / 21 cases (+0 failures)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "inline_output_gate_result": "pass",
+  "lineage_currentness_audience_hitl_results": {
+    "candidate_assertions": 13,
+    "candidate_search_leakage": 0,
+    "canonical_promotions": 27,
+    "explicit_non_claim_boundaries_preserved": true,
+    "needs_review_search_leakage": 0,
+    "result": "pass"
+  },
+  "packaging_gate_result": "pass",
+  "r1_inline_output_sha256": "ec29fa1358e32d8d61c3f8384f0e9f4031cf8cd249b2fa26af64ad54b4604e05",
+  "release_state": "approved_current",
+  "schema_and_integrity_results": {
+    "database_sha256": "e8492bafc1066352e6f57fa9bbc97bb700ccf99a0178f43b151bd67e7f9793a8",
+    "foreign_key_violations": 0,
+    "integrity_check": [
+      "ok"
+    ],
+    "schema_unchanged": true
+  },
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

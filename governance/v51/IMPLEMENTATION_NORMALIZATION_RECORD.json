@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-07-13T16:33:59Z",
+  "normalizations": [
+    "Actual governance_approval metadata replaced the Phase A simulation-only row.",
+    "The explicit PD-51.1 policy instruction was integrated into NEE_99 and the root mirror.",
+    "Generated timestamps, database inventories, migrations, QA, manifests, and hashes do not alter account semantics."
+  ],
+  "semantic_drift": 0,
+  "status": "approved_and_conformant"
+}

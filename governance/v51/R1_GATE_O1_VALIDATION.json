@@ -1,0 +1,9 @@
+{
+  "card_rows": 13,
+  "generated_at": "2026-07-13T16:33:59Z",
+  "graph_rows": 21,
+  "inline_output_sha256": "9dd98e16f0c46862a9b72c65643f275d6694672a879e4fda1068abe1976fc4ad",
+  "metric_rows": 10,
+  "result": "PASS",
+  "table_count": 3
+}

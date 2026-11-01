@@ -1,0 +1,84 @@
+{
+  "artifact_id": "l1-wave-01-completion",
+  "artifacts": [
+    "contracts/dual_pipeline/schemas/query-plan-v3.schema.json",
+    "contracts/dual_pipeline/schemas/query-retrieval-attempt.schema.json",
+    "contracts/dual_pipeline/schemas/query-plan-observation.schema.json",
+    "contracts/dual_pipeline/schemas/query-plan-terminal.schema.json",
+    "contracts/dual_pipeline/schemas/query-l1-control-policy.schema.json",
+    "contracts/dual_pipeline/schemas/query-l1-controller-eval-suite.schema.json",
+    "contracts/dual_pipeline/schemas/query-l1-controller-eval-result.schema.json",
+    "contracts/dual_pipeline/schemas/query-l1-controller-eval-comparison.schema.json",
+    "contracts/dual_pipeline/schemas/retrieval-release-suite-v2.schema.json",
+    "contracts/dual_pipeline/schemas/retrieval-release-evaluation-v2.schema.json",
+    "contracts/dual_pipeline/schemas/l1-wave-receipt.schema.json",
+    "requirements/query-l1-control-policy.json",
+    "tests/test_l1_query_plan_contracts.py",
+    "tools/prepare_l1_wave1_contracts.py",
+    "tools/validate_dual_pipeline_contracts.py"
+  ],
+  "base_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "branch": "codex/l1-agentic-gap-analysis",
+  "cache_namespace_disposition": "No runtime cache namespace introduced.",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "4a8eea6c68914d879954921cf3fc1e4ec23791efbf25d5180310f3d121975077"
+  },
+  "contract_id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+  "changed_files": [
+    "contracts/dual_pipeline/contract_inventory.json",
+    "contracts/dual_pipeline/fixtures/invalid/",
+    "contracts/dual_pipeline/fixtures/valid/",
+    "contracts/dual_pipeline/schemas/",
+    "governance/dual_pipeline/l1_agentic/wave-01-completion.json",
+    "requirements/query-l1-control-policy.json",
+    "tests/test_l1_query_plan_contracts.py",
+    "tools/prepare_l1_wave1_contracts.py",
+    "tools/validate_dual_pipeline_contracts.py"
+  ],
+  "commands": [
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -m unittest -v tests.test_l1_query_plan_contracts tests.test_l1_query_baseline tests.test_query_coverage_manifest tests.test_ingestion_l2_boundary tests.test_conditional_ingestion_reasoning tests.test_eval_assurance",
+      "exit_code": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "timed_out": false
+    },
+    {
+      "command": ".\\.venv\\Scripts\\python.exe tools/validate_dual_pipeline_contracts.py",
+      "exit_code": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "timed_out": false
+    }
+  ],
+  "contract_inventory_digest": "a414fc86ef89c37edacd07873a1231cd1adf7a468b4a62d594e03de110d9fbd1",
+  "exit_gate_verdicts": {
+    "all_wave1_schemas_registered": true,
+    "all_valid_fixtures_validate": true,
+    "all_wave1_invalid_fixtures_rejected": true,
+    "historical_v2_readable": true,
+    "current_runtime_emits_v2": true,
+    "runtime_mode_off": true,
+    "provider_calls_zero": true,
+    "graph_mutations_zero": true,
+    "lf_stable_bytes": true
+  },
+  "extensions": {
+    "wave0_baseline_result_digest": "eb30e16a16b2d98e2836df9b51b8934d10c75b1d808b18964ce740a8f874029b",
+    "policy_digest": "d523e6e236d363706c5a523680930b2d6b919049094ca21743d929d1f7ae5e39",
+    "working_tree_result": true
+  },
+  "graph_mutation_count": 0,
+  "next_wave_authorized": true,
+  "policy_digest": "d523e6e236d363706c5a523680930b2d6b919049094ca21743d929d1f7ae5e39",
+  "predecessor_receipt_digest": "eb30e16a16b2d98e2836df9b51b8934d10c75b1d808b18964ce740a8f874029b",
+  "program_id": "NEE-KG-DUAL-PIPELINE-01",
+  "provider_call_count": 0,
+  "provider_initialization_count": 0,
+  "result_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "rollback_control": "Remove the Wave 1 schemas, fixtures, policy, inventory entries, tests, and completion receipt as one unit; no runtime rollback is required.",
+  "schema_version": "1.0.0",
+  "wave_id": "W1"
+}

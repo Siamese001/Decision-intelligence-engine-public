@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_type": "wave_runtime_receipt",
+  "wave": "Wave 4",
+  "wave_title": "Reasoning Effort Calibration & Automated Self-Healing Retry Loop",
+  "executed_at": "2026-09-09T19:07:52.174630+00:00",
+  "runtime_environment": "c:\\Git\\decision-intelligence-engine\\.venv\\Scripts\\python.exe",
+  "terminal_result": "PASS",
+  "wave_status": "COMPLETE",
+  "acceptance_criteria": {
+    "reasoning_effort_calibration": "PASS (L1.5: high, Output 1: medium, Output 2: high, Output 3: xhigh, Micro-judges: high, QA Gates: provider-free)",
+    "self_healing_retry_loop": "PASS (build_remediation_feedback injects actionable_remediation_diff directly into failed stage re-run)",
+    "token_budget_optimization": "PASS (Medium reasoning on Output 1 prevents token waste; xhigh on Output 3 enforces W2/W3 constraint reasoning)",
+    "full_suite_regression": "PASS (30/30 tests across test_speaker_disambiguation, test_raw_transcript_pipeline, test_parallel_synthesis, test_llm_judge passing)"
+  },
+  "scope_inputs": {
+    "dual_pipeline/transcript_stages.py": "a2596c80a70671d0714e9b5611539c25843e31d1f14341a79e1ca9f2d5e3bc06",
+    "dual_pipeline/llm_judge.py": "e3ff3e24dc23b25ea016cdebc9764697e898758c87928b5b28c300be030177b8",
+    "scripts/run_fpl_rewire_pipeline.py": "6a4653a765c67cc1337828be104790b9089be3bb93779c70b225ea2c53874f2f"
+  },
+  "telemetry": {
+    "calibrated_efforts": {
+      "speaker_disambiguation": "high",
+      "stage01_forensic": "medium",
+      "stage02_recap": "high",
+      "stage03_graph": "xhigh",
+      "micro_judges": "high",
+      "qa_reconciler": "provider-free"
+    },
+    "retry_loop_max_attempts": 2
+  },
+  "receipt_digest": "9c9fb294fdda74a292a899057805674f9952fbc32a4f1604826f95123af0a4aa"
+}

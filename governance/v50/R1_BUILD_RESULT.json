@@ -1,0 +1,10 @@
+{
+  "approval_decision_id": "AD-V50-PartnerAdvisory-PDLC-STRATEGIC-PARTNER-2026-001",
+  "card_edits": "8/8",
+  "database_sha256": "e8492bafc1066352e6f57fa9bbc97bb700ccf99a0178f43b151bd67e7f9793a8",
+  "g1_o1_sha256": "ec29fa1358e32d8d61c3f8384f0e9f4031cf8cd249b2fa26af64ad54b4604e05",
+  "graph_operations": "303/303",
+  "r1_o1_sha256": "ec29fa1358e32d8d61c3f8384f0e9f4031cf8cd249b2fa26af64ad54b4604e05",
+  "release_state": "approved_current",
+  "status": "PASS"
+}

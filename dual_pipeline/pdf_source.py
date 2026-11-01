@@ -94,7 +94,7 @@ _OCCLUDED_MASTER_SLIDE_PATTERNS = (
 
 _OCCLUDED_TABLE_LAYER_PATTERNS = (
     re.compile(
-        r"Portfolio\s+Leader:\s*Dan\s+Okray\s+West\s+Palm\s+Beach.*?Gulf\s+Coast\s+Arthrex\s+John\s+Prasanna\s*&\s*Lara\s+Cornelius\s*\n?",
+        r"Portfolio\s+Leader:\s*[A-Z][a-z]+\s+[A-Z][a-z]+\s+West\s+Palm\s+Beach.*?Gulf\s+Coast\s+Arthrex\s+[A-Z][a-z]+\s+[A-Z][a-z]+\s*&\s*[A-Z][a-z]+\s+[A-Z][a-z]+\s*\n?",
         re.I | re.S,
     ),
     re.compile(r"^.*\b(?:Hertz\b.*Lucy\s+Bickford|Vitas\s+Healthcare\b).*$", re.I | re.M),

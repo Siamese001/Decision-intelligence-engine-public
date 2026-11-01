@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_type": "wave_runtime_receipt",
+  "receipt_id": "receipt-tier2-graphdb-concept-dedup-waves-1-5",
+  "branch": "feat/tier2-graphdb-cleanup-consolidation",
+  "worktree": ".worktrees/tier2_graphdb_cleanup_consolidation",
+  "executed_at": "2026-09-30T10:26:59Z",
+  "terminal_result": "PASS",
+  "waves": {
+    "Wave 1": {
+      "title": "Discovery Scan & Concept Clustering",
+      "status": "COMPLETE",
+      "findings_count": 2610,
+      "breakdown": {
+        "node_clusters_same_type": 27,
+        "node_clusters_cross_type": 40,
+        "display_canonical_drift": 154,
+        "ambiguous_aliases": 6,
+        "predicate_synonym_families": 19,
+        "one_off_predicates": 69,
+        "overlapping_assertions": 30,
+        "evidence_duplicate_pairs": 2277,
+        "fragmented_sources": 39,
+        "edge_lineage_gaps": 131,
+        "gc_orphan_nodes": 51
+      },
+      "tools": [
+        "tools/tier2_scan0_baseline_stats.py",
+        "tools/tier2_scan1_node_clusters.py",
+        "tools/tier2_scan2_predicate_synonyms.py",
+        "tools/tier2_scan3_assertion_overlaps.py",
+        "tools/tier2_scan4_evidence_dedup.py",
+        "tools/tier2_scan5_lineage_gaps.py",
+        "tools/graph_gc.py"
+      ],
+      "report": "reports/graph_scout/tier2_discovery_report.md"
+    },
+    "Wave 2": {
+      "title": "HITL Concept Resolution Surface",
+      "status": "COMPLETE",
+      "decisions_resolved": 36,
+      "auto_resolved_margin_threshold": 0.10,
+      "breakdown": {
+        "node_merges_approved": 5,
+        "assertion_supersessions_approved": 31
+      }
+    },
+    "Wave 3": {
+      "title": "Graph Mutation Execution",
+      "status": "COMPLETE",
+      "run_id": "tier2-dedup-50c898bbf549918fb6fa15fe",
+      "node_merges_executed": 5,
+      "references_repointed": 188,
+      "assertions_superseded": 31,
+      "edge_lineage_fixes": 1,
+      "audit_events_created": 37,
+      "sha_transition": {
+        "baseline_sha256": "f0ab265dc48b25075ed67705a05110bd09c7a5b3bd7aa7b1f6ffcb7b5481245b",
+        "post_mutation_sha256": "2e4af6b6c3189c143f66bbde06a9fd1c2c87050282ef7e40eddcf9ec2faf9787"
+      }
+    },
+    "Wave 3b": {
+      "title": "Domain/Range Migration & Predicate Consolidation",
+      "status": "COMPLETE",
+      "domain_range_entries_added": 6,
+      "predicates_remapped": 6,
+      "edges_remapped": 6,
+      "remapped_predicates": [
+        {"from": "ALIGNED_TO", "to": "TRANSITIONS_TO"},
+        {"from": "BRIDGES_TO", "to": "TRANSITIONS_TO"},
+        {"from": "BUILDS", "to": "DELIVERS"},
+        {"from": "CIO_ANCHOR_FOR", "to": "ROUTES_TO"},
+        {"from": "GOVERNED_BY", "to": "GOVERNS"},
+        {"from": "GOVERNS_USE_OF", "to": "GOVERNS"}
+      ]
+    },
+    "Wave 4": {
+      "title": "Search Document & FTS Rebuild",
+      "status": "COMPLETE",
+      "search_docs_synced_historical": 51,
+      "duplicate_edges_superseded": 29,
+      "fts_entries_rebuilt": 1
+    },
+    "Wave 5": {
+      "title": "Signal Quality Validation & Regression",
+      "status": "COMPLETE",
+      "run_id": "tier2-waves-3b-4-5",
+      "checks": {
+        "integrity": "ok",
+        "fk_violations": 0,
+        "duplicate_active_edges": 0,
+        "active_redirected_nodes": 0,
+        "assertions_on_inactive_nodes": 0,
+        "stale_retrieval_docs": 0,
+        "provenance_coverage_pct": 100.0,
+        "assertions_without_evidence": 0
+      },
+      "graph_metrics": {
+        "active_nodes": 642,
+        "inactive_nodes": 11,
+        "canonical_current_assertions": 1056,
+        "active_edges": 1006,
+        "retrieval_eligible_docs": 1347,
+        "avg_confidence_score": 0.8319
+      },
+      "sha_transition": {
+        "pre_sha256": "2e4af6b6c3189c143f66bbde06a9fd1c2c87050282ef7e40eddcf9ec2faf9787",
+        "final_sha256": "eacf3b18eae5df558d9e6f8fb3421e95b59827ddf3f54626a73f2d7daece566c"
+      },
+      "terminal_result": "PASS"
+    }
+  }
+}

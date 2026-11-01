@@ -1,0 +1,14 @@
+{
+  "approval_decision_id": "AD-V53-SHERPA-ANDY-LILLIAN-2026-001",
+  "first_canonical_write_at": "2026-07-13T22:48:34Z",
+  "generated_at": "2026-07-13T22:48:40Z",
+  "normalizations": [
+    "Insert the future approval record with the approved approval_reference before canonical assertion promotion.",
+    "Insert canonical assertions as candidates, attach evidence, and promote to the exact approved end state.",
+    "Insert primary claim routes before claims because claim.card_id is a route derivative.",
+    "Insert the digest-bound governance approval row before assertion writes.",
+    "Apply the separately approved PD-53 policy clarification and update its body-identical mirror.",
+    "Generate deterministic release-control, migration, inventory, export, QA, and packaging derivatives without semantic expansion."
+  ],
+  "status": "PASS"
+}

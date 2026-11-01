@@ -1,0 +1,75 @@
+{
+  "manifest_id": "urn:nee:manifest:cross-entrypoint-pilot:wave12",
+  "version": "1.0.0",
+  "created_at": "2026-10-09T14:00:00Z",
+  "workflows": [
+    {
+      "workflow_id": "WF-01-LIVE-RECORDING",
+      "surface_id": "surface-audio-transcript",
+      "entrypoint": "nee.py record-meeting",
+      "test_scenarios": [
+        "graceful_cancellation_preserves_audio_proof",
+        "process_restart_recovers_uncommitted_chunks",
+        "attribution_lock_resists_speaker_swap_injections"
+      ],
+      "evaluator": "dual_pipeline.live_meeting_recorder_core.grounding_verifier",
+      "performance_budget": {
+        "max_latency_ms": 1500,
+        "max_cost_usd": 0.02
+      }
+    },
+    {
+      "workflow_id": "WF-02-DOCUMENT-INTAKE",
+      "surface_id": "surface-document-ingest",
+      "entrypoint": "nee.py ingest-document",
+      "test_scenarios": [
+        "schema_drift_fails_closed_without_corrupting_cache",
+        "zero_byte_attachment_rejected_at_preflight",
+        "concurrent_intake_roots_remain_isolated"
+      ],
+      "evaluator": "dual_pipeline.document_pipeline_core.preflight",
+      "performance_budget": {
+        "max_latency_ms": 2000,
+        "max_cost_usd": 0.01
+      }
+    },
+    {
+      "workflow_id": "WF-03-CANONICAL-INGESTION",
+      "surface_id": "surface-canonical-ingest",
+      "entrypoint": "nee.py ingest-meeting",
+      "test_scenarios": [
+        "uwg_release_authority_enforced",
+        "revoked_approval_aborts_graph_mutation",
+        "merkle_receipt_verifies_exact_readback"
+      ],
+      "evaluator": "tools.validate_output_hierarchy",
+      "performance_budget": {
+        "max_latency_ms": 3000,
+        "max_cost_usd": 0.05
+      }
+    },
+    {
+      "workflow_id": "WF-04-QUERY-AND-DECISION",
+      "surface_id": "surface-query-copilot",
+      "entrypoint": "nee.py query",
+      "test_scenarios": [
+        "prompt_injection_defense_fails_closed",
+        "decision_frame_discrimination_without_bias",
+        "semantic_judge_validates_grounding"
+      ],
+      "evaluator": "dual_pipeline.evals.answer_eval_core.judge",
+      "performance_budget": {
+        "max_latency_ms": 2500,
+        "max_cost_usd": 0.03
+      }
+    }
+  ],
+  "guardrails": {
+    "zero_authorization_escapes": true,
+    "zero_false_completions": true,
+    "exact_rollback_proven": true,
+    "operator_approval_required_for_production": true,
+    "max_aggregate_latency_ms": 5000,
+    "min_accuracy_ratio": 0.95
+  }
+}

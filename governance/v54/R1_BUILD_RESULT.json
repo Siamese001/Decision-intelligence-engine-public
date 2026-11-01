@@ -1,0 +1,16 @@
+{
+  "approval_decision_id": "AD-V54-EDO-AUTHORITY-BOUNDARY-2026-001",
+  "cards": "6/6 exact",
+  "database_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "first_canonical_write_at": "2026-07-14T15:54:53Z",
+  "g1_gate_o1": "PASS",
+  "graph_health": "PASS",
+  "graph_operations": "125/125 exact",
+  "implementation_id": "R1-V54-EDO-AUTHORITY-BOUNDARY-2026-001",
+  "migration_replay": "PASS",
+  "r1_gate_o1": "PASS",
+  "release_state": "approved_current",
+  "retrieval": "21/21 PASS",
+  "status": "PASS",
+  "targeted_edo_checks": "9/9 PASS"
+}

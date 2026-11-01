@@ -1,0 +1,99 @@
+{
+  "actual_card_diff_sha256": "b4b7649d821ca5c275150a86063aa484fc185b7aa48235c266d7f84c7893b5d5",
+  "actual_graph_delta_sha256": "bb424067bf689913ebdc754c353fd1113a3487003563bf0563bddc375722a906",
+  "approval_chronology": {
+    "approval_at": "2026-07-11T13:26:14Z",
+    "first_canonical_write_at": "2026-07-11T13:26:15Z",
+    "result": "pass",
+    "source_order": "user approval turn precedes implementation response"
+  },
+  "approval_decision_id": "PD-47-MANDATORY-GRAPH-CHANGE-METRIC-GATE",
+  "approved_card_diff_sha256": "b4b7649d821ca5c275150a86063aa484fc185b7aa48235c266d7f84c7893b5d5",
+  "approved_graph_delta_sha256": "bb424067bf689913ebdc754c353fd1113a3487003563bf0563bddc375722a906",
+  "approved_policy_proposal_sha256": "6a8790d61f706654c8470a2d45a07f907faad9db33bdb450f720249368dccfd4",
+  "baseline_immutability_result": {
+    "baseline_graph_sha256": "4eb895a6b79eba6b57d1092f169ee9145371255137c9a70e2dda6d9022ce480b",
+    "baseline_zip_current_sha256": "a7bd45c1835cceeecc8d6be89e26cf512f22e34418f3e28eb767180f4e98d6c4",
+    "baseline_zip_sha256": "a7bd45c1835cceeecc8d6be89e26cf512f22e34418f3e28eb767180f4e98d6c4",
+    "status": "pass"
+  },
+  "changed_file_count": 15,
+  "changed_file_inventory": [
+    "CHANGELOG.md",
+    "MANIFEST.md",
+    "PROJECT_INSTRUCTIONS.md",
+    "QA_REPORT.md",
+    "README.md",
+    "approvals/PD-47-MANDATORY-GRAPH-CHANGE-METRIC-GATE.json",
+    "cards/NEE_99_Project_Instructions.md",
+    "exports/v47_metric_gate_activation_qa.json",
+    "exports/v47_metric_gate_activation_summary.json",
+    "exports/v47_policy_change_diff.md",
+    "governance/IMPLEMENTATION_CONFORMANCE_PD-47.json",
+    "governance/PROTOCOL_DECISION_PD-47_MANDATORY_GRAPH_CHANGE_METRIC_GATE.md",
+    "governance/proposals/PD-47_MANDATORY_GRAPH_CHANGE_METRIC_GATE.json",
+    "governance/proposals/PD-47_ZERO_GRAPH_DELTA.json",
+    "governance/proposals/PD-47_ZERO_NONPOLICY_CARD_DELTA.json"
+  ],
+  "drift_result": "none",
+  "first_canonical_write_at": "2026-07-11T13:26:15Z",
+  "gate_tool_tests": {
+    "result": "OK",
+    "status": "pass",
+    "tests": 6
+  },
+  "graph_zero_delta_verification": {
+    "graph_database_byte_identical": true,
+    "graph_migrations_byte_identical": true,
+    "status": "pass"
+  },
+  "implementation_id": "I1-R1-PD-47-METRIC-GATE-ACTIVATION",
+  "lineage_currentness_audience_hitl_results": {
+    "status": "not_applicable_zero_knowledge_delta"
+  },
+  "mandatory_graph_change_metric_gate": {
+    "definition_of_done_cross_reference_present": true,
+    "exact_table_present": true,
+    "g1_requirement_present": true,
+    "gate_r1_cross_reference_present": true,
+    "metric_rows": 10,
+    "release_result": "not_applicable_zero_graph_delta",
+    "status": "pass"
+  },
+  "non_policy_card_zero_delta_verification": {
+    "cards_checked": 18,
+    "changed_cards": [],
+    "status": "pass"
+  },
+  "packaging_gate_result": "pass",
+  "policy_change": {
+    "baseline_policy_body_sha256": "917f5128160397f8ec583e8c58c00d4d21c06472b228f00c2888588b375cdf84",
+    "change_class": "C6",
+    "control_card": "NEE_99",
+    "implemented_policy_body_sha256": "ea94485dd1206891c4b4317083ee7a83c2eb902fbdd7cc585b4d31e95fc6fe68",
+    "implemented_policy_card_sha256": "b5b542aa990405358328c8040afa85678d52710f0be5e9adcdd8c4dd274f767f",
+    "policy_version": "47.0",
+    "root_mirror": "PROJECT_INSTRUCTIONS.md"
+  },
+  "policy_mirror_verification": {
+    "body_identical": true,
+    "declared_hash_matches": true,
+    "status": "pass"
+  },
+  "release_state": "candidate",
+  "schema_and_integrity_results": {
+    "ontology_unchanged": true,
+    "relationship_vocabulary_unchanged": true,
+    "schema_unchanged": true,
+    "sqlite_foreign_key_violations": 0,
+    "sqlite_integrity_check": "ok"
+  },
+  "scope_verification": {
+    "graph_zero_delta_verified": true,
+    "non_policy_card_zero_delta_verified": true,
+    "status": "pass",
+    "unapproved_files": []
+  },
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

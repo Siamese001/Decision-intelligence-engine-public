@@ -1,0 +1,57 @@
+{
+  "activation_condition": "Exact digest-bound approval of the G1 proposal, C1 proposal, and generated G1 inline output; then approval-bound implementation and Gate R1.",
+  "affected_rules": [
+    "NEE_99 Section 10.2 no-guess rules",
+    "NEE_00 authority hierarchy",
+    "NEE_15 identity-resolution controls"
+  ],
+  "alternatives_considered": [
+    {
+      "alternative": "No change",
+      "reason_not_selected": "Would leave spelling authority ambiguous after a correct LinkedIn profile match."
+    },
+    {
+      "alternative": "Use URL slug as canonical spelling",
+      "reason_not_selected": "Slugs can be abbreviated, stale, surname-only, or otherwise non-display forms."
+    },
+    {
+      "alternative": "Use LinkedIn display name after identity resolution",
+      "reason": "Deterministic spelling source while preserving separate evidence requirements for identity and organizational facts.",
+      "selected": true
+    }
+  ],
+  "approval_source": null,
+  "approved_date": null,
+  "controls": [
+    "Require a correctly resolved profile/person match first.",
+    "Preserve source variants as governed aliases/mentions when useful.",
+    "Keep Nick/Nicholas separate until direct identity evidence resolves each mention.",
+    "Require current authoritative evidence for role/currentness facts."
+  ],
+  "decision_id": "PD-47.2-LINKEDIN-NAME-SPELLING-AUTHORITY",
+  "effective_package": "NEE_v47.2 if later implemented and packaged",
+  "effective_policy_version": "47.2",
+  "migration_impact": "One policy-card change plus mirror synchronization; NEE_00/15/16 propagation; no automatic alias, rename, or merge migration.",
+  "problem_evidence": [
+    "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+    "Nick / Nicholas Krivov unresolved roster collision"
+  ],
+  "proposed_date": "2026-07-11",
+  "risks": [
+    "Wrong profile match could normalize to the wrong person.",
+    "Display names can change.",
+    "Users may overread spelling authority as identity or role authority."
+  ],
+  "rollback_or_forward_repair": "Restore baseline NEE_99/NEE_00/NEE_15/NEE_16 bytes and policy mirror; retain source variants and unresolved identity validations; regenerate derivatives.",
+  "selected_decision": "After a person/profile match is correctly resolved, use the LinkedIn profile display name as canonical personal-name spelling. Do not use URL slugs, snippets, or name similarity to prove spelling or identity. The rule establishes no role, affiliation, reporting line, ownership, decision right, or currentness fact.",
+  "status": "proposed",
+  "superseded_decision": null,
+  "tests": [
+    "Correct profile display name wins over source typo after identity match.",
+    "URL slug alone cannot rename a person.",
+    "Nick/Nicholas stays separate without identity evidence.",
+    "Role/currentness answers do not cite spelling authority.",
+    "NEE_99 and root mirror are body-identical after implementation."
+  ],
+  "title": "LinkedIn display-name authority for personal-name spelling"
+}

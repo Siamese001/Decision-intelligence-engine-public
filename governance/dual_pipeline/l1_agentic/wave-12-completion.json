@@ -1,0 +1,72 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "l1-wave-12-completion",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "2a970cb6dcb7b302b31c80ca8a9a84a06019a4685da5fe2cbd3fb45500887698"},
+  "wave_id": "W12",
+  "program_id": "NEE-KG-DUAL-PIPELINE-01",
+  "branch": "codex/l1-agentic-gap-analysis",
+  "base_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "result_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "predecessor_receipt_digest": "8dd2004789d69d79215600729292b4ff527b22afae0d29725e03bb0277b1711a",
+  "changed_files": [
+    "contracts/dual_pipeline/schemas/shadow-learning-policy.schema.json",
+    "contracts/dual_pipeline/schemas/l1-shadow-observation.schema.json",
+    "contracts/dual_pipeline/schemas/shadow-finding.schema.json",
+    "contracts/dual_pipeline/fixtures/valid/shadow-learning-policy.json",
+    "contracts/dual_pipeline/fixtures/valid/l1-shadow-observation.json",
+    "contracts/dual_pipeline/fixtures/valid/shadow-finding.json",
+    "contracts/dual_pipeline/fixtures/invalid/shadow-learning-policy-auto-change.json",
+    "contracts/dual_pipeline/fixtures/invalid/l1-shadow-observation-raw-content.json",
+    "contracts/dual_pipeline/fixtures/invalid/shadow-finding-auto-change.json",
+    "contracts/dual_pipeline/contract_inventory.json",
+    "requirements/l1-shadow-learning-policy.json",
+    "dual_pipeline/l1_shadow_learning.py",
+    "tools/validate_dual_pipeline_contracts.py",
+    "tests/test_l1_shadow_learning.py",
+    "documentation/L1_AGENTIC_AUGMENTATION_GAP_ANALYSIS.md",
+    "reports/l1_agentic_augmentation/wave-12/l1-agentic-wave-12-20260806/shadow-learning-evaluation.json",
+    "governance/dual_pipeline/l1_agentic/wave-12-completion.json"
+  ],
+  "contract_inventory_digest": "b9083fa00279d8998966c851946364116891c864e0389984b376a6226ff5ab6e",
+  "policy_digest": "3b1ed98bef74519f1fc84fc25605bb0f851fbc1feeb31b8494a69ef415551733",
+  "commands": [
+    {"command": ".\\.venv\\Scripts\\python.exe -m py_compile dual_pipeline/l1_shadow_learning.py", "exit_code": 0, "status": "PASS", "skipped": 0, "timed_out": false},
+    {"command": ".\\.venv\\Scripts\\python.exe -m unittest -q tests.test_l1_shadow_learning tests.test_l1_ingestion_plan_contracts tests.test_l1_ingestion_shadow tests.test_l1_ingestion_checkpoint tests.test_ingestion_l2_boundary tests.test_conditional_ingestion_reasoning tests.test_l1_provider_boundary", "exit_code": 0, "status": "PASS", "skipped": 0, "timed_out": false},
+    {"command": ".\\.venv\\Scripts\\python.exe tools/validate_dual_pipeline_contracts.py", "exit_code": 0, "status": "PASS", "skipped": 0, "timed_out": false}
+  ],
+  "provider_initialization_count": 0,
+  "provider_call_count": 0,
+  "graph_mutation_count": 0,
+  "next_wave_authorized": false,
+  "artifacts": [
+    "shadow-learning-policy",
+    "l1-shadow-observation",
+    "shadow-finding",
+    "learning-change-proposal",
+    "reports/l1_agentic_augmentation/wave-12/l1-agentic-wave-12-20260806/shadow-learning-evaluation.json"
+  ],
+  "exit_gate_verdicts": {
+    "wave11_predecessor_terminal": true,
+    "contracts_and_fixtures_validate": true,
+    "terminal_and_evaluation_admission_only": true,
+    "cohort_comparability_required": true,
+    "raw_content_rejected": true,
+    "proposals_require_approval_replay_rollback_expiry_and_branch": true,
+    "automatic_policy_change_count_zero": true,
+    "provider_calls_zero": true,
+    "graph_mutations_zero": true,
+    "program_closed_with_residual_gaps": true
+  },
+  "rollback_control": "Disable shadow finding/proposal generation and retain the immutable admitted evidence. Any proposed change requires a separately approved implementation branch, isolated replay evaluation, and a new governed wave sequence; this receipt authorizes none of them.",
+  "cache_namespace_disposition": "No runtime cache, baseline, policy, prompt, route, graph, model, index, or deployment state changed in Wave 12.",
+  "extensions": {
+    "execution_posture": "DEFAULT_OFF_ADVISORY_NO_RUNTIME_MUTATION",
+    "evaluation_report_sha256": "a5bafd34dca9d248cbbbdfa303721c9f78bea870451a6bbf9fc8486cbd556ef4",
+    "evaluation_report_digest": "80f6e5a76177ab129495c57ad0d1d84b7f69b593463787081e8370514e020fb9",
+    "shadow_learning_sha256": "d8c15401706dcad46742bdc2184251135e871dabd78eb31c75ff140480ccda61",
+    "contract_validator_sha256": "2810088f69c54474bd7f832a82b25801b6f43849184b35d2773bcdba9d41376d",
+    "documentation_sha256": "84b7053d9b7f68c0c774bc7180307b43f5d50003328543c9e8980031b4b71779",
+    "residual_gap_count": 3
+  }
+}

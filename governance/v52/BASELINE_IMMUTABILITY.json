@@ -1,0 +1,16 @@
+{
+  "baseline_graph_after": "c802383576a6556aff228ac46c36f8ad66ce440aebe21e7420bc893cb78cf781",
+  "baseline_graph_before": "c802383576a6556aff228ac46c36f8ad66ce440aebe21e7420bc893cb78cf781",
+  "baseline_policy_after": "dffdf02e5b26cea9ca67b8ed7f3c0082158850854c35142233892367d65b03fd",
+  "baseline_policy_before": "dffdf02e5b26cea9ca67b8ed7f3c0082158850854c35142233892367d65b03fd",
+  "baseline_version": "51.0",
+  "baseline_zip_after": "4fa99350443291e9243d09312752dcbf6dc5bdb0e6ccf653f23233772cf62c2f",
+  "baseline_zip_before": "4fa99350443291e9243d09312752dcbf6dc5bdb0e6ccf653f23233772cf62c2f",
+  "baseline_zip_path": "NEE_v51.0(1).zip",
+  "extra_members_in_isolated_baseline": 0,
+  "generated_at": "2026-07-13T19:56:00Z",
+  "missing_members": 0,
+  "status": "PASS",
+  "zip_member_count": 1090,
+  "zip_members_matching_isolated_baseline": 1090
+}

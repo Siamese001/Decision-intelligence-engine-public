@@ -1,0 +1,17 @@
+{
+  "actual_counts_match_approved": true,
+  "g1_inline_output_sha256": "e3f28d8d72fa92fe4b70f692cf56b3d6e2ffb75161692f54e2424d103d0e6069",
+  "gate": "O1-R1",
+  "generated_from": [
+    "governance/v49/R1_ACTUAL_GRAPH_DELTA.json",
+    "governance/v49/R1_ACTUAL_CARD_DELTA.json"
+  ],
+  "r1_inline_output_sha256": "e3f28d8d72fa92fe4b70f692cf56b3d6e2ffb75161692f54e2424d103d0e6069",
+  "required_order": [
+    "graph_delta",
+    "graph_metrics",
+    "card_changes"
+  ],
+  "status": "pass",
+  "table_count": 3
+}

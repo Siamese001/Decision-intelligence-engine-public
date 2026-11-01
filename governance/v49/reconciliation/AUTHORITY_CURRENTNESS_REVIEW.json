@@ -1,0 +1,119 @@
+{
+  "proposed_source_count": 13,
+  "retrieval_date": "2026-07-13",
+  "rules": [
+    "Public source proves only its stated public scope.",
+    "Vendor or partner capability does not prove NEE entitlement or implementation.",
+    "Announcements are not production or scaled outcomes.",
+    "Future dates are not completion evidence.",
+    "Negative public search is not evidence of absence."
+  ],
+  "source_count": 15,
+  "sources": [
+    {
+      "access_limitations": "Public article; official transaction filings were not retained in this review bundle",
+      "authority_for_claim_type": "Strong secondary authority for the public announcement and quoted company terms; not transaction-closing authority",
+      "currentness": "current as of retrieval; transaction pending approvals",
+      "source_id": "S49-01",
+      "use_limitations": "May establish that a transaction was announced and reported terms; cannot establish closing, approval, integration, or private NEE plans"
+    },
+    {
+      "access_limitations": "Public Reuters article",
+      "authority_for_claim_type": "Strong secondary authority for the public partnership announcement and stated plan",
+      "currentness": "current for announcement; planned mid-2026 product launch not independently verified as completed",
+      "source_id": "S49-02",
+      "use_limitations": "Does not prove NEE entitlement, implementation, production use, or product launch completion"
+    },
+    {
+      "access_limitations": "Public Reuters article",
+      "authority_for_claim_type": "Strong secondary authority for the public PPA and announced restart target",
+      "currentness": "current announcement; restart remains future and approval-dependent",
+      "source_id": "S49-03",
+      "use_limitations": "Does not establish regulatory approval, operational status, final cost, or internal NEE delivery state"
+    },
+    {
+      "access_limitations": "Direct page was not machine-openable in the research environment; URL and regulatory posture were retained and cross-checked against public reporting",
+      "authority_for_claim_type": "Primary regulatory authority for NRC licensing, review, inspection, and oversight requirements",
+      "currentness": "retrieval-date snapshot; page update date not captured",
+      "source_id": "S49-04",
+      "use_limitations": "Supports regulatory process only; does not determine project-specific applicability beyond NRC jurisdiction or establish approval completion"
+    },
+    {
+      "access_limitations": "Public PDF",
+      "authority_for_claim_type": "Primary authority for Scrum-defined Product Owner accountability",
+      "currentness": "current official Scrum Guide version retained",
+      "source_id": "S49-05",
+      "use_limitations": "Defines Scrum, not NEE policy, formal RACI, commercial authority, or mandatory role design"
+    },
+    {
+      "access_limitations": "Public web page",
+      "authority_for_claim_type": "Primary government guidance for structured interview design and administration",
+      "currentness": "retrieval-date snapshot",
+      "source_id": "S49-06",
+      "use_limitations": "Informs general assessment design; does not establish NEE or PartnerAdvisory hiring process, legal applicability, named decision makers, or current screening authority"
+    },
+    {
+      "access_limitations": "Public web page",
+      "authority_for_claim_type": "Primary government guidance for work-sample validity, use, and limitations",
+      "currentness": "retrieval-date snapshot",
+      "source_id": "S49-07",
+      "use_limitations": "Informs assessment framework only; does not validate current NEE screeners, travel requirements, or selection governance"
+    },
+    {
+      "access_limitations": "Public preprint; limited sample and setting",
+      "authority_for_claim_type": "Direct empirical evidence for the measured study setting",
+      "currentness": "point-in-time early-2025 tooling",
+      "source_id": "S49-08",
+      "use_limitations": "Cannot be generalized as a universal AI productivity effect or used as NEE performance evidence"
+    },
+    {
+      "access_limitations": "Public preprint; wide confidence interval and one-task design",
+      "authority_for_claim_type": "Direct empirical evidence for the measured enterprise task and tooling",
+      "currentness": "summer-2024 internal Google tooling",
+      "source_id": "S49-09",
+      "use_limitations": "Cannot be treated as universal productivity lift or proof of NEE outcomes"
+    },
+    {
+      "access_limitations": "Public Reuters article",
+      "authority_for_claim_type": "Strong secondary authority for the announced rollout and status statements",
+      "currentness": "rollout announced for 2025 and phased over several years; measured outcomes not stated",
+      "source_id": "S49-10",
+      "use_limitations": "Does not prove achieved queue-time reduction, scaled production outcomes, or transferability to NEE"
+    },
+    {
+      "access_limitations": "Public Reuters article",
+      "authority_for_claim_type": "Strong secondary authority for announced collaboration and stated use cases",
+      "currentness": "current announcement; outcome evidence not retained",
+      "source_id": "S49-11",
+      "use_limitations": "Does not prove production scale, independent outcomes, or NEE applicability"
+    },
+    {
+      "access_limitations": "Public Reuters article",
+      "authority_for_claim_type": "Strong secondary authority for announced workflow design and participant statements",
+      "currentness": "current announcement; production/permitting outcomes not established",
+      "source_id": "S49-12",
+      "use_limitations": "Does not establish NRC acceptance, production deployment, safety case sufficiency, or NEE use"
+    },
+    {
+      "access_limitations": "Public preprint; single demonstration and author/partner context",
+      "authority_for_claim_type": "Direct empirical evidence for the reported field demonstration",
+      "currentness": "2025 field demonstration",
+      "source_id": "S49-13",
+      "use_limitations": "Cannot be generalized to all data centers, utility tariffs, grid programs, or NEE systems"
+    },
+    {
+      "access_limitations": "May be paywalled",
+      "authority_for_claim_type": "Independent corroborating secondary reporting",
+      "currentness": "current at publication",
+      "source_id": "S49-R01",
+      "use_limitations": "Corroboration only; official filings remain preferable"
+    },
+    {
+      "access_limitations": "Underlying report not fully retained; secondary coverage only",
+      "authority_for_claim_type": "Directional market research; underlying report not retained and not independent of vendor commercial interests",
+      "currentness": "current but incompletely retrieved",
+      "source_id": "S49-R02",
+      "use_limitations": "Do not ingest metrics or use as decision-grade benchmark without primary report and methodology"
+    }
+  ]
+}

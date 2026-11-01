@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "initiative_id": "NEE-KG-DUAL-PIPELINE-01",
+  "standalone_engineering_scope": "COMPLETE",
+  "production_readiness_controls": "PASS",
+  "production_readiness_tests": "8/8",
+  "production_execution_evidence": "PENDING_EXTERNAL_INPUTS",
+  "strict_production_milestone_achieved": false,
+  "origin_sync_status": "EXCLUDED_BY_OPERATOR_INSTRUCTION",
+  "completed_scope": [
+    "complete pinned-model file-manifest verification",
+    "model manifest bound to graph/index generations",
+    "RS256 production authorization verification",
+    "signed identity, clearance, audience, capability, resource, and model binding",
+    "production qualification request builder",
+    "fail-closed end-to-end production qualification runner",
+    "post-activation failure rollback attempt",
+    "adversarial readiness acceptance"
+  ],
+  "external_execution_inputs": [
+    "organization-approved pinned BAAI/bge-m3 snapshot and controlled FlagEmbedding environment",
+    "trusted identity public key and short-lived signed production authorization JWT",
+    "authorized real Copilot, architecture, PDLC, approval, and applicable HITL inputs",
+    "target-environment PASS report from the production qualification runner"
+  ],
+  "validation": [
+    {"name": "production readiness controls", "status": "PASS", "result": "8/8", "evidence": "tests/dual_pipeline_production_readiness_results.json"},
+    {"name": "Waves 2-6 acceptance", "status": "PASS", "result": "26/26", "evidence": "tests/dual_pipeline_waves2_6_acceptance_results.json"},
+    {"name": "representative CLI lifecycle", "status": "PASS", "evidence": "tests/dual_pipeline_operational_validation_results.json"},
+    {"name": "Wave 1 acceptance", "status": "PASS", "result": "21/21", "evidence": "tests/dual_pipeline_wave1_acceptance_results.json"}
+  ],
+  "production_execution_claimed": false
+}
+

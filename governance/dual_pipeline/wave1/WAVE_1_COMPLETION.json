@@ -1,0 +1,141 @@
+{
+  "completion_version": "1.0.0",
+  "initiative_id": "NEE-KG-DUAL-PIPELINE-01",
+  "wave": 1,
+  "maximum_waves": 6,
+  "status": "PASS",
+  "milestone_achieved": true,
+  "completed_at": "2026-07-21T12:44:14-05:00",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "ac63c9450b1e039a67d459139615c09f58c292047bda639b62afee9dbab3a73d"
+  },
+  "authorization": {
+    "source": "User instruction to execute the attached prompt",
+    "authorized_scope": "NEE-KG-DUAL-PIPELINE-01 Wave 1 only",
+    "later_waves_authorized": false,
+    "push_authorized": false
+  },
+  "contract_inventory": {
+    "path": "contracts/dual_pipeline/contract_inventory.json",
+    "sha256": "8862bd1eba246019da33cefeeb2a8f88da8b4b1a7de80775d019968615f3384a",
+    "shared_definition_count": 1,
+    "artifact_contract_count": 14,
+    "schema_version": "1.0.0",
+    "contracts": [
+      "copilot-intake",
+      "architecture-diagram-intake",
+      "normalized-candidate-bundle",
+      "ingestion-plan",
+      "query-plan",
+      "route-decision",
+      "entity-resolution",
+      "assertion-disposition",
+      "hitl-decision",
+      "graph-change-set",
+      "retrieval-record",
+      "otel-event-envelope",
+      "learning-event",
+      "learning-change-proposal"
+    ]
+  },
+  "fixture_inventory": {
+    "valid_count": 14,
+    "invalid_count": 9,
+    "valid": [
+      "architecture-diagram.json",
+      "copilot-meeting.json",
+      "disposition-quarantine.json",
+      "entity-resolution-ambiguous.json",
+      "graph-change-set.json",
+      "hitl-decision.json",
+      "ingestion-plan.json",
+      "learning-change-proposal.json",
+      "learning-event.json",
+      "normalized-candidate-bundle.json",
+      "otel-event.json",
+      "pdlc-query-plan.json",
+      "retrieval-record-candidate-action.json",
+      "route-decision.json"
+    ],
+    "invalid": [
+      "architecture-missing-region.json",
+      "bad-digest.json",
+      "copilot-missing-locator.json",
+      "disposition-lane-contamination.json",
+      "entity-naked-fuzzy.json",
+      "learning-auto-apply.json",
+      "otel-sensitive-content.json",
+      "query-lane-blending.json",
+      "unknown-field.json"
+    ]
+  },
+  "event_and_learning_ledger": {
+    "definition_path": "contracts/dual_pipeline/EVENT_AND_LEDGER_DEFINITIONS.md",
+    "definition_sha256": "905734a7745bc41dd888ae4825c3b224b127c4df6338dc10560b3e7d36980404",
+    "otel_attribute_policy": "closed allowlist; IDs, hashes, counts, route, lane, status, model, generation only",
+    "learning_event_type_count": 29,
+    "correlation_ids": ["source_id", "candidate_id", "run_id", "trace_id", "graph_operation_id", "query_id", "hitl_item_id"],
+    "automatic_self_modification": "DENIED"
+  },
+  "validation": [
+    {"name": "Wave 1 contract validator", "status": "PASS", "result": "15 schemas; 14/14 valid fixtures accepted; 9/9 invalid fixtures rejected", "evidence": "tests/dual_pipeline_wave1_contract_validation_results.json", "sha256": "54b06778854a5669ab9cea22be700d5d0a03c9677e924f029de900e0b02df7e9"},
+    {"name": "Wave 1 targeted acceptance", "status": "PASS", "result": "21/21", "evidence": "tests/dual_pipeline_wave1_acceptance_results.json", "sha256": "c4df1f84286d4459c1a8bb2cda14d6dafcf0c775149b20d896809cb76ad13ee7"},
+    {"name": "Inherited V54 graph acceptance", "status": "PASS", "result": "7/7", "evidence": "tests/run_v54_acceptance.py"},
+    {"name": "Inherited query retrieval regression", "status": "PASS", "result": "21/21; authority layer PASS", "evidence": "tests/dual_pipeline_wave1_retrieval_regression_results.json", "sha256": "732adec33cd4410c48f4fd2349a139eb5f385c94787be5d6b619976f522340de"},
+    {"name": "V55 policy acceptance", "status": "PASS", "result": "31/31", "evidence": "tests/v55_policy_acceptance_results.json"},
+    {"name": "Pre-mutation gate units", "status": "PASS", "result": "19/19", "evidence": "tests/test_nee_pre_mutation_gate.py"},
+    {"name": "V55 release acceptance", "status": "PASS", "result": "21/21", "evidence": "tests/v55_release_acceptance_results.json"},
+    {"name": "SQLite integrity", "status": "PASS", "result": "integrity_check=ok; foreign_key_check=0"},
+    {"name": "Targeted Python and JSON lint", "status": "PASS", "result": "AST parse and 39 contract JSON documents parsed"},
+    {"name": "Packaging hygiene", "status": "PASS", "result": "no __pycache__ or .pyc files"}
+  ],
+  "runtime_immutability": {
+    "full_baseline_comparison": "Only Wave 1 new files; no baseline file modified or deleted",
+    "graph_sha256_before": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+    "graph_sha256_after": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+    "graph_mutation_count": 0,
+    "index_mutation_count": 0,
+    "configuration_mutation_count": 0,
+    "model_mutation_count": 0,
+    "active_runtime_mutation_count": 0,
+    "provider_call_count": 0,
+    "push_count": 0
+  },
+  "files_changed": {
+    "new_file_count": 50,
+    "modified_baseline_file_count": 0,
+    "deleted_baseline_file_count": 0,
+    "digest_inventory": "governance/dual_pipeline/wave1/CHANGED_FILE_INVENTORY.json",
+    "inventory_self_excluded": true
+  },
+  "git_state": {
+    "requested_target": "C:\\Git\\nee-knowledge-graph-repo-main local main",
+    "available_source": "Supplied NEE_v55 archive",
+    "git_metadata_present": false,
+    "branch_verified": false,
+    "commit_created": false,
+    "push_performed": false
+  },
+  "finding_classifications": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "observations": [
+      "The supplied working copy does not contain .git metadata, so local-main branch identity and git status cannot be independently verified.",
+      "Waves 2 through 6 remain unimplemented and unauthorized by this Wave 1 execution."
+    ]
+  },
+  "exclusions_confirmed": [
+    "No graph data mutation",
+    "No embedding build or model load",
+    "No active BGE-M3 retrieval change",
+    "No existing query behavior change",
+    "No external provider call",
+    "No graph write or graph/index release logic",
+    "No benchmark, qrels, configuration, index, or runtime mutation",
+    "No push"
+  ]
+}

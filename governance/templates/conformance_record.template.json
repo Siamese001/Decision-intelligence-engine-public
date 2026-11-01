@@ -1,0 +1,28 @@
+{
+  "actual_card_diff_sha256": "<sha256>",
+  "actual_graph_delta_sha256": "<sha256>",
+  "affected_card_ids": [],
+  "approval_decision_id": "<decision-id>",
+  "approved_card_diff_sha256": "<sha256>",
+  "approved_graph_delta_sha256": "<sha256>",
+  "baseline_immutability_result": {},
+  "changed_file_inventory": [],
+  "component_counts": {},
+  "drift_result": "<none|hard-stop>",
+  "first_canonical_write_at": "<RFC3339>",
+  "g1_inline_output_sha256": "<sha256>",
+  "implementation_id": "<stable-id>",
+  "inline_gate_output": {
+    "card_rows": [],
+    "graph_delta_rows": [],
+    "graph_metric_rows": []
+  },
+  "inline_output_gate_result": "<pass|fail>",
+  "lineage_currentness_audience_hitl_results": {},
+  "packaging_gate_result": "<pass|fail>",
+  "r1_inline_output_sha256": "<sha256>",
+  "release_state": "<candidate|approved_current>",
+  "schema_and_integrity_results": {},
+  "status": "<pass|fail>",
+  "unapproved_semantic_changes": []
+}

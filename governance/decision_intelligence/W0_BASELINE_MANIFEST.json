@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_w0_baseline",
+  "baseline_id": "w0-decision-intelligence-baseline-20260808",
+  "created_at": "2026-08-08",
+  "purpose": "Freeze the governed NEE Knowledge Base baseline before the Decision Intelligence rebaseline. This manifest is evidence only; it does not authorize graph mutation, release activation, or production use.",
+  "scope": {
+    "system_of_record": "NEE Knowledge Base",
+    "decision_intelligence_role": "Derived, audience-scoped projections and strategic synthesis above the evidence layer.",
+    "explicitly_out_of_scope": [
+      "Graph mutation",
+      "Release activation",
+      "Embedding backend change",
+      "Production qualification",
+      "Private account or career-overlay integration"
+    ]
+  },
+  "active_runtime": {
+    "runtime_root": ".local/main/runtime-bge-m3-sherpa-strategic-20260729",
+    "active_generation": "generation-combined-remediation-1d2b1a2f0c1e77c644b734c6acb3",
+    "graph_snapshot_id": "graph-snapshot-e4400df7b8ed9fb7172fc731",
+    "graph_sha256": "5ce434c5cb819b66bbd39278573fda0645c7edf0377e132b138bf7ac86f9f184",
+    "embedding_backend": "flagembedding-bge-m3-dev",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "sidecar_sha256": "3d1a9e5e57891ea5f3120a500331c7e901ef900005a805fdd352d5778b41ccfb",
+    "manifest_sha256": "a598d96187ae03e498914543ca2637b95ef61c496faf4d5d9e471764f893905e",
+    "activated_at": "2026-08-05T01:05:46Z",
+    "production_qualified": false,
+    "qualification_interpretation": "The pair is a development/local-team runtime. Its existence and validation do not authorize production use."
+  },
+  "validation_evidence": {
+    "runtime_evidence_inventory": {
+      "command": "python -m dual_pipeline.runtime_evidence inventory --repository-root . --extra-root .local/main/runtime-bge-m3-sherpa-strategic-20260729",
+      "inventory_digest": "2573a2a654970595ef9a58024372658399df2778894f8b7b6fcf1e388030d144",
+      "finding": "The inventory includes historical/repository query-evidence conflicts and invalid retrieval-report findings. This is a W0 remediation input, not a claim that the active-pair binding failed."
+    },
+    "dual_pipeline_contracts": {
+      "command": "python tools/validate_dual_pipeline_contracts.py",
+      "status": "PASS",
+      "artifact_contracts": 92,
+      "schemas": 93,
+      "valid_fixtures": 93,
+      "invalid_fixtures_rejected": 54,
+      "provider_calls": 0,
+      "runtime_mutations": 0
+    },
+    "active_runtime_validation": {
+      "command": "python nee.py validate-runtime --runtime-root .local/main/runtime-bge-m3-sherpa-strategic-20260729 --graph .local/main/runtime-bge-m3-sherpa-strategic-20260729/generations/generation-combined-remediation-1d2b1a2f0c1e77c644b734c6acb3/graph.sqlite",
+      "status": "PASS",
+      "pair_binding_match": true,
+      "graph_integrity": "PASS",
+      "sidecar_validation": "PASS",
+      "sidecar_record_count": 1131,
+      "assurance_status": "development/local_team/NOT_APPLICABLE",
+      "release_readiness": "NOT_ESTABLISHED"
+    },
+    "strict_label_audit": {
+      "command": "python tools/audit_graph_labels.py audit --graph .local/main/runtime-bge-m3-sherpa-strategic-20260729/generations/generation-combined-remediation-1d2b1a2f0c1e77c644b734c6acb3/graph.sqlite --strict",
+      "status": "FAIL",
+      "report_digest": "5220b1c41aa1c7baa0f7b72d12072debc3780c77d1641830e4985466664a56d3",
+      "blocker_count": 233,
+      "blockers": {
+        "NONLEGACY_EXTRACTION_LINEAGE_MISSING": 231,
+        "HITL_ASSIGNMENT_INCOMPLETE": 1,
+        "UNREGISTERED_ACTIVE_ALIAS_CONFIDENCE": 1
+      },
+      "graph_counts": {
+        "nodes": 693,
+        "assertions": 1686,
+        "evidence": 1617,
+        "sources": 210,
+        "unparsed_assertions": 459,
+        "legacy_edge_types": 109,
+        "singleton_legacy_edge_types": 39,
+        "approved_validations": 0
+      }
+    },
+    "routing_evaluations": [
+      {
+        "evaluation_id": "w0-project-status-routing-20260808",
+        "suite": "evals/suites/project-status-snapshot-routing-e2.json",
+        "result_path": ".local/w0-decision-intelligence-baseline-20260808/status-routing/route_evaluations/w0-project-status-routing-20260808/route-evaluation-result.json",
+        "status": "PASS",
+        "correct_cases": 3,
+        "total_cases": 3,
+        "result_digest": "227db7133d11dfcfef86881564d21cb5829a1c29c80ccacf7efd1ea537206470",
+        "provider_calls": 0,
+        "l2_calls": 0,
+        "embedding_calls": 0,
+        "graph_mutations": 0
+      },
+      {
+        "evaluation_id": "w0-route-robustness-20260808",
+        "suite": "evals/suites/query-route-robustness-e2.json",
+        "result_path": ".local/w0-decision-intelligence-baseline-20260808/route-robustness/route_evaluations/w0-route-robustness-20260808/route-evaluation-result.json",
+        "status": "PASS",
+        "correct_cases": 256,
+        "total_cases": 256,
+        "destination_accuracy": 1.0,
+        "critical_false_negatives": 0,
+        "result_digest": "79f11927d59bb92eed38f4a8d70eab89625025f9e51d131eb5237f7f161fcba1",
+        "provider_calls": 0,
+        "l2_calls": 0,
+        "embedding_calls": 0,
+        "graph_mutations": 0
+      }
+    ]
+  },
+  "decision_intelligence_gaps": {
+    "derived_content_in_fact_lane": {
+      "human_interpretation_canonical_current_retrieval_eligible": 13,
+      "recommendation_canonical_current_retrieval_eligible": 4,
+      "required_direction": "Move derived interpretations and recommendations into an audience-scoped derived lane with provenance, expiry, review state, counterevidence, and falsification criteria."
+    },
+    "temporal_status_readiness": {
+      "current_assertions": 1580,
+      "assertions": 1686,
+      "missing_valid_from": 31,
+      "missing_valid_to": 1603,
+      "required_direction": "Introduce immutable dated observations and typed status/readiness dimensions. Absence or expiry must resolve to STALE_OR_UNKNOWN, never implicitly green."
+    },
+    "agentic_operations": {
+      "agent_lifecycle_node_types_present": [],
+      "operational_metric_count": 15,
+      "operational_metric_runs": 1,
+      "required_direction": "Add a governed agent/readiness model and keep raw telemetry, prompts, traces, and tool calls in their appropriate operational stores with graph pointers only."
+    },
+    "conflict_and_quality": {
+      "active_assertion_conflicts": 0,
+      "evidence_directness_values": 263,
+      "source_posture_values": 123,
+      "required_direction": "Treat zero recorded conflicts as an observation, not proof that conflict detection is complete; normalize taxonomy and add contradiction checks."
+    }
+  },
+  "w0_readiness_decision": {
+    "status": "COMPLETE_WITH_BLOCKERS",
+    "meaning": "The baseline is reproducible and safe to use for W1 design work. It is not a release or production-readiness decision.",
+    "authorized_next_wave": "W1 — establish fact, observation, derived-intelligence, and private-overlay audience boundaries.",
+    "blocking_conditions_for_decision_intelligence_release": [
+      "Strict label-audit blockers remain unresolved.",
+      "Derived interpretations and recommendations are still in the canonical current retrieval lane.",
+      "Status/currentness semantics are not yet bitemporal observation semantics.",
+      "Agentic readiness and outcome evidence model is absent.",
+      "Production qualification and sealed release evidence are not established."
+    ],
+    "graph_mutation_authorized": false,
+    "release_activation_authorized": false
+  }
+}

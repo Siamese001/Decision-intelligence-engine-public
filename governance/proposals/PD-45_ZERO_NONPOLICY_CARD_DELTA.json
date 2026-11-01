@@ -1,0 +1,25 @@
+{
+  "baseline_zip_sha256": "714b3468810e44abed9ed30c2721dfcf39eca6016996cb99d258d4bea9867531",
+  "canonical_serialization_sha256": "b43b658f6d27067bcd78f6f35d02018e4285304467aecf4334423596e1cabf36",
+  "cards": [],
+  "control_plane_exception": {
+    "approval_basis_sha256": "64fb190c10ec7e5c2e94bc54fb8ed47c760fc886aaafcf96160d29634e3ee74c",
+    "authority": "Section 6.5 protocol-only activation",
+    "card_id": "NEE_99",
+    "change_class": "C6"
+  },
+  "generated_at": "2026-07-11T10:49:16Z",
+  "policy_sha256": "735f683daa97a0b34c48846ab73934dac02846c6cb406c3d3abc84a440d41638",
+  "proposal_id": "C1-PD-45-CONTROL-ACTIVATION-ZERO-NONPOLICY-CARDS",
+  "proposal_type": "proposed_card_delta",
+  "scope": "All canonical cards except control card NEE_99",
+  "status": "approved_zero_change",
+  "unlisted_cards_unchanged": true,
+  "zero_change_declarations": {
+    "all_non_policy_cards_byte_identical_to_v44": true,
+    "card_lifecycle_unchanged": true,
+    "card_spine_unchanged": true,
+    "non_policy_card_count": 18,
+    "prior_unapproved_v45_card_edits_not_imported": true
+  }
+}

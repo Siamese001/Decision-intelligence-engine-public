@@ -1,0 +1,35 @@
+{
+  "baseline_zip_sha256": "4bc0ae8709f979a272d1d248116b37900b01f72ca40803052a1819853c77fa24",
+  "canonical_serialization_sha256": "9f95da157e8907d5f3cc14325c59a1e19ab7789cc5a79c0218d8f0775caa0cf5",
+  "cards": [],
+  "control_plane_exception": {
+    "approval_basis_sha256": "afcfa949755115c38db28b146b8453402ccb4ba75796513b53a56162a853ae10",
+    "authority": "Section 6.5 protocol-only activation and explicit user instruction",
+    "card_id": "NEE_99",
+    "change_class": "C6"
+  },
+  "generated_at": "2026-07-11T15:07:43Z",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Add Gate O1, the exact three-table contract, machine-readable output fields, approval/conformance hash binding, and packaging enforcement.",
+        "card": "NEE_99",
+        "change_type": "control_policy",
+        "defense_or_evidence": "The user required exactly three inline outputs and explicitly requested V47.1 with gates and inline output gates.",
+        "retrieval_improvement": "Forces every future graph, metric, card, and route change into a compact visible decision surface, reducing omitted routing, disambiguation, and retrieval-impact evidence."
+      }
+    ]
+  },
+  "policy_sha256": "ea94485dd1206891c4b4317083ee7a83c2eb902fbdd7cc585b4d31e95fc6fe68",
+  "proposal_id": "C1-PD-47.1-CONTROL-ACTIVATION-ZERO-NONPOLICY-CARDS",
+  "proposal_type": "proposed_card_delta",
+  "scope": "All canonical cards except control card NEE_99",
+  "status": "approved_zero_change",
+  "unlisted_cards_unchanged": true,
+  "zero_change_declarations": {
+    "all_non_policy_cards_byte_identical_to_v47": true,
+    "card_lifecycle_unchanged": true,
+    "card_spine_unchanged": true,
+    "non_policy_card_count": 18
+  }
+}

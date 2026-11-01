@@ -101,6 +101,16 @@ CANONICAL_ID_REGISTRY_MODULES = {
     "graph_post_entity_healer.py",
     "signal_extraction.py",
     "copilot_connection_policy.py",
+    "prepare_fpl_manifests.py",
+}
+LINTER_DETECTION_MODULES = {
+    "lint_no_transcript_overfitting.py",
+    "lint_test_assertion_purity.py",
+    "verify_document_graph_parity.py",
+    "recap.py",
+    "gate2.py",
+    "recap_checks.py",
+    "output2_contract.py",
 }
 _ENTITY_ID_LITERAL_RE = re.compile(
     r"^(person|org|system|workstream|project|policy|role|metric|risk|deliverable|milestone|forum|workshop|model):[a-z0-9-]+$"
@@ -137,7 +147,7 @@ def check_code_content(filepath: Path) -> List[str]:
             if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 if node.name in FORBIDDEN_IDENTIFIERS:
                     violations.append(f"{_format_path(filepath)}:{node.lineno}: Forbidden meeting-specific function '{node.name}'")
-                elif any(node.name.startswith(pfx) for pfx in ("_is_neet", "is_neet", "_is_bcg", "is_bcg", "_is_standup", "_is_partner_advisory_bcg", "_is_synthetic_", "_is_overfitted_")):
+                elif filepath.name not in LINTER_DETECTION_MODULES and any(node.name.startswith(pfx) for pfx in ("_is_neet", "is_neet", "_is_bcg", "is_bcg", "_is_standup", "_is_partner_advisory_bcg", "_is_synthetic_", "_is_overfitted_")):
                     violations.append(f"{_format_path(filepath)}:{node.lineno}: Prohibited meeting-specific predicate function '{node.name}'")
             elif isinstance(node, ast.Name):
                 if node.id in FORBIDDEN_IDENTIFIERS:
@@ -179,7 +189,7 @@ def check_code_content(filepath: Path) -> List[str]:
         for pattern, desc in FORBIDDEN_STRING_PATTERNS:
             if pattern.search(line):
                 # Do not flag QA gates or judge rules that define detection patterns to ban these strings
-                if filepath.name in ("recap.py", "gate2.py", "recap_checks.py", "output2_contract.py") or any(k in line for k in ("WORD_SALAD", "banned_salad", "re.compile")):
+                if filepath.name in LINTER_DETECTION_MODULES or any(k in line for k in ("WORD_SALAD", "banned_salad", "re.compile")):
                     continue
                 violations.append(f"{_format_path(filepath)}:{idx}: Forbidden synthetic injection: {desc} ('{line.strip()[:60]}')")
 
@@ -187,13 +197,21 @@ def check_code_content(filepath: Path) -> List[str]:
 
 
 def run_linter(target_files: List[Path] | None = None) -> Tuple[bool, List[str]]:
+    if str(REPO_ROOT) not in sys.path:
+        sys.path.insert(0, str(REPO_ROOT))
+    from tools.ssot_config_engine.discovery import discover_governed_python_files, is_test_or_excluded_path
+
     all_violations: List[str] = []
+    self_resolved = Path(__file__).resolve()
     if target_files is None:
-        files_to_check = [p for p in DUAL_PIPELINE_DIR.rglob("*.py") if "__pycache__" not in str(p)]
+        files_to_check = [p for p in discover_governed_python_files(REPO_ROOT) if p.resolve() != self_resolved]
     else:
         files_to_check = [
             p for p in target_files
-            if p.suffix == ".py" and str(p.resolve()).startswith(str(DUAL_PIPELINE_DIR.resolve())) and p.exists()
+            if p.suffix == ".py"
+            and p.exists()
+            and p.resolve() != self_resolved
+            and not is_test_or_excluded_path(_format_path(p))
         ]
 
     for f in files_to_check:

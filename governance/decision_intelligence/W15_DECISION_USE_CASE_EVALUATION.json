@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_w15_evaluation",
+  "wave": "W15",
+  "status": "COMPLETE_PROVIDER_FREE_NO_GRAPH_MIGRATION",
+  "purpose": "Prove that the priority NEE AI questions are evaluated as evidence-bound candidate-answer contracts rather than ungrounded recommendations.",
+  "implemented_artifacts": {
+    "contract": {
+      "path": "governance/decision_intelligence/W15_DECISION_USE_CASE_CONTRACT.json",
+      "sha256": "31f29e3bc8a271cdd4ce94f673890329e89f81b1318cd788ae371aa83572fe16"
+    },
+    "portfolio": {
+      "path": "governance/decision_intelligence/W15_USE_CASE_PORTFOLIO.json",
+      "sha256": "5304f88a45bcee8c7a006aea05eb4f87ca161c921cf622947c0080ff960bcf45",
+      "use_case_ids": ["ai-pdlc-pov", "ai-productivity-metrics", "agentic-readiness"]
+    },
+    "evaluator": {
+      "path": "dual_pipeline/decision_use_cases.py",
+      "sha256": "0c40eb64282d8a13e78e521431abce4d7dd884943be689f57ea95a4d6269502f"
+    },
+    "regression_tests": {
+      "path": "tests/test_decision_use_cases.py",
+      "sha256": "cddd7931513fb7748e64127b217e6954dfbf32bc559371bdb77be6ad43389150",
+      "result": "PASS"
+    }
+  },
+  "proven_cases": [
+    "AI-PDLC POV can proceed only as a source-linked candidate answer when current project evidence and source-bound counterevidence are available.",
+    "AI productivity metrics can proceed as a candidate answer with an explicit counterevidence gap; they are never promoted to a fact or KPI commitment.",
+    "Agentic-readiness questions use the same time, evidence, and audience boundaries.",
+    "Missing required status returns NO_ANSWER rather than a fabricated recommendation.",
+    "Conflicting status or untrusted evidence returns NO_ANSWER.",
+    "Candidate answer sections are explicit and cannot be silently broadened."
+  ],
+  "verification": {
+    "command": ".venv\\Scripts\\python.exe tools\\run_ci_gates.py --profile deterministic --output-root .local\\w15-decision-use-cases-20260810\\ci",
+    "result": "PASS",
+    "tests_run": 98,
+    "automatic_workflow_evaluation": {
+      "result_sha256": "d5bf08cae846be19700c313fd87235000b6aba67ca14c4f8df9d083c673578bd",
+      "case_count": 6,
+      "failed_case_count": 0
+    },
+    "provider_calls": 0,
+    "graph_mutations": 0,
+    "release_activation": false
+  },
+  "active_graph": {
+    "changed_by_w15": false,
+    "posture": "Use cases remain declarative candidate-answer contracts. W12 approval-bound migration remains the only path to target-graph mutation."
+  },
+  "next_step": "The source-bound retrieval connector projects candidate outlines directly; no human-review, draft-ledger, or provider-preflight stage is required."
+}

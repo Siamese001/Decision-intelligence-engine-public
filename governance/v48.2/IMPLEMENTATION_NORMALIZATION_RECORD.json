@@ -1,0 +1,30 @@
+{
+  "allowances_applied": [
+    {
+      "field": "source.notes",
+      "implementation": "Canonical JSON serialization of the exact approved nested object; no fields omitted."
+    },
+    {
+      "field": "source_version.raw_artifact_sha256",
+      "implementation": "Retained in source.notes and the governed source pointer because the source_version schema has no such column."
+    },
+    {
+      "field": "assertion.allowed_audiences_json / qualifiers_json / legacy_record_ids_json",
+      "implementation": "Canonical JSON serialization into existing TEXT/JSON columns."
+    },
+    {
+      "field": "validation allowed-use / blocked-use / required-evidence controls",
+      "implementation": "Retained in the linked P1 sprint and action-register rows because validation_queue lacks these columns."
+    },
+    {
+      "field": "search_document.search_rowid and FTS shadow bytes",
+      "implementation": "SQLite-generated derivative values; semantic search_document identifiers and retrieval eligibility match the proposal exactly."
+    }
+  ],
+  "approval_decision_id": "AD-V48.2-PartnerAdvisory-NEA-PARTNERSHIP-2026-001",
+  "candidate_database_sha256": "b6b10223b7c6f25eed890df932f0dca50dc0ed47b5d57cb30f3f2f1df01f6ea6",
+  "material_drift": false,
+  "out_of_envelope_changes": [],
+  "record_id": "NORM-V48.2-PartnerAdvisory-NEA-PARTNERSHIP-001",
+  "status": "PASS"
+}

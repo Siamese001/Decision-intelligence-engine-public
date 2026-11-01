@@ -1,0 +1,16 @@
+wave_number: 9
+wave_id: "Wave 9: Improve calibrated autonomy and human review quality"
+description: "Make every prior consumer use eligible, signed, scoped evidence and reduce avoidable human interruptions through bounded evidence preparation"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_scoped_autonomy_e2e.py"
+  - "tests/adversarial/test_autonomy_feedback_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_9.yaml"
+criteria:
+  - "All autonomous aliases contribute zero learning mass/maturity without verified independent outcome"
+  - "Human A->B overrides affirm B preference and reject A recommendation correctly"
+  - "Rejection-only priors never become preference; current lineage/retries cannot train themselves"
+  - "Missing scope returns neutral/unavailable priors without invented confidence intervals or sample maturity"
+  - "Mandatory human/speaker cases remain mandatory; exact-context review preparation can be cached without extending approval scope"
+  - "At most two allowed read-only evidence checks before an eligible clarification, within the shared lease"

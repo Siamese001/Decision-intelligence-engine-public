@@ -1,0 +1,47 @@
+{
+  "acceptance_tests": {
+    "passed": 27,
+    "total": 27
+  },
+  "actual_card_delta_canonical_sha256": "ef4695fa94a81bfb7697e432519df062ae8fef749bc81ae446f30cfcfbd5c510",
+  "actual_graph_delta_canonical_sha256": "a68cd6ff4361aa8e2b1caedad50879ebb0e23a36ae7f8b84bde0ffebad77dce5",
+  "approval_predates_first_write": true,
+  "approval_registered_at": "2026-07-12T18:20:00Z",
+  "approved_c1_canonical_sha256": "d8e6230fc930de19fe8ab41ea1f8a4fe116c9951dc96788e4420ff3a8c1c5001",
+  "approved_g1_canonical_sha256": "fc66acab477eb6a129e84d4dc724fb5bedb6b42795b355633f8859c3d4a6377a",
+  "approved_g1_o1_sha256": "b60ab2de033dfc71caebbc5dacc6892a882a913f155c859be0747d6f5d029c13",
+  "approved_sdr_canonical_sha256": "508fe0d16ca31fb4fea992bbef48b523c13257b4d636eb46162ac355d9788c5d",
+  "baseline_binding": {
+    "database_sha256": "9dc863b58bac213661d97b62508f32f886e62498b4db532d6438cc0fe0b7fdf2",
+    "zip_sha256": "adf77b2cbb5df66e9d3c33fbd6970a89e23643879fd2068155849ef248e13408"
+  },
+  "candidate_database_sha256": "5a376919027b37b1b3c566074a8923b18fe842f70d38a5459534e3eaa52f8b0a",
+  "canonical_serialization_sha256": "c903dfd9d7fdfadaf1851e3cf790900658b6645b4553e4b7c67cfdede53fcd70",
+  "conformance_id": "R1-V48.1-CONFORMANCE-REMEDIATION-001",
+  "first_canonical_write_at": "2026-07-12T18:30:00Z",
+  "graph_health_rows": {
+    "passed": 15,
+    "total": 15
+  },
+  "out_of_envelope_semantic_changes": 0,
+  "promotion_to_approved_current": false,
+  "r1_gate_o1_inline_sha256": "013de320d2d5883633c10b654f8763d459884ca663990bf29c7cc5d0545a0bff",
+  "r1_gate_o1_validation": "PASS",
+  "r1_gate_o1_validation_canonical_sha256": "177f633f7cff592a312adb22826d4dabdaef2ff7f98ec57e86516de784f1b0c3",
+  "record_type": "implementation_conformance",
+  "release_gate": {
+    "passed": 29,
+    "total": 29
+  },
+  "release_state": "candidate",
+  "release_version": "48.1",
+  "retrieval_cases": {
+    "abstention_precision_pct": 100.0,
+    "citation_accuracy_pct": 100.0,
+    "currentness_accuracy_pct": 100.0,
+    "passed": 21,
+    "total": 21
+  },
+  "status": "PASS",
+  "unapproved_card_changes": 0
+}

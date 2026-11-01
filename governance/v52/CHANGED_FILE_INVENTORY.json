@@ -1,0 +1,1503 @@
+{
+  "approved_canonical_card_changes": [
+    "cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md",
+    "cards/NEE_03_SOW_Commercial_and_Contract_Guardrails.md",
+    "cards/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md",
+    "cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md",
+    "cards/NEE_09_Utility_Thought_Leadership_and_REWIRE_AMWE_Agenda.md",
+    "cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+    "cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md",
+    "cards/NEE_14_Trading_ETRM_and_Pricing_Models.md",
+    "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md"
+  ],
+  "baseline_file_count": 1090,
+  "category_counts": {
+    "approval_control": 50,
+    "canonical_card": 9,
+    "canonical_graph": 1,
+    "generated_derivative": 48,
+    "governance_control": 9,
+    "governed_input_pointer": 1,
+    "migration_rollback_control": 11,
+    "release_documentation": 8,
+    "test_evidence": 7
+  },
+  "change_type_counts": {
+    "added": 115,
+    "modified": 29
+  },
+  "changed_file_count": 144,
+  "files": [
+    {
+      "after_sha256": "1c8ba8296cdf2badd3e5af7326adee0ce7186606a6325bc30dd7a4a1cd07aced",
+      "authorization_basis": "Release-control documentation for the approved state.",
+      "authorized": true,
+      "before_sha256": "c7e1ecd4fb0533c1a122898a8abdecc2624eff00cdecfe4c03c196094ea32c53",
+      "category": "release_documentation",
+      "change_type": "modified",
+      "path": "CHANGELOG.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "6a09fbe190f1aaa1ce988065d9561758ead94dddbb7d32705a418e9b3fab094d",
+      "authorization_basis": "Release-control documentation for the approved state.",
+      "authorized": true,
+      "before_sha256": "6a719f84ab6603283c5baff44e8f6f92b67440388ae13153c35f464c5f818901",
+      "category": "release_documentation",
+      "change_type": "modified",
+      "path": "MANIFEST.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "bc40081b365b89889914da0f82f4dedad35587a9b5bf3e9878fe1e9bb4eee274",
+      "authorization_basis": "Release-control documentation for the approved state.",
+      "authorized": true,
+      "before_sha256": "37e9a8e1096e6f8949ac53d23f5acb0bb3298ab334b4c7de7f6ce5b62251eab9",
+      "category": "release_documentation",
+      "change_type": "modified",
+      "path": "QA_REPORT.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "8688c6675600d0b89e19d850b5b47c6da051f3f722d1c6bca6efba1bdcbb341b",
+      "authorization_basis": "Release-control documentation for the approved state.",
+      "authorized": true,
+      "before_sha256": "5baf4bac8fc94de8dc7ee2c7d84f48b51c0297154ad59f2325e860b329389714",
+      "category": "release_documentation",
+      "change_type": "modified",
+      "path": "README.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "1b9049e2b909481a56538b9c0aaeb9470407c3e1bda446bf730dfc8690997cd9",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/APPROVAL_BUNDLE_MANIFEST.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "dd282b77c62df9b4e23af88c5588ed1e6473c5ff935d9cb3dde01c69fc9cacfa",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/APPROVAL_RECORD.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "710cc63a3392dc2c6504e6b53318718c7eb1424cef6f0cedd468a2829d88ac6d",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/APPROVAL_VALIDATION.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "85fda970b206487968ea8428272619b884c975b7ad60126e12524d3f9d28be0f",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/BASELINE_AND_INPUT_HASHES.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "a47fce9ac650030ede97adb40371bbd8cf2398b090605a8da37b2526927df806",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/BASELINE_IMMUTABILITY_VERIFICATION.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "70101361f3b1cba4ebf5159024ff189fccdf88684540c1578f26c1a9d8ea52a0",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/C1_PROPOSED_CARD_DELTA.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "03eb3316a60e55d97d4b758d2f2f37e9fc3602627bd6a3b3a0c32b753cfb78de",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/CARD_PATCH_VALIDATION.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "b4505767bc0066a430e2e60c65e71dd2668d743f6043e81b2a36b907f4581da5",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/DERIVATIVE_MIGRATION_ROLLBACK_ASSESSMENT.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "532e010a2d38cfeb65256ab0797e83c8b3b7481df9bed255e124bab0ac4363e3",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/EXACT_APPROVAL_STATEMENT.txt",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "e1c8e519f9b04b8fa4b09ffb713fdd61366b66091bce8d94596b0aad79e62149",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/FULL_OPEN_VALIDATION_REGISTER.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "b87782b06e973aaa84f2df3fb5c9803bc643de6b8d79da7e6bd1af240d71b9e0",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/FULL_OPEN_VALIDATION_REGISTER.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "2b59202a111b972911112e4920f45865e6d77604dba1715638c63e13c7a26270",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/G1_GATE_O1_INLINE_TABLES.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "5bafa959ea6aca36d607c555cadf1ed632f4c04e45e3f2a7502299e5f3b1469e",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/G1_GATE_O1_VALIDATION.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "6ff3b47fa82722e24dc19d9f7947aa1b7acac8539b5f87c612f370325841e0d4",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/G1_PROPOSED_GRAPH_DELTA.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "3dc79fd36ace7af40e9c214f4ce1efd03e28ae40307971a7781ddff0c808ebfa",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/GRAPH_METRICS_BASELINE.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "1e1c9ff7a22f575c69c40df98f5a8f9637342c4d5d135a549f92bd0c10b11249",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/GRAPH_METRICS_SIMULATED.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "6919dfa223f37a4d59f60c10b27b3f51e8fc4db9aaa73d6b3b6331c912aec654",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/GRAPH_METRICS_SIMULATED.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "6606e2525361fa123174aa9030c459b1c48eb5ba36ae65b1d29fe4c71829121a",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/GRAPH_METRICS_SIMULATED.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "9abd6a0112d76053afa3b3b69f51d9d39d16d07c5e15638ca947411d81dfc9b8",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/IDENTITY_AUTHORITY_TEMPORAL_REVIEW.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "2412a8b15adf7529cf4cd1e0ebddc35df934703972858cf722fb84c54afa4ff3",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/INPUT_REVIEW_SUMMARY.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "9776630b518cf20d8a633e07a19ee6c1f7b1369ef11cf4f5634cafbf8babdc29",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/INTEGRATED_APPROVAL_REQUEST.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "e4abd9485106f922a6d1cc96a68cf272c155cdfd20090f94c6b7dbc5cf2eb205",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/PREWRITE_REVALIDATION.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "d1458fe97455b10b274627fbf7c6450ccc98e671df0a1e68ff19836f3522f9de",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/PROPOSAL_DIGESTS.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "c71b3d5b85340801bac571d0ecce11296b3acb5c685bc42d0f7054b645dffbe8",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/PROPOSED_GRAPH_OPERATIONS.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "c3eeabf661e9a96ca617b34d2db933c217a93ecac5f9ae7ee21c9759e6f44c6a",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/README.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "83a2a7e96be48120b12eff73ca181ab5e0f46c2b2ced67f193b7c898146cbca7",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/RETRIEVAL_BASELINE_RESULTS.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "4d1ca3cdb5bf9bffd6d0abb2727b7f256db8b526c377388a669d3d557a603dec",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/RETRIEVAL_SIMULATED_RAW.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "11f43058e030e35312f668687b0f8bf13079ab0847615f73d32368e1be647425",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/RETRIEVAL_SIMULATED_RESULTS.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "41b35e2cbd7f68589519715fa773924cd4b0657f4c61ed1cf365571bed0067dc",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/REVIEW_BUNDLE_MANIFEST.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "79ccb4704eb6f0f8d1c11b8feb9a5197b21d91355a63df01515850aecd7cb3df",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/SCRATCH_SIMULATION_RESULTS.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "aba969271a9e28f1e8218d04d5076a9705b15e1fd0b4de6d4033fc4e145ea3fe",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/SOURCE_RECONCILIATION.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "a45b555eb4f9a213a390bac8668a4ab1bb19e61def3cf193222b2891f589c9b6",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/SUPPLEMENTAL_RETRIEVAL_CHECKS.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "38a54dad763ee52d4262f74fc4a32766d916a3fd77665d521d18d8cc2550a2de",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/card_diffs/NEE_02_Portfolio_Status_and_Project_Dossiers.md.diff",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "361fe2bcedfb19cda8b7b42a552a50b9a798d264b9041ec0a2e8b113246d5aab",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/card_diffs/NEE_03_SOW_Commercial_and_Contract_Guardrails.md.diff",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "a4d1acf0a96149a6757505d366e5c12e5f76f9093137063bbb0a8e2ff534e860",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/card_diffs/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md.diff",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "95d18fa4897bc4f2b055eb08a8bf4069a0bf0268877aa853b59e132e9c124b20",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/card_diffs/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md.diff",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "d5272e64fc2dc62cd62f0632a42ab6d3ba93055513f3950a55a68bff280bef1f",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/card_diffs/NEE_09_Utility_Thought_Leadership_and_REWIRE_AMWE_Agenda.md.diff",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "0680455242ee5b8724391513d7349f54bca1b8c0e9616d1176f7fa0966f2ba8c",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/card_diffs/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md.diff",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "2d5dd28d573d5e2879852835a8a10d1fcfec5ea0036726f3e0c5df979b35e085",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/card_diffs/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md.diff",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "03310dc1d6af4ae2a433a0b2b790b39b8b6ebdb04cfee3068bffad873f3bbf45",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/card_diffs/NEE_14_Trading_ETRM_and_Pricing_Models.md.diff",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "52f2339f659558e74939b9cc9617ee1287d5a49ebe9b700ab7713b95e4652f76",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/card_diffs/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md.diff",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "4c6afaef7ffe30139181e55d5c1ccd970aad93e052d138e306e0010bb2158221",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/proposed_cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "f17c949ce52c8eeed13fa6cc36702c9ce47de6175403acc94a753ff6c79356f5",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/proposed_cards/NEE_03_SOW_Commercial_and_Contract_Guardrails.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "29a78f5b75b7c35542aabf2357ae0b4c90c787fe975dbf3ee54a4d424622d834",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/proposed_cards/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "2183dafde77dc64f05071372821b0aa1ef92d21f51ba05650a78566c1a9ab847",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/proposed_cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "ada7e22848e9d3613463dc969ceba6bf8faeec7bbd031067c68544c36a7c824c",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/proposed_cards/NEE_09_Utility_Thought_Leadership_and_REWIRE_AMWE_Agenda.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "33ae967450fa6bf1409be5d222505a4bcd660ec46b27d2e02b5ec9ac4e1a3353",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/proposed_cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "3eb7cd785d31754b6a7cfcb16fff1c6bf43f05167e9bae9bf2aa39d218fc8a8a",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/proposed_cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "3955b5c65b527400728864601f158e2547042b45d437298f1a6441482ec7d2ae",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/proposed_cards/NEE_14_Trading_ETRM_and_Pricing_Models.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "af803c25f3f09cc60e16fa6645e05a0a4fe8f99cdfce74b74a6a9e87f33c871f",
+      "authorization_basis": "Approved Phase A/B record and exact proposal evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "approval_control",
+      "change_type": "added",
+      "path": "approvals/v52/proposed_cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "4c6afaef7ffe30139181e55d5c1ccd970aad93e052d138e306e0010bb2158221",
+      "authorization_basis": "Approved C1 exact byte edit.",
+      "authorized": true,
+      "before_sha256": "450405cb85d273d57be772ea36945eb77a20a68cc5e787c8ae3ba75a62026b79",
+      "category": "canonical_card",
+      "change_type": "modified",
+      "path": "cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "f17c949ce52c8eeed13fa6cc36702c9ce47de6175403acc94a753ff6c79356f5",
+      "authorization_basis": "Approved C1 exact byte edit.",
+      "authorized": true,
+      "before_sha256": "92e865d20fca1547fd43fec364d26548cd08093ba657c10944d267cd635fc47e",
+      "category": "canonical_card",
+      "change_type": "modified",
+      "path": "cards/NEE_03_SOW_Commercial_and_Contract_Guardrails.md",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "29a78f5b75b7c35542aabf2357ae0b4c90c787fe975dbf3ee54a4d424622d834",
+      "authorization_basis": "Approved C1 exact byte edit.",
+      "authorized": true,
+      "before_sha256": "1be34f3212a436a77f2dfeae9b2b8960c326c7c1522461413282edef34d4ae8f",
+      "category": "canonical_card",
+      "change_type": "modified",
+      "path": "cards/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "2183dafde77dc64f05071372821b0aa1ef92d21f51ba05650a78566c1a9ab847",
+      "authorization_basis": "Approved C1 exact byte edit.",
+      "authorized": true,
+      "before_sha256": "73a9648cc875c9ff05650b92f13eda325254597892f25d25d933cd4778d9408a",
+      "category": "canonical_card",
+      "change_type": "modified",
+      "path": "cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "ada7e22848e9d3613463dc969ceba6bf8faeec7bbd031067c68544c36a7c824c",
+      "authorization_basis": "Approved C1 exact byte edit.",
+      "authorized": true,
+      "before_sha256": "90238fab380e08f47dc08cf4958a115946101903e75218d9a9b2197200d4964f",
+      "category": "canonical_card",
+      "change_type": "modified",
+      "path": "cards/NEE_09_Utility_Thought_Leadership_and_REWIRE_AMWE_Agenda.md",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "33ae967450fa6bf1409be5d222505a4bcd660ec46b27d2e02b5ec9ac4e1a3353",
+      "authorization_basis": "Approved C1 exact byte edit.",
+      "authorized": true,
+      "before_sha256": "79ee9beb915fc5531cb648dc7c59238e3b40d7717f8844f671c3a90e2b7e2723",
+      "category": "canonical_card",
+      "change_type": "modified",
+      "path": "cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "3eb7cd785d31754b6a7cfcb16fff1c6bf43f05167e9bae9bf2aa39d218fc8a8a",
+      "authorization_basis": "Approved C1 exact byte edit.",
+      "authorized": true,
+      "before_sha256": "24a92da43cb8ca9c70100fd6a4dfaa9d7fdfecfa1e5e6320f35ab17f679cabe8",
+      "category": "canonical_card",
+      "change_type": "modified",
+      "path": "cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "3955b5c65b527400728864601f158e2547042b45d437298f1a6441482ec7d2ae",
+      "authorization_basis": "Approved C1 exact byte edit.",
+      "authorized": true,
+      "before_sha256": "75b96bbf9f6665e08999ff8661fd99b058a416e7ff2d2c275b88209ef1af1d99",
+      "category": "canonical_card",
+      "change_type": "modified",
+      "path": "cards/NEE_14_Trading_ETRM_and_Pricing_Models.md",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "af803c25f3f09cc60e16fa6645e05a0a4fe8f99cdfce74b74a6a9e87f33c871f",
+      "authorization_basis": "Approved C1 exact byte edit.",
+      "authorized": true,
+      "before_sha256": "fa0b5e4dd80a2245ec87aae972fad6954006754c238e6ade09eb0ee4797925a5",
+      "category": "canonical_card",
+      "change_type": "modified",
+      "path": "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "c220d649712fc537fda8fc9f29bd57e492878595213895b7fe719b5abc35a38c",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": "f3cf5b14aa1f5d1871fb38ff0b3d7649762e18e4f78813018a4aa47d3c80a0c8",
+      "category": "generated_derivative",
+      "change_type": "modified",
+      "path": "database/canonical_database.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "92a6c28cbe8227786ba6780ed8691687c32e4b7ac5cf28e11ce66cd0eb746179",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": "7c30f1e13759dfa790ef247885bde2b4d1b2bc732a72ab83df19c43a04fa080f",
+      "category": "generated_derivative",
+      "change_type": "modified",
+      "path": "database/database_inventory.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "92a6c28cbe8227786ba6780ed8691687c32e4b7ac5cf28e11ce66cd0eb746179",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "database/database_inventory_v52.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "812cee161e357de814f9686492cd41bf116b026c9497f6cb8e6bba73d06ceb8d",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "database/object_inventory_v52.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "36b39347eb7ebb1059cca255e50ed0c71e678fc93f262d88660870e0b097831f",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "database/schema_v52.sql",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "d4988f1905c04c8472fa0fd675f23c3638ca2090f726b7e7c0e125e266e049a1",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": "f451801fb3c08a2427be02c670c8d8880fe3d62f6883df9904dc826ba12c4fad",
+      "category": "generated_derivative",
+      "change_type": "modified",
+      "path": "database/table_row_counts.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "d4988f1905c04c8472fa0fd675f23c3638ca2090f726b7e7c0e125e266e049a1",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "database/table_row_counts_v52.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "57f0acfce1ac1f645e2d028f4a206e8927d9a726a46e27b56c891220f7064cbd",
+      "authorization_basis": "Release-control documentation for the approved state.",
+      "authorized": true,
+      "before_sha256": "6b980ee5d2c43461c68a920cc40d91563826a1480113fccc57f04c4786db2c82",
+      "category": "release_documentation",
+      "change_type": "modified",
+      "path": "documentation/QUALITY_AND_RELEASE.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "e1c8e519f9b04b8fa4b09ffb713fdd61366b66091bce8d94596b0aad79e62149",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": "c7e2f674046a217c6f23b971de7fc07ada8a7f22bb429fff6c17a0224eab82fe",
+      "category": "generated_derivative",
+      "change_type": "modified",
+      "path": "exports/open_questions.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "ab11f3174ff50935ac867de7d94dc5eafb20c1eb6b2be3ac92e434ef7a559ac9",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": "b661f57deb2629188bc2b0d5809b7e4fefe925ebd9ab5d20ab70cfcc676035d6",
+      "category": "generated_derivative",
+      "change_type": "modified",
+      "path": "exports/source_lineage.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "f665192ebbb54f240aac265961310922010fc8b3e040fe67de8f3fd10f388e3a",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": "cda866f9fc336230881801c518a8adcf5d6349b8b48d12e6f9a48ba2aefe4666",
+      "category": "generated_derivative",
+      "change_type": "modified",
+      "path": "exports/source_version_lineage.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "b968a4370b968ac6071311ce6c2d90401010dd0a33659c4e8889dc68caaa0cef",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_alias_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "48bbe4dc91594c087ff7868f9a95bf8bde513771d76101a1c70fb19ad0b44bae",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_assertion_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "d605c2b860661b63aec58ba6742f65bb19fb8ca84374c82409d883f55eb62d77",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_assertion_evidence_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "ac469e62201223b14dd10cf5388853e3f016ac1c805daacd9621926b8450b6aa",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_canonical_alias_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "2abe900351bae218d50d08c44c887e963f8f34874cd752701f021d411fed9f2c",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_canonical_route_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "21cf68d56f56e0a429849d278d7618227b5ee39b7d4fd0b1a9ed7847a80fc696",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_card_change_matrix.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "2a9d1b714013a02f2edb4b8b0e6d2b4027da5a887def52d499467c81862bd90b",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_claim_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "f9eb50cb63f12f390033bdea82e2e68cd4f079c594df945ed3d67a4304300f19",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_edge_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "e3ae1e8982cf8b7e566b92baad4efd782e44a1ed8b44a2a7983335b76a80142c",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_evidence_item_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "e1c8e519f9b04b8fa4b09ffb713fdd61366b66091bce8d94596b0aad79e62149",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_full_open_validation_register.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "fda67a77efa18f0ccba8ec5e5e362205e162be5b3cb6a0a97553d16d9a5ee15f",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_graph_delta_summary.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "edb89055abc0bd177389488fd9458157c6b7175d5a2aab164ca99633678dc4cb",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_graph_delta_summary.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "02141604f5a088a58212d875be361f3d0778715d08adcac836db38e33956d8a2",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_graph_delta_summary.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "b7c2251884192f30921888ab765ef0e9a61d539a6f5d884d9dacfec3f5cab424",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_graph_operations.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "d804da9b4867c7f33af3dd081814ae3c1f844fe65fbc7284cbb4d9b63401183f",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_legacy_alias_canonical_map_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "e2cf6d3d5f241dae10da7760a36ac6243f7ceade6e100c663c08f66e0e9c22ef",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_legacy_claim_assertion_map_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "202bd858725b77daa67caf287f1d9f4fe47404b25678c44a47ceb7840ce7b578",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_legacy_edge_assertion_map_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "14b7292abe654e4bf5a08dd37b29282e2ffc7608731f06f338be2d76bca01d30",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_node_card_map_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "121eaa9526415d8477eb54e52748359a5cf9a24b197eba423e06c33bbcc530f2",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_node_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "e9aeace3f54dfd9dd2feac604220cb46665e2cf46ee9cc680bb3b8b9f98846da",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_node_state_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "0fa1b13edb2e7a6ebd4f6a5e15a0bb4785c955a7784d32e76cac01f74a93fc4d",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_qa_summary.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "15cfcc2655d31b15ed28bd5c0a10ee14746c74fcfe9d67b39706503a1b06acb7",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_search_document_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "930881a0b46b98bc619ed53fb5a57263a620b2cc32ef36b2eb020abfbecf9fe7",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_source_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "4a0db826f4c5588ba1677455f24882385158b336e937e20292e9e9a37c198037",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_source_version_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "5f5f97c84ab67273ee98bbe4901eef64d8c2a6efd6b65012e6c6db37d520433b",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "exports/v52_validation_delta.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "f10546307a9d8d14d70281392fd01589ec283bff60ef99f69a49e3de0a854091",
+      "authorization_basis": "Phase C/D conformance and release-control evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governance_control",
+      "change_type": "added",
+      "path": "governance/v52/BASELINE_IMMUTABILITY.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "c96fdef4057f27826192fe8f2ed493db1b452875074fbbda6edf553e42a237d3",
+      "authorization_basis": "Phase C/D conformance and release-control evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governance_control",
+      "change_type": "added",
+      "path": "governance/v52/IMPLEMENTATION_NORMALIZATION_RECORD.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "1fd3819f5077061e361e066fafa8fe5e62d4e7ebbc3e63c9d6fdff96e010d9bf",
+      "authorization_basis": "Phase C/D conformance and release-control evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governance_control",
+      "change_type": "added",
+      "path": "governance/v52/R1_ACTUAL_CARD_DELTA.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "8f23d370aba4c4689204bbe24fc24a3cfcde272cab8d4a312f4c194479dc35eb",
+      "authorization_basis": "Phase C/D conformance and release-control evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governance_control",
+      "change_type": "added",
+      "path": "governance/v52/R1_ACTUAL_GRAPH_DELTA.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "e0b3373a9e3387a25ded03d591f652bfbf8c35de518aed5209b542b55f9ddd49",
+      "authorization_basis": "Phase C/D conformance and release-control evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governance_control",
+      "change_type": "added",
+      "path": "governance/v52/R1_BUILD_RESULT.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "63fb103aed7e0aa823e96b58cf114b621b73dd9307a6088a7807deb1c2dca0ee",
+      "authorization_basis": "Phase C/D conformance and release-control evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governance_control",
+      "change_type": "added",
+      "path": "governance/v52/R1_GATE_O1_INLINE_TABLES.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "94b6dbaecf06d11c6fef1969c13bd19ee49444e4acbdd6a4bee9580b68f1efc1",
+      "authorization_basis": "Phase C/D conformance and release-control evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governance_control",
+      "change_type": "added",
+      "path": "governance/v52/R1_GATE_O1_VALIDATION.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "7fbf59642f2d762471cd9cbb9fca149f592f8b7c69466c43d2213fd165dcc4e0",
+      "authorization_basis": "Phase C/D conformance and release-control evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governance_control",
+      "change_type": "added",
+      "path": "governance/v52/R1_IMPLEMENTATION_CONFORMANCE.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "a71c1653d6bb1e4463006b46f308ab8c74ad4b0a26e302d85fa4d9d385597296",
+      "authorization_basis": "Phase C/D conformance and release-control evidence.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governance_control",
+      "change_type": "added",
+      "path": "governance/v52/SOURCE_AND_INPUT_BINDING.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "d2fccfee82f5b944a0eedc5cf99dff34f2f22385a143cadb4218e0231b489b44",
+      "authorization_basis": "Approved G1 semantic implementation.",
+      "authorized": true,
+      "before_sha256": "c802383576a6556aff228ac46c36f8ad66ce440aebe21e7420bc893cb78cf781",
+      "category": "canonical_graph",
+      "change_type": "modified",
+      "path": "graph/nee_graph.sqlite",
+      "semantic_change": true
+    },
+    {
+      "after_sha256": "68c4276d88e33da0b0bad71ee646a3a35e2e102da3760a6aabae87fd9426863b",
+      "authorization_basis": "Raw input excluded; governed pointer only.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "governed_input_pointer",
+      "change_type": "added",
+      "path": "inputs/v52_source_pointers.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "bb7ac3b0ce981a9d5a979187558342a227ae79951cf1549940fbbaf14aaa90c4",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": "6606e2525361fa123174aa9030c459b1c48eb5ba36ae65b1d29fe4c71829121a",
+      "category": "generated_derivative",
+      "change_type": "modified",
+      "path": "metrics/graph_health_table.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "1e1c9ff7a22f575c69c40df98f5a8f9637342c4d5d135a549f92bd0c10b11249",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "metrics/graph_health_table_v52.csv",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "bb7ac3b0ce981a9d5a979187558342a227ae79951cf1549940fbbaf14aaa90c4",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "metrics/graph_health_table_v52.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "0bc14514dd8543b81eafb5371f54d0277fec31a5e442cededba5250af095b9d2",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": "3dc79fd36ace7af40e9c214f4ce1efd03e28ae40307971a7781ddff0c808ebfa",
+      "category": "generated_derivative",
+      "change_type": "modified",
+      "path": "metrics/metrics_run_1.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "0bc14514dd8543b81eafb5371f54d0277fec31a5e442cededba5250af095b9d2",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "metrics/metrics_v52.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "e8a3a7086b127457532c7418028e8d9797b17d78133b1fb000f7c846e3eff617",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "migrations/0007_v52_uploaded_materials/README.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "a41820b611aa31f5260d6e6a427723f1f222d71e54a8094dadf6f126679fbde9",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "migrations/0007_v52_uploaded_materials/forward.py",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "57768c83f6ae4c952e96be50e31ff9d938f846cbe8c8a8cd38f49512e631ce1a",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "migrations/0007_v52_uploaded_materials/migration.py",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "69080376d0161120767eba83067c2c7ad560d837e2837b16cd026cf9ab07585d",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "migrations/0007_v52_uploaded_materials/rollback.py",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "61284fd7f005d26365b4fe49b5fc4109dbe0cb38b2c8c61b904cea41deba4d96",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "migrations/0007_v52_uploaded_materials/validate.py",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "14deed190fb24a2a9f81f273463e42898468bbd7946ebc7ede89cfd57f34e1f0",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": "d9455b051416207c011f7f5af7e183ffc1c4b0f149ae25026ebf46bcd212f7af",
+      "category": "migration_rollback_control",
+      "change_type": "modified",
+      "path": "migrations/README.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "5f825b4f52fcc62fa7e526f0b891952f5b5ba934e3557bdbaa5780d97c298ed0",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "migrations/apply_v52.py",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "0f69766cfd14c04cffacfeb34eb2ac96d94110b39f520d9f0f9532ec9648fa09",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "migrations/rollback_v52.py",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "25e0d3da9e0130d70d7a22902b07cc837fbe3e84e42d5397057d16166921bf85",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "migrations/validate_v52.py",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "d5ba1a47a4948a1b3c8732b2b5b738740280906d678458d0bcc82d63ec5cb2e3",
+      "authorization_basis": "Release-control documentation for the approved state.",
+      "authorized": true,
+      "before_sha256": "f0b30ea746e0b4697aa427b5b8c8aa5c1f707fd0bcf42ed9c5f65e7c6e58d0b9",
+      "category": "release_documentation",
+      "change_type": "modified",
+      "path": "release_gate_report.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "95e8fe5095c67c8a809a3f0f7920d35b3fdec2cf9f218907b0f66934a41d52de",
+      "authorization_basis": "Release-control documentation for the approved state.",
+      "authorized": true,
+      "before_sha256": "13d7e12471b3fab24f992a88214c014e49c72ffd07021e0ea9f53ee1511fc0bb",
+      "category": "release_documentation",
+      "change_type": "modified",
+      "path": "release_notes.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "74ef66f9305e1e637a4bb341a97c8f387539907a12fd6ef2e5605f4e53c4c1eb",
+      "authorization_basis": "Release-control documentation for the approved state.",
+      "authorized": true,
+      "before_sha256": "44305989e0925ca5e2e6181218c8117c28abb2c23455a307c3b0c59d7e937f21",
+      "category": "release_documentation",
+      "change_type": "modified",
+      "path": "release_state.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "c9d88a600f0b458d7ef8140cf362b4797de5767aea21845cc6645c2847982b10",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "reports/V51_VS_V52_COMPARISON.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "d705337a9196ac0d716818db6c79bb57e983ebefbbc5ba8952b871856f5738d5",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "reports/V51_VS_V52_COMPARISON.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "03f1c28add796958ceb30fef6ecbd1c2357da9faf31422cf6dda9c29810411e9",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "reports/V52_CONFORMANCE_REPORT.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "2a6a0e980ee02295cdace5097ed4a25ce41ec3f001b97534f26ec7a46799829f",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "reports/V52_CONFORMANCE_REPORT.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "08e1a09847ed65ea965843e7117986b5d23fe8d50e7d72b23df6f1cf5becf89f",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "reports/migration_evidence_v52.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "a1c6a258d324185dbbce1da11754a716769559f5d82f8f7cbde3ffe8b6e62d25",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "reports/package_integrity_v52.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "445569d2436252f5f05c5cfd737e8e4668219bd62aae3ee11354378eef0d10c7",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": "97d44e0d8519e4da35e631ea3195a1fb1fc997308646bc8f58c27e6dfa1322ea",
+      "category": "generated_derivative",
+      "change_type": "modified",
+      "path": "reports/release_gate_results.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "445569d2436252f5f05c5cfd737e8e4668219bd62aae3ee11354378eef0d10c7",
+      "authorization_basis": "Regenerated only from the approved canonical state.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "generated_derivative",
+      "change_type": "added",
+      "path": "reports/release_gate_results_v52.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "b5063652211ea5691e61a2b4a5ac28f1212e70903fab4f67ad88c31c0dd5721b",
+      "authorization_basis": "Approved QA/retrieval derivative.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "test_evidence",
+      "change_type": "added",
+      "path": "retrieval_tests/__pycache__/_wave0_handlers.cpython-313.pyc",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "1ba18b8a98cb3dfb38d6718e3ab8b4455597a80a75bae9947a94a16a92dd1e80",
+      "authorization_basis": "Approved QA/retrieval derivative.",
+      "authorized": true,
+      "before_sha256": "83a2a7e96be48120b12eff73ca181ab5e0f46c2b2ced67f193b7c898146cbca7",
+      "category": "test_evidence",
+      "change_type": "modified",
+      "path": "retrieval_tests/retrieval_results.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "1ba18b8a98cb3dfb38d6718e3ab8b4455597a80a75bae9947a94a16a92dd1e80",
+      "authorization_basis": "Approved QA/retrieval derivative.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "test_evidence",
+      "change_type": "added",
+      "path": "retrieval_tests/retrieval_results_v52.json",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "f62c1a0d4482b9eef869c475afe0c88b38d99319be0a3795fe206e6d692d5a46",
+      "authorization_basis": "Approved QA/retrieval derivative.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "test_evidence",
+      "change_type": "added",
+      "path": "retrieval_tests/run_v52_retrieval_suite.py",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "c802383576a6556aff228ac46c36f8ad66ce440aebe21e7420bc893cb78cf781",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "rollback/baseline/nee_graph_v51.sqlite",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "a66cc8dad00fb7b12890bc35232721ba956a7bcaf736f7f605d01c4fa14ba4fe",
+      "authorization_basis": "Approved derivative for reproducibility and rollback.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "migration_rollback_control",
+      "change_type": "added",
+      "path": "rollback/baseline/nee_graph_v51.sqlite.sha256",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "312cdb2c236aa04307b0aa62d622dafeb280f7d66f3f0ef120d7a1af79e2ad35",
+      "authorization_basis": "Approved QA/retrieval derivative.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "test_evidence",
+      "change_type": "added",
+      "path": "tests/run_v52_acceptance.py",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "5bac1cb63ec65a2b7e85de78631b70ae5bda7c727ff9fe93cf406658a761133f",
+      "authorization_basis": "Approved QA/retrieval derivative.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "test_evidence",
+      "change_type": "added",
+      "path": "tests/v52_acceptance_report.md",
+      "semantic_change": false
+    },
+    {
+      "after_sha256": "ad8afbacbfc6c2486fa74ae99e8c4491959996c83ae94de8e0741461e9bf0e87",
+      "authorization_basis": "Approved QA/retrieval derivative.",
+      "authorized": true,
+      "before_sha256": null,
+      "category": "test_evidence",
+      "change_type": "added",
+      "path": "tests/v52_acceptance_results.json",
+      "semantic_change": false
+    }
+  ],
+  "generated_at": "2026-07-13T19:56:00Z",
+  "policy_files_unchanged": [
+    "PROJECT_INSTRUCTIONS.md",
+    "cards/NEE_99_Project_Instructions.md"
+  ],
+  "release_file_count": 1205,
+  "release_version": "52.0",
+  "route_only_card_impacts_unchanged": [
+    "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+    "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md"
+  ],
+  "self_reference_exclusions": [
+    "governance/v52/CHANGED_FILE_INVENTORY.json",
+    "manifest.json"
+  ],
+  "semantic_changed_file_count": 10,
+  "semantic_changed_files": [
+    "cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md",
+    "cards/NEE_03_SOW_Commercial_and_Contract_Guardrails.md",
+    "cards/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md",
+    "cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md",
+    "cards/NEE_09_Utility_Thought_Leadership_and_REWIRE_AMWE_Agenda.md",
+    "cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+    "cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md",
+    "cards/NEE_14_Trading_ETRM_and_Pricing_Models.md",
+    "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+    "graph/nee_graph.sqlite"
+  ],
+  "status": "PASS",
+  "unapproved_semantic_changes": [],
+  "unlisted_card_changes": []
+}

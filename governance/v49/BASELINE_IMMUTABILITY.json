@@ -1,0 +1,9 @@
+{
+  "baseline_graph_sha256_after": "b6b10223b7c6f25eed890df932f0dca50dc0ed47b5d57cb30f3f2f1df01f6ea6",
+  "baseline_graph_sha256_before": "b6b10223b7c6f25eed890df932f0dca50dc0ed47b5d57cb30f3f2f1df01f6ea6",
+  "baseline_zip_path": "NEE_v48.2(1).zip",
+  "baseline_zip_sha256_after": "5ceb96c22c2c6e5a276c2918096e088eaa9fa02bd8d11a1fc813ba499e1060fb",
+  "baseline_zip_sha256_before": "5ceb96c22c2c6e5a276c2918096e088eaa9fa02bd8d11a1fc813ba499e1060fb",
+  "result": "PASS",
+  "rollback_snapshot_sha256": "b6b10223b7c6f25eed890df932f0dca50dc0ed47b5d57cb30f3f2f1df01f6ea6"
+}

@@ -1,0 +1,11 @@
+{
+  "account_knowledge_derivative_delta": 0,
+  "baseline_zip_sha256": "608409bdc6a092b86cd10a877af70789efb1b227aa4c1d93c11f1ad990b15c00",
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "failure_count": 0,
+  "failures": [],
+  "graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "non_policy_card_delta": 0,
+  "protected_file_count": 805,
+  "status": "PASS"
+}

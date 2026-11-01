@@ -1,0 +1,10 @@
+wave: 1
+description: "Fail-closed truth & integrity"
+criteria:
+  - "GraphIntegrityError in in_memory_graph.py"
+  - "GraphLoadStatus in copilot_retriever.py"
+  - "copilot.py disabled = True upon credential failure"
+  - "C-19 marker helper in copilot_retriever.py"
+  - "LocalPreEgressSanitizer applied to every message"
+  - "Single recording path via submit_turn_async"
+test_suite: "tests/end_to_end/test_copilot_wave_1.py"
