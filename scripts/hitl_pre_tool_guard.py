@@ -33,14 +33,16 @@ if str(CURRENT_WORKTREE_DIR) not in sys.path:
     sys.path.insert(0, str(CURRENT_WORKTREE_DIR))
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-for sp in (ROOT / ".venv" / "lib").glob("python*/site-packages"):
-    if sp.is_dir() and str(sp) not in sys.path:
-        sys.path.insert(0, str(sp))
+for venv_root in (ROOT / ".venv", ROOT.parent / "decision-intelligence-engine" / ".venv"):
+    for sp in (venv_root / "lib").glob("python*/site-packages"):
+        if sp.is_dir() and str(sp) not in sys.path:
+            sys.path.insert(0, str(sp))
 
 
 def resolve_python() -> Path:
     candidates = [
         ROOT / ".venv" / "bin" / "python",
+        ROOT.parent / "decision-intelligence-engine" / ".venv" / "bin" / "python",
         ROOT.parent.parent / ".venv" / "bin" / "python",
     ]
     for c in candidates:

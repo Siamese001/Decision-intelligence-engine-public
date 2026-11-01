@@ -1055,6 +1055,34 @@ class HitlPreToolGuardHookTests(unittest.TestCase):
         msg = res["injectSteps"][0].get("ephemeralMessage") or res["injectSteps"][0].get("userMessage") or ""
         self.assertIn("LAYMAN ZERO-JARGON GOVERNANCE INTERCEPT", msg)
 
+    def test_stale_criteria_remediation_exemptions(self) -> None:
+        """Verify external ~/.gemini/ writes, everyday English words, and non-query mentions pass cleanly."""
+        from scripts.hitl_post_invocation_guard import evaluate_post_invocation_payload
+
+        ext_write_payload = {
+            "steps": [
+                {"type": "USER_INPUT", "source": "USER_EXPLICIT", "content": "Update global hook"},
+                {
+                    "type": "PLANNER_RESPONSE",
+                    "source": "MODEL",
+                    "tool_calls": [
+                        {
+                            "name": "edit_file",
+                            "args": {"Path": str(Path.home() / ".gemini" / "config" / "hooks.json")},
+                        }
+                    ],
+                },
+                {
+                    "type": "PLANNER_RESPONSE",
+                    "source": "MODEL",
+                    "content": "Updated the first class of global import rules.",
+                    "tool_calls": [],
+                },
+            ]
+        }
+        out = evaluate_post_invocation_payload(json.dumps(ext_write_payload))
+        self.assertEqual(out.get("injectSteps"), [])
+
 
 if __name__ == "__main__":
     unittest.main()

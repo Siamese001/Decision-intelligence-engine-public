@@ -3,7 +3,7 @@
 <!-- GOVERNED COMMON CONTRACT: urn:nee:scheduled-task-common-control-matrix:1.0.0 | Shared: docs/governance/shared_automation_governance_contract.md | Master Sequence: Stage VI (Order 17/17) -->
 <!-- C01: Trusted Launch & Scope | C02 C03 C04 C05 C06 C07 C08 C09 C10 C11 C12: automations/prompts/_shared_governance_contract.md -->
 <!-- DOMAIN DISPOSITIONS: D01: ROUTED | D02: ROUTED | D03: ROUTED -->
-<!-- Canonical Task: google_slalom_weekly_sync | Exclusive Domain: Stage VI Order 17/17 | Registration: Operator Authorized Only -->
+<!-- Canonical Task: google_partner_advisory_weekly_sync | Exclusive Domain: Stage VI Order 17/17 | Registration: Operator Authorized Only -->
 ## 1. Objective & Role
 Section Introduction: This section defines the operational role, pure weekly partner sync boundary, self-contained layman clarity standard, and trailing owner format for generating the partner connect agenda.
 
