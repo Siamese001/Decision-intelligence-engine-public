@@ -60,15 +60,13 @@ LAYMAN_INTERCEPT_MARKER = "[LAYMAN ZERO-JARGON GOVERNANCE INTERCEPT"
 
 PRE_INVOCATION_LAYMAN_CHECKLIST = (
     "[PRE-OUTPUT LAYMAN CLARITY GATE ACTIVE (Rule 6 — Enforce BEFORE Emitting Output)]:\n"
-    "Before generating any user-facing text, self-audit every sentence so ZERO technical tokens appear in prose:\n"
-    "1. BANNED OVERLAP WORDS: Never write 'import', 'class', 'def', 'lambda', 'async', 'await', '__init__', "
-    "'kwargs', or 'isinstance' in prose (even as English words like 'import files' or 'class A' — use "
-    "'reference files', 'bring in', 'category', or 'group' instead).\n"
-    "2. BANNED IDENTIFIERS & FILENAMES: Zero snake_case tokens (words with underscores), zero raw filenames "
-    "(.py, .sqlite, .jsonl, .yaml, .toml, .sh, .sql) in prose or link labels (use plain-English link labels "
-    "like '[Plain Language Guard Script](file:///...)'), zero class.method names, and zero '*Error'/'*Exception' names.\n"
-    "3. BANNED PLUMBING & SQL: Zero inline SQL ('SELECT ... FROM') and zero acronyms ('AST', 'WAL', 'ACID', "
-    "'JSONL', 'DDL', 'DML', 'PRAGMA'). Explain cause and effect in clear layman English with exact numbers."
+    "Before generating any user-facing text, self-audit every sentence so ZERO technical jargon tokens appear in prose:\n"
+    "1. BANNED CODE & IDENTIFIERS: Zero snake_case tokens (words with underscores), zero code syntax "
+    "('__init__', 'kwargs', 'isinstance'), zero class.method names, and zero '*Error'/'*Exception' names.\n"
+    "2. PLAIN-ENGLISH LINK LABELS: Use plain-English link labels (like '[Plain Language Guard Script](file:///...)') "
+    "for clickable file links.\n"
+    "3. BANNED PLUMBING & SQL: Zero inline SQL ('SELECT ... FROM') and zero internal database/compiler acronyms "
+    "('AST', 'WAL', 'ACID', 'JSONL', 'DDL', 'DML', 'PRAGMA'). Explain cause and effect in clear layman English with exact numbers."
 )
 
 LAYMAN_JARGON_INTERCEPT_PROMPT = (
@@ -86,15 +84,9 @@ FENCED_BLOCK_RE = re.compile(r"```[\s\S]*?```")
 PROSE_JARGON_PATTERNS = (
     (re.compile(r"\bSELECT\s+.+?\s+FROM\s+[a-zA-Z0-9_]+", re.IGNORECASE | re.DOTALL), "inline SQL query"),
     (re.compile(r"\b[a-zA-Z][a-zA-Z0-9]*_[a-zA-Z0-9_]+\b"), "snake_case identifier"),
-    (re.compile(r"\b(?:def|class|import|lambda|async|await|__init__|kwargs|isinstance)\b"), "code keyword"),
+    (re.compile(r"\b(?:__init__|kwargs|isinstance)\b"), "code keyword"),
     (re.compile(r"\b[A-Z][a-z0-9]+(?:[A-Z][a-z0-9]+)+\._?[a-zA-Z0-9_]+"), "class/method reference"),
     (re.compile(r"\b[A-Za-z0-9]+(?:Error|Exception)\b"), "exception class name"),
-    (
-        re.compile(
-            r"(?:^|[\s`\"'(\[{])(?:[a-zA-Z0-9_\-./]+/)?[a-zA-Z0-9_\-]+\.(?:py|sqlite|jsonl|yaml|yml|toml|sh|sql)\b"
-        ),
-        "raw code or database filename",
-    ),
     (re.compile(r"\b(?:WAL|ACID|JSONL|AST|DDL|DML|PRAGMA)\b"), "plumbing acronym"),
 )
 
@@ -104,38 +96,6 @@ QUERY_TRIGGER_PATTERNS = (
     re.compile(r"^query\s*:", re.IGNORECASE),
     re.compile(r"^/query\b", re.IGNORECASE),
 )
-
-def _build_domain_entity_pattern() -> re.Pattern[str]:
-    """Dynamically build domain entity matcher from config/governance/project_registry.json SSOT."""
-    tokens: set[str] = {"NEE", "Apex Global"}
-    reg_path = Path(__file__).resolve().parent.parent / "config" / "governance" / "project_registry.json"
-    if reg_path.is_file():
-        try:
-            data = json.loads(reg_path.read_text(encoding="utf-8"))
-            domains = data.get("domains", {})
-            for dom_key, dom_val in domains.items():
-                if isinstance(dom_key, str) and len(dom_key) >= 3:
-                    tokens.add(dom_key)
-                if isinstance(dom_val, dict):
-                    for ws in (dom_val.get("workstreams") or {}).values():
-                        if isinstance(ws, dict):
-                            for k in ("short_id", "display_name"):
-                                val = ws.get(k)
-                                if isinstance(val, str) and len(val.strip()) >= 3:
-                                    tokens.add(val.strip())
-                            for alias in ws.get("aliases") or ():
-                                if isinstance(alias, str) and len(alias.strip()) >= 4:
-                                    tokens.add(alias.strip())
-            for kp in data.get("known_projects") or ():
-                if isinstance(kp, str) and len(kp.strip()) >= 3:
-                    tokens.add(kp.strip())
-        except Exception:
-            pass
-    escaped = sorted((re.escape(t).replace(r"\ ", r"\s+") for t in tokens if t), key=len, reverse=True)
-    return re.compile(r"\b(" + "|".join(escaped) + r")\b", re.IGNORECASE)
-
-
-DOMAIN_ENTITY_PATTERNS = _build_domain_entity_pattern()
 
 COMMAND_ONLY_PATTERNS = re.compile(
     r"^(?:continue\b|status\b|git\b|test\b|run\b|pr\b|commit\b|rebase\b|wave\b|w\d+\b|rca\b|did\s+this\b|explain\b|does\b|show\b)",
@@ -257,10 +217,6 @@ def _requires_graph_traversal(steps: List[Dict[str, Any]], turn_steps: List[Dict
     if any(any(p.search(str(s.get("content") or "")) for p in QUERY_TRIGGER_PATTERNS) for s in recent_user_steps):
         return True
 
-    # 3. Domain entity mentions
-    if DOMAIN_ENTITY_PATTERNS.search(current_user_content):
-        return True
-
     return False
 
 
@@ -291,8 +247,8 @@ def _is_exempt_planning_write(path_str: str) -> bool:
     if not path_str:
         return False
     norm = path_str.replace("\\", "/")
-    # Exempt ephemeral conversation brain artifacts
-    if "/brain/" in norm or norm.startswith(".gemini/antigravity/brain/"):
+    # Exempt ephemeral conversation brain artifacts and external global user config files (~/.gemini/)
+    if "/brain/" in norm or "/.gemini/" in norm or norm.startswith((".gemini/", "~/.gemini/")):
         return True
     # Exempt implementation plan markdown files during planning mode
     if norm.endswith("implementation_plan.md") or "/docs/plans/" in norm:
