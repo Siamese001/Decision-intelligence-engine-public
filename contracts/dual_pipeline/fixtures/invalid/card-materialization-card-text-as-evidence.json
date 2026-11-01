@@ -1,0 +1,36 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:card-materialization-receipt:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "card-materialization-invalid-card-evidence",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "receipt_id": "card-materialization-invalid-card-evidence",
+  "status": "MATERIALIZED",
+  "card_id": "NEE_10",
+  "card_view_id": "card-view-nee-10-v1",
+  "view_version": 1,
+  "selector_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "generation_id": "generation-cards-refactor-example",
+  "graph_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "authorization_context_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+  "authority_mode": "approved_only",
+  "lane_manifests": {
+    "approved": [],
+    "candidate_review": []
+  },
+  "object_manifest_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+  "lane_counts": {
+    "approved": 0,
+    "candidate_review": 0
+  },
+  "assertion_count": 0,
+  "evidence_count": 0,
+  "renderer_version": "nee-card-view-renderer-1.0.0",
+  "materialized_at": "2026-07-27T12:00:00Z",
+  "card_content_used_as_evidence": true,
+  "provider_call_count": 0,
+  "extensions": {}
+}

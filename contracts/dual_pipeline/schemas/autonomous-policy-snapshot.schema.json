@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:autonomous-policy-snapshot:1.0.0",
+  "title": "Governed Autonomous Policy Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "snapshot_id",
+    "ambiguity_threshold",
+    "conviction_floor",
+    "max_entropy",
+    "divergence_threshold",
+    "policy_source",
+    "policy_digest",
+    "frozen_at_iso"
+  ],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:autonomous-policy-snapshot:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"},
+    "snapshot_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ambiguity_threshold": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "exclusiveMaximum": 1.0
+    },
+    "conviction_floor": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "exclusiveMaximum": 1.0
+    },
+    "max_entropy": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "exclusiveMaximum": 1.0
+    },
+    "divergence_threshold": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "exclusiveMaximum": 1.0
+    },
+    "policy_source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "frozen_at_iso": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

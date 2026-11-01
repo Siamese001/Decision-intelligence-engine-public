@@ -1,0 +1,100 @@
+{
+  "adapter": {
+    "name": "nee-markdown-source-intake",
+    "version": "1.0.0"
+  },
+  "artifact_id": "markdown-source-sherpa-official-business-case",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "9388c5036a84141d97977761733bc3e09444e4a5b642c4f8529e95ec766a93ed"
+  },
+  "chunks": [
+    {
+      "chunk_id": "sherpa-business-problem",
+      "extraction_confidence": 1.0,
+      "locator": {
+        "kind": "section",
+        "quote_digest": "02d883d062992e71699708138351b216ff47719a373a0451c88bd9745f51bb18",
+        "value": "Business problem"
+      },
+      "materiality": "high",
+      "selection_rationale": "Preserves the official business problem as one source-bound assertion.",
+      "text": "EA is a bottleneck: too many technology decisions depend on scarce architects, causing slow cycles, inconsistent standards, and limited scalability.",
+      "title": "Enterprise architecture bottleneck"
+    },
+    {
+      "chunk_id": "sherpa-official-intent",
+      "extraction_confidence": 1.0,
+      "locator": {
+        "kind": "section",
+        "quote_digest": "e66f910481818d0c2c83100a6b8073b4ca86f29c028699238737c8e8a1aa250c",
+        "value": "Official intent and intended outcome"
+      },
+      "materiality": "high",
+      "selection_rationale": "Preserves the official project intent separately from outcome realization.",
+      "text": "Project Beacon turns EA expertise into governed self-service",
+      "title": "Governed self-service intent"
+    },
+    {
+      "chunk_id": "sherpa-target-outcome",
+      "extraction_confidence": 1.0,
+      "locator": {
+        "kind": "section",
+        "quote_digest": "9f57286a29ca86dfe4fe2708fbd5e7ef2ee36017af8708346cbb7d84f436b52f",
+        "value": "Official intent and intended outcome"
+      },
+      "materiality": "high",
+      "selection_rationale": "Preserves the intended outcome without asserting that it has been realized.",
+      "text": "routine work no longer requires direct architect involvement.",
+      "title": "Reduced direct architect involvement"
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:markdown-source-intake:1.0.0",
+  "extensions": {
+    "com.partner_advisory.nee.strategic-profile-controls": {
+      "sherpa-business-problem": {
+        "applicability_scope": "nee_specific",
+        "authority_scope": "official_project_intent",
+        "knowledge_role": "business_problem",
+        "modality": "descriptive",
+        "realization_state": "not_applicable"
+      },
+      "sherpa-official-intent": {
+        "applicability_scope": "nee_specific",
+        "authority_scope": "official_project_intent",
+        "knowledge_role": "official_intent",
+        "modality": "intended",
+        "realization_state": "intended"
+      },
+      "sherpa-target-outcome": {
+        "applicability_scope": "nee_specific",
+        "authority_scope": "official_project_intent",
+        "knowledge_role": "target_outcome",
+        "modality": "intended",
+        "realization_state": "intended"
+      }
+    }
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "anchor_entity": {
+      "context": "Official Sherpa business case; authoritative for the stated project problem, intent, and intended outcomes, not realized outcome evidence.",
+      "reported_text": "Project Beacon",
+      "stable_identifier": "project_beacon"
+    },
+    "audiences": [
+      "internal_consulting"
+    ],
+    "authority_rank": 9,
+    "classification": "internal",
+    "raw_markdown": "# Official Sherpa business case\n\n## Business problem\n\nEA is a bottleneck: too many technology decisions depend on scarce architects, causing slow cycles, inconsistent standards, and limited scalability.\n\n## Official intent and intended outcome\n\nProject Beacon turns EA expertise into governed self-service so routine work no longer requires direct architect involvement.\n",
+    "source_date": "2026-07-29",
+    "source_file_sha256": "865e441d95df9990bc15c242f1287c626a828a54bf7cafab02ab38deac706958",
+    "source_id": "source-sherpa-official-business-case",
+    "source_location": "controlled/sherpa/official-business-case.md",
+    "source_posture": "authoritative_internal",
+    "source_version_id": "source-version-sherpa-official-business-case-v1",
+    "title": "Official Sherpa business case"
+  }
+}

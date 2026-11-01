@@ -1,0 +1,13 @@
+{
+  "wave": "Wave 3C",
+  "status": "COMPLETE",
+  "total_queries": 50,
+  "total_candidates_evaluated": 1126,
+  "autonomous_resolved": 0,
+  "hitl_cases": 0,
+  "mean_canonical_ndcg_10": 0.1937,
+  "mean_canonical_mrr_10": 0.2133,
+  "output_file": "evals/qrels_graded_judgments.json",
+  "timestamp": "2026-10-07T12:32:30Z",
+  "elapsed_seconds": 0.17
+}

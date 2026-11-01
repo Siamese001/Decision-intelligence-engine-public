@@ -1,0 +1,25 @@
+{
+  "artifact_id": "eval-bridge-suite-fixture",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "ec44e01ea7eaacb85f917295e25258c4d26fec8d1e065c3f7d8b4bdb4681a62b"},
+  "cases": [
+    {
+      "audiences": ["nee-engineering"],
+      "case_id": "bridge-case-fixture",
+      "classification": "internal",
+      "expected_source_terms": ["candidate source term"],
+      "intake_audiences": ["nee-engineering"],
+      "package_path": "contracts/dual_pipeline/fixtures/valid/copilot-meeting.json",
+      "package_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "query_type": "candidate_promotion_review",
+      "question": "Which candidate assertion requires review?",
+      "tags": ["bridge"]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:eval-bridge-suite:1.0.0",
+  "created_at": "2026-08-02T00:00:00Z",
+  "extensions": {},
+  "graph_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "schema_version": "1.0.0",
+  "suite_id": "eval-bridge-suite-fixture",
+  "thresholds": {"maximum_graph_mutation_count": 10, "maximum_provider_call_count": 0}
+}

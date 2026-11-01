@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-59ff03714e452e92a5c7fd02b8f2",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "6ce7a9aa1d9acdd79169e0292a291bcc4c792440696cfe8a13d68e91d2544ddd"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-48a36b83f39e32ba028811a8"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Maximo is an identified technical_anchor in Document 20261001 Commercial Scope Boundary Sow 1 Vs Sow 2.",
+      "proposed_value": "Maximo is an identified technical_anchor in Document 20261002 Project Lens Sow Phase 1 Scope.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-156e6031ce346af5d95596b4a1b4"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-6329a6c79e86c9e08ee6dfbc1b5e",
+      "assertion_id_older": "assertion-156e6031ce346af5d95596b4a1b4",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "anchor_edo_rfp_maximo",
+      "timestamp_newer": "2026-10-02",
+      "timestamp_older": "2026-10-01"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Maximo' (HAS_CLAIM_TEXT). Older claim from 2026-10-01 superseded by newer claim from 2026-10-02.",
+  "proposal_id": "calibration-proposal-59ff03714e452e92a5c7fd02b8f2",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-156e6031ce346af5d95596b4a1b4 from Maximo is an identified technical_anchor in Document 20261001 Commercial Scope Boundary Sow 1 Vs Sow 2. to Maximo is an identified technical_anchor in Document 20261002 Project Lens Sow Phase 1 Scope.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

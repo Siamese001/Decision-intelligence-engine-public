@@ -1,0 +1,32 @@
+{
+  "allowlisted_legacy_test_files": [
+    "tests/adversarial/test_d02_token_economy_adversarial.py",
+    "tests/adversarial/test_fail_fast_audio_pipeline_adversarial.py",
+    "tests/adversarial/test_google_l2_adversarial.py",
+    "tests/adversarial/test_live_recording_adversarial.py",
+    "tests/adversarial/test_pr_latency_optimization_adversarial.py",
+    "tests/adversarial/test_rogue_commit_prevention_adversarial.py",
+    "tests/adversarial/test_sck_audio_stream_adversarial.py",
+    "tests/adversarial/test_tcc_preflight_adversarial.py",
+    "tests/end_to_end/test_d02_token_economy_e2e.py",
+    "tests/end_to_end/test_google_l2_e2e.py",
+    "tests/end_to_end/test_live_audio_capture_hardening_e2e.py",
+    "tests/end_to_end/test_live_single_capture_e2e.py",
+    "tests/end_to_end/test_wave2_telemetry_accounting_e2e.py",
+    "tests/governance/test_worktree_prune_protection.py",
+    "tests/test_audio_device_contention.py",
+    "tests/test_audio_ingestion.py",
+    "tests/test_d02_call_ledger_adversarial.py",
+    "tests/test_d02_call_ledger_e2e.py",
+    "tests/test_d02_modular_dag.py",
+    "tests/test_d02_retry_concurrency_adversarial.py",
+    "tests/test_fast_recording_coreaudio_hal.py",
+    "tests/test_google_l2_provider.py",
+    "tests/test_mac_system_audio.py",
+    "tests/test_manifest_runner_p0_fixes.py",
+    "tests/test_mcp_deepwiki_server.py",
+    "tests/test_output3_redundant_calls_adversarial.py",
+    "tests/test_pr_queue_clarity_adversarial.py",
+    "tests/test_worktree_hygiene_hardening.py"
+  ]
+}

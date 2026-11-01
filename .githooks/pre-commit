@@ -1,0 +1,76 @@
+#!/bin/sh
+set -eu
+
+SCRIPT_DIR=$(dirname "$0")
+. "$SCRIPT_DIR/_common.sh"
+cd "$ROOT"
+
+# Fast native shell gate 0A: Reject core.bare=true
+IS_BARE=$(git config --bool core.bare 2>/dev/null || echo "false")
+if [ "$IS_BARE" = "true" ]; then
+  echo "❌ FATAL: Repository configuration has core.bare=true. Primary repository must never be bare."
+  echo "   Prescriptive Remediation: git config core.bare false"
+  exit 1
+fi
+
+# Fast native shell gate 0B: Direct-to-Main Barrier (zero hotfix bypass)
+CURRENT_BRANCH=$(git symbolic-ref --short -q HEAD || true)
+if [ "$CURRENT_BRANCH" = "main" ] || [ "$CURRENT_BRANCH" = "master" ]; then
+  IS_MERGE=0
+  if git rev-parse -q --verify MERGE_HEAD >/dev/null 2>&1; then
+    IS_MERGE=1
+  fi
+  if [ "$IS_MERGE" -ne 1 ] && [ "${GOVERNED_PR_MERGE:-0}" != "1" ]; then
+    echo "⛔ COMMIT REJECTED: Direct commits to '$CURRENT_BRANCH' are strictly prohibited (GOVERNED_HOTFIX bypass retired)."
+    echo "   All development must occur in an isolated feature worktree (.worktrees/<slug>) and be merged via PR governance."
+    echo "   To start a feature branch: python tools/pr_governance.py start feat/<name>"
+    exit 1
+  fi
+fi
+
+# Fast native shell gate: Reject any staged file with 'draft' under output/
+STAGED_DRAFTS=$(git diff --cached --name-only | grep -E '^output/.*draft' || true)
+if [ -n "$STAGED_DRAFTS" ]; then
+  echo "❌ COMMIT REJECTED: Staging draft files in production output/ is prohibited:"
+  echo "$STAGED_DRAFTS"
+  exit 1
+fi
+
+# Fast native shell gate: Reject any staged worktree directory, file, or gitlink
+STAGED_WORKTREES=$(git diff --cached --name-only | grep -E '^\.worktrees/' || true)
+if [ -n "$STAGED_WORKTREES" ]; then
+  echo "❌ COMMIT REJECTED: Staging worktree files or gitlinks under .worktrees/ is strictly prohibited:"
+  echo "$STAGED_WORKTREES"
+  exit 1
+fi
+
+# Fast native shell gate: Reject staged ephemeral readiness or PR review receipts
+STAGED_EPHEMERAL_RECEIPTS=$(git diff --cached --name-only | grep -E '^reports/(readiness/local_main_readiness_|pr_review_|pr_promotion_)' || true)
+if [ -n "$STAGED_EPHEMERAL_RECEIPTS" ]; then
+  echo "❌ COMMIT REJECTED: Staging ephemeral readiness or review receipts is prohibited on feature branches:"
+  echo "$STAGED_EPHEMERAL_RECEIPTS"
+  echo "   These receipts are volatile runtime attestations that must not be committed to feature branches."
+  exit 1
+fi
+
+# Authorized Single Governed PR Merge Exception
+if [ "$CURRENT_BRANCH" = "main" ] || [ "$CURRENT_BRANCH" = "master" ]; then
+  if [ "$IS_MERGE" -eq 1 ] && [ "${GOVERNED_PR_MERGE:-0}" = "1" ]; then
+    echo "✅ Authorized Governed PR Merge to $CURRENT_BRANCH detected (governed by pre-merge-commit)."
+    exit 0
+  fi
+fi
+
+# Wave 1 Rebase Multiplier Elimination: Detect rebase / cherry-pick state
+IS_REBASE=0
+GIT_DIR=$(git rev-parse --git-dir 2>/dev/null || echo "$ROOT/.git")
+
+# Wave 1: Unified In-Process Pre-Commit Orchestrator (<2s)
+# Preserves required control and deprecation gate bindings:
+# -m dual_pipeline.runtime_evidence enforce-controls --repository-root "$ROOT"
+# tools/validate_no_synthetic_embeddings.py --repository-root "$ROOT"
+# tests.test_retrieval_release_evaluation.RetrievalReleaseStaticGateTests
+# tests.test_no_synthetic_embedding_ban
+# tests.test_bge_m3_deprecation_gates
+# tests.test_unified_agent_architecture
+run_python -B tools/pre_commit_orchestrator.py --staged --repository-root "$ROOT"

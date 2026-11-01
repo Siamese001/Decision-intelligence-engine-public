@@ -1,0 +1,211 @@
+{
+  "$id": "urn:nee:dual-pipeline:retrieval-release-evaluation:2.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "active_pair": {
+      "additionalProperties": false,
+      "properties": {
+        "backend": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "generation_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "graph_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "model_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sidecar_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "generation_id",
+        "graph_sha256",
+        "sidecar_sha256",
+        "backend",
+        "model_id",
+        "model_revision"
+      ],
+      "type": "object"
+    },
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "attempt_chain_digests": {
+      "items": {
+        "pattern": "^[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:retrieval-release-evaluation:2.0.0"
+    },
+    "controller_mode": {
+      "enum": [
+        "off",
+        "shadow",
+        "bounded"
+      ]
+    },
+    "evaluation_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "final_coverage": {
+      "additionalProperties": false,
+      "properties": {
+        "covered": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "unresolved": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "covered",
+        "unresolved"
+      ],
+      "type": "object"
+    },
+    "final_evidence_report_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "initial_coverage": {
+      "additionalProperties": false,
+      "properties": {
+        "covered": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "unresolved": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "covered",
+        "unresolved"
+      ],
+      "type": "object"
+    },
+    "policy_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "NOT_QUALIFIED"
+      ]
+    },
+    "suite_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "suite_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "work_counts": {
+      "additionalProperties": false,
+      "properties": {
+        "actions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "attempts": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "bytes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "elapsed_ms": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "records": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "attempts",
+        "actions",
+        "records",
+        "bytes",
+        "elapsed_ms"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "evaluation_id",
+    "suite_id",
+    "suite_digest",
+    "active_pair",
+    "controller_mode",
+    "policy_digest",
+    "initial_coverage",
+    "final_coverage",
+    "attempt_chain_digests",
+    "final_evidence_report_digest",
+    "work_counts",
+    "status"
+  ],
+  "title": "Controller-bound retrieval release evaluation",
+  "type": "object"
+}

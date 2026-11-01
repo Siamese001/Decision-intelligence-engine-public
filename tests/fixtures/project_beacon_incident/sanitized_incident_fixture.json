@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "incident_id": "project_beacon_20261006_recording_rca",
+  "captured_at_utc": "2026-10-06T17:41:57.630873+00:00",
+  "base_commit": "054407a657e7a51ddc1e3f8c8e9a19fa73c55aa5",
+  "branch": "docs/project_beacon-recording-rca-plan",
+  "model_sessions": {
+    "pro": {
+      "thread_id": "9f9ed075-0abd-4951-a2f7-f0eb839b19b8",
+      "model_label": "Gemini 3.1 Pro (High)",
+      "launch_steps": [
+        {
+          "step_index": 4,
+          "command": "python nee.py record-meeting --project project_beacon --meeting \"Project Beacon Sprint Review\" --attendees \"...\"",
+          "is_daemon": true,
+          "exit_code": 1,
+          "error_type": "ModuleNotFoundError",
+          "reason_code": "MISSING_PYDANTIC",
+          "contention_detected": false,
+          "worker_ready": false,
+          "summary": "First launch used bare python, exited immediately due to missing pydantic dependency."
+        },
+        {
+          "step_index": 8,
+          "command": ".venv/bin/python nee.py record-meeting --project project_beacon --meeting \"Project Beacon Sprint Review\" --attendees \"...\"",
+          "is_daemon": true,
+          "exit_code": 11,
+          "error_type": "AudioCaptureUnprovenError",
+          "reason_code": "PCM_BYTE_RATE_DEFICIT",
+          "contention_detected": true,
+          "worker_ready": true,
+          "summary": "Managed path detected competing FFmpeg PID 18548 on :0; MLX worker loaded successfully in 1233ms; audio capture failed with 0B after 2.54s."
+        },
+        {
+          "step_index": 15,
+          "command": "pkill -f ffmpeg",
+          "is_daemon": false,
+          "exit_code": 0,
+          "error_type": null,
+          "reason_code": null,
+          "contention_detected": false,
+          "worker_ready": false,
+          "summary": "Broad unmanaged pkill of ffmpeg processes across system."
+        },
+        {
+          "step_index": 17,
+          "command": ".venv/bin/python nee.py record-meeting --project project_beacon --meeting \"Project Beacon Sprint Review\" --attendees \"...\"",
+          "is_daemon": true,
+          "exit_code": 11,
+          "error_type": "AudioCaptureUnprovenError",
+          "reason_code": "PCM_BYTE_RATE_DEFICIT",
+          "contention_detected": true,
+          "worker_ready": true,
+          "summary": "Retry launch detected new competing FFmpeg PID 18722 on :0; MLX worker loaded; capture failed with 0B after 2.51s."
+        }
+      ],
+      "diagnosed_claim": "Microphone and ScreenCaptureKit permissions denied; user must run command in Terminal",
+      "claim_grounded": false,
+      "actual_root_cause": "Fast bootstrap launched a competing FFmpeg capture before argument parsing; managed recorder reconstructed an unowned InstantAudioSpooler and spawned duplicate capture causing device contention on AVFoundation :0 and 0-byte CoreAudio starvation."
+    },
+    "flash": {
+      "thread_id": "f3a84d4e-bb05-4298-bda1-5588de82a2ba",
+      "model_label": "Gemini 3.8 Flash (High)",
+      "launch_steps": [
+        {
+          "step_index": 4,
+          "command": "python nee.py record-meeting --help",
+          "is_daemon": false,
+          "exit_code": 0,
+          "error_type": null,
+          "reason_code": null,
+          "contention_detected": false,
+          "worker_ready": false,
+          "summary": "CLI help invocation; triggered pre-parser fast bootstrap without capture ownership."
+        },
+        {
+          "step_index": 6,
+          "command": "python nee.py record-meeting ... --dry-run",
+          "is_daemon": false,
+          "exit_code": 1,
+          "error_type": "ModuleNotFoundError",
+          "reason_code": "MISSING_PYDANTIC",
+          "contention_detected": false,
+          "worker_ready": false,
+          "summary": "Bare python dry run failed with missing pydantic."
+        },
+        {
+          "step_index": 10,
+          "command": ".venv/bin/python nee.py record-meeting ... --dry-run",
+          "is_daemon": false,
+          "exit_code": 0,
+          "error_type": null,
+          "reason_code": null,
+          "contention_detected": false,
+          "worker_ready": false,
+          "summary": "Virtualenv dry run returned PASS but spawned unmanaged fastboot spool without session registration."
+        },
+        {
+          "step_index": 166,
+          "command": ".venv/bin/python nee.py record-meeting ... --dry-run",
+          "is_daemon": false,
+          "exit_code": 0,
+          "error_type": null,
+          "reason_code": null,
+          "contention_detected": false,
+          "worker_ready": false,
+          "summary": "Second dry run spawned surviving spool fastboot_1791306933_22912 under FFmpeg PID 22923; dry run returned PASS."
+        },
+        {
+          "step_index": 224,
+          "command": "nee session-inspect",
+          "is_daemon": false,
+          "exit_code": 1,
+          "error_type": "ValueError",
+          "reason_code": "NO_ACTIVE_SESSION",
+          "contention_detected": false,
+          "worker_ready": false,
+          "summary": "Inspection confirmed FFmpeg PID 22923 was writing spool, but managed registry reported 'No active session found.'"
+        }
+      ],
+      "diagnosed_claim": "Recording succeeded under Flash model while Pro failed",
+      "claim_grounded": false,
+      "actual_root_cause": "Dry-run bypass defect left an unmanaged microphone capture running; Flash observed real speech in this orphan spool, but the managed recording session was never initialized."
+    }
+  },
+  "attribution_cases": [
+    {
+      "format_id": "dash_format",
+      "description": "User hint with dash separator between speaker and quote",
+      "raw_input": "Speaker_Alpha - \"Dave real quick, do you recall offhand\"",
+      "expected_speaker": "Speaker_Alpha",
+      "expected_quote": "Dave real quick, do you recall offhand",
+      "baseline_parsed_count": 0,
+      "target_parsed_count": 1
+    },
+    {
+      "format_id": "bare_name_format",
+      "description": "User hint with bare name preceding quotation marks",
+      "raw_input": "Speaker_Beta \"I will check again on what is going on with the application\"",
+      "expected_speaker": "Speaker_Beta",
+      "expected_quote": "I will check again on what is going on with the application",
+      "baseline_parsed_count": 0,
+      "target_parsed_count": 1
+    },
+    {
+      "format_id": "multiline_quote",
+      "description": "User hint spanning multiple lines with continuation quotation",
+      "raw_input": "Speaker_Beta - \"I have a registration workflow\"\n\"This is directly from the Confluence page\"",
+      "expected_speaker": "Speaker_Beta",
+      "expected_quote": "I have a registration workflow",
+      "baseline_parsed_count": 0,
+      "target_parsed_count": 1
+    },
+    {
+      "format_id": "colon_control",
+      "description": "Control case with colon assignment currently supported by parser",
+      "raw_input": "Speaker_Alpha: \"Dave real quick, do you recall offhand\"",
+      "expected_speaker": "Speaker_Alpha",
+      "expected_quote": "Dave real quick, do you recall offhand",
+      "baseline_parsed_count": 1,
+      "target_parsed_count": 1
+    }
+  ],
+  "spool_evidence": {
+    "spool_id": "fastboot_1791306933_22912",
+    "parent_pid": 22912,
+    "ffmpeg_pid": 22923,
+    "chunk_count": 317,
+    "master_bytes": 44564480,
+    "header_duration_seconds": 134217.73,
+    "header_duration_trusted": false,
+    "observed_rms_energy": 1675.74,
+    "has_real_speech": true,
+    "session_registry_active": false
+  },
+  "evidence_boundaries": {
+    "capture_proof_independent_of_asr": true,
+    "permissions_denial_evidence_present": false,
+    "monotonic_zero_rejected_as_real_start": true,
+    "unmanaged_dry_run_classified_as_defect": true,
+    "evidence_rules": [
+      "PCM byte deficit (0 bytes) is not proof of OS permission denial without explicit TCC/CoreAudio denial telemetry.",
+      "MLX Whisper worker readiness (load + golden inference) does not prove audio capture flow or byte continuity.",
+      "FFmpeg PID alive or dry-run PASS status does not constitute a verified active recording session.",
+      "Master WAV header reporting 0x7FFFFFFF frames (~2236 minutes) must be rejected as an unfinalized placeholder, not valid duration.",
+      "Speaker attribution hints must not trigger conversational agent responses or unsolicited query routing."
+    ]
+  }
+}

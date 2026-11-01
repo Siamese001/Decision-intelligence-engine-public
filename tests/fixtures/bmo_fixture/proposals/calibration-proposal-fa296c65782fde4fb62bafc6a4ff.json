@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-fa296c65782fde4fb62bafc6a4ff",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "ef86b5cc1bdd969d0535f2b63f4712d71056f4f0648e6841394179a0af21dcbb"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-30765331d8c91e63206699eb"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "5 sites collecting, might be 80(?) turbines per site. 68 work orders completed as of Thursday afternoon.",
+      "proposed_value": "**Jennifer Pan:** EE. We have discussed in Sal one that we at the very least will say that it's a rejected status as part of how we like reopen or create or send this information to Maximo. That is part of our phase two works as part of our Maximo right back.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-72f9f8ec8ebcc171e939b4dd0a1e"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-05354b040f8ee2f021b4dc0ebacf",
+      "assertion_id_older": "assertion-72f9f8ec8ebcc171e939b4dd0a1e",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-09-30",
+      "timestamp_older": "2026-09-24"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-09-24 superseded by newer claim from 2026-09-30.",
+  "proposal_id": "calibration-proposal-fa296c65782fde4fb62bafc6a4ff",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-72f9f8ec8ebcc171e939b4dd0a1e from 5 sites collecting, might be 80(?) turbines per site. 68 work orders completed as of Thursday afternoon. to **Jennifer Pan:** EE. We have discussed in Sal one that we at the very least will say that it's a rejected status as part of how we like reopen or create or send this information to Maximo. That is part of our phase two works as part of our Maximo right back.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

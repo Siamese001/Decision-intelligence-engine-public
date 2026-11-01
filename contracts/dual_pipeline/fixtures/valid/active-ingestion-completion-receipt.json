@@ -1,0 +1,34 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:active-ingestion-completion-receipt:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "aicr-20261006-rec01",
+  "receipt_id": "rec-20261006-001",
+  "run_id": "run-20261006-001",
+  "directive_id": "dir-20261006-001",
+  "runtime_root": "/tmp/test_runtime_root",
+  "completion_status": "COMPLETE_UPDATED",
+  "active_generation": 13,
+  "before_generation": 12,
+  "graph_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "before_graph_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "delta_table_counts": {
+    "node": 1,
+    "source": 1,
+    "assertion": 3
+  },
+  "source_coverage_verified": true,
+  "readback_evidence_ids": [
+    "ev-001",
+    "ev-002"
+  ],
+  "release_receipt_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "activation_receipt_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "retrieval_qualification_status": "PASSED",
+  "completed_at": "2026-10-06T12:15:00Z",
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "70f0922b9912c916c4b38ab1a4eddbddc3173aca87b439e5d965a67cf7ec6cf9"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:copilot-intake:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-copilot-missing-locator",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "11679ab70efa5d48a733a88a69d5a24deed479fa63052ffcb7beb3c893e1d521"
+  },
+  "meeting": {
+    "meeting_id": "meeting-invalid-locator",
+    "title": "Invalid fixture",
+    "started_at": "2026-07-21T14:00:00Z",
+    "organizer": "organizer@consulting.example.com",
+    "attendees": [
+      "Speaker A"
+    ],
+    "teams_reference": "teams://meeting/invalid",
+    "source_location": "approved-location/invalid",
+    "source_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "template_version": "1.0.0",
+    "classification": "internal",
+    "audiences": [
+      "nee-engineering"
+    ]
+  },
+  "speakers": [
+    {
+      "speaker_ref": "speaker-invalid-locator",
+      "reported_name": "Speaker A",
+      "email": null,
+      "role_or_org": null,
+      "statements": [
+        {
+          "statement_id": "statement-invalid-locator",
+          "kind": "summary",
+          "text": "A claim without a source locator.",
+          "copilot_confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "actions": [],
+  "adapter": {
+    "name": "nee-copilot-intake",
+    "version": "1.0.0"
+  },
+  "extensions": {}
+}

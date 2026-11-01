@@ -1,0 +1,10 @@
+{
+  "policy_id": "ingestion-l1-control-policy",
+  "schema_version": "1.0.0",
+  "mode": "off",
+  "runtime_default": "off",
+  "proposal_only": true,
+  "provider_calls_before_l2d": 0,
+  "graph_mutations_before_l2d": 0,
+  "extensions": {}
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:route-decision:1.0.0",
+  "title": "NEE deterministic route decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "decision_id", "run_id", "trace_id", "use_case", "subject_id", "intake_route", "query_route", "allowed_lanes", "materiality", "rule_id", "rule_version", "reason_codes", "model_recommendation", "decided_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:route-decision:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "decision_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "use_case": {"type": "string", "enum": ["intake", "query"]},
+    "subject_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "intake_route": {"anyOf": [{"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/intakeRoute"}, {"type": "null"}]},
+    "query_route": {"anyOf": [{"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/queryRoute"}, {"type": "null"}]},
+    "allowed_lanes": {"type": "array", "uniqueItems": true, "items": {"type": "string", "enum": ["approved", "candidate", "external_public"]}},
+    "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+    "rule_id": {"type": "string", "minLength": 1},
+    "rule_version": {"type": "string", "minLength": 1},
+    "reason_codes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "model_recommendation": {"type": ["string", "null"]},
+    "execution_form": {"type": "string", "enum": ["SINGLE_STEP", "MANAGED_WORKFLOW", "TERMINAL_SHORTCIRCUIT"], "default": "SINGLE_STEP"},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

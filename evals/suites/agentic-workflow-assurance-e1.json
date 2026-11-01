@@ -1,0 +1,177 @@
+{
+  "artifact_id": "agentic-workflow-assurance-e1",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "69e01fad732d01229f0ed1647589268f63c26878c050f6c81c923ef7af020a2e"
+  },
+  "cases": [
+    {
+      "case_id": "incident-34-step",
+      "critical": true,
+      "expected": {
+        "required_contradiction_ids": [
+          "contradiction-incident"
+        ],
+        "required_evidence_ids": [
+          "evidence-incident"
+        ],
+        "terminal_class": "COMPLETED"
+      },
+      "scenario_id": "incident-34-step",
+      "tags": [
+        "incident",
+        "pull-request",
+        "economic"
+      ]
+    },
+    {
+      "case_id": "irrelevant-history-metamorphic",
+      "critical": true,
+      "expected": {
+        "required_contradiction_ids": [],
+        "required_evidence_ids": [
+          "evidence-history-control"
+        ],
+        "terminal_class": "COMPLETED"
+      },
+      "scenario_id": "irrelevant-history-metamorphic",
+      "tags": [
+        "metamorphic",
+        "history",
+        "pull-request"
+      ]
+    },
+    {
+      "case_id": "tool-output-one-megabyte",
+      "critical": true,
+      "expected": {
+        "required_contradiction_ids": [],
+        "required_evidence_ids": [
+          "evidence-tool-result"
+        ],
+        "terminal_class": "COMPLETED"
+      },
+      "scenario_id": "tool-output-one-megabyte",
+      "tags": [
+        "tool-output",
+        "containment",
+        "pull-request"
+      ]
+    },
+    {
+      "case_id": "no-progress-strike-limit",
+      "critical": true,
+      "expected": {
+        "required_contradiction_ids": [],
+        "required_evidence_ids": [
+          "evidence-stall"
+        ],
+        "terminal_class": "BLOCKED"
+      },
+      "scenario_id": "no-progress-strike-limit",
+      "tags": [
+        "no-progress",
+        "budget",
+        "pull-request"
+      ]
+    },
+    {
+      "case_id": "hard-budget-overflow",
+      "critical": true,
+      "expected": {
+        "required_contradiction_ids": [],
+        "required_evidence_ids": [
+          "evidence-budget"
+        ],
+        "terminal_class": "BLOCKED"
+      },
+      "scenario_id": "hard-budget-overflow",
+      "tags": [
+        "hard-budget",
+        "pre-send",
+        "pull-request"
+      ]
+    },
+    {
+      "case_id": "checkpoint-resume-equivalence",
+      "critical": true,
+      "expected": {
+        "required_contradiction_ids": [
+          "contradiction-resume"
+        ],
+        "required_evidence_ids": [
+          "evidence-resume",
+          "dependency-resume"
+        ],
+        "terminal_class": "COMPLETED"
+      },
+      "scenario_id": "checkpoint-resume-equivalence",
+      "tags": [
+        "checkpoint",
+        "resume",
+        "pull-request"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0",
+  "created_at": "2026-07-29T00:00:00Z",
+  "evaluator": {
+    "digest": "fa48bff45f169d9b4fba5122888cdc9dd8c9ac2ae03e6cd4e0e4cef6f6044164",
+    "version": "1.0.0"
+  },
+  "extensions": {
+    "com.partner_advisory.nee.evaluation-authority": "evaluation_only",
+    "com.partner_advisory.nee.live-usage-required-for-release": true
+  },
+  "invariant_bindings": {
+    "authorization_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+    "business_policy_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+    "cache_protocol_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+    "evidence_corpus_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+    "graph_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "model_id": "deterministic-byte-accounting",
+    "model_revision": "1",
+    "pricing_schedule_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+    "provider_id": "sealed-eval-fake-provider",
+    "tokenizer_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "measurement_profile": "deterministic_structural",
+  "schema_version": "1.0.0",
+  "suite_id": "agentic-workflow-assurance-e1",
+  "thresholds": {
+    "maximum_completed_history_bytes": 0,
+    "maximum_e5_return_bytes": 4096,
+    "maximum_growth_bytes_per_node": 256,
+    "maximum_growth_percent_per_node": 1.0,
+    "maximum_last_to_node10_ratio": 1.1,
+    "maximum_previous_compiled_prompt_bytes": 0,
+    "maximum_raw_tool_output_bytes": 0,
+    "minimum_credit_improvement_fraction": 0.5,
+    "minimum_usage_completeness": 1.0
+  },
+  "treatments": [
+    {
+      "budget_enforced": false,
+      "feature_path": "legacy",
+      "history_policy": "append_completed",
+      "no_progress_limit": 20,
+      "tool_output_policy": "inline",
+      "treatment_id": "legacy-replay"
+    },
+    {
+      "budget_enforced": true,
+      "feature_path": "candidate",
+      "history_policy": "bounded",
+      "no_progress_limit": 3,
+      "tool_output_policy": "externalize",
+      "treatment_id": "candidate-bounded"
+    }
+  ],
+  "warmup_nodes": 3,
+  "workload": {
+    "path": "evals/workloads/codex-read-amplification-v1.json",
+    "sha256": "05a8164970cfc26dbf05e890f1c2bdec90a2552f54973ed5d91bf6458c86608a",
+    "workload_id": "codex-read-amplification-v1"
+  }
+}

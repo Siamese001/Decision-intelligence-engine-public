@@ -1,0 +1,374 @@
+{
+  "exempt_prefixes": [
+    "tests/",
+    "contracts/",
+    "evals/",
+    "reports/",
+    "dual_pipeline/prompts/contracts/"
+  ],
+  "cognitive_complexity_exempt_prefixes": [
+    "tests/",
+    "contracts/",
+    "evals/",
+    "reports/",
+    "tools/",
+    "scripts/",
+    "Figma/",
+    "ui/",
+    "archive/",
+    "dual_pipeline/llm_judge_core/judge_clarification.py",
+    "dual_pipeline/transcript_qa_core/role_consistency_validator.py",
+    "dual_pipeline/audio/source_detector.py",
+    "dual_pipeline/upstream_audio_qa.py",
+    "dual_pipeline/live_meeting_recorder_core/audio_chunk_validator.py",
+    "dual_pipeline/transcript_qa_core/graph_ontology_healer.py",
+    "dual_pipeline/transcript_qa_core/lens_ontology.py",
+    "dual_pipeline/transcript_qa_core/jarvis_charter_ontology.py",
+    "dual_pipeline/canonical_pipeline/strategies/synthesis.py",
+    "dual_pipeline/llm_judge_core/forensic_checks.py",
+    "dual_pipeline/transcript_metadata_core/entity_resolver.py",
+    "dual_pipeline/transcript_metadata_core/entity_resolver_graph.py",
+    "dual_pipeline/transcript_metadata_helper.py",
+    "dual_pipeline/transcript_qa_core/evaluator.py",
+    "dual_pipeline/canonical_pipeline/evaluator.py",
+    "dual_pipeline/transcript_qa_core/frozen_gates.py",
+    "dual_pipeline/transcript_qa_core/gate1.py",
+    "dual_pipeline/transcript_qa_core/gate1_alr.py",
+    "dual_pipeline/transcript_qa_core/gate1_attribution.py",
+    "dual_pipeline/transcript_qa_core/gate1_helpers.py",
+    "pipeline_a_intake/agents/roster_reconciler_agent.py",
+    "pipeline_b_extraction/extractors.py",
+    "dual_pipeline/canonical_pipeline/publish_helper.py",
+    "dual_pipeline/llm_judge_core/judges/graph.py",
+    "dual_pipeline/transcript_pipeline_core/qa_runner.py",
+    "dual_pipeline/transcript_stages_core/x_gates.py",
+    "dual_pipeline/transcript_stages_core/forensic_normalizer.py",
+    "dual_pipeline/transcript_qa_core/graph_healer.py",
+    "dual_pipeline/transcript_qa_core/recap_healer.py"
+  ],
+  "permitted_non_production_classifications": [
+    "legacy_historical_script",
+    "one_off_migration",
+    "offline_diagnostic",
+    "benchmark_runner",
+    "governed_refactor_utility"
+  ],
+  "permitted_production_cohesive_classifications": {
+    "cohesive_structural_module": {
+      "description": "Single-responsibility data structure or cohesive engine. Splitting creates circular imports or violates encapsulation. Max 900 lines.",
+      "ceiling_lines": 900,
+      "required_attestations": [
+        "cognitive_complexity_ceiling_met",
+        "fan_out_ceiling_met",
+        "single_responsibility_rationale"
+      ]
+    },
+    "pure_declarative_table": {
+      "description": "Static lookup table, projection map, or configuration schema. Zero branch logic. Max 1200 lines.",
+      "ceiling_lines": 1200,
+      "required_attestations": [
+        "zero_branch_logic",
+        "cognitive_complexity_ceiling_met"
+      ]
+    },
+    "declarative_registry": {
+      "description": "Static declarative registry, configuration mapping, or metadata catalog. Exempt from element/LOC limits. Zero executable branch logic.",
+      "ceiling_lines": 3000,
+      "exempt_from_element_limits": true,
+      "required_attestations": [
+        "zero_branch_logic",
+        "cognitive_complexity_ceiling_met"
+      ]
+    }
+  },
+  "exclusions": [
+    {
+      "path": "scripts/prepare_fpl_manifests.py",
+      "classification": "legacy_historical_script",
+      "justification": "Historical manifest generator from pre-automated pipeline; retained for provenance.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/qualify_bge_m3_runtime.py",
+      "classification": "offline_diagnostic",
+      "justification": "Offline model qualification diagnostic test runner; not part of production serving path.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/govern_learning_proposals.py",
+      "classification": "governed_refactor_utility",
+      "justification": "Governed CLI utility and simulation harness for system learning change proposals.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/run_decision_intelligence_vs_knowledge_graph_e2e_30.py",
+      "classification": "benchmark_runner",
+      "justification": "Offline 30-case comparative evaluation harness; executed for benchmark measurement only.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/run_live_e2e_matrix.py",
+      "classification": "benchmark_runner",
+      "justification": "Governed live multimodal E2E matrix certification runner and isolated test harness.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/finalize_a2a_hitl_source_packets.py",
+      "classification": "offline_diagnostic",
+      "justification": "Administrative HITL packet staging utility; developer maintenance tool.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/score_qrels_v2.py",
+      "classification": "offline_diagnostic",
+      "justification": "Offline qrels IR scoring calculation script for retrieval evaluation benchmarks.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/run_tests_with_progress.py",
+      "classification": "offline_diagnostic",
+      "justification": "CLI test progress bar wrapper; non-production test harness.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/run_ci_gates.py",
+      "classification": "offline_diagnostic",
+      "justification": "Local gate orchestrator running sub-stages; non-production developer tool.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/dev_retrieval_smoke.py",
+      "classification": "offline_diagnostic",
+      "justification": "Developer smoke test script for manual retrieval verification.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/nee_pre_mutation_gate.py",
+      "classification": "offline_diagnostic",
+      "justification": "Pre-mutation gate validation utility for CLI preflight.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/audit_testing_gaps.py",
+      "classification": "offline_diagnostic",
+      "justification": "Static testing gap audit utility for repository maintenance.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/stress_test_semantic_cache_l0.py",
+      "classification": "benchmark_runner",
+      "justification": "Offline concurrency stress testing tool for cache performance benchmarking.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/lint_layer_imports.py",
+      "classification": "governed_refactor_utility",
+      "justification": "AST architectural layer dependency linter and cycle detector.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/cards_refactor.py",
+      "classification": "governed_refactor_utility",
+      "justification": "Card schema migration and code transformation script.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/prepare_evidence_envelope_intake.py",
+      "classification": "governed_refactor_utility",
+      "justification": "Intake package builder utility formatting evidence envelopes.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/prepare_a2a_fact_vector_packet_intake.py",
+      "classification": "governed_refactor_utility",
+      "justification": "A2A packet packaging and validation utility.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/run_decision_intelligence_wave_receipts.py",
+      "classification": "offline_diagnostic",
+      "justification": "Wave receipt verification tool for decision intelligence benchmarking.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "dual_pipeline/retrieval_di_bridge.py",
+      "classification": "cohesive_structural_module",
+      "justification": "Bridge connecting retrieval subsystem with decision intelligence evaluation context.",
+      "attestations": {
+        "cognitive_complexity_ceiling_met": true,
+        "fan_out_ceiling_met": true,
+        "single_responsibility_rationale": "Single responsibility for converting retrieval evidence packs to DI context.",
+        "max_function_cc": 11,
+        "unique_external_imports": 1
+      },
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "dual_pipeline/label_adjudication.py",
+      "classification": "cohesive_structural_module",
+      "justification": "Label adjudication engine managing label disputes and consensus scoring.",
+      "attestations": {
+        "cognitive_complexity_ceiling_met": true,
+        "fan_out_ceiling_met": true,
+        "single_responsibility_rationale": "Encapsulates label adjudication logic and consensus state scoring.",
+        "max_function_cc": 12,
+        "unique_external_imports": 0
+      },
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "dual_pipeline/project_status_reclassification.py",
+      "classification": "cohesive_structural_module",
+      "justification": "Project status transition and reclassification state logic.",
+      "attestations": {
+        "cognitive_complexity_ceiling_met": true,
+        "fan_out_ceiling_met": true,
+        "single_responsibility_rationale": "State machine managing project status lifecycle and reclassification rules.",
+        "max_function_cc": 15,
+        "unique_external_imports": 1
+      },
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "dual_pipeline/model_registry.py",
+      "classification": "cohesive_structural_module",
+      "justification": "SSOT registry for model metadata, tier mappings, and runtime allocations.",
+      "attestations": {
+        "cognitive_complexity_ceiling_met": true,
+        "fan_out_ceiling_met": true,
+        "single_responsibility_rationale": "Central model specification registry and runtime tier mapping tables.",
+        "max_function_cc": 28,
+        "unique_external_imports": 1
+      },
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "dual_pipeline/in_memory_graph.py",
+      "classification": "cohesive_structural_module",
+      "justification": "High-performance in-memory graph data structure and path traversal engine.",
+      "attestations": {
+        "cognitive_complexity_ceiling_met": true,
+        "fan_out_ceiling_met": true,
+        "single_responsibility_rationale": "In-memory graph adjacency structure, PageRank, and path traversal algorithms.",
+        "max_function_cc": 61,
+        "unique_external_imports": 0
+      },
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "dual_pipeline/card_views.py",
+      "classification": "cohesive_structural_module",
+      "justification": "Deterministic access-sliced card view projection engine and markdown serializer.",
+      "attestations": {
+        "cognitive_complexity_ceiling_met": true,
+        "fan_out_ceiling_met": true,
+        "single_responsibility_rationale": "Deterministic access-sliced view compiler transforming assertions into read-only cards.",
+        "max_function_cc": 34,
+        "unique_external_imports": 1
+      },
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/run_adversarial_entity_audit.py",
+      "classification": "offline_diagnostic",
+      "justification": "Adversarial audit script for entity normalization testing.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/pr_governance_core/inspection.py",
+      "classification": "offline_diagnostic",
+      "justification": "PR governance CLI logic.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/pr_governance_core/worktree.py",
+      "classification": "offline_diagnostic",
+      "justification": "PR governance worktree utility logic.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "dual_pipeline/live_meeting_recorder_core/copilot.py",
+      "classification": "cohesive_structural_module",
+      "justification": "Live meeting copilot structural logic and temporal engine.",
+      "attestations": {
+        "cognitive_complexity_ceiling_met": true,
+        "fan_out_ceiling_met": true,
+        "single_responsibility_rationale": "Live copilot orchestration and state logic.",
+        "max_function_cc": 40,
+        "unique_external_imports": 1
+      },
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "dual_pipeline/live_meeting_recorder_core/copilot_validator.py",
+      "classification": "cohesive_structural_module",
+      "justification": "Live meeting copilot structural logic and temporal engine.",
+      "attestations": {
+        "cognitive_complexity_ceiling_met": true,
+        "fan_out_ceiling_met": true,
+        "single_responsibility_rationale": "Live copilot orchestration and state logic.",
+        "max_function_cc": 20,
+        "unique_external_imports": 1
+      },
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/pr_topology_core/supersession.py",
+      "classification": "offline_diagnostic",
+      "justification": "PR governance CLI logic.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/pr_governance_core/code_review.py",
+      "classification": "offline_diagnostic",
+      "justification": "PR governance CLI logic.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/pr_governance_core/lifecycle.py",
+      "classification": "offline_diagnostic",
+      "justification": "PR governance CLI logic.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/aidlc_kpi_report.py",
+      "classification": "benchmark_runner",
+      "justification": "AI-DLC KPI reporting tool and commit range metrics generator.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/ci_gates_core/base_tests.py",
+      "classification": "pure_declarative_table",
+      "justification": "Pure declarative test tuples for baseline CI profile; zero branch logic.",
+      "attestations": {
+        "zero_branch_logic": true,
+        "cognitive_complexity_ceiling_met": true
+      },
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/lint_file_budgets.py",
+      "classification": "governed_refactor_utility",
+      "justification": "AST-based file budget and ratchet linter.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/verify_main_readiness.py",
+      "classification": "offline_diagnostic",
+      "justification": "Local main readiness qualification orchestrator.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/verify_commit.py",
+      "classification": "governed_refactor_utility",
+      "justification": "Staged pre-commit fast gatekeeper.",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "path": "tools/shift_left_core/ast_framework.py",
+      "classification": "governed_refactor_utility",
+      "justification": "AST framework for shift-left structural code inspections.",
+      "expires_at": "2026-12-31"
+    }
+  ]
+}

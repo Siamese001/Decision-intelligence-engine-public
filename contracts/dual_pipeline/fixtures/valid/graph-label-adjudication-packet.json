@@ -1,0 +1,123 @@
+{
+  "artifact_id": "graph-label-adjudication-fixture-001",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "7786e3f87aff6392ee1a12db77211027017410ccef52d34722f70c55da6104e0"
+  },
+  "contract_id": "urn:nee:dual-pipeline:graph-label-adjudication-packet:1.0.0",
+  "extensions": {},
+  "human_decision_contract": "urn:nee:dual-pipeline:hitl-decision:1.0.0",
+  "packet_type": "graph_label_human_adjudication",
+  "pair_binding": {
+    "active_pair_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "embedding_backend": "fixture-bge-m3",
+    "generation_id": "generation-fixture-001",
+    "graph_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "graph_snapshot": "fixture-graph-snapshot",
+    "model_id": "fixture/model",
+    "model_manifest_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "model_revision": "fixture-revision",
+    "production_qualified": false,
+    "sidecar_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "policy": {
+    "policy_id": "nee-graph-labeling",
+    "policy_version": "1.0.0"
+  },
+  "queues": [
+    {
+      "approval_owner_required": true,
+      "baseline_state_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "candidate_values": ["authoritative_internal", "governed_internal"],
+      "category": "label_mapping",
+      "context": {
+        "grouping": "same source, field, and legacy value",
+        "review_reason": "Legacy narrative value requires human mapping."
+      },
+      "decision_options": ["CONFIRM", "HOLD", "QUARANTINE"],
+      "dual_review_required": false,
+      "field": "source_posture",
+      "legacy_value": "Legacy narrative source posture",
+      "queue_id": "graph-label-adjudication-queue-fixture-001",
+      "record_count": 1,
+      "record_ids": ["source-fixture-001"],
+      "record_type": "source",
+      "required_decision_fields": [
+        "decision",
+        "reviewer",
+        "decided_at",
+        "rationale",
+        "evidence_reviewed",
+        "alternatives",
+        "before_state_digest",
+        "proposed_after_state_digest",
+        "affected_candidate_ids"
+      ],
+      "review_tier": 1,
+      "source_context": [
+        {
+          "source_id": "source-fixture-001",
+          "source_name": "Fixture source",
+          "source_posture": "Legacy narrative source posture",
+          "source_type": "fixture_source"
+        }
+      ],
+      "source_ids": ["source-fixture-001"],
+      "status": "PENDING_HUMAN_REVIEW",
+      "subtype": "source_posture_mapping"
+    }
+  ],
+  "relevance_review": {
+    "completion_requirement": "Build a fresh packet from the W7 successor pair, record every human judgment, seal the resulting suite, and rerun it in W8.",
+    "exact_pair_binding_required": true,
+    "minimum_independent_reviewer_count": 2,
+    "required_dimensions": [
+      "positive_relevance",
+      "hard_negative",
+      "lane_isolation",
+      "acl_boundary",
+      "stale_or_superseded"
+    ],
+    "status": "DEFERRED_UNTIL_SUCCESSOR_PAIR"
+  },
+  "review_plan": {
+    "base_graph_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "candidate_plan_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "candidate_schema_migration_state": "APPLY_TO_CANDIDATE",
+    "legacy_review_plan_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+    "quality_report_digest": "2222222222222222222222222222222222222222222222222222222222222222"
+  },
+  "review_protocol": {
+    "automatic_labels_are_not_human_labels": true,
+    "decision_artifact_binding": "one exact HITL decision artifact per queue",
+    "final_approval_owner_required": true,
+    "required_decision_fields": [
+      "decision",
+      "reviewer",
+      "decided_at",
+      "rationale",
+      "evidence_reviewed",
+      "alternatives",
+      "before_state_digest",
+      "proposed_after_state_digest",
+      "affected_candidate_ids"
+    ],
+    "tier_two_requires_independent_review": true
+  },
+  "review_run_id": "run-graph-label-adjudication-fixture-001",
+  "schema_version": "1.0.0",
+  "status": "PENDING_HUMAN_REVIEW",
+  "summary": {
+    "graph_mutation_count": 0,
+    "identity_queue_count": 0,
+    "identity_record_count": 0,
+    "label_mapping_queue_count": 1,
+    "label_mapping_record_count": 1,
+    "lineage_queue_count": 0,
+    "lineage_record_count": 0,
+    "provider_call_count": 0,
+    "total_queue_count": 1
+  },
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

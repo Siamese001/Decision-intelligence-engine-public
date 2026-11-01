@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:answer-ledger:answer-feedback:1.0.0",
+  "title": "NEE Answer Feedback Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "feedback_id",
+    "answer_id",
+    "answer_digest",
+    "feedback_type",
+    "rating",
+    "origin",
+    "timestamp"
+  ],
+  "properties": {
+    "contract_id": { "const": "urn:nee:answer-ledger:answer-feedback:1.0.0" },
+    "schema_version": { "const": "1.0.0" },
+    "feedback_id": { "type": "string", "minLength": 1 },
+    "answer_id": { "type": "string", "minLength": 1 },
+    "answer_digest": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" },
+    "feedback_type": { "type": "string", "enum": ["explicit", "implicit"] },
+    "rating": { "type": "string", "enum": ["useful", "not_useful", "wrong"] },
+    "origin": { "type": "string", "minLength": 1 },
+    "note": { "type": ["string", "null"] },
+    "weight": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "timestamp": { "type": "string" },
+    "signature": { "type": ["string", "null"] }
+  }
+}

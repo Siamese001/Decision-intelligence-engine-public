@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:strategic-reasoning-output:1.0.0",
+  "title": "NEE strategic reasoning decision trace",
+  "description": "A non-authoritative query artifact explaining options and next-best actions from governed evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "output_id", "query_run_id", "evidence_packet_digest", "decision_frame", "options", "recommendation", "next_best_actions", "assumptions", "counterarguments", "evidence_gaps", "outcome_measures", "automatic_graph_mutation_count", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:strategic-reasoning-output:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "output_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "query_run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "evidence_packet_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "decision_frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["query_type", "rationale"],
+      "properties": {
+        "query_type": {"const": "opportunity_nba"},
+        "rationale": {"type": "string"}
+      }
+    },
+    "options": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:strategic-reasoning-output:1.0.0#/$defs/option"}},
+    "recommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "action_count"],
+      "properties": {
+        "summary": {"type": "string"},
+        "action_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "next_best_actions": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:strategic-reasoning-output:1.0.0#/$defs/action"}},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "counterarguments": {"type": "array", "items": {"type": "string"}},
+    "evidence_gaps": {"type": "array", "items": {"type": "string"}},
+    "outcome_measures": {"type": "array", "items": {"type": "string"}},
+    "automatic_graph_mutation_count": {"const": 0},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["option", "rationale", "addresses", "citations", "basis_roles"],
+      "properties": {
+        "option": {"type": ["string", "null"]},
+        "rationale": {"type": ["string", "null"]},
+        "addresses": {"type": "array", "items": {"type": "string"}},
+        "citations": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "basis_roles": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/strategicProfile/properties/knowledge_role"}}
+      }
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "basis_citations", "basis_roles"],
+      "properties": {
+        "action": {"type": ["string", "null"]},
+        "basis_citations": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "basis_roles": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/strategicProfile/properties/knowledge_role"}}
+      }
+    }
+  }
+}

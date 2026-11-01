@@ -1,0 +1,706 @@
+{
+  "contract_id": "urn:nee:scheduled-task-rollout-package:1.0.0",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-10-20T14:45:28.982602Z",
+  "rollout_status": "DUAL_MODE_RESTORED_PENDING_OPERATOR_AUTHORIZATION",
+  "governance_invariants": {
+    "zero_unattended_mutations": true,
+    "no_live_registration_change_during_qualification": true,
+    "immutable_bundle_sealing_required": true,
+    "authority_context_enforced": true
+  },
+  "summary": {
+    "total_tasks": 23,
+    "current_live_registrations": null,
+    "live_registration_status": "UNRESOLVED: repository reconciliation does not verify Codex Scheduled registrations",
+    "qualification_note": "Wave 4 complete. 14 dual-mode combinations verified against disposable fixtures. Exports match canonical restored bodies. Awaiting operator authorization for Wave 5 registration.",
+    "proposed_registrations": 17,
+    "unattended_patch_policy": "DEFAULT_NARROW (Reproduction and patch proposal in disposable worktree only; no unattended production apply)",
+    "active_master_sequence_tasks": 17,
+    "consolidated_legacy_aliases": 7
+  },
+  "tasks": {
+    "knowledge_graph_hygiene": {
+      "task_id": "knowledge_graph_hygiene",
+      "title": "Knowledge Graph Hygiene Agent",
+      "prompt_path": "automations/prompts/graph_hygiene_agent.md",
+      "prompt_sha256": "22e838081d09b36ac0e395d4cd970c92f38cef56dccc700488d3907307be4179",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Unreliable first-line prompt text marker",
+        "authority_isolation": "None; prompt attempted direct SQLite writes and checkpoints",
+        "cadence": "Daily (05:00 UTC, illustrative)"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_only_graph_inspection",
+          "dry_run_remediation_proposal",
+          "isolated_fixture_reproduction",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 5 * * * (Daily at 05:00 UTC)",
+        "output_bundle": "reports/graph_hygiene/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "pr_queue_observer": {
+      "task_id": "pr_queue_observer",
+      "title": "PR Queue Observer Agent",
+      "prompt_path": "automations/prompts/pr_queue_observer_agent.md",
+      "prompt_sha256": "81aa6206a37ec7ae1d0c99f3e44363d11f3b63fbbe9ff6b5815d08be2aa26162",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Unreliable prompt text header",
+        "authority_isolation": "Ad-hoc lock acquisition without dead-PID reclamation",
+        "cadence": "Weekdays at 9:00 AM America/New_York (0 9 * * 1-5)"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_pr_inventory",
+          "read_git_worktrees",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 9 * * 1-5 (Weekdays at 09:00 America/New_York)",
+        "output_bundle": "reports/pr_queue_observer/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "repository_antipattern_audit": {
+      "task_id": "repository_antipattern_audit",
+      "title": "Repository Antipattern Audit Agent",
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "prompt_sha256": "98b22140461726c08bad0b011a305f7fb749227383de5a264c6324ec3e5a49cb",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Prompt text marker",
+        "authority_isolation": "Permitted unbounded git branch modifications",
+        "cadence": "Daily / Bi-weekly (illustrative)"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_codebase_ast",
+          "record_antipattern_findings",
+          "isolated_fixture_reproduction"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 7 * * * (Daily at 07:00 UTC)",
+        "output_bundle": "reports/antipattern_audit/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "ssot_drift_remediation": {
+      "task_id": "ssot_drift_remediation",
+      "title": "SSOT Drift Remediation Agent",
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "prompt_sha256": "98b22140461726c08bad0b011a305f7fb749227383de5a264c6324ec3e5a49cb",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Prompt text marker; misaligned with drift_guard.py workflow",
+        "authority_isolation": "None; claimed repair authority without handoff or approval",
+        "cadence": "Daily scan (illustrative)"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_ssot_registry",
+          "audit_drift_findings",
+          "isolated_patch_proposal"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 6 * * * (Daily at 06:00 UTC)",
+        "output_bundle": "reports/ssot_drift/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "storage_repository_hygiene": {
+      "task_id": "storage_repository_hygiene",
+      "title": "Storage & Repository Hygiene Agent",
+      "prompt_path": "automations/prompts/storage_hygiene_agent.md",
+      "prompt_sha256": "df3960273f2451acc290da927448e096348552ec1b5088ceb07150c012aed192",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Custom regex detector diverged from core detector",
+        "authority_isolation": "Self-authored JSON hash accepted as operator approval",
+        "cadence": "Daily (04:00 UTC, illustrative)"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_storage_tree",
+          "scan_quarantine_candidates",
+          "journal_pre_move_records"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 4 * * * (Daily at 04:00 UTC)",
+        "output_bundle": "reports/storage_hygiene/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "weekly_market_intelligence": {
+      "task_id": "weekly_market_intelligence",
+      "title": "Weekly Market Intelligence Agent",
+      "prompt_path": "automations/prompts/weekly_market_intelligence_agent.md",
+      "prompt_sha256": "e371b871fb23b212372946458b39c7dd5e12cda51d2d129272d0b7ed8ca0cf0b",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Prompt text marker",
+        "authority_isolation": "Preview described as promotion; no sidecar actual-byte invariance",
+        "cadence": "Weekly (Sundays at 22:00 UTC)"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_regulatory_filings",
+          "signal_filtering",
+          "briefing_generation",
+          "active_graph_ingest_intent",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 22 * * 0 (Sundays at 22:00 UTC)",
+        "output_bundle": "reports/weekly_market_intelligence/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "worktree_coverage_cleanup": {
+      "task_id": "worktree_coverage_cleanup",
+      "title": "Worktree Coverage & Cleanup Agent",
+      "prompt_path": "automations/prompts/pr_queue_observer_agent.md",
+      "prompt_sha256": "81aa6206a37ec7ae1d0c99f3e44363d11f3b63fbbe9ff6b5815d08be2aa26162",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Prompt text marker",
+        "authority_isolation": "Referenced absent CLI commands ('prune-worktrees', 'list --worktree-only')",
+        "cadence": "Daily (03:00 UTC, illustrative)"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_worktree_metadata",
+          "inventory_worktrees",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 3 * * * (Daily at 03:00 UTC)",
+        "output_bundle": "reports/worktree_coverage/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "cost_quality_review": {
+      "task_id": "cost_quality_review",
+      "title": "Measured Cost, Latency & Quality Review Agent",
+      "prompt_path": "automations/prompts/pipeline_outcome_assurance_agent.md",
+      "prompt_sha256": "d156dc5a8f1c5c023a60818cc5745c0e108757385f4aeb2bb900e79e6574b394",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery and telemetry reconciliation",
+        "cadence": "Weekly on Sunday at 01:00 UTC"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_only_telemetry_reconciliation",
+          "cost_latency_analysis",
+          "workload_quality_comparison",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "30 1 * * 0 (Weekly on Sunday at 01:30 UTC)",
+        "output_bundle": "reports/cost_quality/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "pipeline_outcome_assurance": {
+      "task_id": "pipeline_outcome_assurance",
+      "title": "Pipeline Outcome & Retrieval Assurance Agent",
+      "prompt_path": "automations/prompts/pipeline_outcome_assurance_agent.md",
+      "prompt_sha256": "d156dc5a8f1c5c023a60818cc5745c0e108757385f4aeb2bb900e79e6574b394",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only lifecycle and assurance audit",
+        "cadence": "Daily at 03:00 UTC"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_only_lifecycle_reconciliation",
+          "intake_directive_audit",
+          "retrieval_assurance_audit",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 3 * * * (Daily at 03:00 UTC)",
+        "output_bundle": "reports/pipeline_assurance/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "technical_debt_elimination": {
+      "task_id": "technical_debt_elimination",
+      "title": "Repository Technical Debt Elimination Agent",
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "prompt_sha256": "98b22140461726c08bad0b011a305f7fb749227383de5a264c6324ec3e5a49cb",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only AST and technical debt inspection",
+        "cadence": "Weekly on Sunday at 02:30 UTC"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_codebase_ast",
+          "module_budget_audit",
+          "technical_debt_inspection",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "30 2 * * 0 (Weekly on Sunday at 02:30 UTC)",
+        "output_bundle": "reports/tech_debt_audit/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "timeout_lock_watchdog": {
+      "task_id": "timeout_lock_watchdog",
+      "title": "Runtime Timeout, Hung Process & Lock Watchdog Agent",
+      "prompt_path": "automations/prompts/pipeline_outcome_assurance_agent.md",
+      "prompt_sha256": "d156dc5a8f1c5c023a60818cc5745c0e108757385f4aeb2bb900e79e6574b394",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only process and lock inspection",
+        "cadence": "Daily at 04:00 UTC"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_only_runtime_inspection",
+          "hung_process_detection",
+          "lock_file_audit",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 4 * * * (Daily at 04:00 UTC)",
+        "output_bundle": "reports/timeout_watchdog/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "third_party_tool_consolidation": {
+      "task_id": "third_party_tool_consolidation",
+      "title": "Local Third-Party Tool & Custom Code Elimination Agent",
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "prompt_sha256": "98b22140461726c08bad0b011a305f7fb749227383de5a264c6324ec3e5a49cb",
+      "current_registration": {
+        "status": "UNRESOLVED",
+        "registered": false,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only tooling inspection",
+        "cadence": "Weekly on Wednesday at 03:00 UTC"
+      },
+      "proposed_registration": {
+        "status": "RESTORED_PENDING_OPERATOR_APPROVAL",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_only_dependency_inspection",
+          "redundant_wrapper_detection",
+          "custom_code_consolidation_proposal",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "0 3 * * 3 (Weekly on Wednesday at 03:00 UTC)",
+        "output_bundle": "reports/tool_consolidation/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "agentic_repo_best_practices_scout": {
+      "task_id": "agentic_repo_best_practices_scout",
+      "title": "Agentic Frontier Architecture Agent",
+      "prompt_path": "automations/prompts/agentic_repo_best_practices_agent.md",
+      "prompt_sha256": "b3d430750c755e2195cbb8f86e0ba24fb1005898995696bd40ac232c24dc2b2d",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Weekly on Monday at 2:20 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "frontier_lab_agentic_pattern_discovery",
+          "arxiv_preprint_fetching",
+          "mechanistic_interpretability_digest",
+          "empirical_ablation_and_hype_filtering",
+          "lane0_governance_reference_playbook_curation",
+          "three_tier_repo_integration_mapping",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 20 2 * * 1",
+        "output_bundle": "reports/agentic_repo_best_practices/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "hotspot_value_enhancement": {
+      "task_id": "hotspot_value_enhancement",
+      "title": "Hotspot Enhancement Agent",
+      "prompt_path": "automations/prompts/hotspot_enhancement_agent.md",
+      "prompt_sha256": "5f3abe7c2f01175df329168110a12d3e25e6cefbb19bda1f96a8c4071f573947",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Daily at 2:40 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "hotspot_bug_recurrence_mining",
+          "value_to_effort_roi_ranking",
+          "healer_root_cause_structural_enhancement",
+          "e2e_runtime_execution_hardening",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 40 2 * * *",
+        "output_bundle": "reports/hotspot_enhancement/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "e2e_critical_functionality_assurance": {
+      "task_id": "e2e_critical_functionality_assurance",
+      "title": "Functionality Assurance Agent",
+      "prompt_path": "automations/prompts/e2e_critical_functionality_assurance_agent.md",
+      "prompt_sha256": "855b14fad3e60e31fe3c22155cae99f9f2912804e5bc2d36beccc6b59afed190",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Daily at 3:00 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "e2e_critical_functionality_audit",
+          "anti_enhancement_firewall_enforcement",
+          "ast_lazy_import_and_ipc_wiring_scan",
+          "stage_handoff_and_resume_verification",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 0 3 * * *",
+        "output_bundle": "reports/e2e_critical_assurance/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "retrieval_surface_assurance": {
+      "task_id": "retrieval_surface_assurance",
+      "title": "Retrieval Surface Agent",
+      "prompt_path": "automations/prompts/retrieval_surface_agent.md",
+      "prompt_sha256": "ecc1d14f4300bf955b6a35c1b727caa3597178ae23c2c45df8eb6f261ea5f6ea",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Daily at 3:20 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "exhaustive_seven_surface_retrieval_audit",
+          "mandatory_gap_first_retrieval_remediation",
+          "high_roi_retrieval_enhancement_ranking",
+          "eleven_gate_bge_m3_surface_verification",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 20 3 * * *",
+        "output_bundle": "reports/retrieval_surface_assurance/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "evals_surface_assurance": {
+      "task_id": "evals_surface_assurance",
+      "title": "Evals Surface Agent",
+      "prompt_path": "automations/prompts/evals_surface_agent.md",
+      "prompt_sha256": "c7bd362c173be2521a396541b23462995636228195ee99fa0780e3b509465577",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Daily at 3:40 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "exhaustive_seven_surface_evals_audit",
+          "construct_validity_gap_remediation",
+          "anti_tautology_verification",
+          "high_roi_eval_enhancement_ranking",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 40 3 * * *",
+        "output_bundle": "reports/evals_surface_assurance/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "testing_gaps_assurance": {
+      "task_id": "testing_gaps_assurance",
+      "title": "Testing Gaps Agent",
+      "prompt_path": "automations/prompts/testing_gaps_assurance_agent.md",
+      "prompt_sha256": "f572d9aa4bf3c2153e981e285a5202a5899234ff893188efe88691e9f351b963",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Daily at 4:00 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "nine_dimension_testing_audit",
+          "e2e_runtime_authenticity_scan",
+          "mutation_kill_rate_analysis",
+          "hypothesis_property_gap_detection",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 0 4 * * *",
+        "output_bundle": "reports/testing_gaps/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "tokenomics_cost_optimization": {
+      "task_id": "tokenomics_cost_optimization",
+      "title": "Cost Optimization Agent",
+      "prompt_path": "automations/prompts/tokenomics_agent.md",
+      "prompt_sha256": "7b455b82a1b5800f9132140ab81287840bf924ab357ca0a842dc8beea337ae7d",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Daily at 4:40 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "model_pinning_pareto_benchmarking",
+          "multi_provider_prompt_caching_audit",
+          "semantic_and_multi_tier_cache_verification",
+          "surgical_healer_and_judge_retry_optimization",
+          "closed_loop_tokenomics_learning"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 40 4 * * *",
+        "output_bundle": "reports/tokenomics/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "system_learning_assurance": {
+      "task_id": "system_learning_assurance",
+      "title": "System Learning Agent",
+      "prompt_path": "automations/prompts/system_learning_agent.md",
+      "prompt_sha256": "1d29d9f4528f916ce15f62df113c614667e427c2d16c5aeba303ab959c20c52d",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Daily at 5:00 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "exhaustive_six_surface_system_learning_audit",
+          "exhaustive_eight_surface_system_learning_audit",
+          "unified_eight_surface_learning_cycle",
+          "mandatory_gap_first_learning_remediation",
+          "high_roi_learning_enhancement_ranking",
+          "post_apply_canary_and_rollback_verification",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 0 5 * * *",
+        "output_bundle": "reports/system_learning_assurance/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "corner_foresight_blindspot_scout": {
+      "task_id": "corner_foresight_blindspot_scout",
+      "title": "Corner Foresight Agent",
+      "prompt_path": "automations/prompts/corner_foresight_agent.md",
+      "prompt_sha256": "aba850c66979dbfdcc9cf1739b2397b3f173cddc3f6e05ebcae3a156f3a3c3c8",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Daily at 6:00 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "proactive_blindspot_discovery",
+          "multi_hop_domino_graph_traversal",
+          "topological_bridge_spof_centrality",
+          "stakeholder_velocity_drift_analysis",
+          "forgotten_commitment_tracking",
+          "expiring_decision_frame_radar",
+          "second_order_domino_risk_analysis",
+          "operational_change_journaling"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 0 6 * * *",
+        "output_bundle": "reports/corner_foresight/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "nea_charter_portfolio_roster": {
+      "task_id": "nea_charter_portfolio_roster",
+      "title": "NEA Charter Portfolio & Roster Agent",
+      "prompt_path": "automations/prompts/sidecars/nea_charter_portfolio_roster_agent.md",
+      "prompt_sha256": "7ef2904b9a3217c2792e84eb1d78feea33ba39cbba33c910c4a1d89e439c4a4a",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Weekly on Monday at 7:00 AM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_only_graph_inspection",
+          "portfolio_table_generation"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 0 7 * * 1",
+        "output_bundle": "reports/nea_roster/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    },
+    "google_partner_advisory_weekly_sync": {
+      "task_id": "google_partner_advisory_weekly_sync",
+      "title": "Google x PartnerAdvisory Weekly Sync Agenda Agent",
+      "prompt_path": "automations/prompts/sidecars/google_partner_advisory_weekly_sync_agent.md",
+      "prompt_sha256": "6aa67aa5ead3ceb4790909a5161c88ddfdb34fce0a88fc3986ca83f7a93d5539",
+      "current_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "registered": true,
+        "mode_resolution": "Trusted launcher context",
+        "authority_isolation": "Read-only discovery; wave-plan gated mutation",
+        "cadence": "Weekly on Tuesday at 2:30 PM America/New_York"
+      },
+      "proposed_registration": {
+        "status": "RECONCILED_ACTIVE",
+        "target_mode": "scheduled",
+        "authority_context": "AuthorityContext(execution_mode=ExecutionMode.SCHEDULED, trigger_origin=TriggerOrigin.SCHEDULER_CRON)",
+        "allowed_capabilities": [
+          "read_only_graph_inspection",
+          "exponential_decay_traversal",
+          "speaker_notes_generation"
+        ],
+        "unattended_apply_permitted": false,
+        "cadence": "CRON_TZ=America/New_York 30 14 * * 2",
+        "output_bundle": "reports/google_partner_advisory/<run_id>/manifest.json",
+        "dual_mode_supported": true
+      }
+    }
+  },
+  "rollback_instructions": {
+    "summary": "Step-by-step procedure to rollback proposed prompt specifications and registration states.",
+    "steps": [
+      {
+        "step_number": 1,
+        "action": "Restore archive source prompts",
+        "command": "cp docs/plans/scheduled_task_review_sources/*.md automations/prompts/",
+        "verification": "git diff automations/prompts/ to ensure byte restoration to archive snapshots."
+      },
+      {
+        "step_number": 2,
+        "action": "Purge active task execution locks",
+        "command": "rm -f artifacts/locks/*.lock",
+        "verification": "ls artifacts/locks/ verifies zero active locks."
+      },
+      {
+        "step_number": 3,
+        "action": "Revert task registry state",
+        "command": "git checkout HEAD -- config/scheduled_tasks/task_registry.json",
+        "verification": "git status --porcelain config/scheduled_tasks/task_registry.json is clean."
+      },
+      {
+        "step_number": 4,
+        "action": "Verify zero operational graph mutations",
+        "command": "python -m dual_pipeline.runtime_evidence inventory",
+        "verification": "Verifies active graph SHA is identical to pre-rollout baseline."
+      }
+    ]
+  }
+}

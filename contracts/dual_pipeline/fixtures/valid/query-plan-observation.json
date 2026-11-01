@@ -1,0 +1,31 @@
+{
+  "artifact_id": "query-plan-observation-fixture",
+  "attempt_digest": "a35834e581cb53a254daf06b58f8fe6b82492ae993a8acad74fbf953350ab108",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "2443aca7cb06f59826bd3f6d55c35a20b7cea7de99b7335513b97083cd277d40"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-plan-observation:1.0.0",
+  "coverage_manifest_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+  "evidence_report_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "extensions": {},
+  "graph_sha256_after": "0000000000000000000000000000000000000000000000000000000000000000",
+  "graph_sha256_before": "0000000000000000000000000000000000000000000000000000000000000000",
+  "newly_covered_requirement_ids": [
+    "requirement-1"
+  ],
+  "observation_id": "observation-1",
+  "parent_plan_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "progress": "complete",
+  "progress_reason": "coverage complete",
+  "provider_call_count": 0,
+  "requirement_outcomes": [
+    {
+      "outcome": "covered",
+      "requirement_id": "requirement-1"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "unresolved_requirement_ids": []
+}

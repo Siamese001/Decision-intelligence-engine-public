@@ -1,0 +1,39 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:autonomous-decision-request:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "autonomous-decision-request-fixture-01",
+  "decision_id": "dec_001",
+  "revision": 1,
+  "scope": {
+    "worktree": "/repo/.worktrees/feat_hitl",
+    "run_id": "run_001",
+    "wave": 2,
+    "action_target": "pipeline_stage_routine_alignment",
+    "plan_digest": null
+  },
+  "options": [
+    {
+      "option_id": "opt_01",
+      "description": "Autonomous fast path",
+      "confidence": 0.95
+    },
+    {
+      "option_id": "opt_02",
+      "description": "Fallback path",
+      "confidence": 0.5
+    }
+  ],
+  "authority_type": "AUTONOMOUS",
+  "mode": "ROUTINE",
+  "category": "routine",
+  "action_description": "Execute routine alignment",
+  "target_files": [],
+  "context": {},
+  "decision_content_digest": null,
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "79e87032537ecb022801c5db5981ada52efeaf27da0b124e456b47f1a6ad2723"
+  }
+}

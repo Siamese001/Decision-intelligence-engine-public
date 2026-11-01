@@ -1,0 +1,155 @@
+{
+  "artifact_id": "internal-operational-qualification-fixture",
+  "assurance_tier": "internal_operational",
+  "authorization_mode": "internal_operator_policy",
+  "autonomous_graph_writes_allowed": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "956734cff0017d9d45f26ce44b7fa97e6df5030c235d5f73d2ce0c59c397755a"
+  },
+  "contract_id": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0",
+  "deployment_scope": "local_team",
+  "directive_binding": {
+    "approval_id": "approval-internal-fixture",
+    "completion_digest": "7777777777777777777777777777777777777777777777777777777777777777",
+    "directive_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+    "directive_id": "directive-internal-fixture",
+    "directive_path": "runtime/ingestion_directives/directive-internal-fixture.json",
+    "package_set_digest": "6666666666666666666666666666666666666666666666666666666666666666",
+    "release_receipt_digest": "8888888888888888888888888888888888888888888888888888888888888888",
+    "release_receipt_id": "release-receipt-internal-fixture",
+    "run_bindings": [
+      {
+        "embedding_backend": "flagembedding-bge-m3-dev",
+        "graph_operation_count": 1,
+        "model_id": "BAAI/bge-m3",
+        "model_manifest_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+        "model_revision": "0123456789012345678901234567890123456789",
+        "package_file_sha256": "9999999999999999999999999999999999999999999999999999999999999999",
+        "provider_call_count": 0,
+        "run_id": "run-internal-fixture",
+        "status": "COMPLETED"
+      }
+    ],
+    "source_runtime_root": "runtime/source"
+  },
+  "extensions": {},
+  "operational_status": "qualified",
+  "pair": {
+    "assurance_tier": "internal_operational",
+    "embedding_backend": "flagembedding-bge-m3-internal",
+    "generation_id": "generation-internal-fixture",
+    "graph_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "graph_snapshot": "graph-snapshot-internal-fixture",
+    "internal_operational_policy_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+    "model_id": "BAAI/bge-m3",
+    "model_manifest_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+    "model_revision": "0123456789012345678901234567890123456789",
+    "production_qualified": false,
+    "sidecar_sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+  },
+  "policy_binding": {
+    "policy_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+    "policy_id": "internal-operational-policy-fixture",
+    "policy_path": "requirements/internal-operational-policy.json",
+    "policy_version": "1.0.0"
+  },
+  "production_qualified": false,
+  "qualification_id": "internal-operational-qualification-fixture",
+  "qualified_at": "2026-07-29T00:00:00Z",
+  "rationale": "Fixture qualification",
+  "recovery_evidence": {
+    "backup_root": "runtime/recovery",
+    "backup_status": "PASS",
+    "graph_backup_path": "runtime/recovery/graph.sqlite",
+    "graph_backup_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "graph_integrity": {
+      "foreign_key_violation_count": 0,
+      "foreign_key_violations": [],
+      "integrity_check": "ok"
+    },
+    "restore_status": "PASS",
+    "restored_graph_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "restored_sidecar_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "sidecar_backup_path": "runtime/recovery/sidecar.sqlite",
+    "sidecar_backup_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "sidecar_integrity": {
+      "foreign_key_violation_count": 0,
+      "foreign_key_violations": [],
+      "integrity_check": "ok"
+    }
+  },
+  "reviewer": "internal-reviewer",
+  "schema_version": "1.0.0",
+  "source_evaluation_binding": {
+    "evaluation_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "evaluation_id": "retrieval-evaluation-internal-fixture",
+    "execution_tier": "E3",
+    "file_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "path": "runtime/retrieval_evaluations/evaluation.json",
+    "source_pair": {
+      "embedding_backend": "flagembedding-bge-m3-dev",
+      "generation_id": "generation-source-fixture",
+      "graph_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "graph_snapshot": "graph-snapshot-source-fixture",
+      "model_id": "BAAI/bge-m3",
+      "model_manifest_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+      "model_revision": "0123456789012345678901234567890123456789",
+      "production_qualified": false,
+      "sidecar_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    },
+    "status": "PASS"
+  },
+  "status": "QUALIFIED",
+  "target_suite": {
+    "case_count": 1,
+    "case_results": [
+      {
+        "case_id": "case-internal-fixture",
+        "component_execution": {
+          "colbert": true,
+          "dense": true,
+          "sparse": true
+        },
+        "critical": true,
+        "forbidden_leakage_record_ids": [],
+        "latency_ms": 1,
+        "missing_expected_record_ids": [],
+        "retrieved_record_ids": [
+          "record-internal-fixture"
+        ],
+        "status": "PASS"
+      }
+    ],
+    "colbert_executed": true,
+    "critical_failed_case_ids": [],
+    "dense_executed": true,
+    "failed_case_ids": [],
+    "forbidden_leakage_count": 0,
+    "max_latency_ms": 1,
+    "pass_count": 1,
+    "sparse_executed": true,
+    "status": "PASS",
+    "suite_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "suite_file_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "suite_id": "retrieval-suite-internal-fixture",
+    "suite_path": "suite.json"
+  },
+  "target_validation": {
+    "blocking_violation_count": 1,
+    "colbert_record_count": 1,
+    "dense_record_count": 1,
+    "graph_foreign_key_violation_count": 0,
+    "graph_integrity_status": "ok",
+    "label_quality_report_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "label_quality_status": "PASS_WITH_LEGACY_DEBT",
+    "lane_contamination_count": 0,
+    "legacy_debt_count": 1,
+    "pair_validation_status": "PASS",
+    "record_count": 1,
+    "retrieval_metadata_binding_contamination_count": 0,
+    "sidecar_validation_status": "PASS",
+    "sparse_record_count": 1
+  }
+}

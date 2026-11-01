@@ -1,0 +1,27 @@
+{
+  "artifact_id": "rcp-20261006-001",
+  "audience": "leadership",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "469fd3754eb50767b297233345f4592a62646f39c63277abccc7b32863c0be34"
+  },
+  "certified_at": "2026-10-06T10:05:00Z",
+  "contract_id": "urn:nee:dual-pipeline:delivery-receipt:1.0.0",
+  "contradicted_claims_count": 0,
+  "delivery_surface": "executive_briefing",
+  "extensions": {},
+  "graph_generation_id": "gen-12345",
+  "graph_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "manifest_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "manifest_id": "mnf-20261006-001",
+  "payload_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "reason_code": "GROUNDED_SUPPORTED",
+  "receipt_id": "rcp-20261006-001",
+  "runtime_root": "/tmp/runtime_root",
+  "schema_version": "1.0.0",
+  "status": "CERTIFIED",
+  "supported_claims_count": 1,
+  "total_claims_count": 1,
+  "word_count": 250
+}

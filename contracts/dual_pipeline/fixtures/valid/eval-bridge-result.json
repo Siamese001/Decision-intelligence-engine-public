@@ -1,0 +1,30 @@
+{
+  "aggregate": {"case_count": 1, "failed_case_count": 0, "graph_mutation_count": 2, "hard_gate_failure_count": 0, "passed_case_count": 1, "provider_call_count": 0},
+  "artifact_id": "eval-bridge-result-fixture",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "7f4003cc525fb459cb2b7c4bec499939e0178f45d5a794823113358d8eed40af"},
+  "case_results": [
+    {
+      "artifact_path": "fixtures/eval-bridge-result.json",
+      "case_id": "bridge-case-fixture",
+      "cause_code": null,
+      "graph_mutation_count": 2,
+      "hard_gates": {"active_generation_changed": true, "new_source_terms_retrieved_after_activation": true},
+      "ingestion_run_id": "run-ingest-fixture",
+      "post_query_run_id": "run-post-fixture",
+      "pre_query_run_id": "run-pre-fixture",
+      "provider_call_count": 0,
+      "status": "PASS"
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:eval-bridge-result:1.0.0",
+  "embedding_backend": {"assurance_tier": "development", "backend_id": "fixture-bge-m3-development", "model_id": "nee/fixture-bge-m3-development", "model_manifest_digest": null, "model_revision": "fixture-v1", "production_qualified": false},
+  "evaluated_at": "2026-08-02T00:00:00Z",
+  "evaluation_id": "eval-bridge-fixture",
+  "extensions": {},
+  "graph_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "suite_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "suite_file_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "suite_id": "eval-bridge-suite-fixture"
+}

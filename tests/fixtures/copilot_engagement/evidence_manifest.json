@@ -1,0 +1,26 @@
+{
+  "status": "INVESTIGATION_ONLY",
+  "observed_at": "2026-10-07T19:22:14.335802+00:00",
+  "source_revision": "b12e3edf914d22562b84b65be0e0d19213b444e9",
+  "branch": "docs/jarvis-lens-copilot-rca-plan-20261007",
+  "user_correction": "JARVIS and LENS are unrelated engagements.",
+  "scope": "Engineering_Jarvis_Kaleena_PartnerAdvisory afternoon incident, distinct from earlier Kickoff_Jill_PartnerAdvisory refusal",
+  "sources": [
+    {
+      "source_path": "/Users/amitayer/Git/decision-intelligence-engine/output/project_lens/10-07-2026/Engineering_Jarvis_Kaleena_PartnerAdvisory/copilot_answers.jsonl",
+      "snapshot_path": "reports/jarvis_lens_rca/incident_answers_snapshot.jsonl",
+      "sha256": "ab7ac5e3c3bfbc6549be0840ec659dfa6be339360a6143d9088a723d917dcfe8",
+      "byte_count": 7963
+    },
+    {
+      "source_path": "/Users/amitayer/Git/decision-intelligence-engine/.session_registry/e67e1fb7-a5bb-4995-b447-071e6f4870b4.json",
+      "snapshot_path": "reports/jarvis_lens_rca/session_snapshot.json",
+      "sha256": "f5d4e1e3e9e20afb94429a910b44c3d3143d3c0fbeb3c1c197ee666c03b1b215",
+      "byte_count": 572
+    }
+  ],
+  "incident_limit": "Exact pasted prose not among eight snapshotted JSONL records; original invocation/final displayed answer binding unresolved.",
+  "graph_mutations": 0,
+  "implementation_changes": 0,
+  "live_transcript_reads": 0
+}

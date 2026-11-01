@@ -1,0 +1,164 @@
+{
+  "aliases": {
+    "person_abhijit_mahishi": [
+      "abhijit.mahishi@consulting.example.com"
+    ],
+    "person_alex_sanchez": [
+      "alex.s@consulting.example.com"
+    ],
+    "person_andrew_hanson": [
+      "andrew.hanson@grid.example.com"
+    ],
+    "person_anece_elakkari": [
+      "anece.elakkari@grid.example.com"
+    ],
+    "person_aruna_chinthakindi": [
+      "aruna.chinthakindi@consulting.example.com"
+    ],
+    "person_bailey_morton": [
+      "bailey.morton@consulting.example.com",
+      "bailey.morton@grid.example.com"
+    ],
+    "person_bryce_poeter": [
+      "bryce.poeter@consulting.example.com"
+    ],
+    "person_clay_palumbo": [
+      "clay.palumbo@consulting.example.com"
+    ],
+    "person_damyn_gessler": [
+      "damyn.gessler@consulting.example.com",
+      "damyn.gessler@grid.example.com"
+    ],
+    "person_dan_okray": [
+      "dano@consulting.example.com"
+    ],
+    "person_francis_tam": [
+      "francis.tam@grid.example.com",
+      "francis.tam@enterprise.example.com"
+    ],
+    "person_gary_barmak": [
+      "gary.barmak@consulting.example.com",
+      "gary.barmak@enterprise.example.com"
+    ],
+    "person_javier_ochoa": [
+      "javier.ochoa@consulting.example.com"
+    ],
+    "person_john_tarbutton": [
+      "john.tarbutton@consulting.example.com"
+    ],
+    "person_justin_muskivitch": [
+      "justin.muskivitch@consulting.example.com",
+      "justin.muskivitch@grid.example.com"
+    ],
+    "person_kendrick_arnett": [
+      "kendrick.arnett@enterprise.example.com"
+    ],
+    "person_kristina_conley": [
+      "kristina.conley@consulting.example.com"
+    ],
+    "person_matthew_koch": [
+      "Matt Koch",
+      "matt.koch@consulting.example.com",
+      "matthew.koch@enterprise.example.com"
+    ],
+    "person_miles_erickson": [
+      "miles.erickson@consulting.example.com",
+      "miles.erickson@enterprise.example.com"
+    ],
+    "person_neil_buranakanchana": [
+      "neilb@consulting.example.com"
+    ],
+    "person_sarah_borkowski": [
+      "sarah.borkowski@consulting.example.com"
+    ],
+    "person_stephane": [
+      "Stephane",
+      "stephan.marceau@consulting.example.com",
+      "stephan.marceau@grid.example.com"
+    ],
+    "person_steve_mcgill": [
+      "steve.mcgill@grid.example.com"
+    ]
+  },
+  "attendance": "ignored entirely",
+  "excluded_opaque_accounts": [
+    "sxm0zsd@grid.example.com",
+    "cxp05it@grid.example.com",
+    "nxb0kb0@grid.example.com",
+    "mxk0t4c@grid.example.com",
+    "jxm0van@grid.example.com",
+    "dxg0dr0@grid.example.com"
+  ],
+  "identities": [
+    {
+      "action": "update_or_retain",
+      "active": 1,
+      "node_id": "person_stephane",
+      "proposed_name": "Cameron Mercer",
+      "status": "PartnerAdvisory employee; identity resolved; current authority validation remains open"
+    },
+    {
+      "action": "update_or_retain",
+      "active": 1,
+      "node_id": "person_matthew_koch",
+      "proposed_name": "Matthew Koch",
+      "status": "PartnerAdvisory employee; Matt/Matthew identity resolved; dated NEA delivery context"
+    },
+    {
+      "action": "update_or_retain",
+      "active": 1,
+      "node_id": "person_amanda_knarr",
+      "proposed_name": "Amanda Knarr",
+      "status": "canonical PartnerAdvisory EDO/Gemini contributor; formal role and authority unresolved"
+    },
+    {
+      "action": "retire_redirect",
+      "active": 0,
+      "node_id": "stakeholder_amanda_knarr",
+      "proposed_name": "Amanda Knarr",
+      "status": "merged into person_amanda_knarr"
+    },
+    {
+      "action": "update_or_retain",
+      "active": 1,
+      "node_id": "person_damyn_gessler",
+      "proposed_name": "Damyn Gessler",
+      "status": "PartnerAdvisory employee; affiliation conflict resolved; dated FlexAI delivery context"
+    },
+    {
+      "action": "add",
+      "active": 1,
+      "node_id": "person_javier_ochoa",
+      "proposed_name": "Javier Ochoa",
+      "status": "PartnerAdvisory employee; role/authority validation remains open"
+    },
+    {
+      "action": "add",
+      "active": 1,
+      "node_id": "person_sarah_borkowski",
+      "proposed_name": "Sarah Borkowski",
+      "status": "PartnerAdvisory employee; exact NEA role/workstream unresolved"
+    },
+    {
+      "action": "add",
+      "active": 1,
+      "node_id": "person_clay_palumbo",
+      "proposed_name": "Clay Palumbo",
+      "status": "former PartnerAdvisory employee; former Project Beacon lead; left PartnerAdvisory by 2026-07-13"
+    },
+    {
+      "action": "add",
+      "active": 1,
+      "node_id": "person_alberto_castagnara",
+      "proposed_name": "Alberto Castagnara",
+      "status": "PartnerAdvisory employee; Project Swarm contributor as of 2026-06-29"
+    },
+    {
+      "action": "update_or_retain",
+      "active": 1,
+      "node_id": "person_kendrick_arnett",
+      "proposed_name": "Kendrick Arnett",
+      "status": "dated delivery-team snapshot; current role validation required | v29 onboarding snapshot evidence added; current role use still requires validation"
+    }
+  ]
+}

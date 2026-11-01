@@ -1,0 +1,155 @@
+{
+  "$id": "urn:nee:dual-pipeline:query-l1-controller-eval-suite:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "baseline_suite_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "case_taxonomy": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "comparison_invariants": {
+      "additionalProperties": false,
+      "properties": {
+        "authorization_scope_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "evaluator_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "graph_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "workload_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "graph_sha256",
+        "authorization_scope_digest",
+        "workload_digest",
+        "evaluator_digest"
+      ],
+      "type": "object"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:query-l1-controller-eval-suite:1.0.0"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "suite_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "thresholds": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum_graph_mutations": {
+          "const": 0,
+          "type": "integer"
+        },
+        "maximum_provider_calls": {
+          "const": 0,
+          "type": "integer"
+        },
+        "minimum_recovery_rate": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "maximum_provider_calls",
+        "maximum_graph_mutations",
+        "minimum_recovery_rate"
+      ],
+      "type": "object"
+    },
+    "treatments": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "mode": {
+            "enum": [
+              "off",
+              "shadow",
+              "bounded"
+            ]
+          },
+          "policy_digest": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "treatment_id": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "treatment_id",
+          "mode",
+          "policy_digest"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "suite_id",
+    "baseline_suite_digest",
+    "case_taxonomy",
+    "treatments",
+    "comparison_invariants",
+    "thresholds"
+  ],
+  "title": "L1 controller evaluation suite",
+  "type": "object"
+}

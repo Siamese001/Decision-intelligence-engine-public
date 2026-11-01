@@ -1,0 +1,23 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "learning-proposal-matt-k-alias",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "2ccfd568c19882fe4d4ce2884b01394795fd9d53c393c80c8774f06734233fec"
+  },
+  "proposal_id": "learning-proposal-matt-k-alias",
+  "run_ids": ["run-intake-nea-update-2026-07-21"],
+  "proposal_type": "alias_addition",
+  "status": "proposed",
+  "problem": "Repeated partial-name mentions require the same identity review.",
+  "evidence_event_ids": ["event-entity-resolution-matt-k", "event-hitl-matt-k-hold"],
+  "proposed_change": "Evaluate a governed Matt K alias only after stable identity evidence is supplied.",
+  "evaluation_plan": ["Add the ambiguity to the entity-resolution golden set", "Compare false-link rate before and after the proposed alias"],
+  "risk": "high",
+  "approval_required": true,
+  "auto_apply": false,
+  "created_at": "2026-07-21T15:10:00Z",
+  "extensions": {}
+}

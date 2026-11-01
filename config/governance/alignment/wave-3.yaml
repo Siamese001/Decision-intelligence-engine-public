@@ -1,0 +1,28 @@
+wave_id: "Wave 3: Align generation and grading contracts"
+wave_number: 3
+governance: "NEE-KG-ALIGNMENT-03"
+plan_path: "docs/plans/docs_pipeline_alignment_debate_plan_20261006.md"
+ledger_path: "hitl_decision_ledger.json"
+surface_catalog: "config/governance/alignment/surface_catalog.yaml"
+required_prior_lock: "reports/alignment/wave-2.lock"
+
+acceptance_criteria:
+  - "Unify machine-verifiable obligations while retaining editorial guidance"
+  - "Resolve recap mandatory-versus-conditional ledger and owner contradictions"
+  - "Every cataloged generator and grader uses the same applicable contract"
+  - "Mutation tests detect changed obligations, weights, and overrides; harmless prose changes remain allowed"
+  - "Fingerprint the effective assembled bundle, not only the master template"
+  - "Owner rules enforce single named DRI standard with zero 'Unassigned' tolerance"
+  - "Predecessor verification cryptographically confirms Wave 2 lock"
+
+test_suites:
+  - "tests/end_to_end/test_alignment_w3_e2e.py"
+  - "tests/test_alignment_w3_adversarial.py"
+
+artifacts:
+  - "dual_pipeline/l0/prompt_contract.py"
+  - "dual_pipeline/prompts/contracts/output2_contract.py"
+  - "config/prompts/synthesis/stages/02_executive_recap.md"
+  - "governance/decision_intelligence/EXECUTIVE_RECAP_JUDGE_PROMPT.md"
+  - "tools/lint_contract_parity.py"
+  - "config/governance/alignment/wave-3.yaml"

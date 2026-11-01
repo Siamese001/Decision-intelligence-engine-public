@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:eval-run-result:2.0.0",
+  "title": "NEE sealed measured workflow evaluation result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "evaluation_id", "suite_id", "suite_digest", "suite_file_sha256", "subject", "workload_id", "workload_sha256", "measurement_profile", "experiment_manifest", "treatment_id", "case_results", "aggregate", "thresholds", "status", "evaluated_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:eval-run-result:2.0.0"},
+    "schema_version": {"const": "2.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "evaluation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "suite_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "suite_file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "subject": {"const": "workflow_replay"},
+    "workload_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "workload_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "measurement_profile": {"type": "string", "enum": ["deterministic_structural", "live_usage"]},
+    "experiment_manifest": {"$ref": "urn:nee:dual-pipeline:eval-run-result:2.0.0#/$defs/experimentManifest"},
+    "treatment_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "case_results": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:eval-run-result:2.0.0#/$defs/caseResult"}},
+    "aggregate": {"$ref": "urn:nee:dual-pipeline:eval-run-result:2.0.0#/$defs/aggregate"},
+    "thresholds": {"$ref": "urn:nee:dual-pipeline:eval-run-result:2.0.0#/$defs/thresholds"},
+    "status": {"type": "string", "enum": ["PASS", "FAIL", "MEASUREMENT_INVALID"]},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "invariantBindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["graph_sha256", "evidence_corpus_digest", "provider_id", "model_id", "model_revision", "authorization_digest", "business_policy_digest", "tokenizer_digest", "pricing_schedule_digest", "cache_protocol_digest"],
+      "properties": {
+        "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "evidence_corpus_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "provider_id": {"type": "string", "minLength": 1, "maxLength": 128},
+        "model_id": {"type": "string", "minLength": 1, "maxLength": 128},
+        "model_revision": {"type": "string", "minLength": 1, "maxLength": 128},
+        "authorization_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "business_policy_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "tokenizer_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "pricing_schedule_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "cache_protocol_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "treatment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["treatment_id", "history_policy", "tool_output_policy", "budget_enforced", "no_progress_limit", "feature_path"],
+      "properties": {
+        "treatment_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "history_policy": {"type": "string", "enum": ["bounded", "append_completed"]},
+        "tool_output_policy": {"type": "string", "enum": ["externalize", "inline"]},
+        "budget_enforced": {"type": "boolean"},
+        "no_progress_limit": {"type": "integer", "minimum": 1, "maximum": 20},
+        "feature_path": {"type": "string", "enum": ["candidate", "legacy"]}
+      }
+    },
+    "experimentManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["invariant_bindings", "invariant_bindings_digest", "treatment_bindings", "evaluator_version", "evaluator_digest", "threshold_policy_digest"],
+      "properties": {
+        "invariant_bindings": {"$ref": "urn:nee:dual-pipeline:eval-run-result:2.0.0#/$defs/invariantBindings"},
+        "invariant_bindings_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "treatment_bindings": {"$ref": "urn:nee:dual-pipeline:eval-run-result:2.0.0#/$defs/treatment"},
+        "evaluator_version": {"type": "string", "minLength": 3, "maxLength": 128},
+        "evaluator_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "threshold_policy_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "caseResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "critical", "status", "cause_codes", "hard_gates", "measurement_artifact_id", "measurement_digest", "measurement_path", "terminal_class", "provider_call_count", "progress_unit_count", "microcredits"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "critical": {"type": "boolean"},
+        "status": {"type": "string", "enum": ["PASS", "FAIL", "MEASUREMENT_INVALID"]},
+        "cause_codes": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,127}$"}},
+        "hard_gates": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "boolean"}},
+        "measurement_artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "measurement_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "measurement_path": {"type": "string", "minLength": 1, "maxLength": 1024},
+        "terminal_class": {"type": "string", "enum": ["COMPLETED", "BLOCKED", "HITL_REQUIRED", "FAILED"]},
+        "provider_call_count": {"type": "integer", "minimum": 0},
+        "progress_unit_count": {"type": "integer", "minimum": 0},
+        "microcredits": {"type": "integer", "minimum": 0}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_count", "passed_case_count", "failed_case_count", "invalid_case_count", "critical_case_failure_count", "provider_call_count", "progress_unit_count", "input_tokens", "cached_input_tokens", "uncached_input_tokens", "output_tokens", "microcredits", "microcredits_per_progress_unit", "request_serialized_bytes_max", "request_serialized_bytes_p95", "max_post_warmup_growth_percent_per_node", "max_completed_history_bytes", "max_raw_tool_output_bytes", "max_previous_compiled_prompt_bytes", "usage_completeness", "hard_gate_failure_count"],
+      "properties": {
+        "case_count": {"type": "integer", "minimum": 1},
+        "passed_case_count": {"type": "integer", "minimum": 0},
+        "failed_case_count": {"type": "integer", "minimum": 0},
+        "invalid_case_count": {"type": "integer", "minimum": 0},
+        "critical_case_failure_count": {"type": "integer", "minimum": 0},
+        "provider_call_count": {"type": "integer", "minimum": 0},
+        "progress_unit_count": {"type": "integer", "minimum": 0},
+        "input_tokens": {"type": "integer", "minimum": 0},
+        "cached_input_tokens": {"type": "integer", "minimum": 0},
+        "uncached_input_tokens": {"type": "integer", "minimum": 0},
+        "output_tokens": {"type": "integer", "minimum": 0},
+        "microcredits": {"type": "integer", "minimum": 0},
+        "microcredits_per_progress_unit": {"type": "number", "minimum": 0},
+        "request_serialized_bytes_max": {"type": "integer", "minimum": 0},
+        "request_serialized_bytes_p95": {"type": "integer", "minimum": 0},
+        "max_post_warmup_growth_percent_per_node": {"type": "number"},
+        "max_completed_history_bytes": {"type": "integer", "minimum": 0},
+        "max_raw_tool_output_bytes": {"type": "integer", "minimum": 0},
+        "max_previous_compiled_prompt_bytes": {"type": "integer", "minimum": 0},
+        "usage_completeness": {"type": "number", "minimum": 0, "maximum": 1},
+        "hard_gate_failure_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_usage_completeness", "maximum_completed_history_bytes", "maximum_raw_tool_output_bytes", "maximum_previous_compiled_prompt_bytes", "maximum_growth_bytes_per_node", "maximum_growth_percent_per_node", "maximum_last_to_node10_ratio", "maximum_e5_return_bytes", "minimum_credit_improvement_fraction"],
+      "properties": {
+        "minimum_usage_completeness": {"type": "number", "minimum": 0, "maximum": 1},
+        "maximum_completed_history_bytes": {"const": 0},
+        "maximum_raw_tool_output_bytes": {"const": 0},
+        "maximum_previous_compiled_prompt_bytes": {"const": 0},
+        "maximum_growth_bytes_per_node": {"type": "number", "minimum": 0},
+        "maximum_growth_percent_per_node": {"type": "number", "minimum": 0},
+        "maximum_last_to_node10_ratio": {"type": "number", "minimum": 1},
+        "maximum_e5_return_bytes": {"type": "integer", "minimum": 0},
+        "minimum_credit_improvement_fraction": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    }
+  }
+}

@@ -1,0 +1,866 @@
+{
+  "pipeline_name": "CanonicalAgenticPipeline",
+  "framework": "U0 -> L1 -> L0 -> C0-PA -> L2 -> X1-X3 (exit) -> evals",
+  "input_path": "intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+  "input_hash": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+  "config_sha256": "113c98489e54c7412d5e05e2c914729be8cc717dbaa95d69f74e8857d79f86b2",
+  "parameters_digest": "c049c979bc041d8c855e548d7f61fee506a02a1e5fd5d12d8bb7f0daa6cb7add",
+  "session_id": "",
+  "attempt_id": "",
+  "started_at": "2026-10-12T18:52:08.510560+00:00",
+  "ended_at": "2026-10-12T18:54:11.995866+00:00",
+  "monotonic_duration_s": 123.482099,
+  "episode_wall_clock_s": 123.482099,
+  "inter_run_gap_s": 0.0,
+  "approval_wait_s": 0.0,
+  "timestamp": "2026-10-12T18:54:11.996582+00:00",
+  "stages": {
+    "U0": {
+      "status": "PASS",
+      "started_at": "2026-10-12T18:52:08.511508+00:00",
+      "ended_at": "2026-10-12T18:52:12.295394+00:00",
+      "duration_ms": 3783.784,
+      "monotonic_duration_s": 3.783784,
+      "session_id": "",
+      "attempt_id": "",
+      "details": {
+        "input_hash": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "char_count": 681
+      },
+      "finished_at": "2026-10-12T18:52:12.295394+00:00",
+      "correlation": {
+        "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+        "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+        "pipeline.name": "CanonicalAgenticPipeline",
+        "pipeline.stage": "U0",
+        "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "stage.status": "PASS"
+      }
+    },
+    "L1": {
+      "status": "PASS",
+      "started_at": "2026-10-12T18:52:12.305649+00:00",
+      "ended_at": "2026-10-12T18:52:12.317446+00:00",
+      "duration_ms": 11.792,
+      "monotonic_duration_s": 0.011792,
+      "session_id": "",
+      "attempt_id": "",
+      "details": {
+        "modality": "DOCUMENT",
+        "deliverables": [
+          "03"
+        ]
+      },
+      "finished_at": "2026-10-12T18:52:12.317446+00:00",
+      "correlation": {
+        "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+        "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+        "pipeline.name": "CanonicalAgenticPipeline",
+        "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "pipeline.stage": "L1",
+        "stage.status": "PASS"
+      }
+    },
+    "L0": {
+      "status": "PASS",
+      "started_at": "2026-10-12T18:52:12.321737+00:00",
+      "ended_at": "2026-10-12T18:52:12.542304+00:00",
+      "duration_ms": 220.556,
+      "monotonic_duration_s": 0.220556,
+      "session_id": "",
+      "attempt_id": "",
+      "details": {
+        "output_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/output/bmo/10-12-2026/James_Beebe_Business_Management_Chad"
+      },
+      "finished_at": "2026-10-12T18:52:12.542304+00:00",
+      "correlation": {
+        "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+        "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+        "pipeline.name": "CanonicalAgenticPipeline",
+        "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "pipeline.stage": "L0",
+        "stage.status": "PASS"
+      }
+    },
+    "C0-PA": {
+      "status": "PASS",
+      "started_at": "2026-10-12T18:52:12.543565+00:00",
+      "ended_at": "2026-10-12T18:52:12.550744+00:00",
+      "duration_ms": 7.175,
+      "monotonic_duration_s": 0.007175,
+      "session_id": "",
+      "attempt_id": "",
+      "details": {
+        "keys": [
+          "metadata",
+          "presentation_path",
+          "output_dir"
+        ]
+      },
+      "finished_at": "2026-10-12T18:52:12.550744+00:00",
+      "correlation": {
+        "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+        "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+        "pipeline.name": "CanonicalAgenticPipeline",
+        "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "pipeline.stage": "C0-PA",
+        "stage.status": "PASS"
+      }
+    },
+    "L2": {
+      "status": "PASS",
+      "started_at": "2026-10-12T18:52:12.560886+00:00",
+      "ended_at": "2026-10-12T18:54:10.809366+00:00",
+      "duration_ms": 118245.41,
+      "monotonic_duration_s": 118.24541,
+      "session_id": "",
+      "attempt_id": "",
+      "details": {
+        "attempts": 1,
+        "document_resume": {
+          "reused_synthesis": false,
+          "reason": "NEW_CHECKPOINT",
+          "binding_sha256": "7b3dba63517cac5718d533cc684806ff06870f197ac0e13cdd9840be11e5fb31",
+          "checkpoint": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline/checkpoints/document_8980586b5e8de0bf8cb248713ae2cded649e46ff9ee2cfc29bb5e875c318e50f.json"
+        },
+        "transcript_resume": null
+      },
+      "finished_at": "2026-10-12T18:54:10.809366+00:00",
+      "correlation": {
+        "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+        "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+        "pipeline.name": "CanonicalAgenticPipeline",
+        "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "pipeline.stage": "L2",
+        "stage.status": "PASS"
+      }
+    },
+    "X1-X3": {
+      "status": "PASS",
+      "started_at": "2026-10-12T18:54:10.812754+00:00",
+      "ended_at": "2026-10-12T18:54:10.815214+00:00",
+      "duration_ms": 2.456,
+      "monotonic_duration_s": 0.002456,
+      "session_id": "",
+      "attempt_id": "",
+      "details": {},
+      "finished_at": "2026-10-12T18:54:10.815214+00:00",
+      "correlation": {
+        "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+        "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+        "pipeline.name": "CanonicalAgenticPipeline",
+        "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "pipeline.stage": "X1-X3",
+        "stage.status": "PASS"
+      }
+    },
+    "EVALS": {
+      "status": "PASS",
+      "started_at": "2026-10-12T18:54:10.833963+00:00",
+      "ended_at": "2026-10-12T18:54:11.789033+00:00",
+      "duration_ms": 955.042,
+      "monotonic_duration_s": 0.955042,
+      "session_id": "",
+      "attempt_id": "",
+      "details": {
+        "tier1_scout": {
+          "ran": true,
+          "findings_count": 87,
+          "proposals_emitted": 67,
+          "elapsed_ms": 144.58,
+          "skipped_reason": null
+        },
+        "intake_package": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/output/bmo/10-12-2026/.staging_James_Beebe_Business_Management_Chad_dbfb3149/intake_package.json",
+        "graph_mutated": false,
+        "mutation_error": null,
+        "mutation_status": null,
+        "retrieval_completion": {
+          "status": "NOT_REQUESTED"
+        },
+        "publication_coverage_verified": false,
+        "lifecycle_state": "PACKAGE_READY"
+      },
+      "finished_at": "2026-10-12T18:54:11.789033+00:00",
+      "correlation": {
+        "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+        "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+        "pipeline.name": "CanonicalAgenticPipeline",
+        "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "pipeline.stage": "EVALS",
+        "stage.status": "PASS"
+      }
+    }
+  },
+  "terminal_outcome": "PACKAGE_READY",
+  "remediation_cycles": [],
+  "timing_breakdown": {
+    "child_spans_s": {
+      "source_discovery": 3.756443,
+      "source_assembly": 3.766961,
+      "extraction": 79.618942,
+      "judge": 38.454917,
+      "validation": 0.00589
+    },
+    "exclusive_accounting": {
+      "measured_pipeline_ms": 123482.099,
+      "parent_stages_sum_ms": 123226.215,
+      "critical_path_ms": 121850.709,
+      "child_spans_critical_path_ms": 121850.709,
+      "aggregate_worker_ms": 125603.153,
+      "child_spans_aggregate_worker_ms": 125603.153,
+      "child_span_count": 7,
+      "child_spans_by_name": {
+        "source_assembly": [
+          {
+            "started_at": "2026-10-12T18:52:08.516284+00:00",
+            "finished_at": "2026-10-12T18:52:12.283348+00:00",
+            "duration_ms": 3766.961,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "pipeline.stage": "U0",
+              "span.kind": "child",
+              "child.name": "source_assembly",
+              "parent.stage": "U0",
+              "has_presentation": false
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "source_assembly",
+            "parent_stage": "U0"
+          }
+        ],
+        "source_discovery": [
+          {
+            "started_at": "2026-10-12T18:52:08.516432+00:00",
+            "finished_at": "2026-10-12T18:52:08.541958+00:00",
+            "duration_ms": 25.52,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "pipeline.stage": "U0",
+              "span.kind": "child",
+              "child.name": "source_discovery",
+              "parent.stage": "U0",
+              "has_presentation": false,
+              "source_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "source_discovery",
+            "parent_stage": "U0"
+          },
+          {
+            "started_at": "2026-10-12T18:52:08.542562+00:00",
+            "finished_at": "2026-10-12T18:52:12.272783+00:00",
+            "duration_ms": 3730.11,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "pipeline.stage": "U0",
+              "span.kind": "child",
+              "child.name": "source_discovery",
+              "parent.stage": "U0",
+              "has_presentation": false,
+              "input_source": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "source_discovery",
+            "parent_stage": "U0"
+          },
+          {
+            "started_at": "2026-10-12T18:52:12.306527+00:00",
+            "finished_at": "2026-10-12T18:52:12.307346+00:00",
+            "duration_ms": 0.813,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+              "pipeline.stage": "L1",
+              "span.kind": "child",
+              "child.name": "source_discovery",
+              "parent.stage": "L1",
+              "input_source": "intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "source_discovery",
+            "parent_stage": "L1"
+          }
+        ],
+        "extraction": [
+          {
+            "started_at": "2026-10-12T18:52:12.677983+00:00",
+            "finished_at": "2026-10-12T18:53:32.298995+00:00",
+            "duration_ms": 79618.942,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+              "pipeline.stage": "L2",
+              "attempt": 1,
+              "span.kind": "child",
+              "child.name": "extraction",
+              "parent.stage": "L2",
+              "modality": "CanonicalModality.DOCUMENT"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "extraction",
+            "parent_stage": "L2"
+          }
+        ],
+        "judge": [
+          {
+            "started_at": "2026-10-12T18:53:32.299497+00:00",
+            "finished_at": "2026-10-12T18:54:10.755417+00:00",
+            "duration_ms": 38454.917,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+              "pipeline.stage": "L2",
+              "attempt": 1,
+              "span.kind": "child",
+              "child.name": "judge",
+              "parent.stage": "L2",
+              "judge_model": "gpt-6-luna"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "judge",
+            "parent_stage": "L2"
+          }
+        ],
+        "validation": [
+          {
+            "started_at": "2026-10-12T18:54:10.812862+00:00",
+            "finished_at": "2026-10-12T18:54:10.818755+00:00",
+            "duration_ms": 5.89,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+              "pipeline.stage": "X1-X3",
+              "span.kind": "child",
+              "child.name": "validation",
+              "parent.stage": "X1-X3",
+              "attempt": 1,
+              "stage": "X_EXIT_GATES"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "validation",
+            "parent_stage": "X1-X3"
+          }
+        ]
+      },
+      "unmeasured_residual_ms": 1375.506,
+      "overlapping_spans": [
+        {
+          "span_a": "source_assembly",
+          "span_b": "source_discovery",
+          "overlap_start": "2026-10-12T18:52:08.516432+00:00",
+          "overlap_end": "2026-10-12T18:52:08.541958+00:00",
+          "overlap_duration_ms": 25.526
+        },
+        {
+          "span_a": "source_assembly",
+          "span_b": "source_discovery",
+          "overlap_start": "2026-10-12T18:52:08.542562+00:00",
+          "overlap_end": "2026-10-12T18:52:12.272783+00:00",
+          "overlap_duration_ms": 3730.221
+        }
+      ],
+      "has_overlaps": true,
+      "duration_accounting": "exclusive; child spans are itemized separately and not added to parent stage totals"
+    },
+    "active_compute_s": 0.255884
+  },
+  "output_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911",
+  "metadata": {
+    "project": "bmo",
+    "title": "James Beebe Business Management Office Product R&D Org Structure",
+    "date": "10/12/2026",
+    "classification": "restricted",
+    "author": "Chad Aussprung",
+    "force_rerun": false,
+    "allow_duplicate": false,
+    "no_subfolder": false,
+    "progress_mode": "auto",
+    "enforce_worktree": true,
+    "resume": false,
+    "dry_run": false,
+    "dry_run_graph": false,
+    "mutate_graph": true,
+    "backtest": false,
+    "runtime_root": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline",
+    "allow_visual_image": true,
+    "enable_visual_ocr": true,
+    "is_visual_document": true,
+    "outputs": [
+      "03"
+    ],
+    "is_document": true,
+    "canonical_modality": "DOCUMENT",
+    "output3_only": true,
+    "skip_output_1": true,
+    "skip_output_2": true,
+    "input_path": "intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+    "input_ext": ".png",
+    "package_only": true,
+    "provider_type": "llm",
+    "provider": "llm",
+    "directive_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+    "auto_mutate_on_pass": false,
+    "extraction_effort": "high",
+    "judge_effort": "high",
+    "_extraction_execution": {
+      "status": "COMPLETED",
+      "provider_type": "llm",
+      "requested_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "declared_revision": null,
+      "effective_model": "gpt-6-luna",
+      "effective_effort": "high",
+      "resolved_model": "gpt-6-luna",
+      "dispatched_model": "gpt-6-luna",
+      "observed_model": "gpt-6-luna",
+      "evidence_strength": "OBSERVED_RESPONSE",
+      "model_identity": "response",
+      "operation": "extraction"
+    },
+    "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+    "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+    "execution_evidence_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/pipeline_execution_receipt.json",
+    "authoritative_receipt_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/pipeline_execution_receipt.json",
+    "deliverable_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/output/bmo/10-12-2026/James_Beebe_Business_Management_Chad",
+    "deliverable_receipt_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/output/bmo/10-12-2026/James_Beebe_Business_Management_Chad/pipeline_execution_receipt.json",
+    "persisted_artifacts": {
+      "03_James_Beebe_Business_Management_Chad_10-12-2026_0252PM_ET_canonical_signal_projection.json": {
+        "filename": "03_James_Beebe_Business_Management_Chad_10-12-2026_0252PM_ET_canonical_signal_projection.json",
+        "sha256": "ece829ecad9d36d1eb18017438414026fbda272954ff4f941725497658c2d2be",
+        "size_bytes": 17346,
+        "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/03_James_Beebe_Business_Management_Chad_10-12-2026_0252PM_ET_canonical_signal_projection.json"
+      },
+      "final_release_decision.json": {
+        "filename": "final_release_decision.json",
+        "sha256": "50e9620f789d24319690862c1046340c0f85dede0fe9961e3045859930933511",
+        "size_bytes": 1222,
+        "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/final_release_decision.json"
+      },
+      "graph_mutation_breakdown.md": {
+        "filename": "graph_mutation_breakdown.md",
+        "sha256": "c59ebde6e7d37678fbd736ba1d37604bcc3c7729e9efef6031a7c99e0fd047b2",
+        "size_bytes": 1819,
+        "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/graph_mutation_breakdown.md"
+      },
+      "intake_package.json": {
+        "filename": "intake_package.json",
+        "sha256": "287d1bf8aa925f26c6e3f23ec00ef2fbdb18f387474c630823ac6f932305cc67",
+        "size_bytes": 16154,
+        "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/intake_package.json"
+      },
+      "llm_judge_evaluation.json": {
+        "filename": "llm_judge_evaluation.json",
+        "sha256": "64cdaef8066b5d09a76a342f4e3d0d5ae79fc408dc8bf46cc0c8a9f197ad648f",
+        "size_bytes": 4158,
+        "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/llm_judge_evaluation.json"
+      },
+      "metadata.json": {
+        "filename": "metadata.json",
+        "sha256": "b5bcfaed6e7cdf7b7aa77681f3d1baf0634bc7affef3fdcda6555f48f0affaaa",
+        "size_bytes": 9260,
+        "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/metadata.json"
+      },
+      "qa_gates_report.json": {
+        "filename": "qa_gates_report.json",
+        "sha256": "1bd95c26a1151610f7f7de516970328e96d414434db6aced9823802b0afee6d5",
+        "size_bytes": 26110,
+        "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/qa_gates_report.json"
+      },
+      "source_document.txt": {
+        "filename": "source_document.txt",
+        "sha256": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "size_bytes": 681,
+        "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/source_document.txt"
+      },
+      "source_manifest.json": {
+        "filename": "source_manifest.json",
+        "sha256": "ac86636af4a0b5b6ecf1e984f6a614b00b003c4ef068398d12178812e9e9dbbb",
+        "size_bytes": 1479,
+        "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/source_manifest.json"
+      }
+    },
+    "persisted_artifacts_dir": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts",
+    "source_evidence": {
+      "input_path": "intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+      "input_hash": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+      "source_modality": "CanonicalModality.DOCUMENT",
+      "raw_source_sha256": "a46cbf74b141650533e8e398568040bd2810dbcb9be1137e25a5b01012c383cb",
+      "source_classification": "CONFIDENTIAL",
+      "attachments": []
+    },
+    "operator_answers": []
+  },
+  "token_usage": {
+    "call_count": 2,
+    "total_prompt_tokens": 14910,
+    "cached_prompt_tokens": 7770,
+    "cache_write_tokens": 7134,
+    "uncached_prompt_tokens": 6,
+    "total_completion_tokens": 13017,
+    "reasoning_tokens": 9091,
+    "total_tokens": 27927
+  },
+  "cost_usd": 0.005075,
+  "correlation": {
+    "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+    "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+    "pipeline.name": "CanonicalAgenticPipeline",
+    "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a"
+  },
+  "execution_timing": {
+    "started_at": "2026-10-12T18:52:08.510560+00:00",
+    "finished_at": "2026-10-12T18:54:11.995866+00:00",
+    "duration_ms": 123482.099,
+    "status": "PACKAGE_READY",
+    "correlation": {
+      "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+      "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+      "pipeline.name": "CanonicalAgenticPipeline",
+      "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a"
+    },
+    "duration_clock": "perf_counter_ns",
+    "duration_accounting": "inclusive",
+    "measurement_state": "FINAL",
+    "is_preterminal_snapshot": false,
+    "exclusive_accounting": {
+      "measured_pipeline_ms": 123482.099,
+      "parent_stages_sum_ms": 123226.215,
+      "critical_path_ms": 121850.709,
+      "child_spans_critical_path_ms": 121850.709,
+      "aggregate_worker_ms": 125603.153,
+      "child_spans_aggregate_worker_ms": 125603.153,
+      "child_span_count": 7,
+      "child_spans_by_name": {
+        "source_assembly": [
+          {
+            "started_at": "2026-10-12T18:52:08.516284+00:00",
+            "finished_at": "2026-10-12T18:52:12.283348+00:00",
+            "duration_ms": 3766.961,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "pipeline.stage": "U0",
+              "span.kind": "child",
+              "child.name": "source_assembly",
+              "parent.stage": "U0",
+              "has_presentation": false
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "source_assembly",
+            "parent_stage": "U0"
+          }
+        ],
+        "source_discovery": [
+          {
+            "started_at": "2026-10-12T18:52:08.516432+00:00",
+            "finished_at": "2026-10-12T18:52:08.541958+00:00",
+            "duration_ms": 25.52,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "pipeline.stage": "U0",
+              "span.kind": "child",
+              "child.name": "source_discovery",
+              "parent.stage": "U0",
+              "has_presentation": false,
+              "source_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "source_discovery",
+            "parent_stage": "U0"
+          },
+          {
+            "started_at": "2026-10-12T18:52:08.542562+00:00",
+            "finished_at": "2026-10-12T18:52:12.272783+00:00",
+            "duration_ms": 3730.11,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "pipeline.stage": "U0",
+              "span.kind": "child",
+              "child.name": "source_discovery",
+              "parent.stage": "U0",
+              "has_presentation": false,
+              "input_source": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "source_discovery",
+            "parent_stage": "U0"
+          },
+          {
+            "started_at": "2026-10-12T18:52:12.306527+00:00",
+            "finished_at": "2026-10-12T18:52:12.307346+00:00",
+            "duration_ms": 0.813,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+              "pipeline.stage": "L1",
+              "span.kind": "child",
+              "child.name": "source_discovery",
+              "parent.stage": "L1",
+              "input_source": "intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "source_discovery",
+            "parent_stage": "L1"
+          }
+        ],
+        "extraction": [
+          {
+            "started_at": "2026-10-12T18:52:12.677983+00:00",
+            "finished_at": "2026-10-12T18:53:32.298995+00:00",
+            "duration_ms": 79618.942,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+              "pipeline.stage": "L2",
+              "attempt": 1,
+              "span.kind": "child",
+              "child.name": "extraction",
+              "parent.stage": "L2",
+              "modality": "CanonicalModality.DOCUMENT"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "extraction",
+            "parent_stage": "L2"
+          }
+        ],
+        "judge": [
+          {
+            "started_at": "2026-10-12T18:53:32.299497+00:00",
+            "finished_at": "2026-10-12T18:54:10.755417+00:00",
+            "duration_ms": 38454.917,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+              "pipeline.stage": "L2",
+              "attempt": 1,
+              "span.kind": "child",
+              "child.name": "judge",
+              "parent.stage": "L2",
+              "judge_model": "gpt-6-luna"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "judge",
+            "parent_stage": "L2"
+          }
+        ],
+        "validation": [
+          {
+            "started_at": "2026-10-12T18:54:10.812862+00:00",
+            "finished_at": "2026-10-12T18:54:10.818755+00:00",
+            "duration_ms": 5.89,
+            "status": "PASS",
+            "correlation": {
+              "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+              "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+              "pipeline.name": "CanonicalAgenticPipeline",
+              "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+              "pipeline.stage": "X1-X3",
+              "span.kind": "child",
+              "child.name": "validation",
+              "parent.stage": "X1-X3",
+              "attempt": 1,
+              "stage": "X_EXIT_GATES"
+            },
+            "duration_clock": "perf_counter_ns",
+            "duration_accounting": "exclusive",
+            "measurement_state": "FINAL",
+            "child_name": "validation",
+            "parent_stage": "X1-X3"
+          }
+        ]
+      },
+      "unmeasured_residual_ms": 1375.506,
+      "overlapping_spans": [
+        {
+          "span_a": "source_assembly",
+          "span_b": "source_discovery",
+          "overlap_start": "2026-10-12T18:52:08.516432+00:00",
+          "overlap_end": "2026-10-12T18:52:08.541958+00:00",
+          "overlap_duration_ms": 25.526
+        },
+        {
+          "span_a": "source_assembly",
+          "span_b": "source_discovery",
+          "overlap_start": "2026-10-12T18:52:08.542562+00:00",
+          "overlap_end": "2026-10-12T18:52:12.272783+00:00",
+          "overlap_duration_ms": 3730.221
+        }
+      ],
+      "has_overlaps": true,
+      "duration_accounting": "exclusive; child spans are itemized separately and not added to parent stage totals"
+    },
+    "authoritative_receipt_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/pipeline_execution_receipt.json",
+    "episode_wall_clock_s": 123.482099,
+    "inter_run_gap_s": 0.0,
+    "approval_wait_s": 0.0
+  },
+  "attempts": [
+    {
+      "attempt_id": 1,
+      "parent_attempt_id": null,
+      "request_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+      "run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+      "started_at": "2026-10-12T18:52:12.677943+00:00",
+      "finished_at": "2026-10-12T18:54:10.763224+00:00",
+      "duration_ms": 118082.215,
+      "status": "PASS",
+      "terminal_outcome": "COMPLETE",
+      "retry_cause": null,
+      "input_digest": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+      "artifact_digest": "",
+      "model_digest": "",
+      "code_digest": "",
+      "policy_digest": "",
+      "resume_decision": null,
+      "provider_calls": [],
+      "attributes": {}
+    }
+  ],
+  "source_evidence": {
+    "input_path": "intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+    "input_hash": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+    "source_modality": "CanonicalModality.DOCUMENT",
+    "raw_source_sha256": "a46cbf74b141650533e8e398568040bd2810dbcb9be1137e25a5b01012c383cb",
+    "source_classification": "CONFIDENTIAL",
+    "attachments": []
+  },
+  "operator_answers": [],
+  "artifacts": {
+    "03_James_Beebe_Business_Management_Chad_10-12-2026_0252PM_ET_canonical_signal_projection.json": {
+      "filename": "03_James_Beebe_Business_Management_Chad_10-12-2026_0252PM_ET_canonical_signal_projection.json",
+      "sha256": "ece829ecad9d36d1eb18017438414026fbda272954ff4f941725497658c2d2be",
+      "size_bytes": 17346,
+      "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/03_James_Beebe_Business_Management_Chad_10-12-2026_0252PM_ET_canonical_signal_projection.json"
+    },
+    "final_release_decision.json": {
+      "filename": "final_release_decision.json",
+      "sha256": "50e9620f789d24319690862c1046340c0f85dede0fe9961e3045859930933511",
+      "size_bytes": 1222,
+      "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/final_release_decision.json"
+    },
+    "graph_mutation_breakdown.md": {
+      "filename": "graph_mutation_breakdown.md",
+      "sha256": "c59ebde6e7d37678fbd736ba1d37604bcc3c7729e9efef6031a7c99e0fd047b2",
+      "size_bytes": 1819,
+      "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/graph_mutation_breakdown.md"
+    },
+    "intake_package.json": {
+      "filename": "intake_package.json",
+      "sha256": "287d1bf8aa925f26c6e3f23ec00ef2fbdb18f387474c630823ac6f932305cc67",
+      "size_bytes": 16154,
+      "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/intake_package.json"
+    },
+    "llm_judge_evaluation.json": {
+      "filename": "llm_judge_evaluation.json",
+      "sha256": "64cdaef8066b5d09a76a342f4e3d0d5ae79fc408dc8bf46cc0c8a9f197ad648f",
+      "size_bytes": 4158,
+      "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/llm_judge_evaluation.json"
+    },
+    "metadata.json": {
+      "filename": "metadata.json",
+      "sha256": "b5bcfaed6e7cdf7b7aa77681f3d1baf0634bc7affef3fdcda6555f48f0affaaa",
+      "size_bytes": 9260,
+      "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/metadata.json"
+    },
+    "qa_gates_report.json": {
+      "filename": "qa_gates_report.json",
+      "sha256": "1bd95c26a1151610f7f7de516970328e96d414434db6aced9823802b0afee6d5",
+      "size_bytes": 26110,
+      "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/qa_gates_report.json"
+    },
+    "source_document.txt": {
+      "filename": "source_document.txt",
+      "sha256": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+      "size_bytes": 681,
+      "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/source_document.txt"
+    },
+    "source_manifest.json": {
+      "filename": "source_manifest.json",
+      "sha256": "ac86636af4a0b5b6ecf1e984f6a614b00b003c4ef068398d12178812e9e9dbbb",
+      "size_bytes": 1479,
+      "persisted_path": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts/source_manifest.json"
+    }
+  },
+  "persisted_artifacts_dir": "/Users/amitayer/Git/decision-intelligence-engine/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/artifacts",
+  "measurement_state": "FINAL",
+  "is_preterminal_snapshot": false,
+  "authoritative_receipt_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline/executions/6b9cb78ed57e44ba863481cf2afcc911/pipeline_execution_receipt.json",
+  "authoritative_run_id": "6b9cb78ed57e44ba863481cf2afcc911",
+  "measurement_scope": {
+    "start": "execution scope after preflight and lock acquisition",
+    "end": "execution scope exit after publication and compliance checks",
+    "excluded": [
+      "metadata setup",
+      "project preflight",
+      "lock waiting",
+      "evidence directory setup",
+      "terminal receipt persistence"
+    ],
+    "start_state": "unclassified",
+    "duration_accounting": "inclusive; do not sum nested spans"
+  }
+}

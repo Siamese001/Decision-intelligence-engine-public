@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-3b48f90f0af736972be594cee259",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "12add4414882f08678e42d06edb1fe226c615d3ddd496d557727b14cd58f2f23"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-9958a3bf5378aa0bcbb014c1"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Optical Character Recognition is an identified workstream in 20260930 Pipeline Review.",
+      "proposed_value": "Optical Character Recognition is an identified workstream in 20261005 Lens Scope Review.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-03aa682de490847dd7276711e5c1"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-b2316720c6db84fb16f4032fc23f",
+      "assertion_id_older": "assertion-03aa682de490847dd7276711e5c1",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-3315232c79478166779e5f735378",
+      "timestamp_newer": "2026-10-05",
+      "timestamp_older": "2026-09-30"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Optical Character Recognition' (HAS_CLAIM_TEXT). Older claim from 2026-09-30 superseded by newer claim from 2026-10-05.",
+  "proposal_id": "calibration-proposal-3b48f90f0af736972be594cee259",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-03aa682de490847dd7276711e5c1 from Optical Character Recognition is an identified workstream in 20260930 Pipeline Review. to Optical Character Recognition is an identified workstream in 20261005 Lens Scope Review.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

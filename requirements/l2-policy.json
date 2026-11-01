@@ -1,0 +1,113 @@
+{
+  "schema_version": "4.0.0",
+  "mode": "conditional",
+  "provider_class": "openai",
+  "provider_egress_allowed": true,
+  "endpoint": "https://api.openai.com/v1/responses",
+  "api_key_env": "OPENAI_API_KEY",
+  "local_env_file": "env_di",
+  "standard": {
+    "provider": "openai",
+    "model_family": "gpt-5.6-luna",
+    "model": "gpt-5.6-luna",
+    "assurance_profile": "standard",
+    "reasoning_effort": "high",
+    "maximum_primary_calls_per_run": 1,
+    "maximum_repair_calls_per_run": 0,
+    "maximum_escalation_calls_per_run": 0,
+    "pricing_usd_per_million_tokens": {
+      "input": 0.2,
+      "cached_input": 0.02,
+      "output": 1.2
+    }
+  },
+  "enhanced": {
+    "provider": "openai",
+    "model_family": "gpt-5.6-luna",
+    "model": "gpt-5.6-luna",
+    "assurance_profile": "enhanced",
+    "reasoning_effort": "high",
+    "maximum_primary_calls_per_run": 1,
+    "maximum_repair_calls_per_run": 1,
+    "maximum_escalation_calls_per_run": 1,
+    "pricing_usd_per_million_tokens": {
+      "input": 0.2,
+      "cached_input": 0.02,
+      "output": 1.2
+    }
+  },
+  "purpose_models": {
+    "FORENSIC_TRANSCRIPT": {
+      "provider": "openai",
+      "model_family": "gpt-5.6-luna",
+      "model": "gpt-5.6-luna",
+      "assurance_profile": "standard",
+      "reasoning_effort": "high",
+      "maximum_primary_calls_per_run": 1,
+      "maximum_repair_calls_per_run": 0,
+      "maximum_escalation_calls_per_run": 0,
+      "pricing_usd_per_million_tokens": {
+        "input": 0.2,
+        "cached_input": 0.02,
+        "output": 1.2
+      }
+    },
+    "EXECUTIVE_RECAP": {
+      "provider": "google",
+      "model_family": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "assurance_profile": "standard",
+      "reasoning_effort": "high",
+      "maximum_primary_calls_per_run": 1,
+      "maximum_repair_calls_per_run": 0,
+      "maximum_escalation_calls_per_run": 0,
+      "pricing_usd_per_million_tokens": {
+        "input": 0.1,
+        "cached_input": 0.025,
+        "output": 0.4
+      }
+    },
+    "KG_SIGNAL_PROJECTION": {
+      "provider": "google",
+      "model_family": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "assurance_profile": "standard",
+      "reasoning_effort": "high",
+      "maximum_primary_calls_per_run": 1,
+      "maximum_repair_calls_per_run": 0,
+      "maximum_escalation_calls_per_run": 0,
+      "pricing_usd_per_million_tokens": {
+        "input": 0.1,
+        "cached_input": 0.025,
+        "output": 0.4
+      }
+    },
+    "AGENTIC_LEVERAGE": {
+      "provider": "google",
+      "model_family": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "assurance_profile": "standard",
+      "reasoning_effort": "high",
+      "maximum_primary_calls_per_run": 1,
+      "maximum_repair_calls_per_run": 0,
+      "maximum_escalation_calls_per_run": 0,
+      "pricing_usd_per_million_tokens": {
+        "input": 0.1,
+        "cached_input": 0.025,
+        "output": 0.4
+      }
+    }
+  },
+  "output": {
+    "structured_output_required": true,
+    "maximum_output_tokens": 32768
+  },
+  "reliability": {
+    "retry_count": 0,
+    "timeout_seconds": 300
+  },
+  "request_budget": {
+    "maximum_provider_request_chars": 256000
+  },
+  "prompt_cache_enabled": true
+}

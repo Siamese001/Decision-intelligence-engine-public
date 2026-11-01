@@ -1,0 +1,201 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:active-ingestion-entrypoint-inventory:1.0.0",
+  "version": "1.0.0",
+  "description": "Comprehensive inventory of production ingestion entrypoints, callers, and antipattern findings F01-F15.",
+  "findings": [
+    {
+      "id": "F01",
+      "priority": "P1",
+      "summary": "Both CLI mutation options default false; omission prints a warning instead of requesting approval.",
+      "affected_files": [
+        "dual_pipeline/cli/parser.py",
+        "dual_pipeline/cli/ingest.py"
+      ],
+      "remediation_wave": 4
+    },
+    {
+      "id": "F02",
+      "priority": "P1",
+      "summary": "Skipping publication returns None, yet result/receipt says COMPLETE; CLI accepts as success.",
+      "affected_files": [
+        "dual_pipeline/canonical_pipeline/publish_helper.py",
+        "dual_pipeline/canonical_pipeline/pipeline.py",
+        "dual_pipeline/cli/engine.py"
+      ],
+      "remediation_wave": 3
+    },
+    {
+      "id": "F03",
+      "priority": "P1",
+      "summary": "dry_run_graph overrides explicitly requested mutation; regression tests enforce complete on dry runs.",
+      "affected_files": [
+        "dual_pipeline/canonical_pipeline/publish_helper.py",
+        "dual_pipeline/canonical_pipeline/pipeline.py",
+        "tests/test_dry_run_graph.py"
+      ],
+      "remediation_wave": 3
+    },
+    {
+      "id": "F04",
+      "priority": "P1",
+      "summary": "Missing mutation prerequisites raise generic errors; clearance discards question and scans unrelated plans.",
+      "affected_files": [
+        "dual_pipeline/cli/ingest.py",
+        "dual_pipeline/hitl_governance_core/decision_clearance.py",
+        "dual_pipeline/cli/engine.py"
+      ],
+      "remediation_wave": 2
+    },
+    {
+      "id": "F05",
+      "priority": "P1",
+      "summary": "Meeting artifact cache checks only mutate_graph; auto-publication returns before publication.",
+      "affected_files": [
+        "dual_pipeline/canonical_pipeline/pipeline.py",
+        "dual_pipeline/canonical_pipeline/publish_helper.py",
+        "dual_pipeline/transcript_pipeline_core/caching.py"
+      ],
+      "remediation_wave": 3
+    },
+    {
+      "id": "F06",
+      "priority": "P1",
+      "summary": "Publisher results such as HOLD_FOR_REMEDIATION lack error key and get masked by meeting completion.",
+      "affected_files": [
+        "dual_pipeline/cli/handlers.py",
+        "dual_pipeline/canonical_pipeline/pipeline.py",
+        "dual_pipeline/canonical_pipeline/publish_helper.py"
+      ],
+      "remediation_wave": 3
+    },
+    {
+      "id": "F07",
+      "priority": "P1",
+      "summary": "Reviewer/rationale values trigger APPROVE; absent approval yields rerun prose; wrappers generate reviewer identities.",
+      "affected_files": [
+        "dual_pipeline/cli/handlers.py",
+        "scripts/ingest_meeting.sh",
+        "dual_pipeline/cli/canonical_invocation.py",
+        "dual_pipeline/completion_core/guard.py"
+      ],
+      "remediation_wave": 2
+    },
+    {
+      "id": "F08",
+      "priority": "P1",
+      "summary": "Empty callback responses select recommended option and record operator resolution.",
+      "affected_files": [
+        "dual_pipeline/hitl_ui_bridge.py"
+      ],
+      "remediation_wave": 2
+    },
+    {
+      "id": "F09",
+      "priority": "P1",
+      "summary": "ask_user_question mapped to hardcoded host name without verified dispatch proof.",
+      "affected_files": [
+        "dual_pipeline/hitl_governance_core/runtime_tool_adapter.py",
+        "tools/pre_wave_decision_gate.py",
+        "tests/end_to_end/test_hitl_mandatory_ask_user_question_lifecycle_e2e.py",
+        "tools/run_live_proof_scenarios.py"
+      ],
+      "remediation_wave": 2
+    },
+    {
+      "id": "F10",
+      "priority": "P1",
+      "summary": "Generated instructions categorically ban graph mutation in production ingestion.",
+      "affected_files": [
+        "tools/generate_agents_index.py",
+        "AGENTS.md",
+        ".agents/rules/ingestion-lifecycle.md"
+      ],
+      "remediation_wave": 1
+    },
+    {
+      "id": "F11",
+      "priority": "P1",
+      "summary": "Weekly scheduled ingestion mandates dry runs, skips asking, requires +0, and calls result complete.",
+      "affected_files": [
+        "automations/prompts/weekly_market_intelligence_agent.md",
+        "docs/scheduled_task_graph_governance_gaps.md"
+      ],
+      "remediation_wave": 5
+    },
+    {
+      "id": "F12",
+      "priority": "P2",
+      "summary": "Publication journaling blocks every later attempt; approval waits need distinct resumption path.",
+      "affected_files": [
+        "dual_pipeline/canonical_pipeline/publication_journal.py"
+      ],
+      "remediation_wave": 3
+    },
+    {
+      "id": "F13",
+      "priority": "P2",
+      "summary": "Raw transcript, notes, document, canonical, and context APIs each default mutation false.",
+      "affected_files": [
+        "dual_pipeline/transcript_pipeline_core/pipeline.py",
+        "dual_pipeline/notes_pipeline.py",
+        "dual_pipeline/document_pipeline_core/pipeline.py",
+        "dual_pipeline/canonical_pipeline/pipeline.py",
+        "dual_pipeline/runtime/pipeline_context.py",
+        "dual_pipeline/pipeline_runner.py",
+        "dual_pipeline/transcript_pipeline_core/evals_coordinator.py",
+        "dual_pipeline/transcript_pipeline_core/release_runner.py"
+      ],
+      "remediation_wave": 4
+    },
+    {
+      "id": "F14",
+      "priority": "P1",
+      "summary": "Production-qualified release preparation intentionally returns PREPARED_ACTION_AUTH_REQUIRED.",
+      "affected_files": [
+        "dual_pipeline/cli/handlers.py",
+        "dual_pipeline/release_core/manager.py"
+      ],
+      "remediation_wave": 3
+    },
+    {
+      "id": "F15",
+      "priority": "P2",
+      "summary": "Active skill guidance mislabels status inspection as approval/completion; hooks unverified.",
+      "affected_files": [
+        ".agents/skills/nee-ingestion/SKILL.md",
+        ".agents/hooks.json"
+      ],
+      "remediation_wave": 1
+    }
+  ],
+  "entrypoint_matrix": {
+    "cli_meeting": {
+      "command": "nee ingest-meeting --input <source>",
+      "parser": "dual_pipeline/cli/parser.py",
+      "handler": "dual_pipeline/cli/ingest.py",
+      "target_behavior": "Mandatory active intent; asks approval if unauthorized; continues to publication."
+    },
+    "cli_document": {
+      "command": "nee ingest-doc --input <source>",
+      "parser": "dual_pipeline/cli/parser.py",
+      "handler": "dual_pipeline/cli/handlers.py",
+      "target_behavior": "Mandatory active intent; staged package sealed; approval gate for publication."
+    },
+    "cli_notes": {
+      "command": "nee ingest-notes --input <source>",
+      "parser": "dual_pipeline/cli/parser.py",
+      "handler": "dual_pipeline/notes_pipeline.py",
+      "target_behavior": "Mandatory active intent; staged package sealed; approval gate for publication."
+    },
+    "script_ingest_meeting": {
+      "command": "scripts/ingest_meeting.sh <source>",
+      "script": "scripts/ingest_meeting.sh",
+      "target_behavior": "Remove synthetic reviewer defaults; require authentic human response or fail closed."
+    },
+    "python_canonical_pipeline": {
+      "api": "dual_pipeline.canonical_pipeline.pipeline.run_canonical_pipeline",
+      "module": "dual_pipeline/canonical_pipeline/pipeline.py",
+      "target_behavior": "Removes silent publication skipping; returns structured run status."
+    }
+  }
+}

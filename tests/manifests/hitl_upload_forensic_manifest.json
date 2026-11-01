@@ -1,0 +1,28 @@
+{
+  "name": "hitl_upload_forensic_manifest",
+  "description": "CI test discovery manifest for HITL upload forensic evidence and payload propagation waves",
+  "branch": "docs/hitl-upload-ten-run-forensic-plan",
+  "deterministic_tests": [
+    "tests.test_hitl_upload_evidence_chain",
+    "tests.test_hitl_payload_propagation",
+    "tests.test_upload_content_extraction",
+    "tests.test_hitl_upload_projection",
+    "tests.test_hitl_upload_publication"
+  ],
+  "e2e_tests": [
+    "tests.end_to_end.test_hitl_upload_evidence_chain_e2e",
+    "tests.adversarial.test_hitl_upload_evidence_chain_adversarial",
+    "tests.end_to_end.test_hitl_payload_propagation_e2e",
+    "tests.adversarial.test_hitl_payload_propagation_adversarial",
+    "tests.end_to_end.test_upload_content_extraction_e2e",
+    "tests.adversarial.test_upload_content_extraction_adversarial",
+    "tests.end_to_end.test_hitl_upload_projection_e2e",
+    "tests.adversarial.test_hitl_upload_projection_adversarial",
+    "tests.end_to_end.test_hitl_upload_publication_e2e",
+    "tests.adversarial.test_hitl_upload_publication_adversarial",
+    "tests.end_to_end.test_hitl_upload_audit_replay",
+    "tests.adversarial.test_hitl_upload_audit_replay"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-08T00:00:00Z"
+}

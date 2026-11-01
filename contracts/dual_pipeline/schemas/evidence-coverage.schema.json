@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:evidence-coverage:1.0.0",
+  "title": "NEE Evidence Coverage Manifest",
+  "description": "Bounded evidence-coverage manifest tracking item-level disposition across the 7-stage lifecycle.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "manifest_id",
+    "run_id",
+    "source_digest",
+    "items",
+    "coverage_summary",
+    "generated_at"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:evidence-coverage:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "manifest_id": {
+      "type": "string",
+      "pattern": "^cov-[a-zA-Z0-9_\\-\\.]+$"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "meeting_slug": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item_id",
+          "item_type",
+          "is_eligible_graph_fact",
+          "state",
+          "source_origin",
+          "disposition_reason",
+          "created_at"
+        ],
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "item_type": {
+            "type": "string",
+            "enum": [
+              "PERSON_IDENTITY",
+              "SPEAKER_ROLE",
+              "ORGANIZATION_AFFILIATION",
+              "VISUAL_CLAIM",
+              "TABLE_RECORD",
+              "FACTUAL_CORRECTION",
+              "OPERATIONAL_CONTROL"
+            ]
+          },
+          "is_eligible_graph_fact": {
+            "type": "boolean"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "CAPTURED",
+              "EXTRACTED",
+              "PROPOSED",
+              "AUTHORIZED",
+              "WRITTEN",
+              "ACTIVATED",
+              "VERIFIED",
+              "EXCLUDED",
+              "QUARANTINED"
+            ]
+          },
+          "source_origin": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source_type", "source_hash"],
+            "properties": {
+              "source_type": {
+                "type": "string",
+                "enum": [
+                  "TRANSCRIPT_HITL",
+                  "SCREENSHOT_ATTACHMENT",
+                  "DOCUMENT",
+                  "AUDIO_TRANSCRIPT",
+                  "OPERATOR_DIRECTIVE"
+                ]
+              },
+              "source_hash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "locator": {
+                "type": "string"
+              },
+              "page_or_region": {
+                "type": "string"
+              },
+              "cell_locator": {
+                "type": "string"
+              },
+              "region_locator": {
+                "type": ["object", "string", "null"]
+              },
+              "clarification_kind": {
+                "type": "string",
+                "enum": [
+                  "PERSON_CONFIRMATION",
+                  "SPEAKER_ROLE",
+                  "ORGANIZATION",
+                  "NUMERIC_CORRECTION",
+                  "ACRONYM_DEFINITION",
+                  "VISUAL_TABLE_CELL",
+                  "SYSTEM_TOPOLOGY",
+                  "OTHER"
+                ]
+              }
+            }
+          },
+          "proposed_fact": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "subject": {
+                "type": "string"
+              },
+              "predicate": {
+                "type": "string"
+              },
+              "canonical_predicate": {
+                "type": "string"
+              },
+              "statement_kind": {
+                "type": "string",
+                "enum": [
+                  "FACT",
+                  "ENTITY_UPSERT",
+                  "RELATIONSHIP_SIGNAL",
+                  "ROLE_ASSIGNMENT",
+                  "TABLE_RECORD",
+                  "SYSTEM_PROPERTY",
+                  "TEMPORAL_FACT"
+                ]
+              },
+              "object": {
+                "type": "string"
+              },
+              "temporal_scope": {
+                "type": "string"
+              },
+              "cell_value": {
+                "type": ["string", "number", "boolean", "null"]
+              },
+              "source_locator": {
+                "type": "string"
+              }
+            }
+          },
+          "approval_ref": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["entry_id", "status"],
+            "properties": {
+              "entry_id": {
+                "type": "string"
+              },
+              "ledger_path": {
+                "type": "string"
+              },
+              "entry_digest": {
+                "type": "string"
+              },
+              "subject_sha256": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "RESOLVED_VALID",
+                  "REJECTED_OPERATOR_DECLINED",
+                  "REJECTED_SYNTHETIC",
+                  "UNRESOLVED_REFERENCE",
+                  "DIGEST_MISMATCH",
+                  "SUBJECT_MISMATCH",
+                  "INVALID_SIGNATURE",
+                  "LEDGER_UNAVAILABLE",
+                  "PENDING"
+                ]
+              }
+            }
+          },
+          "disposition_reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "coverage_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_items",
+        "eligible_facts_count",
+        "operational_controls_count",
+        "active_verified_count",
+        "excluded_count",
+        "quarantined_count",
+        "pending_count"
+      ],
+      "properties": {
+        "total_items": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "eligible_facts_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "operational_controls_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "active_verified_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "excluded_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "quarantined_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pending_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

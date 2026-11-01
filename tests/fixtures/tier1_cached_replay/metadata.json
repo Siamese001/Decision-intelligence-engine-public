@@ -1,0 +1,28 @@
+{
+  "project": "internal_consulting",
+  "meeting_name": "Megan Orzell / Amit Ayer - Discuss Open Roles",
+  "date": "10-16-2026",
+  "time": "01:08 PM - 01:28 PM ET",
+  "classification": "internal",
+  "attendees": "Amit Ayer (PartnerAdvisory), Megan Orzell (PartnerAdvisory)",
+  "force_rerun": false,
+  "allow_duplicate": false,
+  "no_subfolder": false,
+  "progress_mode": "auto",
+  "enforce_worktree": true,
+  "worktree_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/live_internal_consulting_10_16_2026_foreign_worktree",
+  "cleanup_worktree": false,
+  "filename_slug": "Megan_Orzell_Amit_Ayer_Open_Roles",
+  "resume": true,
+  "backtest": false,
+  "runtime_root": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/live_internal_consulting_10_16_2026_foreign_worktree/.local/dual_pipeline",
+  "target_output_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/live_internal_consulting_10_16_2026_foreign_worktree/output/internal_consulting/10-16-2026/Megan_Orzell_Amit_Ayer_Open_Roles",
+  "output_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/live_internal_consulting_10_16_2026_foreign_worktree/output/internal_consulting/10-16-2026/Megan_Orzell_Amit_Ayer_Open_Roles",
+  "output_01_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/live_internal_consulting_10_16_2026_foreign_worktree/output/internal_consulting/10-16-2026/Megan_Orzell_Amit_Ayer_Open_Roles/01_Megan_Orzell_Amit_Ayer_Open_Roles_10-16-2026_0108PM0128PMET_hitl_resolved_transcript.md",
+  "output_02_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/live_internal_consulting_10_16_2026_foreign_worktree/output/internal_consulting/10-16-2026/Megan_Orzell_Amit_Ayer_Open_Roles/02_Megan_Orzell_Amit_Ayer_Open_Roles_10-16-2026_0108PM0128PMET_executive_recap.md",
+  "output_03_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/live_internal_consulting_10_16_2026_foreign_worktree/output/internal_consulting/10-16-2026/Megan_Orzell_Amit_Ayer_Open_Roles/03_Megan_Orzell_Amit_Ayer_Open_Roles_10-16-2026_0108PM0128PMET_canonical_signal_projection.json",
+  "speaker_map": {
+    "Speaker 1": "Amit Ayer",
+    "Speaker 2": "Megan Orzell"
+  }
+}

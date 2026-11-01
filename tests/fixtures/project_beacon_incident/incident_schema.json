@@ -1,0 +1,169 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DigitalSherpaIncidentFixture",
+  "description": "Schema for sanitized Project Beacon recording incident fixtures and evidence bounds",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "incident_id",
+    "captured_at_utc",
+    "base_commit",
+    "branch",
+    "model_sessions",
+    "attribution_cases",
+    "spool_evidence",
+    "evidence_boundaries"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "enum": [1]
+    },
+    "incident_id": {
+      "type": "string"
+    },
+    "captured_at_utc": {
+      "type": "string"
+    },
+    "base_commit": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "model_sessions": {
+      "type": "object",
+      "required": ["pro", "flash"],
+      "properties": {
+        "pro": { "$ref": "#/definitions/ModelSession" },
+        "flash": { "$ref": "#/definitions/ModelSession" }
+      },
+      "additionalProperties": false
+    },
+    "attribution_cases": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/AttributionCase" }
+    },
+    "spool_evidence": { "$ref": "#/definitions/SpoolEvidence" },
+    "evidence_boundaries": { "$ref": "#/definitions/EvidenceBoundaries" }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "ModelSession": {
+      "type": "object",
+      "required": [
+        "thread_id",
+        "model_label",
+        "launch_steps",
+        "diagnosed_claim",
+        "claim_grounded",
+        "actual_root_cause"
+      ],
+      "properties": {
+        "thread_id": { "type": "string" },
+        "model_label": { "type": "string" },
+        "launch_steps": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/LaunchStep" }
+        },
+        "diagnosed_claim": { "type": "string" },
+        "claim_grounded": { "type": "boolean" },
+        "actual_root_cause": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "LaunchStep": {
+      "type": "object",
+      "required": [
+        "step_index",
+        "command",
+        "is_daemon",
+        "exit_code",
+        "summary"
+      ],
+      "properties": {
+        "step_index": { "type": "integer" },
+        "command": { "type": "string" },
+        "is_daemon": { "type": "boolean" },
+        "exit_code": { "type": "integer" },
+        "error_type": { "type": ["string", "null"] },
+        "reason_code": { "type": ["string", "null"] },
+        "contention_detected": { "type": "boolean" },
+        "worker_ready": { "type": "boolean" },
+        "summary": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "AttributionCase": {
+      "type": "object",
+      "required": [
+        "format_id",
+        "description",
+        "raw_input",
+        "expected_speaker",
+        "expected_quote",
+        "baseline_parsed_count",
+        "target_parsed_count"
+      ],
+      "properties": {
+        "format_id": { "type": "string" },
+        "description": { "type": "string" },
+        "raw_input": { "type": "string" },
+        "expected_speaker": { "type": "string" },
+        "expected_quote": { "type": "string" },
+        "baseline_parsed_count": { "type": "integer" },
+        "target_parsed_count": { "type": "integer" }
+      },
+      "additionalProperties": false
+    },
+    "SpoolEvidence": {
+      "type": "object",
+      "required": [
+        "spool_id",
+        "parent_pid",
+        "ffmpeg_pid",
+        "chunk_count",
+        "master_bytes",
+        "header_duration_seconds",
+        "header_duration_trusted",
+        "observed_rms_energy",
+        "has_real_speech",
+        "session_registry_active"
+      ],
+      "properties": {
+        "spool_id": { "type": "string" },
+        "parent_pid": { "type": "integer" },
+        "ffmpeg_pid": { "type": "integer" },
+        "chunk_count": { "type": "integer" },
+        "master_bytes": { "type": "integer" },
+        "header_duration_seconds": { "type": "number" },
+        "header_duration_trusted": { "type": "boolean" },
+        "observed_rms_energy": { "type": "number" },
+        "has_real_speech": { "type": "boolean" },
+        "session_registry_active": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "EvidenceBoundaries": {
+      "type": "object",
+      "required": [
+        "capture_proof_independent_of_asr",
+        "permissions_denial_evidence_present",
+        "monotonic_zero_rejected_as_real_start",
+        "unmanaged_dry_run_classified_as_defect",
+        "evidence_rules"
+      ],
+      "properties": {
+        "capture_proof_independent_of_asr": { "type": "boolean" },
+        "permissions_denial_evidence_present": { "type": "boolean" },
+        "monotonic_zero_rejected_as_real_start": { "type": "boolean" },
+        "unmanaged_dry_run_classified_as_defect": { "type": "boolean" },
+        "evidence_rules": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

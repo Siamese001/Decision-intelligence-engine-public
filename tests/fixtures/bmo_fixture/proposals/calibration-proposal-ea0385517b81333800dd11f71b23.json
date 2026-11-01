@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-ea0385517b81333800dd11f71b23",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "716d9b47d142dcd6b7e8acae4dd3b13689afd50798294ab0794496c7c876548b"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-f933af28429a8ae525387466"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Project LENS is an identified technical_anchor in Document 20261002 Project Lens Sow Phase 1 Scope.",
+      "proposed_value": "Project LENS is an identified technical_anchor in 20261005 Lens Scope Review.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-856f868daf7dc99a83dee62075e5"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-2868dfb18da8884695a18451be35",
+      "assertion_id_older": "assertion-856f868daf7dc99a83dee62075e5",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-6740ccf9259e9a2e05ad7883a8bc",
+      "timestamp_newer": "2026-10-05",
+      "timestamp_older": "2026-10-02"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Project LENS' (HAS_CLAIM_TEXT). Older claim from 2026-10-02 superseded by newer claim from 2026-10-05.",
+  "proposal_id": "calibration-proposal-ea0385517b81333800dd11f71b23",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-856f868daf7dc99a83dee62075e5 from Project LENS is an identified technical_anchor in Document 20261002 Project Lens Sow Phase 1 Scope. to Project LENS is an identified technical_anchor in 20261005 Lens Scope Review.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

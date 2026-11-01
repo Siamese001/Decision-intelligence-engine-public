@@ -1,0 +1,39 @@
+{
+  "name": "judge_hardening",
+  "description": "JARVIS judge consistency, forensic evidence, and efficient retry test suite",
+  "branch": "docs/jarvis-judge-forensic-plan",
+  "deterministic_tests": [
+    "tests.test_judge_evidence_receipts",
+    "tests.test_judge_contract_congruence",
+    "tests.test_evidence_conditioned_generation",
+    "tests.test_judge_exit_contract",
+    "tests.test_component_retry_planner",
+    "tests.test_judge_cache_bindings",
+    "tests.test_judge_monotonic_acceptance",
+    "tests.test_judge_cost_accounting",
+    "tests.test_judge_inventory_closure"
+  ],
+  "e2e_tests": [
+    "tests.test_judge_receipts_e2e",
+    "tests.test_judge_receipts_adversarial",
+    "tests.test_judge_contract_e2e",
+    "tests.test_judge_contract_adversarial",
+    "tests.test_generation_grounding_e2e",
+    "tests.test_generation_grounding_adversarial",
+    "tests.test_judge_exit_e2e",
+    "tests.test_judge_exit_adversarial",
+    "tests.test_component_retry_e2e",
+    "tests.test_component_retry_adversarial",
+    "tests.test_judge_cache_e2e",
+    "tests.test_judge_cache_adversarial",
+    "tests.adversarial.test_judge_concordance_and_cache_prefix_adversarial",
+    "tests.test_judge_monotonic_e2e",
+    "tests.test_judge_monotonic_adversarial",
+    "tests.test_judge_lifecycle_e2e",
+    "tests.test_judge_lifecycle_adversarial",
+    "tests.test_judge_delivery_e2e",
+    "tests.test_judge_delivery_adversarial"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-08T15:00:00Z"
+}

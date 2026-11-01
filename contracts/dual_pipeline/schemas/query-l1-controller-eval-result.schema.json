@@ -1,0 +1,177 @@
+{
+  "$id": "urn:nee:dual-pipeline:query-l1-controller-eval-result:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "aggregate": {
+      "additionalProperties": false,
+      "properties": {
+        "case_count": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "failed_case_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "invalid_case_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "passed_case_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "recovery_rate": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "case_count",
+        "passed_case_count",
+        "failed_case_count",
+        "invalid_case_count",
+        "recovery_rate"
+      ],
+      "type": "object"
+    },
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "case_results": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "attempt_chain_digest": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "case_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "final_terminal_class": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "initial_terminal_class": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "MEASUREMENT_INVALID"
+            ]
+          }
+        },
+        "required": [
+          "case_id",
+          "status",
+          "initial_terminal_class",
+          "final_terminal_class",
+          "attempt_chain_digest"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:query-l1-controller-eval-result:1.0.0"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "graph_mutation_count": {
+      "const": 0,
+      "type": "integer"
+    },
+    "graph_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "policy_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "provider_call_count": {
+      "const": 0,
+      "type": "integer"
+    },
+    "result_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "MEASUREMENT_INVALID"
+      ]
+    },
+    "suite_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "suite_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "treatment_mode": {
+      "enum": [
+        "off",
+        "shadow",
+        "bounded"
+      ]
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "result_id",
+    "suite_id",
+    "suite_digest",
+    "case_results",
+    "aggregate",
+    "status",
+    "treatment_mode",
+    "policy_digest",
+    "graph_sha256",
+    "provider_call_count",
+    "graph_mutation_count"
+  ],
+  "title": "L1 controller evaluation result",
+  "type": "object"
+}

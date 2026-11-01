@@ -1,0 +1,418 @@
+{
+  "artifact_id": "query-route-adversarial-e1",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "fa8b9db7fa4c639203128fce643dbeafce2c318cd6d0d2186533ec0fa03257d8"
+  },
+  "cases": [
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-meeting-summary",
+      "classification": "internal",
+      "critical": false,
+      "delivery_profile": "internal_executive",
+      "expected": {
+        "destination": "GENERAL_ASSISTANT_HANDOFF",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "enters_query_runtime": false,
+        "materiality": "low",
+        "query_type": null
+      },
+      "question": "Summarize these meeting notes into decisions and actions.",
+      "tags": [
+        "route",
+        "general",
+        "non-nee"
+      ]
+    },
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-client-rewrite",
+      "classification": "internal",
+      "critical": false,
+      "delivery_profile": "client_executive",
+      "expected": {
+        "destination": "GENERAL_ASSISTANT_HANDOFF",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "enters_query_runtime": false,
+        "materiality": "low",
+        "query_type": null
+      },
+      "question": "Rewrite this paragraph in concise client-ready language.",
+      "tags": [
+        "route",
+        "general",
+        "client-wording"
+      ]
+    },
+    {
+      "artifact_type": "decision_brief",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-long-non-nee",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_executive",
+      "expected": {
+        "destination": "GENERAL_ASSISTANT_HANDOFF",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "enters_query_runtime": false,
+        "materiality": "low",
+        "query_type": null
+      },
+      "question": "Draft a detailed market-entry memo with customer segments, pricing options, a competitive summary, a launch timeline, operating assumptions, risks, and next actions. Keep it concise enough for an executive workshop.",
+      "tags": [
+        "route",
+        "general",
+        "long-non-nee"
+      ]
+    },
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-staffing-workbook",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "OPERATIONAL_WORKFLOW_HANDOFF",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "enters_query_runtime": false,
+        "materiality": "low",
+        "query_type": null
+      },
+      "question": "Rebuild the complex staffing workbook with formulas, allocations, delivery risks, and an executive summary.",
+      "tags": [
+        "route",
+        "operational",
+        "long-non-nee"
+      ]
+    },
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "nee-engineering"
+      ],
+      "authorized": true,
+      "case_id": "route-repository-publish",
+      "classification": "internal",
+      "critical": false,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "OPERATIONAL_WORKFLOW_HANDOFF",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "enters_query_runtime": false,
+        "materiality": "low",
+        "query_type": null
+      },
+      "question": "Commit the files, merge the branch, and push to origin main.",
+      "tags": [
+        "route",
+        "operational",
+        "repository"
+      ]
+    },
+    {
+      "artifact_type": "evidence_export",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-exact-record",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "GRAPH_EVIDENCE_UTILITY",
+        "eligibility_status": "NOT_APPLICABLE",
+        "enters_query_runtime": true,
+        "materiality": "low",
+        "query_type": "exact_lookup"
+      },
+      "question": "Show governed record record-123.",
+      "tags": [
+        "route",
+        "graph-utility",
+        "bounded"
+      ]
+    },
+    {
+      "artifact_type": "evidence_export",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-list-governed-records",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "GRAPH_EVIDENCE_UTILITY",
+        "eligibility_status": "NOT_APPLICABLE",
+        "enters_query_runtime": true,
+        "materiality": "low",
+        "query_type": "exact_lookup"
+      },
+      "question": "List the exact governed Project Beacon records and citations.",
+      "tags": [
+        "route",
+        "graph-utility",
+        "bounded"
+      ]
+    },
+    {
+      "artifact_type": "decision_brief",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-short-graph-diagnostic",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_executive",
+      "expected": {
+        "destination": "NEE_DECISION_INTELLIGENCE",
+        "eligibility_status": "ELIGIBLE_PRE_RETRIEVAL",
+        "enters_query_runtime": true,
+        "materiality": "medium",
+        "query_type": "gap_risk_inconsistency"
+      },
+      "question": "Diagnose the cross-source governed graph relationships and counterevidence.",
+      "tags": [
+        "route",
+        "nee",
+        "short-critical"
+      ]
+    },
+    {
+      "artifact_type": "architecture_deck",
+      "audiences": [
+        "internal_consulting",
+        "nee-client"
+      ],
+      "authorized": true,
+      "case_id": "route-a2a-architecture",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "client_executive",
+      "expected": {
+        "destination": "NEE_DECISION_INTELLIGENCE",
+        "eligibility_status": "ELIGIBLE_PRE_RETRIEVAL",
+        "enters_query_runtime": true,
+        "materiality": "high",
+        "query_type": "opportunity_nba"
+      },
+      "question": "Recommend a future-state A2A architecture across governed business case, current state, patterns, risks, and gaps.",
+      "tags": [
+        "route",
+        "nee",
+        "a2a",
+        "client"
+      ]
+    },
+    {
+      "artifact_type": "decision_brief",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-candidate-approved",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "NEE_DECISION_INTELLIGENCE",
+        "eligibility_status": "ELIGIBLE_PRE_RETRIEVAL",
+        "enters_query_runtime": true,
+        "materiality": "high",
+        "query_type": "candidate_promotion_review"
+      },
+      "question": "Assess candidate promotion patterns versus approved governed evidence and explain unresolved validation.",
+      "tags": [
+        "route",
+        "nee",
+        "candidate",
+        "lane"
+      ]
+    },
+    {
+      "artifact_type": "decision_brief",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-reverse-edge-trap",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "NEE_DECISION_INTELLIGENCE",
+        "eligibility_status": "ELIGIBLE_PRE_RETRIEVAL",
+        "enters_query_runtime": true,
+        "materiality": "medium",
+        "query_type": "relationship_explanation"
+      },
+      "question": "Explain whether governed NEE graph relationships support the proposed handoff direction.",
+      "tags": [
+        "route",
+        "nee",
+        "direction"
+      ]
+    },
+    {
+      "artifact_type": "decision_brief",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-sparse-evidence-risk",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_executive",
+      "expected": {
+        "destination": "NEE_DECISION_INTELLIGENCE",
+        "eligibility_status": "ELIGIBLE_PRE_RETRIEVAL",
+        "enters_query_runtime": true,
+        "materiality": "medium",
+        "query_type": "gap_risk_inconsistency"
+      },
+      "question": "Assess governed Project Beacon gaps across sparse current-state evidence and candidate patterns.",
+      "tags": [
+        "route",
+        "nee",
+        "sparse"
+      ]
+    },
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-a2a-meeting-summary",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_executive",
+      "expected": {
+        "destination": "GENERAL_ASSISTANT_HANDOFF",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "enters_query_runtime": false,
+        "materiality": "low",
+        "query_type": null
+      },
+      "question": "Summarize these meeting minutes about A2A agent status into actions.",
+      "tags": [
+        "route",
+        "general",
+        "a2a"
+      ]
+    },
+    {
+      "artifact_type": "architecture_deck",
+      "audiences": [
+        "internal_consulting",
+        "nee-client"
+      ],
+      "authorized": true,
+      "case_id": "route-client-slide-no-graph",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "client_executive",
+      "expected": {
+        "destination": "GENERAL_ASSISTANT_HANDOFF",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "enters_query_runtime": false,
+        "materiality": "low",
+        "query_type": null
+      },
+      "question": "Draft a client-ready architecture slide from the text I supplied; do not use graph evidence.",
+      "tags": [
+        "route",
+        "general",
+        "client-wording"
+      ]
+    },
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-ambiguous",
+      "classification": "internal",
+      "critical": false,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "ROUTE_AMBIGUOUS",
+        "eligibility_status": "AMBIGUOUS",
+        "enters_query_runtime": false,
+        "materiality": "medium",
+        "query_type": null
+      },
+      "question": "Tell me about Chakra.",
+      "tags": [
+        "route",
+        "ambiguous"
+      ]
+    },
+    {
+      "artifact_type": "decision_brief",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": false,
+      "case_id": "route-unauthorized-nee",
+      "classification": "restricted",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "ROUTE_AMBIGUOUS",
+        "eligibility_status": "AMBIGUOUS",
+        "enters_query_runtime": false,
+        "materiality": "high",
+        "query_type": null
+      },
+      "question": "Recommend a future-state A2A architecture across governed current state, patterns, risks, and gaps.",
+      "tags": [
+        "route",
+        "ambiguous",
+        "authorization"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:query-route-eval-suite:1.0.0",
+  "created_at": "2026-09-02T22:00:00Z",
+  "extensions": {
+    "com.partner_advisory.nee.evaluation-purpose": "Adversarial destination confusion, critical false-negative, and zero-call pre-retrieval routing evaluation.",
+    "com.partner_advisory.nee.rebound-from": {
+      "canonical_digest": "f21534ebaa6abbbe7a12b976a11135255acafe5bd793879b7f4ff79b0cd66e94",
+      "policy_digest": "619ee8de6338fa58c5050a6e8b0f0292e069c92b2b788c8f9dd4564855de3951",
+      "suite_id": "query-route-adversarial-e1"
+    }
+  },
+  "policy_digest": "6cfc8ebb6446d072eafedb4639370798aaa2da0578a30dfd3fcf5fad495c5c15",
+  "runtime_boundary": "PRE_RETRIEVAL_PROVIDER_FREE_ROUTING",
+  "schema_version": "1.0.0",
+  "suite_id": "query-route-adversarial-e1",
+  "thresholds": {
+    "maximum_critical_false_negative_count": 0,
+    "minimum_destination_accuracy": 1,
+    "minimum_graph_entry_precision": 1,
+    "minimum_graph_entry_recall": 1,
+    "minimum_nee_decision_recall": 1
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Frozen multi-tenant graph fixtures defining JARVIS-NEXUS topological lineage and SOLAR negative control",
+  "frozen_at": "2026-10-09T12:00:00Z",
+  "multi_tenant_graph": {
+    "nodes": {
+      "project:jarvis": {
+        "node_id": "project:jarvis",
+        "canonical_name": "Project Jarvis",
+        "display_name": "JARVIS",
+        "node_type": "project",
+        "engagement_id": "project:jarvis"
+      },
+      "person:jason": {
+        "node_id": "person:jason",
+        "canonical_name": "Jason Doe",
+        "display_name": "Jason",
+        "node_type": "person",
+        "engagement_id": "project:jarvis",
+        "aliases": [
+          "Jason"
+        ]
+      },
+      "tech:metal": {
+        "node_id": "tech:metal",
+        "canonical_name": "Apple Silicon Metal",
+        "display_name": "Metal",
+        "node_type": "technology",
+        "engagement_id": "project:jarvis"
+      },
+      "project:nexus": {
+        "node_id": "project:nexus",
+        "canonical_name": "Project Nexus",
+        "display_name": "NEXUS",
+        "node_type": "project",
+        "engagement_id": "project:nexus"
+      },
+      "person:sharon_diaram": {
+        "node_id": "person:sharon_diaram",
+        "canonical_name": "Sharon Diaram",
+        "display_name": "Sharon",
+        "node_type": "person",
+        "engagement_id": "project:nexus",
+        "aliases": [
+          "Sharon"
+        ]
+      },
+      "person:daniel_brankin": {
+        "node_id": "person:daniel_brankin",
+        "canonical_name": "Daniel Brankin",
+        "display_name": "Daniel",
+        "node_type": "person",
+        "engagement_id": "project:nexus",
+        "aliases": [
+          "Daniel"
+        ]
+      },
+      "system:sap": {
+        "node_id": "system:sap",
+        "canonical_name": "SAP ERP",
+        "display_name": "SAP",
+        "node_type": "system",
+        "engagement_id": "project:nexus",
+        "aliases": [
+          "SAP ERP",
+          "SAP"
+        ]
+      },
+      "project:solar": {
+        "node_id": "project:solar",
+        "canonical_name": "Solar Telemetry",
+        "display_name": "Solar",
+        "node_type": "project",
+        "engagement_id": "project:solar"
+      },
+      "person:foreign_lead": {
+        "node_id": "person:foreign_lead",
+        "canonical_name": "Foreign Solar Lead",
+        "display_name": "Foreign Lead",
+        "node_type": "person",
+        "engagement_id": "project:solar"
+      },
+      "system:solar_inverter": {
+        "node_id": "system:solar_inverter",
+        "canonical_name": "Solar Inverter SCADA",
+        "display_name": "Inverter SCADA",
+        "node_type": "system",
+        "engagement_id": "project:solar"
+      },
+      "node:c19_career_leverage": {
+        "node_id": "node:c19_career_leverage",
+        "canonical_name": "Executive Compensation Trajectory",
+        "display_name": "Compensation Trajectory",
+        "node_type": "strategic",
+        "engagement_id": "project:jarvis",
+        "namespace": "INTERNAL_ADVISORY",
+        "is_quarantined": 1
+      }
+    },
+    "assertions": {
+      "asrt-jarvis-predecessor": {
+        "assertion_id": "asrt-jarvis-predecessor",
+        "subject_node_id": "project:jarvis",
+        "predicate": "PREDECESSOR_PROJECT",
+        "object_node_id": "project:nexus",
+        "claim_text": "Project Jarvis inherits architecture and SAP integration from predecessor Project Nexus.",
+        "project_scope": "project:jarvis",
+        "engagement_id": "project:jarvis",
+        "canonical_status": "ACTIVE",
+        "retrieval_eligible": 1,
+        "materiality": "high"
+      },
+      "asrt-jarvis-executes": {
+        "assertion_id": "asrt-jarvis-executes",
+        "subject_node_id": "project:jarvis",
+        "predicate": "EXECUTES_ON",
+        "object_node_id": "tech:metal",
+        "claim_text": "Project Jarvis executes local transcription on Apple Silicon Metal.",
+        "project_scope": "project:jarvis",
+        "engagement_id": "project:jarvis",
+        "canonical_status": "ACTIVE",
+        "retrieval_eligible": 1,
+        "materiality": "high"
+      },
+      "asrt-nexus-daniel-sap": {
+        "assertion_id": "asrt-nexus-daniel-sap",
+        "subject_node_id": "person:daniel_brankin",
+        "predicate": "LEADS",
+        "object_node_id": "system:sap",
+        "claim_text": "Daniel Brankin leads SAP technical architecture and ERP integration.",
+        "project_scope": "project:nexus",
+        "engagement_id": "project:nexus",
+        "canonical_status": "ACTIVE",
+        "retrieval_eligible": 1,
+        "materiality": "high"
+      },
+      "asrt-nexus-sharon-manage": {
+        "assertion_id": "asrt-nexus-sharon-manage",
+        "subject_node_id": "person:sharon_diaram",
+        "predicate": "MANAGES",
+        "object_node_id": "project:nexus",
+        "claim_text": "Sharon Diaram manages Project Nexus delivery roadmap.",
+        "project_scope": "project:nexus",
+        "engagement_id": "project:nexus",
+        "canonical_status": "ACTIVE",
+        "retrieval_eligible": 1,
+        "materiality": "high"
+      },
+      "asrt-solar-maintain": {
+        "assertion_id": "asrt-solar-maintain",
+        "subject_node_id": "person:foreign_lead",
+        "predicate": "MAINTAINS",
+        "object_node_id": "system:solar_inverter",
+        "claim_text": "Foreign Solar Lead maintains Solar Inverter SCADA for project solar.",
+        "project_scope": "project:solar",
+        "engagement_id": "project:solar",
+        "canonical_status": "ACTIVE",
+        "retrieval_eligible": 1,
+        "materiality": "high"
+      },
+      "asrt-c19-quarantine": {
+        "assertion_id": "asrt-c19-quarantine",
+        "subject_node_id": "node:c19_career_leverage",
+        "predicate": "PROJECTS",
+        "object_node_id": "person:jason",
+        "claim_text": "Career leverage projection targets executive compensation band and personal compensation.",
+        "project_scope": "project:jarvis",
+        "engagement_id": "project:jarvis",
+        "canonical_status": "ACTIVE",
+        "retrieval_eligible": 1,
+        "materiality": "high",
+        "namespace": "INTERNAL_ADVISORY",
+        "is_quarantined": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "alternative_options": [],
+  "artifact_id": "decision-result-fixture",
+  "assumptions": [],
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "17e6cd74cffe128ded30c76720afca8211a68138225893dab13735a17993882f"
+  },
+  "confidence": {},
+  "considered_options": [],
+  "constraints": [],
+  "contract_id": "urn:nee:dual-pipeline:decision-result:1.0.0",
+  "decision_frame": {},
+  "decision_result_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "evidence_pack_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "execution": {},
+  "extensions": {},
+  "material_conclusions": [],
+  "option_assessments": [],
+  "recommendation_rationale": "No supported recommendation was produced.",
+  "recommended_option": null,
+  "risks": [],
+  "schema_version": "1.0.0",
+  "terminal_state": "NO_DECISION",
+  "trade_off_matrix": [],
+  "unknowns": [],
+  "what_would_change_the_conclusion": []
+}

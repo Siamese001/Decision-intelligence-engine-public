@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:eval-assurance-portfolio:1.0.0",
+  "title": "NEE release assurance evaluation portfolio",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "portfolio_id", "tracks", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:eval-assurance-portfolio:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "portfolio_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "tracks": {"type": "array", "minItems": 9, "maxItems": 9, "items": {"$ref": "urn:nee:dual-pipeline:eval-assurance-portfolio:1.0.0#/$defs/track"}},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "track": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["track_id", "runner", "runtime_boundary", "requires_real_bge_m3", "release_blocking", "suite_path"],
+      "properties": {
+        "track_id": {"type": "string", "enum": ["ingestion", "query", "classification", "routing", "bridge", "x1", "artifact_quality", "resilience", "release"]},
+        "runner": {"type": "string", "enum": ["eval-run", "eval-route-run", "eval-bridge-run", "eval-stress-run", "unittest", "workflow-eval"]},
+        "runtime_boundary": {"type": "string", "enum": ["DETERMINISTIC_PRECHECK", "POST_RUNTIME_VERIFICATION", "RUNTIME_X1"]},
+        "requires_real_bge_m3": {"type": "boolean"},
+        "release_blocking": {"type": "boolean"},
+        "suite_path": {"type": "string", "minLength": 1, "maxLength": 512}
+      }
+    }
+  }
+}

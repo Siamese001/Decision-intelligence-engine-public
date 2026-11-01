@@ -1,0 +1,82 @@
+{
+  "agent_id": "agent:decision-intelligence-supervisor:2.0.0",
+  "goal": "Orchestrate multi-step reasoning, autonomous sub-query gap resolution, counterfactual critique, cross-artifact reconciliation, proactive copilot advisory, and closed-loop retrieval calibration across the 12-agent runtime mesh.",
+  "pattern": "supervisor-worker",
+  "authority": {
+    "tools": [
+      "query_knowledge_graph",
+      "inspect_graph_snapshot",
+      "read_assertion_provenance",
+      "evaluate_candidate_retrieval",
+      "compute_hybrid_scoring",
+      "verify_contract_compliance",
+      "validate_rfc8259_canonical_hash",
+      "execute_spark_sql",
+      "submit_spark_graph_batch",
+      "inspect_spark_batch_status"
+    ],
+    "delegation_targets": [
+      "ingestion_specialist",
+      "retrieval_specialist",
+      "spark_analytics_specialist",
+      "multihop_query_navigator_agent",
+      "counterfactual_devil_advocate_agent",
+      "cross_artifact_reconciliation_agent",
+      "live_proactive_inflection_agent",
+      "temporal_drift_supersession_agent",
+      "adaptive_retrieval_calibrator_agent"
+    ],
+    "subdelegation": false
+  },
+  "state": {
+    "owner": "UnifiedAgenticPipelineTracker",
+    "durability": "sqlite_wal_and_immutable_stage_checkpoints",
+    "concurrency": "read_only_snapshot_isolation_with_serialized_uwg_writes"
+  },
+  "loop": {
+    "observe": "Inspect active stage state, RetrievalEvidencePacket coverage manifest, DecisionResult unknown criteria, QASwarm findings, or ConversationContextModel live turns.",
+    "decide": "Evaluate SSOT ambiguity margin (delta = c_top - c_second) and coverage gaps; select bounded specialist delegation or autonomous progression when delta > 0.20 and c_top >= 0.65.",
+    "act": "Dispatch contract-validated A2ATask with ClaimCheckPointer evidence references and Stable Prefix prompt structure to target specialist.",
+    "evaluate": "Verify specialist return payload against definition_of_done, check StagnationDetector progress delta, and enforce X1/C-19/UWG safety gates."
+  },
+  "termination": {
+    "success": "All subquestions, decision criteria, or cross-artifact parity gates pass with verified source-bound citations and zero unapproved mutations.",
+    "failure": "Stagnation detected (zero coverage or score improvement across consecutive steps), budget exhausted, or fail-closed governance gate triggered.",
+    "max_steps": 3
+  },
+  "budgets": {
+    "time": "60s per specialist task (600s pipeline SLA ceiling)",
+    "cost": "$1.00 max per delegated task",
+    "tool_calls": 20,
+    "delegation_depth": 2
+  },
+  "resilience": {
+    "timeouts": "Hard per-call deadline via config.request_deadline.remaining_timeout",
+    "retries": "Max 2 bounded remediation retries with dynamic reasoning tier escalation (LOW -> MEDIUM -> HIGH -> XHIGH)",
+    "idempotency": "SHA-256 idempotency_key on every A2ATask and digest-verified stage checkpoints",
+    "compensation": "Non-destructive rollback to last verified stage checkpoint; propose-only fallback (approval_required=True, auto_apply=False)"
+  },
+  "human_control": {
+    "approvals": [
+      "TIER_0_IRREVERSIBLE graph mutations via UniversalWriteGateway",
+      "PR_MERGE_AUTHORIZATION to main",
+      "learning-change-proposal:1.0.0 activation",
+      "Output 01 speaker attribution under diarization collapse (>85% single-speaker turn share)"
+    ],
+    "escalations": [
+      "Ambiguity margin delta <= 0.20 inclusive surfaced atomically via ask_user_question",
+      "Counterfactual Devil's Advocate falsification dropping option margin <= 0.20"
+    ]
+  },
+  "observability": {
+    "correlation": "OpenTelemetry trace_id, session_id, attempt_id, and A2ATask correlation_id",
+    "events": [
+      "agent.lifecycle.step",
+      "a2a.task.transition",
+      "autonomy.margin.decision",
+      "token.optimization.directive",
+      "learning.proposal.emitted"
+    ]
+  },
+  "open_decisions": []
+}

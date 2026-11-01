@@ -1,0 +1,81 @@
+{
+  "artifact_name": "evidence_digests.json",
+  "incident_id": "INCIDENT-20261007-JARVIS-STARTUP",
+  "generated_at": "2026-10-07T14:45:44-04:00",
+  "evidence_sources": [
+    {
+      "source_type": "CHAT_TRANSCRIPT",
+      "path": "/Users/amitayer/.gemini/antigravity/brain/030c93f6-996b-4a0a-95a6-cae14bf29811/.system_generated/logs/transcript_full.jsonl",
+      "sha256": "582100d24abbd2108b1e14f15526a8fc1bd9576cfd862f07739edf7c521cde69",
+      "inspected_lines": [
+        {
+          "line_number": 1,
+          "timestamp_utc": "2026-10-07T18:32:43Z",
+          "event": "USER_REQUEST_RECEIVED",
+          "summary": "User prompt requesting LENS Engineering Jarvis recording"
+        },
+        {
+          "line_number": 49,
+          "timestamp_utc": "2026-10-07T18:34:08Z",
+          "event": "DRY_RUN_ROUTE",
+          "summary": "Assistant preliminary inspection / dry-run manifest initialization"
+        },
+        {
+          "line_number": 75,
+          "timestamp_utc": "2026-10-07T18:35:04Z",
+          "event": "DISPATCH_COMMAND_ISSUED",
+          "summary": "Live recording command issued (141s after line 1)"
+        },
+        {
+          "line_number": 76,
+          "timestamp_utc": "2026-10-07T18:35:09Z",
+          "event": "BACKGROUND_TASK_CREATED",
+          "summary": "Background tool task spawned (146s after line 1)"
+        },
+        {
+          "line_number": 87,
+          "timestamp_utc": "2026-10-07T18:35:51Z",
+          "event": "USER_FACING_FINAL_CONFIRMATION",
+          "summary": "Assistant confirmation delivered (188s after line 1)"
+        }
+      ]
+    },
+    {
+      "source_type": "STARTUP_TASK_LOG",
+      "path": "/Users/amitayer/.gemini/antigravity/brain/030c93f6-996b-4a0a-95a6-cae14bf29811/.system_generated/tasks/task-75.log",
+      "sha256": "c2de4e330afb0844f5dd869f7f568c538b4c3bf1a9ab8bb8f986b6b45fc1620e",
+      "inspected_lines": [
+        {
+          "line_number": 1,
+          "timestamp_local": "2026-10-07 14:35:11,949",
+          "event": "BOOTSTRAP_SPLICE_0",
+          "summary": "InstantAudioSpooler spliced 0 chunks (0.0s audio)"
+        },
+        {
+          "line_number": 2,
+          "timestamp_local": "2026-10-07 14:35:11,963",
+          "event": "BOOTSTRAP_RELEASE",
+          "summary": "Releasing bootstrap spooler before dual-source capture"
+        },
+        {
+          "line_number": 3,
+          "timestamp_local": "2026-10-07 14:35:12,692",
+          "event": "BOOTSTRAP_SPLICE_1",
+          "summary": "InstantAudioSpooler spliced 1 chunks (0.4s audio)"
+        },
+        {
+          "line_number": 4,
+          "timestamp_local": "2026-10-07 14:35:12,999",
+          "event": "CAPTURE_MANAGER_START",
+          "summary": "Starting LiveAudioCaptureManager: strategy=mixed_sck"
+        },
+        {
+          "line_number": 5,
+          "timestamp_local": "2026-10-07 14:35:15,114",
+          "event": "ISOLATED_ASR_ACTIVE",
+          "summary": "Isolated MLX Whisper worker active (load: 597ms, golden: 1035ms)"
+        }
+      ]
+    }
+  ]
+}

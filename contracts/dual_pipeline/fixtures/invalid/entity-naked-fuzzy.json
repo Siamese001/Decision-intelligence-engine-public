@@ -1,0 +1,30 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:entity-resolution:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-entity-naked-fuzzy",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "94e0c14f322fde88b2b63e5a97db64fe0d73a93a34bd7e419b1176cd7faf7e10"},
+  "resolution_id": "resolution-invalid-naked-fuzzy",
+  "run_id": "run-invalid-naked-fuzzy",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "mention_id": "mention-invalid-naked-fuzzy",
+  "reported_name": "Matt K",
+  "stable_identifier": {"kind": null, "value": null},
+  "context": {"attendees": [], "workstream": null, "role": null, "organization": null, "project": null, "co_occurring_participants": []},
+  "alternatives": [
+    {
+      "entity_id": "stakeholder-matthew-koch",
+      "canonical_name": "Matthew Koch",
+      "match_score": 0.95,
+      "supporting_context": [],
+      "uniqueness": "unknown",
+      "margin_over_next": null,
+      "identity_conflicts": []
+    }
+  ],
+  "selected_entity_id": "stakeholder-matthew-koch",
+  "outcome": "AUTO_LINK_HIGH_CONFIDENCE",
+  "decision_basis": ["fuzzy string score only"],
+  "requires_hitl": false,
+  "decided_at": "2026-07-21T15:00:00Z",
+  "extensions": {}
+}

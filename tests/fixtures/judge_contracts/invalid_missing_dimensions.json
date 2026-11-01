@@ -1,0 +1,6 @@
+{
+  "rubric_version": "2.0",
+  "composite_score": 100.0,
+  "verdict": "PASS",
+  "forensic_rationale": "Missing required dimensions 1 through 4."
+}

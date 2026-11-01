@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:compiled-prompt-artifact:1.0.0",
+  "title": "NEE compiled prompt artifact",
+  "description": "Sealed artifact between PA (prompt assembly) and L2 (Decision Intelligence reasoning). Contains the fully assembled prompt with evidence, policy, and output schema, sealed with a canonical digest for post-hoc audit.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "query_id", "run_id", "evidence_contract_id", "evidence_contract_digest", "l2_execution_decision_id", "prompt_components", "target_model", "reasoning_effort", "output_schema_digest", "created_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:compiled-prompt-artifact:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "query_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "evidence_contract_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "evidence_contract_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "l2_execution_decision_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "prompt_components": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["question", "l1_plan_digest", "route", "must_use_evidence_count", "supporting_evidence_count", "contradicting_evidence_count", "total_evidence_tokens_estimate"],
+      "properties": {
+        "question": {"type": "string", "minLength": 1},
+        "question_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "l1_plan_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "route": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/queryRoute"},
+        "must_use_evidence_count": {"type": "integer", "minimum": 0},
+        "supporting_evidence_count": {"type": "integer", "minimum": 0},
+        "contradicting_evidence_count": {"type": "integer", "minimum": 0},
+        "background_evidence_count": {"type": "integer", "minimum": 0},
+        "total_evidence_tokens_estimate": {"type": "integer", "minimum": 0},
+        "epistemic_constraints": {"type": "array", "items": {"type": "string"}},
+        "applicable_policies": {"type": "array", "items": {"type": "string"}},
+        "known_gaps": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "target_model": {"type": "string", "minLength": 1},
+    "reasoning_effort": {"type": "string", "enum": ["low", "medium", "high", "xhigh", "max"]},
+    "output_schema_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+    "assurance_profile": {"type": "string", "enum": ["standard", "enhanced"]},
+    "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+    "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

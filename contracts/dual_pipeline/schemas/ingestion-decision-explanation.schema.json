@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:ingestion-decision-explanation:1.0.0",
+  "title": "NEE plain-English ingestion decision explanation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "explanation_id", "run_id", "trace_id", "source_id", "source_version_id", "authority", "mutation_authority", "bindings", "summary", "decision_groups", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:ingestion-decision-explanation:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "explanation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "source_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "source_version_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "authority": {"const": "derived_explanation_only"},
+    "mutation_authority": {"const": false},
+    "bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["technical_ledger_path", "technical_ledger_sha256", "technical_ledger_digest", "graph_delta_path", "graph_delta_digest", "graph_sha256_before"],
+      "properties": {
+        "technical_ledger_path": {"const": "ingestion_decision_ledger.json"},
+        "technical_ledger_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "technical_ledger_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "graph_delta_path": {"const": "graph_delta_summary.json"},
+        "graph_delta_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "graph_sha256_before": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidate_count", "decision_group_count", "exact_link_count", "proposed_new_node_count", "source_only_count", "review_required_count", "proposed_graph_operation_count"],
+      "properties": {
+        "candidate_count": {"type": "integer", "minimum": 0},
+        "decision_group_count": {"type": "integer", "minimum": 0},
+        "exact_link_count": {"type": "integer", "minimum": 0},
+        "proposed_new_node_count": {"type": "integer", "minimum": 0},
+        "source_only_count": {"type": "integer", "minimum": 0},
+        "review_required_count": {"type": "integer", "minimum": 0},
+        "proposed_graph_operation_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "decision_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["group_id", "candidate_ids", "affected_source_locations", "technical_resolution_ids", "reported_label", "pipeline_recognition", "exact_identity_found", "exact_identity_explanation", "new_node_recommended", "new_node_explanation", "declared_node_type", "proposal_digest", "possible_duplicates", "checks_passed", "missing_information", "reviewer_choices", "graph_effect"],
+        "properties": {
+          "group_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "candidate_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+          "affected_source_locations": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourceLocator"}},
+          "technical_resolution_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+          "reported_label": {"type": "string", "minLength": 1},
+          "pipeline_recognition": {"type": "string", "minLength": 1},
+          "exact_identity_found": {"type": "boolean"},
+          "exact_identity_explanation": {"type": "string", "minLength": 1},
+          "new_node_recommended": {"type": "boolean"},
+          "new_node_explanation": {"type": "string", "minLength": 1},
+          "declared_node_type": {"type": ["string", "null"]},
+          "proposal_digest": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+          "possible_duplicates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["entity_id", "label", "similarity_percent", "evidence_label"],
+              "properties": {
+                "entity_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+                "label": {"type": "string", "minLength": 1},
+                "similarity_percent": {"type": "number", "minimum": 0, "maximum": 100},
+                "evidence_label": {"const": "possible duplicate evidence only"}
+              }
+            }
+          },
+          "checks_passed": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "missing_information": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "reviewer_choices": {
+            "type": "array",
+            "minItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["decision", "available", "effect", "reason"],
+              "properties": {
+                "decision": {"type": "string", "enum": ["CONFIRM", "CREATE_NEW", "HOLD", "REJECT"]},
+                "available": {"type": "boolean"},
+                "effect": {"type": "string", "minLength": 1},
+                "reason": {"type": "string", "minLength": 1}
+              }
+            }
+          },
+          "graph_effect": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

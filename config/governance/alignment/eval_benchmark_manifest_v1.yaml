@@ -1,0 +1,61 @@
+# Frozen Evaluation Benchmark Manifest v1.0.0
+# Governs Wave 4 Evaluator Truthfulness, Holdout Identifications, and Capability Envelopes
+
+manifest_version: "1.0.0"
+governance: "NEE-KG-ALIGNMENT-04"
+ratified_by: "DECISION-ALIGNMENT-W4-DATASET-HOLDOUT-RATIFICATION"
+timestamp: "2026-10-07T00:54:00Z"
+
+evaluator_registry:
+  forensic_judge:
+    version: "1.0.0"
+    modality: "SEMANTIC"
+    capabilities: ["forensic_grounding", "attribution", "chronological_integrity", "asr_cleanup"]
+    pass_threshold: 80.0
+    timeout_seconds: 60.0
+    fallback_permitted: false
+  recap_judge:
+    version: "1.0.0"
+    modality: "SEMANTIC"
+    capabilities: ["executive_altitude", "technical_substance", "strategic_synthesis", "scoping_and_modality"]
+    pass_threshold: 85.0
+    timeout_seconds: 60.0
+    fallback_permitted: false
+  graph_judge:
+    version: "1.0.0"
+    modality: "SEMANTIC"
+    capabilities: ["strategic_edge", "knowledge_density", "semantic_atomicity", "predicate_specificity"]
+    pass_threshold: 85.0
+    timeout_seconds: 60.0
+    fallback_permitted: false
+  vector_retrieval_judge:
+    version: "1.0.0"
+    modality: "VECTOR"
+    model: "BGE-M3"
+    capabilities: ["dense_retrieval", "sparse_lexical", "multi_vector_maxsim"]
+    similarity_threshold: 0.65
+    fallback_permitted: false
+  deterministic_qa_gates:
+    version: "1.0.0"
+    modality: "HEURISTIC"
+    capabilities: ["gate1_forensic", "gate2_recap", "gate3_graph", "cross_artifact_consistency"]
+    pass_threshold: 100.0
+    fallback_permitted: false
+
+benchmark_splits:
+  calibration_split:
+    dataset_id: "CALIBRATION_SYNTHESIS_CORPUS_20261006"
+    sample_count: 50
+    leakage_quarantined: true
+  holdout_evaluation_split:
+    dataset_id: "FROZEN_HOLDOUT_EVALUATION_SPLIT_V1"
+    sample_count: 35
+    leakage_quarantined: true
+    leakage_firewall_hash: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+governance_invariants:
+  strict_zero_live_to_mock_fallback: true
+  prohibit_fabricated_uniform_scores: true
+  prohibit_string_booleans: true
+  require_typed_result_envelopes: true
+  require_executed_capability_enumeration: true

@@ -1,0 +1,233 @@
+{
+  "$id": "urn:nee:dual-pipeline:hook-performance-optimization-receipt:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HookPerformanceOptimizationReceipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "receipt_type",
+    "run_id",
+    "command",
+    "runtime_root",
+    "timestamp_utc",
+    "host_fingerprint",
+    "samples",
+    "median",
+    "p95",
+    "sha256",
+    "status",
+    "benchmarks",
+    "wave_deliverables",
+    "artifact_id",
+    "canonical_digest",
+    "contract_id",
+    "extensions",
+    "schema_version"
+  ],
+  "properties": {
+    "receipt_type": {
+      "type": "string",
+      "const": "urn:nee:dual-pipeline:hook-performance-optimization-receipt:1.0.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "command": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "host_fingerprint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "os",
+        "cpu_arch",
+        "python_version",
+        "git_version"
+      ],
+      "properties": {
+        "os": {
+          "type": "string"
+        },
+        "cpu_arch": {
+          "type": "string"
+        },
+        "python_version": {
+          "type": "string"
+        },
+        "git_version": {
+          "type": "string"
+        }
+      }
+    },
+    "samples": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0
+      },
+      "minItems": 5
+    },
+    "median": {
+      "type": "number",
+      "minimum": 0
+    },
+    "p95": {
+      "type": "number",
+      "minimum": 0
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "benchmarks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rebase_10_commits",
+        "post_merge_prompt_return",
+        "pre_push_verification"
+      ],
+      "properties": {
+        "rebase_10_commits": {
+          "type": "object",
+          "required": [
+            "samples",
+            "median_seconds",
+            "p95_seconds",
+            "budget_seconds",
+            "passed"
+          ],
+          "properties": {
+            "samples": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 5
+            },
+            "median_seconds": {
+              "type": "number"
+            },
+            "p95_seconds": {
+              "type": "number"
+            },
+            "budget_seconds": {
+              "type": "number"
+            },
+            "passed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "post_merge_prompt_return": {
+          "type": "object",
+          "required": [
+            "samples",
+            "median_seconds",
+            "p95_seconds",
+            "budget_seconds",
+            "passed"
+          ],
+          "properties": {
+            "samples": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 5
+            },
+            "median_seconds": {
+              "type": "number"
+            },
+            "p95_seconds": {
+              "type": "number"
+            },
+            "budget_seconds": {
+              "type": "number"
+            },
+            "passed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "pre_push_verification": {
+          "type": "object",
+          "required": [
+            "samples",
+            "median_seconds",
+            "p95_seconds",
+            "budget_seconds",
+            "passed"
+          ],
+          "properties": {
+            "samples": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 5
+            },
+            "median_seconds": {
+              "type": "number"
+            },
+            "p95_seconds": {
+              "type": "number"
+            },
+            "budget_seconds": {
+              "type": "number"
+            },
+            "passed": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "wave_deliverables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "test_suite_pass_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "artifact_id": {
+      "type": "string"
+    },
+    "canonical_digest": {
+      "type": "string"
+    },
+    "contract_id": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    }
+  }
+}

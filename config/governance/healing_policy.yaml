@@ -1,0 +1,42 @@
+version: "1.0.0"
+governance_initiative: "NEE-KG-DUAL-PIPELINE-01"
+
+healing_governance:
+  max_retries: 3
+  # Bound to canonical parameter SSOT: hitl.ambiguity_margin_threshold in config/runtime/parameters.json
+  ambiguity_margin_threshold: 0.20
+  direct_mutation_permitted: false  # Healers PROPOSE, they NEVER directly mutate
+
+repair_classes:
+  STRIP_WHITESPACE_OR_PAD:
+    category: "SYNTACTIC_FORMATTING"
+    auto_apply: true
+    confidence_floor: 0.85
+    requires_hitl: false
+  NORMALIZE_DATE_FORMAT:
+    category: "SEMANTIC_NORMALIZATION"
+    auto_apply: true
+    confidence_floor: 0.80
+    requires_hitl: false
+  QUARANTINE_CONCURRENT_LEAK:
+    category: "SECURITY_BOUNDARY"
+    auto_apply: false
+    confidence_floor: 0.95
+    requires_hitl: true
+  GENERIC_FIELD_CLEANUP:
+    category: "STRUCTURAL_DEFECT"
+    auto_apply: false
+    confidence_floor: 0.70
+    requires_hitl: false
+
+mandatory_human_review_triggers:
+  - "MARGIN_BELOW_THRESHOLD"       # Delta = c_top - c_second < 0.20
+  - "RETRY_BUDGET_EXHAUSTED"       # retries >= 3
+  - "CROSS_NAMESPACE_LEAK"         # Law 2 containment breach attempts
+  - "DIRECT_MUTATION_ATTEMPT"      # Direct storage write attempt by healer
+  - "MISSING_EVIDENCE_RECORD"      # Healer proposed mutation without parent evidence
+
+quarantine_behavior:
+  action_on_security_defect: "SOFT_QUARANTINE"
+  notify_hitl: true
+  preserve_provenance: true

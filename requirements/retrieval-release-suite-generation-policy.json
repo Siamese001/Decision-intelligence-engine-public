@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "nee-automatic-retrieval-release-suite",
+  "policy_version": "1.0.1",
+  "owner": "NEE Knowledge Governance",
+  "generator_version": "1.0.1",
+  "max_records_per_group": 50,
+  "core_top_k": 1,
+  "delta_top_k": 100,
+  "semantic_templates": [
+    "What governed information is recorded about {titles}?",
+    "Find the evidence-backed knowledge concerning {entities}.",
+    "Retrieve the current governed records described as: {retrieval_text}"
+  ],
+  "alias_template": "Locate the governed records titled: {titles}",
+  "relationship_template": "How are the governed concepts related in: {titles}?",
+  "hard_negative_query": "Unrelated payroll cafeteria parking policy",
+  "acl_boundary_audiences": [
+    "internal_consulting",
+    "nee-engineering",
+    "public-reader",
+    "nee-evaluation-boundary"
+  ]
+}

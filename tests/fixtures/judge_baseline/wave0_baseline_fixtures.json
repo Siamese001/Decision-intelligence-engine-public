@@ -1,0 +1,78 @@
+{
+  "description": "Baseline fixtures for LLM-as-a-Judge Wave 0 hardening",
+  "version": "1.0.0",
+  "malformed_scorecards": {
+    "composite_only_100": {
+      "composite_score": 100
+    },
+    "composite_only_with_forged_pass": {
+      "composite_score": 100,
+      "verdict": "PASS"
+    },
+    "empty": {}
+  },
+  "valid_baseline_scorecards": {
+    "output_1": {
+      "dimension_1_forensic_grounding_and_fidelity": 25,
+      "dimension_2_attribution_and_room_mic_hygiene": 25,
+      "dimension_3_chronological_and_timestamp_integrity": 25,
+      "dimension_4_asr_cleanup_and_domain_preservation": 25,
+      "composite_score": 100,
+      "verdict": "PASS"
+    },
+    "output_2": {
+      "section_scores": {
+        "header_and_overview": 10,
+        "key_updates_technical_substance": 35,
+        "conditional_extensions": 20,
+        "appendix_stakeholder_perspectives": 35
+      },
+      "composite_score": 100,
+      "verdict": "PASS"
+    },
+    "output_3": {
+      "dimension_1_strategic_edge": 15,
+      "dimension_2_knowledge_layer_density": 15,
+      "dimension_3_semantic_atomicity": 20,
+      "dimension_4_predicate_specificity": 15,
+      "dimension_5_exclusion_of_action_items": 15,
+      "dimension_6_evidence_grounding_and_schema": 20,
+      "composite_score": 100,
+      "verdict": "PASS"
+    }
+  },
+  "registry_baseline": {
+    "raw_transcript_synthesis_authority": "RAW_TRANSCRIPT_SYNTHESIS_PROMPT_V5_7.md",
+    "prompt_verifier_target": "RAW_TRANSCRIPT_SYNTHESIS_PROMPT_V5_7.md",
+    "v5_8_authority_present_on_disk": true,
+    "v5_8_wired_into_registry": false
+  },
+  "route_call_inventory": {
+    "canonical_cli": {
+      "entry_file": "dual_pipeline/cli/ingest.py",
+      "pipeline_class": "CanonicalAgenticPipeline",
+      "c05_c06_invoked": false,
+      "x_exit_gates_evaluator_invoked": false,
+      "exit_qa_verifier": "verify_exit_qa"
+    },
+    "legacy_helper": {
+      "entry_file": "dual_pipeline/transcript_pipeline_core/pipeline.py",
+      "context_builder": "dual_pipeline/transcript_pipeline_core/context_builder.py",
+      "c05_c06_invoked": true,
+      "x_exit_gates_evaluator_invoked": true
+    }
+  },
+  "boundary_systems": {
+    "document_mode": {
+      "evaluator": "dual_pipeline/document_pipeline_core/evaluator.py",
+      "outputs_evaluated": ["output_03"],
+      "outputs_skipped": ["output_01", "output_02"],
+      "skip_reason": "NOT_APPLICABLE_DOCUMENT_MODE"
+    },
+    "query_x1_mode": {
+      "policy_file": "requirements/x1-quality-policy.json",
+      "mode": "off",
+      "provider_egress_allowed": false
+    }
+  }
+}

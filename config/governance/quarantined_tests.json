@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0.0",
+  "governance_invariant": "Wave 5 Quarantined Legacy Tests with Mandatory Expiration",
+  "total_quarantined": 53,
+  "tests": [
+    {
+      "module": "tests.adversarial.test_copilot_prefetch_adversarial",
+      "file_path": "tests/adversarial/test_copilot_prefetch_adversarial.py",
+      "reason": "cannot import name '_is_c19_violating' from 'dual_pipeline.live_meeting_recorder_core.session_context_packet' (/Users/amitayer/Git/decision-intelligence-engine/.worktrees/feat_aidlc_operational_efficiency_council/dual_pipeline/live_meeting_recorder_core/session_context_packet.py)",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.end_to_end.test_copilot_wave_3",
+      "file_path": "tests/end_to_end/test_copilot_wave_3.py",
+      "reason": "No module named 'tests.adversarial.test_copilot_retrieval_scope_adversarial'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.end_to_end.test_copilot_wave_5",
+      "file_path": "tests/end_to_end/test_copilot_wave_5.py",
+      "reason": "No module named 'tests.adversarial.test_copilot_live_graph_delta_edge_cases'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_appendix_disclaimer_rejection",
+      "file_path": "tests/test_appendix_disclaimer_rejection.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.recap'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_calibrated_graph_judge",
+      "file_path": "tests/test_calibrated_graph_judge.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.enterprise'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_calibrated_graph_judge_floors",
+      "file_path": "tests/test_calibrated_graph_judge_floors.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.graph'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_chunk_transcriber_repetition",
+      "file_path": "tests/test_chunk_transcriber_repetition.py",
+      "reason": "cannot import name '_is_prompt_echo' from 'dual_pipeline.live_meeting_recorder_core.chunk_transcriber' (/Users/amitayer/Git/decision-intelligence-engine/.worktrees/feat_aidlc_operational_efficiency_council/dual_pipeline/live_meeting_recorder_core/chunk_transcriber.py)",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_forensic_judge_attribution_floor",
+      "file_path": "tests/test_forensic_judge_attribution_floor.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.forensic'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_gate2_attachment_and_plain_english",
+      "file_path": "tests/test_gate2_attachment_and_plain_english.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.recap'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_graph_extraction_judge_hitl",
+      "file_path": "tests/test_graph_extraction_judge_hitl.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.graph'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_hardened_judge_rubric",
+      "file_path": "tests/test_hardened_judge_rubric.py",
+      "reason": "cannot import name 'ForensicTranscriptJudge' from 'dual_pipeline.llm_judge_core' (/Users/amitayer/Git/decision-intelligence-engine/.worktrees/feat_aidlc_operational_efficiency_council/dual_pipeline/llm_judge_core/__init__.py)",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_hardened_recap_judge",
+      "file_path": "tests/test_hardened_recap_judge.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.recap'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_hitl_speaker_attribution_output1",
+      "file_path": "tests/test_hitl_speaker_attribution_output1.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.forensic'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_isolated_mlx_whisper_process",
+      "file_path": "tests/test_isolated_mlx_whisper_process.py",
+      "reason": "cannot import name '_enforce_process_airgap' from 'dual_pipeline.live_meeting_recorder_core.isolated_transcriber' (/Users/amitayer/Git/decision-intelligence-engine/.worktrees/feat_aidlc_operational_efficiency_council/dual_pipeline/live_meeting_recorder_core/isolated_transcriber.py)",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_judge_context_compression",
+      "file_path": "tests/test_judge_context_compression.py",
+      "reason": "cannot import name 'AgenticLeverageJudge' from 'dual_pipeline.llm_judge_core' (/Users/amitayer/Git/decision-intelligence-engine/.worktrees/feat_aidlc_operational_efficiency_council/dual_pipeline/llm_judge_core/__init__.py)",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_judge_fail_closed",
+      "file_path": "tests/test_judge_fail_closed.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.enterprise'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_judge_gate_ssot_alignment",
+      "file_path": "tests/test_judge_gate_ssot_alignment.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.recap'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_live_recorder_mlx_streaming",
+      "file_path": "tests/test_live_recorder_mlx_streaming.py",
+      "reason": "cannot import name 'HALLUCINATIONS' from 'dual_pipeline.live_meeting_recorder_core.chunk_transcriber' (/Users/amitayer/Git/decision-intelligence-engine/.worktrees/feat_aidlc_operational_efficiency_council/dual_pipeline/live_meeting_recorder_core/chunk_transcriber.py)",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_phonetic_lexicon_resolution",
+      "file_path": "tests/test_phonetic_lexicon_resolution.py",
+      "reason": "cannot import name '_is_standalone_silence_hallucination' from 'dual_pipeline.live_meeting_recorder_core.chunk_transcriber' (/Users/amitayer/Git/decision-intelligence-engine/.worktrees/feat_aidlc_operational_efficiency_council/dual_pipeline/live_meeting_recorder_core/chunk_transcriber.py)",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_prompt_registry_ssot",
+      "file_path": "tests/test_prompt_registry_ssot.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.recap'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_surgical_patcher",
+      "file_path": "tests/test_surgical_patcher.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.recap'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_wave3_metal_advisory_extraction",
+      "file_path": "tests/test_wave3_metal_advisory_extraction.py",
+      "reason": "No module named 'dual_pipeline.llm_judge_core.graph'",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_whisper_repetition_suppression",
+      "file_path": "tests/test_whisper_repetition_suppression.py",
+      "reason": "cannot import name '_has_runaway_loop' from 'dual_pipeline.live_meeting_recorder_core.chunk_transcriber' (/Users/amitayer/Git/decision-intelligence-engine/.worktrees/feat_aidlc_operational_efficiency_council/dual_pipeline/live_meeting_recorder_core/chunk_transcriber.py)",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.transcript_stages.test_chat_attribution_guard",
+      "file_path": "tests/transcript_stages/test_chat_attribution_guard.py",
+      "reason": "cannot import name 'LiveTranscriptEngine' from 'dual_pipeline.live_transcript_engine' (/Users/amitayer/Git/decision-intelligence-engine/.worktrees/feat_aidlc_operational_efficiency_council/dual_pipeline/live_transcript_engine.py)",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_broken_import"
+    },
+    {
+      "module": "tests.test_backtest_promote",
+      "file_path": "tests/test_backtest_promote.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_copilot_session_lifecycle",
+      "file_path": "tests/test_copilot_session_lifecycle.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_output2_decoupling_and_anchors",
+      "file_path": "tests/test_output2_decoupling_and_anchors.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_dual_pipeline_wave1",
+      "file_path": "tests/test_dual_pipeline_wave1.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_hitl_governance_enforcement",
+      "file_path": "tests/test_hitl_governance_enforcement.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_strategic_intelligence_evaluator",
+      "file_path": "tests/test_strategic_intelligence_evaluator.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_output3_entity_change_set",
+      "file_path": "tests/test_output3_entity_change_set.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_meeting_entities_edge_traits",
+      "file_path": "tests/test_meeting_entities_edge_traits.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_graph_writer_edge_traits",
+      "file_path": "tests/test_graph_writer_edge_traits.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_dual_track_copilot",
+      "file_path": "tests/test_dual_track_copilot.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_copilot_strategic_reasoning",
+      "file_path": "tests/test_copilot_strategic_reasoning.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_worktree_hygiene_hardening",
+      "file_path": "tests/test_worktree_hygiene_hardening.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_audio_capture_process_lifecycle",
+      "file_path": "tests/test_audio_capture_process_lifecycle.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_audio_device_contention",
+      "file_path": "tests/test_audio_device_contention.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_uwg_rejects_mock_mutations",
+      "file_path": "tests/test_uwg_rejects_mock_mutations.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_graph_healer_judge_remediation",
+      "file_path": "tests/test_graph_healer_judge_remediation.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.unit.test_canonical_routing_worktree",
+      "file_path": "tests/unit/test_canonical_routing_worktree.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_cost_tracker_pricing_matrix",
+      "file_path": "tests/test_cost_tracker_pricing_matrix.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_copilot_output_length_budget",
+      "file_path": "tests/test_copilot_output_length_budget.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_pr_queue_rules",
+      "file_path": "tests/test_pr_queue_rules.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_copilot_anti_hallucination",
+      "file_path": "tests/test_copilot_anti_hallucination.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_copilot_dynamic_model_binding",
+      "file_path": "tests/test_copilot_dynamic_model_binding.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_copilot_enhanced_live_pipeline",
+      "file_path": "tests/test_copilot_enhanced_live_pipeline.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_copilot_live_stress_harness",
+      "file_path": "tests/test_copilot_live_stress_harness.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_copilot_speaker_summary_depth",
+      "file_path": "tests/test_copilot_speaker_summary_depth.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_output3_redundant_calls_adversarial",
+      "file_path": "tests/test_output3_redundant_calls_adversarial.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_prompt_caching_prefix",
+      "file_path": "tests/test_prompt_caching_prefix.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.adversarial.test_mlx_init_fail_fast_adversarial",
+      "file_path": "tests/adversarial/test_mlx_init_fail_fast_adversarial.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    },
+    {
+      "module": "tests.test_edge_unit_baseline",
+      "file_path": "tests/test_edge_unit_baseline.py",
+      "reason": "Preexisting test failure on main: quarantined under Wave 5 AI-DLC testing triage",
+      "expires_at": "2026-12-31",
+      "classification": "legacy_test_failure"
+    }
+  ]
+}

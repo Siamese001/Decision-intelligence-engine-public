@@ -1,0 +1,222 @@
+[
+  {
+    "query_text": "What was the main finding here?",
+    "topic_id": "topic_general_finding",
+    "candidate": {
+      "record_id": "90af388366530162",
+      "text": "- **SaaS Telemetry Sources:** Pano AI optical smoke cameras (REST API), TechnoSilva 5-day wildfire risk heatmaps (REST/GIS API), DTN Weather & Lightning radar (REST/WMS API).",
+      "project": "apex_trans",
+      "source_file": "02_NEET_Insights_Hub_Tech_Services_Group_Interview_09-11-2026_0336PM_0437PM_ET_executive_recap.md",
+      "lane": "key_point"
+    }
+  },
+  {
+    "query_text": "What is Taylor Mercer accountable for regarding Investigate whether Navigator ?",
+    "topic_id": "topic_traci_action",
+    "candidate": {
+      "record_id": "9337155bbd2dbd41",
+      "text": "| 1 | Action | Investigate whether Navigator or a similar project-management capability is already used in the referenced enterprise area and report the finding. | Taylor Mercer | TBD | 00:03:30–00:04:00 | Confirmed |",
+      "project": "09-28-2026",
+      "source_file": "02_Jarvis_Q1_Charter_Sharon_PartnerAdvisory_09-28-2026_1111AM_1200PM_ET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What is Bailey Morton accountable for regarding Verify the current workstream ?",
+    "topic_id": "topic_bailey_action",
+    "candidate": {
+      "record_id": "9002d4e4b8199393",
+      "text": "| 1 | Action | Verify the current workstream assignment relevant to the staffing-availability discussion. | Bailey Morton | Not stated | stmt-012, 00:17:56; forensic ambiguity lock 12 | Confirmed follow-up; referenced resource identity pending verification |",
+      "project": "09-30-2026",
+      "source_file": "02_Dociq_Q4_Scope_Bailey_Amit_09-30-2026_0415PM0447PMET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What is :--- accountable for regarding :---?",
+    "topic_id": "topic_:---_action",
+    "candidate": {
+      "record_id": "4b242429ac6de0c7",
+      "text": "| :--- | :--- | :--- | :--- |",
+      "project": "09-25-2026",
+      "source_file": "02_Alan_Q4_Scope_Hayden_Amit_09-25-2026_1034AM1055AMET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What was the main finding here?",
+    "topic_id": "topic_general_finding",
+    "candidate": {
+      "record_id": "c35258dfb9cd0a43",
+      "text": "- **Dan surfaced PII and HR 360 ownership gaps so HRIT handoffs can be defined before complex workflows move forward.** Drew Oakley distinguished simple workflows from cases that route, update, or associate employee and performance information. He identified PII handling as an unresolved concern and connected the discussion to capabilities developed through HR 360. Dan stated that he intended to meet with John Andersen (NEA Engineering Manager) later on 09/29/2026 to clarify what NEA would continue owning, what HRIT would own, and how product handoffs should work. Anuj Chokshi said the parties were close but still coordinating. [11:47:15–11:48:30; stmt-13–stmt-15]",
+      "project": "09-29-2026",
+      "source_file": "02_apex_global_Monthly_Ge_Gcp_PartnerAdvisory_09-29-2026_1142AM1202PMET_executive_recap.md",
+      "lane": "key_point"
+    }
+  },
+  {
+    "query_text": "What is Unassigned (Pending Owner Assignment) accountable for regarding Document the productivity and ?",
+    "topic_id": "topic_unassigned_action",
+    "candidate": {
+      "record_id": "27ca55142010d384",
+      "text": "| 8 | Gate | Document the productivity and cost justification for Nexus Jarvis Q4 foundation work and Q1 continuation. | Unassigned (Pending Owner Assignment) | TBD | 00:55:51–00:56:20 | Pending Verification |",
+      "project": "09-25-2026",
+      "source_file": "02_Google_Alex_Shreyak_Amit_Anya_09-25-2026_0900AM_1000AM_ET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What was the main finding here?",
+    "topic_id": "topic_general_finding",
+    "candidate": {
+      "record_id": "de2d686f56a6b30d",
+      "text": "- **Amit Ayer assessed the existing tool landscape before proposing new technical work.** Amit described the need to understand “all the things that they have in flight” and what stakeholders were already trying to consume. He referenced Forge, XCAP, individual agent requests, and patterns PartnerAdvisory had already established in its environment from other work. His framing favored starting with the current landscape and reusable assets instead of assuming a new build was required. The exact functions of several named tools and their relationship to Nexus were left open. [00:00:21]",
+      "project": "09-29-2026",
+      "source_file": "02_PartnerAdvisory_Gcp_Alex_Amit_09-29-2026_0307PM0350PMET_executive_recap.md",
+      "lane": "key_point"
+    }
+  },
+  {
+    "query_text": "What was the main finding here?",
+    "topic_id": "topic_general_finding",
+    "candidate": {
+      "record_id": "1d2cc8b6b2899a83",
+      "text": "- **Daniel Brankin and Amit Ayer defined “zero manual data entry” as the intended Jarvis user experience.** Daniel described opening Jarvis in the morning, reviewing outstanding tasks, and approving or rejecting recommendations while agents perform the supporting work. Amit agreed that building another scheduler requiring engineers to type tasks and dates would merely reproduce Navigator or Excel and waste time. This established a clear product test: project-management features should reduce administrative entry, not shift it into a new interface. Humans should review consequential recommendations while Jarvis assembles context, prepares work, and tracks follow-through. [00:33:00–00:35:15; 00:45:15–00:46:45]",
+      "project": "09-28-2026",
+      "source_file": "02_Jarvis_Q1_Charter_Sharon_PartnerAdvisory_09-28-2026_1111AM_1200PM_ET_executive_recap.md",
+      "lane": "key_point"
+    }
+  },
+  {
+    "query_text": "What is Unassigned (Pending Owner Assignment) accountable for regarding Identify a Google technical co?",
+    "topic_id": "topic_unassigned_action",
+    "candidate": {
+      "record_id": "45df5bb7e2fa39ee",
+      "text": "| 5 | Blocker | Identify a Google technical counterpart to assist with nuclear-project security and privacy work when support is requested. | Unassigned (Pending Owner Assignment) | TBD | 00:32:11–00:33:56 | Open |",
+      "project": "09-29-2026",
+      "source_file": "02_PartnerAdvisory_Gcp_Alex_Amit_09-29-2026_0307PM0350PMET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What is Taylor Mercer accountable for regarding Confirm which Forge locations ?",
+    "topic_id": "topic_traci_action",
+    "candidate": {
+      "record_id": "cbf999533aa62056",
+      "text": "| 4 | Action | Confirm which Forge locations can be leveraged for the planned work. | Taylor Mercer | TBD | [00:16:22–00:16:34] | Confirmed |",
+      "project": "09-28-2026",
+      "source_file": "02_Followup_Business_Case_Jill_PartnerAdvisory_09-28-2026_0400PM0417PMET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What is David Decof accountable for regarding Deliver Republic Services phas?",
+    "topic_id": "topic_david_action",
+    "candidate": {
+      "record_id": "361b1e419258cea8",
+      "text": "| 4 | Action | Deliver Republic Services phase-one seller homepage, streamlined data entry, and mobile functionality. | David Decof | Year-end 2026 | 00:31:22–00:33:25 | In progress |",
+      "project": "09-25-2026",
+      "source_file": "02_ENR_Quarterly_Connect_Kasey_Bernard_09-25-2026_1100AM_1145AM_ET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What was the main finding here?",
+    "topic_id": "topic_general_finding",
+    "candidate": {
+      "record_id": "923ec22631307a2a",
+      "text": "- **Pipeline Execution (OCR vs. Interpretation):** The pipeline execution separates OCR text recognition from semantic interpretation. Verification of independent step-function execution is required to enable image-reuse capabilities and avoid costly reprocessing of identical images.",
+      "project": "10-01-2026",
+      "source_file": "02_Phase1_Sow_Progress_Amit_Mandy_PartnerAdvisory_10-01-2026_0302PM0334PMET_executive_recap.md",
+      "lane": "key_point"
+    }
+  },
+  {
+    "query_text": "What was the main finding here?",
+    "topic_id": "topic_general_finding",
+    "candidate": {
+      "record_id": "106473171b40b1cb",
+      "text": "- **Traci framed Q4 as architecture-first while keeping charter approval tied to measurable outcomes.** Traci explained that Jarvis is a new application requiring architecture and infrastructure before larger workflow outcomes can be delivered. She used the analogy that the foundation must be established “before we can build the house.” The charter therefore needs to explain why Q4 may carry a smaller measurable return while still presenting enough quantified value to support approval. [00:00:33–00:01:35]",
+      "project": "09-28-2026",
+      "source_file": "02_Debrief_Traci_Amit_09-28-2026_0100PM0130PMET_executive_recap.md",
+      "lane": "key_point"
+    }
+  },
+  {
+    "query_text": "What is Amit Ayer accountable for regarding Conduct a follow-up conversati?",
+    "topic_id": "topic_amit_action",
+    "candidate": {
+      "record_id": "7447af43c6920811",
+      "text": "| 4 | Action | Conduct a follow-up conversation to clarify possible overlap between DocIQ and other document-intelligence engagements or charters. | Amit Ayer | Not stated | stmt-020–stmt-021, 00:23:12–00:23:25 | Confirmed |",
+      "project": "09-30-2026",
+      "source_file": "02_Dociq_Q4_Scope_Bailey_Amit_09-30-2026_0415PM0447PMET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What was the main finding here?",
+    "topic_id": "topic_general_finding",
+    "candidate": {
+      "record_id": "49b74749fb5b8bd9",
+      "text": "- **Sharon Diaram defined living project memory as a core Jarvis foundation.** She said Jarvis must retain more than information from LAMS and SAP. Its project context should also include tasks, meeting minutes, decisions, changing schedules, and eventually relevant email activity. Each interaction should make the project record more useful for later questions. This would allow an agent to explain what changed, summarize prior decisions, and surface outstanding work without requiring users to reconstruct project history across dashboards, spreadsheets, notes, and disconnected communications. [00:06:00–00:07:00]",
+      "project": "09-28-2026",
+      "source_file": "02_Jarvis_Q1_Charter_Sharon_PartnerAdvisory_09-28-2026_1111AM_1200PM_ET_executive_recap.md",
+      "lane": "key_point"
+    }
+  },
+  {
+    "query_text": "What is Unassigned (Pending Owner Assignment) accountable for regarding Assign a Delivery Solution Lea?",
+    "topic_id": "topic_unassigned_action",
+    "candidate": {
+      "record_id": "4c6232cf90edfcb5",
+      "text": "| 5 | Blocker | Assign a Delivery Solution Lead with enough capacity to provide weekly solution and architecture oversight for LENS. | Unassigned (Pending Owner Assignment) | TBD | 00:29:58–00:35:56 | Open |",
+      "project": "09-25-2026",
+      "source_file": "02_Google_Alex_Shreyak_Amit_Anya_09-25-2026_0900AM_1000AM_ET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What is Alex Brennan accountable for regarding Anya G.?",
+    "topic_id": "topic_alex_action",
+    "candidate": {
+      "record_id": "80d7f752584948cb",
+      "text": "| 3 | Align with Alex Brennan (Google Partner Development Manager) on partnership preparation session ahead of Tuesday sync (Monday or preceding Friday options) | Anya G. | Alex Brennan | Before Tuesday | Proposed | [00:15:00] Anya G., [00:15:30] Amit Ayer |",
+      "project": "09-22-2026",
+      "source_file": "02_Google_Internal_Anya_Shreyak_09-22-2026_1000AM_1030AM_ET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What is Jake Stark (PartnerAdvisory, UI and Prompting Lead) accountable for regarding Prepare engineering-reviewed w?",
+    "topic_id": "topic_jake_action",
+    "candidate": {
+      "record_id": "9e5110a2a16c967c",
+      "text": "| 2 | Action | Prepare engineering-reviewed wording for the written client response describing the proposed rejection-notification design. | Jake Stark (PartnerAdvisory, UI and Prompting Lead) | Not stated | [01:09:41–01:10:03]; [00:13:31] | Proposed |",
+      "project": "10-05-2026",
+      "source_file": "02_Scope_Morgan Vance_PartnerAdvisory_Morgan Vance_Jennifer_10-05-2026_0419PM0545PMET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What is Not stated accountable for regarding Amit Ayer?",
+    "topic_id": "topic_not_action",
+    "candidate": {
+      "record_id": "2bdd0f98fbcf0439",
+      "text": "| 2 | Proactively demand signed SOW milestone deliverables and escalate immediately if withheld | Amit Ayer | Not stated | Formal practitioner request for signed milestone deliverables submitted to project technical lead prior to sprint kickoff [00:16:00] | Not stated | Confirmed Spoken Agreement |",
+      "project": "09-23-2026",
+      "source_file": "02_Hemant_Desai_1on1_09-23-2026_0106PM_0131PM_ET_executive_recap.md",
+      "lane": "action_item"
+    }
+  },
+  {
+    "query_text": "What is Bailey Morton accountable for regarding Conduct the DocIQ delivery che?",
+    "topic_id": "topic_bailey_action",
+    "candidate": {
+      "record_id": "dc42de045191d255",
+      "text": "| 2 | Action | Conduct the DocIQ delivery check-in offered in session to assess assignment progress and support needs. | Bailey Morton | Not stated | stmt-016, 00:20:45 | Confirmed |",
+      "project": "09-30-2026",
+      "source_file": "02_Dociq_Q4_Scope_Bailey_Amit_09-30-2026_0415PM0447PMET_executive_recap.md",
+      "lane": "action_item"
+    }
+  }
+]

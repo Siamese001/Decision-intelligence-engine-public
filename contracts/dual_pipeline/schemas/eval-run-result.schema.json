@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:eval-run-result:1.0.0",
+  "title": "NEE sealed dual-pipeline evaluation result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "evaluation_id", "suite_id", "suite_digest", "suite_file_sha256", "pipeline", "graph_sha256", "case_results", "aggregate", "status", "evaluated_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:eval-run-result:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "evaluation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "suite_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "suite_file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "pipeline": {"type": "string", "enum": ["query", "ingestion", "dual"]},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "case_results": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:eval-run-result:1.0.0#/$defs/caseResult"}},
+    "aggregate": {"$ref": "urn:nee:dual-pipeline:eval-run-result:1.0.0#/$defs/aggregate"},
+    "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "caseResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "pipeline", "status", "failure_category", "cause_code", "stage", "provider_initialization_count", "provider_call_count", "answer_present", "graph_mutation_count", "directive_status", "terminal_receipt_digest", "hard_gates", "artifact_path"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "pipeline": {"type": "string", "enum": ["query", "ingestion"]},
+        "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+        "failure_category": {"type": ["string", "null"], "maxLength": 128},
+        "cause_code": {"type": ["string", "null"], "maxLength": 256},
+        "stage": {"type": ["string", "null"], "maxLength": 32},
+        "provider_initialization_count": {"type": "integer", "minimum": 0},
+        "provider_call_count": {"type": "integer", "minimum": 0},
+        "answer_present": {"type": "boolean"},
+        "graph_mutation_count": {"type": "integer", "minimum": 0},
+        "directive_status": {"type": ["string", "null"], "maxLength": 32},
+        "terminal_receipt_digest": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+        "hard_gates": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "boolean"}},
+        "artifact_path": {"type": "string", "minLength": 1, "maxLength": 1024}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_count", "passed_case_count", "failed_case_count", "case_pass_rate", "provider_call_count", "graph_mutation_count", "hard_gate_failure_count"],
+      "properties": {
+        "case_count": {"type": "integer", "minimum": 1},
+        "passed_case_count": {"type": "integer", "minimum": 0},
+        "failed_case_count": {"type": "integer", "minimum": 0},
+        "case_pass_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "provider_call_count": {"type": "integer", "minimum": 0},
+        "graph_mutation_count": {"type": "integer", "minimum": 0},
+        "hard_gate_failure_count": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

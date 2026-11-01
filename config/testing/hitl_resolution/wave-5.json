@@ -1,0 +1,19 @@
+{
+  "wave": 5,
+  "title": "Route decisions before question dispatch",
+  "plan_path": "docs/plans/feat_hitl_margin_autonomous_bypass_20261006.md",
+  "test_files": [
+    "tests/end_to_end/test_hitl_resolution_w5_e2e.py",
+    "tests/adversarial/test_hitl_resolution_w5_adversarial.py"
+  ],
+  "e2e_files": [
+    "tests/end_to_end/test_hitl_resolution_w5_e2e.py"
+  ],
+  "adversarial_files": [
+    "tests/adversarial/test_hitl_resolution_w5_adversarial.py"
+  ],
+  "per_test_timeout_seconds": 60,
+  "whole_run_timeout_seconds": 120,
+  "required_min_pass_count": 6,
+  "parent_wave": 4
+}

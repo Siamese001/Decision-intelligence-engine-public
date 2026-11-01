@@ -1,0 +1,57 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:architecture-diagram-intake:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "architecture-package-sherpa-observability-v3",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "f09bd88718da45a1d20b821febb6585d944945d291a25bfae7fa68650685564b"
+  },
+  "source": {
+    "source_id": "source-sherpa-architecture",
+    "source_version_id": "source-version-sherpa-architecture-v3",
+    "file_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "diagram_id": "diagram-sherpa-observability",
+    "page_id": "page-4",
+    "version": "3",
+    "source_date": "2026-07-18",
+    "classification": "internal",
+    "audiences": ["nee-engineering"]
+  },
+  "components": [
+    {
+      "component_ref": "component-sherpa-evaluator",
+      "reported_label": "Sherpa Evaluator",
+      "candidate_type": "service",
+      "region": {"kind": "region", "value": "page-4:[120,90,310,180]"},
+      "extraction_confidence": 0.97
+    },
+    {
+      "component_ref": "component-monitoring-platform",
+      "reported_label": "Monitoring Platform",
+      "candidate_type": "platform",
+      "region": {"kind": "region", "value": "page-4:[520,90,730,180]"},
+      "extraction_confidence": 0.86
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_ref": "relationship-sherpa-emits-telemetry",
+      "from_component_ref": "component-sherpa-evaluator",
+      "reported_predicate": "emits telemetry to",
+      "to_component_ref": "component-monitoring-platform",
+      "region": {"kind": "region", "value": "page-4:[300,110,540,150]"},
+      "extraction_confidence": 0.82
+    }
+  ],
+  "open_ambiguities": [
+    {
+      "ambiguity_id": "ambiguity-monitoring-owner",
+      "description": "The diagram does not identify the operational owner.",
+      "affected_refs": ["component-monitoring-platform"],
+      "region": {"kind": "region", "value": "page-4:[500,70,750,210]"},
+      "recommended_exit": "QUARANTINE"
+    }
+  ],
+  "extensions": {}
+}

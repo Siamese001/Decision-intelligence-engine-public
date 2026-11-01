@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project LENS Work Order Reopen Specification",
+  "description": "Governed data contract and API payload schema for requesting and authorizing the reopening of closed IBM Maximo work orders based on visual asset intelligence inspection anomalies.",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "request_id",
+    "work_order_id",
+    "asset_id",
+    "site_id",
+    "reopen_trigger",
+    "confidence_score",
+    "visual_evidence",
+    "human_approval_boundary",
+    "sla_priority"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "type": "string",
+      "enum": ["1.0.0"]
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^req-lens-wo-reopen-[a-f0-9]{12,32}$",
+      "description": "Unique deterministic request identifier."
+    },
+    "work_order_id": {
+      "type": "string",
+      "pattern": "^(WO-)?[0-9]{5,12}$",
+      "description": "Authoritative IBM Maximo Work Order identifier."
+    },
+    "asset_id": {
+      "type": "string",
+      "pattern": "^(GEID|TEID)-[A-Z0-9]+(-[A-Z0-9]+)*$",
+      "description": "Canonical turbine or solar equipment asset identifier."
+    },
+    "site_id": {
+      "type": "string",
+      "description": "Operational wind farm or solar facility code (e.g., SITE-04-BRAZOS)."
+    },
+    "reopen_trigger": {
+      "type": "string",
+      "enum": [
+        "COMPONENT_DEFECT_PERSISTS",
+        "ASSET_SERIAL_MISMATCH",
+        "INCOMPATIBLE_REPLACEMENT_INSTALLED",
+        "OCR_NAMEPLATE_UNCONFIRMED",
+        "ENVIRONMENTAL_SAFETY_HAZARD"
+      ],
+      "description": "Standardized reason code triggering the reopen evaluation."
+    },
+    "confidence_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Joint calibrated confidence score (must be >= 0.85 for autonomous dispatch, else requires manual review)."
+    },
+    "visual_evidence": {
+      "type": "object",
+      "required": [
+        "photo_id",
+        "capture_timestamp",
+        "evidence_sha256",
+        "bounding_box",
+        "extracted_tokens"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "photo_id": {
+          "type": "string"
+        },
+        "capture_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evidence_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "bounding_box": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 4,
+          "maxItems": 4,
+          "description": "[ymin, xmin, ymax, xmax] normalized coordinates."
+        },
+        "extracted_tokens": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "human_approval_boundary": {
+      "type": "object",
+      "required": [
+        "requires_human_approval",
+        "approval_authority_role",
+        "decision_status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "requires_human_approval": {
+          "type": "boolean",
+          "description": "True if confidence < 0.85 or estimated work order cost > $10,000."
+        },
+        "approval_authority_role": {
+          "type": "string",
+          "enum": [
+            "OPERATIONS_SUPERVISOR",
+            "RELIABILITY_ENGINEER",
+            "MAINTENANCE_LEAD",
+            "SYSTEM_AUTONOMOUS"
+          ]
+        },
+        "decision_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_APPROVAL",
+            "APPROVED",
+            "REJECTED",
+            "AUTONOMOUS_APPROVED"
+          ]
+        },
+        "operator_id": {
+          "type": ["string", "null"]
+        },
+        "decided_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "rejection_reason_code": {
+          "type": ["string", "null"],
+          "enum": [
+            null,
+            "REJ_IMAGE_QUALITY_DEFECT",
+            "REJ_PLANNED_SUBSEQUENT_MAINTENANCE",
+            "REJ_DUPLICATE_WORK_ORDER",
+            "REJ_SUPERSEDED_BY_MANUAL_INSPECTION",
+            "REJ_FALSE_POSITIVE_EXTRACTION"
+          ]
+        }
+      }
+    },
+    "sla_priority": {
+      "type": "string",
+      "enum": ["P1_EMERGENCY", "P2_HIGH", "P3_STANDARD", "P4_DEFERRED"],
+      "description": "Dispatch priority SLA for field operations."
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Optional engineer or auditor annotations."
+    }
+  }
+}

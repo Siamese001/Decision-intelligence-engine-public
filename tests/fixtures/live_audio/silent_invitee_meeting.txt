@@ -1,0 +1,3 @@
+[00:00] Samantha: Hello Daniel and Fred. We are waiting on Fred to confirm audio connectivity.
+[00:05] Daniel: I see Fred on the roster, but he appears to be on mute.
+[00:09] Samantha: Understood. We will proceed with the two of us for now.

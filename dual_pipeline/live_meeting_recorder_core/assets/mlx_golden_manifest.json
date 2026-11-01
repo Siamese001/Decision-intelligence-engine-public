@@ -1,0 +1,21 @@
+{
+  "asset_name": "mlx_golden_16k.wav",
+  "sha256": "bf5d98704f7f4de566befde65e46668eb7012ab665233d6aa5847e81444f37e8",
+  "sample_rate": 16000,
+  "channels": 1,
+  "duration_seconds": 4.213,
+  "expected_text": "Testing 1-2-3. The quarterly roadmap review starts now.",
+  "expected_normalized_tokens": [
+    "testing",
+    "1",
+    "2",
+    "3",
+    "the",
+    "quarterly",
+    "roadmap",
+    "review",
+    "starts",
+    "now"
+  ],
+  "min_token_overlap_ratio": 0.8
+}

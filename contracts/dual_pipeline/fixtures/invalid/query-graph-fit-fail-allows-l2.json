@@ -1,0 +1,42 @@
+{
+  "artifact_id": "query-graph-fit-invalid",
+  "authorized_lane_counts": {
+    "approved": 0,
+    "candidate": 0,
+    "external_public": 0
+  },
+  "automatic_provider_call_count": 0,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "3d749d80e499dcc7d17c75f49c17a323be4f48b82604e7fdc1b0762fa59731d0"
+  },
+  "connected_evidence_map_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+  "contract_id": "urn:nee:dual-pipeline:query-graph-fit-decision:1.0.0",
+  "decided_at": "2026-08-01T12:00:00Z",
+  "decision_id": "query-graph-fit-invalid",
+  "destination": "NEE_DECISION_INTELLIGENCE",
+  "destination_decision_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "embedding_backend": "flagembedding-bge-m3",
+  "evidence_packet_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+  "extensions": {},
+  "generation_id": "generation-query-fit",
+  "graph_path_count": 0,
+  "graph_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+  "graph_snapshot": "graph-snapshot-query-fit",
+  "l2_allowed": true,
+  "minimum_record_count": 1,
+  "model_id": "BAAI/bge-m3",
+  "model_manifest_digest": "6666666666666666666666666666666666666666666666666666666666666666",
+  "model_revision": "revision-query-fit",
+  "production_qualified": false,
+  "query_plan_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "query_type": "cross_workstream_synthesis",
+  "reason_codes": [
+    "NO_AUTHORIZED_GRAPH_RECORDS"
+  ],
+  "run_id": "run-query-graph-fit-invalid",
+  "schema_version": "1.0.0",
+  "selected_record_count": 0,
+  "status": "FAIL"
+}

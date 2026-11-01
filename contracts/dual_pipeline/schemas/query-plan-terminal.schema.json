@@ -1,0 +1,157 @@
+{
+  "$id": "urn:nee:dual-pipeline:query-plan-terminal:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "attempt_chain": {
+      "items": {
+        "pattern": "^[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:query-plan-terminal:1.0.0"
+    },
+    "coverage_complete": {
+      "type": "boolean"
+    },
+    "coverage_manifest_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "final_evidence_report_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "final_provider_call_count": {
+      "const": 0,
+      "type": "integer"
+    },
+    "graph_sha256_after": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "graph_sha256_before": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "parent_plan_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "permitted_next_stage": {
+      "enum": [
+        "L2D",
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "HITL",
+        "NONE"
+      ]
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "terminal_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "terminal_reason": {
+      "enum": [
+        "COMPLETED",
+        "EXPLICIT_GAP",
+        "NO_PROGRESS",
+        "BUDGET_EXHAUSTED",
+        "UNAUTHORIZED",
+        "CONFLICT",
+        "HITL_REQUIRED",
+        "SHADOW"
+      ]
+    },
+    "total_work": {
+      "additionalProperties": false,
+      "properties": {
+        "actions": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "attempts": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "bytes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "elapsed_ms": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "unique_records": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "attempts",
+        "actions",
+        "unique_records",
+        "bytes",
+        "elapsed_ms"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "terminal_id",
+    "parent_plan_digest",
+    "coverage_manifest_digest",
+    "attempt_chain",
+    "final_evidence_report_digest",
+    "total_work",
+    "final_provider_call_count",
+    "graph_sha256_before",
+    "graph_sha256_after",
+    "terminal_reason",
+    "coverage_complete",
+    "permitted_next_stage"
+  ],
+  "title": "Governed L1 terminal receipt",
+  "type": "object"
+}

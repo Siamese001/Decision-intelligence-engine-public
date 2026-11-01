@@ -1,0 +1,37 @@
+#!/bin/sh
+set -eu
+if command -v git-lfs >/dev/null 2>&1; then
+  git lfs post-merge "$@"
+fi
+
+SCRIPT_DIR=$(dirname "$0")
+. "$SCRIPT_DIR/_common.sh"
+cd "$ROOT"
+
+if [ "${GOVERNED_PR_MERGE:-0}" = "1" ]; then
+  # Governed PR merge lifecycle manages worktree teardown and branch deletion synchronously
+  exit 0
+fi
+
+# Scope merged-worktree cleanup to the branch that was just merged.
+GIT_DIR=$(git rev-parse --git-dir)
+MERGE_MSG_FILE="$GIT_DIR/MERGE_MSG"
+MERGED_BRANCH=""
+if [ -f "$MERGE_MSG_FILE" ]; then
+  MERGED_BRANCH=$(head -1 "$MERGE_MSG_FILE" | sed -n "s/.*Merge branch '\\([^']*\\)'.*/\\1/p")
+fi
+if [ -z "$MERGED_BRANCH" ]; then
+  MERGED_BRANCH=$(git log -1 --format=%s | sed -n "s/.*Merge branch '\\([^']*\\)'.*/\\1/p")
+fi
+
+if [ -n "$MERGED_BRANCH" ]; then
+  # Background worktree cleanup to unblock terminal prompt immediately (<0.1s return)
+  run_python -B tools/audit_worktree_hygiene.py \
+    --clean-merged-worktrees \
+    --delete-branch \
+    --branch "$MERGED_BRANCH" \
+    --repo-root "$ROOT" >/dev/null 2>&1 &
+else
+  # Branch not parseable — skip automated cleanup rather than run a global sweep.
+  echo "post-merge: could not parse merged branch from MERGE_MSG or commit log; skipping worktree cleanup."
+fi

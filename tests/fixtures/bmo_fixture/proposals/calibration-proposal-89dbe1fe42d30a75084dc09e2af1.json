@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-89dbe1fe42d30a75084dc09e2af1",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "82948985f40cc11d7c30df2f46c0f2651bc62e9d361e4f3431684d106868dc06"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-27d2915c225bb33904d38e51"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Golden Dataset is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off.",
+      "proposed_value": "Golden Dataset is an identified technical_anchor in 20261005 Lens Scope Review.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-ab339e04e7ff4a7a2ce2614c30e1"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-c1500b9bc52772b2e7df05f33878",
+      "assertion_id_older": "assertion-ab339e04e7ff4a7a2ce2614c30e1",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-de7ce8aebb7b4dc5ca71a6b1a5a5",
+      "timestamp_newer": "2026-10-05",
+      "timestamp_older": "2026-09-30"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Golden Dataset' (HAS_CLAIM_TEXT). Older claim from 2026-09-30 superseded by newer claim from 2026-10-05.",
+  "proposal_id": "calibration-proposal-89dbe1fe42d30a75084dc09e2af1",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-ab339e04e7ff4a7a2ce2614c30e1 from Golden Dataset is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off. to Golden Dataset is an identified technical_anchor in 20261005 Lens Scope Review.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

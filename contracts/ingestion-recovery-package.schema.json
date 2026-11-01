@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:ingestion-recovery-package:1.0.0",
+  "title": "NEE Ingestion Recovery Package Contract",
+  "description": "Schema governing actionable recovery packages for stranded or digest-mismatched ingestion packages, preserving lineage and approval boundaries.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "package_id",
+    "operation_id",
+    "directive_id",
+    "package_digest",
+    "missing_prerequisites",
+    "current_approval_applicability",
+    "intended_resume_stage",
+    "predicted_effects",
+    "rollback_conditions",
+    "created_at"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "const": "urn:nee:ingestion-recovery-package:1.0.0"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "operation_id": {
+      "type": "string"
+    },
+    "directive_id": {
+      "type": "string"
+    },
+    "package_digest": {
+      "type": "string"
+    },
+    "missing_prerequisites": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "current_approval_applicability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approval_valid", "scope_match", "renewal_required"],
+      "properties": {
+        "approval_valid": { "type": "boolean" },
+        "approval_token": { "type": ["string", "null"] },
+        "scope_match": { "type": "boolean" },
+        "renewal_required": { "type": "boolean" }
+      }
+    },
+    "intended_resume_stage": {
+      "type": "string"
+    },
+    "predicted_effects": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "rollback_conditions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

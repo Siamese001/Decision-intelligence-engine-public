@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0",
+  "title": "NEE governed semantic-organization change set",
+  "description": "An approval-bound graph change set for controlled facets, card views, and assertion editorial-route retirement, separate from evidence-ingestion operations.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "change_set_id", "run_id", "trace_id", "status", "base_graph_snapshot", "base_graph_hash", "schema_migration", "policy_bindings", "approval_id", "operations", "transaction_required", "rollback_required", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "change_set_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "status": {"type": "string", "enum": ["proposed", "approved", "staged", "applied", "rolled_back"]},
+    "base_graph_snapshot": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "base_graph_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "schema_migration": {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/schemaMigrationBinding"},
+    "policy_bindings": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "uniqueItems": true,
+      "items": {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/policyBinding"}
+    },
+    "approval_id": {"type": ["string", "null"], "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"},
+    "operations": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10000,
+      "items": {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/operation"}
+    },
+    "transaction_required": {"const": true},
+    "rollback_required": {"const": true},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "status": {"const": "proposed"},
+        "approval_id": {"type": "null"}
+      }
+    },
+    {
+      "properties": {
+        "status": {"type": "string", "enum": ["approved", "staged", "applied", "rolled_back"]},
+        "approval_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+      }
+    }
+  ],
+  "$defs": {
+    "schemaMigrationBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["migration_id", "migration_checksum"],
+      "properties": {
+        "migration_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "migration_checksum": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "policyBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy_id", "policy_digest"],
+      "properties": {
+        "policy_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "policy_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation_id", "sequence", "target_type", "target_id", "before_state_hash", "after_state_hash", "rationale", "payload"],
+      "properties": {
+        "operation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "sequence": {"type": "integer", "minimum": 1},
+        "target_type": {"type": "string", "enum": ["controlled_value", "facet_derivation_rule", "facet_assignment", "facet_coverage_exception", "card_view_definition", "canonical_route"]},
+        "target_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "before_state_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "after_state_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "rationale": {"type": "string", "minLength": 1, "maxLength": 4000},
+        "payload": {
+          "oneOf": [
+            {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/registerControlledFacetValue"},
+            {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/registerFacetDerivationRule"},
+            {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/assignObjectFacet"},
+            {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/retireObjectFacet"},
+            {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/createFacetCoverageException"},
+            {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/resolveFacetCoverageException"},
+            {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/upsertCardViewDefinition"},
+            {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/retireCardViewDefinition"},
+            {"$ref": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0#/$defs/retireAssertionCardRoute"}
+          ]
+        }
+      }
+    },
+    "registerControlledFacetValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "vocabulary", "value", "definition", "sort_order"],
+      "properties": {
+        "operation": {"const": "register_controlled_facet_value"},
+        "vocabulary": {"type": "string", "pattern": "^[a-z][a-z0-9_:-]{1,63}$"},
+        "value": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{1,127}$"},
+        "definition": {"type": "string", "minLength": 1, "maxLength": 1000},
+        "sort_order": {"type": "integer", "minimum": 1}
+      }
+    },
+    "registerFacetDerivationRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "rule_id", "rule_version", "rule_digest", "implementation_ref", "applicability_policy_id", "applicability_policy_digest", "approval_reference"],
+      "properties": {
+        "operation": {"const": "register_facet_derivation_rule"},
+        "rule_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "rule_version": {"type": "integer", "minimum": 1},
+        "rule_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "implementation_ref": {"type": "string", "minLength": 1, "maxLength": 512},
+        "applicability_policy_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "applicability_policy_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "approval_reference": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        }
+      }
+    },
+    "assignObjectFacet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "assignment_id", "object_type", "object_id", "vocabulary", "value", "assignment_method", "review_state", "derivation_rule_id", "derivation_rule_version", "approval_reference"],
+      "properties": {
+        "operation": {"const": "assign_object_facet"},
+        "assignment_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "object_type": {"type": "string", "enum": ["node", "claim", "assertion"]},
+        "object_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "vocabulary": {"type": "string", "pattern": "^[a-z][a-z0-9_:-]{1,63}$"},
+        "value": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{1,127}$"},
+        "assignment_method": {"type": "string", "enum": ["explicit", "rule_derived", "inherited", "reviewed"]},
+        "review_state": {"type": "string", "enum": ["approved", "needs_review", "exception"]},
+        "derivation_rule_id": {"type": ["string", "null"], "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"},
+        "derivation_rule_version": {"type": ["integer", "null"], "minimum": 1},
+        "approval_reference": {"type": ["string", "null"], "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"}
+      }
+    },
+    "retireObjectFacet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "assignment_id", "retirement_reason"],
+      "properties": {
+        "operation": {"const": "retire_object_facet"},
+        "assignment_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "retirement_reason": {"type": "string", "minLength": 1, "maxLength": 2000}
+      }
+    },
+    "createFacetCoverageException": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "exception_id", "object_type", "object_id", "vocabulary", "reason", "owner", "review_due_date", "approval_reference"],
+      "properties": {
+        "operation": {"const": "create_facet_coverage_exception"},
+        "exception_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "object_type": {"type": "string", "enum": ["node", "claim", "assertion"]},
+        "object_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "vocabulary": {"type": "string", "pattern": "^[a-z][a-z0-9_:-]{1,63}$"},
+        "reason": {"type": "string", "minLength": 1, "maxLength": 2000},
+        "owner": {"type": "string", "minLength": 1, "maxLength": 256},
+        "review_due_date": {"type": "string", "format": "date"},
+        "approval_reference": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        }
+      }
+    },
+    "resolveFacetCoverageException": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "exception_id", "resolution"],
+      "properties": {
+        "operation": {"const": "resolve_facet_coverage_exception"},
+        "exception_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "resolution": {"type": "string", "minLength": 1, "maxLength": 2000}
+      }
+    },
+    "upsertCardViewDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "card_view_id", "card_id", "view_version", "selector_id", "selector_digest", "authority_mode", "classification", "audiences", "editorial_owner", "view_state", "approval_reference"],
+      "properties": {
+        "operation": {"const": "upsert_card_view_definition"},
+        "card_view_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "card_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "view_version": {"type": "integer", "minimum": 1},
+        "selector_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "selector_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "authority_mode": {"type": "string", "enum": ["approved_only", "candidate_review"]},
+        "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+        "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+        "editorial_owner": {"type": "string", "minLength": 1, "maxLength": 256},
+        "view_state": {"type": "string", "enum": ["draft", "active", "retired"]},
+        "approval_reference": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        }
+      }
+    },
+    "retireCardViewDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "card_view_id", "retirement_reason"],
+      "properties": {
+        "operation": {"const": "retire_card_view_definition"},
+        "card_view_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "retirement_reason": {"type": "string", "minLength": 1, "maxLength": 2000}
+      }
+    },
+    "retireAssertionCardRoute": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "route_id", "object_type", "assertion_id", "retirement_reason"],
+      "properties": {
+        "operation": {"const": "retire_assertion_card_route"},
+        "route_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "object_type": {"const": "assertion"},
+        "assertion_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "retirement_reason": {"type": "string", "minLength": 1, "maxLength": 2000}
+      }
+    }
+  }
+}

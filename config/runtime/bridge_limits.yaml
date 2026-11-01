@@ -1,0 +1,22 @@
+version: "1.0.0"
+governance_initiative: "NEE-KG-DUAL-PIPELINE-01"
+
+# Bound to canonical parameter SSOT: audio_ingestion.sample_rate_hz and decision_service.default_fast_path_ttl_sec in config/runtime/parameters.json
+ring_buffer:
+  default_capacity: 32
+  max_slot_payload_bytes: 5242880  # 5 MB per slot max
+  backpressure_policy: "DROP_OLDEST"
+  sample_rate_hz: 16000
+  stride_samples: 4000
+  overlap_samples: 36000
+
+fast_path:
+  ttl_seconds: 30.0
+  max_turns_in_memory: 50
+  badge: "[UNTRUSTED_FAST_PATH]"
+  mutation_allowed: false
+
+retrieval_pack:
+  max_facts_per_pack: 25
+  max_citations_per_pack: 50
+  single_trip_enforced: true

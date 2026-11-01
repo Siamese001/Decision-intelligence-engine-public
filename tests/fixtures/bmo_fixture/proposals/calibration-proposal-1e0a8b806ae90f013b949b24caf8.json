@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-1e0a8b806ae90f013b949b24caf8",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "a220e6b2fd2a7b5c655d52b35a1c4082b1f058b6bcea40a93a74ee5ff89e3d70"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-0d62b15b2a79d438359cf659"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "I have no idea what that would entail, but we have set up a connection to retrieve data.",
+      "proposed_value": "I haven't made a call like this. I don't know if I can make a call to open a work.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-074d317196ee3f002f714ad78726"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-bf1ac5d66743be7ae9f6b1e72934",
+      "assertion_id_older": "assertion-074d317196ee3f002f714ad78726",
+      "confidence_coexist": 0.45,
+      "confidence_supersede": 0.55,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": true,
+      "margin_delta": 0.1,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-10-05",
+      "timestamp_older": "2026-10-05"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-10-05 superseded by newer claim from 2026-10-05.",
+  "proposal_id": "calibration-proposal-1e0a8b806ae90f013b949b24caf8",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-074d317196ee3f002f714ad78726 from I have no idea what that would entail, but we have set up a connection to retrieve data. to I haven't made a call like this. I don't know if I can make a call to open a work.. Requires governed approval before release.",
+  "risk": "medium",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

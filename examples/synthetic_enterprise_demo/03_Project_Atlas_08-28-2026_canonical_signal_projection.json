@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "project": "project_atlas",
+  "meeting_date": "08-28-2026",
+  "synthetic_showcase": true,
+  "entities": [
+    {
+      "id": "ent_project_atlas",
+      "kind": "WORKSTREAM",
+      "name": "Project Atlas"
+    },
+    {
+      "id": "ent_alex_rivera",
+      "kind": "PERSON",
+      "name": "Alex Rivera",
+      "role": "VP Cloud Infrastructure"
+    },
+    {
+      "id": "ent_jordan_taylor",
+      "kind": "PERSON",
+      "name": "Jordan Taylor",
+      "role": "Director Product Engineering"
+    },
+    {
+      "id": "ent_morgan_vance",
+      "kind": "PERSON",
+      "name": "Morgan Vance",
+      "role": "Chief Risk Officer"
+    }
+  ],
+  "assertions": [
+    {
+      "assertion_id": "asrt_atlas_failover_commitment_001",
+      "subject_id": "ent_alex_rivera",
+      "predicate": "COMMITTED_TO_DELIVERABLE",
+      "object_id": "ent_project_atlas",
+      "claim_text": "Execute multi-region failover drill by 09/28/2026 and publish audit receipt by 09/30/2026.",
+      "confidence": 0.96,
+      "observed_at": "2026-08-28T14:00:00Z",
+      "stale_after": "2026-10-15T23:59:59Z",
+      "verbatim_quote": "I commit the Infrastructure team to executing the multi-region failover drill by September 28"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:scheduled-task-evidence-bundle:1.0.0",
+  "title": "NEE Scheduled Task Evidence Bundle Contract",
+  "description": "Sealed evidence bundle schema binding final Markdown reports, structured JSON results, execution logs, approval records, and exact evaluation gate coverage.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "bundle_id",
+    "task_id",
+    "run_id",
+    "attempt_id",
+    "created_at",
+    "bundle_root",
+    "members",
+    "coverage_summary",
+    "manifest_digest"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "const": "urn:nee:scheduled-task-evidence-bundle:1.0.0"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "bundle_id": {
+      "type": "string",
+      "minLength": 4
+    },
+    "task_id": {
+      "type": "string",
+      "enum": [
+        "knowledge_graph_hygiene",
+        "pr_queue_observer",
+        "repository_antipattern_audit",
+        "ssot_drift_remediation",
+        "storage_repository_hygiene",
+        "weekly_market_intelligence",
+        "worktree_coverage_cleanup",
+        "cost_quality_review",
+        "pipeline_outcome_assurance",
+        "technical_debt_elimination",
+        "timeout_lock_watchdog",
+        "third_party_tool_consolidation"
+      ]
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 4
+    },
+    "attempt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "bundle_root": {
+      "type": "string"
+    },
+    "members": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["relative_path", "role", "size_bytes", "sha256"],
+        "properties": {
+          "relative_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "report_markdown",
+              "structured_result",
+              "execution_log",
+              "approval_receipt",
+              "action_receipt",
+              "input_artifact",
+              "telemetry"
+            ]
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "coverage_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_expected_evaluations",
+        "total_inspected_evaluations",
+        "evaluation_ids",
+        "gates_evaluated",
+        "gates_passed",
+        "gates_failed",
+        "unreadable_items_count",
+        "coverage_ratio"
+      ],
+      "properties": {
+        "total_expected_evaluations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_inspected_evaluations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evaluation_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "gates_evaluated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gates_passed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gates_failed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unreadable_items_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage_ratio": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      }
+    },
+    "manifest_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

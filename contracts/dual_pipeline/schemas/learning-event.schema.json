@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:learning-event:1.0.0",
+  "title": "NEE durable L4 learning-ledger event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "event_id", "trace_id", "span_id", "parent_span_id", "run_id", "use_case", "stage", "event_type", "policy_version", "graph_snapshot", "model_or_index_generation", "input_digest", "output_digest", "status", "created_at", "correlation", "payload_reference", "payload_digest", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:learning-event:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "event_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "span_id": {"type": "string", "pattern": "^[a-f0-9]{16}$"},
+    "parent_span_id": {"type": ["string", "null"], "pattern": "^[a-f0-9]{16}$"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "use_case": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/useCase"},
+    "stage": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/stage"},
+    "event_type": {
+      "type": "string",
+      "enum": ["intake_run", "source_record", "candidate_record", "entity_resolution_candidate", "entity_resolution_decision", "assertion_disposition", "external_validation_result", "hitl_review_item", "hitl_decision", "graph_change_set", "graph_change_operation", "graph_write_receipt", "embedding_generation_receipt", "query_classification", "query_plan", "route_decision", "macro_route_decision", "retrieval_event", "retrieved_record", "graph_path", "evidence_packet", "l2_execution_decision", "prompt_event", "l2_primary_call", "l2_schema_repair", "l2_quality_escalation", "l2_provider_failure", "l2_output_selection", "reasoning_event", "exit_gate_event", "user_feedback", "downstream_outcome", "pipeline_event", "learning_change_proposal", "policy_change_approval", "learning_canary_evaluated", "evaluation_result", "release_receipt", "release_activation_aborted", "l1_bounded", "l1_shadow"]
+    },
+    "policy_version": {"type": "string", "minLength": 1},
+    "graph_snapshot": {"type": ["string", "null"]},
+    "model_or_index_generation": {"type": ["string", "null"]},
+    "input_digest": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "output_digest": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "status": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/status"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "correlation": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/correlation"},
+    "payload_reference": {"type": "string", "minLength": 1},
+    "payload_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

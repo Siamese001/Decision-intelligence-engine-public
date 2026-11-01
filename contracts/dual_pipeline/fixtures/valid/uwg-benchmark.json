@@ -1,0 +1,17 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "uwg-benchmark-fixture",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "58965b771145cb94a441b091ce01a90ada93cccabfb7028e13ef36a71fc58bb7"},
+  "benchmark_id": "uwg-benchmark-fixture",
+  "origin_run_id": "run-uwg-fixture",
+  "candidate_assertion_ids": ["assertion-uwg-fixture"],
+  "cases": [{"case_id": "case-uwg-fixture", "query": "UWG fixture assertion", "expected_assertion_ids": ["assertion-uwg-fixture"], "classification": "internal", "audiences": ["nee-engineering"]}],
+  "negative_cases": [{"case_id": "negative-uwg-fixture", "query": "unrelated control", "forbidden_assertion_ids": ["assertion-uwg-fixture"], "classification": "internal", "audiences": ["nee-engineering"]}],
+  "lane_isolation_cases": [{"case_id": "lane-uwg-fixture", "query": "UWG fixture assertion", "forbidden_assertion_ids": ["assertion-uwg-fixture"], "classification": "internal", "audiences": ["nee-engineering"]}],
+  "acl_cases": [{"case_id": "acl-uwg-fixture", "query": "UWG fixture assertion", "forbidden_assertion_ids": ["assertion-uwg-fixture"], "classification": "public", "audiences": ["public-reader"]}],
+  "thresholds": {"top_k": 1, "min_recall_at_k": 1, "min_mrr": 1, "max_latency_ms": 5000, "max_negative_leakage_rate": 0, "max_lane_leakage_rate": 0, "max_acl_leakage_rate": 0},
+  "acceptance_policy": {"policy_id": "uwg-promotion-qualification-policy", "policy_version": "1.0.0", "policy_digest": "c0674c26601a809b2308215c2a905dd17e6fdeb9de59906e117e81c31a4a756b", "owner": "NEE Knowledge Governance"},
+  "created_at": "2026-07-25T00:00:00Z",
+  "extensions": {}
+}

@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0",
+  "title": "NEE digest-bound agentic workflow evaluation suite",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "suite_id", "measurement_profile", "workload", "warmup_nodes", "evaluator", "invariant_bindings", "treatments", "cases", "thresholds", "created_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "measurement_profile": {"type": "string", "enum": ["deterministic_structural", "live_usage"]},
+    "workload": {"$ref": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0#/$defs/fileBinding"},
+    "warmup_nodes": {"type": "integer", "minimum": 0, "maximum": 1000},
+    "evaluator": {"$ref": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0#/$defs/evaluator"},
+    "invariant_bindings": {"$ref": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0#/$defs/invariantBindings"},
+    "treatments": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0#/$defs/treatment"}},
+    "cases": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0#/$defs/case"}},
+    "thresholds": {"$ref": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0#/$defs/thresholds"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "fileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["workload_id", "path", "sha256"],
+      "properties": {
+        "workload_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "path": {"type": "string", "minLength": 1, "maxLength": 512},
+        "sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "evaluator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "digest"],
+      "properties": {
+        "version": {"type": "string", "minLength": 3, "maxLength": 128},
+        "digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "invariantBindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["graph_sha256", "evidence_corpus_digest", "provider_id", "model_id", "model_revision", "authorization_digest", "business_policy_digest", "tokenizer_digest", "pricing_schedule_digest", "cache_protocol_digest"],
+      "properties": {
+        "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "evidence_corpus_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "provider_id": {"type": "string", "minLength": 1, "maxLength": 128},
+        "model_id": {"type": "string", "minLength": 1, "maxLength": 128},
+        "model_revision": {"type": "string", "minLength": 1, "maxLength": 128},
+        "authorization_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "business_policy_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "tokenizer_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "pricing_schedule_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "cache_protocol_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "treatment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["treatment_id", "history_policy", "tool_output_policy", "budget_enforced", "no_progress_limit", "feature_path"],
+      "properties": {
+        "treatment_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "history_policy": {"type": "string", "enum": ["bounded", "append_completed"]},
+        "tool_output_policy": {"type": "string", "enum": ["externalize", "inline"]},
+        "budget_enforced": {"type": "boolean"},
+        "no_progress_limit": {"type": "integer", "minimum": 1, "maximum": 20},
+        "feature_path": {"type": "string", "enum": ["candidate", "legacy"]}
+      }
+    },
+    "expected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["terminal_class", "required_evidence_ids", "required_contradiction_ids"],
+      "properties": {
+        "terminal_class": {"type": "string", "enum": ["COMPLETED", "BLOCKED", "HITL_REQUIRED", "FAILED"]},
+        "required_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "required_contradiction_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}}
+      }
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "tags", "scenario_id", "critical", "expected"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "tags": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 64}},
+        "scenario_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "critical": {"type": "boolean"},
+        "expected": {"$ref": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0#/$defs/expected"}
+      }
+    },
+    "thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_usage_completeness", "maximum_completed_history_bytes", "maximum_raw_tool_output_bytes", "maximum_previous_compiled_prompt_bytes", "maximum_growth_bytes_per_node", "maximum_growth_percent_per_node", "maximum_last_to_node10_ratio", "maximum_e5_return_bytes", "minimum_credit_improvement_fraction"],
+      "properties": {
+        "minimum_usage_completeness": {"type": "number", "minimum": 0, "maximum": 1},
+        "maximum_completed_history_bytes": {"const": 0},
+        "maximum_raw_tool_output_bytes": {"const": 0},
+        "maximum_previous_compiled_prompt_bytes": {"const": 0},
+        "maximum_growth_bytes_per_node": {"type": "number", "minimum": 0},
+        "maximum_growth_percent_per_node": {"type": "number", "minimum": 0},
+        "maximum_last_to_node10_ratio": {"type": "number", "minimum": 1},
+        "maximum_e5_return_bytes": {"type": "integer", "minimum": 0},
+        "minimum_credit_improvement_fraction": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    }
+  }
+}

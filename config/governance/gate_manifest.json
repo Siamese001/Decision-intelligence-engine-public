@@ -1,0 +1,67 @@
+{
+  "$schema": "urn:nee:governance:gate-manifest:1.0.0",
+  "version": "1.0.0",
+  "description": "Versioned Gate Manifest mapping all 34 registered verification stages to risk tiers and dispositions.",
+  "total_registered_stages": 34,
+  "fallback_policy": {
+    "unrecognized_path_lane": 2,
+    "mixed_changes_lane": 2,
+    "fail_closed": true
+  },
+  "lane_profiles": {
+    "0": {
+      "name": "LANE_0_LOW_RISK",
+      "description": "Documentation, comments, guides, and isolated tests",
+      "required_stage_indices": [1, 6, 17, 20, 28, 29],
+      "behavioral_test_mode": "smoke_only"
+    },
+    "1": {
+      "name": "LANE_1_MEDIUM_RISK",
+      "description": "Standard application code, tools, diagnostics, and helpers",
+      "required_stage_indices": [1, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+      "behavioral_test_mode": "impacted_only"
+    },
+    "2": {
+      "name": "LANE_2_HIGH_RISK",
+      "description": "Knowledge graph storage, releases, ingestion, HITL ledger, and governance controls",
+      "required_stage_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+      "behavioral_test_mode": "full_suite"
+    }
+  },
+  "stages": [
+    {"index": 1, "name": "Model-Neutral Artifact Naming", "disposition": "hygiene", "min_lane": 0},
+    {"index": 2, "name": "Architectural Layer & Cycle Linter", "disposition": "architecture", "min_lane": 1},
+    {"index": 3, "name": "Module File Budget Linter (All Modules)", "disposition": "hygiene", "min_lane": 1},
+    {"index": 4, "name": "Production Purity & Derivation Integrity", "disposition": "boundary", "min_lane": 1},
+    {"index": 5, "name": "Direct Stage U0 Anti-Scripting Linter", "disposition": "boundary", "min_lane": 1},
+    {"index": 6, "name": "Credential & Career Firewall Scanner", "disposition": "security", "min_lane": 0},
+    {"index": 7, "name": "Epistemic Boundaries Audit", "disposition": "boundary", "min_lane": 1},
+    {"index": 8, "name": "Mock Boundary Governance Linter", "disposition": "boundary", "min_lane": 1},
+    {"index": 9, "name": "HITL Ledger Merkle Integrity", "disposition": "control", "min_lane": 2},
+    {"index": 10, "name": "Dual Pipeline Contracts Validation", "disposition": "control", "min_lane": 1},
+    {"index": 11, "name": "Contract Parity & SSOT Linter", "disposition": "control", "min_lane": 1},
+    {"index": 12, "name": "Output Directory Hierarchy Gate", "disposition": "hygiene", "min_lane": 1},
+    {"index": 13, "name": "Hardcoded Parameter & SSOT Linter", "disposition": "architecture", "min_lane": 1},
+    {"index": 14, "name": "Parameter Reference & Parity Linter", "disposition": "architecture", "min_lane": 1},
+    {"index": 15, "name": "No Synthetic Embeddings Policy", "disposition": "control", "min_lane": 2},
+    {"index": 16, "name": "Runtime Evidence Controls", "disposition": "control", "min_lane": 2},
+    {"index": 17, "name": "Wave Implementation Plan Schema Gate", "disposition": "governance", "min_lane": 0},
+    {"index": 18, "name": "Cognitive Complexity Linter", "disposition": "architecture", "min_lane": 1},
+    {"index": 19, "name": "AST Invariant & Data/Code Decoupling Linter", "disposition": "architecture", "min_lane": 1},
+    {"index": 20, "name": "Blast Radius Risk Linter", "disposition": "scope", "min_lane": 0},
+    {"index": 21, "name": "Strict Type Gate", "disposition": "architecture", "min_lane": 1},
+    {"index": 22, "name": "MCP Schema Overhead Audit", "disposition": "tooling", "min_lane": 1},
+    {"index": 23, "name": "Workspace Skills Budget & Token Overhead Gate", "disposition": "tooling", "min_lane": 1},
+    {"index": 24, "name": "Workspace Rules Budget & >90% Deduplication Gate", "disposition": "tooling", "min_lane": 1},
+    {"index": 25, "name": "SSOT Configuration & Release Threshold Scanner", "disposition": "control", "min_lane": 2},
+    {"index": 26, "name": "Prompt SSOT Integrity Linter", "disposition": "control", "min_lane": 1},
+    {"index": 27, "name": "Raw SQLite Direct Usage Linter (Ruff TID251)", "disposition": "architecture", "min_lane": 1},
+    {"index": 28, "name": "Wave Implementation Status Table Linter", "disposition": "governance", "min_lane": 0},
+    {"index": 29, "name": "Core Architectural & Governance Test Suite", "disposition": "behavior", "min_lane": 0},
+    {"index": 30, "name": "Gate 10: E2E Coverage Audit Score (Dimension 2 ≥ 80%)", "disposition": "coverage", "min_lane": 1},
+    {"index": 31, "name": "Grounded Delivery & Claim Manifest Verification", "disposition": "control", "min_lane": 1},
+    {"index": 32, "name": "Gate 31: Copilot Active Graph Smoke Gate", "disposition": "behavior", "min_lane": 1},
+    {"index": 33, "name": "Gate 32: Direct Graph Write Path Linter", "disposition": "architecture", "min_lane": 1},
+    {"index": 34, "name": "Test & Healer Ratchet Linter", "disposition": "architecture", "min_lane": 1}
+  ]
+}

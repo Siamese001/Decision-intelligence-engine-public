@@ -1,0 +1,146 @@
+{
+  "acceptance_policy": {
+    "owner": "NEE Knowledge Governance",
+    "policy_digest": "a5e72d6936a2ed0b5c224386b49a083f7fbe0cd8a7e7dcaf8e3d19d8d2ceb856",
+    "policy_id": "bge-m3-retrieval-release-policy",
+    "policy_version": "1.1.0"
+  },
+  "aggregate": {
+    "core": {
+      "case_count": 1,
+      "mrr": 1,
+      "ndcg_at_k": 1,
+      "recall_at_k": 1
+    },
+    "critical_failure_count": 0,
+    "delta": {
+      "case_count": 0,
+      "mrr": 1,
+      "ndcg_at_k": 1,
+      "recall_at_k": 1
+    },
+    "forbidden_leakage_count": 0,
+    "max_latency_ms": 1,
+    "rank_regression_count": 0,
+    "repeat_stability_failure_count": 0
+  },
+  "artifact_id": "retrieval-release-evaluation-fixture",
+  "baseline_pair": {
+    "embedding_backend": "flagembedding-bge-m3-dev",
+    "generation_id": "generation-baseline-fixture",
+    "graph_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "graph_snapshot": "snapshot-baseline-fixture",
+    "model_id": "BAAI/bge-m3",
+    "model_manifest_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "model_revision": "0123456789012345678901234567890123456789",
+    "production_qualified": false,
+    "sidecar_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+  },
+  "candidate_pair": {
+    "embedding_backend": "flagembedding-bge-m3-dev",
+    "generation_id": "generation-candidate-fixture",
+    "graph_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "graph_snapshot": "snapshot-candidate-fixture",
+    "model_id": "BAAI/bge-m3",
+    "model_manifest_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "model_revision": "0123456789012345678901234567890123456789",
+    "production_qualified": false,
+    "sidecar_sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+  },
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "9d2e84dd1b3876378a44f0fc6d5e4c75847445a5b98a7002791a6495685e4318"
+  },
+  "case_results": [
+    {
+      "baseline_first_relevant_rank": 1,
+      "baseline_retrieved_record_ids": [
+        "record-core-fixture"
+      ],
+      "baseline_rank_diagnostics": [
+        {
+          "colbert_rank": 1,
+          "dense_rank": 1,
+          "fused_rank": 1,
+          "record_id": "record-core-fixture",
+          "sparse_rank": 1
+        }
+      ],
+      "candidate_first_relevant_rank": 1,
+      "candidate_ndcg_at_k": 1,
+      "candidate_recall_at_k": 1,
+      "candidate_reciprocal_rank": 1,
+      "candidate_retrieved_record_ids": [
+        "record-core-fixture"
+      ],
+      "candidate_rank_diagnostics": [
+        {
+          "colbert_rank": 1,
+          "dense_rank": 1,
+          "fused_rank": 1,
+          "record_id": "record-core-fixture",
+          "sparse_rank": 1
+        }
+      ],
+      "candidate_repeat_retrieved_record_ids": [
+        [
+          "record-core-fixture"
+        ],
+        [
+          "record-core-fixture"
+        ]
+      ],
+      "case_id": "core-fixture",
+      "component_execution": {
+        "bm25": true,
+        "colbert": true,
+        "dense": true,
+        "sparse": true
+      },
+      "critical": true,
+      "expected_record_ids": [
+        "record-core-fixture"
+      ],
+      "forbidden_leakage": [],
+      "forbidden_record_ids": [],
+      "candidate_warmup_latency_ms": 1,
+      "latency_ms": 1,
+      "query_kind": "semantic_paraphrase",
+      "rank_regression": 0,
+      "repeat_rank_drift": 0,
+      "scope": "core"
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0",
+  "coverage": {
+    "added_or_changed_record_ids": [],
+    "complete": true,
+    "declared_record_ids": [],
+    "removed_record_ids": []
+  },
+  "evaluated_at": "2026-07-28T00:00:00Z",
+  "evaluation_id": "retrieval-release-evaluation-fixture",
+  "execution_tier": "E3",
+  "extensions": {},
+  "gates": {
+    "core_thresholds": true,
+    "coverage_complete": true,
+    "bm25_execution": true,
+    "critical_cases": true,
+    "delta_thresholds": true,
+    "forbidden_leakage": true,
+    "latency": true,
+    "pair_binding": true,
+    "rank_stability": true,
+    "repeat_stability": true,
+    "real_bge_m3": true
+  },
+  "prepared_receipt_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "prepared_receipt_id": "release-receipt-fixture",
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "suite_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "suite_file_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "suite_id": "retrieval-release-suite-fixture"
+}

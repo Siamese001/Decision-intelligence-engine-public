@@ -1,0 +1,144 @@
+# ==============================================================================
+# Canonical Local Model Registry for Apple Silicon Metal (Apple M5 Pro 48GB RAM)
+# Governed by: documentation/LOCAL_MODEL_MIGRATION_WAVE_PLAN.md
+# ==============================================================================
+schema_version: "1.0.0"
+hardware_target:
+  chip: "Apple M5 Pro"
+  unified_memory_gb: 48.0
+  metal_gpu_enabled: true
+  os_reserved_memory_gb: 6.0
+  max_allocatable_memory_gb: 42.0
+  recommended_safe_memory_gb: 38.0
+
+hardware_profiles:
+  m5_pro_48gb:
+    chip: "Apple M5 Pro"
+    unified_memory_gb: 48.0
+    metal_gpu_enabled: true
+    os_reserved_memory_gb: 6.0
+    max_allocatable_memory_gb: 42.0
+    recommended_safe_memory_gb: 38.0
+  m5_pro_64gb:
+    chip: "Apple M5 Pro / Max"
+    unified_memory_gb: 64.0
+    metal_gpu_enabled: true
+    os_reserved_memory_gb: 10.0
+    max_allocatable_memory_gb: 54.0
+    recommended_safe_memory_gb: 48.0
+  m5_max_128gb:
+    chip: "Apple M5 Max"
+    unified_memory_gb: 128.0
+    metal_gpu_enabled: true
+    os_reserved_memory_gb: 16.0
+    max_allocatable_memory_gb: 112.0
+    recommended_safe_memory_gb: 96.0
+
+cross_process_admission:
+  policy: "STRICT_SERIALIZED_ASR_AND_CROSS_PROCESS_GOVERNOR"
+  dead_worker_reclamation: true
+  safe_reserve_enforcement: true
+
+models:
+  
+  whisper_large_v3_turbo:
+    model_id: "mlx-community/whisper-large-v3-mlx"
+    provider: "mlx-whisper"
+    format: "mlx-fp16"
+    sha256: "ee8ad4cf5a7ee15641fa1a15cd8e41743844ecde04f56ab22e1608f28d2c5358"
+    roles:
+      - "pipeline_a.acoustic_asr"
+    memory_footprint_gb: 2.5
+    context_length: 448
+    supports_metal: true
+    description: "Acoustic speech-to-text transcription on Apple Metal GPU"
+
+  llama_3_1_8b_instruct:
+    model_id: "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit"
+    provider: "mlx-lm"
+    format: "mlx-4bit"
+    sha256: "a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef0"
+    roles:
+      - "pipeline_b.internal_advisory"
+      - "pipeline_c.multi_perspective_dispatcher"
+      - "pipeline_a.c0_roster_gate"
+    memory_footprint_gb: 5.5
+    context_length: 32768
+    supports_metal: true
+    description: "Lightweight structured extraction and taxonomic query decomposition"
+
+  qwen_2_5_14b_instruct:
+    model_id: "mlx-community/Qwen2.5-14B-Instruct-4bit"
+    provider: "mlx-lm"
+    format: "mlx-4bit"
+    sha256: "b2c3d4e5f6a17890123456789abcdef0123456789abcdef0123456789abcdef1"
+    roles:
+      - "pipeline_a.forensic_normalizer"
+      - "pipeline_a.roster_reconciler"
+      - "pipeline_b.tech_arch"
+      - "pipeline_b.strategic_commitments"
+      - "pipeline_c.perspective_healer"
+      - "pipeline_d.red_team_risk"
+      - "pipeline_d.strategic_feasibility"
+      - "micro_judges.forensic"
+    memory_footprint_gb: 9.2
+    context_length: 32768
+    supports_metal: true
+    description: "Standard enterprise extraction, forensic normalization, and risk analysis"
+
+  qwen_2_5_32b_instruct:
+    model_id: "mlx-community/Qwen2.5-32B-Instruct-4bit"
+    provider: "mlx-lm"
+    format: "mlx-4bit"
+    sha256: "c3d4e5f6a1b27890123456789abcdef0123456789abcdef0123456789abcdef2"
+    roles:
+      - "pipeline_d.briefing_synthesis"
+      - "pipeline_d.executive_recap"
+      - "pipeline_d.high_stakes_adjudication"
+      - "micro_judges.executive_recap"
+    memory_footprint_gb: 19.5
+    context_length: 32768
+    supports_metal: true
+    description: "High-quality executive synthesis, briefing generation, and holistic adjudication"
+
+  deepseek_r1_distill_qwen_14b:
+    model_id: "mlx-community/DeepSeek-R1-Distill-Qwen-14B-4bit"
+    provider: "mlx-lm"
+    format: "mlx-4bit"
+    sha256: "d4e5f6a1b2c37890123456789abcdef0123456789abcdef0123456789abcdef3"
+    roles:
+      - "pipeline_b.adjudication_judge"
+      - "pipeline_d.dialectical_debate"
+      - "micro_judges.graph_extraction"
+    memory_footprint_gb: 9.5
+    context_length: 32768
+    supports_metal: true
+    description: "Deliberative reasoning, soft-quarantine tagging, and adversarial dialectics"
+
+  qwen_2_5_vl_7b_instruct:
+    model_id: "mlx-community/Qwen2.5-VL-7B-Instruct-4bit"
+    provider: "mlx-vlm"
+    format: "mlx-4bit"
+    sha256: "e5f6a1b2c3d47890123456789abcdef0123456789abcdef0123456789abcdef4"
+    roles:
+      - "pipeline_a.slide_extractor"
+      - "pipeline_a.vlm_diagram_parser"
+    memory_footprint_gb: 5.0
+    context_length: 16384
+    supports_metal: true
+    description: "Multimodal presentation slide, architecture diagram, and visual nameplate extraction"
+
+  bge_m3_retriever:
+    model_id: "BAAI/bge-m3"
+    provider: "pytorch-mps"
+    format: "float32-dense-sparse"
+    sha256: "f6a1b2c3d4e57890123456789abcdef0123456789abcdef0123456789abcdef5"
+    roles:
+      - "pipeline_c.dense_retrieval"
+      - "pipeline_c.sparse_retrieval"
+      - "pipeline_c.colbert_retrieval"
+      - "release_gate.11_gates"
+    memory_footprint_gb: 4.5
+    context_length: 8192
+    supports_metal: true
+    description: "Quad-engine hybrid semantic retrieval, ColBERT tokens, and 11-gate release qualification"

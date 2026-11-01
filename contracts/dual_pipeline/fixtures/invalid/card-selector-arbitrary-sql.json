@@ -1,0 +1,35 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:card-view-selector:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-card-selector-arbitrary-sql",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "abeaf9078ae78c5222872726bcb4a6419520de31003bffe77ba4fb32ce39def9"
+  },
+  "selector_id": "invalid-card-selector-arbitrary-sql",
+  "selector_version": "1.0.0",
+  "selector": {
+    "kind": "facet_query",
+    "object_types": ["assertion"],
+    "facet_filters": [
+      {
+        "object_type": "assertion",
+        "vocabulary": "semantic_domain",
+        "values": ["architecture_and_capability"],
+        "match": "any"
+      }
+    ],
+    "predicates": [],
+    "explicit_node_ids": [],
+    "traversal": {
+      "max_hops": 0,
+      "direction": "none",
+      "predicates": []
+    },
+    "sql": "SELECT * FROM assertion"
+  },
+  "bounded": true,
+  "sql_allowed": false,
+  "extensions": {}
+}

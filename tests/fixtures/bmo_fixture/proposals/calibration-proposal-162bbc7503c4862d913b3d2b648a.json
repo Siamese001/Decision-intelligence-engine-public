@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-162bbc7503c4862d913b3d2b648a",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "cccc0455e798181f7c2039bd2b171c397535eb827518b9e29397947f4b02f1b8"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-9afd9368b2273e16d8348189"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "**Jake Stark:** Well, we already hit our goal, so I don't, I mean, like, yes, I think there are opportunities because I have seen some improvements with what I'm trying, but it might not be like the make or break thing that we thought it was going to be because of this history that Alex put in. And like the learning loop, that's kind of getting us the gains that we need.",
+      "proposed_value": "Generally, I believe we want the OEM nameplate info.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-651b740cdde8d0d1fd34bb12bb09"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-9a9d291d8de0214e6061f69c6b27",
+      "assertion_id_older": "assertion-651b740cdde8d0d1fd34bb12bb09",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-10-02",
+      "timestamp_older": "2026-09-30"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-09-30 superseded by newer claim from 2026-10-02.",
+  "proposal_id": "calibration-proposal-162bbc7503c4862d913b3d2b648a",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-651b740cdde8d0d1fd34bb12bb09 from **Jake Stark:** Well, we already hit our goal, so I don't, I mean, like, yes, I think there are opportunities because I have seen some improvements with what I'm trying, but it might not be like the make or break thing that we thought it was going to be because of this history that Alex put in. And like the learning loop, that's kind of getting us the gains that we need. to Generally, I believe we want the OEM nameplate info.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

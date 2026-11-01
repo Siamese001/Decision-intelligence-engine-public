@@ -1,0 +1,25 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:route-decision:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "route-decision-nea-pdlc-opportunities",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "08002ba583f8d2fb2b50c869c8566cd76376fc7d65de84b43f6dbbf385a350f9"
+  },
+  "decision_id": "decision-route-nea-pdlc-opportunities",
+  "run_id": "run-query-nea-pdlc-opportunities",
+  "trace_id": "fedcba9876543210fedcba9876543210",
+  "use_case": "query",
+  "subject_id": "request-nea-pdlc-opportunities",
+  "intake_route": null,
+  "query_route": "OPPORTUNITY_NBA",
+  "allowed_lanes": ["approved", "candidate"],
+  "materiality": "high",
+  "rule_id": "query-intent-opportunity-nba",
+  "rule_version": "1.0.0",
+  "reason_codes": ["cross-workstream-opportunity-question", "pain-point-mapping-requested"],
+  "model_recommendation": "OPPORTUNITY_NBA",
+  "decided_at": "2026-07-21T15:00:01Z",
+  "extensions": {}
+}

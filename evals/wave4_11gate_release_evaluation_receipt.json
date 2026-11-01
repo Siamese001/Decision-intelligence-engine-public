@@ -1,0 +1,39 @@
+{
+  "evaluation_contract": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0",
+  "timestamp": "2026-09-13T01:40:04Z",
+  "status": "PASS",
+  "weights": {
+    "dense": 0.05,
+    "sparse": 0.15,
+    "bm25": 0.7,
+    "colbert": 0.1
+  },
+  "gates": {
+    "1. real_bge_m3": true,
+    "2. pair_binding": true,
+    "3. coverage_complete": true,
+    "4. core_thresholds (Recall=1, MRR=1, NDCG=1)": true,
+    "5. delta_thresholds (Recall=1, MRR=1, NDCG=1)": true,
+    "6. critical_cases (0 failures)": true,
+    "7. rank_stability (0 regressions)": true,
+    "8. repeat_stability (0 drift)": true,
+    "9. forbidden_leakage (0 leakage)": true,
+    "10. latency (<= 7500ms)": true,
+    "11. component_execution (all 4 engines)": true
+  },
+  "aggregate": {
+    "core_recall": 1.0,
+    "core_mrr": 1.0,
+    "core_ndcg": 1.0,
+    "delta_recall": 1.0,
+    "delta_mrr": 1.0,
+    "delta_ndcg": 1.0,
+    "max_latency_ms": 228.89379199477844,
+    "total_leakage": 0,
+    "total_rank_regressions": 0,
+    "total_repeat_drift": 0,
+    "critical_failures": 0
+  },
+  "cases_evaluated": 8,
+  "elapsed_seconds": 5.77
+}

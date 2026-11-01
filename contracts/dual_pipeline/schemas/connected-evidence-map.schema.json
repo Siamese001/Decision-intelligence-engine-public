@@ -1,0 +1,543 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0",
+  "title": "NEE sealed connected evidence map",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "map_id",
+    "run_id",
+    "query_plan_digest",
+    "graph_snapshot",
+    "graph_sha256",
+    "retrieval_policy",
+    "requested_hops",
+    "max_hop_reached",
+    "seed_record_ids",
+    "selected_record_ids_by_lane",
+    "paths",
+    "counterevidence",
+    "gaps",
+    "metrics",
+    "automatic_graph_mutation_count",
+    "extensions"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "artifact_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "canonical_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"
+    },
+    "map_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "run_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "query_plan_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"
+    },
+    "graph_snapshot": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "graph_sha256": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"
+    },
+    "retrieval_policy": {
+      "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/policy"
+    },
+    "requested_hops": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "max_hop_reached": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "seed_record_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+      }
+    },
+    "selected_record_ids_by_lane": {
+      "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/recordsByLane"
+    },
+    "paths": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/path"
+      }
+    },
+    "counterevidence": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/counterevidence"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      }
+    },
+    "metrics": {
+      "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/metrics"
+    },
+    "automatic_graph_mutation_count": {
+      "const": 0
+    },
+    "extensions": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"
+    }
+  },
+  "$defs": {
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy_id",
+        "policy_version",
+        "policy_digest",
+        "maximum_hops",
+        "maximum_seed_records",
+        "maximum_expanded_records",
+        "maximum_node_fanout",
+        "maximum_records_per_bridge_node",
+        "hub_degree_threshold",
+        "excluded_relationship_families",
+        "excluded_node_types",
+        "terminal_node_types"
+      ],
+      "properties": {
+        "policy_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "policy_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "policy_digest": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"
+        },
+        "maximum_hops": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "maximum_seed_records": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "maximum_expanded_records": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "maximum_node_fanout": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "maximum_records_per_bridge_node": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "hub_degree_threshold": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "excluded_relationship_families": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          }
+        },
+        "excluded_node_types": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          }
+        },
+        "terminal_node_types": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          }
+        }
+      }
+    },
+    "recordsByLane": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "approved",
+        "candidate",
+        "external_public"
+      ],
+      "properties": {
+        "approved": {
+          "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/recordIds"
+        },
+        "candidate": {
+          "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/recordIds"
+        },
+        "external_public": {
+          "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/recordIds"
+        }
+      }
+    },
+    "recordIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+      }
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hop",
+        "assertion_id",
+        "from_node_id",
+        "from_node_name",
+        "from_node_type",
+        "relationship_family",
+        "edge_type",
+        "to_node_id",
+        "to_node_name",
+        "to_node_type",
+        "traversal_direction",
+        "evidence_ids",
+        "source_id"
+      ],
+      "properties": {
+        "hop": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "assertion_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "from_node_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "from_node_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "from_node_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "relationship_family": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "edge_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "to_node_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "to_node_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "to_node_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "traversal_direction": {
+          "type": "string",
+          "enum": [
+            "forward",
+            "reverse"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/graphIdentifier"
+          }
+        },
+        "source_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 128
+        }
+      }
+    },
+    "path": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path_id",
+        "seed_record_id",
+        "target_record_id",
+        "target_assertion_id",
+        "lane",
+        "origin",
+        "attachment_kind",
+        "hop_count",
+        "path_score",
+        "topology_score",
+        "steps"
+      ],
+      "properties": {
+        "path_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "seed_record_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "target_record_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "target_assertion_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "lane": {
+          "type": "string",
+          "enum": [
+            "approved",
+            "candidate",
+            "external_public"
+          ]
+        },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "hybrid_seed",
+            "graph_edge",
+            "node_context",
+            "conflict_context"
+          ]
+        },
+        "attachment_kind": {
+          "type": "string",
+          "enum": [
+            "seed",
+            "relationship",
+            "entity_context",
+            "counterevidence"
+          ]
+        },
+        "hop_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "path_score": {
+          "type": "number"
+        },
+        "topology_score": {
+          "type": "number"
+        },
+        "steps": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/step"
+          }
+        }
+      }
+    },
+    "counterevidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "counterevidence_id",
+        "kind",
+        "record_id",
+        "assertion_id",
+        "related_assertion_id",
+        "evidence_ids",
+        "resolution_state"
+      ],
+      "properties": {
+        "counterevidence_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "contradicting_evidence",
+            "assertion_conflict"
+          ]
+        },
+        "record_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "assertion_id": {
+          "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+        },
+        "related_assertion_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 3,
+          "maxLength": 128
+        },
+        "evidence_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0#/$defs/graphIdentifier"
+          }
+        },
+        "resolution_state": {
+          "type": "string",
+          "enum": [
+            "not_applicable",
+            "unresolved",
+            "resolved",
+            "superseded"
+          ]
+        }
+      }
+    },
+    "graphIdentifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,511}$"
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seed_record_count",
+        "expanded_record_count",
+        "selected_record_count",
+        "reached_node_count",
+        "path_count",
+        "relationship_family_count",
+        "bm25_seed_count",
+        "isolated_seed_count",
+        "navigation_edge_suppression_count",
+        "navigation_record_suppression_count",
+        "hub_edge_suppression_count",
+        "branch_suppression_count",
+        "candidate_context_count",
+        "opportunity_context_count",
+        "counterevidence_count",
+        "missing_evidence_count"
+      ],
+      "properties": {
+        "seed_record_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "expanded_record_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "selected_record_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reached_node_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "path_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "relationship_family_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "bm25_seed_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "isolated_seed_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "navigation_edge_suppression_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "navigation_record_suppression_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hub_edge_suppression_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "branch_suppression_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "candidate_context_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "opportunity_context_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "counterevidence_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missing_evidence_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

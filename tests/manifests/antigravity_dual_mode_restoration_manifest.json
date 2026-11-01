@@ -1,0 +1,20 @@
+{
+  "name": "antigravity_dual_mode_restoration_manifest",
+  "version": "1.0.0",
+  "description": "CI test manifest enrolling Antigravity task content restoration and dual-mode qualification tests for Waves 1-5",
+  "branch": "docs/antigravity-dual-mode-restoration-rca",
+  "plan_id": "docs_antigravity_dual_mode_restoration_rca",
+  "wave": 5,
+  "deterministic_tests": [
+    "tests.test_verify_task_restoration_wave_adversarial",
+    "tests.test_antigravity_task_procedures"
+  ],
+  "e2e_tests": [
+    "tests.end_to_end.test_task_restoration_wave_e2e",
+    "tests.end_to_end.test_antigravity_task_modes_e2e",
+    "tests.test_antigravity_task_modes_adversarial",
+    "tests.end_to_end.test_antigravity_task_registration_wave5_e2e"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-07T09:30:00Z"
+}

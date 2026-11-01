@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lucidchart": {
+      "serverUrl": "https://mcp.lucid.app/mcp",
+      "type": "http",
+      "url": "https://mcp.lucid.app/mcp",
+      "oauth_resource": "https://mcp.lucid.app/mcp"
+    }
+  }
+}

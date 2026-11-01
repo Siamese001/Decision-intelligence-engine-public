@@ -1,0 +1,36 @@
+{
+  "artifact_id": "decision-frame-fixture",
+  "assumptions": [],
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "c3e954592e8a95c76da62cb80d6901c8f0adcc49aa3b572925a1226ca19fe934"
+  },
+  "constraints": [],
+  "contract_id": "urn:nee:dual-pipeline:decision-frame:1.0.0",
+  "criteria": [
+    {
+      "criterion_id": "decision-criterion-impact",
+      "label": "impact",
+      "source": "caller_or_explicit_question_clause",
+      "weight": null
+    }
+  ],
+  "decision_question": "Which option should NEE choose?",
+  "desired_outcome": "Choose an evidence-supported option",
+  "extensions": {},
+  "frame_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "frame_state": "READY",
+  "missing_fields": [],
+  "options": [
+    {
+      "evidence_ids": [],
+      "label": "Alpha",
+      "option_id": "decision-option-alpha",
+      "rationale": null,
+      "source": "caller"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "time_horizon": "next quarter"
+}

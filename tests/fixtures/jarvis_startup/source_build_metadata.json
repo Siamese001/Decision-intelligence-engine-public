@@ -1,0 +1,41 @@
+{
+  "artifact_name": "source_build_metadata.json",
+  "incident_id": "INCIDENT-20261007-JARVIS-STARTUP",
+  "git_commit": "45b10fb983e2d0fb4b6c9573787a25733e60d94e",
+  "base_commit": "45b10fb983e2d0fb4b6c9573787a25733e60d94e",
+  "branch": "fix/audio-startup-sla-rca",
+  "platform": "darwin-arm64",
+  "host_hardware": "Apple Silicon (Metal)",
+  "target_sla_seconds": 30.0,
+  "allocation_budgets": {
+    "dispatch_seconds": 2.0,
+    "source_proof_seconds": 25.0,
+    "confirmation_seconds": 28.0,
+    "hard_ceiling_seconds": 30.0
+  },
+  "measured_incident_metrics": {
+    "pre_dispatch_delay_seconds": 141.0,
+    "total_confirmation_delay_seconds": 188.0,
+    "pre_dispatch_tool_calls_count": 36,
+    "file_birth_offset_seconds": 149.631,
+    "dual_source_pcm_proven": false,
+    "asr_readiness_receipt_present": false
+  },
+  "required_audio_sources": [
+    "microphone",
+    "system_audio"
+  ],
+  "clock_domains": [
+    "host_monotonic",
+    "worker_monotonic",
+    "filesystem_stat",
+    "utc_audit"
+  ],
+  "governance_rules": [
+    "File birth cannot satisfy PCM proof",
+    "Dual-source capture requires verified non-zero PCM from both microphone and system audio",
+    "ASR worker liveness without validated readiness receipt must remain ASR_WARMING",
+    "Cross-process monotonic timestamps cannot be directly subtracted without correlation anchor",
+    "Missing host request, dispatch, or ack events fail qualification"
+  ]
+}

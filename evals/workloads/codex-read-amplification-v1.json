@@ -1,0 +1,154 @@
+{
+  "workload_id": "codex-read-amplification-v1",
+  "description": "Sanitized deterministic workflow shapes for the 34-step read-amplification incident and its structural controls.",
+  "scenarios": [
+    {
+      "scenario_id": "incident-34-step",
+      "workflow_id": "wf-incident-34-step",
+      "node_count": 34,
+      "base_component_bytes": {
+        "fixed_controls": 4096,
+        "current_step": 2048,
+        "checkpoint": 1024,
+        "evidence": 8192,
+        "output_contract": 4096,
+        "other": 512
+      },
+      "completed_history_bytes_per_prior_node": 24000,
+      "tool_events": [
+        {"node_ordinal": 3, "bytes": 10240},
+        {"node_ordinal": 12, "bytes": 102400},
+        {"node_ordinal": 24, "bytes": 1048576}
+      ],
+      "no_progress_nodes": [],
+      "request_budget_bytes": 262144,
+      "output_tokens_per_call": 100,
+      "cached_input_fraction": 0.96,
+      "pricing_schedule_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bounded_e5_return_bytes": 2048,
+      "required_evidence_ids": ["evidence-incident"],
+      "required_contradiction_ids": ["contradiction-incident"],
+      "terminal_class": "COMPLETED"
+    },
+    {
+      "scenario_id": "irrelevant-history-metamorphic",
+      "workflow_id": "wf-irrelevant-history",
+      "node_count": 34,
+      "base_component_bytes": {
+        "fixed_controls": 4096,
+        "current_step": 2048,
+        "checkpoint": 1024,
+        "evidence": 8192,
+        "output_contract": 4096,
+        "other": 512
+      },
+      "completed_history_bytes_per_prior_node": 65536,
+      "tool_events": [],
+      "no_progress_nodes": [],
+      "request_budget_bytes": 262144,
+      "output_tokens_per_call": 100,
+      "cached_input_fraction": 0.96,
+      "pricing_schedule_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bounded_e5_return_bytes": 2048,
+      "required_evidence_ids": ["evidence-history-control"],
+      "required_contradiction_ids": [],
+      "terminal_class": "COMPLETED"
+    },
+    {
+      "scenario_id": "tool-output-one-megabyte",
+      "workflow_id": "wf-tool-output-one-megabyte",
+      "node_count": 3,
+      "base_component_bytes": {
+        "fixed_controls": 4096,
+        "current_step": 2048,
+        "checkpoint": 1024,
+        "evidence": 4096,
+        "output_contract": 4096,
+        "other": 512
+      },
+      "completed_history_bytes_per_prior_node": 4096,
+      "tool_events": [{"node_ordinal": 1, "bytes": 1048576}],
+      "no_progress_nodes": [],
+      "request_budget_bytes": 262144,
+      "output_tokens_per_call": 100,
+      "cached_input_fraction": 0.80,
+      "pricing_schedule_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bounded_e5_return_bytes": 2048,
+      "required_evidence_ids": ["evidence-tool-result"],
+      "required_contradiction_ids": [],
+      "terminal_class": "COMPLETED"
+    },
+    {
+      "scenario_id": "no-progress-strike-limit",
+      "workflow_id": "wf-no-progress-strike-limit",
+      "node_count": 10,
+      "base_component_bytes": {
+        "fixed_controls": 4096,
+        "current_step": 2048,
+        "checkpoint": 1024,
+        "evidence": 4096,
+        "output_contract": 4096,
+        "other": 512
+      },
+      "completed_history_bytes_per_prior_node": 8192,
+      "tool_events": [],
+      "no_progress_nodes": [4, 5, 6, 7, 8, 9, 10],
+      "request_budget_bytes": 262144,
+      "output_tokens_per_call": 100,
+      "cached_input_fraction": 0.90,
+      "pricing_schedule_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bounded_e5_return_bytes": 2048,
+      "required_evidence_ids": ["evidence-stall"],
+      "required_contradiction_ids": [],
+      "terminal_class": "BLOCKED"
+    },
+    {
+      "scenario_id": "hard-budget-overflow",
+      "workflow_id": "wf-hard-budget-overflow",
+      "node_count": 3,
+      "base_component_bytes": {
+        "fixed_controls": 4096,
+        "current_step": 270000,
+        "checkpoint": 1024,
+        "evidence": 4096,
+        "output_contract": 4096,
+        "other": 512
+      },
+      "completed_history_bytes_per_prior_node": 4096,
+      "tool_events": [],
+      "no_progress_nodes": [],
+      "request_budget_bytes": 262144,
+      "output_tokens_per_call": 100,
+      "cached_input_fraction": 0.90,
+      "pricing_schedule_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bounded_e5_return_bytes": 2048,
+      "required_evidence_ids": ["evidence-budget"],
+      "required_contradiction_ids": [],
+      "terminal_class": "BLOCKED"
+    },
+    {
+      "scenario_id": "checkpoint-resume-equivalence",
+      "workflow_id": "wf-checkpoint-resume-equivalence",
+      "node_count": 34,
+      "base_component_bytes": {
+        "fixed_controls": 4096,
+        "current_step": 2048,
+        "checkpoint": 2048,
+        "evidence": 8192,
+        "output_contract": 4096,
+        "other": 512
+      },
+      "completed_history_bytes_per_prior_node": 12000,
+      "tool_events": [{"node_ordinal": 17, "bytes": 102400}],
+      "no_progress_nodes": [],
+      "request_budget_bytes": 262144,
+      "output_tokens_per_call": 100,
+      "cached_input_fraction": 0.90,
+      "pricing_schedule_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bounded_e5_return_bytes": 2048,
+      "required_evidence_ids": ["evidence-resume", "dependency-resume"],
+      "required_contradiction_ids": ["contradiction-resume"],
+      "terminal_class": "COMPLETED"
+    }
+  ]
+}

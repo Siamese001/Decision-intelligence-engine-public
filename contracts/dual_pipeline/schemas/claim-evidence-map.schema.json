@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:claim-evidence-map:1.0.0",
+  "title": "NEE sealed material answer claim evidence map",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "map_id", "run_id", "validated_request_digest", "query_plan_digest", "coverage_manifest_digest", "evidence_report_digest", "evidence_packet_digest", "graph_snapshot", "graph_sha256", "authorization_scope_digest", "answer_digest", "claims", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:claim-evidence-map:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "map_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "validated_request_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "query_plan_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "coverage_manifest_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "evidence_report_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "evidence_packet_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "graph_snapshot": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "authorization_scope_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "answer_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "claims": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:claim-evidence-map:1.0.0#/$defs/claim"}},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "claim": {
+      "type": "object", "additionalProperties": false, "required": ["claim_id", "claim_kind", "materiality", "status", "directional_claim", "evidence"],
+      "properties": {
+        "claim_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "claim_kind": {"type": "string", "enum": ["factual", "candidate_hypothesis", "guidance", "gap"]},
+        "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+        "status": {"type": "string", "enum": ["grounded", "explicit_gap"]},
+        "directional_claim": {"type": "boolean"},
+        "evidence": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:claim-evidence-map:1.0.0#/$defs/evidence"}}
+      }
+    },
+    "evidence": {
+      "type": "object", "additionalProperties": false, "required": ["record_id", "lane", "answer_use", "traversal_direction"],
+      "properties": {
+        "record_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "lane": {"type": "string", "enum": ["approved", "candidate", "external_public"]},
+        "answer_use": {"type": "string", "enum": ["factual_answer", "candidate_hypothesis", "guidance", "citation_only", "strategic_context", "decision_constraint", "external_analogy"]},
+        "traversal_direction": {"type": "string", "enum": ["forward", "reverse", "not_applicable"]}
+      }
+    }
+  }
+}

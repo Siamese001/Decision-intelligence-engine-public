@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "contracts/governance/module_budget_policy.schema.json",
+  "title": "ModuleBudgetPolicyContract",
+  "description": "Schema governing candidate and active module size and architectural line-budget policies.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "policy_id",
+    "status",
+    "boundaries",
+    "boundary_rules",
+    "audit_severity_map",
+    "legacy_scope_resolution",
+    "complexity_reconciliation"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "policy_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT_CANDIDATE",
+        "QUALIFIED",
+        "ACTIVE",
+        "RETIRED"
+      ]
+    },
+    "boundaries": {
+      "type": "object",
+      "required": [
+        "clean_ceiling",
+        "warning_ceiling_standard",
+        "warning_ceiling_declarative"
+      ],
+      "properties": {
+        "clean_ceiling": {
+          "type": "integer",
+          "const": 400
+        },
+        "warning_ceiling_standard": {
+          "type": "integer",
+          "const": 650
+        },
+        "warning_ceiling_declarative": {
+          "type": "integer",
+          "const": 800
+        },
+        "exception_ceiling_cohesive": {
+          "type": "integer"
+        },
+        "exception_ceiling_table": {
+          "type": "integer"
+        },
+        "exception_ceiling_registry": {
+          "type": "integer"
+        }
+      }
+    },
+    "boundary_rules": {
+      "type": "object",
+      "required": [
+        "up_to_400",
+        "401_to_650_ordinary",
+        "651_to_800_declarative",
+        "above_warning_range",
+        "legacy_baselines",
+        "structural_violation_invariance",
+        "parsing_and_policy_evidence_error"
+      ]
+    },
+    "audit_severity_map": {
+      "type": "object"
+    },
+    "legacy_scope_resolution": {
+      "type": "object",
+      "required": [
+        "production_packages",
+        "tools_and_scripts",
+        "tests_and_evals",
+        "generated_schemas"
+      ]
+    },
+    "complexity_reconciliation": {
+      "type": "object",
+      "required": [
+        "standard_cognitive_complexity_ceiling",
+        "domain_cyclomatic_complexity_floor",
+        "reconciliation_rationale"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

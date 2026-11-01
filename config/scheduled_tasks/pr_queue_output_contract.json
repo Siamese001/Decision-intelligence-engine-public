@@ -1,0 +1,81 @@
+{
+  "contract_id": "urn:nee:pr-queue-observer:4.0.0",
+  "schema_version": "4.0.0",
+  "modes": [
+    "interactive",
+    "scheduled"
+  ],
+  "output": {
+    "format": "single_markdown_table",
+    "columns": [
+      "Priority",
+      "Branch",
+      "Category",
+      "Complexity",
+      "Code Completed?",
+      "Rebase Required?",
+      "PR to Main Required?",
+      "Graph Mutated (Y/N)",
+      "Recommended Disposition",
+      "Immediate Blocker / Action"
+    ],
+    "branch_identity": "full_exact_name",
+    "branch_and_worktree_separate": false,
+    "summary_row": false,
+    "recent_merges_in_same_table": false,
+    "icons": true,
+    "extra_prose": false,
+    "refactoring_complexity_sizing": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "value_dispositions": [
+      "Promote to Main",
+      "Complete In-Flight Work",
+      "Salvage Subset & Archive",
+      "Hold / Blocked",
+      "Decommission (No Value)"
+    ],
+    "mandatory_single_row_stash_collapse": true,
+    "five_agent_council_deliberation": true,
+    "interactive_hitl_support": true
+  },
+  "priority_themes": [
+    "cost_reduction",
+    "performance_latency",
+    "graph_query_integrity",
+    "live_meetings_client_deliverables",
+    "governance_housekeeping"
+  ],
+  "merge_gates": {
+    "priority_implies_eligibility": false,
+    "unknown_facts_fail_closed": true,
+    "progress_source": "verified_branch_owned_wave_receipts",
+    "review_source": "current_branch_and_base_revision_evidence"
+  },
+  "modes_policy": {
+    "interactive": "fresh_on_demand_observation_no_mutation_with_council_and_hitl",
+    "scheduled": "persist_each_observation_dedupe_notification",
+    "shared_snapshot_decisions_renderer": true
+  },
+  "state_policy": {
+    "root": ".local/pr_queue_observer",
+    "exclusive_run_creation": true,
+    "preserve_last_good_on_failure": true,
+    "notification_delivery_requires_ack": true
+  },
+  "priority_policy": {
+    "cost_precedes_latency_within_p0": true,
+    "merge_risk_breaks_ties_within_theme": true,
+    "plans_are_not_measured_savings": true
+  },
+  "known_baseline_gaps": [],
+  "bounds": {
+    "pytest_timeout_seconds": 60,
+    "snapshot_retries_max": 2,
+    "observer_wall_clock_seconds": 120
+  }
+}

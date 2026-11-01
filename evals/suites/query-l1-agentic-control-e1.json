@@ -1,0 +1,371 @@
+{
+  "artifact_id": "query-l1-agentic-control-e1",
+  "baseline_suite_digest": "5302055646a010815f050bef9ce262b1615528e8a70710e079a9ab0105f7fa0a",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "91b4aac28534b04276b23b19f49ecbbed131a3717b10c610d75a9ff8f4819410"
+  },
+  "case_taxonomy": [
+    "complete_first_pass",
+    "recoverable_miss",
+    "true_gap",
+    "irrelevant_lexical_overlap",
+    "unauthorized_evidence",
+    "reverse_only_path",
+    "conflict",
+    "candidate_lane",
+    "cache_replay",
+    "no_progress",
+    "irrelevant_history",
+    "reordered_bullets",
+    "duplicated_wording",
+    "unrelated_high_score",
+    "authorization_reduction",
+    "lane_removal",
+    "active_pair_drift",
+    "policy_budget_reduction"
+  ],
+  "comparison_invariants": {
+    "authorization_scope_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+    "evaluator_digest": "af9b81a12f54c30e8c090354cf26cbab906ce4c7d5266ba86d1adda0a3360925",
+    "graph_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "workload_digest": "5302055646a010815f050bef9ce262b1615528e8a70710e079a9ab0105f7fa0a"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-l1-controller-eval-suite:1.0.0",
+  "extensions": {
+    "com.partner_advisory.nee.l1-evaluation": {
+      "tier": "E1_DETERMINISTIC_FIXTURE",
+      "query_type_case_ids": [
+        "qla-exact-lookup",
+        "qla-current-state",
+        "qla-project-status-current",
+        "qla-project-status-history",
+        "qla-relationship",
+        "qla-cross-workstream",
+        "qla-gap-risk",
+        "qla-opportunity",
+        "qla-candidate-review"
+      ],
+      "hard_gates": {
+        "maximum_false_coverage_count": 0,
+        "maximum_p95_elapsed_ms": 240,
+        "maximum_action_count": 15
+      },
+      "cases": [
+        {
+          "case_id": "w8-complete-first-pass",
+          "family": "complete_first_pass",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "COMPLETED",
+          "expected_terminals": {
+            "off": "COMPLETED",
+            "shadow": "COMPLETED",
+            "bounded": "COMPLETED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 20,
+            "bounded_elapsed_ms": 20
+          }
+        },
+        {
+          "case_id": "w8-recoverable-miss",
+          "family": "recoverable_miss",
+          "critical": true,
+          "recoverable": true,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "COMPLETED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 30,
+            "bounded_elapsed_ms": 130
+          }
+        },
+        {
+          "case_id": "w8-true-gap",
+          "family": "true_gap",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "EXPLICIT_GAP"
+          },
+          "metrics": {
+            "off_elapsed_ms": 30,
+            "bounded_elapsed_ms": 110
+          }
+        },
+        {
+          "case_id": "w8-irrelevant-overlap",
+          "family": "irrelevant_lexical_overlap",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "EXPLICIT_GAP"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 120
+          }
+        },
+        {
+          "case_id": "w8-unauthorized",
+          "family": "unauthorized_evidence",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "UNAUTHORIZED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 90
+          }
+        },
+        {
+          "case_id": "w8-reverse-only",
+          "family": "reverse_only_path",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "EXPLICIT_GAP"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 90
+          }
+        },
+        {
+          "case_id": "w8-conflict",
+          "family": "conflict",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "HITL_REQUIRED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 90
+          }
+        },
+        {
+          "case_id": "w8-candidate-lane",
+          "family": "candidate_lane",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "COMPLETED",
+          "expected_terminals": {
+            "off": "COMPLETED",
+            "shadow": "COMPLETED",
+            "bounded": "COMPLETED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 20,
+            "bounded_elapsed_ms": 20
+          }
+        },
+        {
+          "case_id": "w8-cache-cross-mode",
+          "family": "cache_replay",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "COMPLETED",
+          "expected_terminals": {
+            "off": "COMPLETED",
+            "shadow": "COMPLETED",
+            "bounded": "COMPLETED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 20,
+            "bounded_elapsed_ms": 20
+          }
+        },
+        {
+          "case_id": "w8-no-progress",
+          "family": "no_progress",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "NO_PROGRESS"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 125
+          }
+        },
+        {
+          "case_id": "w8-irrelevant-history",
+          "family": "irrelevant_history",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "COMPLETED",
+          "expected_terminals": {
+            "off": "COMPLETED",
+            "shadow": "COMPLETED",
+            "bounded": "COMPLETED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 20,
+            "bounded_elapsed_ms": 20
+          }
+        },
+        {
+          "case_id": "w8-reordered-bullets",
+          "family": "reordered_bullets",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "COMPLETED",
+          "expected_terminals": {
+            "off": "COMPLETED",
+            "shadow": "COMPLETED",
+            "bounded": "COMPLETED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 20,
+            "bounded_elapsed_ms": 20
+          }
+        },
+        {
+          "case_id": "w8-duplicated-wording",
+          "family": "duplicated_wording",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "COMPLETED",
+          "expected_terminals": {
+            "off": "COMPLETED",
+            "shadow": "COMPLETED",
+            "bounded": "COMPLETED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 20,
+            "bounded_elapsed_ms": 20
+          }
+        },
+        {
+          "case_id": "w8-unrelated-high-score",
+          "family": "unrelated_high_score",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "EXPLICIT_GAP"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 120
+          }
+        },
+        {
+          "case_id": "w8-authorization-reduction",
+          "family": "authorization_reduction",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "UNAUTHORIZED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 90
+          }
+        },
+        {
+          "case_id": "w8-lane-removal",
+          "family": "lane_removal",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "UNAUTHORIZED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 90
+          }
+        },
+        {
+          "case_id": "w8-active-pair-drift",
+          "family": "active_pair_drift",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "HITL_REQUIRED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 90
+          }
+        },
+        {
+          "case_id": "w8-policy-budget-reduction",
+          "family": "policy_budget_reduction",
+          "critical": true,
+          "recoverable": false,
+          "initial_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+          "expected_terminals": {
+            "off": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "shadow": "BLOCKED_COVERAGE_INSUFFICIENT",
+            "bounded": "BUDGET_EXHAUSTED"
+          },
+          "metrics": {
+            "off_elapsed_ms": 35,
+            "bounded_elapsed_ms": 90
+          }
+        }
+      ]
+    }
+  },
+  "schema_version": "1.0.0",
+  "suite_id": "query-l1-agentic-control-e1",
+  "thresholds": {
+    "maximum_graph_mutations": 0,
+    "maximum_provider_calls": 0,
+    "minimum_recovery_rate": 1.0
+  },
+  "treatments": [
+    {
+      "treatment_id": "off-control",
+      "mode": "off",
+      "policy_digest": "d523e6e236d363706c5a523680930b2d6b919049094ca21743d929d1f7ae5e39"
+    },
+    {
+      "treatment_id": "shadow-control",
+      "mode": "shadow",
+      "policy_digest": "d523e6e236d363706c5a523680930b2d6b919049094ca21743d929d1f7ae5e39"
+    },
+    {
+      "treatment_id": "bounded-candidate",
+      "mode": "bounded",
+      "policy_digest": "a14cfd8eb81497e28ba4dcc3549a782d6fe3b5e8b1980ee14f35791f096e2c72"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:scheduled-task-findings-ledger:1.0.0",
+  "title": "NEE Scheduled Task Durable Findings Ledger Contract",
+  "description": "Schema governing durable finding identities, reproduction evidence, patch verification states, closure predicates, and handoff packages.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "ledger_id",
+    "task_id",
+    "updated_at",
+    "findings",
+    "metrics"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "const": "urn:nee:scheduled-task-findings-ledger:1.0.0"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "ledger_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "finding_id",
+          "signature",
+          "state",
+          "root_cause_hypothesis",
+          "reproduction_evidence",
+          "owner",
+          "first_seen_utc",
+          "last_seen_utc",
+          "occurrence_count",
+          "run_ids_observed",
+          "proposed_patch_digest",
+          "closure_proof"
+        ],
+        "properties": {
+          "finding_id": { "type": "string" },
+          "signature": { "type": "string" },
+          "state": {
+            "type": "string",
+            "enum": [
+              "DETECTED",
+              "REPRODUCED",
+              "PATCH_PROPOSED",
+              "PATCH_VERIFIED",
+              "AWAITING_AUTHORIZATION",
+              "DEPLOYED_VERIFIED",
+              "DISPOSITIONED_FALSE_POSITIVE",
+              "DISPOSITIONED_ACCEPTED_RISK",
+              "RESOLVED"
+            ]
+          },
+          "root_cause_hypothesis": { "type": "string" },
+          "reproduction_evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["reproduced", "fixture_path", "test_command", "failing_exit_code"],
+            "properties": {
+              "reproduced": { "type": "boolean" },
+              "fixture_path": { "type": "string" },
+              "test_command": { "type": "string" },
+              "failing_exit_code": { "type": "integer" },
+              "error_signature": { "type": "string" }
+            }
+          },
+          "owner": { "type": "string" },
+          "first_seen_utc": { "type": "string", "format": "date-time" },
+          "last_seen_utc": { "type": "string", "format": "date-time" },
+          "occurrence_count": { "type": "integer", "minimum": 1 },
+          "run_ids_observed": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "proposed_patch_digest": { "type": ["string", "null"] },
+          "patch_verification_evidence": {
+            "type": ["object", "null"],
+            "additionalProperties": false,
+            "properties": {
+              "failing_before": { "type": "boolean" },
+              "passing_after": { "type": "boolean" },
+              "test_path": { "type": "string" },
+              "test_command": { "type": "string" }
+            }
+          },
+          "closure_proof": {
+            "type": ["object", "null"],
+            "additionalProperties": false,
+            "properties": {
+              "closure_type": {
+                "type": "string",
+                "enum": ["DEPLOYED_VERIFIED", "DISPOSITIONED_FALSE_POSITIVE", "DISPOSITIONED_ACCEPTED_RISK", "RESOLVED_ON_ABSENCE"]
+              },
+              "operator": { "type": "string" },
+              "rationale": { "type": "string" },
+              "timestamp": { "type": "string" },
+              "commit_sha": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_tracked_findings",
+        "new_findings",
+        "repeated_findings",
+        "resolved_findings",
+        "verified_patches",
+        "verified_applied_repairs",
+        "dispositioned_findings"
+      ],
+      "properties": {
+        "total_tracked_findings": { "type": "integer", "minimum": 0 },
+        "new_findings": { "type": "integer", "minimum": 0 },
+        "repeated_findings": { "type": "integer", "minimum": 0 },
+        "resolved_findings": { "type": "integer", "minimum": 0 },
+        "verified_patches": { "type": "integer", "minimum": 0 },
+        "verified_applied_repairs": { "type": "integer", "minimum": 0 },
+        "dispositioned_findings": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

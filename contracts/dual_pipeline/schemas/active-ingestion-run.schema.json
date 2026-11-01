@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:active-ingestion-run:1.0.0",
+  "title": "Active Ingestion Run Workflow Record",
+  "description": "Durable workflow state tracking active ingestion from receipt through publication and activation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "run_id",
+    "directive_id",
+    "runtime_root",
+    "project",
+    "namespace",
+    "source_package_digest",
+    "proposed_delta_digest",
+    "baseline_generation",
+    "status",
+    "approval_request_id",
+    "approval_response_id",
+    "authorization_scope",
+    "authorization_expiry",
+    "publication_attempt_id",
+    "release_id",
+    "receipt_refs",
+    "created_at",
+    "updated_at",
+    "extensions",
+    "canonical_digest"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:active-ingestion-run:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "artifact_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "run_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "directive_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "runtime_root": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "namespace": {
+      "type": "string"
+    },
+    "source_package_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"
+    },
+    "proposed_delta_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"
+    },
+    "baseline_generation": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "RECEIVED",
+        "PREPARING",
+        "READY_TO_AUTHORIZE",
+        "AWAITING_APPROVAL",
+        "AUTHORIZED",
+        "DECLINED",
+        "PUBLISHING",
+        "RELEASE_PREPARED",
+        "EVALUATING",
+        "ACTION_AUTH_PENDING",
+        "ACTIVATING",
+        "VERIFYING",
+        "COMPLETE_UPDATED",
+        "COMPLETE_ALREADY_PRESENT",
+        "BLOCKED",
+        "FAILED",
+        "CANCELLED",
+        "RECONCILIATION_REQUIRED"
+      ]
+    },
+    "approval_request_id": {
+      "type": ["string", "null"]
+    },
+    "approval_response_id": {
+      "type": ["string", "null"]
+    },
+    "authorization_scope": {
+      "type": "string",
+      "enum": [
+        "candidate_publication",
+        "canonical_promotion"
+      ]
+    },
+    "authorization_expiry": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "publication_attempt_id": {
+      "type": ["string", "null"]
+    },
+    "release_id": {
+      "type": ["string", "null"]
+    },
+    "receipt_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "extensions": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"
+    },
+    "canonical_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"
+    }
+  }
+}

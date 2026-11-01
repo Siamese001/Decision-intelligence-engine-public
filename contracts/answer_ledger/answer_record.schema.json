@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:answer-ledger:answer-record:1.0.0",
+  "title": "NEE Answer Ledger Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "answer_id",
+    "pipeline",
+    "intent_or_type",
+    "context_digest",
+    "retrieval_seeds",
+    "context_snapshot",
+    "cited_assertion_ids",
+    "rigor",
+    "response_text",
+    "graph_sha256",
+    "timestamp",
+    "prev_record_digest",
+    "record_digest"
+  ],
+  "properties": {
+    "contract_id": { "const": "urn:nee:answer-ledger:answer-record:1.0.0" },
+    "schema_version": { "const": "1.0.0" },
+    "answer_id": { "type": "string", "minLength": 1 },
+    "pipeline": { "type": "string", "enum": ["copilot", "query"] },
+    "session_id": { "type": ["string", "null"] },
+    "intent_or_type": { "type": "string", "minLength": 1 },
+    "context_digest": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" },
+    "retrieval_seeds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "context_snapshot": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["speaker", "text"],
+        "properties": {
+          "speaker": { "type": "string" },
+          "text": { "type": "string" },
+          "timestamp": { "type": ["string", "null"] },
+          "turn_sec": { "type": ["number", "null"] }
+        }
+      }
+    },
+    "cited_assertion_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "rigor": { "type": "string", "minLength": 1 },
+    "response_text": { "type": "string" },
+    "graph_sha256": { "type": ["string", "null"] },
+    "generation": { "type": ["string", "integer", "null"] },
+    "parameter_snapshot_digest": { "type": ["string", "null"] },
+    "latency_ms": { "type": ["number", "null"], "minimum": 0 },
+    "model_id": { "type": ["string", "null"] },
+    "timestamp": { "type": "string" },
+    "prev_record_digest": { "type": "string", "minLength": 1 },
+    "record_digest": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" }
+  }
+}

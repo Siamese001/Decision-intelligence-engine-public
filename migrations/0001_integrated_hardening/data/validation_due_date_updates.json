@@ -1,0 +1,70 @@
+{
+  "count": 8,
+  "generated_at": "2026-07-12T02:45:01Z",
+  "updates": [
+    {
+      "basis": "V48 one-time remediation: P1 created date plus 15 calendar days; approved operational schedule, not an assertion of prior owner commitment.",
+      "before_due_date": null,
+      "owner": "Amit / Andrew",
+      "priority": "P1",
+      "proposed_due_date": "2026-07-25",
+      "validation_id": "validation_v40_gemini_agent_governance_p1"
+    },
+    {
+      "basis": "V48 one-time remediation: P0 created date plus 5 calendar days; approved operational schedule, not an assertion of prior owner commitment.",
+      "before_due_date": null,
+      "owner": "Amit / Account lead",
+      "priority": "P0",
+      "proposed_due_date": "2026-07-15",
+      "validation_id": "validation_v40_gemini_executed_commercial_authority_p0"
+    },
+    {
+      "basis": "V48 one-time remediation: P1 created date plus 15 calendar days; approved operational schedule, not an assertion of prior owner commitment.",
+      "before_due_date": null,
+      "owner": "Andrew",
+      "priority": "P1",
+      "proposed_due_date": "2026-07-25",
+      "validation_id": "validation_v40_gemini_instance_architecture_p1"
+    },
+    {
+      "basis": "V48 one-time remediation: P1 created date plus 15 calendar days; approved operational schedule, not an assertion of prior owner commitment.",
+      "before_due_date": null,
+      "owner": "Amit",
+      "priority": "P1",
+      "proposed_due_date": "2026-07-25",
+      "validation_id": "validation_v40_gemini_license_metric_p1"
+    },
+    {
+      "basis": "V48 one-time remediation: P1 created date plus 15 calendar days; approved operational schedule, not an assertion of prior owner commitment.",
+      "before_due_date": null,
+      "owner": "Amit / Andrew",
+      "priority": "P1",
+      "proposed_due_date": "2026-07-25",
+      "validation_id": "validation_v40_gemini_q3_q4_roadmap_p1"
+    },
+    {
+      "basis": "V48 one-time remediation: P1 created date plus 15 calendar days; approved operational schedule, not an assertion of prior owner commitment.",
+      "before_due_date": null,
+      "owner": "Amit",
+      "priority": "P1",
+      "proposed_due_date": "2026-07-25",
+      "validation_id": "validation_v40_gemini_team_reconciliation_p1"
+    },
+    {
+      "basis": "V48 one-time remediation: P0 created date plus 5 calendar days; approved operational schedule, not an assertion of prior owner commitment.",
+      "before_due_date": null,
+      "owner": "Amit / Technical lead",
+      "priority": "P0",
+      "proposed_due_date": "2026-07-15",
+      "validation_id": "validation_v40_nee_ai_sunset_scope_timing_p0"
+    },
+    {
+      "basis": "V48 one-time remediation: P1 created date plus 15 calendar days; approved operational schedule, not an assertion of prior owner commitment.",
+      "before_due_date": null,
+      "owner": "Amit",
+      "priority": "P1",
+      "proposed_due_date": "2026-07-25",
+      "validation_id": "validation_v40_stefanos_formal_decision_rights_p1"
+    }
+  ]
+}

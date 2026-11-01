@@ -1,0 +1,29 @@
+version: "1.0.0"
+governance_initiative: "NEE-KG-DUAL-PIPELINE-01"
+
+routing:
+  CLIENT_SAFE:
+    execution_environment: "CLOUD_OR_LOCAL"
+    allowed_models:
+      - "gpt-6.1-sol"
+      - "gpt-6-sol"
+      - "gpt-6-luna"
+      - "gpt-5.6-sol"
+      - "gpt-5.6-terra"
+      - "gpt-5.6-luna"
+    egress_scrubbing_required: true
+    allow_advisory_leakage: false
+
+  INTERNAL_ADVISORY:
+    execution_environment: "LOCAL_METAL_ONLY"
+    allowed_models:
+      - "mlx-lm:Meta-Llama-3.1-8B-Instruct-4bit"
+    egress_scrubbing_required: false
+    network_egress_forbidden: true
+    storage_backend: "SQLCipher_AES256"
+
+advisory_categories:
+  - "STAKEHOLDER_DYNAMICS"
+  - "DECISION_INFLUENCE"
+  - "ADOPTION_RISK"
+  - "BLOCKER"

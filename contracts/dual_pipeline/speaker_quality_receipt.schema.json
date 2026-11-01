@@ -1,0 +1,435 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:speaker-quality-receipt:1.0.0",
+  "title": "Speaker Diarization Quality and Qualification Receipt Contract",
+  "description": "Governs per-wave receipts for speaker diarization qualification, evidence preservation, denominators, and gate evaluations.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_type",
+    "wave",
+    "title",
+    "meeting_id",
+    "generated_at",
+    "terminal_outcome",
+    "source_manifest_digest",
+    "source_hashes",
+    "model_provenance",
+    "denominators",
+    "independent_reference_origin",
+    "unknown_status",
+    "downstream_hashes",
+    "execution_environment"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "receipt_type": {
+      "type": "string",
+      "const": "speaker_quality_receipt"
+    },
+    "wave": {
+      "type": "string",
+      "pattern": "^Wave [1-5]$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "meeting_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "terminal_outcome": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "QUALIFIED",
+        "UNQUALIFIED"
+      ]
+    },
+    "source_manifest_path": {
+      "type": "string"
+    },
+    "source_manifest_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_hashes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "model_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model_name",
+        "provenance_status",
+        "device"
+      ],
+      "properties": {
+        "model_name": {
+          "type": "string"
+        },
+        "snapshot_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "device": {
+          "type": "string"
+        },
+        "execution_platform": {
+          "type": "string"
+        },
+        "provenance_status": {
+          "type": "string",
+          "enum": [
+            "VERIFIED_SANDBOX_REPLAY",
+            "HISTORICAL_UNVERIFIED",
+            "MOCK_MODE",
+            "UNMEASURED"
+          ]
+        },
+        "historical_model_details_status": {
+          "type": "string"
+        },
+        "details": {
+          "type": "object"
+        }
+      }
+    },
+    "denominators": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "released_text_metrics",
+        "independent_reference_metrics",
+        "scoring_protocol"
+      ],
+      "properties": {
+        "released_text_metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "total_displayed_turns",
+            "one_word_turns",
+            "at_most_3_words",
+            "generic_client_turns",
+            "named_turns",
+            "released_dialogue_words",
+            "generic_client_words",
+            "released_named_words",
+            "named_turn_coverage_pct",
+            "named_word_coverage_pct",
+            "released_coverage_gate_status"
+          ],
+          "properties": {
+            "total_displayed_turns": {
+              "type": "integer"
+            },
+            "one_word_turns": {
+              "type": "integer"
+            },
+            "at_most_3_words": {
+              "type": "integer"
+            },
+            "generic_client_turns": {
+              "type": "integer"
+            },
+            "named_turns": {
+              "type": "integer"
+            },
+            "released_dialogue_words": {
+              "type": "integer"
+            },
+            "generic_client_words": {
+              "type": "integer"
+            },
+            "released_named_words": {
+              "type": "integer"
+            },
+            "named_turn_coverage_pct": {
+              "type": "number"
+            },
+            "named_word_coverage_pct": {
+              "type": "number"
+            },
+            "released_coverage_gate_status": {
+              "type": "string",
+              "enum": [
+                "PASS",
+                "FAIL"
+              ]
+            }
+          }
+        },
+        "independent_reference_metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "measurement_status"
+          ],
+          "properties": {
+            "reference_speech_words": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "reference_named_words": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "independent_reference_named_coverage_pct": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "named_word_attribution_accuracy_pct": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "true_identified_reference_word_share_pct": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "measurement_status": {
+              "type": "string",
+              "enum": [
+                "MEASURED",
+                "UNMEASURED",
+                "NOT_EVALUATED",
+                "PARTIAL"
+              ]
+            }
+          }
+        },
+        "scoring_protocol": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "estimation_mode",
+            "rules"
+          ],
+          "properties": {
+            "estimation_mode": {
+              "type": "string"
+            },
+            "rules": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "worked_examples": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "independent_reference_origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "origin_description"
+      ],
+      "properties": {
+        "manifest_path": {
+          "type": "string"
+        },
+        "manifest_sha256": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "BOUND",
+            "UNMEASURED",
+            "PARTIAL",
+            "HISTORICAL_LEAKAGE_RETIRED"
+          ]
+        },
+        "origin_description": {
+          "type": "string"
+        },
+        "partitions": {
+          "type": "object"
+        },
+        "exclusion_rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "unknown_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generic_client_turns",
+        "unknown_turns",
+        "same_cluster_sandwiches",
+        "unmeasured_metrics"
+      ],
+      "properties": {
+        "generic_client_turns": {
+          "type": "integer"
+        },
+        "unknown_turns": {
+          "type": "integer"
+        },
+        "same_cluster_sandwiches": {
+          "type": "integer"
+        },
+        "unmeasured_metrics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status_description": {
+          "type": "string"
+        }
+      }
+    },
+    "channel_and_header_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "master_wav_path": {
+          "type": "string"
+        },
+        "master_sha256": {
+          "type": "string"
+        },
+        "channels": {
+          "type": "integer"
+        },
+        "sample_rate": {
+          "type": "integer"
+        },
+        "duration_seconds": {
+          "type": "number"
+        },
+        "normalized_mono_path": {
+          "type": "string"
+        },
+        "normalized_mono_duration_seconds": {
+          "type": "number"
+        },
+        "duration_parity": {
+          "type": "boolean"
+        },
+        "staging_chunk_count": {
+          "type": "integer"
+        },
+        "staging_chunk_pcm_prefix_match": {
+          "type": "boolean"
+        },
+        "staging_truncated_header_detected": {
+          "type": "boolean"
+        },
+        "channel_isolation_status": {
+          "type": "string"
+        }
+      }
+    },
+    "identity_corrections": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "correction_count": {
+          "type": "integer"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "downstream_hashes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "prior_receipt_validation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "previous_receipt_path": {
+          "type": "string"
+        },
+        "previous_receipt_digest": {
+          "type": "string"
+        },
+        "previous_wave": {
+          "type": "string"
+        },
+        "previous_terminal_outcome": {
+          "type": "string"
+        },
+        "validation_status": {
+          "type": "string"
+        }
+      }
+    },
+    "execution_environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code_revision",
+        "runtime_location",
+        "sandbox_root",
+        "platform"
+      ],
+      "properties": {
+        "code_revision": {
+          "type": "string"
+        },
+        "runtime_location": {
+          "type": "string"
+        },
+        "sandbox_root": {
+          "type": "string"
+        },
+        "python_version": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

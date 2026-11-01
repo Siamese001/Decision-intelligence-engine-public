@@ -1,0 +1,197 @@
+{
+  "$id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "artifacts": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "base_commit": {
+      "pattern": "^[a-f0-9]{40}$",
+      "type": "string"
+    },
+    "branch": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "cache_namespace_disposition": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "changed_files": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "commands": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "command": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "exit_code": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "skipped": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL"
+            ]
+          },
+          "timed_out": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "command",
+          "exit_code",
+          "status",
+          "skipped",
+          "timed_out"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0"
+    },
+    "contract_inventory_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "exit_gate_verdicts": {
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "type": "object"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "graph_mutation_count": {
+      "const": 0,
+      "type": "integer"
+    },
+    "next_wave_authorized": {
+      "type": "boolean"
+    },
+    "policy_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "predecessor_receipt_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "program_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "provider_call_count": {
+      "const": 0,
+      "type": "integer"
+    },
+    "provider_initialization_count": {
+      "const": 0,
+      "type": "integer"
+    },
+    "result_commit": {
+      "pattern": "^[a-f0-9]{40}$",
+      "type": "string"
+    },
+    "rollback_control": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "wave_id": {
+      "enum": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5",
+        "W6",
+        "W7",
+        "W8",
+        "W9",
+        "W10",
+        "W11",
+        "W12"
+      ]
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "wave_id",
+    "program_id",
+    "branch",
+    "base_commit",
+    "result_commit",
+    "predecessor_receipt_digest",
+    "changed_files",
+    "contract_inventory_digest",
+    "policy_digest",
+    "commands",
+    "provider_initialization_count",
+    "provider_call_count",
+    "graph_mutation_count",
+    "next_wave_authorized",
+    "artifacts",
+    "exit_gate_verdicts",
+    "rollback_control",
+    "cache_namespace_disposition"
+  ],
+  "title": "L1 implementation wave receipt",
+  "type": "object"
+}

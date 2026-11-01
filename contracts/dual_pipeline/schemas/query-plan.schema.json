@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:query-plan:1.0.0",
+  "title": "NEE L1 complex query plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "plan_id", "request_id", "run_id", "trace_id", "query_type", "materiality", "query_complexity", "classification_digest", "classification_source", "route_high_materiality", "l2_policy", "l2_policy_reason", "allowed_provider_class", "preferred_model_tier", "maximum_primary_calls", "maximum_repair_calls", "maximum_escalation_calls", "required_output_schema", "provider_egress_allowed", "primary_entities", "time_horizon", "subquestions", "relationships_to_inspect", "evidence_requirements", "retrieval_mode", "allowed_lanes", "retrieval", "external_research", "challenger_required", "prompt_blueprint", "output_schema", "exit_criteria", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:query-plan:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "plan_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "request_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "query_type": {"type": "string", "enum": ["exact_lookup", "current_state", "current_state_corroboration", "relationship_explanation", "cross_workstream_synthesis", "gap_risk_inconsistency", "opportunity_nba", "candidate_promotion_review"]},
+    "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+    "query_complexity": {"type": "string", "enum": ["low", "normal", "high", "most_complex"]},
+    "classification_digest": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "classification_source": {"type": "string", "enum": ["operator_override", "deterministic", "classifier_llm", "policy_fallback"]},
+    "route_high_materiality": {"type": "boolean"},
+    "l2_policy": {"type": "string", "enum": ["forbidden", "conditional", "required"]},
+    "l2_policy_reason": {"type": "string", "minLength": 1},
+    "allowed_provider_class": {"type": ["string", "null"], "enum": ["openai", null]},
+    "preferred_model_tier": {"type": ["string", "null"], "enum": ["normal", "high_materiality", "most_complex", null]},
+    "maximum_primary_calls": {"type": "integer", "minimum": 0, "maximum": 1},
+    "maximum_repair_calls": {"type": "integer", "minimum": 0, "maximum": 1},
+    "maximum_escalation_calls": {"type": "integer", "minimum": 0, "maximum": 1},
+    "required_output_schema": {"type": "string", "minLength": 1},
+    "provider_egress_allowed": {"type": "boolean"},
+    "primary_entities": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "time_horizon": {"type": ["string", "null"]},
+    "subquestions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "relationships_to_inspect": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "evidence_requirements": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "retrieval_mode": {"type": "string", "enum": ["factual", "guidance", "candidate_review", "strategic"]},
+    "allowed_lanes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "enum": ["approved", "candidate", "external_public"]}},
+    "retrieval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["exact_anchors", "semantic", "graph_hops", "lane_blending"],
+      "properties": {
+        "exact_anchors": {"type": "boolean"},
+        "semantic": {"type": "boolean"},
+        "graph_hops": {"type": "integer", "minimum": 0, "maximum": 3},
+        "lane_blending": {"const": false},
+        "bm25": {"type": "boolean"},
+        "typed_path_expansion": {"type": "boolean"},
+        "connected_evidence_selection": {"type": "boolean"}
+      }
+    },
+    "external_research": {"type": "string", "enum": ["denied", "allowed_public_context", "required_public_fact"]},
+    "challenger_required": {"const": false},
+    "prompt_blueprint": {"type": "string", "minLength": 1},
+    "output_schema": {"type": "string", "minLength": 1},
+    "exit_criteria": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "query_type": {"const": "candidate_promotion_review"},
+        "retrieval_mode": {"const": "candidate_review"},
+        "allowed_lanes": {"const": ["approved", "candidate"]}
+      }
+    },
+    {
+      "properties": {
+        "query_type": {"const": "opportunity_nba"},
+        "retrieval_mode": {"const": "strategic"},
+        "allowed_lanes": {"const": ["approved", "candidate", "external_public"]}
+      }
+    },
+    {
+      "properties": {
+        "query_type": {"enum": ["exact_lookup", "current_state", "current_state_corroboration", "relationship_explanation", "cross_workstream_synthesis", "gap_risk_inconsistency"]},
+        "retrieval_mode": {"const": "factual"},
+        "allowed_lanes": {"const": ["approved"]}
+      }
+    }
+  ]
+}

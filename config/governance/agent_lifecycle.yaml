@@ -1,0 +1,26 @@
+version: "1.0.0"
+governance_initiative: "NEE-KG-DUAL-PIPELINE-01"
+
+lifecycle_phases:
+  - "PLANNED"
+  - "STARTED"
+  - "CHECKPOINTED"
+  - "FAILED"
+  - "HEALED"
+  - "ESCALATED_HITL"
+  - "COMPLETED"
+
+timeouts:
+  default_step_timeout_sec: 30.0
+  max_planning_timeout_sec: 15.0
+  max_execution_timeout_sec: 60.0
+
+retry_policy:
+  max_retries: 3
+  backoff_multiplier: 1.5
+  fail_closed_on_exhaustion: true
+
+hitl_governance:
+  ambiguity_margin_threshold: 0.20
+  unresolved_entity_margin_threshold: 0.15
+  atomic_presentation_required: true

@@ -1,0 +1,37 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:ingestion-plan:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "ingestion-plan-nea-update-2026-07-21",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "1748fa90d3bed5325b19ccd0074a4f326512063f05c01556e7f476dac9a2d506"
+  },
+  "plan_id": "plan-intake-nea-update-2026-07-21",
+  "run_id": "run-intake-nea-update-2026-07-21",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "problem": "Evaluate a material internal ownership-gap claim without allowing L1 to approve or write it.",
+  "candidates": [
+    {
+      "candidate_id": "candidate-sherpa-monitoring-owner-gap",
+      "candidate_type": "risk",
+      "materiality": "high",
+      "entities_requiring_resolution": ["Sherpa"],
+      "exact_graph_lookups": ["exact_assertion_lookup", "same_subject_predicate_lookup", "current_owner_lookup"],
+      "semantic_comparison_required": true,
+      "contradiction_checks": ["semantic_duplicate_lookup", "contradiction_lookup"],
+      "external_validation": "not_authoritative_for_internal_fact",
+      "source_authority_requirement": "Governed internal evidence or explicit authorized confirmation",
+      "expected_graph_operation": "add_assertion",
+      "expected_evidence_lane": "candidate",
+      "expected_retrieval_record_family": "assertion",
+      "expected_dispositions": ["APPROVED", "CANDIDATE", "QUARANTINE"],
+      "hitl_triggers": ["conflicting owner", "unclear source authority"],
+      "required_exit_gates": ["X1", "X2", "X3"]
+    }
+  ],
+  "allowed_tools": ["graph_schema_lookup", "entity_catalog_lookup", "alias_lookup", "source_authority_policy", "similar_record_statistics"],
+  "exit_conditions": ["Every candidate has one X3 disposition", "No graph or index mutation occurs during planning"],
+  "proposal_only": true,
+  "extensions": {}
+}

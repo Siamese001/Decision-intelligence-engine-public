@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:publication-coverage-receipt:1.0.0",
+  "title": "NEE Publication Coverage Receipt",
+  "description": "Receipt proving independent read-only graph coverage and fact disposition after activation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "receipt_id",
+    "run_id",
+    "proposal_digest",
+    "activated_generation_id",
+    "target_graph",
+    "status",
+    "covered_facts",
+    "coverage_summary",
+    "verified_at"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:publication-coverage-receipt:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "receipt_id": {
+      "type": "string",
+      "pattern": "^pcr-[a-zA-Z0-9_\\-\\.]+$"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposal_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "activated_generation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_graph": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["VERIFIED", "FAILED", "DEGRADED"]
+    },
+    "covered_facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "fact_id",
+          "item_type",
+          "canonical_identity",
+          "target_property",
+          "disposition",
+          "disposition_reason",
+          "verified_in_graph"
+        ],
+        "properties": {
+          "fact_id": { "type": "string" },
+          "item_type": { "type": "string" },
+          "canonical_identity": { "type": "string" },
+          "target_property": { "type": "string" },
+          "before_value": {},
+          "after_value": {},
+          "temporal_scope": { "type": ["string", "null"] },
+          "authority": { "type": ["string", "null"] },
+          "disposition": {
+            "type": "string",
+            "enum": ["COMMITTED", "EXISTING_FACT_NOOP", "EXCLUDED", "QUARANTINED"]
+          },
+          "disposition_reason": { "type": "string" },
+          "verified_in_graph": { "type": "boolean" },
+          "graph_row_id": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "coverage_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_eligible_facts",
+        "committed_count",
+        "existing_noop_count",
+        "excluded_count",
+        "quarantined_count",
+        "missing_count"
+      ],
+      "properties": {
+        "total_eligible_facts": { "type": "integer", "minimum": 0 },
+        "committed_count": { "type": "integer", "minimum": 0 },
+        "existing_noop_count": { "type": "integer", "minimum": 0 },
+        "excluded_count": { "type": "integer", "minimum": 0 },
+        "quarantined_count": { "type": "integer", "minimum": 0 },
+        "missing_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "verified_at": {
+      "type": "string"
+    }
+  }
+}

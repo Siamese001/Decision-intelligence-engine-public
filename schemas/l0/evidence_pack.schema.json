@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:nee:dual-pipeline:l0:evidence-pack:1.0.0",
+  "title": "EvidencePack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pack_id",
+    "inquiry_id",
+    "query_text",
+    "canonical_facts",
+    "citations",
+    "namespace",
+    "tenant_id",
+    "retrieved_at"
+  ],
+  "properties": {
+    "pack_id": { "type": "string" },
+    "inquiry_id": { "type": "string" },
+    "query_text": { "type": "string" },
+    "canonical_facts": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "citations": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "namespace": { "type": "string" },
+    "tenant_id": { "type": "string" },
+    "retrieved_at": { "type": "number" }
+  }
+}

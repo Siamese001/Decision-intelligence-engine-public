@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:semantic-unit-policy:1.0.0",
+  "title": "NEE semantic-unit embedding and reachability policy",
+  "description": "Defines semantic unit definitions, proposition eligibility, passage windowing, security inheritance, and reachability rules for BGE-M3 index generation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "policy_id",
+    "policy_version",
+    "status",
+    "approval_id",
+    "created_at",
+    "ledger_reference",
+    "passage_windowing",
+    "proposition_eligibility",
+    "decontextualization_template",
+    "candidate_lane_passages",
+    "profile_hop_budget",
+    "passage_security_inheritance",
+    "canonical_digest"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:semantic-unit-policy:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "policy_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+    },
+    "policy_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "approved", "retired"]
+    },
+    "approval_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "ledger_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ledger_path", "directive_id", "decisions_count", "decisions"],
+      "properties": {
+        "ledger_path": {"type": "string"},
+        "directive_id": {"type": "string"},
+        "decisions_count": {"type": "integer", "minimum": 6},
+        "decisions": {
+          "type": "array",
+          "minItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["decision_id", "action", "selected_option", "signature"],
+            "properties": {
+              "decision_id": {"type": "string"},
+              "action": {"type": "string", "enum": ["APPROVE"]},
+              "selected_option": {"type": "string"},
+              "signature": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+            }
+          }
+        }
+      }
+    },
+    "passage_windowing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "min_chars",
+        "max_chars",
+        "boundary_strategy",
+        "deduplication",
+        "merge_adjacent_quotes",
+        "same_source_version_only"
+      ],
+      "properties": {
+        "strategy": {"type": "string"},
+        "min_chars": {"type": "integer", "minimum": 100},
+        "max_chars": {"type": "integer", "maximum": 4000},
+        "boundary_strategy": {"type": "string"},
+        "deduplication": {"type": "string"},
+        "merge_adjacent_quotes": {"type": "boolean"},
+        "same_source_version_only": {"type": "boolean"}
+      }
+    },
+    "proposition_eligibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "eligible_assertion_types",
+        "require_literal_claim",
+        "exclude_structural_edges"
+      ],
+      "properties": {
+        "strategy": {"type": "string"},
+        "eligible_assertion_types": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        },
+        "require_literal_claim": {"type": "boolean"},
+        "exclude_structural_edges": {"type": "boolean"}
+      }
+    },
+    "decontextualization_template": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["strategy", "template", "fallback_template"],
+      "properties": {
+        "strategy": {"type": "string"},
+        "template": {"type": "string"},
+        "fallback_template": {"type": "string"}
+      }
+    },
+    "candidate_lane_passages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "embed_candidate_passages",
+        "lane",
+        "answer_use",
+        "target_assertion_statuses"
+      ],
+      "properties": {
+        "strategy": {"type": "string"},
+        "embed_candidate_passages": {"type": "boolean"},
+        "lane": {"type": "string"},
+        "answer_use": {"type": "string"},
+        "target_assertion_statuses": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "profile_hop_budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "max_hops",
+        "allowed_edge_dispositions",
+        "neighbor_limit_per_entity"
+      ],
+      "properties": {
+        "strategy": {"type": "string"},
+        "max_hops": {"type": "integer", "minimum": 1, "maximum": 3},
+        "allowed_edge_dispositions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        },
+        "neighbor_limit_per_entity": {"type": "integer", "minimum": 5}
+      }
+    },
+    "passage_security_inheritance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "inheritance_rule",
+        "classification_rank",
+        "audience_intersection"
+      ],
+      "properties": {
+        "strategy": {"type": "string"},
+        "inheritance_rule": {"type": "string"},
+        "classification_rank": {"type": "string"},
+        "audience_intersection": {"type": "boolean"}
+      }
+    },
+    "canonical_digest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "scope", "value"],
+      "properties": {
+        "algorithm": {"const": "sha256"},
+        "scope": {"const": "artifact_without_canonical_digest"},
+        "value": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    }
+  }
+}

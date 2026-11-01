@@ -1,0 +1,131 @@
+{
+  "$id": "urn:nee:dual-pipeline:retrieval-release-suite:2.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "active_pair": {
+      "additionalProperties": false,
+      "properties": {
+        "backend": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "generation_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "graph_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "model_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sidecar_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "generation_id",
+        "graph_sha256",
+        "sidecar_sha256",
+        "backend",
+        "model_id",
+        "model_revision"
+      ],
+      "type": "object"
+    },
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "budget_profile": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "cases": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:retrieval-release-suite:2.0.0"
+    },
+    "controller_mode": {
+      "enum": [
+        "off",
+        "shadow",
+        "bounded"
+      ]
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "graph_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "policy_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "suite_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "suite_version": {
+      "const": "2.0.0"
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "suite_id",
+    "suite_version",
+    "controller_mode",
+    "policy_digest",
+    "budget_profile",
+    "cases",
+    "active_pair",
+    "graph_sha256"
+  ],
+  "title": "Controller-bound retrieval release suite",
+  "type": "object"
+}

@@ -1,0 +1,69 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:facet-applicability-policy:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "facet-policy-semantic-domain-v1",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "e33650a90b41952b59b9ccbc9e1fbfd7ab1dc9b29437de9217048dad4943fceb"
+  },
+  "policy_id": "facet-policy-semantic-domain-v1",
+  "policy_version": "1.0.0",
+  "status": "approved",
+  "approval_id": "approval-cards-refactoring-exact-scope",
+  "vocabularies": [
+    {
+      "vocabulary": "semantic_domain",
+      "definition": "Primary controlled semantic domain used for coverage and navigation, independent of editorial card membership.",
+      "controlled_value_source": "controlled_value_registry",
+      "requirements": [
+        {
+          "requirement_id": "requirement-active-node-semantic-domain",
+          "object_type": "node",
+          "population": "active_nodes",
+          "minimum_assignments": 1,
+          "accepted_review_states": ["approved"],
+          "allowed_assignment_methods": ["explicit", "rule_derived", "reviewed"],
+          "exception_policy": {
+            "allowed": true,
+            "owner_required": true,
+            "review_due_required": true,
+            "maximum_review_days": 90
+          },
+          "derivation_rules": [
+            {
+              "rule_id": "semantic-domain-by-node-type",
+              "rule_version": 1,
+              "rule_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+              "implementation_ref": "dual_pipeline.facets:semantic_domain_for_node_type"
+            }
+          ]
+        },
+        {
+          "requirement_id": "requirement-current-assertion-semantic-domain",
+          "object_type": "assertion",
+          "population": "current_canonical_assertions",
+          "minimum_assignments": 1,
+          "accepted_review_states": ["approved"],
+          "allowed_assignment_methods": ["explicit", "inherited", "reviewed"],
+          "exception_policy": {
+            "allowed": true,
+            "owner_required": true,
+            "review_due_required": true,
+            "maximum_review_days": 90
+          },
+          "derivation_rules": [
+            {
+              "rule_id": "semantic-domain-by-subject-node",
+              "rule_version": 1,
+              "rule_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+              "implementation_ref": "dual_pipeline.facets:build_semantic_domain_operations"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-07-27T23:30:00Z",
+  "extensions": {}
+}

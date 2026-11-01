@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEE Layer 0 Runtime Parameters SSOT Schema",
+  "type": "object",
+  "required": ["schema_version", "parameters"],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "object",
+      "required": [
+        "storage",
+        "timeouts",
+        "hitl",
+        "healing",
+        "release_thresholds",
+        "concurrency",
+        "copilot",
+        "judge",
+        "output1",
+        "output2",
+        "output3",
+        "audio_ingestion",
+        "pipeline_settings",
+        "agent_sdk",
+        "local_mlx_models",
+        "grounding",
+        "graph_consolidation",
+        "graph_retrieval",
+        "graph_signal",
+        "index_core",
+        "document_security",
+        "decision_service",
+        "authorization",
+        "agent_architecture",
+        "l0",
+        "engineering_output",
+        "planning"
+      ],
+      "properties": {
+        "storage": {
+          "type": "object",
+          "properties": {
+            "sqlite_wal_busy_timeout_ms": {"type": "integer", "minimum": 1000, "maximum": 300000},
+            "connection_pool_size": {"type": "integer", "minimum": 1, "maximum": 128},
+            "sqlite_mmap_size_bytes": {"type": "integer", "minimum": 0, "maximum": 2147483648}
+          }
+        },
+        "timeouts": {
+          "type": "object",
+          "properties": {
+            "llm_sync_seconds": {"type": "number", "minimum": 1.0, "maximum": 3600.0},
+            "audio_ingest_seconds": {"type": "number", "minimum": 10.0, "maximum": 7200.0},
+            "retrieval_steady_state_latency_ms": {"type": "number", "minimum": 100.0, "maximum": 60000.0},
+            "database_busy_timeout_seconds": {"type": "number", "minimum": 1.0, "maximum": 300.0},
+            "subprocess_seconds": {"type": "number", "minimum": 1.0, "maximum": 3600.0}
+          }
+        },
+        "hitl": {
+          "type": "object",
+          "properties": {
+            "ambiguity_margin_threshold": {"type": "number", "minimum": 0.05, "maximum": 0.30},
+            "divergence_margin_threshold": {"type": "number", "minimum": 0.10, "maximum": 0.40},
+            "min_autonomous_confidence_floor": {"type": "number", "minimum": 0.50, "maximum": 0.90},
+            "entropy_ambiguity_threshold": {"type": "number", "minimum": 0.50, "maximum": 0.95},
+            "bayesian_prior_strength": {"type": "number", "minimum": 1.0, "maximum": 10.0},
+            "human_feedback_weight": {"type": "number", "minimum": 0.5, "maximum": 2.0},
+            "autonomous_feedback_weight": {"type": "number", "minimum": 0.01, "maximum": 0.20},
+            "entity_clarification_enabled": {"type": "boolean"},
+            "unresolved_entity_margin_threshold": {"type": "number", "minimum": 0.01, "maximum": 0.50},
+            "metric_discrepancy_threshold": {"type": "number", "minimum": 0.01, "maximum": 0.50},
+            "cross_meeting_context_window_days": {"type": "integer", "minimum": 1, "maximum": 90},
+            "cross_meeting_max_context_tokens": {"type": "integer", "minimum": 256, "maximum": 65536},
+            "speaker_disambiguation_escalation_enabled": {"type": "boolean"},
+            "uncertainty_display": {"type": "string"},
+            "autonomous_rollout_mode": {"type": "string"},
+            "autonomous_kill_switch": {"type": "boolean"}
+          }
+        },
+        "healing": {
+          "type": "object",
+          "properties": {
+            "max_retries": {"type": "integer", "minimum": 0, "maximum": 10},
+            "max_token_budget": {"type": "integer", "minimum": 512, "maximum": 128000}
+          }
+        },
+        "release_thresholds": {
+          "type": "object",
+          "properties": {
+            "output1_production_pass_threshold": {"type": "integer", "minimum": 50, "maximum": 100},
+            "output2_production_pass_threshold": {"type": "integer", "minimum": 50, "maximum": 100},
+            "output3_production_pass_threshold": {"type": "integer", "minimum": 50, "maximum": 100},
+            "advisory_score_floor": {"type": "integer", "minimum": 50, "maximum": 100}
+          }
+        },
+        "concurrency": {
+          "type": "object",
+          "properties": {
+            "max_retrieval_workers": {"type": "integer", "minimum": 1, "maximum": 128}
+          }
+        },
+        "copilot": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "object",
+              "properties": {
+                "focus_seconds": {"type": "number", "minimum": 5.0, "maximum": 60.0},
+                "decay_tau_seconds": {"type": "number", "minimum": 30.0, "maximum": 1800.0},
+                "salient_entities_top_k": {"type": "number", "minimum": 3.0, "maximum": 20.0},
+                "flow_items_max": {"type": "number", "minimum": 3.0, "maximum": 25.0},
+                "focus_weight": {"type": "number", "minimum": 0.3, "maximum": 0.9}
+              }
+            },
+            "neighborhood_max_hops": {"type": "number", "minimum": 1.0, "maximum": 3.0},
+            "rigor": {
+              "type": "object",
+              "properties": {
+                "budget_ms": {"type": "number", "minimum": 50.0, "maximum": 1000.0},
+                "min_provenance_score": {"type": "number", "minimum": 0.0, "maximum": 1.0}
+              }
+            },
+            "rerank": {
+              "type": "object",
+              "properties": {
+                "lexical": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+                "structural": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+                "dense": {"type": "number", "minimum": 0.0, "maximum": 1.0}
+              }
+            },
+            "speech": {
+              "type": "object",
+              "properties": {
+                "cli_default_max_words": {"type": "integer", "minimum": 5, "maximum": 200},
+                "insight_max_words": {"type": "integer", "minimum": 5, "maximum": 200},
+                "cumulative_max_words": {"type": "integer", "minimum": 10, "maximum": 500},
+                "multi_line_cap_words": {"type": "integer", "minimum": 10, "maximum": 500},
+                "speaker_summary_max_words": {"type": "integer", "minimum": 10, "maximum": 500},
+                "supporting_details_max_words": {"type": "integer", "minimum": 10, "maximum": 1000},
+                "total_content_max_words": {"type": "integer", "minimum": 10, "maximum": 1500},
+                "max_sentence_words": {"type": "integer", "minimum": 5, "maximum": 100}
+              }
+            }
+          }
+        },
+        "judge": {
+          "type": "object",
+          "properties": {
+            "svp_political_materiality_threshold": {"type": "integer", "minimum": 1, "maximum": 10},
+            "svp_executive_materiality_threshold": {"type": "integer", "minimum": 1, "maximum": 10},
+            "enable_deterministic_prefilter": {"type": "boolean"},
+            "enable_dynamic_recap_bypass": {"type": "boolean"},
+            "max_input_tokens": {"type": "integer", "minimum": 1000, "maximum": 2000000},
+            "max_completion_tokens": {"type": "integer", "minimum": 1000, "maximum": 500000},
+            "deadline_seconds": {"type": "number", "minimum": 10.0, "maximum": 3600.0},
+            "heartbeat_interval_seconds": {"type": "number", "minimum": 1.0, "maximum": 300.0},
+            "canonical_mutation_budget": {"type": "integer", "minimum": 1, "maximum": 500}
+          }
+        },
+        "output1": {
+          "type": "object",
+          "properties": {
+            "max_tokens": {"type": "integer", "minimum": 1000, "maximum": 500000},
+            "min_word_count": {"type": "integer", "minimum": 10, "maximum": 10000},
+            "max_word_count": {"type": "integer", "minimum": 100, "maximum": 200000},
+            "generic_speaker_ceiling_percent": {"type": "number", "minimum": 0.0, "maximum": 100.0},
+            "single_speaker_collapse_threshold": {"type": "number", "minimum": 0.5, "maximum": 1.0},
+            "words_per_minute_floor_multiplier": {"type": "integer", "minimum": 1, "maximum": 100},
+            "min_words_per_turn_bypass": {"type": "integer", "minimum": 1, "maximum": 500}
+          }
+        },
+        "output2": {
+          "type": "object",
+          "properties": {
+            "max_tokens": {"type": "integer", "minimum": 1000, "maximum": 500000},
+            "min_word_count": {"type": "integer", "minimum": 50, "maximum": 5000},
+            "max_word_count": {"type": "integer", "minimum": 500, "maximum": 50000},
+            "density_floor_short": {"type": "integer", "minimum": 5, "maximum": 500},
+            "density_floor_long": {"type": "integer", "minimum": 10, "maximum": 1000},
+            "min_themes_per_speaker": {"type": "integer", "minimum": 1, "maximum": 20},
+            "min_words_per_theme": {"type": "integer", "minimum": 5, "maximum": 500},
+            "passive_hedging_threshold": {"type": "integer", "minimum": 0, "maximum": 100},
+            "dag_narrative_min_words": {"type": "integer", "minimum": 50, "maximum": 10000},
+            "dag_perspectives_min_words": {"type": "integer", "minimum": 50, "maximum": 10000},
+            "diagram_bonus_words": {"type": "integer", "minimum": 0, "maximum": 5000},
+            "word_limits": {"type": "object"},
+            "section_density_floors": {"type": "object"},
+            "c21_speaker_tier_floors": {"type": "object"},
+            "section_weights": {"type": "object"},
+            "section_floors": {"type": "object"}
+          }
+        },
+        "output3": {
+          "type": "object",
+          "properties": {
+            "max_tokens": {"type": "integer", "minimum": 1000, "maximum": 500000},
+            "min_word_count": {"type": "integer", "minimum": 10, "maximum": 5000},
+            "max_word_count": {"type": "integer", "minimum": 100, "maximum": 200000},
+            "max_mutations_per_batch": {"type": "integer", "minimum": 1, "maximum": 500}
+          }
+        },
+        "audio_ingestion": {"type": "object"},
+        "pipeline_settings": {"type": "object"},
+        "agent_sdk": {"type": "object"},
+        "local_mlx_models": {"type": "object"},
+        "grounding": {"type": "object"},
+        "graph_consolidation": {"type": "object"},
+        "graph_retrieval": {"type": "object"},
+        "graph_signal": {"type": "object"},
+        "index_core": {"type": "object"},
+        "document_security": {"type": "object"},
+        "decision_service": {"type": "object"},
+        "authorization": {"type": "object"},
+        "agent_architecture": {"type": "object"},
+        "l0": {"type": "object"},
+        "engineering_output": {
+          "type": "object",
+          "properties": {
+            "max_words": {"type": "integer", "minimum": 50, "maximum": 1000},
+            "target_words": {"type": "integer", "minimum": 20, "maximum": 500},
+            "target_min_words": {"type": "integer", "minimum": 20, "maximum": 500},
+            "target_max_words": {"type": "integer", "minimum": 50, "maximum": 500},
+            "max_chars": {"type": "integer", "minimum": 500, "maximum": 10000},
+            "progress_max_words": {"type": "integer", "minimum": 5, "maximum": 100},
+            "pr_queue_max_words": {"type": "integer", "minimum": 100, "maximum": 5000},
+            "ssot_pointer_max_words": {"type": "integer", "minimum": 10, "maximum": 200}
+          }
+        },
+        "planning": {
+          "type": "object",
+          "properties": {
+            "max_plan_words": {"type": "integer", "minimum": 100, "maximum": 5000},
+            "max_scaled_plan_words": {"type": "integer", "minimum": 500, "maximum": 10000},
+            "base_plan_words": {"type": "integer", "minimum": 50, "maximum": 2000},
+            "words_per_wave": {"type": "integer", "minimum": 10, "maximum": 1000},
+            "words_per_deliverable": {"type": "integer", "minimum": 1, "maximum": 200}
+          }
+        }
+      }
+    }
+  }
+}

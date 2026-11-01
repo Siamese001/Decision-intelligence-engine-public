@@ -1,0 +1,51 @@
+{
+  "artifact_id": "l1-wave-receipt-fixture",
+  "artifacts": [
+    "query-plan-v3",
+    "query-retrieval-attempt",
+    "query-plan-observation",
+    "query-plan-terminal",
+    "query-l1-control-policy"
+  ],
+  "base_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "branch": "codex/l1-agentic-gap-analysis",
+  "cache_namespace_disposition": "No runtime cache namespace introduced.",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "b32ec73e6a50f8531e4a4d4ad9a1f04a9707ec5bdb1d81f55e19e87ea89b6c3b"
+  },
+  "changed_files": [
+    "contracts/dual_pipeline/schemas/",
+    "contracts/dual_pipeline/fixtures/",
+    "requirements/query-l1-control-policy.json"
+  ],
+  "commands": [
+    {
+      "command": "python tools/validate_dual_pipeline_contracts.py",
+      "exit_code": 0,
+      "skipped": 0,
+      "status": "FAIL",
+      "timed_out": false
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+  "contract_inventory_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "exit_gate_verdicts": {
+    "contracts_validate": true,
+    "historical_v2_readable": true,
+    "runtime_mode_off": true
+  },
+  "extensions": {},
+  "graph_mutation_count": 0,
+  "next_wave_authorized": true,
+  "policy_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "predecessor_receipt_digest": "d4ea80257ef5ec779bbd20842adf9505b3048018494565347ee7ee298486df58",
+  "program_id": "NEE-KG-DUAL-PIPELINE-01",
+  "provider_call_count": 0,
+  "provider_initialization_count": 0,
+  "result_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "rollback_control": "Remove Wave 1 schemas, fixtures, policy, and inventory entries as one unit.",
+  "schema_version": "1.0.0",
+  "wave_id": "W1"
+}

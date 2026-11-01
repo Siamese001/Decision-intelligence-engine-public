@@ -1,0 +1,43 @@
+{
+  "artifact_id": "ingestion-query-bridge-e2",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "fd6452539fe61c081b2bacf1d106e8bdf0915f1e56ab3315a21017bb44f44221"
+  },
+  "cases": [
+    {
+      "audiences": [
+        "nee-engineering"
+      ],
+      "case_id": "bridge-copilot-candidate-source",
+      "classification": "internal",
+      "expected_source_terms": [
+        "Sherpa evaluation is running nightly"
+      ],
+      "intake_audiences": [
+        "internal_consulting",
+        "nee-engineering"
+      ],
+      "package_path": "contracts/dual_pipeline/fixtures/valid/copilot-meeting.json",
+      "package_sha256": "7ae98a7d20f2f18b75a5f1c2cbf3fec92fbe1dce2bb2ad655db0d4bc86b66e35",
+      "query_type": "candidate_promotion_review",
+      "question": "Which candidate Sherpa assertion needs review for evaluation cadence?",
+      "tags": [
+        "bridge",
+        "candidate",
+        "offline"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:eval-bridge-suite:1.0.0",
+  "created_at": "2026-08-02T00:00:00Z",
+  "extensions": {},
+  "graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "schema_version": "1.0.0",
+  "suite_id": "ingestion-query-bridge-e2",
+  "thresholds": {
+    "maximum_graph_mutation_count": 10,
+    "maximum_provider_call_count": 0
+  }
+}

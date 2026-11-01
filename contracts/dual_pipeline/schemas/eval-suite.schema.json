@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:eval-suite:1.0.0",
+  "title": "NEE digest-bound dual-pipeline evaluation suite",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "suite_id", "pipeline", "execution_tier", "graph_sha256", "provider_posture", "cases", "thresholds", "created_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:eval-suite:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "pipeline": {"type": "string", "enum": ["query", "ingestion", "dual"]},
+    "execution_tier": {"type": "string", "enum": ["E0", "E1", "E2", "E3", "E4"]},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "provider_posture": {"type": "string", "enum": ["none", "fake", "offline", "live_authorized"]},
+    "cases": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:eval-suite:1.0.0#/$defs/case"}},
+    "thresholds": {"$ref": "urn:nee:dual-pipeline:eval-suite:1.0.0#/$defs/thresholds"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "queryExpected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "x3_outcome", "answer_present", "provider_call_count", "graph_mutation_count", "required_stages", "required_record_ids", "forbidden_record_ids"],
+      "properties": {
+        "status": {"type": "string", "enum": ["COMPLETED", "BLOCKED"]},
+        "x3_outcome": {"type": "string", "minLength": 3, "maxLength": 128},
+        "answer_present": {"type": "boolean"},
+        "provider_call_count": {"type": "integer", "minimum": 0, "maximum": 10},
+        "graph_mutation_count": {"const": 0},
+        "required_stages": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/stage"}},
+        "required_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "required_record_lanes": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "additionalProperties": {"type": "string", "enum": ["approved", "candidate", "external_public"]}
+        },
+        "maximum_fused_rank_by_record": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "additionalProperties": {"type": "integer", "minimum": 1, "maximum": 100}
+        },
+        "forbidden_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "bm25_executed": {"type": "boolean"},
+        "graph_traversal_executed": {"type": "boolean"},
+        "minimum_graph_hops_reached": {"type": "integer", "minimum": 0, "maximum": 3},
+        "minimum_graph_expanded_record_count": {"type": "integer", "minimum": 0, "maximum": 100},
+        "minimum_connected_path_count": {"type": "integer", "minimum": 0, "maximum": 200},
+        "required_path_assertion_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "forbidden_path_relationship_families": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 128}},
+        "minimum_opportunity_context_count": {"type": "integer", "minimum": 0, "maximum": 100},
+        "minimum_candidate_context_count": {"type": "integer", "minimum": 0, "maximum": 100},
+        "minimum_counterevidence_count": {"type": "integer", "minimum": 0, "maximum": 100},
+        "minimum_branch_suppression_count": {"type": "integer", "minimum": 0, "maximum": 1000},
+        "maximum_missing_evidence_count": {"type": "integer", "minimum": 0, "maximum": 100},
+        "challenger_call_count": {"type": "integer", "minimum": 0, "maximum": 1},
+        "judge_call_count": {"type": "integer", "minimum": 0, "maximum": 2},
+        "content_repair_call_count": {"type": "integer", "minimum": 0, "maximum": 1},
+        "judge_release_passed": {"type": "boolean"},
+        "expected_destination": {"type": "string", "enum": ["GRAPH_EVIDENCE_UTILITY", "NEE_DECISION_INTELLIGENCE"]},
+        "expected_assurance_profile": {"type": ["string", "null"], "enum": [null, "standard", "enhanced"]},
+        "expected_delivery_profile": {"type": "string", "enum": ["internal_technical", "internal_executive", "client_technical", "client_executive", "commercial"]},
+        "expected_artifact_type": {"type": "string", "enum": ["answer", "decision_brief", "architecture_deck", "commercial_case", "evidence_export"]},
+        "semantic_retrieval_qualified": {"type": "boolean"},
+        "runtime_judge_receipt_required": {"type": "boolean"},
+        "expected_runtime_quality_mode": {"type": "string", "enum": ["off", "shadow", "enforced"]},
+        "required_lanes": {"type": "array", "uniqueItems": true, "items": {"type": "string", "enum": ["approved", "candidate", "external_public"]}},
+        "required_requirement_assertions": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:eval-suite:1.0.0#/$defs/requirementAssertion"}},
+        "minimum_supported_requirement_count": {"type": "integer", "minimum": 1, "maximum": 100},
+        "minimum_safe_direction_requirement_count": {"type": "integer", "minimum": 1, "maximum": 100}
+      }
+    },
+    "requirementAssertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label_contains", "expected_outcomes", "minimum_record_count"],
+      "properties": {
+        "label_contains": {"type": "string", "minLength": 1, "maxLength": 256},
+        "expected_outcomes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "enum": ["covered", "explicit_gap", "excluded", "unauthorized", "conflict"]}},
+        "minimum_record_count": {"type": "integer", "minimum": 0, "maximum": 100},
+        "required_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "required_support_directions": {"type": "array", "uniqueItems": true, "items": {"type": "string", "enum": ["direct", "forward", "inverse_safe", "not_applicable"]}}
+      }
+    },
+    "ingestionExpected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_status", "directive_status", "mutation_outcome", "provider_call_count", "completion_receipt", "required_stages"],
+      "properties": {
+        "run_status": {"type": "string", "enum": ["COMPLETED", "BLOCKED"]},
+        "directive_status": {"type": "string", "enum": ["COMPLETE", "BLOCKED", "CANCELLED"]},
+        "mutation_outcome": {"type": "string", "enum": ["GRAPH_CHANGED", "IDEMPOTENT_NOOP", "BLOCKED", "CANCELLED"]},
+        "provider_call_count": {"const": 0},
+        "completion_receipt": {"type": "boolean"},
+        "required_stages": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/stage"}}
+      }
+    },
+    "queryCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "pipeline", "tags", "question", "query_type", "classification", "audiences", "provider_posture", "expected"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "pipeline": {"const": "query"},
+        "tags": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 64}},
+        "question": {"type": "string", "minLength": 1, "maxLength": 4000},
+        "query_type": {"type": "string", "enum": ["exact_lookup", "current_state", "current_state_corroboration", "project_status_current", "project_status_history", "relationship_explanation", "cross_workstream_synthesis", "gap_risk_inconsistency", "opportunity_nba", "candidate_promotion_review"]},
+        "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+        "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+        "provider_posture": {"type": "string", "enum": ["none", "fake", "offline"]},
+        "critical": {"type": "boolean"},
+        "evaluation_scope": {"type": "string", "enum": ["graph_retrieval_qualification", "runtime_control_verification"]},
+        "embedding_qualification": {"type": "string", "enum": ["real_bge_m3", "not_qualified"]},
+        "quality_control": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "judge_verdicts"],
+          "properties": {
+            "mode": {"type": "string", "enum": ["shadow", "enforced"]},
+            "judge_verdicts": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 2,
+              "items": {"type": "string", "enum": ["PASS", "REPAIRABLE_FAIL", "ESCALATE_HITL", "ABSTAIN"]}
+            }
+          }
+        },
+        "expected": {"$ref": "urn:nee:dual-pipeline:eval-suite:1.0.0#/$defs/queryExpected"}
+      }
+    },
+    "ingestionCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "pipeline", "tags", "source_kind", "package_path", "package_sha256", "audience", "expected"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "pipeline": {"const": "ingestion"},
+        "tags": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 64}},
+          "source_kind": {"type": "string", "enum": ["copilot", "google_meet_gemini", "architecture", "markdown_source", "docx_source", "html_source", "pdf_source", "a2a_fact_vector_packet"]},
+        "package_path": {"type": "string", "minLength": 1, "maxLength": 512},
+        "package_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "audience": {"type": "string", "minLength": 3, "maxLength": 256},
+        "expected": {"$ref": "urn:nee:dual-pipeline:eval-suite:1.0.0#/$defs/ingestionExpected"}
+      }
+    },
+    "case": {
+      "oneOf": [
+        {"$ref": "urn:nee:dual-pipeline:eval-suite:1.0.0#/$defs/queryCase"},
+        {"$ref": "urn:nee:dual-pipeline:eval-suite:1.0.0#/$defs/ingestionCase"}
+      ]
+    },
+    "thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_case_pass_rate", "maximum_provider_call_count", "maximum_graph_mutation_count"],
+      "properties": {
+        "minimum_case_pass_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "maximum_provider_call_count": {"type": "integer", "minimum": 0, "maximum": 100},
+        "maximum_graph_mutation_count": {"type": "integer", "minimum": 0, "maximum": 1000},
+        "maximum_unqualified_retrieval_case_count": {"type": "integer", "minimum": 0, "maximum": 100}
+      }
+    }
+  }
+}

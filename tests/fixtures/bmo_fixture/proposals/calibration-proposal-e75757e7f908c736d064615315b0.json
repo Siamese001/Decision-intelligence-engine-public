@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-e75757e7f908c736d064615315b0",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "809914a72a826ad481430dba2b8e0e0e7dd9498af02104232947cbaa9e7e758a"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-95d3ba7f116ee12a301fd057"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Atlas Team is an identified org in Document 20260612 Lens Visual Asset Intelligence Sow.",
+      "proposed_value": "Atlas Team is an identified org in 20260915 Lens Catch Up.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-1c2d60d05c9a21f2cdea3137bbc5"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-868a4cc1e0c03c6506ac376fa1ee",
+      "assertion_id_older": "assertion-1c2d60d05c9a21f2cdea3137bbc5",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-7058ef8841242c6c48d58ee510f7",
+      "timestamp_newer": "2026-09-15",
+      "timestamp_older": "2026-06-12"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Atlas Team' (HAS_CLAIM_TEXT). Older claim from 2026-06-12 superseded by newer claim from 2026-09-15.",
+  "proposal_id": "calibration-proposal-e75757e7f908c736d064615315b0",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-1c2d60d05c9a21f2cdea3137bbc5 from Atlas Team is an identified org in Document 20260612 Lens Visual Asset Intelligence Sow. to Atlas Team is an identified org in 20260915 Lens Catch Up.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

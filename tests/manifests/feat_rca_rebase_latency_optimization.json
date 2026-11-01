@@ -1,0 +1,21 @@
+{
+  "name": "feat_rca_rebase_latency_optimization",
+  "description": "Git rebase latency optimization: hook fast-path, engine tuning, decentralized CI manifests",
+  "branch": "feat/rca-rebase-latency-optimization",
+  "deterministic_tests": [
+    "tests.adversarial.test_git_hook_performance_adversarial",
+    "tests.adversarial.test_git_engine_performance_adversarial",
+    "tests.adversarial.test_test_manifest_loader_adversarial",
+    "tests.adversarial.test_readiness_cache_adversarial",
+    "tests.adversarial.test_merge_queue_adversarial"
+  ],
+  "e2e_tests": [
+    "tests.end_to_end.test_git_rebase_hook_performance_e2e",
+    "tests.end_to_end.test_git_engine_tuning_e2e",
+    "tests.end_to_end.test_decentralized_ci_manifest_e2e",
+    "tests.end_to_end.test_readiness_cache_e2e",
+    "tests.end_to_end.test_rebase_orchestrator_e2e"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-09-30T22:30:00Z"
+}

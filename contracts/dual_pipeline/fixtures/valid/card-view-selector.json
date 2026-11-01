@@ -1,0 +1,34 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:card-view-selector:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "selector-nee22-semantic-domain-v1",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "06cc5ec87e93fae7c3a362d5d4f4bf7c1cdd5812bbbbf26efac4bafff2376493"
+  },
+  "selector_id": "selector-nee22-semantic-domain-v1",
+  "selector_version": "1.0.0",
+  "selector": {
+    "kind": "facet_query",
+    "object_types": ["assertion"],
+    "facet_filters": [
+      {
+        "object_type": "assertion",
+        "vocabulary": "semantic_domain",
+        "values": ["architecture_and_capability"],
+        "match": "any"
+      }
+    ],
+    "predicates": ["USES_PATTERN", "DEPENDS_ON"],
+    "explicit_node_ids": ["pattern_agent_to_agent_protocol"],
+    "traversal": {
+      "max_hops": 1,
+      "direction": "both",
+      "predicates": ["USES_PATTERN", "DEPENDS_ON"]
+    }
+  },
+  "bounded": true,
+  "sql_allowed": false,
+  "extensions": {}
+}

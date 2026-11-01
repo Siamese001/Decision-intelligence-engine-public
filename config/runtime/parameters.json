@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-10-17T21:35:00.000000+00:00",
+  "parameters": {
+    "storage": {
+      "sqlite_wal_busy_timeout_ms": 30000,
+      "connection_pool_size": 16,
+      "sqlite_mmap_size_bytes": 1073741824
+    },
+    "timeouts": {
+      "llm_sync_seconds": 60.0,
+      "audio_ingest_seconds": 300.0,
+      "retrieval_steady_state_latency_ms": 7500.0,
+      "database_busy_timeout_seconds": 30.0,
+      "subprocess_seconds": 120.0
+    },
+    "hitl": {
+      "ambiguity_margin_threshold": 0.2,
+      "divergence_margin_threshold": 0.2,
+      "min_autonomous_confidence_floor": 0.65,
+      "entropy_ambiguity_threshold": 0.75,
+      "bayesian_prior_strength": 4.0,
+      "human_feedback_weight": 1.0,
+      "autonomous_feedback_weight": 0.05,
+      "entity_clarification_enabled": true,
+      "unresolved_entity_margin_threshold": 0.15,
+      "metric_discrepancy_threshold": 0.15,
+      "cross_meeting_context_window_days": 7,
+      "cross_meeting_max_context_tokens": 8192,
+      "speaker_disambiguation_escalation_enabled": true,
+      "uncertainty_display": "sparse_only",
+      "autonomous_rollout_mode": "DISABLED",
+      "autonomous_kill_switch": false
+    },
+    "healing": {
+      "max_retries": 3,
+      "max_token_budget": 8192
+    },
+    "release_thresholds": {
+      "output1_production_pass_threshold": 90,
+      "output2_production_pass_threshold": 90,
+      "output3_production_pass_threshold": 90,
+      "advisory_score_floor": 80
+    },
+    "concurrency": {
+      "max_retrieval_workers": 16
+    },
+    "copilot": {
+      "context": {
+        "focus_seconds": 15,
+        "decay_tau_seconds": 300,
+        "salient_entities_top_k": 8,
+        "flow_items_max": 10,
+        "focus_weight": 0.6
+      },
+      "neighborhood_max_hops": 2,
+      "rigor": {
+        "budget_ms": 250.0,
+        "min_provenance_score": 0.15
+      },
+      "rerank": {
+        "lexical": 0.3,
+        "structural": 0.3,
+        "dense": 0.4
+      },
+      "speech": {
+        "cli_default_max_words": 35,
+        "insight_max_words": 40,
+        "cumulative_max_words": 90,
+        "multi_line_cap_words": 85,
+        "speaker_summary_max_words": 130,
+        "supporting_details_max_words": 220,
+        "total_content_max_words": 350,
+        "max_sentence_words": 28
+      }
+    },
+    "judge": {
+      "svp_political_materiality_threshold": 6,
+      "svp_executive_materiality_threshold": 8,
+      "enable_deterministic_prefilter": true,
+      "enable_dynamic_recap_bypass": true,
+      "max_input_tokens": 150000,
+      "max_completion_tokens": 64000,
+      "deadline_seconds": 600.0,
+      "heartbeat_interval_seconds": 15.0,
+      "canonical_mutation_budget": 30
+    },
+    "output1": {
+      "max_tokens": 96000,
+      "min_word_count": 100,
+      "max_word_count": 50000,
+      "generic_speaker_ceiling_percent": 15.0,
+      "single_speaker_collapse_threshold": 0.85,
+      "words_per_minute_floor_multiplier": 10,
+      "min_words_per_turn_bypass": 35
+    },
+    "output2": {
+      "max_tokens": 60000,
+      "min_word_count": 500,
+      "max_word_count": 5000,
+      "density_floor_short": 30,
+      "density_floor_long": 60,
+      "min_themes_per_speaker": 2,
+      "min_words_per_theme": 30,
+      "passive_hedging_threshold": 5,
+      "dag_narrative_min_words": 800,
+      "dag_perspectives_min_words": 600,
+      "diagram_bonus_words": 600,
+      "word_limits": {
+        "standard_words_per_min": 8,
+        "standard_min_floor": 100,
+        "standard_max_floor": 600,
+        "standard_ceiling_words_per_min": 40,
+        "standard_min_ceiling": 1800,
+        "standard_max_ceiling": 5000,
+        "standard_max_exhibit": 600,
+        "standard_max_exhibit_with_diagrams": 1200,
+        "standard_max_total": 8000,
+        "tier3_words_per_min": 4,
+        "tier3_min_floor": 100,
+        "tier3_max_floor": 300,
+        "tier3_ceiling_words_per_min": 30,
+        "tier3_min_ceiling": 1500,
+        "tier3_max_ceiling": 3000,
+        "tier3_max_exhibit": 200,
+        "tier3_max_exhibit_with_diagrams": 400,
+        "tier3_max_total": 4000
+      },
+      "section_density_floors": {
+        "business_meaning_min_words": 40,
+        "immediate_scope_min_words": 40,
+        "recommendations_min_words": 30,
+        "tier3_section_floor": 20,
+        "standard_30m_section_floor": 60
+      },
+      "c21_speaker_tier_floors": {
+        "primary_min_words": 150,
+        "primary_min_themes": 3,
+        "co_lead_min_words": 80,
+        "co_lead_min_themes": 2,
+        "participant_min_words": 40,
+        "participant_min_themes": 2,
+        "contributor_min_words": 15,
+        "contributor_min_themes": 1
+      },
+      "section_weights": {
+        "header_and_overview": 10,
+        "key_updates_technical_substance": 35,
+        "conditional_extensions": 20,
+        "appendix_stakeholder_perspectives": 35
+      },
+      "section_floors": {
+        "header_and_overview": 5.5,
+        "key_updates_technical_substance": 19.0,
+        "conditional_extensions": 11.0,
+        "appendix_stakeholder_perspectives": 19.0
+      }
+    },
+    "output3": {
+      "max_tokens": 80000,
+      "min_word_count": 50,
+      "max_word_count": 20000,
+      "max_mutations_per_batch": 50
+    },
+    "audio_ingestion": {
+      "max_words_per_utterance": 80,
+      "sample_rate_hz": 16000,
+      "ring_buffer_seconds": 60,
+      "diarizer_window_seconds": 5.0,
+      "diarizer_step_seconds": 1.0,
+      "silence_energy_threshold": 0.005,
+      "max_window_sec": 30.0,
+      "min_window_sec": 0.2,
+      "voiceprint_similarity_threshold": 0.82,
+      "starvation_turn_ratio_threshold": 0.05,
+      "asr_decode": {
+        "temperature": 0.0,
+        "no_speech_threshold": 0.6,
+        "compression_ratio_threshold": 2.4,
+        "logprob_threshold": -1.0,
+        "language": "en",
+        "fp16": true
+      }
+    },
+    "pipeline_settings": {
+      "max_payload_retries": 1,
+      "max_judge_retries_default": 1,
+      "max_network_retries": 5,
+      "network_base_delay_seconds": 0.5,
+      "network_max_delay_seconds": 30.0,
+      "enable_attachment_mutation_automation": false
+    },
+    "agent_sdk": {
+      "default_max_model_calls": 50,
+      "default_max_tool_calls": 100,
+      "default_compaction_token_threshold": 80000,
+      "default_max_subagent_depth": 2
+    },
+    "local_mlx_models": {
+      "instruct_8b": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "instruct_14b": "mlx-community/Qwen2.5-14B-Instruct-4bit",
+      "instruct_32b": "mlx-community/Qwen2.5-32B-Instruct-4bit",
+      "reasoning_14b": "mlx-community/DeepSeek-R1-Distill-Qwen-14B-4bit",
+      "vision_7b": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+      "whisper_draft": "mlx-community/whisper-large-v3-mlx"
+    },
+    "grounding": {
+      "delivery_max_words": 500
+    },
+    "graph_consolidation": {
+      "default_node_similarity_threshold": 0.65,
+      "default_literal_similarity_threshold": 0.85,
+      "default_evidence_similarity_threshold": 0.90,
+      "min_confidence_margin": 0.05,
+      "max_confidence_margin": 0.30,
+      "min_modularity": 0.60
+    },
+    "graph_retrieval": {
+      "default_confidence_score": 0.80,
+      "temporal_decay_lambda": 0.34657,
+      "max_temporal_boost": 0.10,
+      "max_confidence_boost": 0.08
+    },
+    "graph_signal": {
+      "penalty_mutex_conflict": 5.0,
+      "penalty_orphan_edge": 50.0,
+      "min_density_rho": 2.0,
+      "min_typedness_tau": 0.5,
+      "min_confidence_mean": 0.7,
+      "min_grounding_depth": 0.98,
+      "min_temporal_freshness": 0.6,
+      "min_approved_lane_purity": 1.0,
+      "max_orphan_ratio": 0.0,
+      "min_composite_score": 80.0
+    },
+    "index_core": {
+      "max_colbert_tokens": 32,
+      "embedding_batch_size": 16,
+      "entity_facet_max_assertions": 6,
+      "entity_facet_max_assertion_text_characters": 220,
+      "entity_facet_max_text_characters": 1600,
+      "max_exact_anchor_injections_per_lane": 8,
+      "max_exact_entity_title_matches_per_lane": 8,
+      "default_colbert_tile_size": 64
+    },
+    "document_security": {
+      "max_xml_depth": 32,
+      "max_xml_elements": 10000,
+      "max_zip_ratio": 20.0,
+      "max_json_depth": 32
+    },
+    "decision_service": {
+      "default_fast_path_ttl_sec": 30.0,
+      "max_context_records": 12,
+      "max_request_bytes": 1048576
+    },
+    "authorization": {
+      "max_token_lifetime_seconds": 3600,
+      "clock_skew_seconds": 60
+    },
+    "agent_architecture": {
+      "max_subagent_context_tokens": 4000
+    },
+    "l0": {
+      "default_assumption_ttl_days": 14,
+      "quarantine_thresholds": {
+        "confidence_min": 0.6,
+        "strategic_value_min": 0.4,
+        "evidence_quality_min": 0.5,
+        "tacticality_max": 0.85
+      }
+    },
+    "engineering_output": {
+      "max_words": 300,
+      "target_words": 120,
+      "target_min_words": 100,
+      "target_max_words": 140,
+      "max_chars": 3500,
+      "progress_max_words": 20,
+      "pr_queue_max_words": 1000,
+      "ssot_pointer_max_words": 40
+    },
+    "planning": {
+      "max_plan_words": 1000,
+      "max_scaled_plan_words": 2500,
+      "base_plan_words": 400,
+      "words_per_wave": 250,
+      "words_per_deliverable": 25
+    }
+  }
+}

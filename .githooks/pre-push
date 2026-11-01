@@ -1,0 +1,35 @@
+#!/bin/sh
+set -eu
+
+SCRIPT_DIR=$(dirname "$0")
+. "$SCRIPT_DIR/_common.sh"
+cd "$ROOT"
+
+# Fast Tier 3 Pre-Push Gatekeeper (<2s)
+# Under the solo-developer backup model, Tier 2 (PR review & merge to local main)
+# has already fully executed the test suites, linters, and evaluation gates.
+# Pre-push verifies that a passing Tier 2 quality receipt exists before backing up to origin.
+if [ "${NEE_FULL_PRE_PUSH_AUDIT:-0}" = "1" ]; then
+  echo "⚠️  WARNING: NEE_FULL_PRE_PUSH_AUDIT=1 is active in your environment!"
+  echo "   Push will run comprehensive 32-gate test suite (~3-5 mins)."
+  echo "   To restore 0.1s fast push, run: unset NEE_FULL_PRE_PUSH_AUDIT"
+  echo "Running opt-in full pre-push audit suite..."
+  run_python -B -m dual_pipeline.runtime_evidence enforce-controls --repository-root "$ROOT"
+  run_python -B tools/validate_no_synthetic_embeddings.py --repository-root "$ROOT"
+  run_python -B tools/run_automatic_evaluation_gates.py --repository-root "$ROOT"
+  run_python -B tools/run_pipeline_assurance_gates.py --repository-root "$ROOT"
+  run_python -B tools/run_tests_with_progress.py \
+    tests.test_runtime_evidence_claims \
+    tests.test_no_synthetic_embedding_ban \
+    tests.test_bge_m3_deprecation_gates \
+    tests.test_retrieval_release_evaluation \
+    tests.test_unified_agent_architecture
+  run_python -B tools/verify_main_readiness.py
+else
+  # Instant Tier 3: Verify that HEAD or recent commit has passed Tier 2 quality gates
+  run_python -B tools/verify_push_receipt.py --root "$ROOT"
+fi
+
+if command -v git-lfs >/dev/null 2>&1; then
+  git lfs pre-push "$@"
+fi

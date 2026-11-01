@@ -1,0 +1,21 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:route-decision:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-bad-digest",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "0000000000000000000000000000000000000000000000000000000000000000"},
+  "decision_id": "decision-invalid-bad-digest",
+  "run_id": "run-invalid-bad-digest",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "use_case": "query",
+  "subject_id": "request-invalid-bad-digest",
+  "intake_route": null,
+  "query_route": "EXACT_LOOKUP",
+  "allowed_lanes": ["approved"],
+  "materiality": "low",
+  "rule_id": "exact-lookup",
+  "rule_version": "1.0.0",
+  "reason_codes": ["exact-entity-request"],
+  "model_recommendation": null,
+  "decided_at": "2026-07-21T15:00:00Z",
+  "extensions": {}
+}

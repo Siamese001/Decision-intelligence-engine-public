@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-0ed1fd299ec33992a85ce95209db",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "b07f3277f5f15bd83357888bc1ba264804875c8ae7282c3280992bf2a48342ec"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-251afcd30ef3c814100c0eb7"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "AWS S3 is an identified technical_anchor in Document 20260612 Lens Visual Asset Intelligence Sow.",
+      "proposed_value": "AWS S3 is an identified technical_anchor in Document 20261002 Project Lens Scope Closeout.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-e8aa6083779f8d49cdcef05074b1"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-fc11a20197a85cf1d49998198cba",
+      "assertion_id_older": "assertion-e8aa6083779f8d49cdcef05074b1",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-7b36afd76eef827dd9d685893bb1",
+      "timestamp_newer": "2026-10-02",
+      "timestamp_older": "2026-06-12"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'AWS S3' (HAS_CLAIM_TEXT). Older claim from 2026-06-12 superseded by newer claim from 2026-10-02.",
+  "proposal_id": "calibration-proposal-0ed1fd299ec33992a85ce95209db",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-e8aa6083779f8d49cdcef05074b1 from AWS S3 is an identified technical_anchor in Document 20260612 Lens Visual Asset Intelligence Sow. to AWS S3 is an identified technical_anchor in Document 20261002 Project Lens Scope Closeout.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

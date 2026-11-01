@@ -1,0 +1,13 @@
+{
+  "wave": "Wave 3C",
+  "status": "COMPLETE",
+  "total_queries": 7,
+  "total_candidates_evaluated": 167,
+  "autonomous_resolved": 154,
+  "hitl_cases": 13,
+  "mean_canonical_ndcg_10": 0.1181,
+  "mean_canonical_mrr_10": 0.1429,
+  "output_file": "evals/qrels_cross_engagement_judgments.json",
+  "timestamp": "2026-10-10T01:10:59Z",
+  "elapsed_seconds": 0.64
+}

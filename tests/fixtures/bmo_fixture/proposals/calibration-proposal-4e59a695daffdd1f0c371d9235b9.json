@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-4e59a695daffdd1f0c371d9235b9",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "ea5ed175c7befbd477fff489bbed16fca0c137193b818dacd6b3cf81f02b6fa3"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-acd96388d79211efb0d4d162"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "has to be human in the loop. Someone has to approve the work order.",
+      "proposed_value": "I have no idea what that would entail, but we have set up a connection to retrieve data.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-beffb3318acd9f5472bfe785ec5d"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-074d317196ee3f002f714ad78726",
+      "assertion_id_older": "assertion-beffb3318acd9f5472bfe785ec5d",
+      "confidence_coexist": 0.45,
+      "confidence_supersede": 0.55,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": true,
+      "margin_delta": 0.1,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-10-05",
+      "timestamp_older": "2026-10-05"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-10-05 superseded by newer claim from 2026-10-05.",
+  "proposal_id": "calibration-proposal-4e59a695daffdd1f0c371d9235b9",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-beffb3318acd9f5472bfe785ec5d from has to be human in the loop. Someone has to approve the work order. to I have no idea what that would entail, but we have set up a connection to retrieve data.. Requires governed approval before release.",
+  "risk": "medium",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

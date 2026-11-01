@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:graph-label-deterministic-candidate-plan:1.0.0",
+  "title": "NEE graph-label deterministic candidate plan",
+  "allOf": [
+    {"$ref": "urn:nee:dual-pipeline:common:1.0.0"}
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "plan_type",
+    "policy",
+    "schema_migration",
+    "base_graph_sha256",
+    "source_review_plan_digest",
+    "quality_report_digest",
+    "status",
+    "candidate_only",
+    "mutation_authorized",
+    "provider_call_count",
+    "graph_mutation_count",
+    "operations",
+    "summary",
+    "extensions"
+  ],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:graph-label-deterministic-candidate-plan:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "plan_type": {"const": "graph_label_deterministic_candidate"},
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy_id", "policy_version", "enforcement_state"],
+      "properties": {
+        "policy_id": {"const": "nee-graph-labeling"},
+        "policy_version": {"const": "1.0.0"},
+        "enforcement_state": {"const": "shadow"}
+      }
+    },
+    "schema_migration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["migration_id", "state"],
+      "properties": {
+        "migration_id": {"const": "0010_graph_labeling_hardening"},
+        "state": {"enum": ["APPLY_TO_CANDIDATE", "ALREADY_INSTALLED"]}
+      }
+    },
+    "base_graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "source_review_plan_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "quality_report_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "status": {"const": "CANDIDATE_ONLY_NOT_AUTHORIZED"},
+    "candidate_only": {"const": true},
+    "mutation_authorized": {"const": false},
+    "provider_call_count": {"const": 0},
+    "graph_mutation_count": {"const": 0},
+    "operations": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "operation_id",
+          "operation",
+          "record_type",
+          "record_id",
+          "source_id",
+          "field",
+          "legacy_value",
+          "normalized_label",
+          "mapping_rule_id",
+          "expected_legacy_state_sha256",
+          "expected_normalized_state_sha256",
+          "reason"
+        ],
+        "properties": {
+          "operation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "operation": {
+            "enum": [
+              "insert_source_label_state",
+              "insert_evidence_label_state",
+              "insert_assertion_label_state"
+            ]
+          },
+          "record_type": {"enum": ["source", "evidence", "assertion"]},
+          "record_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "source_id": {
+            "type": ["string", "null"],
+            "minLength": 3,
+            "maxLength": 128
+          },
+          "field": {"enum": ["source_posture", "evidence_directness", "confidence"]},
+          "legacy_value": {"type": "string", "minLength": 1, "maxLength": 4096},
+          "normalized_label": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "source_kind",
+                  "source_format",
+                  "source_origin",
+                  "source_posture_code",
+                  "source_posture_note",
+                  "mapping_state"
+                ],
+                "properties": {
+                  "source_kind": {"const": "legacy_source"},
+                  "source_format": {"const": "legacy_unknown"},
+                  "source_origin": {"const": "legacy_unknown"},
+                  "source_posture_code": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourcePosture"},
+                  "source_posture_note": {"type": "string", "minLength": 1, "maxLength": 4096},
+                  "mapping_state": {"const": "deterministic_mapped"}
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["directness_code", "basis_note", "mapping_state"],
+                "properties": {
+                  "directness_code": {"enum": ["direct", "derivative", "contextual"]},
+                  "basis_note": {"type": "string", "minLength": 1, "maxLength": 4096},
+                  "mapping_state": {"const": "deterministic_mapped"}
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "extraction_confidence",
+                  "assertion_confidence_label",
+                  "assertion_confidence_score",
+                  "validation_state",
+                  "lifecycle_state",
+                  "mapping_state"
+                ],
+                "properties": {
+                  "extraction_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+                  "assertion_confidence_label": {"type": "null"},
+                  "assertion_confidence_score": {"type": "null"},
+                  "validation_state": {"const": "accepted_legacy"},
+                  "lifecycle_state": {"const": "unknown"},
+                  "mapping_state": {"const": "deterministic_mapped"}
+                }
+              }
+            ]
+          },
+          "mapping_rule_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "expected_legacy_state_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+          "expected_normalized_state_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+          "reason": {"type": "string", "minLength": 1, "maxLength": 4096}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deterministic_operation_count",
+        "source_label_state_insert_count",
+        "evidence_label_state_insert_count",
+        "assertion_label_state_insert_count",
+        "excluded_hitl_required_count"
+      ],
+      "properties": {
+        "deterministic_operation_count": {"type": "integer", "minimum": 0},
+        "source_label_state_insert_count": {"type": "integer", "minimum": 0},
+        "evidence_label_state_insert_count": {"type": "integer", "minimum": 0},
+        "assertion_label_state_insert_count": {"type": "integer", "minimum": 0},
+        "excluded_hitl_required_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

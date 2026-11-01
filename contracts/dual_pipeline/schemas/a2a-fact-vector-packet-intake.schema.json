@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:a2a-fact-vector-packet-intake:1.0.0",
+  "title": "NEE source-bound OpenAI and Anthropic A2A fact-vector packet intake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "packet", "source", "evidence", "candidates", "adapter", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:a2a-fact-vector-packet-intake:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "packet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["packet_id", "source_zip_sha256", "packet_manifest_sha256", "signature_status", "trust_scope"],
+      "properties": {
+        "packet_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "source_zip_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "packet_manifest_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "signature_status": {"const": "verified_integrity_only"},
+        "trust_scope": {"const": "packet_integrity_only; organizational identity trust must be added by UWG"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "source_version_id", "title", "source_location", "source_date", "classification", "audiences", "source_posture", "authority_rank", "vendor", "url", "first_party"],
+      "properties": {
+        "source_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "source_version_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "title": {"type": "string", "minLength": 1, "maxLength": 256},
+        "source_location": {"type": "string", "minLength": 1, "maxLength": 1024},
+        "source_date": {"type": "string", "format": "date"},
+        "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+        "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+        "source_posture": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourcePosture"},
+        "authority_rank": {"type": "integer", "minimum": 1, "maximum": 9},
+        "vendor": {"type": "string", "minLength": 1, "maxLength": 128},
+        "url": {"type": "string", "minLength": 1, "maxLength": 2048},
+        "first_party": {"type": "boolean"}
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "source_id", "source_version_id", "locator", "relationship", "directness", "authority_rank", "content_digest", "verification_state"],
+        "properties": {
+          "evidence_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "source_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "source_version_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "locator": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourceLocator"},
+          "relationship": {"const": "supports"},
+          "directness": {"type": "string", "enum": ["direct", "contextual", "derivative"]},
+          "authority_rank": {"type": "integer", "minimum": 1, "maximum": 9},
+          "content_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+          "verification_state": {"type": "string", "enum": ["captured_excerpt_present_refetch_required", "locator_only_refetch_required", "fresh_capture_verified", "fresh_capture_preview_mismatch", "fresh_capture_locator_pending", "fresh_capture_selected_span", "derived_packet_content"]}
+        }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "source_item_id", "candidate_type", "assertion_type", "normalized_text", "materiality", "entity_mentions", "evidence_ids", "source_locator", "classification", "audiences", "extraction_confidence", "retrieval_kind", "answer_use", "review_question", "promotion_status"],
+        "properties": {
+          "candidate_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "source_item_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "candidate_type": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/candidateType"},
+          "assertion_type": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/assertionType"},
+          "normalized_text": {"type": "string", "minLength": 1, "maxLength": 4000},
+          "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+          "entity_mentions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["mention_id", "reported_text", "stable_identifier", "context"],
+              "properties": {
+                "mention_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+                "reported_text": {"type": "string", "minLength": 1},
+                "stable_identifier": {"type": ["string", "null"]},
+                "context": {"type": "string", "minLength": 1}
+              }
+            }
+          },
+          "evidence_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+          "source_locator": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourceLocator"},
+          "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+          "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+          "extraction_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "retrieval_kind": {"type": "string", "enum": ["assertion", "guidance", "evidence_span"]},
+          "answer_use": {"type": "string", "enum": ["candidate_hypothesis", "guidance", "citation_only"]},
+          "review_question": {"type": "string", "minLength": 1, "maxLength": 2000},
+          "promotion_status": {"type": "string", "enum": ["candidate_evidence_bound_refetch_required", "candidate_evidence_bound_hitl_required", "candidate_evidence_preview_mismatch_requires_hitl", "candidate_evidence_locator_pending", "candidate_evidence_selected_span_hitl_required", "recommendation_only", "citation_only"]}
+        }
+      }
+    },
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"const": "nee-a2a-fact-vector-packet"},
+        "version": {"const": "1.0.0"}
+      }
+    },
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

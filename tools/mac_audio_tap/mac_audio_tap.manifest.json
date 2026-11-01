@@ -1,0 +1,19 @@
+{
+  "$schema": "urn:nee:mac-audio-tap:manifest:1.0.0",
+  "version": "1.2.0",
+  "source_file": "tools/mac_audio_tap/mac_audio_tap.swift",
+  "source_sha256": "fded14f2b9d4c7e95e7ef694d57df8fc6dc78a8ffef86b6e9ede3e5e7dde85f1",
+  "metadata_file": "tools/mac_audio_tap/build_metadata.swift",
+  "binary_file": "tools/mac_audio_tap/bin/mac_audio_tap",
+  "binary_sha256": "3912e015d4f61241b99dbd1d99e6df0fe9dc90e770f836612e5d2074366408cf",
+  "target_triple": "arm64-apple-macos13.0",
+  "compiler_flags": [
+    "-O"
+  ],
+  "cli_flags": [
+    "--probe",
+    "--source-hash",
+    "--version"
+  ],
+  "sealed_at": "2026-10-14T19:37:20.402248+00:00"
+}

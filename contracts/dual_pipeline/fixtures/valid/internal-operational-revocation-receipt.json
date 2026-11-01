@@ -1,0 +1,31 @@
+{
+  "artifact_id": "internal-operational-revocation-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "88db10f6fa9c56ec04d63872c94027663652a14dcde5232f266cb7b6dc043e4d"
+  },
+  "contract_id": "urn:nee:dual-pipeline:internal-operational-revocation-receipt:1.0.0",
+  "extensions": {},
+  "pair": {
+    "assurance_tier": "internal_operational",
+    "embedding_backend": "flagembedding-bge-m3-internal",
+    "generation_id": "generation-internal-fixture",
+    "graph_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "graph_snapshot": "graph-snapshot-internal-fixture",
+    "internal_operational_policy_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+    "model_id": "BAAI/bge-m3",
+    "model_manifest_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+    "model_revision": "0123456789012345678901234567890123456789",
+    "production_qualified": false,
+    "sidecar_sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+  },
+  "qualification_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "qualification_id": "internal-operational-qualification-fixture",
+  "reason": "Fixture revocation",
+  "reviewer": "internal-reviewer",
+  "revocation_id": "internal-operational-revocation-fixture",
+  "revoked_at": "2026-07-29T01:00:00Z",
+  "schema_version": "1.0.0",
+  "status": "REVOKED"
+}

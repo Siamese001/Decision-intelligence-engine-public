@@ -1,0 +1,51 @@
+{
+  "allowed_audiences": [
+    "internal_consulting",
+    "nee-engineering"
+  ],
+  "allowed_backends": [
+    "flagembedding-bge-m3-internal"
+  ],
+  "allowed_classifications": [
+    "public",
+    "internal",
+    "confidential"
+  ],
+  "artifact_id": "internal-operational-policy-fixture",
+  "assurance_tier": "internal_operational",
+  "authorization_mode": "internal_operator_policy",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "bee7bf2ea00a496cfcb1a960cb4fe47ebc50d0004fcf45cca15fd9ea185b8fc9"
+  },
+  "contract_id": "urn:nee:dual-pipeline:internal-operational-policy:1.0.0",
+  "controls": {
+    "autonomous_graph_writes_allowed": false,
+    "backup_restore_required": true,
+    "ingestion_provider_call_limit": 0,
+    "legacy_debt_policy": "no_regression",
+    "manual_hitl_required": true,
+    "query_provider_egress_default": false,
+    "sealed_e3_evaluation_required": true,
+    "terminal_directive_required": true
+  },
+  "deployment_scope": "local_team",
+  "extensions": {},
+  "model_binding": {
+    "model_id": "BAAI/bge-m3",
+    "model_manifest_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "model_revision": "0123456789012345678901234567890123456789"
+  },
+  "owner": "NEE Knowledge Governance",
+  "policy_id": "internal-operational-policy-fixture",
+  "policy_version": "1.0.0",
+  "qualification_thresholds": {
+    "max_case_latency_ms": 5000,
+    "max_forbidden_leakage_count": 0,
+    "require_all_hybrid_components": true,
+    "require_all_suite_cases": true
+  },
+  "schema_version": "1.0.0",
+  "status": "CONFIGURED"
+}

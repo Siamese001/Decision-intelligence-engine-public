@@ -1,0 +1,90 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:a2a-fact-vector-packet-intake:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "a2a-packet-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "6ba71793f6257e9abee72b7fc6db47f042cb253dc29888694c8f36ccc28c7c5b"
+  },
+  "packet": {
+    "packet_id": "nee-a2a-packet-fixture",
+    "source_zip_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "packet_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "signature_status": "verified_integrity_only",
+    "trust_scope": "packet_integrity_only; organizational identity trust must be added by UWG"
+  },
+  "source": {
+    "source_id": "source-oai-fixture",
+    "source_version_id": "source-version-oai-fixture-v1",
+    "title": "OpenAI fixture source",
+    "source_location": "https://openai.com/fixture",
+    "source_date": "2026-07-25",
+    "classification": "public",
+    "audiences": [
+      "internal_consulting"
+    ],
+    "source_posture": "external_first_party",
+    "authority_rank": 8,
+    "vendor": "OpenAI",
+    "url": "https://openai.com/fixture",
+    "first_party": true
+  },
+  "evidence": [
+    {
+      "evidence_id": "evidence-oai-fixture",
+      "source_id": "source-oai-fixture",
+      "source_version_id": "source-version-oai-fixture-v1",
+      "locator": {
+        "kind": "uri_fragment",
+        "value": "https://openai.com/fixture#section",
+        "quote_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "relationship": "supports",
+      "directness": "direct",
+      "authority_rank": 8,
+      "content_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "verification_state": "captured_excerpt_present_refetch_required"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "candidate-oai-fixture",
+      "source_item_id": "FACT-FIXTURE-001",
+      "candidate_type": "assertion",
+      "assertion_type": "candidate_assertion",
+      "normalized_text": "OpenAI fixture documentation describes an atomic candidate assertion.",
+      "materiality": "high",
+      "entity_mentions": [
+        {
+          "mention_id": "mention-oai-fixture",
+          "reported_text": "OpenAI fixture documentation",
+          "stable_identifier": null,
+          "context": "Source-bound factual candidate subject awaiting individual review."
+        }
+      ],
+      "evidence_ids": [
+        "evidence-oai-fixture"
+      ],
+      "source_locator": {
+        "kind": "uri_fragment",
+        "value": "https://openai.com/fixture#section",
+        "quote_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "classification": "public",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "extraction_confidence": 0.7,
+      "retrieval_kind": "assertion",
+      "answer_use": "candidate_hypothesis",
+      "review_question": "Does a fresh first-party capture directly entail this candidate assertion?",
+      "promotion_status": "candidate_evidence_bound_refetch_required"
+    }
+  ],
+  "adapter": {
+    "name": "nee-a2a-fact-vector-packet",
+    "version": "1.0.0"
+  },
+  "extensions": {}
+}

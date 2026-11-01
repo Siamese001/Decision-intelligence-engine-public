@@ -1,0 +1,63 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:transcript-envelope:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "transcript-envelope-fixture",
+  "meeting_id": "weekly-sync-2026-09-10",
+  "meeting_name": "Weekly Engineering Sync",
+  "meeting_date": "2026-09-10",
+  "meeting_time": "10:00 ET",
+  "source_type": "audio_transcribed",
+  "audio_reference": {
+    "filename": "weekly-sync-2026-09-10.m4a",
+    "file_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "duration_seconds": 3600,
+    "format": "m4a"
+  },
+  "participants": [
+    {
+      "name": "Alice Smith",
+      "organization": "engineering",
+      "role": "lead",
+      "speaker_label": "Speaker 1"
+    },
+    {
+      "name": "Bob Jones",
+      "organization": "engineering",
+      "role": "engineer",
+      "speaker_label": "Speaker 2"
+    }
+  ],
+  "speaker_segments": [
+    {
+      "speaker": "Alice Smith",
+      "text": "Let's review the status.",
+      "start_time": "00:00:05",
+      "end_time": "00:00:08",
+      "confidence": 0.95
+    },
+    {
+      "speaker": "Bob Jones",
+      "text": "The migration is on track.",
+      "start_time": "00:00:09",
+      "end_time": "00:00:12",
+      "confidence": 0.92
+    }
+  ],
+  "transcript_text": "Alice Smith: Let's review the status.\nBob Jones: The migration is on track.",
+  "transcript_text_hash": "699ada62a5d3d8d44cf2977c56964c729a0c4e7b6695348634395af30d938b38",
+  "asr_model": "gpt-4o-transcribe-diarize",
+  "asr_confidence": 0.93,
+  "diarization_status": "native",
+  "classification": "internal",
+  "audiences": [
+    "nee-engineering"
+  ],
+  "processing_version": "1.0.0",
+  "created_at": "2026-09-10T14:00:00Z",
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "343cc0c50b3bc9d32b898b29c98e70f32b1e33624a90a54ad8401f134a78b9f0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:uwg-runtime-evaluation:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "uwg-evaluation-fixture",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "b7c02341c092c3a9552ead39428b6364f2a016cf67effa549e84a5d11b8fda6a"},
+  "evaluation_id": "uwg-evaluation-fixture",
+  "benchmark_id": "uwg-benchmark-fixture",
+  "benchmark_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "benchmark_file_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "origin_run_id": "run-uwg-fixture",
+  "candidate_pair": {"generation_id": "generation-uwg-fixture", "graph_snapshot": "snapshot-uwg-fixture", "graph_sha256": "3333333333333333333333333333333333333333333333333333333333333333", "sidecar_sha256": "4444444444444444444444444444444444444444444444444444444444444444", "embedding_backend": "flagembedding-bge-m3-dev", "model_id": "BAAI/bge-m3", "model_revision": "5617a9f61b028005a4858fdac845db406aefb181", "model_manifest_digest": "a598d96187ae03e498914543ca2637b95ef61c496faf4d5d9e471764f893905e", "production_qualified": false},
+  "candidate_assertion_ids": ["assertion-uwg-fixture"],
+  "case_results": [{"case_id": "case-uwg-fixture", "expected_assertion_ids": ["assertion-uwg-fixture"], "retrieved_assertion_ids": ["assertion-uwg-fixture"], "first_relevant_rank": 1, "recall_at_k": 1, "reciprocal_rank": 1, "latency_ms": 4.5}],
+  "negative_results": [{"case_id": "negative-uwg-fixture", "lane": "candidate", "forbidden_assertion_ids": ["assertion-uwg-fixture"], "retrieved_assertion_ids": [], "violating_assertion_ids": [], "pass": true, "latency_ms": 4.0}],
+  "lane_isolation_results": [{"case_id": "lane-uwg-fixture", "lane": "approved", "forbidden_assertion_ids": ["assertion-uwg-fixture"], "retrieved_assertion_ids": [], "violating_assertion_ids": [], "pass": true, "latency_ms": 4.0}],
+  "acl_results": [{"case_id": "acl-uwg-fixture", "lane": "candidate", "forbidden_assertion_ids": ["assertion-uwg-fixture"], "retrieved_assertion_ids": [], "violating_assertion_ids": [], "pass": true, "latency_ms": 4.0}],
+  "aggregate": {"recall_at_k": 1, "mrr": 1, "max_latency_ms": 4.5, "negative_leakage_rate": 0, "lane_leakage_rate": 0, "acl_leakage_rate": 0},
+  "thresholds": {"top_k": 1, "min_recall_at_k": 1, "min_mrr": 1, "max_latency_ms": 5000, "max_negative_leakage_rate": 0, "max_lane_leakage_rate": 0, "max_acl_leakage_rate": 0},
+  "acceptance_policy": {"policy_id": "uwg-promotion-qualification-policy", "policy_version": "1.0.0", "policy_digest": "c0674c26601a809b2308215c2a905dd17e6fdeb9de59906e117e81c31a4a756b", "owner": "NEE Knowledge Governance"},
+  "status": "PASS",
+  "evaluated_at": "2026-07-25T00:01:00Z",
+  "extensions": {}
+}

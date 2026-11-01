@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:normalized-candidate-bundle:1.0.0",
+  "title": "NEE normalized candidate bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "intake_id", "run_id", "trace_id", "source_id", "source_version_id", "evidence", "candidates", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:normalized-candidate-bundle:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "intake_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "source_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "source_version_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/evidenceReference"}
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "candidate_type", "assertion_type", "normalized_text", "materiality", "entity_mentions", "evidence_ids", "source_locator", "classification", "audiences", "extraction_confidence"],
+        "properties": {
+          "candidate_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "candidate_type": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/candidateType"},
+          "assertion_type": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/assertionType"},
+          "normalized_text": {"type": "string", "minLength": 1, "maxLength": 4000},
+          "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+          "entity_mentions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["mention_id", "reported_text", "stable_identifier", "context"],
+              "properties": {
+                "mention_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+                "reported_text": {"type": "string", "minLength": 1},
+                "stable_identifier": {"type": ["string", "null"]},
+                "context": {"type": "string", "minLength": 1}
+              }
+            }
+          },
+          "evidence_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+          "source_locator": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourceLocator"},
+          "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+          "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+          "extraction_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "has_role_change": {"type": "boolean"},
+          "has_role_resolution": {"type": "boolean"},
+          "is_human_confirmed": {"type": "boolean"},
+          "provenance": {"type": "string"},
+          "role": {"type": "string"},
+          "resolution_id": {"type": "string"},
+          "description": {"type": "string"},
+          "attributes": {"type": "object"}
+        }
+      }
+    },
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

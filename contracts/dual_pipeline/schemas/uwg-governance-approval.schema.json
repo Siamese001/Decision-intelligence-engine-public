@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:uwg-governance-approval:1.0.0",
+  "title": "NEE Universal Write Gateway signed exact-scope governance approval registration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "approval_id", "approval_reference", "approval_type", "promotion_id", "candidate_pair", "candidate_assertion_ids", "source_snapshot_bindings", "approved_by", "approved_at", "expires_at", "release_version", "scope_confirmation", "rationale", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:uwg-governance-approval:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "approval_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "approval_reference": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "approval_type": {"const": "ingestion_promotion"},
+    "promotion_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "candidate_pair": {"$ref": "urn:nee:dual-pipeline:uwg-runtime-evaluation:1.0.0#/$defs/pairBinding"},
+    "candidate_assertion_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+    },
+    "source_snapshot_bindings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"$ref": "urn:nee:dual-pipeline:uwg-governance-approval:1.0.0#/$defs/sourceSnapshotBinding"}
+    },
+    "approved_by": {"type": "string", "minLength": 1, "maxLength": 256},
+    "approved_at": {"type": "string", "format": "date-time"},
+    "expires_at": {"type": "string", "format": "date-time"},
+    "release_version": {"type": "string", "minLength": 1, "maxLength": 128},
+    "scope_confirmation": {"const": "REGISTER_EXACT_UWG_PROMOTION_SCOPE"},
+    "rationale": {"type": "string", "minLength": 1, "maxLength": 4000},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "sourceSnapshotBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assertion_id", "evidence_id", "source_id", "source_version_id", "source_content_hash"],
+      "properties": {
+        "assertion_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "evidence_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "source_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "source_version_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "source_content_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    }
+  }
+}

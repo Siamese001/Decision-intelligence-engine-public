@@ -1,0 +1,12 @@
+{
+  "known_projects": [
+    "bmo"
+  ],
+  "project_aliases": {
+    "bmo": "bmo",
+    "business management office": "bmo",
+    "business management office (bmo)": "bmo",
+    "business mgmt": "bmo",
+    "business management": "bmo"
+  }
+}

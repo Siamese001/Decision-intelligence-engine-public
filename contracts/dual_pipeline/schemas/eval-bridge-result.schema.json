@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:eval-bridge-result:1.0.0",
+  "title": "NEE sealed ingestion-to-query bridge evaluation result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "evaluation_id", "suite_id", "suite_digest", "suite_file_sha256", "graph_sha256", "embedding_backend", "case_results", "aggregate", "status", "evaluated_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:eval-bridge-result:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "evaluation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "suite_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "suite_file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "embedding_backend": {"$ref": "urn:nee:dual-pipeline:eval-bridge-result:1.0.0#/$defs/embeddingBackend"},
+    "case_results": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:eval-bridge-result:1.0.0#/$defs/caseResult"}},
+    "aggregate": {"$ref": "urn:nee:dual-pipeline:eval-bridge-result:1.0.0#/$defs/aggregate"},
+    "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "embeddingBackend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["backend_id", "model_id", "model_revision", "model_manifest_digest", "assurance_tier", "production_qualified"],
+      "properties": {
+        "backend_id": {"type": "string", "minLength": 1, "maxLength": 128},
+        "model_id": {"type": "string", "minLength": 1, "maxLength": 256},
+        "model_revision": {"type": "string", "minLength": 1, "maxLength": 256},
+        "model_manifest_digest": {"type": ["string", "null"], "maxLength": 128},
+        "assurance_tier": {"type": "string", "minLength": 1, "maxLength": 64},
+        "production_qualified": {"type": "boolean"}
+      }
+    },
+    "caseResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "status", "cause_code", "pre_query_run_id", "ingestion_run_id", "post_query_run_id", "provider_call_count", "graph_mutation_count", "hard_gates", "artifact_path"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+        "cause_code": {"type": ["string", "null"], "maxLength": 256},
+        "pre_query_run_id": {"type": ["string", "null"], "maxLength": 128},
+        "ingestion_run_id": {"type": ["string", "null"], "maxLength": 128},
+        "post_query_run_id": {"type": ["string", "null"], "maxLength": 128},
+        "provider_call_count": {"type": "integer", "minimum": 0},
+        "graph_mutation_count": {"type": "integer", "minimum": 0},
+        "hard_gates": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "boolean"}},
+        "artifact_path": {"type": "string", "minLength": 1, "maxLength": 2048}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_count", "passed_case_count", "failed_case_count", "provider_call_count", "graph_mutation_count", "hard_gate_failure_count"],
+      "properties": {
+        "case_count": {"type": "integer", "minimum": 1},
+        "passed_case_count": {"type": "integer", "minimum": 0},
+        "failed_case_count": {"type": "integer", "minimum": 0},
+        "provider_call_count": {"type": "integer", "minimum": 0},
+        "graph_mutation_count": {"type": "integer", "minimum": 0},
+        "hard_gate_failure_count": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+wave_id: "Wave 2: Inter-Pipeline Handoff & In-Memory Bridge Streamlining"
+wave_number: 2
+governance: "NEE-KG-DUAL-PIPELINE-01"
+required_prior_lock: "locks/wave_1.lock"
+
+acceptance_criteria:
+  - "Zero-copy immutable ring buffer verifies digests and backpressure"
+  - "Direct programmatic UWG gateway eliminates CLI subprocesses"
+  - "Fast Path context is strictly read-only and carries untrusted badge"
+  - "Single-trip evidence pack assembles facts without per-citation loops"
+  - "Physical compute fork is enforced before extraction"
+  - "All newly created modules satisfy the module size and complexity budget"
+
+test_suites:
+  - "tests/handoffs/test_zero_copy_bridge.py"
+  - "tests/handoffs/test_direct_uwg_gateway.py"
+  - "tests/handoffs/test_fast_path_read_only.py"
+  - "tests/handoffs/test_single_trip_evidence_pack.py"
+  - "tests/handoffs/test_compute_fork_before_extraction.py"

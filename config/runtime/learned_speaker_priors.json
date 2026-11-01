@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-10-22T00:00:00Z",
+  "description": "Governed runtime parameter store for multi-confirmed acoustic SNR thresholds, speaker alias priors, and extractor routing weights.",
+  "speaker_aliases": {
+    "Speaker 1": "Alex Sanchez",
+    "Speaker 2": "harper Hoffman"
+  },
+  "acoustic_priors": {
+    "min_snr_db": 12.0,
+    "max_speech_rate_wpm": 220,
+    "clipping_threshold_db": -0.5
+  },
+  "extractor_routing_weights": {
+    "TECH_ARCH": 1.0,
+    "STRATEGIC_COMMITMENTS": 1.0,
+    "STAKEHOLDER_DYNAMICS": 1.0,
+    "FRICTION_BLOCKER": 1.0
+  }
+}

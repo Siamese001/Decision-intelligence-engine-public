@@ -1,0 +1,54 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:card-materialization-receipt:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "card-materialization-receipt-example",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "5527822a1540ee935b550efae96284bb073bbb779d0b3d44edd9fceb8e607717"
+  },
+  "receipt_id": "card-materialization-receipt-example",
+  "status": "MATERIALIZED",
+  "card_id": "NEE_10",
+  "card_view_id": "card-view-nee-10-v1",
+  "view_version": 1,
+  "selector_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "generation_id": "generation-cards-refactor-example",
+  "graph_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "authorization_context_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+  "authority_mode": "approved_only",
+  "lane_manifests": {
+    "approved": [
+      {
+        "object_type": "assertion",
+        "object_id": "assertion-example",
+        "evidence_ids": [
+          "evidence-example"
+        ],
+        "facets": {
+          "semantic_domain": [
+            "architecture_and_capability"
+          ],
+          "topic": [
+            "architecture"
+          ]
+        }
+      }
+    ],
+    "candidate_review": []
+  },
+  "object_manifest_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+  "lane_counts": {
+    "approved": 1,
+    "candidate_review": 0
+  },
+  "assertion_count": 1,
+  "evidence_count": 1,
+  "renderer_version": "nee-card-view-renderer-1.0.0",
+  "materialized_at": "2026-07-27T12:00:00Z",
+  "card_content_used_as_evidence": false,
+  "provider_call_count": 0,
+  "extensions": {
+    "com.partner_advisory.nee.policy-version": "2026-07-27.1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Amy": {
+    "canonical_name": "Amy Moore",
+    "org": "PartnerAdvisory",
+    "role": "Client Partner"
+  },
+  "Jennifer": {
+    "canonical_name": "Jennifer Pan",
+    "org": "PartnerAdvisory",
+    "role": "Solution Owner"
+  },
+  "Dan": {
+    "canonical_name": "Drew Oakley",
+    "org": "PartnerAdvisory",
+    "role": "Delivery Solution Lead"
+  }
+}

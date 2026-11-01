@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:claim-manifest:1.0.0",
+  "title": "NEE grounded claim manifest",
+  "description": "Binds structured subject/predicate/object claims to graph assertion IDs, epistemic status, evidence lanes, and typed source locators.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "manifest_id",
+    "payload_digest",
+    "runtime_root",
+    "graph_generation_id",
+    "graph_sha256",
+    "claims",
+    "created_at",
+    "canonical_digest",
+    "extensions"
+  ],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:claim-manifest:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "manifest_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "payload_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "runtime_root": {"type": "string"},
+    "graph_generation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "claims": {
+      "type": "array",
+      "items": {"$ref": "urn:nee:dual-pipeline:claim-manifest:1.0.0#/$defs/claimRecord"}
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "claimRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "subject",
+        "predicate",
+        "object",
+        "scope",
+        "negation",
+        "assertion_ids",
+        "evidence_lane",
+        "epistemic_status",
+        "source_locators"
+      ],
+      "properties": {
+        "claim_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "subject": {"type": "string", "minLength": 1},
+        "predicate": {"type": "string", "minLength": 1},
+        "object": {"type": "string", "minLength": 1},
+        "scope": {"type": "string"},
+        "qualifiers": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "negation": {"type": "boolean"},
+        "temporal_validity": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "valid_from": {"type": ["string", "null"]},
+            "valid_to": {"type": ["string", "null"]}
+          }
+        },
+        "assertion_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+        },
+        "evidence_lane": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/evidenceLane"},
+        "epistemic_status": {
+          "type": "string",
+          "enum": ["approved", "candidate", "disputed", "superseded", "retracted"]
+        },
+        "source_locators": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "urn:nee:dual-pipeline:claim-manifest:1.0.0#/$defs/sourceLocator"}
+        },
+        "supporting_assertion_ids": {
+          "type": "array",
+          "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+        },
+        "contradicting_assertion_ids": {
+          "type": "array",
+          "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+        }
+      }
+    },
+    "sourceLocator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["locator_type", "source_uri", "locator_value"],
+      "properties": {
+        "locator_type": {
+          "type": "string",
+          "enum": ["transcript_paragraph", "file_line", "git_commit", "document_section", "url"]
+        },
+        "source_uri": {"type": "string"},
+        "locator_value": {"type": "string"}
+      }
+    }
+  }
+}

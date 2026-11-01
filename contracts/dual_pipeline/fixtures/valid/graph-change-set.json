@@ -1,0 +1,35 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:graph-change-set:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "graph-change-set-sherpa-owner-gap",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "cb63d2e7061bad1fa0611088ce30982b0573467af9a5f6ddef59e07b4538cf76"
+  },
+  "change_set_id": "change-set-sherpa-owner-gap",
+  "run_id": "run-intake-nea-update-2026-07-21",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "status": "proposed",
+  "base_graph_snapshot": "graph-snapshot-v55-approved-current",
+  "base_graph_hash": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "approval_id": null,
+  "operations": [
+    {
+      "operation_id": "graph-operation-add-candidate-owner-gap",
+      "sequence": 1,
+      "operation": "add_candidate_assertion",
+      "target_type": "assertion",
+      "target_id": "assertion-sherpa-monitoring-owner-gap",
+      "before_state_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "after_state_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+      "evidence_ids": ["evidence-speaker-matt-k-item-2"],
+      "classification": "internal",
+      "audiences": ["nee-engineering"],
+      "candidate_id": "candidate-sherpa-monitoring-owner-gap"
+    }
+  ],
+  "transaction_required": true,
+  "rollback_required": true,
+  "extensions": {}
+}

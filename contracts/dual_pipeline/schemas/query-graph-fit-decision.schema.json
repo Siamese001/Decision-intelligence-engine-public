@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:query-graph-fit-decision:1.0.0",
+  "title": "NEE post-retrieval graph-fit decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "decision_id", "run_id", "destination_decision_digest", "query_plan_digest", "connected_evidence_map_digest", "evidence_packet_digest", "graph_snapshot", "graph_sha256", "generation_id", "embedding_backend", "model_id", "model_revision", "model_manifest_digest", "production_qualified", "destination", "query_type", "status", "reason_codes", "minimum_record_count", "selected_record_count", "graph_path_count", "authorized_lane_counts", "l2_allowed", "automatic_provider_call_count", "decided_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:query-graph-fit-decision:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "decision_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "destination_decision_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "query_plan_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "connected_evidence_map_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "evidence_packet_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "graph_snapshot": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "generation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "embedding_backend": {"type": "string", "minLength": 1},
+    "model_id": {"type": "string", "minLength": 1},
+    "model_revision": {"type": ["string", "null"]},
+    "model_manifest_digest": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "production_qualified": {"type": "boolean"},
+    "destination": {"type": "string", "enum": ["GRAPH_EVIDENCE_UTILITY", "NEE_DECISION_INTELLIGENCE"]},
+    "query_type": {"type": "string", "enum": ["exact_lookup", "current_state_corroboration", "project_status_current", "project_status_history", "relationship_explanation", "cross_workstream_synthesis", "gap_risk_inconsistency", "opportunity_nba", "candidate_promotion_review"]},
+    "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+    "reason_codes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,127}$"}},
+    "minimum_record_count": {"type": "integer", "minimum": 1, "maximum": 2},
+    "selected_record_count": {"type": "integer", "minimum": 0},
+    "graph_path_count": {"type": "integer", "minimum": 0},
+    "authorized_lane_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approved", "candidate", "external_public"],
+      "properties": {
+        "approved": {"type": "integer", "minimum": 0},
+        "candidate": {"type": "integer", "minimum": 0},
+        "external_public": {"type": "integer", "minimum": 0}
+      }
+    },
+    "l2_allowed": {"type": "boolean"},
+    "automatic_provider_call_count": {"const": 0},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "destination": {"const": "NEE_DECISION_INTELLIGENCE"},
+        "status": {"const": "PASS"},
+        "selected_record_count": {"minimum": 1},
+        "graph_path_count": {"minimum": 1},
+        "l2_allowed": {"const": true}
+      }
+    },
+    {
+      "properties": {
+        "destination": {"const": "NEE_DECISION_INTELLIGENCE"},
+        "status": {"const": "FAIL"},
+        "l2_allowed": {"const": false}
+      }
+    },
+    {
+      "properties": {
+        "destination": {"const": "GRAPH_EVIDENCE_UTILITY"},
+        "l2_allowed": {"const": false}
+      }
+    }
+  ]
+}

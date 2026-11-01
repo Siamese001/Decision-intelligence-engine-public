@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "graph_mutation_proof_receipt",
+  "type": "object",
+  "required": ["schema_version", "database", "generated_at", "overall", "checks"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "database": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "overall": {"enum": ["PASS", "FAIL"]},
+    "checks": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["check", "status", "detail"],
+        "properties": {
+          "check": {"enum": ["file_changed", "raw_bytes", "integrity", "readback", "row_delta"]},
+          "status": {"enum": ["PASS", "FAIL"]},
+          "detail": {}
+        }
+      }
+    }
+  }
+}

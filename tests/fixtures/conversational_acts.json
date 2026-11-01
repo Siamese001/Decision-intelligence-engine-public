@@ -1,0 +1,182 @@
+[
+  {
+    "text": "Can you confirm if the delivery date is locked for June 1st?",
+    "speaker": "Mandy",
+    "expected_act": "question_to_operator"
+  },
+  {
+    "text": "What do you think about phasing this into two separate milestones?",
+    "speaker": "Amit",
+    "expected_act": "question_to_operator"
+  },
+  {
+    "text": "Could you check if we have budget approval for the additional engineers?",
+    "speaker": "Jen",
+    "expected_act": "question_to_operator"
+  },
+  {
+    "text": "Is there any dependency on the legacy billing system?",
+    "speaker": "David",
+    "expected_act": "question_to_operator"
+  },
+  {
+    "text": "How should we handle the vendor escalation if they miss the SLA?",
+    "speaker": "Sarah",
+    "expected_act": "question_to_operator"
+  },
+  {
+    "text": "Amit, what is your perspective on the proposed architecture approach?",
+    "speaker": "Mandy",
+    "expected_act": "question_to_operator"
+  },
+  {
+    "text": "I disagree with that approach because it introduces significant latency.",
+    "speaker": "Amit",
+    "expected_act": "objection"
+  },
+  {
+    "text": "We can't commit to that deadline without seeing the technical specs first.",
+    "speaker": "Jen",
+    "expected_act": "objection"
+  },
+  {
+    "text": "My main concern is that the vendor will push back on the pricing clause.",
+    "speaker": "David",
+    "expected_act": "objection"
+  },
+  {
+    "text": "There is a severe risk of data corruption if we run migration during peak hours.",
+    "speaker": "Sarah",
+    "expected_act": "objection"
+  },
+  {
+    "text": "I'm hesitant to approve this change until we run comprehensive load testing.",
+    "speaker": "Amit",
+    "expected_act": "objection"
+  },
+  {
+    "text": "The blocker right now is the pending security sign-off from compliance.",
+    "speaker": "Jen",
+    "expected_act": "objection"
+  },
+  {
+    "text": "We have decided to move forward with PostgreSQL for the primary store.",
+    "speaker": "Amit",
+    "expected_act": "decision_point"
+  },
+  {
+    "text": "The decision is to adopt the hybrid retrieval architecture across both pipelines.",
+    "speaker": "Jen",
+    "expected_act": "decision_point"
+  },
+  {
+    "text": "Let's go with option B to minimize delivery risk and preserve team capacity.",
+    "speaker": "Mandy",
+    "expected_act": "decision_point"
+  },
+  {
+    "text": "We agreed on allocating three senior engineers to the sprint zero spike.",
+    "speaker": "David",
+    "expected_act": "decision_point"
+  },
+  {
+    "text": "We are selecting the two-week spike approach before making final commitments.",
+    "speaker": "Sarah",
+    "expected_act": "decision_point"
+  },
+  {
+    "text": "Let's lock it in: the release date will be November 15th.",
+    "speaker": "Amit",
+    "expected_act": "decision_point"
+  },
+  {
+    "text": "I will draft the technical design document by Friday afternoon.",
+    "speaker": "Amit",
+    "expected_act": "commitment"
+  },
+  {
+    "text": "We will deliver the updated prototype before the client sync next Tuesday.",
+    "speaker": "Jen",
+    "expected_act": "commitment"
+  },
+  {
+    "text": "I'll take the action item to follow up with the cloud infrastructure team.",
+    "speaker": "David",
+    "expected_act": "commitment"
+  },
+  {
+    "text": "I can send over the revised statement of work by end of day today.",
+    "speaker": "Sarah",
+    "expected_act": "commitment"
+  },
+  {
+    "text": "Our team is committed to completing the security audit by next month.",
+    "speaker": "Jen",
+    "expected_act": "commitment"
+  },
+  {
+    "text": "I will own the migration script and ensure automated rollback tests pass.",
+    "speaker": "Amit",
+    "expected_act": "commitment"
+  },
+  {
+    "text": "Moving on to the next topic, let's discuss the budget allocation.",
+    "speaker": "Mandy",
+    "expected_act": "topic_shift"
+  },
+  {
+    "text": "Let's shift gears and look at the quarterly roadmap updates.",
+    "speaker": "Amit",
+    "expected_act": "topic_shift"
+  },
+  {
+    "text": "On another note, how are we progressing on the vendor contract?",
+    "speaker": "David",
+    "expected_act": "topic_shift"
+  },
+  {
+    "text": "Next item on the agenda is the cloud migration timeline.",
+    "speaker": "Jen",
+    "expected_act": "topic_shift"
+  },
+  {
+    "text": "Let's turn to the operational readiness review now.",
+    "speaker": "Sarah",
+    "expected_act": "topic_shift"
+  },
+  {
+    "text": "Changing subjects, we need to address the new hiring requisitions.",
+    "speaker": "Mandy",
+    "expected_act": "topic_shift"
+  },
+  {
+    "text": "We completed the database indexing task ahead of schedule yesterday.",
+    "speaker": "Amit",
+    "expected_act": "status_update"
+  },
+  {
+    "text": "Currently, the pipeline is processing around five thousand events per second.",
+    "speaker": "Jen",
+    "expected_act": "status_update"
+  },
+  {
+    "text": "We have been working on resolving the intermittent network timeouts.",
+    "speaker": "David",
+    "expected_act": "status_update"
+  },
+  {
+    "text": "As a quick update, the staging environment is now fully deployed.",
+    "speaker": "Sarah",
+    "expected_act": "status_update"
+  },
+  {
+    "text": "The current status is green across all production health checks.",
+    "speaker": "Amit",
+    "expected_act": "status_update"
+  },
+  {
+    "text": "Our team held the initial kickoff meeting with the business stakeholders.",
+    "speaker": "Mandy",
+    "expected_act": "status_update"
+  }
+]

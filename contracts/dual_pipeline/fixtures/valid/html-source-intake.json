@@ -1,0 +1,91 @@
+{
+  "adapter": {
+    "name": "nee-html-source-intake",
+    "version": "1.0.0"
+  },
+  "artifact_id": "html-source-example-html-status",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "62f38732fbafb5887cfc44fc0714f5b77df281d5baeb129130c79eec78a92491"
+  },
+  "chunks": [
+    {
+      "chunk_id": "chunk-01-operational-status",
+      "extraction_confidence": 1.0,
+      "locator": {
+        "kind": "section",
+        "quote_digest": "7b848392fbe9b1f1ec813d2aa81e591e2ccbc9409eae211a0b7ff841ab8fccc2",
+        "value": "Operational status"
+      },
+      "materiality": "high",
+      "selection_rationale": "Retains the exact visible status-report section for source-bound, candidate-only retrieval.",
+      "text": "# Operational status",
+      "title": "Operational status"
+    },
+    {
+      "chunk_id": "chunk-02-status-overview",
+      "extraction_confidence": 1.0,
+      "locator": {
+        "kind": "section",
+        "quote_digest": "76180adbe08de3be79f319ee9a258e0904761c098a4fc19d620d85aa94b77b02",
+        "value": "Status / overview"
+      },
+      "materiality": "high",
+      "selection_rationale": "Retains the exact visible status-report section for source-bound, candidate-only retrieval.",
+      "text": "# Status\n\nCurrent delivery evidence is source-bound.",
+      "title": "Status overview"
+    },
+    {
+      "chunk_id": "chunk-03-status-control",
+      "extraction_confidence": 1.0,
+      "locator": {
+        "kind": "section",
+        "quote_digest": "b17063d05333178a5fc8e0b2108c86a4bf1f1b9fb9e6828d9754c4c6d1b5a73e",
+        "value": "Status / Control"
+      },
+      "materiality": "high",
+      "selection_rationale": "Retains the exact visible status-report section for source-bound, candidate-only retrieval.",
+      "text": "## Control\n\nKeep ownership explicit.\n\n| Workstream | State |\n\n| Atlas | Active |",
+      "title": "Control"
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:html-source-intake:1.0.0",
+  "extensions": {
+    "com.partner_advisory.nee.chunk-selection": {
+      "authority_boundary": "Internal status evidence; not approved delivery acceptance.",
+      "profile": "html-heading-leaf-selection-v1",
+      "selection_mode": "all_leaf_sections"
+    },
+    "com.partner_advisory.nee.html-extraction": {
+      "extracted_text_binding": "recomputed-from-raw-html-v1",
+      "extractor": "python-html-parser",
+      "extractor_version": "visible-text-heading-table-v1",
+      "profile": "visible-text-heading-table-v1",
+      "source_byte_binding": "raw_html_base64+html_file_sha256"
+    }
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "anchor_entity": {
+      "context": "Internal status evidence; not approved delivery acceptance.",
+      "reported_text": "Example HTML status",
+      "stable_identifier": "example_html_status"
+    },
+    "audiences": [
+      "internal_consulting"
+    ],
+    "authority_rank": 7,
+    "classification": "internal",
+    "extracted_markdown": "# Operational status\n\n# Status\n\nCurrent delivery evidence is source-bound.\n\n## Control\n\nKeep ownership explicit.\n\n| Workstream | State |\n\n| Atlas | Active |\n",
+    "extracted_markdown_sha256": "dd66f4658ebf4a4d20e004800825c325b8a4fc6e1d96d0ce562ff70575971536",
+    "html_file_sha256": "452e14b9b639e87e21615dee2cd6bedac92ed65cdb46a93b3a265f98ea4c7497",
+    "raw_html_base64": "PCFkb2N0eXBlIGh0bWw+CjxodG1sPgogIDxoZWFkPgogICAgPHRpdGxlPk9wZXJhdGlvbmFsIHN0YXR1czwvdGl0bGU+CiAgICA8c3R5bGU+LmhpZGRlbiB7IGRpc3BsYXk6IG5vbmU7IH08L3N0eWxlPgogICAgPHNjcmlwdD5jb25zdCBpZ25vcmVkID0gJ25vdCBzb3VyY2UgZXZpZGVuY2UnOzwvc2NyaXB0PgogIDwvaGVhZD4KICA8Ym9keT4KICAgIDxwIGhpZGRlbj5EbyBub3QgcmV0YWluIGhpZGRlbiBtYXRlcmlhbC48L3A+CiAgICA8aDE+U3RhdHVzPC9oMT4KICAgIDxwPkN1cnJlbnQgZGVsaXZlcnkgZXZpZGVuY2UgaXMgc291cmNlLWJvdW5kLjwvcD4KICAgIDxoMj5Db250cm9sPC9oMj4KICAgIDxwPktlZXAgb3duZXJzaGlwIGV4cGxpY2l0LjwvcD4KICAgIDx0YWJsZT4KICAgICAgPHRyPjx0aD5Xb3Jrc3RyZWFtPC90aD48dGg+U3RhdGU8L3RoPjwvdHI+CiAgICAgIDx0cj48dGQ+QXRsYXM8L3RkPjx0ZD5BY3RpdmU8L3RkPjwvdHI+CiAgICA8L3RhYmxlPgogIDwvYm9keT4KPC9odG1sPgo=",
+    "source_date": "2026-08-04",
+    "source_id": "example-html-status",
+    "source_location": "controlled/examples/status.html",
+    "source_posture": "governed_internal",
+    "source_version_id": "source-version-26d9b609f1054e115c4a59800cc2",
+    "title": "Operational status"
+  }
+}

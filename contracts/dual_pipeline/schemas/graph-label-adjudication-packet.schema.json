@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:graph-label-adjudication-packet:1.0.0",
+  "title": "NEE graph-label human-adjudication packet",
+  "allOf": [
+    {"$ref": "urn:nee:dual-pipeline:common:1.0.0"}
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "packet_type",
+    "status",
+    "policy",
+    "pair_binding",
+    "review_plan",
+    "review_run_id",
+    "trace_id",
+    "human_decision_contract",
+    "review_protocol",
+    "queues",
+    "relevance_review",
+    "summary",
+    "extensions"
+  ],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:graph-label-adjudication-packet:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "packet_type": {"const": "graph_label_human_adjudication"},
+    "status": {"const": "PENDING_HUMAN_REVIEW"},
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy_id", "policy_version"],
+      "properties": {
+        "policy_id": {"const": "nee-graph-labeling"},
+        "policy_version": {"const": "1.0.0"}
+      }
+    },
+    "pair_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "active_pair_sha256",
+        "generation_id",
+        "graph_sha256",
+        "graph_snapshot",
+        "sidecar_sha256",
+        "embedding_backend",
+        "model_id",
+        "model_revision",
+        "model_manifest_digest",
+        "production_qualified"
+      ],
+      "properties": {
+        "active_pair_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "generation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "graph_snapshot": {"type": "string", "minLength": 1, "maxLength": 4096},
+        "sidecar_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "embedding_backend": {"type": "string", "minLength": 1, "maxLength": 256},
+        "model_id": {"type": "string", "minLength": 1, "maxLength": 512},
+        "model_revision": {"type": "string", "minLength": 1, "maxLength": 512},
+        "model_manifest_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "production_qualified": {"type": "boolean"}
+      }
+    },
+    "review_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "base_graph_sha256",
+        "legacy_review_plan_digest",
+        "quality_report_digest",
+        "candidate_plan_digest",
+        "candidate_schema_migration_state"
+      ],
+      "properties": {
+        "base_graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "legacy_review_plan_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "quality_report_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "candidate_plan_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "candidate_schema_migration_state": {"enum": ["APPLY_TO_CANDIDATE", "ALREADY_INSTALLED"]}
+      }
+    },
+    "review_run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "human_decision_contract": {"const": "urn:nee:dual-pipeline:hitl-decision:1.0.0"},
+    "review_protocol": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "automatic_labels_are_not_human_labels",
+        "final_approval_owner_required",
+        "tier_two_requires_independent_review",
+        "required_decision_fields",
+        "decision_artifact_binding"
+      ],
+      "properties": {
+        "automatic_labels_are_not_human_labels": {"const": true},
+        "final_approval_owner_required": {"const": true},
+        "tier_two_requires_independent_review": {"const": true},
+        "required_decision_fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "decision_artifact_binding": {"const": "one exact HITL decision artifact per queue"}
+      }
+    },
+    "queues": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "queue_id",
+          "category",
+          "subtype",
+          "record_type",
+          "field",
+          "legacy_value",
+          "record_count",
+          "record_ids",
+          "source_ids",
+          "source_context",
+          "candidate_values",
+          "decision_options",
+          "review_tier",
+          "dual_review_required",
+          "approval_owner_required",
+          "required_decision_fields",
+          "baseline_state_digest",
+          "status",
+          "context"
+        ],
+        "properties": {
+          "queue_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "category": {"enum": ["label_mapping", "lineage", "identity_resolution"]},
+          "subtype": {"type": "string", "minLength": 1, "maxLength": 128},
+          "record_type": {"type": "string", "minLength": 1, "maxLength": 128},
+          "field": {"type": "string", "minLength": 1, "maxLength": 128},
+          "legacy_value": {"type": "string", "minLength": 1, "maxLength": 4096},
+          "record_count": {"type": "integer", "minimum": 1},
+          "record_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1, "maxLength": 4096}
+          },
+          "source_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1, "maxLength": 4096}
+          },
+          "source_context": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source_id", "source_name", "source_type", "source_posture"],
+              "properties": {
+                "source_id": {"type": "string", "minLength": 1, "maxLength": 4096},
+                "source_name": {"type": ["string", "null"], "maxLength": 4096},
+                "source_type": {"type": "string", "minLength": 1, "maxLength": 4096},
+                "source_posture": {"type": "string", "minLength": 1, "maxLength": 4096}
+              }
+            }
+          },
+          "candidate_values": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1, "maxLength": 4096}
+          },
+          "decision_options": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "enum": ["CONFIRM", "REJECT", "CREATE_NEW", "CREATE_EXTERNAL_CONCEPT", "ADD_ALIAS", "HOLD", "QUARANTINE"]}
+          },
+          "review_tier": {"type": "integer", "enum": [1, 2]},
+          "dual_review_required": {"type": "boolean"},
+          "approval_owner_required": {"const": true},
+          "required_decision_fields": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "baseline_state_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+          "status": {"const": "PENDING_HUMAN_REVIEW"},
+          "context": {"type": "object", "additionalProperties": true}
+        }
+      }
+    },
+    "relevance_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "exact_pair_binding_required",
+        "minimum_independent_reviewer_count",
+        "required_dimensions",
+        "completion_requirement"
+      ],
+      "properties": {
+        "status": {"const": "DEFERRED_UNTIL_SUCCESSOR_PAIR"},
+        "exact_pair_binding_required": {"const": true},
+        "minimum_independent_reviewer_count": {"const": 2},
+        "required_dimensions": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {"enum": ["positive_relevance", "hard_negative", "lane_isolation", "acl_boundary", "stale_or_superseded"]}
+        },
+        "completion_requirement": {"type": "string", "minLength": 1, "maxLength": 4096}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label_mapping_record_count",
+        "label_mapping_queue_count",
+        "lineage_record_count",
+        "lineage_queue_count",
+        "identity_record_count",
+        "identity_queue_count",
+        "total_queue_count",
+        "provider_call_count",
+        "graph_mutation_count"
+      ],
+      "properties": {
+        "label_mapping_record_count": {"type": "integer", "minimum": 0},
+        "label_mapping_queue_count": {"type": "integer", "minimum": 0},
+        "lineage_record_count": {"type": "integer", "minimum": 0},
+        "lineage_queue_count": {"type": "integer", "minimum": 0},
+        "identity_record_count": {"type": "integer", "minimum": 0},
+        "identity_queue_count": {"type": "integer", "minimum": 0},
+        "total_queue_count": {"type": "integer", "minimum": 1},
+        "provider_call_count": {"const": 0},
+        "graph_mutation_count": {"const": 0}
+      }
+    },
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

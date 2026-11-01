@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-dd89ae550555b3524f01ed1bf3a0",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "be7c18377e3144a7b7d47d0362216e209ccb1adfe384c5a421af182a428e222c"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-9cd90794bf2c37fe7094b4e6"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "LENS LLM-Assisted Chat Rule Builder is an identified technical_anchor in Document 20260612 Lens Visual Asset Intelligence Sow.",
+      "proposed_value": "LENS LLM-Assisted Chat Rule Builder is an identified technical_anchor in Document 20261002 Project Lens Scope Closeout.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-d2c365f8af5ac61c184d868e2a4e"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-e0e66a74fde3f4228a73a9a7d111",
+      "assertion_id_older": "assertion-d2c365f8af5ac61c184d868e2a4e",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-a5c28e8fa6c0378fab4e4575239a",
+      "timestamp_newer": "2026-10-02",
+      "timestamp_older": "2026-06-12"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS LLM-Assisted Chat Rule Builder' (HAS_CLAIM_TEXT). Older claim from 2026-06-12 superseded by newer claim from 2026-10-02.",
+  "proposal_id": "calibration-proposal-dd89ae550555b3524f01ed1bf3a0",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-d2c365f8af5ac61c184d868e2a4e from LENS LLM-Assisted Chat Rule Builder is an identified technical_anchor in Document 20260612 Lens Visual Asset Intelligence Sow. to LENS LLM-Assisted Chat Rule Builder is an identified technical_anchor in Document 20261002 Project Lens Scope Closeout.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

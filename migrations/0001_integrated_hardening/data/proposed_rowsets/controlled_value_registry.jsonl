@@ -1,0 +1,79 @@
+{"active":1,"definition":"Accepted canonical knowledge.","sort_order":1,"value":"canonical","vocabulary":"canonical_status"}
+{"active":1,"definition":"Accepted under the legacy graph and preserved.","sort_order":1,"value":"accepted_legacy","vocabulary":"validation_state"}
+{"active":1,"definition":"Active entity.","sort_order":1,"value":"active","vocabulary":"lifecycle_state"}
+{"active":1,"definition":"Active route.","sort_order":1,"value":"active","vocabulary":"route_status"}
+{"active":1,"definition":"Amber.","sort_order":2,"value":"amber","vocabulary":"rag_state"}
+{"active":1,"definition":"Ambiguous and blocked from automatic resolution.","sort_order":4,"value":"ambiguous_blocked","vocabulary":"review_state"}
+{"active":1,"definition":"Approved for external use.","sort_order":3,"value":"external_approved","vocabulary":"publication_state"}
+{"active":1,"definition":"Assumption requiring validation.","sort_order":5,"value":"assumption","vocabulary":"assertion_type"}
+{"active":1,"definition":"Blocked pending validation.","sort_order":3,"value":"blocked","vocabulary":"retrieval_eligibility"}
+{"active":1,"definition":"Candidate knowledge not promoted as fact.","sort_order":2,"value":"candidate","vocabulary":"canonical_status"}
+{"active":1,"definition":"Claim extracted from source content.","sort_order":2,"value":"extracted_claim","vocabulary":"assertion_type"}
+{"active":1,"definition":"Controlled relationship family AFFILIATED_WITH.","sort_order":1,"value":"AFFILIATED_WITH","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family CANDIDATE_FOR.","sort_order":2,"value":"CANDIDATE_FOR","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family CONSTRAINS.","sort_order":3,"value":"CONSTRAINS","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family CONTAINS.","sort_order":4,"value":"CONTAINS","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family CONTEXT_FOR.","sort_order":5,"value":"CONTEXT_FOR","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family CONTRIBUTES_TO.","sort_order":6,"value":"CONTRIBUTES_TO","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family DELIVERS.","sort_order":7,"value":"DELIVERS","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family DEPENDS_ON.","sort_order":8,"value":"DEPENDS_ON","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family GOVERNS.","sort_order":9,"value":"GOVERNS","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family HAS_CLAIM_TEXT.","sort_order":10,"value":"HAS_CLAIM_TEXT","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family HAS_RISK.","sort_order":11,"value":"HAS_RISK","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family HAS_ROLE_IN.","sort_order":12,"value":"HAS_ROLE_IN","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family OWNS_OR_LEADS.","sort_order":13,"value":"OWNS_OR_LEADS","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family RELATED_TO.","sort_order":14,"value":"RELATED_TO","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family REPORTS_TO.","sort_order":15,"value":"REPORTS_TO","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family ROUTES_TO.","sort_order":16,"value":"ROUTES_TO","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family SUPPORTED_BY.","sort_order":17,"value":"SUPPORTED_BY","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family TRANSITIONS_TO.","sort_order":18,"value":"TRANSITIONS_TO","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family USES_PATTERN.","sort_order":19,"value":"USES_PATTERN","vocabulary":"relationship_family"}
+{"active":1,"definition":"Controlled relationship family VALIDATES.","sort_order":20,"value":"VALIDATES","vocabulary":"relationship_family"}
+{"active":1,"definition":"Currently effective or not superseded.","sort_order":1,"value":"current","vocabulary":"currentness_state"}
+{"active":1,"definition":"Currentness cannot be established.","sort_order":4,"value":"unknown","vocabulary":"currentness_state"}
+{"active":1,"definition":"Direct statement by a known speaker or author.","sort_order":1,"value":"direct_statement","vocabulary":"assertion_type"}
+{"active":1,"definition":"Eligible for governed retrieval.","sort_order":1,"value":"eligible","vocabulary":"retrieval_eligibility"}
+{"active":1,"definition":"Eligible only for historical intent.","sort_order":2,"value":"historical_only","vocabulary":"retrieval_eligibility"}
+{"active":1,"definition":"Evidence contradicts the assertion.","sort_order":2,"value":"contradicts","vocabulary":"evidence_relationship"}
+{"active":1,"definition":"Evidence supports the assertion.","sort_order":1,"value":"supports","vocabulary":"evidence_relationship"}
+{"active":1,"definition":"Evidence-backed accepted canonical fact.","sort_order":10,"value":"confirmed_canonical_fact","vocabulary":"assertion_type"}
+{"active":1,"definition":"Explicitly approved.","sort_order":3,"value":"approved","vocabulary":"approval_state"}
+{"active":1,"definition":"Explicitly rejected.","sort_order":4,"value":"rejected","vocabulary":"approval_state"}
+{"active":1,"definition":"Future-effective.","sort_order":3,"value":"future","vocabulary":"currentness_state"}
+{"active":1,"definition":"Green.","sort_order":1,"value":"green","vocabulary":"rag_state"}
+{"active":1,"definition":"Historical candidate claim.","sort_order":4,"value":"historical_candidate","vocabulary":"canonical_status"}
+{"active":1,"definition":"Historical canonical knowledge.","sort_order":3,"value":"historical","vocabulary":"canonical_status"}
+{"active":1,"definition":"Historical or superseded.","sort_order":2,"value":"historical","vocabulary":"currentness_state"}
+{"active":1,"definition":"Human interpretation distinct from source text.","sort_order":3,"value":"human_interpretation","vocabulary":"assertion_type"}
+{"active":1,"definition":"Inactive entity.","sort_order":2,"value":"inactive","vocabulary":"lifecycle_state"}
+{"active":1,"definition":"Internal use.","sort_order":1,"value":"internal","vocabulary":"publication_state"}
+{"active":1,"definition":"Lifecycle unknown.","sort_order":3,"value":"unknown","vocabulary":"lifecycle_state"}
+{"active":1,"definition":"Material conflict exists.","sort_order":3,"value":"conflicted","vocabulary":"resolution_state"}
+{"active":1,"definition":"Migrated deterministically from baseline.","sort_order":1,"value":"legacy_migrated","vocabulary":"review_state"}
+{"active":1,"definition":"Model-generated inference.","sort_order":4,"value":"model_inference","vocabulary":"assertion_type"}
+{"active":1,"definition":"Multiple legacy primary routes; no automatic canonical choice.","sort_order":2,"value":"ambiguous","vocabulary":"route_status"}
+{"active":1,"definition":"No evidence-backed canonical route available.","sort_order":3,"value":"intentional_unrouted","vocabulary":"route_status"}
+{"active":1,"definition":"Not applicable.","sort_order":5,"value":"not_applicable","vocabulary":"rag_state"}
+{"active":1,"definition":"Not approved.","sort_order":2,"value":"candidate","vocabulary":"approval_state"}
+{"active":1,"definition":"Not yet reviewed under V48.","sort_order":2,"value":"unreviewed","vocabulary":"validation_state"}
+{"active":1,"definition":"Outside canonical retrieval.","sort_order":4,"value":"quarantined","vocabulary":"retrieval_eligibility"}
+{"active":1,"definition":"Pending review.","sort_order":2,"value":"pending","vocabulary":"review_state"}
+{"active":1,"definition":"Preserved from the approved baseline.","sort_order":1,"value":"legacy_canonical","vocabulary":"approval_state"}
+{"active":1,"definition":"Recommendation, not a fact.","sort_order":8,"value":"recommendation","vocabulary":"assertion_type"}
+{"active":1,"definition":"Recorded decision.","sort_order":7,"value":"decision","vocabulary":"assertion_type"}
+{"active":1,"definition":"Red.","sort_order":3,"value":"red","vocabulary":"rag_state"}
+{"active":1,"definition":"Rejected for canonical use.","sort_order":4,"value":"rejected","vocabulary":"validation_state"}
+{"active":1,"definition":"Rejected from retrieval.","sort_order":5,"value":"rejected","vocabulary":"canonical_status"}
+{"active":1,"definition":"Requires human validation.","sort_order":3,"value":"needs_review","vocabulary":"validation_state"}
+{"active":1,"definition":"Resolved for current governed use.","sort_order":1,"value":"resolved","vocabulary":"resolution_state"}
+{"active":1,"definition":"Resolves to multiple active entities.","sort_order":2,"value":"ambiguous","vocabulary":"ambiguity_state"}
+{"active":1,"definition":"Resolves uniquely within active graph.","sort_order":1,"value":"unique","vocabulary":"ambiguity_state"}
+{"active":1,"definition":"Restricted use.","sort_order":2,"value":"restricted","vocabulary":"publication_state"}
+{"active":1,"definition":"Reviewed.","sort_order":3,"value":"reviewed","vocabulary":"review_state"}
+{"active":1,"definition":"Still unresolved.","sort_order":2,"value":"unresolved","vocabulary":"resolution_state"}
+{"active":1,"definition":"Superseded and historical.","sort_order":5,"value":"superseded","vocabulary":"validation_state"}
+{"active":1,"definition":"Superseded by a later record.","sort_order":4,"value":"superseded","vocabulary":"resolution_state"}
+{"active":1,"definition":"Testable hypothesis.","sort_order":6,"value":"hypothesis","vocabulary":"assertion_type"}
+{"active":1,"definition":"Unknown.","sort_order":4,"value":"unknown","vocabulary":"rag_state"}
+{"active":1,"definition":"Unparsed legacy claim text preserved as a candidate.","sort_order":11,"value":"legacy_claim_record","vocabulary":"assertion_type"}
+{"active":1,"definition":"Unresolved question.","sort_order":9,"value":"open_question","vocabulary":"assertion_type"}

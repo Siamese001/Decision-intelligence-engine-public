@@ -1,0 +1,31 @@
+{
+  "artifact_id": "delivery-quality-invalid",
+  "artifact_type": "architecture_deck",
+  "automatic_provider_call_count": 0,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "04c4f73d0643d2f8c366144fe1a59fa52af360079635eba8f42c6264c9cd8422"
+  },
+  "checks": {
+    "audience_fit": true,
+    "business_language": false,
+    "persona_relevance": true,
+    "principle_mapping": false,
+    "render_review": false,
+    "source_coverage": true,
+    "terminology_defined": false,
+    "visual_hierarchy": false
+  },
+  "client_release_allowed": true,
+  "contract_id": "urn:nee:dual-pipeline:delivery-quality-decision:1.0.0",
+  "decision_id": "delivery-quality-invalid",
+  "defect_codes": [
+    "UNDEFINED_CLIENT_TERM"
+  ],
+  "delivery_profile": "client_executive",
+  "extensions": {},
+  "run_id": "run-delivery-quality-invalid",
+  "schema_version": "1.0.0",
+  "status": "FAIL"
+}

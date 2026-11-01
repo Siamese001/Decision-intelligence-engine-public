@@ -1,0 +1,48 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-semantic-org-approved-without-approval",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "6c1f1c5aa2170ca974f86634d75394a84c445411049fc462bc8698ea5596aa02"
+  },
+  "change_set_id": "invalid-semantic-org-approved-without-approval",
+  "run_id": "run-invalid-semantic-org-approved",
+  "trace_id": "abcdefabcdefabcdefabcdefabcdefab",
+  "status": "approved",
+  "base_graph_snapshot": "graph-snapshot-eef18a67a8551357b83423de",
+  "base_graph_hash": "9a77d30768f49677a9d5ddc109781645655e052509fb5888c8cae76abae9a087",
+  "schema_migration": {
+    "migration_id": "0011-cards-refactoring",
+    "migration_checksum": "3333333333333333333333333333333333333333333333333333333333333333"
+  },
+  "policy_bindings": [
+    {
+      "policy_id": "facet-policy-semantic-domain-v1",
+      "policy_digest": "4444444444444444444444444444444444444444444444444444444444444444"
+    }
+  ],
+  "approval_id": null,
+  "operations": [
+    {
+      "operation_id": "invalid-org-operation-retire-route",
+      "sequence": 1,
+      "target_type": "canonical_route",
+      "target_id": "route-intentional-unrouted-example",
+      "before_state_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+      "after_state_hash": "2222222222222222222222222222222222222222222222222222222222222222",
+      "rationale": "Invalid because the approved change set has no approval binding.",
+      "payload": {
+        "operation": "retire_assertion_card_route",
+        "route_id": "route-intentional-unrouted-example",
+        "object_type": "assertion",
+        "assertion_id": "assertion-route-example",
+        "retirement_reason": "Facet coverage replaces the assertion-level intentional-unrouted marker."
+      }
+    }
+  ],
+  "transaction_required": true,
+  "rollback_required": true,
+  "extensions": {}
+}

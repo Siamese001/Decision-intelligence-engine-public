@@ -1,0 +1,81 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "semantic-org-change-set-cards-v1",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "1fba98190b5df4049f85425aa5566d7e7cc8735ecd2fc36515552c12d59a1389"
+  },
+  "change_set_id": "semantic-org-change-set-cards-v1",
+  "run_id": "run-cards-refactoring-proposal-v1",
+  "trace_id": "1234567890abcdef1234567890abcdef",
+  "status": "proposed",
+  "base_graph_snapshot": "graph-snapshot-eef18a67a8551357b83423de",
+  "base_graph_hash": "9a77d30768f49677a9d5ddc109781645655e052509fb5888c8cae76abae9a087",
+  "schema_migration": {
+    "migration_id": "0011-cards-refactoring",
+    "migration_checksum": "3333333333333333333333333333333333333333333333333333333333333333"
+  },
+  "policy_bindings": [
+    {
+      "policy_id": "facet-policy-semantic-domain-v1",
+      "policy_digest": "4444444444444444444444444444444444444444444444444444444444444444"
+    },
+    {
+      "policy_id": "selector-nee22-semantic-domain-v1",
+      "policy_digest": "5555555555555555555555555555555555555555555555555555555555555555"
+    }
+  ],
+  "approval_id": null,
+  "operations": [
+    {
+      "operation_id": "org-operation-assign-facet-a2a",
+      "sequence": 1,
+      "target_type": "facet_assignment",
+      "target_id": "facet-assignment-a2a-semantic-domain",
+      "before_state_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "after_state_hash": "6666666666666666666666666666666666666666666666666666666666666666",
+      "rationale": "Classify the current canonical A2A assertion independently of editorial card routing.",
+      "payload": {
+        "operation": "assign_object_facet",
+        "assignment_id": "facet-assignment-a2a-semantic-domain",
+        "object_type": "assertion",
+        "object_id": "assertion-a2a-protocol-context",
+        "vocabulary": "semantic_domain",
+        "value": "architecture_and_capability",
+        "assignment_method": "inherited",
+        "review_state": "approved",
+        "derivation_rule_id": "semantic-domain-by-subject-node",
+        "derivation_rule_version": 1,
+        "approval_reference": "approval-cards-refactoring-exact-scope"
+      }
+    },
+    {
+      "operation_id": "org-operation-upsert-nee22-view",
+      "sequence": 2,
+      "target_type": "card_view_definition",
+      "target_id": "card-view-nee22-v1",
+      "before_state_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "after_state_hash": "7777777777777777777777777777777777777777777777777777777777777777",
+      "rationale": "Define NEE_22 as an approved-only saved graph view without making card prose evidence.",
+      "payload": {
+        "operation": "upsert_card_view_definition",
+        "card_view_id": "card-view-nee22-v1",
+        "card_id": "NEE_22",
+        "view_version": 1,
+        "selector_id": "selector-nee22-semantic-domain-v1",
+        "selector_digest": "8888888888888888888888888888888888888888888888888888888888888888",
+        "authority_mode": "approved_only",
+        "classification": "internal",
+        "audiences": ["nee-engineering"],
+        "editorial_owner": "knowledge-graph-governance",
+        "view_state": "active",
+        "approval_reference": "approval-cards-refactoring-exact-scope"
+      }
+    }
+  ],
+  "transaction_required": true,
+  "rollback_required": true,
+  "extensions": {}
+}

@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-9d2d107293e8ffe456ecd1151385",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "5fbb062bfb35ccf87b110acac405c4b894d91b88858f39827d18fdb7e29cfd8d"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-78d2f124bf62e92233872787"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "and we can't be editing Maximo.",
+      "proposed_value": "has to be human in the loop. Someone has to approve the work order.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-46f3f08543bc081f699959eb3e13"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-beffb3318acd9f5472bfe785ec5d",
+      "assertion_id_older": "assertion-46f3f08543bc081f699959eb3e13",
+      "confidence_coexist": 0.45,
+      "confidence_supersede": 0.55,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": true,
+      "margin_delta": 0.1,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-10-05",
+      "timestamp_older": "2026-10-05"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-10-05 superseded by newer claim from 2026-10-05.",
+  "proposal_id": "calibration-proposal-9d2d107293e8ffe456ecd1151385",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-46f3f08543bc081f699959eb3e13 from and we can't be editing Maximo. to has to be human in the loop. Someone has to approve the work order.. Requires governed approval before release.",
+  "risk": "medium",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

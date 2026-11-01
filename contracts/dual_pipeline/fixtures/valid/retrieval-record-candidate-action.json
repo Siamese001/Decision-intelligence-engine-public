@@ -1,0 +1,31 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:retrieval-record:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "retrieval-record-confirm-sherpa-owner",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "0d995f1cd267c337866ceda12afb09c5d0c2fae088cb7528c2564e9be7596271"
+  },
+  "record_id": "retrieval-record-confirm-sherpa-owner",
+  "record_type": "action_item",
+  "retrieval_kind": "guidance",
+  "epistemic_status": "candidate",
+  "provenance_kind": "source_bound",
+  "answer_use": "guidance",
+  "namespace": "nee.candidate.actions",
+  "lane": "candidate",
+  "title": "Confirm Sherpa monitoring owner",
+  "canonical_entities": ["workstream-project_beacon"],
+  "retrieval_text": "Confirm the Sherpa production-monitoring owner.",
+  "retrieval_text_hash": "652ba1992ec6813fa1bd31abcd2ec21e71863c54a601be10d15761427d6117c7",
+  "evidence_cluster_id": "evidence-cluster-nea-update-owner",
+  "evidence_ids": ["evidence-action-item-3"],
+  "graph_snapshot": "graph-snapshot-staging-example",
+  "classification": "internal",
+  "audiences": ["nee-engineering"],
+  "lifecycle": "candidate",
+  "effective_date": "2026-07-21",
+  "action_status": "open",
+  "extensions": {}
+}

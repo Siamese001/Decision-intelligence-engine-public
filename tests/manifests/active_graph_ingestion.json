@@ -1,0 +1,26 @@
+{
+  "name": "active_graph_ingestion",
+  "description": "Active graph ingestion contracts, policy, and approval continuation verification",
+  "branch": "docs/active-graph-ingestion-plan",
+  "deterministic_tests": [
+    "tests.test_contract_parity_and_ssot",
+    "tests.test_validate_dual_pipeline_contracts_semantics",
+    "tests.adversarial.test_active_ingestion_approval_adversarial",
+    "tests.adversarial.test_active_ingestion_recovery_adversarial",
+    "tests.adversarial.test_active_ingestion_modes_adversarial",
+    "tests.adversarial.test_active_ingestion_dispatch_adversarial",
+    "tests.adversarial.test_ingestion_coverage_recovery_adversarial",
+    "tests.adversarial.test_active_ingestion_live_recovery_adversarial"
+  ],
+  "e2e_tests": [
+    "tests.end_to_end.test_active_ingestion_approval_e2e",
+    "tests.end_to_end.test_active_ingestion_publication_e2e",
+    "tests.end_to_end.test_active_ingestion_entrypoints_e2e",
+    "tests.end_to_end.test_active_ingestion_scheduled_e2e",
+    "tests.end_to_end.test_ingestion_coverage_recovery_e2e",
+    "tests.end_to_end.test_active_ingestion_live_workflow_e2e"
+  ],
+  "bge_tests": [],
+  "e2e_exempt": false,
+  "created_at": "2026-10-06T12:00:00Z"
+}

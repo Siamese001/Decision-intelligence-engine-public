@@ -1,0 +1,21 @@
+{
+  "aggregate": {"all_iterations_passed": true, "behavior_stable": true, "case_count_stable": true, "hard_gate_failure_count": 0, "pass_workspaces_cleaned": true, "provider_call_count_stable": true, "seed_graph_unchanged": true},
+  "artifact_id": "eval-stress-result-fixture",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "f733c468c7d59df3f2d33e90e821ad5ed02fd3b484f4d9540a79e748856f5f5d"},
+  "contract_id": "urn:nee:dual-pipeline:eval-stress-result:1.0.0",
+  "embedding_backend": {"assurance_tier": "development", "backend_id": "fixture-bge-m3-development", "model_id": "nee/fixture-bge-m3-development", "model_manifest_digest": null, "model_revision": "fixture-v1", "production_qualified": false},
+  "evaluated_at": "2026-08-02T00:00:00Z",
+  "extensions": {},
+  "graph_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "iteration_count": 2,
+  "iterations": [
+    {"behavior_signature": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "case_count": 1, "evaluation_id": "eval-stress-fixture-one", "graph_mutation_count": 0, "hard_gate_failure_count": 0, "ordinal": 1, "provider_call_count": 0, "result_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", "result_path": "fixtures/eval-stress-one.json", "status": "PASS"},
+    {"behavior_signature": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "case_count": 1, "evaluation_id": "eval-stress-fixture-two", "graph_mutation_count": 0, "hard_gate_failure_count": 0, "ordinal": 2, "provider_call_count": 0, "result_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", "result_path": "fixtures/eval-stress-two.json", "status": "PASS"}
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "stress_id": "eval-stress-fixture",
+  "suite_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "suite_file_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "suite_id": "eval-suite-fixture"
+}

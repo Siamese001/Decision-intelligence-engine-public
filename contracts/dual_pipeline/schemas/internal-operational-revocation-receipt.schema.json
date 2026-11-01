@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:internal-operational-revocation-receipt:1.0.0",
+  "title": "NEE immutable internal operational revocation receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "revocation_id", "qualification_id", "qualification_digest", "pair", "status", "reviewer", "reason", "revoked_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:internal-operational-revocation-receipt:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "revocation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "qualification_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "qualification_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "pair": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/pair"},
+    "status": {"const": "REVOKED"},
+    "reviewer": {"type": "string", "minLength": 1},
+    "reason": {"type": "string", "minLength": 1},
+    "revoked_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

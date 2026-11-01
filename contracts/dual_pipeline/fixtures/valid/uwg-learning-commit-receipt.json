@@ -1,0 +1,36 @@
+{
+  "active_pair_binding": {
+    "generation_id": "gen-current-active",
+    "graph_sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+  },
+  "applied_at": "2026-10-03T12:00:00Z",
+  "applied_by": "operator-fixture",
+  "applied_parameters": {
+    "hitl.bayesian_prior_strength": 6.0
+  },
+  "approval_receipt_id": "receipt-approval-fixture",
+  "artifact_id": "uwg-learning-commit-receipt-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "56f602c1a9e305771911da14acace6234ac5bf91889b50f08a23019e9399a0b6"
+  },
+  "commit_id": "commit-uwg-learning-fixture",
+  "commit_type": "learning_parameter_commit",
+  "contract_id": "urn:nee:dual-pipeline:uwg-learning-commit-receipt:1.0.0",
+  "extensions": {},
+  "graph_delta_counts": {
+    "assertion": 0,
+    "evidence_item": 0,
+    "node": 0,
+    "total_delta": 0
+  },
+  "previous_parameters": {
+    "hitl.bayesian_prior_strength": 4.0
+  },
+  "proposal_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "proposal_id": "learning-proposal-fixture",
+  "rollback_receipt_id": "rollback-uwg-learning-fixture",
+  "schema_version": "1.0.0",
+  "status": "APPLIED"
+}

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:query-destination-decision:1.0.0",
+  "title": "NEE provider-free query destination and eligibility decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "decision_id", "request_id", "run_id", "trace_id", "destination", "eligibility_status", "eligibility_checks", "query_type", "materiality", "delivery_profile", "artifact_type", "reason_codes", "handoff_permitted", "operator_override", "automatic_egress_count", "policy_digest", "decided_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:query-destination-decision:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "decision_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "request_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "destination": {"type": "string", "enum": ["GENERAL_ASSISTANT_HANDOFF", "OPERATIONAL_WORKFLOW_HANDOFF", "GRAPH_EVIDENCE_UTILITY", "NEE_DECISION_INTELLIGENCE", "ROUTE_AMBIGUOUS"]},
+    "eligibility_status": {"type": "string", "enum": ["NOT_APPLICABLE", "ELIGIBLE_PRE_RETRIEVAL", "NOT_ELIGIBLE", "AMBIGUOUS"]},
+    "eligibility_checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["material_outcome", "graph_essential", "multi_record_reasoning", "l2_reasoning_required", "authorized"],
+      "properties": {
+        "material_outcome": {"$ref": "urn:nee:dual-pipeline:query-destination-decision:1.0.0#/$defs/check"},
+        "graph_essential": {"$ref": "urn:nee:dual-pipeline:query-destination-decision:1.0.0#/$defs/check"},
+        "multi_record_reasoning": {"$ref": "urn:nee:dual-pipeline:query-destination-decision:1.0.0#/$defs/check"},
+        "l2_reasoning_required": {"$ref": "urn:nee:dual-pipeline:query-destination-decision:1.0.0#/$defs/check"},
+        "authorized": {"$ref": "urn:nee:dual-pipeline:query-destination-decision:1.0.0#/$defs/check"}
+      }
+    },
+    "query_type": {"type": ["string", "null"], "enum": ["exact_lookup", "current_state_corroboration", "project_status_current", "project_status_history", "relationship_explanation", "cross_workstream_synthesis", "gap_risk_inconsistency", "opportunity_nba", "candidate_promotion_review", null]},
+    "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+    "delivery_profile": {"$ref": "urn:nee:dual-pipeline:query-destination-decision:1.0.0#/$defs/deliveryProfile"},
+    "artifact_type": {"$ref": "urn:nee:dual-pipeline:query-destination-decision:1.0.0#/$defs/artifactType"},
+    "reason_codes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,127}$"}},
+    "handoff_permitted": {"type": "boolean"},
+    "operator_override": {"type": "boolean"},
+    "automatic_egress_count": {"const": 0},
+    "policy_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "destination": {"enum": ["GENERAL_ASSISTANT_HANDOFF", "OPERATIONAL_WORKFLOW_HANDOFF"]},
+        "eligibility_status": {"const": "NOT_ELIGIBLE"},
+        "query_type": {"const": null},
+        "handoff_permitted": {"const": true}
+      }
+    },
+    {
+      "properties": {
+        "destination": {"const": "GRAPH_EVIDENCE_UTILITY"},
+        "eligibility_status": {"const": "NOT_APPLICABLE"},
+        "query_type": {"enum": ["exact_lookup", "current_state_corroboration", "project_status_current", "project_status_history"]},
+        "handoff_permitted": {"const": false}
+      }
+    },
+    {
+      "properties": {
+        "destination": {"const": "NEE_DECISION_INTELLIGENCE"},
+        "eligibility_status": {"const": "ELIGIBLE_PRE_RETRIEVAL"},
+        "query_type": {"enum": ["relationship_explanation", "cross_workstream_synthesis", "gap_risk_inconsistency", "opportunity_nba", "candidate_promotion_review"]},
+        "handoff_permitted": {"const": false},
+        "eligibility_checks": {
+          "properties": {
+            "material_outcome": {"const": "PASS"},
+            "graph_essential": {"const": "PASS"},
+            "multi_record_reasoning": {"const": "PASS"},
+            "l2_reasoning_required": {"const": "PASS"},
+            "authorized": {"const": "PASS"}
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "destination": {"const": "ROUTE_AMBIGUOUS"},
+        "eligibility_status": {"const": "AMBIGUOUS"},
+        "query_type": {"const": null},
+        "handoff_permitted": {"const": false}
+      }
+    }
+  ],
+  "$defs": {
+    "check": {"type": "string", "enum": ["PASS", "FAIL", "NOT_APPLICABLE"]},
+    "deliveryProfile": {"type": "string", "enum": ["internal_technical", "internal_executive", "client_technical", "client_executive", "commercial"]},
+    "artifactType": {"type": "string", "enum": ["answer", "decision_brief", "architecture_deck", "commercial_case", "evidence_export"]}
+  }
+}

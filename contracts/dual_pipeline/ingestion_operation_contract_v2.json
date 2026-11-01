@@ -1,0 +1,179 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:ingestion-operation-contract:2.0.0",
+  "version": "2.0.0",
+  "description": "Canonical operation contract for multi-modality ingestion, lifecycle state separation, and invalidation rules.",
+  "modalities": [
+    "AUDIO",
+    "MEETING_TRANSCRIPT",
+    "MEETING_NOTES",
+    "DOCUMENT",
+    "MIXED_SOURCE",
+    "SELECTIVE_REGENERATION",
+    "LIVE_COPILOT"
+  ],
+  "lifecycle_states": {
+    "CAPTURING": {
+      "is_terminal": false,
+      "description": "Source audio actively spooled to PCM stream; separate from ASR readiness."
+    },
+    "ASR_READY": {
+      "is_terminal": false,
+      "description": "Local acoustic model loaded and ready to process audio segments."
+    },
+    "STOP_REQUESTED": {
+      "is_terminal": false,
+      "description": "Stop signaled to recording host; tail audio flushing in progress."
+    },
+    "CAPTURE_STOPPED": {
+      "is_terminal": false,
+      "description": "Source-bound PCM audio flushed, verified, and sealed."
+    },
+    "SEALED_PREVIEW": {
+      "is_terminal": false,
+      "description": "Interim transcript generated for live preview; not an ingestion deliverable."
+    },
+    "ATTRIBUTION_PENDING": {
+      "is_terminal": false,
+      "description": "Diarization or speaker ambiguity requires operator resolution."
+    },
+    "PACKAGE_READY": {
+      "is_terminal": false,
+      "description": "Source artifacts extracted, verified, and packaged; awaiting authorization."
+    },
+    "PARTIAL": {
+      "is_terminal": true,
+      "description": "Selective regeneration (e.g. output3-only) succeeded for requested deliverable; full artifact coverage remains partial."
+    },
+    "PUBLISHED_UNVERIFIED": {
+      "is_terminal": false,
+      "description": "Graph mutations committed to shadow/staging store; readback verification pending."
+    },
+    "COMPLETE": {
+      "is_terminal": true,
+      "description": "All modality-required deliverables produced, quality gates passed, and independent publication/coverage readback verified."
+    }
+  },
+  "independent_axes": [
+    "physical_format",
+    "semantic_modality",
+    "evidence_phase",
+    "operation_kind",
+    "requested_output_selection",
+    "required_full_output_set",
+    "source_group_membership",
+    "publication_intent"
+  ],
+  "mandatory_modality_contracts": {
+    "LIVE_RECORDING": {
+      "required_final_artifacts": ["source_pcm", "session_manifest"],
+      "dependency_and_evidence_contract": "Capture and ASR readiness separate; authoritative master audio and verified handoff on stop.",
+      "explicit_exclusions": ["document_llm_caps", "graph_publication_approval_as_capture_permission", "cloud_asr_fallback"]
+    },
+    "FINALIZED_TRANSCRIPT": {
+      "required_final_artifacts": ["01", "02", "03"],
+      "dependency_and_evidence_contract": "Validate/freeze 01, then permit 02 and 03 in parallel from that same 01; preserve source/speaker evidence.",
+      "explicit_exclusions": ["document_only_skips", "fabricated_speaker_resolution", "graph_facts_rewriting_01_02"]
+    },
+    "MEETING_NOTES": {
+      "required_final_artifacts": ["02", "03"],
+      "not_applicable_artifacts": ["01"],
+      "dependency_and_evidence_contract": "Both derive from notes; no invented verbatim transcript or timestamps.",
+      "explicit_exclusions": ["treating_notes_as_full_speech", "arbitrary_document03"]
+    },
+    "WRITTEN_DOCUMENT": {
+      "required_final_artifacts": ["03"],
+      "not_applicable_artifacts": ["01", "02"],
+      "dependency_and_evidence_contract": "Direct document evidence and locations; no forensic/recap executor.",
+      "explicit_exclusions": ["transcript_attribution_gates", "transcript_artifact_dependencies"]
+    },
+    "SELECTIVE_MEETING_REGENERATION": {
+      "required_final_artifacts": ["requested_outputs", "retained_prerequisite_artifacts"],
+      "dependency_and_evidence_contract": "Keeps original meeting modality; partial operation cannot claim all-output ingestion completion.",
+      "explicit_exclusions": ["inferring_document_from_output3_only"]
+    },
+    "MIXED_SOURCE_SET": {
+      "required_final_artifacts": ["per_source_typed_requirements", "group_completion_record"],
+      "dependency_and_evidence_contract": "Primary spoken source remains distinct from documentary attachments; each source has digest, rights, locations and coverage.",
+      "explicit_exclusions": ["flattening_mixed_sources_into_untraceable_text"]
+    },
+    "LIVE_COPILOT_QUERY": {
+      "required_final_artifacts": ["advisory_receipt"],
+      "dependency_and_evidence_contract": "Governed read-only grounding/abstention and its own operation budget.",
+      "explicit_exclusions": ["treating_interim_transcript_as_graph_publication"]
+    }
+  },
+  "dependency_invalidation_matrix": [
+    {
+      "changed_input_or_stage": "spoken_source_bytes_or_speaker_map",
+      "must_invalidate_revalidate": ["01", "02", "03", "publication_coverage"],
+      "must_preserve": ["raw_capture", "historical_receipts"]
+    },
+    {
+      "changed_input_or_stage": "frozen_accepted_01",
+      "must_invalidate_revalidate": ["02", "03", "cross_artifact_release_proof"],
+      "must_preserve": ["original_source", "source_integrity_evidence"]
+    },
+    {
+      "changed_input_or_stage": "recap_02_only",
+      "must_invalidate_revalidate": ["02", "cross_artifact_release_checks"],
+      "must_preserve": ["01", "03_when_independent_of_02"]
+    },
+    {
+      "changed_input_or_stage": "graph_03_only",
+      "must_invalidate_revalidate": ["03", "qa_judge_publication_readback"],
+      "must_preserve": ["01", "02"]
+    },
+    {
+      "changed_input_or_stage": "document_source_or_formula_values",
+      "must_invalidate_revalidate": ["document_03", "downstream_evidence"],
+      "must_preserve": ["independent_source_set_members"]
+    },
+    {
+      "changed_input_or_stage": "notes_source",
+      "must_invalidate_revalidate": ["02", "03", "notes_release_proof"],
+      "must_preserve": ["no_manufactured_01_dependency"]
+    },
+    {
+      "changed_input_or_stage": "attachment_classification_or_audience",
+      "must_invalidate_revalidate": ["affected_derived_evidence", "authorization", "release_proof"],
+      "must_preserve": ["original_capture", "unaffected_validated_stages"]
+    },
+    {
+      "changed_input_or_stage": "judge_only_policy",
+      "must_invalidate_revalidate": ["judge_quality_release_proof"],
+      "must_preserve": ["independently_bound_extraction_candidate"]
+    },
+    {
+      "changed_input_or_stage": "modality_phase_tenant_model_prompt_schema",
+      "must_invalidate_revalidate": ["all_affected_stage_bindings"],
+      "must_preserve": ["unrelated_operations", "original_immutable_evidence"]
+    }
+  ],
+  "conflicting_flags_inventory": {
+    "output3_only": {
+      "prohibited_effects": ["coercing meeting modality to DOCUMENT", "skipping 01/02 invalidation when 01 changed"],
+      "permitted_effects": ["selective regeneration of 03 deliverable while preserving MEETING modality"]
+    },
+    "skip_transcript_checks": {
+      "prohibited_effects": ["disabling gates on AUDIO or MEETING_TRANSCRIPT"],
+      "permitted_effects": ["explicitly validated DOCUMENT or MEETING_NOTES routes only"]
+    },
+    "cloud_transcription": {
+      "prohibited_effects": ["any dispatch to external cloud ASR backends; strictly zero cloud dispatch"]
+    },
+    "fast_pilot_budget": {
+      "prohibited_effects": ["capping live recording duration, local ASR chunks, diarization, or copilot"],
+      "permitted_effects": ["provisional pilot cap strictly for positively bound DOCUMENT final synthesis"]
+    }
+  },
+  "shared_surfaces_inventory": [
+    "dual_pipeline/cli",
+    "dual_pipeline/canonical_pipeline/modalities.py",
+    "dual_pipeline/canonical_pipeline/content_loader.py",
+    "dual_pipeline/document_pipeline_core",
+    "dual_pipeline/transcript_pipeline_core",
+    "dual_pipeline/live_meeting_recorder_core",
+    "dual_pipeline/feature_flags.py",
+    "dual_pipeline/cost_tracker.py"
+  ]
+}

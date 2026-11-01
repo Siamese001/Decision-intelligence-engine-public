@@ -1,0 +1,37 @@
+{
+  "artifact_id": "graph-label-candidate-fixture-001",
+  "base_graph_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "candidate_only": true,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "8c26b94424ce3d9b09afadd02c77434c3dadfb9a8b6a162a61402d810ec9a82b"
+  },
+  "contract_id": "urn:nee:dual-pipeline:graph-label-deterministic-candidate-plan:1.0.0",
+  "extensions": {},
+  "graph_mutation_count": 0,
+  "operations": [],
+  "plan_type": "graph_label_deterministic_candidate",
+  "policy": {
+    "enforcement_state": "shadow",
+    "policy_id": "nee-graph-labeling",
+    "policy_version": "1.0.0"
+  },
+  "provider_call_count": 0,
+  "quality_report_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "schema_version": "1.0.0",
+  "schema_migration": {
+    "migration_id": "0010_graph_labeling_hardening",
+    "state": "APPLY_TO_CANDIDATE"
+  },
+  "source_review_plan_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "status": "CANDIDATE_ONLY_NOT_AUTHORIZED",
+  "summary": {
+    "assertion_label_state_insert_count": 0,
+    "deterministic_operation_count": 0,
+    "evidence_label_state_insert_count": 0,
+    "excluded_hitl_required_count": 3,
+    "source_label_state_insert_count": 0
+  },
+  "mutation_authorized": true
+}

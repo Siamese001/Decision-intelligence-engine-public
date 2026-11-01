@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:storage-hygiene-report:1.0.0",
+  "title": "NEE Storage and Report Hygiene Report",
+  "description": "Sealed report detailing storage candidates, active pins, clutter analysis, and execution actions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "report_id",
+    "timestamp",
+    "mode",
+    "scheduled",
+    "policy_digest",
+    "pins",
+    "summary",
+    "canonical_digest"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:storage-hygiene-report:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "report_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["plan", "apply"]
+    },
+    "scheduled": {
+      "type": "boolean"
+    },
+    "policy_digest": {
+      "type": "string"
+    },
+    "pins": {
+      "type": "object",
+      "required": [
+        "active_generations",
+        "rollback_generations",
+        "preserved_generations",
+        "invalid_sources"
+      ],
+      "properties": {
+        "active_generations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rollback_generations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "preserved_generations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "receipt_cited_generations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "invalid_sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["path", "reason"],
+            "properties": {
+              "path": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "generations_analysis": {
+      "type": "object"
+    },
+    "transcript_cache_analysis": {
+      "type": "object"
+    },
+    "reports_clutter_analysis": {
+      "type": "object"
+    },
+    "root_clutter_analysis": {
+      "type": "object"
+    },
+    "actions": {
+      "type": "array"
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "total_candidates",
+        "total_pinned",
+        "reclaimable_bytes"
+      ],
+      "properties": {
+        "total_candidates": { "type": "integer" },
+        "total_pinned": { "type": "integer" },
+        "reclaimable_bytes": { "type": "integer" }
+      }
+    },
+    "canonical_digest": {
+      "type": "string"
+    }
+  }
+}

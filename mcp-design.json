@@ -1,0 +1,56 @@
+{
+  "protocol": "mcp",
+  "target_version": "2026-01",
+  "environment": "development",
+  "host": {"id": "nee-orchestrator", "owner": "nee-system"},
+  "server": {"id": "nee-mcp-server", "owner": "nee-system", "remote": false},
+  "transport": {"kind": "stdio", "endpoint": "python tools/nee_mcp_server.py"},
+  "capabilities": {
+    "tools": [
+      {
+        "name": "nee_intake_directive_open",
+        "description": "Open a new ingestion directive.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "directive_id": {"type": "string"}
+          },
+          "required": ["directive_id"]
+        }
+      },
+      {
+        "name": "nee_release_prepare",
+        "description": "Prepare a release for the NEE knowledge graph.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      },
+      {
+        "name": "nee_pre_mutation_gate",
+        "description": "Run the pre-mutation gate audit. Requires explicit human approval.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    ],
+    "resources": [],
+    "prompts": [],
+    "extensions": []
+  },
+  "security": {
+    "authentication": "local",
+    "authorization": "local",
+    "user_delegation": "none",
+    "scopes": ["graph:read", "graph:write"],
+    "approval_policy": "explicit_for_mutation"
+  },
+  "routing_and_scale": {"stateless": true, "gateway": "none", "caching": "none"},
+  "resilience": {"timeouts": "60s", "retries": "3", "idempotency": "strict"},
+  "observability": {"correlation": "run_recorder", "audit": "hitl_decision_ledger"},
+  "compatibility": {"supported_versions": ["2026-01"], "fallback": "explicit"},
+  "open_decisions": []
+}

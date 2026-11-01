@@ -1,0 +1,26 @@
+{
+  "name": "copilot_engagement_acceptance",
+  "description": "Copilot engagement provenance binding, boundary enforcement, and claim verification",
+  "branch": "docs/jarvis-lens-copilot-rca-plan-20261007",
+  "deterministic_tests": [],
+  "e2e_tests": [
+    "tests.test_copilot_engagement_wave1",
+    "tests.end_to_end.test_copilot_engagement_wave1_e2e",
+    "tests.adversarial.test_copilot_engagement_wave1_adversarial",
+    "tests.test_copilot_engagement_wave2",
+    "tests.end_to_end.test_copilot_engagement_wave2_e2e",
+    "tests.adversarial.test_copilot_engagement_wave2_adversarial",
+    "tests.test_copilot_engagement_wave3",
+    "tests.end_to_end.test_copilot_engagement_wave3_e2e",
+    "tests.adversarial.test_copilot_engagement_wave3_adversarial",
+    "tests.test_copilot_engagement_wave4",
+    "tests.end_to_end.test_copilot_engagement_wave4_e2e",
+    "tests.adversarial.test_copilot_engagement_wave4_adversarial",
+    "tests.test_copilot_engagement_wave5",
+    "tests.end_to_end.test_copilot_engagement_wave5_e2e",
+    "tests.adversarial.test_copilot_engagement_wave5_adversarial"
+  ],
+  "bge_tests": [],
+  "e2e_exempt": false,
+  "created_at": "2026-10-07T15:30:00Z"
+}

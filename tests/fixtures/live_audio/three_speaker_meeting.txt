@@ -1,0 +1,6 @@
+[00:00] Samantha: Welcome to the technical alignment call. We have Daniel and Fred on the line.
+[00:05] Daniel: Thanks Samantha. I have finalized the core audio capture pipeline updates.
+[00:10] Fred: And on the infrastructure side, the isolated test runner and memory gates are qualified.
+[00:17] Samantha: Great progress. Daniel, how does the CoreAudio thread handle Bluetooth dropouts?
+[00:22] Daniel: The watchdog intercepts stalls within two hundred milliseconds and triggers fallback.
+[00:28] Fred: That matches our deployment specification. We are ready to proceed.

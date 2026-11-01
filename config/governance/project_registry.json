@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-10-18T05:40:00Z",
+  "domains": {
+    "NEA": {
+      "name": "Apex Global Analytics & Intelligent Automation",
+      "workstreams": {
+        "nea_dociq": {
+          "short_id": "dociq",
+          "display_name": "Documentum AI & Intelligent Extraction",
+          "aliases": [
+            "dociq",
+            "project dociq",
+            "project_dociq",
+            "nea dociq",
+            "pgd dociq"
+          ]
+        },
+        "nea_project_lens": {
+          "short_id": "project_lens",
+          "display_name": "Visual Asset OCR & Inspection",
+          "aliases": [
+            "lens",
+            "project lens",
+            "project_lens"
+          ]
+        },
+        "nea_project_jarvis": {
+          "short_id": "project_jarvis",
+          "display_name": "Developer & Capital Delivery Copilot",
+          "aliases": [
+            "jarvis",
+            "project jarvis",
+            "project_jarvis",
+            "project jarvis",
+            "project_jarvis"
+          ]
+        },
+        "nea_project_nexus": {
+          "short_id": "project_nexus",
+          "display_name": "Apex Global Analytics Platform Delivery",
+          "aliases": [
+            "nexus",
+            "project nexus",
+            "project_nexus",
+            "project nexus",
+            "project_nexus"
+          ]
+        },
+        "nea_conduit": {
+          "short_id": "conduit",
+          "display_name": "P&C Field Assistant & Conduit",
+          "aliases": [
+            "conduit"
+          ]
+        },
+        "nea_regai": {
+          "short_id": "regai",
+          "display_name": "Regulatory AI & Fault Code DB",
+          "aliases": [
+            "regai",
+            "fcdb"
+          ]
+        },
+        "nea_ec_scheduling": {
+          "short_id": "ec_scheduling",
+          "display_name": "Nuclear E&C Scheduling",
+          "aliases": [
+            "ec scheduling",
+            "ec_scheduling",
+            "scheduling"
+          ]
+        }
+      }
+    },
+    "EDO": {
+      "name": "Enterprise Data Office",
+      "workstreams": {
+        "edo_project_spring": {
+          "short_id": "project_spring",
+          "display_name": "SPRING Platform",
+          "aliases": [
+            "spring",
+            "project spring",
+            "project_spring"
+          ]
+        },
+        "edo_data1": {
+          "short_id": "edo",
+          "display_name": "Data1 / EDO Activation",
+          "aliases": [
+            "edo",
+            "enterprise data organization",
+            "enterprise data office"
+          ]
+        }
+      }
+    },
+    "APEX_TRANS": {
+      "name": "Apex Energy Transmission",
+      "workstreams": {
+        "neet_insights_hub": {
+          "short_id": "apex_trans",
+          "display_name": "Transmission Insights Hub & SCADA/ROCC",
+          "aliases": [
+            "apex_trans",
+            "insights hub",
+            "insights_hub",
+            "apex_trans insights hub"
+          ]
+        }
+      }
+    },
+    "NEE_IT": {
+      "name": "Enterprise Architecture, AI Hub & Infra",
+      "workstreams": {
+        "nee_it_project_beacon": {
+          "short_id": "project_beacon",
+          "display_name": "Project Beacon",
+          "aliases": [
+            "project_sherpa",
+            "sherpa",
+            "Project Beacon",
+            "project_beacon"
+          ]
+        },
+        "nee_it_enterprise_architecture": {
+          "short_id": "enterprise_architecture",
+          "display_name": "Enterprise Architecture",
+          "aliases": [
+            "enterprise architecture",
+            "enterprise_architecture",
+            "ea"
+          ]
+        },
+        "nee_it_infrastructure_automation": {
+          "short_id": "infrastructure_automation",
+          "display_name": "Infrastructure Automation",
+          "aliases": [
+            "infrastructure automation",
+            "infrastructure_automation",
+            "enterprise infrastructure automation"
+          ]
+        },
+        "nee_it_gemini_enablement": {
+          "short_id": "gemini_enablement",
+          "display_name": "Gemini Enablement",
+          "aliases": [
+            "gemini enablement",
+            "gemini_enablement",
+            "gemini"
+          ]
+        },
+        "nee_it_bmo": {
+          "short_id": "bmo",
+          "display_name": "Business Management Office",
+          "aliases": [
+            "bmo",
+            "business management office",
+            "business mgmt"
+          ]
+        },
+        "nee_it_hrit": {
+          "short_id": "hrit",
+          "display_name": "HR IT & ENTERPRISE4U Employee Experience",
+          "aliases": [
+            "hrit",
+            "hr it",
+            "hr_it",
+            "enterprise4u",
+            "nee 4u",
+            "hr360"
+          ]
+        }
+      }
+    },
+    "ENTERPRISE_OPS": {
+      "name": "Project Atlas & Grid Transformation",
+      "workstreams": {
+        "project_atlas": {
+          "short_id": "project_atlas",
+          "display_name": "Project Atlas",
+          "aliases": [
+            "rewire",
+            "project atlas",
+            "project_atlas"
+          ]
+        }
+      }
+    },
+    "INTERNAL_CONSULTING": {
+      "name": "Account Planning & Alliances",
+      "workstreams": {
+        "internal_consulting_enterprise_account_planning": {
+          "short_id": "enterprise_account_planning",
+          "display_name": "Enterprise Account Planning",
+          "aliases": [
+            "florida account planning",
+            "enterprise_account_planning"
+          ]
+        },
+        "internal_consulting_partner_alliances": {
+          "short_id": "partner_alliances",
+          "display_name": "Partner Alliances (Google/GCP & AWS)",
+          "aliases": [
+            "partner_alliances",
+            "partner alliances",
+            "alliances",
+            "partner gcp",
+            "partner_gcp",
+            "partner google",
+            "partner_google",
+            "gcp partner",
+            "google partner",
+            "partner sync"
+          ]
+        },
+        "internal_consulting_general": {
+          "short_id": "internal_consulting",
+          "display_name": "Internal Consulting Operations",
+          "aliases": [
+            "internal partner_advisory",
+            "internal_consulting",
+            "partner_advisory"
+          ]
+        }
+      }
+    },
+    "MARKET_INTELLIGENCE": {
+      "name": "External Sector & Regulatory",
+      "workstreams": {
+        "market_intelligence_weekly": {
+          "short_id": "market_intelligence",
+          "display_name": "Market Intelligence & Weekly Trends",
+          "aliases": [
+            "market_intelligence",
+            "market intelligence",
+            "market_intel",
+            "market intel",
+            "weekly trends",
+            "weekly_trends",
+            "energy utilities",
+            "energy_utilities",
+            "energy and utilities",
+            "energy and utilities trends",
+            "energy & utilities",
+            "energy & utilities trends",
+            "market trends"
+          ]
+        }
+      }
+    }
+  },
+  "known_projects": [
+    "bmo",
+    "conduit",
+    "project_beacon",
+    "dociq",
+    "ec_scheduling",
+    "edo",
+    "enterprise_architecture",
+    "enterprise_account_planning",
+    "project_atlas",
+    "gemini_enablement",
+    "hrit",
+    "infrastructure_automation",
+    "internal_consulting",
+    "market_intelligence",
+    "nea",
+    "apex_trans",
+    "partner_alliances",
+    "project_jarvis",
+    "project_lens",
+    "project_nea",
+    "project_nexus",
+    "project_spring",
+    "regai"
+  ],
+  "project_aliases": {
+    "alliances": "partner_alliances",
+    "bmo": "bmo",
+    "business management": "bmo",
+    "business management office": "bmo",
+    "business management office (bmo)": "bmo",
+    "business mgmt": "bmo",
+    "conduit": "conduit",
+    "Project Beacon": "project_beacon",
+    "project_beacon": "project_beacon",
+    "dociq": "dociq",
+    "ea": "enterprise_architecture",
+    "ec scheduling": "ec_scheduling",
+    "ec_scheduling": "ec_scheduling",
+    "edo": "edo",
+    "edo_data1": "edo",
+    "edo_project_spring": "project_spring",
+    "energy & utilities": "market_intelligence",
+    "energy & utilities trends": "market_intelligence",
+    "energy and utilities": "market_intelligence",
+    "energy and utilities trends": "market_intelligence",
+    "energy utilities": "market_intelligence",
+    "energy_utilities": "market_intelligence",
+    "enterprise architecture": "enterprise_architecture",
+    "enterprise data office": "edo",
+    "enterprise data office (edo)": "edo",
+    "enterprise data organization": "edo",
+    "enterprise data organization (edo)": "edo",
+    "enterprise_architecture": "enterprise_architecture",
+    "fcdb": "regai",
+    "florida account planning": "enterprise_account_planning",
+    "enterprise_account_planning": "enterprise_account_planning",
+    "enterprise infrastructure automation": "infrastructure_automation",
+    "project jarvis": "project_jarvis",
+    "project nexus": "project_nexus",
+    "project atlas": "project_atlas",
+    "project_jarvis": "project_jarvis",
+    "project_nexus": "project_nexus",
+    "project_atlas": "project_atlas",
+    "gcp partner": "partner_alliances",
+    "gemini": "gemini_enablement",
+    "gemini enablement": "gemini_enablement",
+    "gemini_enablement": "gemini_enablement",
+    "google partner": "partner_alliances",
+    "hr it": "hrit",
+    "hr360": "hrit",
+    "hr_it": "hrit",
+    "hrit": "hrit",
+    "infrastructure automation": "infrastructure_automation",
+    "infrastructure_automation": "infrastructure_automation",
+    "insights hub": "apex_trans",
+    "insights_hub": "apex_trans",
+    "internal partner_advisory": "internal_consulting",
+    "internal_consulting": "internal_consulting",
+    "internal_consulting_enterprise_account_planning": "enterprise_account_planning",
+    "internal_consulting_general": "internal_consulting",
+    "internal_consulting_partner_alliances": "partner_alliances",
+    "jarvis": "project_jarvis",
+    "lens": "project_lens",
+    "market intel": "market_intelligence",
+    "market intelligence": "market_intelligence",
+    "market trends": "market_intelligence",
+    "market_intel": "market_intelligence",
+    "market_intelligence": "market_intelligence",
+    "market_intelligence_weekly": "market_intelligence",
+    "nea": "nea",
+    "nea conduit": "conduit",
+    "nea dociq": "dociq",
+    "nea jarvis": "project_jarvis",
+    "nea lens": "project_lens",
+    "nea nexus": "project_nexus",
+    "nea regai": "regai",
+    "nea_conduit": "conduit",
+    "nea_dociq": "dociq",
+    "nea_ec_scheduling": "ec_scheduling",
+    "nea_project_jarvis": "project_jarvis",
+    "nea_project_lens": "project_lens",
+    "nea_project_nexus": "project_nexus",
+    "nea_regai": "regai",
+    "nee 4u": "hrit",
+    "enterprise4u": "hrit",
+    "nee_it_bmo": "bmo",
+    "nee_it_project_beacon": "project_beacon",
+    "nee_it_enterprise_architecture": "enterprise_architecture",
+    "nee_it_gemini_enablement": "gemini_enablement",
+    "nee_it_hrit": "hrit",
+    "nee_it_infrastructure_automation": "infrastructure_automation",
+    "apex_trans": "apex_trans",
+    "apex_trans insights hub": "apex_trans",
+    "neet_insights_hub": "apex_trans",
+    "nexus": "project_nexus",
+    "partner alliances": "partner_alliances",
+    "partner sync": "partner_alliances",
+    "partner_alliances": "partner_alliances",
+    "pgd dociq": "dociq",
+    "project dociq": "dociq",
+    "project lens": "project_lens",
+    "project nea": "nea",
+    "project sherpa": "project_beacon",
+    "project spring": "project_spring",
+    "project_dociq": "dociq",
+    "project_lens": "project_lens",
+    "project_nea": "nea",
+    "project_sherpa": "project_beacon",
+    "project_spring": "project_spring",
+    "regai": "regai",
+    "rewire": "project_atlas",
+    "scheduling": "ec_scheduling",
+    "sherpa": "project_beacon",
+    "partner_advisory": "internal_consulting",
+    "partner gcp": "partner_alliances",
+    "partner google": "partner_alliances",
+    "partner_gcp": "partner_alliances",
+    "partner_google": "partner_alliances",
+    "spring": "project_spring",
+    "weekly trends": "market_intelligence",
+    "weekly_trends": "market_intelligence"
+  }
+}

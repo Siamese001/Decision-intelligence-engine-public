@@ -1,0 +1,371 @@
+"""Core index subpackage re-exports."""
+
+from __future__ import annotations
+
+import copy
+import json
+import math
+import os
+import re
+import struct
+from collections import Counter, defaultdict
+from functools import lru_cache
+from pathlib import Path
+from typing import Any, Iterable, Protocol
+
+import numpy as np
+
+from dual_pipeline.assurance import (
+    DEFAULT_INTERNAL_OPERATIONAL_POLICY,
+    DEVELOPMENT,
+    ENTERPRISE_PRODUCTION,
+    INTERNAL_OPERATIONAL,
+    backend_assurance_tier,
+    load_internal_operational_policy,
+    policy_digest,
+    validate_internal_backend_policy,
+)
+from dual_pipeline.contracts import create_artifact, validate_artifact
+from dual_pipeline.core import (
+    ROOT,
+    connect_sqlite,
+    digest,
+    is_link_or_reparse,
+    normalize_iso_date,
+    normalize_space,
+    read_json,
+    sha256_bytes,
+    sha256_file,
+    sqlite_integrity,
+    stable_id,
+    utc_now,
+)
+from dual_pipeline.label_quality import canonicalize_audiences
+from dual_pipeline.retrieval_clearance import retrieval_clearance
+from dual_pipeline.strategic_reasoning import (
+    answer_use_for_profile,
+    explicit_strategic_profile,
+)
+
+from .anchor_expansion import (
+    AnchorExpandingRetriever,
+    expand_retrieval_anchors,
+)
+from .backends import (
+    DevelopmentFlagEmbeddingBackend,
+    EmbeddingBackend,
+    FlagEmbeddingBackend,
+    InternalOperationalFlagEmbeddingBackend,
+    _resolve_embedding_device,
+    _resolve_embedding_fp16,
+    get_backend,
+    validate_bge_model_manifest,
+)
+from .constants import (
+    _SHA256_PATTERN,
+    APPROVED_VALIDATION_STATES,
+    ARTIFACT_ID_PATTERN,
+    BGE_M3_MODEL_POLICY,
+    BM25_RRF_WEIGHTS,
+    STRATEGIC_BM25_RRF_WEIGHTS,
+    CLASSIFICATION_RANK,
+    COLBERT_DIMENSIONS,
+    DENSE_DIMENSIONS,
+    EMBEDDING_BATCH_SIZE,
+    ENTITY_FACET_MAX_ASSERTION_TEXT_CHARACTERS,
+    ENTITY_FACET_MAX_ASSERTIONS,
+    ENTITY_FACET_MAX_TEXT_CHARACTERS,
+    ENTITY_FACET_RETRIEVAL_MODES,
+    HYBRID_RETRIEVAL_POLICY,
+    HYBRID_RETRIEVAL_POLICY_DIGEST,
+    LEGACY_DEFAULT_RETRIEVAL_MODE_BY_LANES,
+    LEGACY_RRF_WEIGHTS,
+    MAX_COLBERT_TOKENS,
+    MAX_EXACT_ANCHOR_INJECTIONS_PER_LANE,
+    MAX_EXACT_ENTITY_TITLE_MATCHES_PER_LANE,
+    OBJECT_FACET_METADATA_KEYS,
+    OBJECT_FACET_SCHEMA_VERSION,
+    RETRIEVAL_KIND_BY_RECORD_TYPE,
+    RETRIEVAL_METADATA_FIELDS,
+    RETRIEVAL_METADATA_SCHEMA_VERSION,
+    RETRIEVAL_MODE_POLICY,
+    SIDECAR_SCHEMA,
+    _pack,
+    _unpack,
+)
+from .edge_verbalisation import (
+    PREDICATE_VERBALISATIONS,
+    REGISTRY_PREDICATES,
+    REVERSE_PREDICATE_PHRASES,
+    canonicalize_predicate,
+    compute_near_duplicate_share,
+    render_edge_lexical_fields,
+    render_edge_text_v0,
+    render_edge_text_v1,
+    render_edge_text_v2,
+    render_edge_text_v3,
+    verify_no_classification_widening,
+)
+from .eligibility import classify_retrieval_eligibility
+from .embedding_space_contract import (
+    EmbeddingSpaceMismatch,
+    assert_query_vector_contract,
+    build_query_cache_key,
+    validate_embedding_space_contract,
+)
+from .filters import (
+    _dot,
+    _exact_entity_title_matches,
+    _record_ids_matching_object_facets,
+    _record_is_in_assertion_scope,
+    normalize_assertion_scope,
+    normalize_object_facet_filters,
+)
+from .taxonomy_filter import (
+    classify_entity_taxonomy,
+    filter_by_taxonomy_lane,
+    partition_graph_nodes,
+)
+from .geometry import (
+    compute_geometry_metrics,
+    compute_margin_tie_rates,
+    unpack_float32,
+)
+from .policy import (
+    classify_policy_proposition_eligibility,
+    load_semantic_unit_policy,
+    project_policy_reachability,
+    verify_policy_ledger_alignment,
+)
+from .predicate_typer import (
+    PredicateTypingResult,
+    evaluate_typer_accuracy,
+    type_query_predicate,
+)
+from .reachability_audit import (
+    audit_semantic_units_and_reachability,
+    format_reachability_report,
+)
+from .records import (
+    _audiences,
+    _bounded_entity_facet_text,
+    _classification,
+    _contract_reference,
+    render_entity_facet_records,
+    render_retrieval_record_object_facets,
+    render_retrieval_records,
+    resolve_retrieval_mode,
+    retrieval_metadata_for_record,
+    retrieval_metadata_from_artifact,
+    retrieval_record_type_for_assertion,
+)
+from .retriever import HybridRetriever
+from .retriever_cache import (
+    BoundedLRUDict,
+    GenerationalRetrieverCache,
+    PrePaddedColbertCache,
+    cached_retriever,
+    get_global_retriever_cache,
+)
+from .shadow import (
+    build_shadow_unit_index,
+    evaluate_shadow_geometry,
+)
+from .shadow_eval import (
+    build_index_b_sidecar,
+    compute_index_b_margin_tie_rates,
+    run_shadow_index_comparison,
+    verify_edge_fact_reachability,
+)
+from .sidecar import (
+    _cached_sidecar_validation,
+    _validate_sidecar_uncached,
+    build_sidecar,
+    validate_sidecar,
+)
+from .sidecar_validation import (
+    ALLOWED_SEMANTIC_UNIT_TYPES,
+    FORBIDDEN_SEMANTIC_UNIT_TYPES,
+    run_extended_sidecar_invariants,
+)
+from .sparse_index import (
+    LaneSparseIndex,
+    SparseIndexCache,
+    get_global_sparse_index_cache,
+)
+from .unit_renderers import (
+    render_entity_profile_records,
+    render_evidence_passage_records,
+    render_proposition_records,
+)
+from .v0_audit import verify_v0_fact_reachability
+from .vector_staging import (
+    copy_staged_vectors,
+    encode_and_stage_records,
+    init_vector_staging_db,
+    inspect_staging_store,
+    stage_encoded_vectors,
+)
+
+__all__ = (
+    "APPROVED_VALIDATION_STATES",
+    "ARTIFACT_ID_PATTERN",
+    "Any",
+    "BGE_M3_MODEL_POLICY",
+    "BM25_RRF_WEIGHTS",
+    "STRATEGIC_BM25_RRF_WEIGHTS",
+    "BoundedLRUDict",
+    "CLASSIFICATION_RANK",
+    "COLBERT_DIMENSIONS",
+    "Counter",
+    "DEFAULT_INTERNAL_OPERATIONAL_POLICY",
+    "DENSE_DIMENSIONS",
+    "DEVELOPMENT",
+    "DevelopmentFlagEmbeddingBackend",
+    "EMBEDDING_BATCH_SIZE",
+    "ENTERPRISE_PRODUCTION",
+    "ENTITY_FACET_MAX_ASSERTIONS",
+    "ENTITY_FACET_MAX_ASSERTION_TEXT_CHARACTERS",
+    "ENTITY_FACET_MAX_TEXT_CHARACTERS",
+    "ENTITY_FACET_RETRIEVAL_MODES",
+    "EmbeddingBackend",
+    "FlagEmbeddingBackend",
+    "GenerationalRetrieverCache",
+    "HYBRID_RETRIEVAL_POLICY",
+    "HYBRID_RETRIEVAL_POLICY_DIGEST",
+    "HybridRetriever",
+    "INTERNAL_OPERATIONAL",
+    "InternalOperationalFlagEmbeddingBackend",
+    "Iterable",
+    "LEGACY_DEFAULT_RETRIEVAL_MODE_BY_LANES",
+    "LEGACY_RRF_WEIGHTS",
+    "LaneSparseIndex",
+    "PrePaddedColbertCache",
+    "MAX_COLBERT_TOKENS",
+    "MAX_EXACT_ANCHOR_INJECTIONS_PER_LANE",
+    "MAX_EXACT_ENTITY_TITLE_MATCHES_PER_LANE",
+    "OBJECT_FACET_METADATA_KEYS",
+    "OBJECT_FACET_SCHEMA_VERSION",
+    "Path",
+    "Protocol",
+    "RETRIEVAL_KIND_BY_RECORD_TYPE",
+    "RETRIEVAL_METADATA_FIELDS",
+    "RETRIEVAL_METADATA_SCHEMA_VERSION",
+    "RETRIEVAL_MODE_POLICY",
+    "ROOT",
+    "SIDECAR_SCHEMA",
+    "SparseIndexCache",
+    "_SHA256_PATTERN",
+    "_audiences",
+    "_bounded_entity_facet_text",
+    "_cached_sidecar_validation",
+    "_classification",
+    "_contract_reference",
+    "_dot",
+    "_exact_entity_title_matches",
+    "_pack",
+    "_record_ids_matching_object_facets",
+    "_record_is_in_assertion_scope",
+    "_resolve_embedding_device",
+    "_resolve_embedding_fp16",
+    "_unpack",
+    "_validate_sidecar_uncached",
+    "annotations",
+    "answer_use_for_profile",
+    "audit_semantic_units_and_reachability",
+    "backend_assurance_tier",
+    "build_shadow_unit_index",
+    "build_sidecar",
+    "cached_retriever",
+    "canonicalize_audiences",
+    "classify_policy_proposition_eligibility",
+    "classify_retrieval_eligibility",
+    "compute_geometry_metrics",
+    "compute_margin_tie_rates",
+    "connect_sqlite",
+    "copy",
+    "create_artifact",
+    "defaultdict",
+    "digest",
+    "evaluate_shadow_geometry",
+    "explicit_strategic_profile",
+    "format_reachability_report",
+    "get_backend",
+    "get_global_retriever_cache",
+    "get_global_sparse_index_cache",
+    "is_link_or_reparse",
+    "json",
+    "load_internal_operational_policy",
+    "load_semantic_unit_policy",
+    "lru_cache",
+    "math",
+    "normalize_assertion_scope",
+    "normalize_iso_date",
+    "normalize_object_facet_filters",
+    "normalize_space",
+    "np",
+    "os",
+    "policy_digest",
+    "project_policy_reachability",
+    "re",
+    "read_json",
+    "render_entity_facet_records",
+    "render_entity_profile_records",
+    "render_evidence_passage_records",
+    "render_proposition_records",
+    "render_retrieval_record_object_facets",
+    "render_retrieval_records",
+    "resolve_retrieval_mode",
+    "retrieval_clearance",
+    "retrieval_metadata_for_record",
+    "retrieval_metadata_from_artifact",
+    "retrieval_record_type_for_assertion",
+    "sha256_bytes",
+    "sha256_file",
+    "sqlite_integrity",
+    "stable_id",
+    "struct",
+    "unpack_float32",
+    "utc_now",
+    "validate_artifact",
+    "validate_bge_model_manifest",
+    "validate_internal_backend_policy",
+    "verify_policy_ledger_alignment",
+    "AnchorExpandingRetriever",
+    "build_index_b_sidecar",
+    "compute_index_b_margin_tie_rates",
+    "expand_retrieval_anchors",
+    "run_shadow_index_comparison",
+    "verify_edge_fact_reachability",
+    "validate_sidecar",
+    "ALLOWED_SEMANTIC_UNIT_TYPES",
+    "FORBIDDEN_SEMANTIC_UNIT_TYPES",
+    "run_extended_sidecar_invariants",
+    "verify_v0_fact_reachability",
+    "EmbeddingSpaceMismatch",
+    "assert_query_vector_contract",
+    "build_query_cache_key",
+    "validate_embedding_space_contract",
+    "PREDICATE_VERBALISATIONS",
+    "REGISTRY_PREDICATES",
+    "REVERSE_PREDICATE_PHRASES",
+    "canonicalize_predicate",
+    "compute_near_duplicate_share",
+    "render_edge_lexical_fields",
+    "render_edge_text_v0",
+    "render_edge_text_v1",
+    "render_edge_text_v2",
+    "render_edge_text_v3",
+    "verify_no_classification_widening",
+    "PredicateTypingResult",
+    "evaluate_typer_accuracy",
+    "type_query_predicate",
+    "classify_entity_taxonomy",
+    "filter_by_taxonomy_lane",
+    "partition_graph_nodes",
+    "init_vector_staging_db",
+    "inspect_staging_store",
+    "stage_encoded_vectors",
+    "encode_and_stage_records",
+    "copy_staged_vectors",
+)

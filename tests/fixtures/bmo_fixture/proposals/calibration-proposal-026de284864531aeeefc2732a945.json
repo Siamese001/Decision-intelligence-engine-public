@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-026de284864531aeeefc2732a945",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "3b08f9cf2521628299d6c326ef7a8088cb8ec56799ea9d398ba639da0e7e5d10"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-1fe3ff3dbf09fc7308521518"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Media 1791323172758 is an identified technical_anchor in 20261006 Lens Internal Debrief.",
+      "proposed_value": "Media 1791323172758 is an identified technical_anchor in Unknown.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-df5683700feb5a71a8696fbbcc5d"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-44367bcdbe4c80618804e8c81f4e",
+      "assertion_id_older": "assertion-df5683700feb5a71a8696fbbcc5d",
+      "confidence_coexist": 0.45,
+      "confidence_supersede": 0.55,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": true,
+      "margin_delta": 0.1,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-08e20e4639c532394a58f701953f",
+      "timestamp_newer": "2026-10-06",
+      "timestamp_older": "2026-10-06"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Media 1791323172758' (HAS_CLAIM_TEXT). Older claim from 2026-10-06 superseded by newer claim from 2026-10-06.",
+  "proposal_id": "calibration-proposal-026de284864531aeeefc2732a945",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-df5683700feb5a71a8696fbbcc5d from Media 1791323172758 is an identified technical_anchor in 20261006 Lens Internal Debrief. to Media 1791323172758 is an identified technical_anchor in Unknown.. Requires governed approval before release.",
+  "risk": "medium",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

@@ -1,0 +1,31 @@
+version: "1.0.0"
+governance_initiative: "NEE-KG-DUAL-PIPELINE-01"
+
+streaming_benchmarks:
+  target_p50_ms: 80.0
+  target_p95_ms: 220.0
+  hard_ceiling_p95_ms: 250.0  # Mandatory SLA
+  components:
+    audio_chunking_ms: 25.0
+    dsp_normalization_ms: 15.0
+    local_stt_inference_ms: 120.0
+    speaker_stitching_ms: 30.0
+    bridge_handoff_ms: 10.0
+
+retrieval_benchmarks:
+  target_p50_ms: 3200.0
+  target_p95_ms: 6800.0
+  hard_ceiling_p95_ms: 7500.0  # Mandatory SLA
+  components:
+    policy_filtering_ms: 40.0
+    dense_vector_search_ms: 1800.0
+    sparse_weight_search_ms: 800.0
+    bm25_lexical_search_ms: 400.0
+    colbert_late_interaction_ms: 2200.0
+    rrf_fusion_and_ranking_ms: 250.0
+    evidence_pack_assembly_ms: 150.0
+
+concurrency_targets:
+  max_concurrent_workers: 16
+  sqlite_wal_busy_timeout_ms: 30000
+  zero_lock_contention_target: true

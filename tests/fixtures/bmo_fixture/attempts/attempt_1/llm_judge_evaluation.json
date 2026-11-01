@@ -1,0 +1,102 @@
+{
+  "rubric_version": "2.0",
+  "mode": "document",
+  "evaluator_model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "requested_model": "gpt-6-luna",
+  "requested_reasoning_effort": "high",
+  "fast_judge": false,
+  "execution": {
+    "requested_model": "gpt-6-luna",
+    "requested_effort": "high",
+    "effective_model": "gpt-6-luna",
+    "effective_effort": "high",
+    "model_identity": "response",
+    "status": "COMPLETED"
+  },
+  "extraction_execution": {
+    "status": "COMPLETED",
+    "provider_type": "llm",
+    "requested_model": "gpt-6-luna",
+    "requested_effort": "high",
+    "declared_revision": null,
+    "effective_model": "gpt-6-luna",
+    "effective_effort": "high",
+    "resolved_model": "gpt-6-luna",
+    "dispatched_model": "gpt-6-luna",
+    "observed_model": "gpt-6-luna",
+    "evidence_strength": "OBSERVED_RESPONSE",
+    "model_identity": "response",
+    "operation": "extraction"
+  },
+  "status": "PASS",
+  "output_1_evaluation": {
+    "status": "SKIPPED",
+    "composite_score": 100,
+    "verdict": "PASS",
+    "reason": "NOT_APPLICABLE_DOCUMENT_MODE"
+  },
+  "output_2_evaluation": {
+    "status": "SKIPPED",
+    "composite_score": 100,
+    "verdict": "PASS",
+    "reason": "NOT_APPLICABLE_DOCUMENT_MODE"
+  },
+  "output_3_evaluation": {
+    "meeting_archetype": "DOCUMENT_MODE",
+    "dimension_1_strategic_edge": 15,
+    "dimension_2_knowledge_layer_density": 15,
+    "dimension_3_semantic_atomicity": 20,
+    "dimension_4_predicate_specificity": 15,
+    "dimension_5_exclusion_of_action_items": 15,
+    "dimension_6_evidence_grounding_and_schema": 16,
+    "composite_score": 96,
+    "verdict": "PASS",
+    "clarification_candidates": [],
+    "forensic_rationale": "GENERAL is normalized to STRATEGIC_DISCOVERY, the closest permitted archetype for this organizational roster. The projection captures the listed people and roles, uses canonical HAS_ROLE predicates, and contains no action items. Dimension 6 deductions reflect the unsupported expansion of \u201cBusiness Mgmt\u201d to \u201cBusiness Management Office\u201d and the unsupported attribution of the document entries to Chad Aussprung as speaker. The composite exceeds the production threshold and all dimension floors.",
+    "defect_codes": [
+      "ERR_UNGROUNDED_MUTATION",
+      "ERR_UNSUPPORTED_SPEAKER_ATTRIBUTION"
+    ],
+    "actionable_remediation_diff": "",
+    "grounding_citations": [
+      "No timestamp or speaker is provided in the reference. Offsets 23\u201377: \u201cAussprung, Chad / Executive Director Business Management.\u201d",
+      "No timestamp or speaker is provided in the reference. Offsets 78\u2013111: \u201cBeebe, James / Director Product R&D.\u201d",
+      "No timestamp or speaker is provided in the reference. Offsets 112\u2013125: \u201cBusiness Mgmt.\u201d",
+      "No timestamp or speaker is provided in the reference. Offsets 162\u2013681 contain the listed IT personnel and their role labels."
+    ],
+    "raw_judge_scorecard": {
+      "dimension_1_strategic_edge": 15,
+      "dimension_2_knowledge_layer_density": 15,
+      "dimension_3_semantic_atomicity": 20,
+      "dimension_4_predicate_specificity": 15,
+      "dimension_5_exclusion_of_action_items": 15,
+      "dimension_6_evidence_grounding_and_schema": 16,
+      "composite_score": 96,
+      "verdict": "PASS"
+    },
+    "execution": {
+      "requested_model": "gpt-6-luna",
+      "requested_effort": "high",
+      "effective_model": "gpt-6-luna",
+      "effective_effort": "high",
+      "model_identity": "response",
+      "status": "COMPLETED"
+    },
+    "effective_provider": "openai",
+    "effective_model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "latency_seconds": 38.3219,
+    "is_provider_fallback": false,
+    "evaluated_span_complete": true,
+    "evaluated_span_coverage": 1.0
+  },
+  "cross_artifact_reconciliation": {
+    "status": "SKIPPED",
+    "passed": true,
+    "reason": "NOT_APPLICABLE_DOCUMENT_MODE"
+  },
+  "overall_rubric_summary": "Document mode graph extraction judge: Output 3 score=96, verdict=PASS.",
+  "aggregate_composite_score": 96.0,
+  "evaluation_receipt_digest": "fcfefd2ad843757fdd3da707460d89aa1e559c5e8c19d41a27ac9e0eb93e5e64"
+}

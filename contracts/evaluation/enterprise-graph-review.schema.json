@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:enterprise-graph-review:1.0.0",
+  "title": "Enterprise Graph Strategic Architecture Review Receipt ($1.2M Exoskeleton Benchmark)",
+  "description": "Standalone strategic governance audit evaluating canonical knowledge graph projections across the 10 dimensions of the Executive Cognitive Exoskeleton.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evaluated_at",
+    "maturity_band",
+    "composite_score",
+    "dimension_scores",
+    "executive_summary",
+    "strategic_recommendations",
+    "canonical_mutation"
+  ],
+  "properties": {
+    "_reasoning": {
+      "type": "string",
+      "description": "Chain of thought analysis across the 10 strategic intelligence dimensions."
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "enterprise-graph-review-1.0"
+    },
+    "evaluated_at": {
+      "type": "string",
+      "description": "ISO-8601 timestamp of evaluation completion."
+    },
+    "maturity_band": {
+      "type": "string",
+      "enum": [
+        "Level 1 (Tactical Logging)",
+        "Level 2 (Diagnostic)",
+        "Level 3 (Contextual)",
+        "Level 4 (Strategic Co-Pilot)",
+        "Level 5 (Executive Exoskeleton)"
+      ]
+    },
+    "composite_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "dimension_scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dimension_1_business_capability_depth",
+        "dimension_2_multi_hop_latent_linkage",
+        "dimension_3_cross_silo_contradiction_detection",
+        "dimension_4_dual_audience_consulting_leverage",
+        "dimension_5_conways_law_organizational_topology",
+        "dimension_6_ingestion_signal_fidelity_alpha",
+        "dimension_7_bi_temporal_rigor_provider_free",
+        "dimension_8_dialectical_decision_intelligence",
+        "dimension_9_board_level_synthesis_next_best_action",
+        "dimension_10_multi_client_federation_scalability"
+      ],
+      "properties": {
+        "dimension_1_business_capability_depth": {"type": "integer", "minimum": 0, "maximum": 10},
+        "dimension_2_multi_hop_latent_linkage": {"type": "integer", "minimum": 0, "maximum": 10},
+        "dimension_3_cross_silo_contradiction_detection": {"type": "integer", "minimum": 0, "maximum": 10},
+        "dimension_4_dual_audience_consulting_leverage": {"type": "integer", "minimum": 0, "maximum": 10},
+        "dimension_5_conways_law_organizational_topology": {"type": "integer", "minimum": 0, "maximum": 10},
+        "dimension_6_ingestion_signal_fidelity_alpha": {"type": "integer", "minimum": 0, "maximum": 10},
+        "dimension_7_bi_temporal_rigor_provider_free": {"type": "integer", "minimum": 0, "maximum": 10},
+        "dimension_8_dialectical_decision_intelligence": {"type": "integer", "minimum": 0, "maximum": 10},
+        "dimension_9_board_level_synthesis_next_best_action": {"type": "integer", "minimum": 0, "maximum": 10},
+        "dimension_10_multi_client_federation_scalability": {"type": "integer", "minimum": 0, "maximum": 10}
+      }
+    },
+    "executive_summary": {
+      "type": "string"
+    },
+    "strategic_recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "canonical_mutation": {
+      "type": "boolean",
+      "const": false
+    }
+  }
+}

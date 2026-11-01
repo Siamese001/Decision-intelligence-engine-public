@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-09-21T19:00:00Z",
+  "approved_models": {
+    "openai": [
+      "gpt-6.1-sol",
+      "gpt-6-sol",
+      "gpt-6-luna",
+      "gpt-5.6-sol",
+      "gpt-5.6-terra",
+      "gpt-5.6-luna"
+    ],
+    "google": [
+      "gemini-3.5-flash-lite",
+      "gemini-3.8-flash"
+    ],
+    "local": [
+      "bge-m3",
+      "BAAI/bge-m3",
+      "mlx-community/whisper-large-v3-mlx",
+      "large-v3",
+      "pyannote/speaker-diarization-3.1",
+      "qwen_2_5_14b_instruct",
+      "deepseek_r1_distill_qwen_14b",
+      "mlx-community/Qwen2.5-14B-Instruct-4bit",
+      "mlx-community/DeepSeek-R1-Distill-Qwen-14B-4bit"
+    ]
+  },
+  "model_tiers": {
+    "FRONTIER_HIGH_REASONING": {
+      "default_model": "gpt-6.1-sol",
+      "provider": "openai",
+      "reasoning_effort": "max",
+      "timeout": 300.0,
+      "parameter_immunity": {
+        "strip_temperature": true,
+        "strip_top_p": true
+      },
+      "allowed_fallbacks": [
+        "gpt-6.1-sol",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna"
+      ],
+      "supports_batch": true
+    },
+    "FRONTIER_REASONING": {
+      "default_model": "gpt-6.1-sol",
+      "provider": "openai",
+      "reasoning_effort": "high",
+      "timeout": 300.0,
+      "parameter_immunity": {
+        "strip_temperature": true,
+        "strip_top_p": true
+      },
+      "allowed_fallbacks": [
+        "gpt-6-sol",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-6-luna"
+      ],
+      "supports_batch": true
+    },
+    "SURGICAL_HEALER": {
+      "default_model": "gpt-6-luna",
+      "provider": "openai",
+      "reasoning_effort": "medium",
+      "timeout": 300.0,
+      "parameter_immunity": {
+        "strip_temperature": true,
+        "strip_top_p": true
+      },
+      "allowed_fallbacks": [
+        "gpt-5.6-luna",
+        "gpt-6-sol",
+        "gpt-6.1-sol",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra"
+      ],
+      "supports_batch": true
+    },
+    "FAST_ROUTING": {
+      "default_model": "gpt-6-luna",
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "timeout": 15.0,
+      "parameter_immunity": {
+        "strip_temperature": true,
+        "strip_top_p": true
+      },
+      "allowed_fallbacks": [
+        "gpt-6.1-sol",
+        "gpt-5.6-luna",
+        "gpt-5.6-terra"
+      ]
+    },
+    "COPILOT_FAST_SNAP": {
+      "default_model": "gpt-6-luna",
+      "provider": "openai",
+      "reasoning_effort": "medium",
+      "timeout": 7.0,
+      "max_completion_tokens": 1500,
+      "parameter_immunity": {
+        "strip_temperature": true,
+        "strip_top_p": true
+      },
+      "allowed_fallbacks": [
+        "gpt-5.6-luna"
+      ]
+    },
+    "QUERY_REASONING": {
+      "default_model": "gpt-6.1-sol",
+      "provider": "openai",
+      "reasoning_effort": "high",
+      "timeout": 60.0,
+      "parameter_immunity": {
+        "strip_temperature": true,
+        "strip_top_p": true
+      },
+      "allowed_fallbacks": [
+        "gpt-6-sol",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-6-luna"
+      ],
+      "supports_batch": true
+    },
+    "DIALECTICAL_JUDGE": {
+      "default_model": "gpt-6-luna",
+      "provider": "openai",
+      "reasoning_effort": "max",
+      "timeout": 300.0,
+      "parameter_immunity": {
+        "strip_temperature": true,
+        "strip_top_p": true
+      },
+      "allowed_fallbacks": [
+        "gpt-6.1-sol",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra"
+      ],
+      "supports_batch": true
+    },
+    "EMBEDDING_MULTI_VECTOR": {
+      "default_model": "bge-m3",
+      "canonical_model_id": "BAAI/bge-m3",
+      "provider": "local",
+      "device": "mps",
+      "fp16": true
+    },
+    "LOCAL_JUDGE_INSTRUCT": {
+      "default_model": "qwen_2_5_14b_instruct",
+      "canonical_model_id": "mlx-community/Qwen2.5-14B-Instruct-4bit",
+      "provider": "local_mlx",
+      "device": "mps",
+      "allowed_fallbacks": []
+    },
+    "LOCAL_JUDGE_REASONING": {
+      "default_model": "deepseek_r1_distill_qwen_14b",
+      "canonical_model_id": "mlx-community/DeepSeek-R1-Distill-Qwen-14B-4bit",
+      "provider": "local_mlx",
+      "device": "mps",
+      "allowed_fallbacks": []
+    },
+    "ACOUSTIC_MLX_WHISPER": {
+      "default_model": "mlx-community/whisper-large-v3-mlx",
+      "model_revision": "49e6aa286ad60c14352c404340ded53710378a11",
+      "manifest_sha256": "ee8ad4cf5a7ee15641fa1a15cd8e41743844ecde04f56ab22e1608f28d2c5358",
+      "provider": "local_mlx",
+      "device": "mps",
+      "allowed_fallbacks": []
+    },
+    "ACOUSTIC_FASTER_WHISPER": {
+      "default_model": "large-v3",
+      "model_revision": "ed34499fda4258169112467d025b6ec865ec01fe",
+      "manifest_sha256": "a2f6479b183be604db0caae6e625a695e26b1df3f6f17e3be9687e14f8ab4f86",
+      "provider": "local_ctranslate2",
+      "device": "cpu",
+      "allowed_fallbacks": []
+    },
+    "ACOUSTIC_WHISPERX": {
+      "default_model": "large-v3",
+      "model_revision": "ed34499fda4258169112467d025b6ec865ec01fe",
+      "manifest_sha256": "a2f6479b183be604db0caae6e625a695e26b1df3f6f17e3be9687e14f8ab4f86",
+      "provider": "local_whisperx",
+      "device": "mps",
+      "allowed_fallbacks": []
+    },
+    "ACOUSTIC_DIARIZATION": {
+      "default_model": "pyannote/speaker-diarization-3.1",
+      "model_revision": "84fd25912480287da0247647c3d2b4853cb3ee5d",
+      "manifest_sha256": "75128d8e7afe4a42f3db170645d5b2309e7d96d1de46aab737b07d835568a2e7",
+      "provider": "pyannote",
+      "device": "mps",
+      "allowed_fallbacks": [
+        "pause_clustering"
+      ],
+      "sub_models": [
+        {
+          "model_id": "pyannote/segmentation-3.0",
+          "revision": "e66f3d3b9eb0873085418a7b813d3b369bf160bb",
+          "snapshot_sha256": "7c13108e0909dab7a1b817a6527fa7db8d5df08d4ed537f08dd9799054d42028"
+        }
+      ]
+    },
+    "CLOUD_AUDIO_TRANSCRIBE": {
+      "default_model": "blocked_by_security_policy",
+      "provider": "blocked",
+      "timeout": 0.0,
+      "allowed_fallbacks": [],
+      "enabled": false,
+      "block_reason": "FORBIDDEN_RAW_TRANSCRIPT_EXTERNAL_EGRESS"
+    },
+    "ANTIGRAVITY_AGENT_FLASH": {
+      "default_model": "gemini-3.8-flash",
+      "provider": "google",
+      "reasoning_effort": "high",
+      "timeout": 60.0,
+      "parameter_immunity": {
+        "strip_temperature": true,
+        "strip_top_p": true
+      },
+      "allowed_fallbacks": [
+        "gemini-3.5-flash-lite"
+      ]
+    },
+    "ANTIGRAVITY_AGENT_PRO": {
+      "default_model": "gemini-3.8-flash",
+      "provider": "google",
+      "timeout": 120.0,
+      "parameter_immunity": {
+        "strip_temperature": false,
+        "strip_top_p": false
+      },
+      "allowed_fallbacks": [
+        "gemini-3.8-flash",
+        "gemini-3.5-flash-lite"
+      ]
+    }
+  }
+}

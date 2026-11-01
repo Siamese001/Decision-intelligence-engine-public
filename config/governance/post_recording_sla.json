@@ -1,0 +1,23 @@
+{
+  "contract_id": "urn:nee:governance:post-recording-sla:1.0.0",
+  "sla_target_seconds": 600.0,
+  "description": "Post-recording meeting ingestion SLA ceiling from stop recording to published graph",
+  "stage_budgets_seconds": {
+    "source_discovery": 15.0,
+    "source_assembly": 60.0,
+    "U0": 60.0,
+    "L1": 30.0,
+    "L0": 15.0,
+    "extraction": 60.0,
+    "judge": 120.0,
+    "publish": 60.0,
+    "total": 600.0
+  },
+  "max_remediation_cycles": 2,
+  "circuit_breaker_threshold": 3,
+  "escalation_policy": {
+    "timeout_action": "AWAITING_OPERATOR",
+    "prompt_tool": "ask_user_question",
+    "atomic_presentation": true
+  }
+}

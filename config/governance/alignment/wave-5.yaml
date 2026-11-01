@@ -1,0 +1,28 @@
+wave_id: "Wave 5: Preserve gates through runtime and reuse"
+wave_number: 5
+governance: "NEE-KG-ALIGNMENT-05"
+plan_path: "docs/plans/docs_pipeline_alignment_debate_plan_20261006.md"
+ledger_path: "hitl_decision_ledger.json"
+surface_catalog: "config/governance/alignment/surface_catalog.yaml"
+required_prior_lock: "reports/alignment/wave-4.lock"
+
+acceptance_criteria:
+  - "INSUFFICIENT_REPLAN cannot reach approval without successful re-review"
+  - "Changed source, roster, context, policy, prompt, evaluator, or output invalidates affected evidence"
+  - "Legacy unbound results rerun; valid synthesis reuse still verifies current downstream gates"
+  - "Successful local retrieval repair must not trigger fallback"
+  - "Changed numbers, owners, dates, or retained facts require affected gates to rerun"
+  - "Delayed priority responses and shutdown-during-call produce zero callbacks"
+  - "Exhausted repair cannot become success"
+  - "Predecessor verification cryptographically confirms Wave 4 lock"
+
+test_suites:
+  - "tests/end_to_end/test_alignment_w5_e2e.py"
+  - "tests/test_alignment_w5_adversarial.py"
+
+artifacts:
+  - "dual_pipeline/l0/runtime_gate_preservation.py"
+  - "dual_pipeline/decision/agents/decision_orchestrator.py"
+  - "dual_pipeline/transcript_pipeline_core/caching.py"
+  - "dual_pipeline/live_meeting_recorder_core/streaming_copilot.py"
+  - "config/governance/alignment/wave-5.yaml"

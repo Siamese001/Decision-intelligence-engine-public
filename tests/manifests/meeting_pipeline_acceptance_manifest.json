@@ -1,0 +1,125 @@
+{
+  "name": "meeting_pipeline_acceptance",
+  "description": "Per-wave acceptance test manifest for Morgan Vance meeting attribution and runtime reduction",
+  "branch": "docs/karyn-attribution-runtime-plan",
+  "waves": {
+    "0": {
+      "title": "Establish isolated baselines and receipt tooling",
+      "prerequisite_receipt": null,
+      "receipt_name": "wave_0_baseline.json",
+      "deterministic_tests": [
+        "tests/test_unified_agentic_pipeline_kernel.py",
+        "tests/test_meeting_pipeline_acceptance.py"
+      ],
+      "e2e_tests": [
+        "tests/test_meeting_pipeline_acceptance.py"
+      ],
+      "required_artifacts": [
+        "manifests/meeting_pipeline/baseline_recording_manifest.json",
+        "manifests/meeting_pipeline/speaker_sample_manifest.json",
+        "manifests/meeting_pipeline/graph_snapshot_manifest.json"
+      ]
+    },
+    "1": {
+      "title": "Surface the actual approval question in the host UI",
+      "prerequisite_receipt": "wave_0_baseline.json",
+      "receipt_name": "wave_1_visible_approval.json",
+      "deterministic_tests": [
+        "tests/test_wave5_transcript_cli.py",
+        "tests/test_question_contract.py"
+      ],
+      "e2e_tests": [
+        "tests/end_to_end/test_question_contract_e2e.py",
+        "tests/test_host_approval_ui_e2e.py"
+      ]
+    },
+    "2": {
+      "title": "Enforce approval at every authoritative write boundary",
+      "prerequisite_receipt": "wave_1_visible_approval.json",
+      "receipt_name": "wave_2_mutation_authorization.json",
+      "deterministic_tests": [
+        "tests/test_nee_pre_mutation_gate.py",
+        "tests/test_interactive_hitl_clearance_and_locks.py",
+        "tests/test_mutation_approval_binding.py"
+      ],
+      "e2e_tests": [
+        "tests/test_output3_graph_mutation_e2e.py"
+      ]
+    },
+    "3": {
+      "title": "Repair attribution representation and quality gates",
+      "prerequisite_receipt": "wave_2_mutation_authorization.json",
+      "receipt_name": "wave_3_attribution_contracts.json",
+      "deterministic_tests": [
+        "tests/test_source_modality_classification.py",
+        "tests/test_gate1_attribution_hardening.py",
+        "tests/test_output1_hitl_attribution.py",
+        "tests/test_speaker_disambiguation.py"
+      ],
+      "e2e_tests": [
+        "tests/test_gate1_attribution_hardening.py"
+      ]
+    },
+    "4": {
+      "title": "Resolve acoustic speakers incrementally",
+      "prerequisite_receipt": "wave_3_attribution_contracts.json",
+      "receipt_name": "wave_4_incremental_attribution.json",
+      "deterministic_tests": [
+        "tests/test_live_meeting_recorder.py",
+        "tests/test_audio_speaker_attribution_hitl.py"
+      ],
+      "e2e_tests": [
+        "tests/test_audio_speaker_attribution_hitl.py"
+      ]
+    },
+    "5": {
+      "title": "Prevent failed re-entry and preserve valid work",
+      "prerequisite_receipt": "wave_4_incremental_attribution.json",
+      "receipt_name": "wave_5_resumable_orchestration.json",
+      "deterministic_tests": [
+        "tests/test_pipeline_context_and_checkpointing.py",
+        "tests/test_refactored_orchestration_and_checkpoints.py",
+        "tests/test_stage_coordinator_checkpoint.py"
+      ],
+      "e2e_tests": [
+        "tests/test_refactored_orchestration_and_checkpoints.py"
+      ]
+    },
+    "6": {
+      "title": "Shorten the synthesis critical path",
+      "prerequisite_receipt": "wave_5_resumable_orchestration.json",
+      "receipt_name": "wave_6_synthesis_critical_path.json",
+      "deterministic_tests": [
+        "tests/test_canonical_pipeline_matrix_e2e.py",
+        "tests/test_pipeline_context_and_checkpointing.py"
+      ],
+      "e2e_tests": [
+        "tests/test_canonical_pipeline_matrix_e2e.py"
+      ]
+    },
+    "7": {
+      "title": "Publish the approved bundle and measure graph costs",
+      "prerequisite_receipt": "wave_6_synthesis_critical_path.json",
+      "receipt_name": "wave_7_approved_graph_publication.json",
+      "deterministic_tests": [
+        "tests/test_output3_mutation_latency_e2e.py",
+        "tests/test_release_preparation_invariants.py"
+      ],
+      "e2e_tests": [
+        "tests/test_output3_mutation_latency_e2e.py"
+      ]
+    },
+    "8": {
+      "title": "Qualify UI approval quality and the 80 percent target",
+      "prerequisite_receipt": "wave_7_approved_graph_publication.json",
+      "receipt_name": "wave_8_qualification.json",
+      "deterministic_tests": [],
+      "e2e_tests": [
+        "tests/end_to_end/test_meeting_mutation_approval_e2e.py"
+      ],
+      "required_artifacts": [
+        "manifests/meeting_pipeline/qualification_scenario_manifest.json"
+      ]
+    }
+  }
+}

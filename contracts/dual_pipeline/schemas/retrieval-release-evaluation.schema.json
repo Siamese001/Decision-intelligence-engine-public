@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0",
+  "title": "NEE sealed BGE-M3 retrieval release evaluation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "evaluation_id", "execution_tier", "prepared_receipt_id", "prepared_receipt_digest", "suite_id", "suite_digest", "suite_file_sha256", "acceptance_policy", "baseline_pair", "candidate_pair", "coverage", "case_results", "aggregate", "gates", "status", "evaluated_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "evaluation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "execution_tier": {"const": "E3"},
+    "prepared_receipt_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "prepared_receipt_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "suite_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "suite_file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "acceptance_policy": {"$ref": "urn:nee:dual-pipeline:retrieval-release-suite:1.0.0#/$defs/policyBinding"},
+    "baseline_pair": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/pair"},
+    "candidate_pair": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/pair"},
+    "coverage": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/coverage"},
+    "case_results": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/caseResult"}},
+    "aggregate": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/aggregate"},
+    "gates": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/gates"},
+    "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "pair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generation_id", "graph_snapshot", "graph_sha256", "sidecar_sha256", "embedding_backend", "model_id", "model_revision", "model_manifest_digest", "production_qualified"],
+      "properties": {
+        "generation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "graph_snapshot": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "sidecar_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "embedding_backend": {"enum": ["flagembedding-bge-m3", "flagembedding-bge-m3-dev", "flagembedding-bge-m3-internal"]},
+        "model_id": {"const": "BAAI/bge-m3"},
+        "model_revision": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "model_manifest_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "production_qualified": {"type": "boolean"}
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["added_or_changed_record_ids", "removed_record_ids", "declared_record_ids", "complete"],
+      "properties": {
+        "added_or_changed_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "removed_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "declared_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "complete": {"type": "boolean"}
+      }
+    },
+    "caseResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "scope", "query_kind", "critical", "expected_record_ids", "forbidden_record_ids", "baseline_retrieved_record_ids", "candidate_retrieved_record_ids", "baseline_rank_diagnostics", "candidate_rank_diagnostics", "candidate_repeat_retrieved_record_ids", "baseline_first_relevant_rank", "candidate_first_relevant_rank", "candidate_recall_at_k", "candidate_reciprocal_rank", "candidate_ndcg_at_k", "rank_regression", "repeat_rank_drift", "forbidden_leakage", "component_execution", "latency_ms"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "scope": {"type": "string", "enum": ["core", "delta"]},
+        "query_kind": {"type": "string", "enum": ["semantic_paraphrase", "alias", "relationship", "hard_negative", "lane_isolation", "acl_boundary", "stale_or_superseded"]},
+        "critical": {"type": "boolean"},
+        "expected_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "forbidden_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "baseline_retrieved_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "candidate_retrieved_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "baseline_rank_diagnostics": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/rankDiagnostic"}},
+        "candidate_rank_diagnostics": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/rankDiagnostic"}},
+        "candidate_repeat_retrieved_record_ids": {"type": "array", "minItems": 2, "items": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}}},
+        "baseline_first_relevant_rank": {"type": ["integer", "null"], "minimum": 1},
+        "candidate_first_relevant_rank": {"type": ["integer", "null"], "minimum": 1},
+        "candidate_recall_at_k": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "candidate_reciprocal_rank": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "candidate_ndcg_at_k": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "rank_regression": {"type": "integer", "minimum": 0},
+        "repeat_rank_drift": {"type": "integer", "minimum": 0},
+        "forbidden_leakage": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "component_execution": {"type": "object", "additionalProperties": false, "required": ["dense", "sparse", "bm25", "colbert"], "properties": {"dense": {"type": "boolean"}, "sparse": {"type": "boolean"}, "bm25": {"type": "boolean"}, "colbert": {"type": "boolean"}}},
+        "candidate_warmup_latency_ms": {"type": "number", "minimum": 0},
+        "latency_ms": {"type": "number", "minimum": 0}
+      }
+    },
+    "rankDiagnostic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["record_id", "fused_rank", "dense_rank", "sparse_rank", "colbert_rank"],
+      "properties": {
+        "record_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "fused_rank": {"type": "integer", "minimum": 1},
+        "dense_rank": {"type": ["integer", "null"], "minimum": 1},
+        "sparse_rank": {"type": ["integer", "null"], "minimum": 1},
+        "bm25_rank": {"type": ["integer", "null"], "minimum": 1},
+        "colbert_rank": {"type": ["integer", "null"], "minimum": 1}
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_count", "recall_at_k", "mrr", "ndcg_at_k"],
+      "properties": {"case_count": {"type": "integer", "minimum": 0}, "recall_at_k": {"type": "number", "minimum": 0, "maximum": 1}, "mrr": {"type": "number", "minimum": 0, "maximum": 1}, "ndcg_at_k": {"type": "number", "minimum": 0, "maximum": 1}}
+    },
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["core", "delta", "max_latency_ms", "forbidden_leakage_count", "critical_failure_count", "rank_regression_count", "repeat_stability_failure_count"],
+      "properties": {"core": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/metrics"}, "delta": {"$ref": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0#/$defs/metrics"}, "max_latency_ms": {"type": "number", "minimum": 0}, "forbidden_leakage_count": {"type": "integer", "minimum": 0}, "critical_failure_count": {"type": "integer", "minimum": 0}, "rank_regression_count": {"type": "integer", "minimum": 0}, "repeat_stability_failure_count": {"type": "integer", "minimum": 0}}
+    },
+    "gates": {"type": "object", "additionalProperties": false, "required": ["real_bge_m3", "pair_binding", "coverage_complete", "core_thresholds", "delta_thresholds", "critical_cases", "rank_stability", "repeat_stability", "forbidden_leakage", "latency", "bm25_execution"], "properties": {"real_bge_m3": {"type": "boolean"}, "pair_binding": {"type": "boolean"}, "coverage_complete": {"type": "boolean"}, "core_thresholds": {"type": "boolean"}, "delta_thresholds": {"type": "boolean"}, "critical_cases": {"type": "boolean"}, "rank_stability": {"type": "boolean"}, "repeat_stability": {"type": "boolean"}, "forbidden_leakage": {"type": "boolean"}, "latency": {"type": "boolean"}, "bm25_execution": {"type": "boolean"}}}
+  }
+}

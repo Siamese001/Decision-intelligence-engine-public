@@ -1,0 +1,73 @@
+{
+  "baseline_id": "nee-decision-routing-wave1",
+  "base_commit": "e3c10bed5c75c5d705b3b8b9f892a960e8ad2c39",
+  "cases": [
+    {
+      "case_id": "meeting-summary",
+      "question": "Summarize these meeting notes into actions.",
+      "current": {
+        "query_type": "relationship_explanation",
+        "query_complexity": "normal",
+        "materiality": "medium",
+        "source": "deterministic",
+        "classifier_call_status": "SKIPPED"
+      },
+      "target_destination": "GENERAL_ASSISTANT_HANDOFF"
+    },
+    {
+      "case_id": "staffing-workbook",
+      "question": "Rebuild the staffing workbook with formulas and allocations.",
+      "current": {
+        "query_type": "current_state_corroboration",
+        "query_complexity": "high",
+        "materiality": "high",
+        "source": "policy_fallback",
+        "classifier_call_status": "FAILED"
+      },
+      "target_destination": "OPERATIONAL_WORKFLOW_HANDOFF"
+    },
+    {
+      "case_id": "exact-graph-record",
+      "question": "Show governed record record-123.",
+      "current": {
+        "query_type": "exact_lookup",
+        "query_complexity": "low",
+        "materiality": "low",
+        "source": "deterministic",
+        "classifier_call_status": "SKIPPED"
+      },
+      "target_destination": "GRAPH_EVIDENCE_UTILITY"
+    },
+    {
+      "case_id": "cross-source-diagnostic",
+      "question": "Diagnose the cross-source delivery problem using graph relationships and counterevidence.",
+      "current": {
+        "query_type": "current_state_corroboration",
+        "query_complexity": "high",
+        "materiality": "high",
+        "source": "policy_fallback",
+        "classifier_call_status": "FAILED"
+      },
+      "target_destination": "NEE_DECISION_INTELLIGENCE"
+    },
+    {
+      "case_id": "a2a-architecture-decision",
+      "question": "Recommend a future-state A2A architecture across business case, current state, patterns, risks, and gaps.",
+      "current": {
+        "query_type": "cross_workstream_synthesis",
+        "query_complexity": "high",
+        "materiality": "high",
+        "source": "deterministic",
+        "classifier_call_status": "SKIPPED"
+      },
+      "target_destination": "NEE_DECISION_INTELLIGENCE"
+    }
+  ],
+  "known_defects": [
+    "NON_NEE_WORK_ENTERS_QUERY_PIPELINE",
+    "AMBIGUOUS_ROUTING_CAN_REQUIRE_EXTERNAL_CLASSIFIER",
+    "ANY_RETRIEVED_RECORD_COVERS_EVERY_REQUIREMENT",
+    "INCOMPLETE_COVERAGE_IS_NOT_X1_BLOCKING",
+    "QUERY_COMPLEXITY_CONTROLS_MODEL_AND_QUALITY"
+  ]
+}

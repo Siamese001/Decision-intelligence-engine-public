@@ -1,0 +1,23 @@
+{
+  "artifact_id": "decision-response-envelope-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "240137e469a443f5d8abaf22232e3b59d1e9df5b3609bb3fbcf8505dc5516168"
+  },
+  "citations": [],
+  "contract_id": "urn:nee:dual-pipeline:decision-response-envelope:1.0.0",
+  "destination": "ROUTE_AMBIGUOUS",
+  "error": null,
+  "extensions": {},
+  "handler": "ClarificationHandler",
+  "latency_ms": 0,
+  "provider_call_count": 0,
+  "request_id": "request-fixture",
+  "response_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "result": {},
+  "retrieval_call_count": 0,
+  "run_id": null,
+  "schema_version": "1.0.0",
+  "terminal_state": "CLARIFICATION_REQUIRED"
+}

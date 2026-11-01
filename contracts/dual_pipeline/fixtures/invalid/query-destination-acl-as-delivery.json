@@ -1,0 +1,36 @@
+{
+  "artifact_id": "destination-invalid-acl-delivery",
+  "artifact_type": "answer",
+  "automatic_egress_count": 0,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "e0c973eb0cc6265a8bd9a19d87f37cacbcf1c1f086eb5bb62d69fd335f701126"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-destination-decision:1.0.0",
+  "decided_at": "2026-08-01T12:00:00Z",
+  "decision_id": "destination-invalid-acl-delivery",
+  "delivery_profile": "internal_consulting",
+  "destination": "GENERAL_ASSISTANT_HANDOFF",
+  "eligibility_checks": {
+    "authorized": "PASS",
+    "graph_essential": "FAIL",
+    "l2_reasoning_required": "FAIL",
+    "material_outcome": "FAIL",
+    "multi_record_reasoning": "FAIL"
+  },
+  "eligibility_status": "NOT_ELIGIBLE",
+  "extensions": {},
+  "handoff_permitted": true,
+  "materiality": "low",
+  "operator_override": false,
+  "policy_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "query_type": null,
+  "reason_codes": [
+    "NOT_GRAPH_ESSENTIAL"
+  ],
+  "request_id": "request-invalid-acl-delivery",
+  "run_id": "run-invalid-acl-delivery",
+  "schema_version": "1.0.0",
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

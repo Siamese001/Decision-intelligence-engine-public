@@ -1,0 +1,31 @@
+{
+  "artifact_id": "query-l1-controller-eval-comparison-fixture",
+  "baseline_result_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "candidate_result_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "2fb57fef76cdf030fb637de2d45d43f88bde724c2a92015806d6365f341c183a"
+  },
+  "cause_codes": [],
+  "comparison_id": "query-l1-controller-eval-comparison-fixture",
+  "contract_id": "urn:nee:dual-pipeline:query-l1-controller-eval-comparison:1.0.0",
+  "extensions": {},
+  "invariants": {
+    "authorization_scope_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+    "evaluator_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+    "graph_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "workload_digest": "3333333333333333333333333333333333333333333333333333333333333333"
+  },
+  "metric_deltas": [
+    {
+      "baseline": 0.0,
+      "candidate": 0.0,
+      "delta": 0.0,
+      "metric": "recovery_rate"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "NOT_COMPARABLE",
+  "treatment_dimension": "mode"
+}

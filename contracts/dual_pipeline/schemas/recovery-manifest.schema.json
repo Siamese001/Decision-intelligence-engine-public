@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:recovery-manifest:1.0.0",
+  "title": "Active Ingestion Recovery Manifest",
+  "description": "Durable inventory and reconciliation manifest classifying earlier artifact-only and pending runs for authorized recovery.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "manifest_id",
+    "runtime_root",
+    "generated_at",
+    "total_sources",
+    "counts_by_status",
+    "items",
+    "extensions",
+    "canonical_digest"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:recovery-manifest:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "artifact_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "manifest_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "runtime_root": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "total_sources": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "counts_by_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "COVERED",
+        "PENDING_APPROVAL",
+        "NEEDS_PUBLICATION",
+        "NEEDS_REEVALUATION",
+        "RECONCILIATION_REQUIRED",
+        "DECLINED",
+        "UNKNOWN"
+      ],
+      "properties": {
+        "COVERED": { "type": "integer", "minimum": 0 },
+        "PENDING_APPROVAL": { "type": "integer", "minimum": 0 },
+        "NEEDS_PUBLICATION": { "type": "integer", "minimum": 0 },
+        "NEEDS_REEVALUATION": { "type": "integer", "minimum": 0 },
+        "RECONCILIATION_REQUIRED": { "type": "integer", "minimum": 0 },
+        "DECLINED": { "type": "integer", "minimum": 0 },
+        "UNKNOWN": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_path",
+          "source_digest",
+          "status",
+          "reconciliation_reason",
+          "suggested_action"
+        ],
+        "properties": {
+          "source_path": {
+            "type": "string"
+          },
+          "source_digest": {
+            "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "COVERED",
+              "PENDING_APPROVAL",
+              "NEEDS_PUBLICATION",
+              "NEEDS_REEVALUATION",
+              "RECONCILIATION_REQUIRED",
+              "DECLINED",
+              "UNKNOWN"
+            ]
+          },
+          "directive_id": {
+            "type": ["string", "null"]
+          },
+          "active_generation": {
+            "type": ["integer", "null"]
+          },
+          "prior_receipt_path": {
+            "type": ["string", "null"]
+          },
+          "prior_receipt_digest": {
+            "type": ["string", "null"]
+          },
+          "package_digest": {
+            "type": ["string", "null"]
+          },
+          "reconciliation_reason": {
+            "type": "string"
+          },
+          "suggested_action": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "extensions": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"
+    },
+    "canonical_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"
+    }
+  }
+}

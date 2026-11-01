@@ -1,0 +1,26 @@
+wave_id: "Wave 7: Prevent recurrence and qualify rollout"
+wave_number: 7
+governance: "NEE-KG-ALIGNMENT-07"
+plan_path: "docs/plans/docs_pipeline_alignment_debate_plan_20261006.md"
+ledger_path: "hitl_decision_ledger.json"
+surface_catalog: "config/governance/alignment/surface_catalog.yaml"
+required_prior_lock: "reports/alignment/wave-6.lock"
+
+acceptance_criteria:
+  - "Require exact tested revision/tree identity; reject bad manifests, omitted tests, ancestor/unrelated PASS receipts, and commit-title shortcuts"
+  - "Hooks and CI discover identical required checks"
+  - "Every blocking catalog row has a failing-path lifecycle test"
+  - "Mutating an obligation, threshold, evaluator, dependency, or receipt breaks its gate"
+  - "Qualify isolated routes and held-out judgments; shadow comparisons never authorize writes"
+  - "Approved controls remain authoritative until authorized cutover"
+  - "Rollback restores the approved bundle and invalidates incompatible caches"
+  - "Predecessor verification cryptographically confirms Wave 6 lock"
+
+test_suites:
+  - "tests/end_to_end/test_alignment_w7_e2e.py"
+  - "tests/test_alignment_w7_adversarial.py"
+
+artifacts:
+  - "dual_pipeline/l0/recurrence_prevention.py"
+  - "dual_pipeline/l0/__init__.py"
+  - "config/governance/alignment/wave-7.yaml"

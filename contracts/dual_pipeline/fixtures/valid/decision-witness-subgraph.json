@@ -1,0 +1,37 @@
+{
+  "active_generation_id": "generation-example-01",
+  "artifact_id": "decision-witness-example",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "96382d3606564395409f096b3a1d889ffc80145f19c294bc468d4d1500d75c89"
+  },
+  "causal_paths": [],
+  "contract_id": "urn:nee:dual-pipeline:decision-witness-subgraph:1.0.0",
+  "decision_frame_id": "frame-example-01",
+  "evidence_bindings": [
+    {
+      "assertion_id": "assert:01",
+      "evidence_id": "ev:01",
+      "option_id": "opt-01"
+    }
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.witness-summary": {
+      "edge_count": 0,
+      "node_count": 1
+    }
+  },
+  "graph_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "schema_version": "1.0.0",
+  "sidecar_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "witness_edges": [],
+  "witness_nodes": [
+    {
+      "canonical_name": "First-Principles Rebuild",
+      "node_id": "node:opt-01",
+      "node_type": "decision_option",
+      "role": "seed_option"
+    }
+  ]
+}

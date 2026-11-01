@@ -1,0 +1,30 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:otel-event-envelope:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-otel-sensitive-content",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "f2bbff93b9dce3514b582f67361f6efc1301cf75118c5f7c13fa510500fa1463"},
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "span_id": "0123456789abcdef",
+  "parent_span_id": null,
+  "span_name": "nee.uc1.u0.validate",
+  "started_at": "2026-07-21T15:00:00Z",
+  "ended_at": "2026-07-21T15:00:01Z",
+  "status": "OK",
+  "attributes": {
+    "run_id": "run-invalid-otel",
+    "use_case": "intake",
+    "stage": "U0",
+    "route": null,
+    "lane": null,
+    "decision_status": "PASS",
+    "model_id": null,
+    "generation_id": null,
+    "graph_snapshot": "graph-snapshot-v55-approved-current",
+    "input_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "output_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "record_count": 1,
+    "retry_count": 0,
+    "raw_content": "Sensitive meeting content must never be in telemetry."
+  },
+  "extensions": {}
+}

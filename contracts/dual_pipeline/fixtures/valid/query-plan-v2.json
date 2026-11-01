@@ -1,0 +1,70 @@
+{
+  "allowed_lanes": [
+    "approved"
+  ],
+  "allowed_provider_class": "openai",
+  "artifact_id": "query-plan-v2-fixture",
+  "artifact_type": "architecture_deck",
+  "assurance_profile": "enhanced",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "f23285148d423658542108aae97fe2e1c13c5bd64752ad7c74e209c774f479cb"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-plan:2.0.0",
+  "delivery_profile": "client_executive",
+  "destination": "NEE_DECISION_INTELLIGENCE",
+  "destination_decision_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "evidence_requirements": [
+    "business case",
+    "current state",
+    "A2A patterns",
+    "risks and gaps"
+  ],
+  "exit_criteria": [
+    "requirement-specific coverage complete",
+    "runtime X1 judge passes",
+    "client architecture gates pass"
+  ],
+  "extensions": {},
+  "external_research": "denied",
+  "l2_policy": "required",
+  "l2_policy_reason": "A material graph-dependent architecture decision requires governed synthesis.",
+  "materiality": "high",
+  "maximum_challenger_calls": 1,
+  "maximum_judge_calls": 2,
+  "maximum_primary_calls": 1,
+  "maximum_repair_calls": 1,
+  "output_schema": "nee-governed-answer-2.0.0",
+  "plan_id": "query-plan-v2-fixture",
+  "primary_entities": [
+    "Project Beacon"
+  ],
+  "prompt_blueprint": "nee_decision_intelligence_v2",
+  "provider_egress_allowed": true,
+  "query_type": "cross_workstream_synthesis",
+  "relationships_to_inspect": [
+    "approved and candidate A2A patterns",
+    "current-state constraints"
+  ],
+  "request_id": "request-query-plan-v2",
+  "required_output_schema": "nee-governed-answer-2.0.0",
+  "retrieval": {
+    "bm25": true,
+    "connected_evidence_selection": true,
+    "exact_anchors": true,
+    "graph_hops": 3,
+    "lane_blending": false,
+    "semantic": true,
+    "typed_path_expansion": true
+  },
+  "retrieval_mode": "factual",
+  "run_id": "run-query-plan-v2",
+  "schema_version": "2.0.0",
+  "subquestions": [
+    "What decision should be made?",
+    "What governed evidence supports it?"
+  ],
+  "time_horizon": "future state",
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

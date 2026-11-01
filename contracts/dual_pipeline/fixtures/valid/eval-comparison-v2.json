@@ -1,0 +1,117 @@
+{
+  "artifact_id": "workflow-compare-3383283ab93a0e99d303275fd0b1",
+  "baseline_digest": "373466858611ce465a47ba0cac2b859757e2544753ba56d4dcd7d0b8cea15497",
+  "baseline_evaluation_id": "fixture-legacy-evaluation",
+  "candidate_digest": "899ada23ca357648607044c212ca7a543309cdfea2015c8750fc4c875f01bd5a",
+  "candidate_evaluation_id": "fixture-candidate-evaluation",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "4bff4470ffb1beeaa31805fefc070f47cc451deec2bd7b10d7f503d4c048d578"
+  },
+  "cause_codes": [],
+  "compared_at": "2026-07-29T12:00:00Z",
+  "comparison_id": "workflow-compare-3383283ab93a0e99d303275fd0b1",
+  "contract_id": "urn:nee:dual-pipeline:eval-comparison:2.0.0",
+  "credit_improvement_fraction": 0.955846,
+  "declared_treatment_differences": {
+    "baseline": {
+      "budget_enforced": false,
+      "feature_path": "legacy",
+      "history_policy": "append_completed",
+      "no_progress_limit": 20,
+      "tool_output_policy": "inline",
+      "treatment_id": "legacy-replay"
+    },
+    "candidate": {
+      "budget_enforced": true,
+      "feature_path": "candidate",
+      "history_policy": "bounded",
+      "no_progress_limit": 3,
+      "tool_output_policy": "externalize",
+      "treatment_id": "candidate-bounded"
+    }
+  },
+  "extensions": {
+    "com.partner_advisory.nee.invariant-mismatches": []
+  },
+  "invariant_bindings_digest": "761b09fd976b5aebde5c0a8393e80a266d31198cd73e9c2cee075273d16e10c9",
+  "metric_deltas": [
+    {
+      "baseline": 118.0,
+      "candidate": 111.0,
+      "delta": -7.0,
+      "direction": "lower",
+      "metric": "provider_call_count",
+      "regression": false,
+      "tolerance": 0.0
+    },
+    {
+      "baseline": 15706504.0,
+      "candidate": 560550.0,
+      "delta": -15145954.0,
+      "direction": "lower",
+      "metric": "input_tokens",
+      "regression": false,
+      "tolerance": 0.0
+    },
+    {
+      "baseline": 38104824.0,
+      "candidate": 1636996.0,
+      "delta": -36467828.0,
+      "direction": "lower",
+      "metric": "microcredits",
+      "regression": false,
+      "tolerance": 0.0
+    },
+    {
+      "baseline": 343286.702703,
+      "candidate": 15157.37037,
+      "delta": -328129.33233299997,
+      "direction": "lower",
+      "metric": "microcredits_per_progress_unit",
+      "regression": false,
+      "tolerance": 0.0
+    },
+    {
+      "baseline": 2117366.0,
+      "candidate": 284071.0,
+      "delta": -1833295.0,
+      "direction": "lower",
+      "metric": "request_serialized_bytes_p95",
+      "regression": false,
+      "tolerance": 0.0
+    },
+    {
+      "baseline": 2162688.0,
+      "candidate": 0.0,
+      "delta": -2162688.0,
+      "direction": "lower",
+      "metric": "max_completed_history_bytes",
+      "regression": false,
+      "tolerance": 0.0
+    },
+    {
+      "baseline": 1048576.0,
+      "candidate": 0.0,
+      "delta": -1048576.0,
+      "direction": "lower",
+      "metric": "max_raw_tool_output_bytes",
+      "regression": false,
+      "tolerance": 0.0
+    },
+    {
+      "baseline": 34.0,
+      "candidate": 0.0,
+      "delta": -34.0,
+      "direction": "lower",
+      "metric": "hard_gate_failure_count",
+      "regression": false,
+      "tolerance": 0.0
+    }
+  ],
+  "minimum_credit_improvement_fraction": 0.5,
+  "schema_version": "2.0.0",
+  "status": "PASS",
+  "suite_id": "agentic-workflow-assurance-e1"
+}

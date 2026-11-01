@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:card-view-selector:1.0.0",
+  "title": "NEE bounded card view selector",
+  "description": "A closed-world, SQL-free selector for resolving a governed card view to graph objects.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "selector_id", "selector_version", "selector", "bounded", "sql_allowed", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:card-view-selector:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "selector_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "selector_version": {"const": "1.0.0"},
+    "selector": {"$ref": "urn:nee:dual-pipeline:card-view-selector:1.0.0#/$defs/selector"},
+    "bounded": {"const": true},
+    "sql_allowed": {"const": false},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "selector": {
+      "oneOf": [
+        {"$ref": "urn:nee:dual-pipeline:card-view-selector:1.0.0#/$defs/routeMembershipSelector"},
+        {"$ref": "urn:nee:dual-pipeline:card-view-selector:1.0.0#/$defs/facetQuerySelector"},
+        {"$ref": "urn:nee:dual-pipeline:card-view-selector:1.0.0#/$defs/explicitObjectsSelector"}
+      ]
+    },
+    "routeMembershipSelector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "card_id", "membership_mode", "route_status"],
+      "properties": {
+        "kind": {"const": "route_membership"},
+        "card_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "membership_mode": {"type": "string", "enum": ["primary_only", "supporting_only", "all_active"]},
+        "route_status": {"const": "active"}
+      }
+    },
+    "facetQuerySelector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "object_types", "facet_filters", "predicates", "explicit_node_ids", "traversal"],
+      "properties": {
+        "kind": {"const": "facet_query"},
+        "object_types": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {"type": "string", "enum": ["node", "claim", "assertion"]}
+        },
+        "facet_filters": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {"$ref": "urn:nee:dual-pipeline:card-view-selector:1.0.0#/$defs/facetFilter"}
+        },
+        "predicates": {
+          "type": "array",
+          "maxItems": 64,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_:-]{1,127}$"}
+        },
+        "explicit_node_ids": {
+          "type": "array",
+          "maxItems": 256,
+          "uniqueItems": true,
+          "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+        },
+        "traversal": {"$ref": "urn:nee:dual-pipeline:card-view-selector:1.0.0#/$defs/traversal"}
+      }
+    },
+    "explicitObjectsSelector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "objects"],
+      "properties": {
+        "kind": {"const": "explicit_objects"},
+        "objects": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5000,
+          "uniqueItems": true,
+          "items": {"$ref": "urn:nee:dual-pipeline:card-view-selector:1.0.0#/$defs/objectReference"}
+        }
+      }
+    },
+    "facetFilter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_type", "vocabulary", "values", "match"],
+      "properties": {
+        "object_type": {"type": "string", "enum": ["node", "claim", "assertion"]},
+        "vocabulary": {"type": "string", "pattern": "^[a-z][a-z0-9_:-]{1,63}$"},
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{1,127}$"}
+        },
+        "match": {"type": "string", "enum": ["any", "all"]}
+      }
+    },
+    "traversal": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["max_hops", "direction", "predicates"],
+          "properties": {
+            "max_hops": {"const": 0},
+            "direction": {"const": "none"},
+            "predicates": {"type": "array", "maxItems": 0}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["max_hops", "direction", "predicates"],
+          "properties": {
+            "max_hops": {"type": "integer", "minimum": 1, "maximum": 2},
+            "direction": {"type": "string", "enum": ["outbound", "inbound", "both"]},
+            "predicates": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 32,
+              "uniqueItems": true,
+              "items": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_:-]{1,127}$"}
+            }
+          }
+        }
+      ]
+    },
+    "objectReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_type", "object_id"],
+      "properties": {
+        "object_type": {"type": "string", "enum": ["node", "claim", "assertion"]},
+        "object_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+      }
+    }
+  }
+}

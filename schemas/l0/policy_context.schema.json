@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:nee:dual-pipeline:l0:policy-context:1.0.0",
+  "title": "PolicyContext",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "tenant_id",
+    "caller_id",
+    "allowed_namespaces",
+    "clearance_level",
+    "allow_quarantined"
+  ],
+  "properties": {
+    "tenant_id": { "type": "string" },
+    "caller_id": { "type": "string" },
+    "allowed_namespaces": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "clearance_level": { "type": "string" },
+    "allow_quarantined": { "type": "boolean" }
+  }
+}

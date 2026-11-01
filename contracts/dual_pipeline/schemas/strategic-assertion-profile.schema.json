@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:strategic-assertion-profile:1.0.0",
+  "title": "NEE strategic assertion profile",
+  "description": "Orthogonal, source-bound semantics for using an assertion in strategic reasoning without changing graph authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "profile_id", "assertion_id", "source_id", "evidence_ids", "knowledge_role", "modality", "authority_scope", "applicability_scope", "realization_state", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:strategic-assertion-profile:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "profile_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "assertion_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "source_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+    },
+    "knowledge_role": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/strategicProfile/properties/knowledge_role"},
+    "modality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/strategicProfile/properties/modality"},
+    "authority_scope": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/strategicProfile/properties/authority_scope"},
+    "applicability_scope": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/strategicProfile/properties/applicability_scope"},
+    "realization_state": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/strategicProfile/properties/realization_state"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"knowledge_role": {"enum": ["official_intent", "target_outcome"]}}, "required": ["knowledge_role"]},
+      "then": {
+        "properties": {
+          "modality": {"enum": ["intended", "normative"]},
+          "authority_scope": {"const": "official_project_intent"},
+          "realization_state": {"enum": ["intended", "planned"]}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"knowledge_role": {"const": "external_pattern"}}, "required": ["knowledge_role"]},
+      "then": {
+        "properties": {
+          "authority_scope": {"const": "external_reference"},
+          "applicability_scope": {"enum": ["generalizable", "analogous_only"]},
+          "realization_state": {"const": "not_applicable"}
+        }
+      }
+    }
+  ]
+}

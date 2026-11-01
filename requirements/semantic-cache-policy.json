@@ -1,0 +1,15 @@
+{
+  "policy_id": "nee-semantic-cache",
+  "policy_version": "3.1.0",
+  "default_mode": "off",
+  "similarity_threshold": 0.985,
+  "max_candidates": 256,
+  "ttl_seconds": 604800,
+  "allow_external_l2_replay": false,
+  "cacheable_outcomes": [
+    "X3D_ALLOW_FINISH",
+    "X3E_ALLOW_EVIDENCE_ONLY",
+    "X3D_ALLOW_CANDIDATE_STAGE",
+    "X3D_ALLOW_APPROVED_WRITE"
+  ]
+}

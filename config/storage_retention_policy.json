@@ -1,0 +1,33 @@
+{
+  "$schema": "urn:nee:storage-retention-policy:1.0.0",
+  "version": "1.0.0",
+  "generations": {
+    "rollback_depth": 3,
+    "min_age_days": 7,
+    "preserve_receipt_cited": true
+  },
+  "transcript_cache": {
+    "wav_ttl_days": 7,
+    "keep_derived_text_and_json": true
+  },
+  "reports": {
+    "archive_age_days": 14,
+    "archive_root": "reports/history"
+  },
+  "quarantine": {
+    "root": ".local/trash",
+    "purge_ttl_days": 7
+  },
+  "never_touch": [
+    "env_di",
+    ".env*",
+    "hitl_decision_ledger.json",
+    "hitl_decision_ledger.sqlite",
+    "release_state.json",
+    "active_pair.json",
+    "*.sqlite",
+    "*.sqlite-wal",
+    "*.sqlite-shm",
+    "*.db"
+  ]
+}

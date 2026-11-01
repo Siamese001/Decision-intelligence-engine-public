@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-9cff165de40790b6be8f9a885a8d",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "d14389ab131d77175fe0a863c4c97a5303561d978110d5f35561001173969278"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-a59ac0146d0d60d89c4cbe8c"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "And we also said the rule registry coverage is that by the end of the SOW, we would have a 100% coverage.",
+      "proposed_value": "**harper Hoffman:** technician conduit app and it's got a couple of partner_advisory staff aug people on it.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-39943de60c771481dd90060ed034"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-8b7dc2f81c832332d3eeb25c8cbb",
+      "assertion_id_older": "assertion-39943de60c771481dd90060ed034",
+      "confidence_coexist": 0.45,
+      "confidence_supersede": 0.55,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": true,
+      "margin_delta": 0.1,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-09-15",
+      "timestamp_older": "2026-09-15"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-09-15 superseded by newer claim from 2026-09-15.",
+  "proposal_id": "calibration-proposal-9cff165de40790b6be8f9a885a8d",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-39943de60c771481dd90060ed034 from And we also said the rule registry coverage is that by the end of the SOW, we would have a 100% coverage. to **harper Hoffman:** technician conduit app and it's got a couple of partner_advisory staff aug people on it.. Requires governed approval before release.",
+  "risk": "medium",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

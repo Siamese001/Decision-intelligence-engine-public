@@ -1,0 +1,133 @@
+{
+  "_comment": "PR Priority Registry — time-boxed manual overrides only. Core priorities are derived dynamically from config/pr_priority_rubric.json. Add 'expires_at' (YYYY-MM-DD) to overrides.",
+  "tiers": {
+    "P0": {
+      "description": "Critical — must merge before any P1+ work. Blocking production or blocking pipeline integrity.",
+      "branches": {
+        "feat/audio-source-agnostic-failfast-hardening": {
+          "rationale": "Audio contracts, fail-fast boundaries & audit W0",
+          "scope": "Core Ingress"
+        },
+        "feat/live-dociq_jack_amit": {
+          "rationale": "DocIQ 10/01 live session artifacts & argparse % escape fix",
+          "scope": "Live Session & Fix"
+        },
+        "feat/query-pipeline-perf-optimization": {
+          "rationale": "Query pipeline caching & latency optimization",
+          "scope": "Performance"
+        }
+      }
+    },
+    "P1": {
+      "description": "High — platform capabilities and active live-session pipelines in progress.",
+      "branches": {
+        "feat/spark-agent-runtime": {
+          "rationale": "Managed Spark Dataproc bridge & serverless runtime",
+          "scope": "Runtime & Storage"
+        },
+        "feat/copilot-prefetch-graph-context": {
+          "rationale": "In-call context prefetch & meeting graph cache",
+          "scope": "Attribution / Copilot"
+        },
+        "feat/live-pipeline": {
+          "rationale": "Canonical pipeline lifecycle, ingest & prompt overhaul",
+          "scope": "Pipeline Architecture"
+        },
+        "feat/live-enr_quarterly_connect_kasey_bernard": {
+          "rationale": "Live meeting outputs & judge/healer QA enhancements",
+          "scope": "Live Session"
+        }
+      }
+    },
+    "P2": {
+      "description": "Medium — client deliverables and targeted remediation.",
+      "branches": {
+        "feat/live-dociq_q4_scope_bailey_amit": {
+          "rationale": "DocIQ Q4 scope artifacts deliverable (Data Highway)",
+          "scope": "Client Deliverable"
+        },
+        "feat/live-dociq_q4_scope_jack_partner_advisory": {
+          "rationale": "DocIQ Q4 PartnerAdvisory scope artifacts deliverable",
+          "scope": "Client Deliverable"
+        },
+        "feat/remediate-project-nexus-silent-defaults": {
+          "rationale": "Nexus default parameter fixes & silent fallback hardening",
+          "scope": "Remediation"
+        },
+        "feat/adversarial-entity-name-audit": {
+          "rationale": "Identity resolver & stakeholder validation hardening",
+          "scope": "Identity Resolution"
+        },
+        "feat/live-gemini_working_files_data": {
+          "rationale": "Gemini enablement project registry & enterprise directory",
+          "scope": "Live Session"
+        }
+      }
+    },
+    "P3": {
+      "description": "Low — housekeeping, analysis, and non-urgent work.",
+      "branches": {
+        "feat/pr-governance-branch-rationale": {
+          "rationale": "Add Rationale column & rich priority metadata to PR tables",
+          "scope": "Governance Engine"
+        },
+        "backup/p03-pre-rebase": {
+          "rationale": "Pre-rebase snapshot of P0.3 (safe to delete post-merge)",
+          "scope": "Backup Snapshot"
+        },
+        "feat/fix-lazy-worktree-always-provision": {
+          "rationale": "Worktree lazy provisioning merged into prompt skills",
+          "scope": "Maintenance"
+        },
+        "feat/rca-entity-resolution-fracture": {
+          "rationale": "Entity resolution fracture RCA merged in 50% latency PR",
+          "scope": "Completed RCA"
+        },
+        "feat/live-existing_meeting": {
+          "rationale": "Nested test fixture in spark-agent-runtime worktree",
+          "scope": "Test Fixture"
+        },
+        "feat/live-parent_meeting": {
+          "rationale": "Nested test fixture in spark-agent-runtime worktree",
+          "scope": "Test Fixture"
+        },
+        "feat/live-neet_insights_hub_tech_mitchell_partner_advisory": {
+          "rationale": "Historical session deliverable archived in main history",
+          "scope": "Archived Deliverable"
+        },
+        "cost-optimization-analysis": {
+          "rationale": "Completed cost optimization reference analysis",
+          "scope": "Analysis Ref"
+        }
+      }
+    },
+    "TOMBSTONE": {
+      "description": "Superseded — work absorbed by another branch or already merged. Should be retired.",
+      "branches": {
+        "chore/pipeline-assurance-20261006": {
+          "rationale": "Superseded by docs/scheduled-task-core4-hardening-plan",
+          "scope": "Superseded Worktree",
+          "superseded_by": "docs/scheduled-task-core4-hardening-plan"
+        },
+        "feat/rerun-cost-optimization": {
+          "rationale": "Superseded by merged P0.1 (commit 33a207dd)",
+          "scope": "Superseded Worktree"
+        },
+        "feat/live-working_files_data_rose_amanda": {
+          "rationale": "Superseded by merged P0.3 (commit 18d1e865)",
+          "scope": "Superseded Worktree"
+        }
+      }
+    }
+  },
+  "overrides": {
+    "chore/pipeline-assurance-20261006": {
+      "tier": "TOMBSTONE",
+      "reason": "Superseded by docs/scheduled-task-core4-hardening-plan",
+      "owner": "operator",
+      "scope": "Superseded Worktree",
+      "expires_at": "2026-11-01",
+      "superseded_by": "docs/scheduled-task-core4-hardening-plan"
+    }
+  }
+}

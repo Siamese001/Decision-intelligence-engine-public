@@ -1,0 +1,35 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:learning-event:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "learning-event-correlation-example",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "3d446ce0b1de25e3345706e80585eb4a258014e57101778c934672b0be982347"
+  },
+  "event_id": "event-correlation-example",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "span_id": "0123456789abcdef",
+  "parent_span_id": null,
+  "run_id": "run-intake-nea-update-2026-07-21",
+  "use_case": "shared",
+  "stage": "L4",
+  "event_type": "pipeline_event",
+  "policy_version": "55.0+dual-pipeline-wave1",
+  "graph_snapshot": "graph-snapshot-v55-approved-current",
+  "model_or_index_generation": "bge-m3-generation-v55",
+  "input_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+  "output_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+  "status": "PASS",
+  "created_at": "2026-07-21T15:00:04Z",
+  "correlation": {
+    "source_id": "source-nea-update-2026-07-21",
+    "candidate_id": "candidate-sherpa-monitoring-owner-gap",
+    "query_id": "request-nea-pdlc-opportunities",
+    "graph_operation_id": "graph-operation-add-candidate-owner-gap",
+    "hitl_item_id": "review-item-matt-k-identity"
+  },
+  "payload_reference": "ledger://run-intake-nea-update-2026-07-21/event-correlation-example",
+  "payload_digest": "6666666666666666666666666666666666666666666666666666666666666666",
+  "extensions": {}
+}

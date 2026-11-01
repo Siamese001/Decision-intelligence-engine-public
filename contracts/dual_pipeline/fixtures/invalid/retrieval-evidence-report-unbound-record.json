@@ -1,0 +1,48 @@
+{
+  "artifact_id": "invalid-retrieval-evidence-report",
+  "authorization_scope_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "cf87fa985fbe951f9401c5cbc21c36917dc152e31e9a5e0e05759af7e27fc1f3"
+  },
+  "contract_id": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0",
+  "coverage_manifest_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+  "evidence_packet_digest": "6666666666666666666666666666666666666666666666666666666666666666",
+  "extensions": {},
+  "graph_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "graph_snapshot": "graph-snapshot-evidence-fixture",
+  "l2_input_record_ids_by_lane": {
+    "approved": [
+      "retrieval-record-a2a"
+    ],
+    "candidate": [],
+    "external_public": []
+  },
+  "query_plan_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "report_id": "invalid-retrieval-evidence-report",
+  "requirement_outcomes": [
+    {
+      "outcome": "covered",
+      "reason_code": null,
+      "record_ids": [
+        "retrieval-record-not-selected"
+      ],
+      "requirement_id": "coverage-requirement-a2a",
+      "support_directions": [
+        "direct"
+      ]
+    }
+  ],
+  "run_id": "run-query-evidence-fixture",
+  "schema_version": "1.0.0",
+  "selected_record_ids_by_lane": {
+    "approved": [
+      "retrieval-record-a2a"
+    ],
+    "candidate": [],
+    "external_public": []
+  },
+  "validated_request_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "view_authorized": true
+}

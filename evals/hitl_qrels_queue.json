@@ -1,0 +1,1603 @@
+[
+  {
+    "qrel_id": "qrel-01",
+    "query_text": "PGD Automated Document Classification",
+    "query_type": "partial",
+    "target_title": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification",
+    "target_record_id": "retrieval-record-3aeb622927829c5d208f6209f6b4",
+    "status": "JUDGED",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-62cadd33aaf98424ec3eecaa5bf2",
+        "title": "PGD Automated Document Classification ROUTES_TO_CARD NEE_12",
+        "snippet": "PGD Automated Document Classification ROUTES_TO_CARD NEE_12 PGD Automated Document Classification routes to NEE_12 sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 3,
+          "bm25": 2,
+          "colbert": 2
+        },
+        "relevance_label": 2
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-3aeb622927829c5d208f6209f6b4",
+        "title": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification",
+        "snippet": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification SOW-backed commercial/scope authority. sow-backed",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 4,
+          "sparse": 1,
+          "bm25": 1,
+          "colbert": 1
+        },
+        "relevance_label": 2
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-7f11e722246361a40bcaf19bb537",
+        "title": "PGD Automated Document Classification ROUTES_TO_CARD NEE_03",
+        "snippet": "PGD Automated Document Classification ROUTES_TO_CARD NEE_03 PGD Automated Document Classification routes to NEE_03 sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 4,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": 2
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-a0f50ccf060e80191259f555def8",
+        "title": "PGD Automated Document Classification ROUTES_TO_CARD NEE_07",
+        "snippet": "PGD Automated Document Classification ROUTES_TO_CARD NEE_07 PGD Automated Document Classification routes to NEE_07 sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 2,
+          "bm25": 4,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-e0541321ca6a15606d4b4d3cb580",
+        "title": "PGD Automated Document Classification USES_PATTERN Agent / AI eval framework",
+        "snippet": "PGD Automated Document Classification USES_PATTERN Agent / AI eval framework AI/agentic workstream should use eval/control framework. synthesis",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 5,
+          "bm25": 5,
+          "colbert": 5
+        },
+        "relevance_label": null
+      }
+    ],
+    "ndcg_at_3": 1.0
+  },
+  {
+    "qrel_id": "qrel-02",
+    "query_text": "Jacob Wellington",
+    "query_type": "partial",
+    "target_title": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling",
+    "target_record_id": "retrieval-record-8e10d51b1c193239259868b94bc6",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-931f9851782a1092ede78ecda04a",
+        "title": "Jacob Wellington LANE_CONTEXT_FOR AI Software Engineering",
+        "snippet": "Jacob Wellington LANE_CONTEXT_FOR AI Software Engineering Jacob Wellington is AI Software Engineering stakeholder. user-confirmed HITL",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 2,
+          "bm25": 2,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-8e10d51b1c193239259868b94bc6",
+        "title": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling",
+        "snippet": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling Jacob Wellington has Nuclear Scheduling alignment. user-confirmed HITL",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 2,
+          "sparse": 3,
+          "bm25": 1,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-3db92f7e596143e6acb620f83b9d",
+        "title": "Jacob Wellington SOURCED_FROM LinkedIn profile pointer — Jacob Wellington",
+        "snippet": "Jacob Wellington SOURCED_FROM LinkedIn profile pointer — Jacob Wellington Links canonical or proposed stakeholder Jacob Wellington to the user-supplied LinkedIn URL. This establishes source lineage only and does not establish current role, reporting,",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 1,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-c6a647cba4fd9d3675c3a8a8ad89",
+        "title": "Calvin Gilmartin CONTRIBUTES_TO Enterprise Data Office / EDO",
+        "snippet": "Calvin Gilmartin CONTRIBUTES_TO Enterprise Data Office / EDO Calvin Gilmartin is confirmed as part of the PartnerAdvisory EDO population. This is portfolio affiliation only and does not establish exact workstream, allocation, title, or decision rights. user-c",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": null,
+          "bm25": null,
+          "colbert": 5
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-29f5a89bfcb78bad1da1c34a5877",
+        "title": "John Tarbutton AFFILIATED_WITH PartnerAdvisory",
+        "snippet": "John Tarbutton AFFILIATED_WITH PartnerAdvisory John Tarbutton is a user-confirmed PartnerAdvisory employee; any APEX/Apex Global account is a client-domain alias, not separate employment.",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": null,
+          "bm25": null,
+          "colbert": 9
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-03",
+    "query_text": "What do we know about FCDB?",
+    "query_type": "paraphrase",
+    "target_title": "FCDB ROUTES_TO_CARD NEE_02",
+    "target_record_id": "retrieval-record-7fd07241ebda18397108ad46231b",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-0d538ab60dc2e090648934ba52e1",
+        "title": "FCDB ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "FCDB ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails FCDB is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 9,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-ddd54bf8fd1e2edcfece3d93a55f",
+        "title": "FCDB ROUTES_TO_CARD NEE_09",
+        "snippet": "FCDB ROUTES_TO_CARD NEE_09 FCDB routes to NEE_09 formal-status + proposal-level + q3-capacity",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 3,
+          "bm25": 5,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-280006912341f9708120c3e73aee",
+        "title": "FCDB ROUTES_TO_CARD NEE_04",
+        "snippet": "FCDB ROUTES_TO_CARD NEE_04 FCDB routes to NEE_04 formal-status + proposal-level + q3-capacity",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 5,
+          "bm25": 1,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-76436bd172da9b40ca537e5adbb2",
+        "title": "FCDB ROUTES_TO_CARD NEE_11",
+        "snippet": "FCDB ROUTES_TO_CARD NEE_11 FCDB routes to NEE_11 formal-status + proposal-level + q3-capacity",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 7,
+          "bm25": 2,
+          "colbert": 5
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-7fd07241ebda18397108ad46231b",
+        "title": "FCDB ROUTES_TO_CARD NEE_02",
+        "snippet": "FCDB ROUTES_TO_CARD NEE_02 FCDB routes to NEE_02 formal-status + proposal-level + q3-capacity",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 6,
+          "sparse": 2,
+          "bm25": 4,
+          "colbert": 6
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-04",
+    "query_text": "What do we know about v17 NEE / NEA stakeholder org-chart working model?",
+    "query_type": "paraphrase",
+    "target_title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+    "target_record_id": "retrieval-record-753fbd57a5d6624c411206261e75",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-c59c4bd501695f2f7746734a7576",
+        "title": "v17 NEE / NEA stakeholder org-chart working model SOURCED_FROM v17 NEE_24 NEE NEA Stakeholder Org Chart",
+        "snippet": "v17 NEE / NEA stakeholder org-chart working model SOURCED_FROM v17 NEE_24 NEE NEA Stakeholder Org Chart model_v17_stakeholder_org_chart is sourced from source_v17_stakeholder_org_chart_2026_07_08. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 1,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-753fbd57a5d6624c411206261e75",
+        "title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+        "snippet": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10 model_v17_stakeholder_org_chart routes to card_NEE_10 under the existing v22/v23 canonical card spine. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 3,
+          "sparse": 2,
+          "bm25": 2,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-1e853c8583e3e090614535c5fb5d",
+        "title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_15",
+        "snippet": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_15 model_v17_stakeholder_org_chart routes to card_NEE_15 under the existing v22/v23 canonical card spine. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 3,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-ece0ba9c92206cb9d1ddc4022a0d",
+        "title": "v17 NEA Q3 pod-charter roster and fixed-capacity guardrails SOURCED_FROM v17 NEE_19 NEA AI Engineering Delivery Teams Q3 SOW",
+        "snippet": "v17 NEA Q3 pod-charter roster and fixed-capacity guardrails SOURCED_FROM v17 NEE_19 NEA AI Engineering Delivery Teams Q3 SOW model_v17_nea_q3_pod_charter_roster is sourced from source_v17_nea_ai_engineering_delivery_q3_sow_2026_07_08. v23 spine-consi",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 7,
+          "sparse": 5,
+          "bm25": 8,
+          "colbert": 17
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-1c589a38a8b67f4e166e17c1ce7e",
+        "title": "Gemini Enablement SOURCED_FROM v17 NEE_12 NEA Q3 Project Charters and Proposal-Level Details",
+        "snippet": "Gemini Enablement SOURCED_FROM v17 NEE_12 NEA Q3 Project Charters and Proposal-Level Details workstream_gemini_enablement is sourced from source_v17_nea_q3_project_charters_2026_07_08. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 20,
+          "bm25": 32,
+          "colbert": 5
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-05",
+    "query_text": "v17 NEE / NEA stakeholder",
+    "query_type": "partial",
+    "target_title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+    "target_record_id": "retrieval-record-753fbd57a5d6624c411206261e75",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-c59c4bd501695f2f7746734a7576",
+        "title": "v17 NEE / NEA stakeholder org-chart working model SOURCED_FROM v17 NEE_24 NEE NEA Stakeholder Org Chart",
+        "snippet": "v17 NEE / NEA stakeholder org-chart working model SOURCED_FROM v17 NEE_24 NEE NEA Stakeholder Org Chart model_v17_stakeholder_org_chart is sourced from source_v17_stakeholder_org_chart_2026_07_08. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 1,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-1e853c8583e3e090614535c5fb5d",
+        "title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_15",
+        "snippet": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_15 model_v17_stakeholder_org_chart routes to card_NEE_15 under the existing v22/v23 canonical card spine. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 3,
+          "bm25": 3,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-753fbd57a5d6624c411206261e75",
+        "title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+        "snippet": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10 model_v17_stakeholder_org_chart routes to card_NEE_10 under the existing v22/v23 canonical card spine. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 3,
+          "sparse": 2,
+          "bm25": 2,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-1c589a38a8b67f4e166e17c1ce7e",
+        "title": "Gemini Enablement SOURCED_FROM v17 NEE_12 NEA Q3 Project Charters and Proposal-Level Details",
+        "snippet": "Gemini Enablement SOURCED_FROM v17 NEE_12 NEA Q3 Project Charters and Proposal-Level Details workstream_gemini_enablement is sourced from source_v17_nea_q3_project_charters_2026_07_08. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 15,
+          "bm25": 7,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-7b63f2f58151261a6cd3d9689607",
+        "title": "NEE_07 NEA Staffing Product Engineering Model SUPPORTS_LINEAGE_FOR PM prototype checklist",
+        "snippet": "NEE_07 NEA Staffing Product Engineering Model SUPPORTS_LINEAGE_FOR PM prototype checklist v17 product-engineering model supports PM prototyping as discovery/backlog clarity with engineering feasibility visible. curated source pack",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 7,
+          "bm25": 12,
+          "colbert": 8
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-06",
+    "query_text": "What do we know about GridOpti?",
+    "query_type": "paraphrase",
+    "target_title": "GridOpti ROUTES_TO_CARD NEE_11",
+    "target_record_id": "retrieval-record-48220469adb827ee5da98ff28503",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-de66a3c727f3e550f03498361532",
+        "title": "Grid Optimization / GridOpti ANCHOR_FOR v17 EDO Core Data Product detailed SOW memory",
+        "snippet": "Grid Optimization / GridOpti ANCHOR_FOR v17 EDO Core Data Product detailed SOW memory Grid Optimization / GridOpti is a retrieval anchor for EDO core SOW / Data1 / DQT context. SOW/PO-backed curated source + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 7,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-94e71e87daf66f2c69647c7da56a",
+        "title": "GridOpti SOW_BACKED_BY Grid Optimization Data Product",
+        "snippet": "GridOpti SOW_BACKED_BY Grid Optimization Data Product SOW-backed commercial/scope authority. sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 2,
+          "bm25": 5,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-66e03e441607a0ea080d96a59f3c",
+        "title": "GridOpti ROUTES_TO_CARD NEE_02",
+        "snippet": "GridOpti ROUTES_TO_CARD NEE_02 GridOpti routes to NEE_02 formal-status + sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 3,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-48220469adb827ee5da98ff28503",
+        "title": "GridOpti ROUTES_TO_CARD NEE_11",
+        "snippet": "GridOpti ROUTES_TO_CARD NEE_11 GridOpti routes to NEE_11 formal-status + sow-backed",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 4,
+          "sparse": 5,
+          "bm25": 2,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-f28032fa28b0cf2b23f988a059b1",
+        "title": "GridOpti ROUTES_TO_CARD NEE_03",
+        "snippet": "GridOpti ROUTES_TO_CARD NEE_03 GridOpti routes to NEE_03 formal-status + sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 6,
+          "bm25": 1,
+          "colbert": 6
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-07",
+    "query_text": "What do we know about PD Design Automation / APEX SSUP Design Tool?",
+    "query_type": "paraphrase",
+    "target_title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+    "target_record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-ec6a0fffd4888408b6a889e9f84a",
+        "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_02",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_02 PD Design Automation / APEX SSUP Design Tool routes to NEE_02 formal-status + q3-capacity",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 2,
+          "bm25": 2,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-d024fba013e0e1782af0315a416a",
+        "title": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026 Connected to NEA Q3 fixed-capacity charter/outcome model; not guaranteed fixed output. sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+        "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04 PD Design Automation / APEX SSUP Design Tool routes to NEE_04 formal-status + q3-capacity",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 3,
+          "sparse": 3,
+          "bm25": 1,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-2c333cb21ce9b80c89ff0a5a521b",
+        "title": "SSUP ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "SSUP ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails SSUP is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 4,
+          "bm25": 4,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-cc92d59ce83bb40c0af8a8c6a9bf",
+        "title": "APEX EV ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "APEX EV ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails APEX EV is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 6,
+          "sparse": 5,
+          "bm25": 13,
+          "colbert": 5
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-08",
+    "query_text": "PD Design Automation / APEX",
+    "query_type": "partial",
+    "target_title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+    "target_record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-ec6a0fffd4888408b6a889e9f84a",
+        "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_02",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_02 PD Design Automation / APEX SSUP Design Tool routes to NEE_02 formal-status + q3-capacity",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 2,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+        "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04 PD Design Automation / APEX SSUP Design Tool routes to NEE_04 formal-status + q3-capacity",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 2,
+          "sparse": 3,
+          "bm25": 1,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-d024fba013e0e1782af0315a416a",
+        "title": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026 Connected to NEA Q3 fixed-capacity charter/outcome model; not guaranteed fixed output. sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 2,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-cc92d59ce83bb40c0af8a8c6a9bf",
+        "title": "APEX EV ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "APEX EV ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails APEX EV is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 4,
+          "bm25": 11,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-8f1b433b9eb6a29b12b82186dbdd",
+        "title": "APEX SWARM ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "APEX SWARM ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails APEX SWARM is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 6,
+          "bm25": 10,
+          "colbert": 6
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-09",
+    "query_text": "NEA Nexus access",
+    "query_type": "partial",
+    "target_title": "NEA Nexus access model SPLITS_INTO Pipeline-level access",
+    "target_record_id": "retrieval-record-2e6659008eb10ff6f783c9cb7af8",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-5547fbe273dab72088351fd4fde5",
+        "title": "NEA Nexus access model SPLITS_INTO Individual-level access",
+        "snippet": "NEA Nexus access model SPLITS_INTO Individual-level access NEA Nexus access model distinguishes individual-level access. user-confirmed dated meeting notes",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 2,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-2e6659008eb10ff6f783c9cb7af8",
+        "title": "NEA Nexus access model SPLITS_INTO Pipeline-level access",
+        "snippet": "NEA Nexus access model SPLITS_INTO Pipeline-level access NEA Nexus access model distinguishes pipeline-level access. user-confirmed dated meeting notes",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 2,
+          "sparse": 2,
+          "bm25": 1,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-27de0bcb93ec3721402f7dcf8389",
+        "title": "Gordon operational follow-up INCLUDES NEA Nexus access model",
+        "snippet": "Gordon operational follow-up INCLUDES NEA Nexus access model Gordon follow-up includes NEA Nexus access coordination. user-confirmed dated meeting notes",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 4,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-f4369ba2279f4249d201bf78a634",
+        "title": "Gordon Paynter OWNS_OR_COORDINATES NEA Nexus access model",
+        "snippet": "Gordon Paynter OWNS_OR_COORDINATES NEA Nexus access model Gordon Paynter coordinates NEA Nexus access framing as part of the immediate 2026-07-07 tactical fire-fighting follow-up list. user-confirmed HITL",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 3,
+          "bm25": 4,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-c4ec5e0dbcb468c3fd74ef9f9a61",
+        "title": "Nexus Nuclear ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "Nexus Nuclear ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails Nexus Nuclear is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 5,
+          "bm25": 5,
+          "colbert": 5
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-10",
+    "query_text": "What do we know about v24 ad hoc query response protocol?",
+    "query_type": "paraphrase",
+    "target_title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+    "target_record_id": "retrieval-record-71af4fd0c376cc019115d48034c2",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-afd8fc3be85a1e325359ed0ebcf7",
+        "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_00",
+        "snippet": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_00 Authority/routing home for v24 ad hoc query protocol. control-layer instruction",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 3,
+          "bm25": 1,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-71af4fd0c376cc019115d48034c2",
+        "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+        "snippet": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99 Primary project-instruction home for v24 ad hoc query protocol. control-layer instruction",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 1,
+          "sparse": 2,
+          "bm25": 3,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-79594326c4dd21cf183ba49cf37a",
+        "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_16",
+        "snippet": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_16 Provenance/source-object home for v24 ad hoc query protocol. control-layer instruction",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 1,
+          "bm25": 2,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-e3b66750cd6719f8de5d08eef57d",
+        "title": "NEE v22 version update protocol REQUIRES Graph delta prior/current/change summary",
+        "snippet": "NEE v22 version update protocol REQUIRES Graph delta prior/current/change summary The v22 protocol requires prior/current/change graph summaries for major graph components. user-directed v22 protocol and v21-safe Adaptive AI-PDLC synthesis",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 5,
+          "bm25": 7,
+          "colbert": 7
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-08c6ac7ef2a888c33d932b6a54d2",
+        "title": "NEE v22 version update protocol REQUIRES Refractory normalization / reconciliation pass",
+        "snippet": "NEE v22 version update protocol REQUIRES Refractory normalization / reconciliation pass The v22 protocol requires normalization/reconciliation before affected cards are rewritten. user-directed v22 protocol and v21-safe Adaptive AI-PDLC synthesis",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 6,
+          "sparse": 6,
+          "bm25": 6,
+          "colbert": 5
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-11",
+    "query_text": "v24 ad hoc query",
+    "query_type": "partial",
+    "target_title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+    "target_record_id": "retrieval-record-71af4fd0c376cc019115d48034c2",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-afd8fc3be85a1e325359ed0ebcf7",
+        "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_00",
+        "snippet": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_00 Authority/routing home for v24 ad hoc query protocol. control-layer instruction",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 3,
+          "bm25": 1,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-79594326c4dd21cf183ba49cf37a",
+        "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_16",
+        "snippet": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_16 Provenance/source-object home for v24 ad hoc query protocol. control-layer instruction",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 1,
+          "bm25": 2,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-71af4fd0c376cc019115d48034c2",
+        "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+        "snippet": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99 Primary project-instruction home for v24 ad hoc query protocol. control-layer instruction",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 2,
+          "sparse": 2,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-d4653e9118f196b949e331f7cfaf",
+        "title": "Full-name, no-guess, graph-first stakeholder protocol ROUTES_TO_CARD NEE_00",
+        "snippet": "Full-name, no-guess, graph-first stakeholder protocol ROUTES_TO_CARD NEE_00 Routes the v32 stakeholder query/update protocol to the authority and synthesis control card. user-instructed protocol routing",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 10,
+          "sparse": 5,
+          "bm25": 4,
+          "colbert": 94
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-5f788aa391296b7e8d1358f2760e",
+        "title": "v17 AI Hub Foundations / NEE IT engineering epic detail ROUTES_TO_CARD NEE_22",
+        "snippet": "v17 AI Hub Foundations / NEE IT engineering epic detail ROUTES_TO_CARD NEE_22 sow_v17_ai_hub_foundations_epic_detail routes to card_NEE_22 under the existing v22/v23 canonical card spine. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 6,
+          "sparse": 28,
+          "bm25": null,
+          "colbert": 13
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-12",
+    "query_text": "What do we know about Nuclear Scheduling?",
+    "query_type": "paraphrase",
+    "target_title": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+    "target_record_id": "retrieval-record-fa005c732931d60d064c4241ec61",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-45cecde0f580cfbb16af4a462e78",
+        "title": "Nuclear Scheduling ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "Nuclear Scheduling ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails Nuclear Scheduling is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 6,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-a72a535ee339b4163ac5cc24e661",
+        "title": "Nuclear Scheduling HAS_STRATEGIC_OPPORTUNITY Nuclear Engineering Change Process opportunity",
+        "snippet": "Nuclear Scheduling HAS_STRATEGIC_OPPORTUNITY Nuclear Engineering Change Process opportunity Routes the Engineering Change exploration under Nuclear Scheduling context without creating committed charter scope. directional product strategy",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 3,
+          "bm25": 3,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-e03b910fd4aa987945eec29e9643",
+        "title": "Nuclear Scheduling ROUTES_TO_CARD NEE_02",
+        "snippet": "Nuclear Scheduling ROUTES_TO_CARD NEE_02 Nuclear Scheduling and Engineering Change routes to NEE_02 formal-status + proposal-level + q3-capacity",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 6,
+          "bm25": 4,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-8e10d51b1c193239259868b94bc6",
+        "title": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling",
+        "snippet": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling Jacob Wellington has Nuclear Scheduling alignment. user-confirmed HITL",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 2,
+          "bm25": 1,
+          "colbert": 5
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-fa005c732931d60d064c4241ec61",
+        "title": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+        "snippet": "Nuclear Scheduling ROUTES_TO_CARD NEE_04 Nuclear Scheduling and Engineering Change routes to NEE_04 formal-status + proposal-level + q3-capacity",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 4,
+          "sparse": 7,
+          "bm25": 5,
+          "colbert": 4
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-13",
+    "query_text": "Nuclear Scheduling",
+    "query_type": "partial",
+    "target_title": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+    "target_record_id": "retrieval-record-fa005c732931d60d064c4241ec61",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-8e10d51b1c193239259868b94bc6",
+        "title": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling",
+        "snippet": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling Jacob Wellington has Nuclear Scheduling alignment. user-confirmed HITL",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 2,
+          "bm25": 1,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-a72a535ee339b4163ac5cc24e661",
+        "title": "Nuclear Scheduling HAS_STRATEGIC_OPPORTUNITY Nuclear Engineering Change Process opportunity",
+        "snippet": "Nuclear Scheduling HAS_STRATEGIC_OPPORTUNITY Nuclear Engineering Change Process opportunity Routes the Engineering Change exploration under Nuclear Scheduling context without creating committed charter scope. directional product strategy",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 3,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-e03b910fd4aa987945eec29e9643",
+        "title": "Nuclear Scheduling ROUTES_TO_CARD NEE_02",
+        "snippet": "Nuclear Scheduling ROUTES_TO_CARD NEE_02 Nuclear Scheduling and Engineering Change routes to NEE_02 formal-status + proposal-level + q3-capacity",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 6,
+          "bm25": 4,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-45cecde0f580cfbb16af4a462e78",
+        "title": "Nuclear Scheduling ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "Nuclear Scheduling ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails Nuclear Scheduling is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 1,
+          "bm25": 6,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-fa005c732931d60d064c4241ec61",
+        "title": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+        "snippet": "Nuclear Scheduling ROUTES_TO_CARD NEE_04 Nuclear Scheduling and Engineering Change routes to NEE_04 formal-status + proposal-level + q3-capacity",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 4,
+          "sparse": 7,
+          "bm25": 5,
+          "colbert": 5
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-14",
+    "query_text": "What do we know about Atlas Pilot / ALR?",
+    "query_type": "paraphrase",
+    "target_title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+    "target_record_id": "retrieval-record-0b9f4f223d6ef7062e60b4b46f70",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-5241b68a2071023f45524812bed5",
+        "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_02",
+        "snippet": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_02 Atlas Pilot / ALR routes to NEE_02 formal-status + sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 1,
+          "bm25": 4,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-e20ecf36540276d13ee670ce7e1d",
+        "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_11",
+        "snippet": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_11 Atlas Pilot / ALR routes to NEE_11 formal-status + sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 4,
+          "bm25": 1,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-d2482d33b89cff7cfffda16927ee",
+        "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_03",
+        "snippet": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_03 Atlas Pilot / ALR routes to NEE_03 formal-status + sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 3,
+          "bm25": 3,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-0b9f4f223d6ef7062e60b4b46f70",
+        "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+        "snippet": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13 Atlas Pilot / ALR routes to NEE_13 formal-status + sow-backed",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 3,
+          "sparse": 2,
+          "bm25": 2,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-6e5f13835cff71b6ffa4f5ad9ffe",
+        "title": "Atlas Pilot / ALR USES_PATTERN Databricks CI/CD and medallion",
+        "snippet": "Atlas Pilot / ALR USES_PATTERN Databricks CI/CD and medallion Workstream connects to Databricks medallion / CI-CD reuse pattern. sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 5,
+          "bm25": 5,
+          "colbert": 5
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-15",
+    "query_text": "Atlas Pilot /",
+    "query_type": "partial",
+    "target_title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+    "target_record_id": "retrieval-record-0b9f4f223d6ef7062e60b4b46f70",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-e20ecf36540276d13ee670ce7e1d",
+        "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_11",
+        "snippet": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_11 Atlas Pilot / ALR routes to NEE_11 formal-status + sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 3,
+          "bm25": 1,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-5241b68a2071023f45524812bed5",
+        "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_02",
+        "snippet": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_02 Atlas Pilot / ALR routes to NEE_02 formal-status + sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 1,
+          "bm25": 4,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-0b9f4f223d6ef7062e60b4b46f70",
+        "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+        "snippet": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13 Atlas Pilot / ALR routes to NEE_13 formal-status + sow-backed",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 3,
+          "sparse": 2,
+          "bm25": 2,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-d2482d33b89cff7cfffda16927ee",
+        "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_03",
+        "snippet": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_03 Atlas Pilot / ALR routes to NEE_03 formal-status + sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 4,
+          "bm25": 3,
+          "colbert": 5
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-6e5f13835cff71b6ffa4f5ad9ffe",
+        "title": "Atlas Pilot / ALR USES_PATTERN Databricks CI/CD and medallion",
+        "snippet": "Atlas Pilot / ALR USES_PATTERN Databricks CI/CD and medallion Workstream connects to Databricks medallion / CI-CD reuse pattern. sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 5,
+          "bm25": 5,
+          "colbert": 1
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-16",
+    "query_text": "PD Design Automation / APEX SSUP Design Tool",
+    "query_type": "partial",
+    "target_title": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+    "target_record_id": "retrieval-record-d024fba013e0e1782af0315a416a",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-ec6a0fffd4888408b6a889e9f84a",
+        "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_02",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_02 PD Design Automation / APEX SSUP Design Tool routes to NEE_02 formal-status + q3-capacity",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 2,
+          "bm25": 2,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+        "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04 PD Design Automation / APEX SSUP Design Tool routes to NEE_04 formal-status + q3-capacity",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 3,
+          "bm25": 1,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-d024fba013e0e1782af0315a416a",
+        "title": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026 Connected to NEA Q3 fixed-capacity charter/outcome model; not guaranteed fixed output. sow-backed",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 3,
+          "sparse": 1,
+          "bm25": 3,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-2c333cb21ce9b80c89ff0a5a521b",
+        "title": "SSUP ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "SSUP ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails SSUP is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 4,
+          "bm25": 4,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-8f1b433b9eb6a29b12b82186dbdd",
+        "title": "APEX SWARM ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+        "snippet": "APEX SWARM ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails APEX SWARM is a first-class Q3 pod/charter roster row for graph retrieval. SOW-backed source-pack + HITL graph decomposition",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 6,
+          "sparse": 7,
+          "bm25": 12,
+          "colbert": 5
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-17",
+    "query_text": "What do we know about PGD CoPilot / technician assistant / Bedrock Data Automation POC?",
+    "query_type": "paraphrase",
+    "target_title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_03",
+    "target_record_id": "retrieval-record-73e8aa094c3e8f53fae5f50f3bf5",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-5cc21aaaee93369f47955767cb63",
+        "title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_12",
+        "snippet": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_12 PGD CoPilot / Bedrock Data Automation POC routes to NEE_12 sow-backed + change-order",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 2,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-73e8aa094c3e8f53fae5f50f3bf5",
+        "title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_03",
+        "snippet": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_03 PGD CoPilot / Bedrock Data Automation POC routes to NEE_03 sow-backed + change-order",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 2,
+          "sparse": 2,
+          "bm25": 1,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-bb9a405c22de34f3311f6710735f",
+        "title": "AI-enabled SDLC / PDLC REQUIRES Continuous context hydration / memory bank",
+        "snippet": "AI-enabled SDLC / PDLC REQUIRES Continuous context hydration / memory bank AI-enabled SDLC/PDLC requires continuous org, product, architecture, and team context to avoid stalled assistant adoption and handoff loss. directional internal enablement dec",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 13,
+          "sparse": 11,
+          "bm25": 13,
+          "colbert": 6
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-d024fba013e0e1782af0315a416a",
+        "title": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+        "snippet": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026 Connected to NEA Q3 fixed-capacity charter/outcome model; not guaranteed fixed output. sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 60,
+          "bm25": 10,
+          "colbert": 7
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-3aeb622927829c5d208f6209f6b4",
+        "title": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification",
+        "snippet": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification SOW-backed commercial/scope authority. sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 24,
+          "sparse": 6,
+          "bm25": 3,
+          "colbert": 13
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-18",
+    "query_text": "PGD CoPilot / technician assistant /",
+    "query_type": "partial",
+    "target_title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_03",
+    "target_record_id": "retrieval-record-73e8aa094c3e8f53fae5f50f3bf5",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-5cc21aaaee93369f47955767cb63",
+        "title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_12",
+        "snippet": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_12 PGD CoPilot / Bedrock Data Automation POC routes to NEE_12 sow-backed + change-order",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 2,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-73e8aa094c3e8f53fae5f50f3bf5",
+        "title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_03",
+        "snippet": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_03 PGD CoPilot / Bedrock Data Automation POC routes to NEE_03 sow-backed + change-order",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 2,
+          "sparse": 2,
+          "bm25": 1,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-3aeb622927829c5d208f6209f6b4",
+        "title": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification",
+        "snippet": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification SOW-backed commercial/scope authority. sow-backed",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 16,
+          "sparse": 3,
+          "bm25": 3,
+          "colbert": 5
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-7e13ae5eb8ba3711ecb1b603419d",
+        "title": "Co-hydrated PartnerAdvisory / NEA operating model REQUIRES Pod-to-EM mapping",
+        "snippet": "Co-hydrated PartnerAdvisory / NEA operating model REQUIRES Pod-to-EM mapping The cohydrated model requires pod-to-EM mapping and technical touchpoints to reduce architectural opacity. Copilot-derived meeting synthesis; directional internal interpretation; raw",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 14,
+          "sparse": 10,
+          "bm25": 20,
+          "colbert": 25
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-93749822713f683522d855bf95df",
+        "title": "Dual-track AI-PDLC co-build and enable model SUPPLIES_EXAMPLE_TO NEA/PartnerAdvisory Engineering Exchange",
+        "snippet": "Dual-track AI-PDLC co-build and enable model SUPPLIES_EXAMPLE_TO NEA/PartnerAdvisory Engineering Exchange Co-build pilots and champion lessons should feed Engineering Exchange with reusable assets, examples, standards, and anti-patterns. directional internal ",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 11,
+          "bm25": null,
+          "colbert": 6
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-19",
+    "query_text": "Valerie Perez",
+    "query_type": "partial",
+    "target_title": "Valerie Perez AFFILIATED_WITH PartnerAdvisory",
+    "target_record_id": "retrieval-record-aa7b39f8fa7b9af692b371b35129",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-96dde07193040ea5856201190357",
+        "title": "Valerie Perez CONTRIBUTES_TO Enterprise Data Office / EDO",
+        "snippet": "Valerie Perez CONTRIBUTES_TO Enterprise Data Office / EDO Valerie Perez is confirmed as part of the PartnerAdvisory EDO population. This is portfolio affiliation only and does not establish exact workstream, allocation, title, or decision rights. user-confirm",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 2,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-aa7b39f8fa7b9af692b371b35129",
+        "title": "Valerie Perez AFFILIATED_WITH PartnerAdvisory",
+        "snippet": "Valerie Perez AFFILIATED_WITH PartnerAdvisory Valerie Perez is confirmed by the user as a PartnerAdvisory resource. Email alias is retained as hidden retrieval metadata. user-confirmed identity and PartnerAdvisory affiliation",
+        "is_synthetic_target": true,
+        "ranks": {
+          "dense": 2,
+          "sparse": 2,
+          "bm25": 1,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-699393cc544ae11773c1824b1ae3",
+        "title": "v17 AI Hub Foundations / NEE IT engineering epic detail ROUTES_TO_CARD NEE_12",
+        "snippet": "v17 AI Hub Foundations / NEE IT engineering epic detail ROUTES_TO_CARD NEE_12 sow_v17_ai_hub_foundations_epic_detail routes to card_NEE_12 under the existing v22/v23 canonical card spine. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 6,
+          "sparse": 59,
+          "bm25": null,
+          "colbert": 7
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-9967c69ee42131892d23b3af288e",
+        "title": "v17 zero-loss source-pack control layer ROUTES_TO_CARD NEE_99",
+        "snippet": "v17 zero-loss source-pack control layer ROUTES_TO_CARD NEE_99 control_v17_zero_loss_source_pack routes to card_NEE_99 under the existing v22/v23 canonical card spine. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 5,
+          "sparse": 68,
+          "bm25": null,
+          "colbert": 12
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-4b4bfdcd6a3025320a93b3afcb28",
+        "title": "v17 AI Hub Foundations / NEE IT engineering epic detail ROUTES_TO_CARD NEE_07",
+        "snippet": "v17 AI Hub Foundations / NEE IT engineering epic detail ROUTES_TO_CARD NEE_07 sow_v17_ai_hub_foundations_epic_detail routes to card_NEE_07 under the existing v22/v23 canonical card spine. v23 spine-consistent v17/source-pack refactor repair",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 11,
+          "sparse": 43,
+          "bm25": null,
+          "colbert": 13
+        },
+        "relevance_label": null
+      }
+    ]
+  },
+  {
+    "qrel_id": "qrel-20",
+    "query_text": "Rewire business transformation mandate",
+    "query_type": "partial",
+    "target_title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR AI Software Engineering",
+    "target_record_id": "retrieval-record-bd4322b575756b59cf8942a8842c",
+    "status": "PENDING",
+    "candidates": [
+      {
+        "rank": 1,
+        "record_id": "retrieval-record-0ab2500371e1c19a023fb5250cb3",
+        "title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR Product R&D",
+        "snippet": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR Product R&D Rewire is a core business-transformation mandate context for this NEA product/platform lane; not an ownership edge. user-confirmed HITL",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 1,
+          "sparse": 1,
+          "bm25": 4,
+          "colbert": 2
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 2,
+        "record_id": "retrieval-record-acbbe92a2ac2741a11bc6c1d5131",
+        "title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR E&C product lane",
+        "snippet": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR E&C product lane Rewire is a core business-transformation mandate context for this NEA product/platform lane; not an ownership edge. user-confirmed HITL",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 4,
+          "sparse": 4,
+          "bm25": 8,
+          "colbert": 1
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 3,
+        "record_id": "retrieval-record-9a42578f00cd9b9af545c5e79cb0",
+        "title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR Enterprise AI Products",
+        "snippet": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR Enterprise AI Products Rewire is a core business-transformation mandate context for this NEA product/platform lane; not an ownership edge. user-confirmed HITL",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 2,
+          "sparse": 7,
+          "bm25": 5,
+          "colbert": 4
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 4,
+        "record_id": "retrieval-record-a61e97f4aaf7b2d2d725d79e20ab",
+        "title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR Enterprise AI / Optimization Products",
+        "snippet": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR Enterprise AI / Optimization Products Rewire is a core business-transformation mandate context for this NEA product/platform lane; not an ownership edge. user-confirmed HITL",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 3,
+          "sparse": 6,
+          "bm25": 7,
+          "colbert": 3
+        },
+        "relevance_label": null
+      },
+      {
+        "rank": 5,
+        "record_id": "retrieval-record-4920bb40ba184e16dee65095841d",
+        "title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR Asset Performance",
+        "snippet": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR Asset Performance Rewire is a core business-transformation mandate context for this NEA product/platform lane; not an ownership edge. user-confirmed HITL",
+        "is_synthetic_target": false,
+        "ranks": {
+          "dense": 6,
+          "sparse": 3,
+          "bm25": 1,
+          "colbert": 5
+        },
+        "relevance_label": null
+      }
+    ]
+  }
+]

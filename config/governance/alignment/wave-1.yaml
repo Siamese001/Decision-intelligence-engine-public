@@ -1,0 +1,27 @@
+wave_id: "Wave 1: Establish trustworthy evidence and coverage"
+wave_number: 1
+governance: "NEE-KG-ALIGNMENT-01"
+plan_path: "docs/plans/docs_pipeline_alignment_debate_plan_20261006.md"
+ledger_path: "hitl_decision_ledger.json"
+surface_catalog: "config/governance/alignment/surface_catalog.yaml"
+
+acceptance_criteria:
+  - "Engineering completion evidence is reliable before authorizing subsequent work"
+  - "Predecessor verification rejects missing, forged, or stale parent locks and skipped waves"
+  - "Exclusive creation rejects overwrites and ensures atomic receipt writes"
+  - "Collection-aware progress execution detects uncollected tests, partially executed suites, and unexplained skips"
+  - "Failing mixed-style collection canary fails the gate"
+  - "Every discovered surface is mapped or retired in surface catalog"
+  - "Receipt authorization is authentic, plan-bound, and immune to zero-decision bypasses"
+
+test_suites:
+  - "tests/end_to_end/test_alignment_w1_e2e.py"
+  - "tests/test_alignment_w1_adversarial.py"
+
+artifacts:
+  - "config/governance/alignment/surface_catalog.yaml"
+  - "config/governance/alignment/wave-1.yaml"
+  - "tools/run_wave_gate.py"
+  - "tools/record_wave_receipt.py"
+  - "dual_pipeline/l0/receipts.py"
+  - "dual_pipeline/hitl_governance_core/pre_wave_interceptor.py"

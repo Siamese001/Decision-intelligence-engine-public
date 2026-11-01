@@ -1,0 +1,69 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:a2a-finalization-receipt:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "a2a-finalization-receipt-fixture",
+  "receipt_id": "a2a-finalization-receipt-fixture",
+  "status": "PASS",
+  "source_bundle": {
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "bundle_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "capture": {
+    "capture_id": "capture-fixture",
+    "capture_manifest_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "span_ledger_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "selection_ledger_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+  },
+  "archive": {
+    "root_id": "a2a-archive-fixture",
+    "files": [
+      {
+        "role": "source_bundle",
+        "relative_path": "source_bundle.zip",
+        "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      },
+      {
+        "role": "capture_manifest",
+        "relative_path": "capture_manifest.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "role": "raw_capture",
+        "relative_path": "raw/source.response",
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      {
+        "role": "span_ledger",
+        "relative_path": "source_span_ledger.json",
+        "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+      },
+      {
+        "role": "selection_ledger",
+        "relative_path": "source_span_selection.json",
+        "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+      }
+    ]
+  },
+  "packages": [
+    {
+      "relative_path": "src-openai.reviewed.intake.json",
+      "file_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+      "canonical_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+      "artifact_id": "a2a-reviewed-packet-fixture",
+      "source_id": "SRC-OAI-FIXTURE"
+    }
+  ],
+  "audiences": [
+    "internal_consulting"
+  ],
+  "finalizer": {
+    "name": "nee-a2a-source-finalizer",
+    "version": "1.1.0"
+  },
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "aab8600e23230487cf3641875af44009e629a13a4633d76613b2ad8a6902301e"
+  }
+}

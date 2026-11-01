@@ -1,0 +1,20 @@
+wave_id: "Wave 4: Systemic Concurrency, Retrieval Performance & Zero-Regression End-to-End Release"
+wave_number: 4
+governance: "NEE-KG-DUAL-PIPELINE-01"
+required_prior_lock: "locks/wave_3.lock"
+
+acceptance_criteria:
+  - "SQLite WAL concurrency validates with atomic appends and 0 lock contention across 16 workers"
+  - "Streaming audio p95 latency is verified below 250 ms hard ceiling"
+  - "Hybrid BGE-M3 retrieval passes all 11 release gates with p95 latency below 7,500 ms"
+  - "Active pair validates model digest, BGE-M3 revision, sidecar schema, and rollback capability"
+  - "Zero leakage verified across tenant boundaries and INTERNAL_ADVISORY local Metal enclave"
+  - "Invariant sequence enforced: Evidence Record -> Canonical Graph Delta -> Executive Recap"
+  - "All production modules strictly satisfy the module size and complexity budget"
+
+test_suites:
+  - "tests/concurrency/test_sqlite_wal_concurrency.py"
+  - "tests/retrieval/test_11_release_gates.py"
+  - "tests/security/test_zero_leakage_class_b.py"
+  - "tests/end_to_end/test_class_b_acceptance.py"
+  - "tests/agent_framework/test_module_budget.py"

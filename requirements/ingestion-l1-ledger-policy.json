@@ -1,0 +1,10 @@
+{
+  "policy_id": "ingestion-l1-ledger-policy",
+  "schema_version": "1.0.0",
+  "runtime_default": "off",
+  "allowed_modes": ["off", "shadow", "enforced"],
+  "enforced_mode_requires_shadow_equivalence": true,
+  "provider_calls_before_l2d": 0,
+  "graph_mutations_before_l2d": 0,
+  "extensions": {}
+}

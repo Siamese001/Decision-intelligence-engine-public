@@ -1,0 +1,20 @@
+{
+  "name": "nee-knowledge-graph",
+  "interface": {
+    "displayName": "NEE Knowledge Graph"
+  },
+  "plugins": [
+    {
+      "name": "lucidchart",
+      "displayName": "Lucidchart",
+      "description": "Search, summarize, create, edit, and share Lucid diagrams through Lucid's official MCP server.",
+      "path": "./lucidchart"
+    },
+    {
+      "name": "miro",
+      "displayName": "Miro",
+      "description": "Read, synthesize, diagram, and safely update Miro boards through Miro's official MCP server.",
+      "path": "./miro"
+    }
+  ]
+}

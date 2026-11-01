@@ -1,0 +1,407 @@
+{
+  "schema_version": "2.0.0",
+  "dataset_contract": "urn:nee:qrels:authentic-benchmark-v1",
+  "description": "Authentic QRELS benchmark built from real meeting transcripts.",
+  "summary": {
+    "total_queries": 12,
+    "total_candidates_judged": 15
+  },
+  "evaluated_queries": [
+    {
+      "query_id": "q_nexus_vision_01",
+      "query_text": "What is the long-term vision for Project Nexus and what systems will developers interact with daily?",
+      "topic_id": "topic_nexus_vision",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "c6f2e1e390a6fd47",
+          "blinded_evidence": {
+            "record_id": "c6f2e1e390a6fd47",
+            "record_type": "source_chunk",
+            "lane": "approved",
+            "title": "Project Nexus Vision - 00:30",
+            "retrieval_text": "Perfect. Okay, so I think probably important to set the stage, and you've probably already seen this. It's been around. But this is our big concept of like what we want to bring it to, eventually. So a new web software thing, this is what a developer logs into in the day. They don't go to Outlook anymore. They could, if they want to, or Teams or anything. And what they're interacting with every day is like, maybe there's one agent in the front who's kind of like your development associate... He knows how to take an email attachment and put that into the right system, whether it's like Unifier or update a schedule. He knows how to do all of those things.",
+            "source_id": "01_Project_Nexus_09-10-2026_0900AM_1000AM_ET_hitl_resolved_transcript.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        },
+        {
+          "record_id": "14aae20a6c9b8720",
+          "blinded_evidence": {
+            "record_id": "14aae20a6c9b8720",
+            "record_type": "source_chunk",
+            "lane": "approved",
+            "title": "Project Nexus Vision - 01:45",
+            "retrieval_text": "He also knows how to call on other specific agents that are trained to do solar design or a battery project design, knows legal language specific to protected species in Florida. So like any kind of anything that we could dream up of, hey, we need a specialized agent for something that knows how to call upon that one. And this interface allows us to pull in emails, access project management tool, which we actually don't use, should go to Jira, pull in SharePoint, access any Power BIs we have, whatever, over to write a purchase order, and then also any tool that the enterprise is working on that would be useful to us. Also plug that into this interface too. So if it's like LAN 360, or do you know Routify? Or Discover? I haven't. Okay, so Discover is like...",
+            "source_id": "01_Project_Nexus_09-10-2026_0900AM_1000AM_ET_hitl_resolved_transcript.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 1,
+              "label": "Partially Relevant",
+              "support_type": "partial_support"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_documentum_writeback_01",
+      "query_text": "What are the unresolved write-back rules for Documentum and how do they impact the backfill?",
+      "topic_id": "topic_documentum_writeback",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "a589209fa8fde383",
+          "blinded_evidence": {
+            "record_id": "a589209fa8fde383",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "Documentum Write-Back Rules",
+            "retrieval_text": "- **Repository controls — Jack O’Shea identified unresolved write-back rules.** The business requirements still need to establish whether low-confidence fields can enter Documentum, when model output should be withheld, and how duplicate documents should be handled. Permission to delete documents is also unresolved. These questions affect changes to existing repository records, not just extraction accuracy. The immediate process concern is defining what writing back actually entails, including the testing needed to support it. [00:04:13–00:04:37; 00:17:13–00:17:52]",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        },
+        {
+          "record_id": "03df53028080108e",
+          "blinded_evidence": {
+            "record_id": "03df53028080108e",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "Documentum Backfill Expectations",
+            "retrieval_text": "- **Documentum readiness — Jack O’Shea reset backfill expectations.** Backfill means writing properties to documents already stored in Documentum. PGD leadership had expected an imminent start, but more consistent model performance and clearer document-handling requirements are prerequisites. Jack reported that leadership understood both the progress and the remaining complexity after the preceding review. Model consistency remains an open readiness dependency; no separate remediation assignment or completion date was committed in this session. [00:03:11–00:05:01]",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 1,
+              "label": "Partially Relevant",
+              "support_type": "partial_support"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_delivery_frictions_01",
+      "query_text": "What are the observed delivery frictions on DocIQ and what is the plan for product-led executive communication?",
+      "topic_id": "topic_delivery_frictions",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "3a25d8d4009954d5",
+          "blinded_evidence": {
+            "record_id": "3a25d8d4009954d5",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "DocIQ Scope and Accountability",
+            "retrieval_text": "- **Scope and accountability — Jack O’Shea acknowledged Apex Global-driven delivery friction.** The Q2 project vision had changed substantially through Q3 and Q4, with scope creep and insufficient product direction contributing to difficulty. Jack balanced that acknowledgment with satisfaction in the team’s work. Both attendees supported product-led executive communication, with engineers providing technical context rather than carrying commitments beyond their control. The intended change concerns who leads and owns the message, while preserving useful engineering participation. [00:05:18–00:05:56; 00:09:39–00:14:40]",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        },
+        {
+          "record_id": "ef7a267694733dad",
+          "blinded_evidence": {
+            "record_id": "ef7a267694733dad",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "DocIQ Engineering Focus",
+            "retrieval_text": "- **Engineering focus — Amit Ayer clarified the team’s broader technical strengths.** Capabilities extend beyond data work to front-end development, software engineering, extraction, embeddings, and classification. Additional technical-lead capacity and stronger product oversight are intended to reduce competing coordination demands. Both attendees connected delivery problems to optimistic planning and changing direction, rather than a lack of technical ability. Clearer requirements and earlier escalation of dependencies were the practical improvements discussed for protecting engineering delivery. [00:06:10–00:09:33; 00:13:40–00:14:40]",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 1,
+              "label": "Partially Relevant",
+              "support_type": "partial_support"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_model_economics_01",
+      "query_text": "What is the cost of scaling DocIQ and what architectural changes were proposed to improve economics?",
+      "topic_id": "topic_model_economics",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "732e0825c023014a",
+          "blinded_evidence": {
+            "record_id": "732e0825c023014a",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "DocIQ Model Economics",
+            "retrieval_text": "- **Model economics — Amit Ayer flagged the cost of scaling DocIQ.** Amit recalled model-cost figures declining from nearly $1 to approximately $0.10; the measurement basis and document volume were unspecified. These remain approximate recollections rather than a verified per-document baseline or savings calculation. He also reported greater phase-two attention to sustainable human review, retraining, confidence governance, and image caching. That design attention connects extraction performance with operating cost, while implementation and measured benefits remain unverified. [00:14:56–00:15:37]",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_work_organization_01",
+      "query_text": "How did Amit suggest separating the work tracks for DocIQ remediation and enhancements?",
+      "topic_id": "topic_work_organization",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "3ba9d7ab6fffa21a",
+          "blinded_evidence": {
+            "record_id": "3ba9d7ab6fffa21a",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "Work organization",
+            "retrieval_text": "- **Work organization — Amit Ayer suggested separating remediation from enhancements.** His proposed Track A grouped staged backfill with DMT confidence alignment. A separate Track B grouped feature enhancements, including the file-upload interface and extraction-related work. This distinction would separate preparation for repository updates from additional functionality. The extraction detail was not developed further in the discussion. These were advisory work-track suggestions; no revised work breakdown, delivery assignment, or release commitment was adopted. [00:16:15–00:16:35]",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_backfill_validation_01",
+      "query_text": "What pilot size was suggested for backfill validation and what were the proposed measurements?",
+      "topic_id": "topic_backfill_validation",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "7e9aeb790992f897",
+          "blinded_evidence": {
+            "record_id": "7e9aeb790992f897",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "Backfill validation",
+            "retrieval_text": "- **Backfill validation — Amit Ayer suggested an optional 5,000-document pilot.** Rather than an all-or-nothing backfill, he described smaller pilot batches and offered 5,000 documents through the validation interface as one possibility. The proposed measurements were error calibration and throughput, giving leadership evidence about processing behavior while limiting operational exposure. The number was an example, not an agreed batch size. No pilot execution commitment, acceptance criteria, or measured results were established. [00:16:40–00:17:02]",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_confidence_routing_01",
+      "query_text": "What confidence routing thresholds were proposed for automatic document handling versus human triage?",
+      "topic_id": "topic_confidence_routing",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "331cd75ef785179e",
+          "blinded_evidence": {
+            "record_id": "331cd75ef785179e",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "Confidence routing",
+            "retrieval_text": "- **Confidence routing — Amit Ayer suggested automatic handling above a proposed floor.** His advisory example used “Above 90” for automatic handling and lower-confidence results going to the validation interface for human triage, potentially through different queues. The number’s unit was unspecified, and behavior at exactly 90 was not defined. This remained a suggested routing concept rather than an approved threshold or implemented control; the business requirements for write-back remained open. [00:17:56–00:18:12]",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_portfolio_overlap_01",
+      "query_text": "Why was there frustration expressed regarding parallel document-processing initiatives like LENS?",
+      "topic_id": "topic_portfolio_overlap",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "97895f931ecc392e",
+          "blinded_evidence": {
+            "record_id": "97895f931ecc392e",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "Portfolio overlap",
+            "retrieval_text": "- **Portfolio overlap — Jack O’Shea reported frustration with DocIQ-like initiatives.** Jack described parallel document-processing efforts elsewhere in the company as frustrating. DocIQ, LENS, and related charters provide the subjects for comparison, but the discussion supplied no named duplicate systems or quantified impact. Amit’s LENS experience concerned confidence metrics and additional data. The substantive question is how the initiatives fit together; consolidation, shared architecture, and changes to project charters remain open. [00:18:27–00:19:39]",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_documentum_writeback_02",
+      "query_text": "Who is accountable for aligning the Documentum write-back requirements with DMT and PGD?",
+      "topic_id": "topic_documentum_writeback",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "f23c3523e8ae4fe0",
+          "blinded_evidence": {
+            "record_id": "f23c3523e8ae4fe0",
+            "record_type": "source_chunk",
+            "lane": "action_item",
+            "title": "Action Ledger: Write-back requirements",
+            "retrieval_text": "| 1 | Action | Align Documentum write-back requirements with DMT and PGD, covering low-confidence fields, duplicate handling, and deletion permissions. Discussed focus: the next one or two sprints. Backfill was tentatively targeted for month-end, subject to readiness. | Jack O’Shea | Not stated | stmt-004, stmt-014–016; 00:04:13–00:05:01, 00:17:13–00:17:52 | In Progress |",
+            "source_id": "02_Dociq_Jack_Amit_Jack_PartnerAdvisory_10-01-2026_1107AM1128AMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_neet_telemetry_01",
+      "query_text": "What telemetry sources are used by APEX_TRANS Insights Hub for wildfire and smoke detection?",
+      "topic_id": "topic_neet_telemetry",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "90af388366530162",
+          "blinded_evidence": {
+            "record_id": "90af388366530162",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "SaaS Telemetry Sources",
+            "retrieval_text": "- **SaaS Telemetry Sources:** Pano AI optical smoke cameras (REST API), TechnoSilva 5-day wildfire risk heatmaps (REST/GIS API), DTN Weather & Lightning radar (REST/WMS API).",
+            "source_id": "02_NEET_Insights_Hub_Tech_Services_Group_Interview_09-11-2026_0336PM_0437PM_ET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_navigator_usage_01",
+      "query_text": "Who is responsible for checking if Navigator is already deployed in the enterprise area?",
+      "topic_id": "topic_navigator_usage",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "9337155bbd2dbd41",
+          "blinded_evidence": {
+            "record_id": "9337155bbd2dbd41",
+            "record_type": "source_chunk",
+            "lane": "action_item",
+            "title": "Investigate Navigator Usage",
+            "retrieval_text": "| 1 | Action | Investigate whether Navigator or a similar project-management capability is already used in the referenced enterprise area and report the finding. | Taylor Mercer | TBD | 00:03:30–00:04:00 | Confirmed |",
+            "source_id": "02_Jarvis_Q1_Charter_Sharon_PartnerAdvisory_09-28-2026_1111AM_1200PM_ET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 1,
+              "label": "Partially Relevant",
+              "support_type": "partial_support"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    },
+    {
+      "query_id": "q_hr_pii_ownership_01",
+      "query_text": "What gaps were identified regarding PII and HR workflows, and who is meeting to resolve them?",
+      "topic_id": "topic_hr_pii_ownership",
+      "partition": "dev",
+      "judgments": [
+        {
+          "record_id": "c35258dfb9cd0a43",
+          "blinded_evidence": {
+            "record_id": "c35258dfb9cd0a43",
+            "record_type": "source_chunk",
+            "lane": "key_point",
+            "title": "HR 360 PII Ownership",
+            "retrieval_text": "- **Dan surfaced PII and HR 360 ownership gaps so HRIT handoffs can be defined before complex workflows move forward.** Drew Oakley distinguished simple workflows from cases that route, update, or associate employee and performance information. He identified PII handling as an unresolved concern and connected the discussion to capabilities developed through HR 360. Dan stated that he intended to meet with John Andersen (NEA Engineering Manager) later on 09/29/2026 to clarify what NEA would continue owning, what HRIT would own, and how product handoffs should work. Anuj Chokshi said the parties were close but still coordinating. [11:47:15–11:48:30; stmt-13–stmt-15]",
+            "source_id": "02_apex_global_Monthly_Ge_Gcp_PartnerAdvisory_09-29-2026_1142AM1202PMET_executive_recap.md"
+          },
+          "multi_dimensional_label": {
+            "evidence_relevance": {
+              "grade": 2,
+              "label": "Highly Relevant",
+              "support_type": "direct_answer"
+            }
+          },
+          "provenance": "expert_adjudicated",
+          "review_status": "RESOLVED"
+        }
+      ]
+    }
+  ]
+}

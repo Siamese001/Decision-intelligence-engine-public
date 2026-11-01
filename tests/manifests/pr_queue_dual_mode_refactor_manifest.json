@@ -1,0 +1,19 @@
+{
+  "name": "PR Queue dual-mode refactor gates",
+  "description": "Sequential receipt-gated acceptance tests for the PR Queue interactive and scheduled observer refactor.",
+  "branch": "docs/pr-queue-dual-mode-refactor-plan",
+  "deterministic_tests": ["tests.test_pr_queue_refactor_contract", "tests.test_pr_queue_render_contract"],
+  "e2e_tests": [
+    "tests.end_to_end.test_pr_queue_dual_mode_wave2_e2e",
+    "tests.adversarial.test_pr_queue_dual_mode_wave2_adversarial",
+    "tests.end_to_end.test_pr_queue_dual_mode_wave3_e2e",
+    "tests.adversarial.test_pr_queue_dual_mode_wave3_adversarial",
+    "tests.end_to_end.test_pr_queue_dual_mode_wave4_e2e",
+    "tests.adversarial.test_pr_queue_dual_mode_wave4_adversarial",
+    "tests.end_to_end.test_pr_queue_dual_mode_wave5_e2e",
+    "tests.adversarial.test_pr_queue_dual_mode_wave5_adversarial",
+    "tests.end_to_end.test_pr_queue_dual_mode_wave6_e2e",
+    "tests.adversarial.test_pr_queue_dual_mode_wave6_adversarial"
+  ],
+  "bge_tests": []
+}

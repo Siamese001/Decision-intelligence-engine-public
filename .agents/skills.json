@@ -1,0 +1,272 @@
+{
+  "$schema": "urn:nee:skills-registry:1.0.0",
+  "version": "1.2.0",
+  "max_workspace_skills": 26,
+  "canonical_skills_count": 19,
+  "plugin_skills_count": 2,
+  "total_skills_count": 21,
+  "skills": [
+    {
+      "name": "agent-runtime-engineering",
+      "path": ".agents/skills/agent-runtime-engineering",
+      "category": "agent-infrastructure",
+      "type": "core",
+      "consolidated_from": [
+        "agent-contract-testing",
+        "agent-evaluation-observability",
+        "agent-security-governance"
+      ],
+      "scripts": [
+        "scripts/validate_runtime_design.py",
+        "scripts/validate_contract_plan.py",
+        "scripts/validate_eval_observability.py",
+        "scripts/validate_security_design.py"
+      ],
+      "test_target": "tests/test_skill_scripts_end_to_end.py",
+      "cli_command": "python .agents/skills/agent-runtime-engineering/scripts/validate_runtime_design.py"
+    },
+    {
+      "name": "agent-subagent-orchestration",
+      "path": ".agents/skills/agent-subagent-orchestration",
+      "category": "agent-infrastructure",
+      "type": "core",
+      "consolidated_from": [
+        "agent-state-memory"
+      ],
+      "scripts": [
+        "scripts/validate_state_memory.py"
+      ],
+      "test_target": "tests/test_unified_agent_architecture.py",
+      "cli_command": "python .agents/skills/agent-subagent-orchestration/scripts/validate_state_memory.py"
+    },
+    {
+      "name": "design-stack-orchestrator",
+      "path": ".agents/skills/design-stack-orchestrator",
+      "category": "visual-architecture",
+      "type": "core",
+      "consolidated_from": [
+        "design-content-sync",
+        "design-governance-qa",
+        "design-handoff-bundle",
+        "frontend-storytelling",
+        "interactive-walkthrough"
+      ],
+      "scripts": [
+        "scripts/build_bundle.py",
+        "scripts/diff_content.py",
+        "scripts/lint_artifact_manifest.py",
+        "scripts/score_routes.py",
+        "scripts/validate_self_contained_html.py",
+        "scripts/validate_walkthrough.py"
+      ],
+      "test_target": "tests/test_skill_scripts_end_to_end.py",
+      "cli_command": "python .agents/skills/design-stack-orchestrator/scripts/score_routes.py"
+    },
+    {
+      "name": "figma-visual-studio",
+      "path": ".agents/skills/figma-visual-studio",
+      "category": "visual-governance",
+      "type": "core",
+      "consolidated_from": [
+        "figma-4k-visual-governance",
+        "figma-canvas-writer"
+      ],
+      "scripts": [
+        "scripts/run_release_gate.py",
+        "scripts/export_scene_manifest.py"
+      ],
+      "test_target": "tests/test_figma_governance_integration.py",
+      "cli_command": "python .agents/skills/figma-visual-studio/scripts/run_release_gate.py"
+    },
+    {
+      "name": "governance-harmonizer",
+      "path": ".agents/skills/governance-harmonizer",
+      "category": "architectural-governance",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/test_governance_harmonization.py",
+      "cli_command": "python tools/audit_governance_harmonization.py --fix-mode dry-run"
+    },
+    {
+      "name": "mcp-engineering",
+      "path": ".agents/skills/mcp-engineering",
+      "category": "agent-infrastructure",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [
+        "scripts/validate_mcp_design.py"
+      ],
+      "test_target": "tests/test_skill_scripts_end_to_end.py",
+      "cli_command": "python .agents/skills/mcp-engineering/scripts/validate_mcp_design.py"
+    },
+    {
+      "name": "nee-decision-intelligence",
+      "path": ".agents/skills/nee-decision-intelligence",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/test_decision_engine.py",
+      "cli_command": "python -m dual_pipeline.decision_api --port 8080 --host 127.0.0.1"
+    },
+    {
+      "name": "nee-governance",
+      "path": ".agents/skills/nee-governance",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/governance/test_pr_governance.py",
+      "cli_command": "python tools/pr_governance.py list"
+    },
+    {
+      "name": "nee-graph-maintenance",
+      "path": ".agents/skills/nee-graph-maintenance",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/test_candidate_backlog_cleanup.py",
+      "cli_command": "python -m dual_pipeline.candidate_cleanup"
+    },
+    {
+      "name": "nee-hitl-governance",
+      "path": ".agents/skills/nee-hitl-governance",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/test_pipeline_d_hitl_margin_unification.py",
+      "cli_command": "python -m dual_pipeline.hitl_governance"
+    },
+    {
+      "name": "nee-ingestion",
+      "path": ".agents/skills/nee-ingestion",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/test_ingestion_directive_invariants.py",
+      "cli_command": "python nee.py ingest-meeting"
+    },
+    {
+      "name": "nee-orchestration",
+      "path": ".agents/skills/nee-orchestration",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/test_unified_agent_architecture.py",
+      "cli_command": "python -m dual_pipeline.runtime_evidence inventory"
+    },
+    {
+      "name": "nee-query",
+      "path": ".agents/skills/nee-query",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/test_graph_retrieval_unit.py",
+      "cli_command": "python -m dual_pipeline.query"
+    },
+    {
+      "name": "nee-release",
+      "path": ".agents/skills/nee-release",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [
+        "nee-retrieval-eval"
+      ],
+      "scripts": [],
+      "test_target": "tests/test_retrieval_release_evaluation.py",
+      "cli_command": "python nee.py release-activate"
+    },
+    {
+      "name": "nee-telemetry",
+      "path": ".agents/skills/nee-telemetry",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/test_runtime_evidence_claims.py",
+      "cli_command": "python -m dual_pipeline.runtime_evidence inventory"
+    },
+    {
+      "name": "nee-testing-protocol",
+      "path": ".agents/skills/nee-testing-protocol",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/test_skills_budget_governance.py",
+      "cli_command": "python tools/run_tests_with_progress.py --timeout 60"
+    },
+    {
+      "name": "nee-transcript-synthesis",
+      "path": ".agents/skills/nee-transcript-synthesis",
+      "category": "nee-domain",
+      "type": "core",
+      "consolidated_from": [],
+      "scripts": [],
+      "test_target": "tests/transcript_stages/test_chat_attribution_guard.py",
+      "cli_command": "python nee.py ingest-meeting"
+    },
+    {
+      "name": "pretty-mermaid",
+      "path": ".agents/skills/pretty-mermaid",
+      "category": "visual-architecture",
+      "type": "core",
+      "consolidated_from": [
+        "drawio-diagram",
+        "excalidraw-diagram",
+        "svg-animations"
+      ],
+      "scripts": [
+        "scripts/check_mermaid.py",
+        "scripts/validate_drawio.py",
+        "scripts/validate_excalidraw.py",
+        "scripts/validate_svg.py"
+      ],
+      "test_target": "tests/test_skill_scripts_end_to_end.py",
+      "cli_command": "python .agents/skills/pretty-mermaid/scripts/check_mermaid.py"
+    },
+    {
+      "name": "skill-architectural-governance",
+      "path": ".agents/skills/skill-architectural-governance",
+      "category": "architectural-governance",
+      "type": "core",
+      "consolidated_from": [
+        "skill-architectural-integrity-auditor",
+        "skill-concurrency-stress-harness",
+        "skill-provider-fault-injector",
+        "skill-runtime-evidence-and-hygiene-auditor"
+      ],
+      "scripts": [],
+      "test_target": "tests/test_lint_layer_imports.py",
+      "cli_command": "python tools/lint_layer_imports.py --staged"
+    }
+  ],
+  "plugin_skills": [
+    {
+      "name": "lucidchart-document-workflows",
+      "plugin": "lucidchart",
+      "path": ".agents/plugins/lucidchart/skills/lucidchart-document-workflows",
+      "category": "plugin-integrations",
+      "type": "plugin",
+      "scripts": [],
+      "test_target": "tests/test_skills_budget_governance.py",
+      "cli_command": "call_mcp_tool(ServerName='lucidchart', ToolName='...')"
+    },
+    {
+      "name": "miro-board-workflows",
+      "plugin": "miro",
+      "path": ".agents/plugins/miro/skills/miro-board-workflows",
+      "category": "plugin-integrations",
+      "type": "plugin",
+      "scripts": [],
+      "test_target": "tests/test_skills_budget_governance.py",
+      "cli_command": "call_mcp_tool(ServerName='miro', ToolName='...')"
+    }
+  ]
+}

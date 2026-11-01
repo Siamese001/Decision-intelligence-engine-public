@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:ingestion-plan:1.0.0",
+  "title": "NEE L1 ingestion plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "plan_id", "run_id", "trace_id", "problem", "candidates", "allowed_tools", "exit_conditions", "proposal_only", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:ingestion-plan:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "plan_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "problem": {"type": "string", "minLength": 1},
+    "candidates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "candidate_type", "materiality", "entities_requiring_resolution", "exact_graph_lookups", "semantic_comparison_required", "contradiction_checks", "external_validation", "source_authority_requirement", "expected_graph_operation", "expected_evidence_lane", "expected_retrieval_record_family", "expected_dispositions", "hitl_triggers", "required_exit_gates"],
+        "properties": {
+          "candidate_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "candidate_type": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/candidateType"},
+          "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+          "entities_requiring_resolution": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "exact_graph_lookups": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "semantic_comparison_required": {"type": "boolean"},
+          "contradiction_checks": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "external_validation": {"type": "string", "enum": ["denied", "allowed_public_context", "required_public_fact", "not_authoritative_for_internal_fact"]},
+          "source_authority_requirement": {"type": "string", "minLength": 1},
+          "expected_graph_operation": {"type": "string", "enum": ["none", "create_entity", "add_alias", "add_evidence", "add_assertion", "add_relationship", "add_action", "update_status", "supersede_assertion", "add_conflict"]},
+          "expected_evidence_lane": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/evidenceLane"},
+          "expected_retrieval_record_family": {"type": "string", "enum": ["none", "assertion", "edge", "source_chunk", "action_item", "architecture_component", "architecture_relationship"]},
+          "expected_dispositions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/disposition"}},
+          "hitl_triggers": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "required_exit_gates": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "enum": ["X1", "X2", "X3"]}}
+        }
+      }
+    },
+    "allowed_tools": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "enum": ["graph_schema_lookup", "entity_catalog_lookup", "alias_lookup", "relationship_vocabulary_lookup", "similar_record_statistics", "source_authority_policy", "semantic_normalizer"]}},
+    "exit_conditions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "proposal_only": {"const": true},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

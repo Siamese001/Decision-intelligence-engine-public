@@ -1,0 +1,19 @@
+wave_id: "Wave 3: Harmonized Agent Coordinator & Healer Micro-Framework"
+wave_number: 3
+governance: "NEE-KG-DUAL-PIPELINE-01"
+required_prior_lock: "locks/wave_2.lock"
+
+acceptance_criteria:
+  - "Standardized L2 Planner, L4 Coordinator, and L5 Healer interfaces operational"
+  - "Strict downward-only dependency flow verified via AST and import inspections"
+  - "L5 Healer strictly emits repair proposals with zero direct storage mutations"
+  - "HITL 20% margin arbiter escalates when Delta < 0.20 and resolves autonomously when Delta >= 0.20"
+  - "Immutable lifecycle events emitted and hashed across task progression"
+  - "All production modules adhere strictly to the module size and complexity budget"
+
+test_suites:
+  - "tests/agent_framework/test_l2_l4_l5_contracts.py"
+  - "tests/agent_framework/test_downward_only_dependencies.py"
+  - "tests/agent_framework/test_healer_no_direct_mutation.py"
+  - "tests/agent_framework/test_hitl_margin_arbiter.py"
+  - "tests/agent_framework/test_module_budget.py"

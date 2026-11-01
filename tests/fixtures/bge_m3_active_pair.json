@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "generation_id": "generation-6006510d391f6367a95ee5abc20e",
+  "graph_snapshot": "graph-snapshot-f87d64151ceecf44b74560f1",
+  "graph_sha256": "c65aa3e3aec8a69e6ce469e1336d049348c2e322eb1aa5fdd82bead63b8cb923",
+  "sidecar_sha256": "83d219202b0be11376a905d465d74614e32d0861e19cd01ed089d0fe6016eb8f",
+  "graph_path": "generations/generation-6006510d391f6367a95ee5abc20e/graph.sqlite",
+  "sidecar_path": "generations/generation-6006510d391f6367a95ee5abc20e/sidecar.sqlite",
+  "embedding_backend": "BAAI/bge-m3",
+  "model_id": "BAAI/bge-m3",
+  "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "model_manifest_digest": "a598d96187ae03e498914543ca2637b95ef61c496faf4d5d9e471764f893905e",
+  "supported_engines": [
+    "dense_vector",
+    "sparse_weight",
+    "bm25_lexical",
+    "colbert_token"
+  ],
+  "tenant_scope": [
+    "default",
+    "internal_consulting",
+    "nee-engineering"
+  ],
+  "allowed_namespaces": [
+    "CLIENT_SAFE",
+    "INTERNAL_ADVISORY"
+  ],
+  "previous_generation_id": "generation-6018bfb52eee82779373da629ce6",
+  "rollback_capable": true,
+  "production_qualified": true,
+  "reconciled_at": "2026-10-07T16:40:33Z"
+}

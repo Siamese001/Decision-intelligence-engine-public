@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:decision-witness-subgraph:1.0.0",
+  "title": "Decision Witness Subgraph",
+  "description": "Cryptographically sealed subgraph proving the exact structural causal path and evidence supporting a decision.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "decision_frame_id",
+    "active_generation_id",
+    "graph_sha256",
+    "sidecar_sha256",
+    "witness_nodes",
+    "witness_edges",
+    "causal_paths",
+    "evidence_bindings",
+    "extensions"
+  ],
+  "properties": {
+    "contract_id": { "const": "urn:nee:dual-pipeline:decision-witness-subgraph:1.0.0" },
+    "schema_version": { "const": "1.0.0" },
+    "artifact_id": { "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId" },
+    "canonical_digest": { "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest" },
+    "decision_frame_id": { "type": "string", "minLength": 1 },
+    "active_generation_id": { "type": "string", "minLength": 1 },
+    "graph_sha256": { "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256" },
+    "sidecar_sha256": { "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256" },
+    "witness_nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["node_id", "canonical_name", "node_type", "role"],
+        "properties": {
+          "node_id": { "type": "string", "minLength": 1 },
+          "canonical_name": { "type": "string", "minLength": 1 },
+          "node_type": { "type": "string", "minLength": 1 },
+          "role": { "type": "string", "enum": ["seed_option", "seed_criterion", "evidence_entity", "intermediate_bridge"] }
+        }
+      }
+    },
+    "witness_edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["edge_id", "from_node_id", "to_node_id", "relationship_family", "edge_type", "assertion_id", "materiality"],
+        "properties": {
+          "edge_id": { "type": "string", "minLength": 1 },
+          "from_node_id": { "type": "string", "minLength": 1 },
+          "to_node_id": { "type": "string", "minLength": 1 },
+          "relationship_family": { "type": "string", "minLength": 1 },
+          "edge_type": { "type": "string", "minLength": 1 },
+          "assertion_id": { "type": "string", "minLength": 1 },
+          "materiality": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "causal_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "target_id", "hop_count", "node_ids", "assertion_ids"],
+        "properties": {
+          "source_id": { "type": "string", "minLength": 1 },
+          "target_id": { "type": "string", "minLength": 1 },
+          "hop_count": { "type": "integer", "minimum": 1 },
+          "node_ids": { "type": "array", "items": { "type": "string" } },
+          "assertion_ids": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "evidence_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "assertion_id"],
+        "properties": {
+          "evidence_id": { "type": "string", "minLength": 1 },
+          "assertion_id": { "type": "string", "minLength": 1 },
+          "option_id": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "extensions": { "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions" }
+  }
+}

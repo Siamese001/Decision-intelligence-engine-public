@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:eval-suite:2.0.0",
+  "title": "NEE measured dual-pipeline evaluation suite",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "suite_id", "pipeline", "execution_tier", "graph_sha256", "provider_posture", "measurement_profile", "experiment_manifest_digest", "cases", "thresholds", "created_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:eval-suite:2.0.0"},
+    "schema_version": {"const": "2.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "pipeline": {"type": "string", "enum": ["query", "ingestion", "dual"]},
+    "execution_tier": {"type": "string", "enum": ["E0", "E1", "E2", "E3", "E4"]},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "provider_posture": {"type": "string", "enum": ["none", "fake", "offline", "live_authorized"]},
+    "measurement_profile": {"type": "string", "enum": ["deterministic_structural", "live_usage"]},
+    "experiment_manifest_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "cases": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:eval-suite:1.0.0#/$defs/case"}},
+    "thresholds": {"$ref": "urn:nee:dual-pipeline:eval-suite:2.0.0#/$defs/thresholds"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_case_pass_rate", "maximum_provider_call_count", "maximum_graph_mutation_count", "minimum_measurement_completeness", "maximum_unmeasured_provider_calls", "maximum_unreconciled_attempts"],
+      "properties": {
+        "minimum_case_pass_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "maximum_provider_call_count": {"type": "integer", "minimum": 0, "maximum": 100},
+        "maximum_graph_mutation_count": {"type": "integer", "minimum": 0, "maximum": 1000},
+        "minimum_measurement_completeness": {"const": 1},
+        "maximum_unmeasured_provider_calls": {"const": 0},
+        "maximum_unreconciled_attempts": {"const": 0}
+      }
+    }
+  }
+}

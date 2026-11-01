@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:decision-evidence-pack:1.0.0",
+  "title": "Decision Intelligence evidence pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "generation", "retrieval_execution", "facts", "relationships", "risks", "constraints", "conflicts", "unknowns", "records", "coverage", "source_evidence_ids", "pack_digest", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:decision-evidence-pack:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "generation": {"type": "object"},
+    "retrieval_execution": {"type": "object"},
+    "facts": {"type": "array", "items": {"type": "object"}},
+    "relationships": {"type": "array", "items": {"type": "object"}},
+    "risks": {"type": "array", "items": {"type": "object"}},
+    "constraints": {"type": "array", "items": {"type": "object"}},
+    "conflicts": {"type": "array", "items": {"type": "object"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "records": {"type": "array", "items": {"type": "object"}},
+    "coverage": {"type": "object"},
+    "source_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "pack_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

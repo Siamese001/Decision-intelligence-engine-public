@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:a2a-finalization-receipt:1.0.0",
+  "title": "NEE A2A finalized-package archive replay receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "receipt_id", "status", "source_bundle", "capture", "archive", "packages", "audiences", "finalizer", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:a2a-finalization-receipt:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "receipt_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "status": {"const": "PASS"},
+    "source_bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sha256", "bundle_manifest_sha256"],
+      "properties": {
+        "sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "bundle_manifest_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "capture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["capture_id", "capture_manifest_sha256", "span_ledger_sha256", "selection_ledger_sha256"],
+      "properties": {
+        "capture_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "capture_manifest_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "span_ledger_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "selection_ledger_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "archive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["root_id", "files"],
+      "properties": {
+        "root_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+        },
+        "files": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {"$ref": "urn:nee:dual-pipeline:a2a-finalization-receipt:1.0.0#/$defs/archiveFile"}
+        }
+      }
+    },
+    "packages": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"$ref": "urn:nee:dual-pipeline:a2a-finalization-receipt:1.0.0#/$defs/packageFile"}
+    },
+    "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+    "finalizer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"const": "nee-a2a-source-finalizer"},
+        "version": {"const": "1.1.0"}
+      }
+    },
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "archiveFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "relative_path", "sha256"],
+      "properties": {
+        "role": {"type": "string", "enum": ["source_bundle", "capture_manifest", "raw_capture", "span_ledger", "selection_ledger"]},
+        "relative_path": {"type": "string", "minLength": 1, "maxLength": 1024},
+        "sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "packageFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relative_path", "file_sha256", "canonical_digest", "artifact_id", "source_id"],
+      "properties": {
+        "relative_path": {"type": "string", "minLength": 1, "maxLength": 1024},
+        "file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "source_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+      }
+    }
+  }
+}

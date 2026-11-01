@@ -1,0 +1,80 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:normalized-candidate-bundle:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "candidate-bundle-nea-update-2026-07-21",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "9af4cd65e0aa5dfbb83df71aed031bbdb08e7b8556aeb5007ab0c2abc630ceab"
+  },
+  "intake_id": "intake-nea-update-2026-07-21",
+  "run_id": "run-intake-nea-update-2026-07-21",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "source_id": "source-nea-update-2026-07-21",
+  "source_version_id": "source-version-nea-update-2026-07-21-v1",
+  "evidence": [
+    {
+      "evidence_id": "evidence-speaker-matt-k-item-2",
+      "source_id": "source-nea-update-2026-07-21",
+      "source_version_id": "source-version-nea-update-2026-07-21-v1",
+      "locator": {"kind": "section", "value": "Speaker summary / Matt K / item 2"},
+      "relationship": "supports",
+      "directness": "derivative",
+      "authority_rank": 5,
+      "content_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    },
+    {
+      "evidence_id": "evidence-action-item-3",
+      "source_id": "source-nea-update-2026-07-21",
+      "source_version_id": "source-version-nea-update-2026-07-21-v1",
+      "locator": {"kind": "section", "value": "Action items / item 3"},
+      "relationship": "supports",
+      "directness": "derivative",
+      "authority_rank": 5,
+      "content_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "candidate-sherpa-monitoring-owner-gap",
+      "candidate_type": "risk",
+      "assertion_type": "risk",
+      "normalized_text": "Sherpa production-monitoring ownership is unresolved.",
+      "materiality": "high",
+      "entity_mentions": [
+        {
+          "mention_id": "mention-sherpa-risk",
+          "reported_text": "Sherpa",
+          "stable_identifier": null,
+          "context": "NEA Engineering Update / monitoring ownership"
+        }
+      ],
+      "evidence_ids": ["evidence-speaker-matt-k-item-2"],
+      "source_locator": {"kind": "section", "value": "Speaker summary / Matt K / item 2"},
+      "classification": "internal",
+      "audiences": ["nee-engineering"],
+      "extraction_confidence": 0.88
+    },
+    {
+      "candidate_id": "candidate-confirm-monitoring-owner-action",
+      "candidate_type": "action",
+      "assertion_type": "action_item",
+      "normalized_text": "Matt K will confirm the Sherpa production-monitoring owner.",
+      "materiality": "medium",
+      "entity_mentions": [
+        {
+          "mention_id": "mention-matt-k-action",
+          "reported_text": "Matt K",
+          "stable_identifier": null,
+          "context": "Action items / item 3"
+        }
+      ],
+      "evidence_ids": ["evidence-action-item-3"],
+      "source_locator": {"kind": "section", "value": "Action items / item 3"},
+      "classification": "internal",
+      "audiences": ["nee-engineering"],
+      "extraction_confidence": 0.93
+    }
+  ],
+  "extensions": {}
+}

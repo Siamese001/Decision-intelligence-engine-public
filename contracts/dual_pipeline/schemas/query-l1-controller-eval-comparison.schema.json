@@ -1,0 +1,145 @@
+{
+  "$id": "urn:nee:dual-pipeline:query-l1-controller-eval-comparison:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "baseline_result_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "candidate_result_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "cause_codes": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "comparison_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:query-l1-controller-eval-comparison:1.0.0"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "invariants": {
+      "additionalProperties": false,
+      "properties": {
+        "authorization_scope_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "evaluator_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "graph_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "workload_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "graph_sha256",
+        "authorization_scope_digest",
+        "workload_digest",
+        "evaluator_digest"
+      ],
+      "type": "object"
+    },
+    "metric_deltas": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "baseline": {
+            "type": "number"
+          },
+          "candidate": {
+            "type": "number"
+          },
+          "delta": {
+            "type": "number"
+          },
+          "metric": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "metric",
+          "baseline",
+          "candidate",
+          "delta"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "enum": [
+        "COMPARABLE",
+        "NOT_COMPARABLE"
+      ]
+    },
+    "treatment_dimension": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "comparison_id",
+    "baseline_result_digest",
+    "candidate_result_digest",
+    "treatment_dimension",
+    "invariants",
+    "metric_deltas",
+    "status",
+    "cause_codes"
+  ],
+  "title": "L1 controller evaluation comparison",
+  "type": "object"
+}

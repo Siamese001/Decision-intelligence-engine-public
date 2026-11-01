@@ -1,0 +1,68 @@
+{
+  "artifact_id": "query-route-eval-result-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "c6c7a1c3af5755d76302b966f1bfc5ae372659922533a22bde4c6153854eeeb8"
+  },
+  "case_results": [
+    {
+      "case_id": "route-fixture-general",
+      "cause_codes": [],
+      "critical": false,
+      "expected_destination": "GENERAL_ASSISTANT_HANDOFF",
+      "expected_eligibility_status": "NOT_ELIGIBLE",
+      "expected_enters_query_runtime": false,
+      "expected_materiality": "low",
+      "expected_query_type": null,
+      "predicted_destination": "GENERAL_ASSISTANT_HANDOFF",
+      "predicted_eligibility_status": "NOT_ELIGIBLE",
+      "predicted_enters_query_runtime": false,
+      "predicted_materiality": "low",
+      "predicted_query_type": null,
+      "status": "PASS"
+    }
+  ],
+  "confusion_cells": [
+    {
+      "count": 1,
+      "expected_destination": "GENERAL_ASSISTANT_HANDOFF",
+      "predicted_destination": "GENERAL_ASSISTANT_HANDOFF"
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:query-route-eval-result:1.0.0",
+  "embedding_call_count": 0,
+  "evaluated_at": "2026-08-01T12:00:00Z",
+  "evaluation_id": "query-route-eval-result-fixture",
+  "extensions": {},
+  "gates": {
+    "destination_accuracy": true,
+    "provider_free": true
+  },
+  "graph_mutation_count": 0,
+  "l2_call_count": 0,
+  "metrics": {
+    "case_count": 1,
+    "correct_case_count": 1,
+    "critical_false_negative_count": 0,
+    "destination_accuracy": 1,
+    "graph_entry_false_negative_count": 0,
+    "graph_entry_false_positive_count": 0,
+    "graph_entry_precision": 1,
+    "graph_entry_recall": 1,
+    "graph_entry_true_positive_count": 0,
+    "nee_decision_expected_count": 0,
+    "nee_decision_false_negative_count": 0,
+    "nee_decision_recall": 1,
+    "nee_decision_true_positive_count": 0
+  },
+  "policy_digest": "619ee8de6338fa58c5050a6e8b0f0292e069c92b2b788c8f9dd4564855de3951",
+  "provider_call_count": 0,
+  "provider_initialization_count": 0,
+  "runtime_boundary": "PRE_RETRIEVAL_PROVIDER_FREE_ROUTING",
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "suite_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "suite_file_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "suite_id": "query-route-eval-suite-fixture"
+}

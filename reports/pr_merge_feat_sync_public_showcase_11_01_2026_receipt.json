@@ -1,0 +1,11 @@
+{
+  "pr_type": "LOCAL_FEATURE_BRANCH_MERGE",
+  "branch": "feat/sync-public-showcase-11-01-2026",
+  "head_sha": "5501b1395521f26f278f590e7cf16337bdf8be44",
+  "target": "main",
+  "branch_head_sha": "5501b1395521f26f278f590e7cf16337bdf8be44",
+  "main_base_sha": "833d37e94282cf085e147504b816b1d4932b7a8c",
+  "merge_message": "Merge branch 'feat/sync-public-showcase-11-01-2026' into main (feat(showcase): synchronize public repository with latest private engine and refresh README/ARCHITECTURE)",
+  "timestamp_utc": "2026-11-01T13:05:46.527695+00:00",
+  "terminal_outcome": "PASS"
+}

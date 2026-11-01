@@ -1,0 +1,43 @@
+{
+  "artifact_id": "query-l1-controller-eval-suite-fixture",
+  "baseline_suite_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "3b21a846a754a05eba88bb75f0eeca56cda52c6d76926835b1d437c74e9d1cc3"
+  },
+  "case_taxonomy": [
+    "complete_first_pass",
+    "recoverable_miss",
+    "true_gap",
+    "irrelevant_lexical_overlap",
+    "unauthorized_evidence",
+    "reverse_only_path",
+    "conflict",
+    "candidate_lane",
+    "cache_replay",
+    "no_progress"
+  ],
+  "comparison_invariants": {
+    "authorization_scope_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+    "evaluator_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+    "graph_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "workload_digest": "3333333333333333333333333333333333333333333333333333333333333333"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-l1-controller-eval-suite:1.0.0",
+  "extensions": {},
+  "schema_version": "1.0.0",
+  "suite_id": "query-l1-controller-eval-suite-fixture",
+  "thresholds": {
+    "maximum_graph_mutations": 0,
+    "maximum_provider_calls": 0,
+    "minimum_recovery_rate": 0.0
+  },
+  "treatments": [
+    {
+      "mode": "off",
+      "policy_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+      "treatment_id": "off"
+    }
+  ]
+}

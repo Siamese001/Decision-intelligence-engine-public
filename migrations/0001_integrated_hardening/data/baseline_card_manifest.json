@@ -1,0 +1,99 @@
+{
+  "files": [
+    {
+      "path": "NEE_00_Authority_Source_Map_and_Synthesis_Protocol.md",
+      "sha256": "3d5471267fc701828c851ea34a25bf6879e26fd5e66225d19a04bcca7c4d3098",
+      "size_bytes": 30298
+    },
+    {
+      "path": "NEE_01_Executive_Account_Thesis.md",
+      "sha256": "6b2fd784bcff90ff2990364586b0a5ea7b90119d2d5b1d4506336deb44127164",
+      "size_bytes": 8549
+    },
+    {
+      "path": "NEE_02_Portfolio_Status_and_Project_Dossiers.md",
+      "sha256": "5ab5a706fe2cf9371c62101317bef591457c54a9759b948cc09ad1597d25d976",
+      "size_bytes": 40650
+    },
+    {
+      "path": "NEE_03_SOW_Commercial_and_Contract_Guardrails.md",
+      "sha256": "92e865d20fca1547fd43fec364d26548cd08093ba657c10944d267cd635fc47e",
+      "size_bytes": 9705
+    },
+    {
+      "path": "NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md",
+      "sha256": "c69953b55c7dd87e4f8ee9fe1bc4cebcf9cc650100da6da682c2adc1d73a1684",
+      "size_bytes": 23623
+    },
+    {
+      "path": "NEE_05_Chakra_Synthesis_and_August_Rebaseline.md",
+      "sha256": "da637bb1257723f5587a353fe081ed226b24da8319f6ccaf1e8d9999d36892d5",
+      "size_bytes": 17446
+    },
+    {
+      "path": "NEE_06_CoDelivery_CoHydrated_Operating_Model.md",
+      "sha256": "a036dce5c62d51f41e551184c6379c308f017dcd85a9d0b1418a7b7c016def65",
+      "size_bytes": 26497
+    },
+    {
+      "path": "NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md",
+      "sha256": "8b66f057c736398a90cfd9e16f13a3635ded09300fadf0546ed7b4470bae9cfc",
+      "size_bytes": 30647
+    },
+    {
+      "path": "NEE_08_Monthly_Strategic_Engineering_Partner_Forum.md",
+      "sha256": "240f9e2d66762e84e3c0461d7b31a7221e19583fd0367bbf0f23f964cd8adafd",
+      "size_bytes": 4853
+    },
+    {
+      "path": "NEE_09_Utility_Thought_Leadership_and_REWIRE_AMWE_Agenda.md",
+      "sha256": "90238fab380e08f47dc08cf4958a115946101903e75218d9a9b2197200d4964f",
+      "size_bytes": 15489
+    },
+    {
+      "path": "NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+      "sha256": "f0d1b5b4f042ae5bd3ac02d131b68c348c951ad15fab3352877d2f5d1c040345",
+      "size_bytes": 38928
+    },
+    {
+      "path": "NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+      "sha256": "56a953541e581b5fbf632e14bbe82837d78b9cdde3287bef1589882307a5a37a",
+      "size_bytes": 19080
+    },
+    {
+      "path": "NEE_12_AI_Hub_Sherpa_DevHub_PGD_Platform_Lessons.md",
+      "sha256": "422307b33436a7e62fa58e272337377539bbb820912ebc72f8f8b2aff2b0db20",
+      "size_bytes": 19112
+    },
+    {
+      "path": "NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md",
+      "sha256": "24c242b63d1bfa897a977d29c8124f1e3e8d41f3df65de274302930f3d65b858",
+      "size_bytes": 11784
+    },
+    {
+      "path": "NEE_14_Trading_ETRM_and_Pricing_Models.md",
+      "sha256": "75b96bbf9f6665e08999ff8661fd99b058a416e7ff2d2c275b88209ef1af1d99",
+      "size_bytes": 2390
+    },
+    {
+      "path": "NEE_15_Glossary_Aliases_and_Name_Resolution.md",
+      "sha256": "e00d4498fc4a67a358cd4f1b1abb0852457958c3cb06f9d10132784ba42aa6f4",
+      "size_bytes": 30279
+    },
+    {
+      "path": "NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+      "sha256": "097131a93cbb585f9f615a519174adf7a2a6ead45041a7a4ca9955328e8292f9",
+      "size_bytes": 31963
+    },
+    {
+      "path": "NEE_22_project_beacon_A2A_and_Platform_Advisor_Context.md",
+      "sha256": "36cef5c925c23a0a020a1c8cd9885da370e1f60a2f40f028148eff10109d9b94",
+      "size_bytes": 14939
+    },
+    {
+      "path": "NEE_99_Project_Instructions.md",
+      "sha256": "e09f60241146d071d31daa9febb1d7578c850e9287b1352710e55a5a3f9f4da1",
+      "size_bytes": 71375
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:markdown-source-intake:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "markdown-source-protocol-guidance",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "e8e083ea14ddc68af35e878b6a573af93a605bf4ea31308f596546832b02ac82"
+  },
+  "source": {
+    "source_id": "source-protocol-guidance",
+    "source_version_id": "source-version-protocol-guidance-v1",
+    "title": "Protocol guidance",
+    "source_location": "controlled/examples/protocol-guidance.md",
+    "raw_markdown": "# Protocol guidance\n\n## Rule\n\nUse bounded delegation.\n",
+    "source_file_sha256": "cd551bd8e4e8aa538c6900ecb0af3c43d5c4551653927c7b7569299e5a9c55ff",
+    "source_date": "2026-07-24",
+    "classification": "internal",
+    "audiences": [
+      "internal_consulting"
+    ],
+    "source_posture": "derivative_internal",
+    "authority_rank": 5,
+    "anchor_entity": {
+      "reported_text": "A2A / Agent-to-Agent protocol",
+      "stable_identifier": "A2A",
+      "context": "External best-practice design reference; not approved NEE policy or deployed-capability evidence."
+    }
+  },
+  "chunks": [
+    {
+      "chunk_id": "chunk-protocol-rule",
+      "title": "Bounded delegation rule",
+      "text": "## Rule\n\nUse bounded delegation.",
+      "locator": {
+        "kind": "section",
+        "value": "Rule",
+        "quote_digest": "74bd94622eb215a33966e288b8aec42691b5021d6d6b86508ced823ccaffa741"
+      },
+      "selection_rationale": "Retains one operational protocol rule.",
+      "materiality": "high",
+      "extraction_confidence": 1.0
+    }
+  ],
+  "adapter": {
+    "name": "nee-markdown-source-intake",
+    "version": "1.0.0"
+  },
+  "extensions": {}
+}

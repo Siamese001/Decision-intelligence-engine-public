@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:final-evidence-contract:1.0.0",
+  "title": "NEE final evidence contract",
+  "description": "Typed boundary between C0 evidence retrieval and PA prompt assembly. Seals the complete evidence set with strata, coverage, provenance, and graph/index generation binding.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "query_id", "run_id", "graph_generation_id", "graph_sha256", "sidecar_sha256", "evidence_records", "coverage_summary", "created_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:final-evidence-contract:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "query_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "graph_generation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "sidecar_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "evidence_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["record_id", "lane", "stratum", "retrieval_text_hash"],
+        "properties": {
+          "record_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "lane": {"type": "string", "enum": ["approved", "candidate", "external_public"]},
+          "stratum": {"type": "string", "enum": ["MUST_USE", "SUPPORTING", "CONTRADICTS", "BACKGROUND", "DEFINITIONS", "LINEAGE", "EXCLUDED"]},
+          "evidence_ids": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+          "entity_ids": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+          "retrieval_text_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+          "dense_score": {"type": ["number", "null"]},
+          "sparse_score": {"type": ["number", "null"]},
+          "colbert_score": {"type": ["number", "null"]},
+          "rerank_score": {"type": ["number", "null"]},
+          "graph_hop_depth": {"type": ["integer", "null"], "minimum": 0},
+          "epistemic_status": {"type": ["string", "null"], "enum": ["candidate", "approved", "disputed", "superseded", "retracted", null]},
+          "contradiction_flag": {"type": "boolean"}
+        }
+      }
+    },
+    "coverage_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total_requirements", "covered_requirements", "coverage_sufficient"],
+      "properties": {
+        "total_requirements": {"type": "integer", "minimum": 0},
+        "covered_requirements": {"type": "integer", "minimum": 0},
+        "coverage_sufficient": {"type": "boolean"},
+        "gap_descriptions": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "retrieval_metadata": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "properties": {
+        "retrieval_mode": {"type": "string"},
+        "retrieval_policy_digest": {"type": "string"},
+        "total_candidates_considered": {"type": "integer", "minimum": 0},
+        "total_records_selected": {"type": "integer", "minimum": 0}
+      }
+    },
+    "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+    "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

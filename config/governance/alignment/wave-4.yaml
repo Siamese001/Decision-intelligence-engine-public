@@ -1,0 +1,28 @@
+wave_id: "Wave 4: Make judgments truthful and enforceable"
+wave_number: 4
+governance: "NEE-KG-ALIGNMENT-04"
+plan_path: "docs/plans/docs_pipeline_alignment_debate_plan_20261006.md"
+ledger_path: "hitl_decision_ledger.json"
+surface_catalog: "config/governance/alignment/surface_catalog.yaml"
+required_prior_lock: "reports/alignment/wave-3.lock"
+
+acceptance_criteria:
+  - "Align actual evaluator capabilities, payloads, verdicts, and provenance"
+  - "Give semantic, vector, and heuristic assessments distinct typed results"
+  - "Strictly reject omitted, duplicate, or unknown items, string booleans, invalid scores, and malformed JSON"
+  - "Eliminate silent live-to-mock success fallbacks on timeouts or evaluator unavailability"
+  - "Eliminate fabricated uniform per-output scores"
+  - "Unsupported claims and irrelevant cited answers fail semantic validation"
+  - "Ratify frozen benchmark dataset manifest and holdout identities before evaluation"
+  - "Predecessor verification cryptographically confirms Wave 3 lock"
+
+test_suites:
+  - "tests/end_to_end/test_alignment_w4_e2e.py"
+  - "tests/test_alignment_w4_adversarial.py"
+
+artifacts:
+  - "dual_pipeline/l0/evaluation_types.py"
+  - "config/governance/alignment/eval_benchmark_manifest_v1.yaml"
+  - "dual_pipeline/llm_judge_core/batch_judge.py"
+  - "dual_pipeline/transcript_qa_core/evaluator.py"
+  - "config/governance/alignment/wave-4.yaml"

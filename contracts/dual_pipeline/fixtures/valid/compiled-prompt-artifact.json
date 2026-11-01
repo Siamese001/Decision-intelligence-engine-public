@@ -1,0 +1,46 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:compiled-prompt-artifact:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "compiled-prompt-artifact-fixture",
+  "query_id": "query-fixture-001",
+  "run_id": "run-fixture-001",
+  "evidence_contract_id": "final-evidence-contract-fixture",
+  "evidence_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "l2_execution_decision_id": "l2-exec-fixture-001",
+  "prompt_components": {
+    "question": "What is the current status of the data migration?",
+    "question_digest": "7ede50403122ce8074b63983035528410c5698bbe9b6b9d567073e9e26accb4a",
+    "l1_plan_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "route": "CURRENT_STATE_CORROBORATION",
+    "must_use_evidence_count": 1,
+    "supporting_evidence_count": 1,
+    "contradicting_evidence_count": 0,
+    "background_evidence_count": 0,
+    "total_evidence_tokens_estimate": 2500,
+    "epistemic_constraints": [
+      "Only cite approved evidence as factual"
+    ],
+    "applicable_policies": [
+      "lane-separation-v1"
+    ],
+    "known_gaps": [
+      "No evidence for requirement R3"
+    ]
+  },
+  "target_model": "gpt-5.6-terra",
+  "reasoning_effort": "high",
+  "output_schema_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "materiality": "medium",
+  "assurance_profile": "standard",
+  "classification": "internal",
+  "audiences": [
+    "nee-engineering"
+  ],
+  "created_at": "2026-09-10T14:02:00Z",
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "223a407d8d36933ee33b74c5623a97685a399b147eec65221ca2d565c1f14e92"
+  }
+}

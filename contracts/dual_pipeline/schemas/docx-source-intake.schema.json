@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:docx-source-intake:1.0.0",
+  "title": "NEE source-bound DOCX intake package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "source", "chunks", "adapter", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:docx-source-intake:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "source_version_id", "title", "source_location", "raw_docx_base64", "docx_file_sha256", "extracted_markdown", "extracted_markdown_sha256", "source_date", "classification", "audiences", "source_posture", "authority_rank", "anchor_entity"],
+      "properties": {
+        "source_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "source_version_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "title": {"type": "string", "minLength": 1, "maxLength": 256},
+        "source_location": {"type": "string", "minLength": 1, "maxLength": 1024},
+        "raw_docx_base64": {"type": "string", "minLength": 1, "maxLength": 2000000},
+        "docx_file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "extracted_markdown": {"type": "string", "minLength": 1, "maxLength": 200000},
+        "extracted_markdown_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "source_date": {"type": "string", "format": "date"},
+        "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+        "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+        "source_posture": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourcePosture"},
+        "authority_rank": {"type": "integer", "minimum": 1, "maximum": 9},
+        "anchor_entity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["reported_text", "stable_identifier", "context"],
+          "properties": {
+            "reported_text": {"type": "string", "minLength": 1},
+            "stable_identifier": {"type": "string", "minLength": 1},
+            "context": {"type": "string", "minLength": 1, "maxLength": 1000}
+          }
+        }
+      }
+    },
+    "chunks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["chunk_id", "title", "text", "locator", "selection_rationale", "materiality", "extraction_confidence"],
+        "properties": {
+          "chunk_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "title": {"type": "string", "minLength": 1, "maxLength": 256},
+          "text": {"type": "string", "minLength": 1, "maxLength": 4000},
+          "locator": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourceLocator"},
+          "selection_rationale": {"type": "string", "minLength": 1, "maxLength": 1000},
+          "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+          "extraction_confidence": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      }
+    },
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"const": "nee-docx-source-intake"},
+        "version": {"const": "1.0.0"}
+      }
+    },
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

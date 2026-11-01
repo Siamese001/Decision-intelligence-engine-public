@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.1.0",
+  "default_mode": "shadow",
+  "provider_class": "openai",
+  "provider_egress_allowed": true,
+  "maximum_egress_classification": "confidential",
+  "endpoint": "https://api.openai.com/v1/responses",
+  "api_key_env": "OPENAI_API_KEY",
+  "local_env_file": "env_di",
+  "models": {
+    "normal": {
+      "provider": "openai",
+      "model": "gpt-5.6-luna",
+      "model_tier": "normal",
+      "reasoning_effort": "low"
+    },
+    "high": {
+      "provider": "openai",
+      "model": "gpt-5.6-luna",
+      "model_tier": "high",
+      "reasoning_effort": "xhigh"
+    },
+    "most_complex": {
+      "provider": "openai",
+      "model": "gpt-5.6-luna",
+      "model_tier": "most_complex",
+      "reasoning_effort": "max"
+    }
+  },
+  "call_limits": {
+    "maximum_primary_calls_per_run": 1,
+    "maximum_repair_calls_per_run": 1,
+    "maximum_escalation_calls_per_run": 0
+  },
+  "output": {
+    "structured_output_required": true,
+    "maximum_output_tokens": 4096
+  },
+  "reliability": {
+    "retry_count": 0,
+    "timeout_seconds": 180
+  },
+  "complexity_routing": {
+    "low_max_candidates": 4,
+    "normal_max_candidates": 15,
+    "most_complex_min_candidates": 50,
+    "most_complex_prompt_chars": 128000,
+    "maximum_provider_request_chars": 256000,
+    "most_complex_min_ambiguous_identities": 4,
+    "high_candidate_types": [
+      "relationship",
+      "decision",
+      "risk",
+      "dependency",
+      "architecture_relationship"
+    ]
+  }
+}

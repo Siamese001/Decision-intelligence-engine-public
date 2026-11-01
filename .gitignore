@@ -1,0 +1,105 @@
+# Python environments and bytecode
+.venv
+.venv/
+venv/
+*.lock
+!reports/alignment/*.lock
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+*.egg-info/
+
+# Local dependency and model caches
+.cache/
+.corpus/
+.huggingface/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Runtime state, evidence, and credentials
+.session_locks/
+.session_registry/
+.local
+.local/
+.eval-work/
+runs/
+/runtime/
+.runtime*
+!Figma/**/runtime/
+evidence/
+/CANONICAL_GRAPH.db
+/decision_knowledge.sqlite
+/learning.sqlite
+/production.sqlite
+/hitl_decision_ledger.sqlite
+copilot_attempts.jsonl
+learning/
+*.sqlite-shm
+*.sqlite-wal
+*.db-shm
+*.db-wal
+backups/
+*.sqlite
+*.jwt
+*.pem
+*.key
+.env
+.env.*
+.env_*
+.env_di
+env_di
+env_*
+env
+*.wav
+
+
+# Editor and operating-system noise
+.idea/
+.vscode/*
+!.vscode/settings.json
+.antigravity/
+.DS_Store
+Thumbs.db
+scratch/
+.playwright-mcp/
+storage_data/
+output/transcript_cache/
+output/graph_scout/
+output/**/proposals/
+reports/graph_scout/*.sqlite
+reports/domain_classification_cache.json
+.archive/
+.worktrees/
+
+# SQLite WAL/SHM ephemeral journal files
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+
+# Node dependencies
+node_modules/
+
+# Ephemeral test timing and gap audit reports (Wave 6 / Finding X-17)
+reports/test_timing_db.json
+reports/test_runner_receipt.json
+reports/testing_gaps_audit_report.json
+governance/decision_intelligence/REPO_TESTING_GAPS_AUDIT_REPORT_V1.md
+
+# Ephemeral branch readiness receipts and logs
+reports/readiness/local_main_readiness_*_receipt.json
+reports/readiness/logs/
+reports/pr_review_*_receipt.json
+reports/pr_promotion_*_receipt.json
+
+# Test fixture scratch git repositories
+tests/fixtures/pr_overlap/
+*.m4a
+inputs/documents/NEE_Infrastructure_Automation_Transformation_RFP_Orals.pdf

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:delivery-quality-decision:1.0.0",
+  "title": "NEE delivery-profile release decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "decision_id", "run_id", "delivery_profile", "artifact_type", "status", "checks", "defect_codes", "client_release_allowed", "automatic_provider_call_count", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:delivery-quality-decision:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "decision_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "delivery_profile": {"type": "string", "enum": ["internal_technical", "internal_executive", "client_technical", "client_executive", "commercial"]},
+    "artifact_type": {"type": "string", "enum": ["answer", "decision_brief", "architecture_deck", "commercial_case", "evidence_export"]},
+    "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+    "checks": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_coverage", "terminology_defined", "business_language", "audience_fit", "render_review", "visual_hierarchy", "principle_mapping", "persona_relevance"],
+      "properties": {
+        "source_coverage": {"type": "boolean"}, "terminology_defined": {"type": "boolean"},
+        "business_language": {"type": "boolean"}, "audience_fit": {"type": "boolean"},
+        "render_review": {"type": "boolean"}, "visual_hierarchy": {"type": "boolean"},
+        "principle_mapping": {"type": "boolean"}, "persona_relevance": {"type": "boolean"}
+      }
+    },
+    "defect_codes": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,127}$"}},
+    "client_release_allowed": {"type": "boolean"},
+    "automatic_provider_call_count": {"const": 0},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "oneOf": [
+    {"properties": {"status": {"const": "PASS"}, "client_release_allowed": {"const": true}, "defect_codes": {"maxItems": 0}}},
+    {"properties": {"status": {"const": "FAIL"}, "client_release_allowed": {"const": false}, "defect_codes": {"minItems": 1}}}
+  ]
+}

@@ -1,0 +1,200 @@
+"""Governed intake planning, routing, HITL batching, and candidate disposition.
+
+This module is a backward-compatible facade re-exporting all symbols from
+dual_pipeline.intake_core, preserving 100% symbol parity, signatures,
+and type definitions.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+from collections import Counter
+from pathlib import Path
+from typing import Any, Iterable
+
+from .a2a_finalization import (
+    VerifiedA2AFinalization,
+    reverify_ingress_finalization_evidence,
+    stage_ingress_finalization_evidence,
+    validated_ingress_finalization_reference,
+    verified_finalization_binding,
+    verify_finalized_a2a_package_bytes,
+)
+from .authorization import AuthorizationContext
+from .batch_admission import (
+    BATCH_MANIFEST_RESOURCE,
+    BatchAdmissionBinding,
+    source_kind_for_contract,
+    verify_candidate_scope,
+    verify_manifest_package,
+)
+from .contracts import create_artifact, validate_artifact
+from .core import (
+    ZERO_HASH,
+    assert_safe_mutable_path,
+    connect_sqlite,
+    digest,
+    is_link_or_reparse,
+    normalize_name,
+    read_json,
+    sha256_bytes,
+    sha256_file,
+    stable_id,
+    utc_now,
+    write_json,
+)
+from .graph_delta import build_planned_graph_delta
+from .identity import NEW_NODE_ASSESSMENT_EXTENSION_KEY, resolve_bundle
+from .index import CLASSIFICATION_RANK, HybridRetriever
+from .intake_core import (
+    _A2A_FINALIZATION_BINDING_FIELDS,
+    A2A_GUIDANCE_ANCHOR_KEY,
+    A2A_SOURCE_SPAN_REVIEW_BINDING_KEY,
+    EXTERNAL_CONCEPT_OUTCOME,
+    EXTERNAL_CONCEPT_PROPOSAL_KEY,
+    FACT_PROMOTION_READY_STATUSES,
+    GRAPH_ADMISSION_EXTENSION_KEY,
+    IDENTITY_REVIEW_EXTENSION_KEY,
+    INGESTION_DECISION_LEDGER_ENGLISH_JSON,
+    INGESTION_DECISION_LEDGER_JSON,
+    INGESTION_DECISION_LEDGER_MARKDOWN,
+    INTAKE_STAGES,
+    NEW_INTERNAL_ENTITY_DIGEST_KEY,
+    NEW_INTERNAL_ENTITY_KEY,
+    RETIRE_ASSERTION_KEY,
+    SEMANTIC_CORRECTION_CANDIDATE_KEY,
+    SUPERSEDES_ASSERTION_KEY,
+    _a2a_guidance_anchor,
+    _cached_comparison_output,
+    _candidate_governance,
+    _candidate_resolution_map,
+    _correlation,
+    _decision_gate_status,
+    _decision_map,
+    _external_concept_proposal,
+    _forbid_a2a_approved_fact_promotion,
+    _intake_cache_context,
+    _is_a2a_source_bundle,
+    _markdown_table_cell,
+    _new_internal_entity_proposal,
+    _route_for_candidate,
+    _semantic_correction_control,
+    _valid_cached_comparison,
+    _validate_a2a_source_span_review_binding,
+    _validated_a2a_finalization_binding,
+    build_dispositions,
+    build_graph_change_set,
+    build_hitl_batches,
+    build_ingestion_decision_explanation,
+    build_ingestion_decision_ledger,
+    build_ingestion_plan,
+    build_routes,
+    compare_candidates,
+    hydrate_comparison_context,
+    render_ingestion_decision_ledger_markdown,
+)
+
+# Lazy-loaded or circular import preserved at bottom as in original monolith
+from .intake_engine_core import IntakeEngine
+from .node_type_policy import require_creatable_node_type
+from .normalization import normalize_evidence_envelope
+from .project_status import candidate_snapshot_profiles
+from .semantic_cache import SemanticCache
+from .source_spans import verify_runtime_a2a_capture
+from .strategic_ingestion import candidate_strategic_profile
+from .telemetry import RunRecorder
+
+__all__ = [
+    "A2A_GUIDANCE_ANCHOR_KEY",
+    "A2A_SOURCE_SPAN_REVIEW_BINDING_KEY",
+    "Any",
+    "AuthorizationContext",
+    "BATCH_MANIFEST_RESOURCE",
+    "BatchAdmissionBinding",
+    "CLASSIFICATION_RANK",
+    "Counter",
+    "EXTERNAL_CONCEPT_OUTCOME",
+    "EXTERNAL_CONCEPT_PROPOSAL_KEY",
+    "FACT_PROMOTION_READY_STATUSES",
+    "GRAPH_ADMISSION_EXTENSION_KEY",
+    "HybridRetriever",
+    "IDENTITY_REVIEW_EXTENSION_KEY",
+    "INGESTION_DECISION_LEDGER_ENGLISH_JSON",
+    "INGESTION_DECISION_LEDGER_JSON",
+    "INGESTION_DECISION_LEDGER_MARKDOWN",
+    "INTAKE_STAGES",
+    "IntakeEngine",
+    "Iterable",
+    "NEW_INTERNAL_ENTITY_DIGEST_KEY",
+    "NEW_INTERNAL_ENTITY_KEY",
+    "NEW_NODE_ASSESSMENT_EXTENSION_KEY",
+    "Path",
+    "RETIRE_ASSERTION_KEY",
+    "RunRecorder",
+    "SEMANTIC_CORRECTION_CANDIDATE_KEY",
+    "SUPERSEDES_ASSERTION_KEY",
+    "SemanticCache",
+    "VerifiedA2AFinalization",
+    "ZERO_HASH",
+    "_A2A_FINALIZATION_BINDING_FIELDS",
+    "_a2a_guidance_anchor",
+    "_cached_comparison_output",
+    "_candidate_governance",
+    "_candidate_resolution_map",
+    "_correlation",
+    "_decision_gate_status",
+    "_decision_map",
+    "_external_concept_proposal",
+    "_forbid_a2a_approved_fact_promotion",
+    "_intake_cache_context",
+    "_is_a2a_source_bundle",
+    "_markdown_table_cell",
+    "_new_internal_entity_proposal",
+    "_route_for_candidate",
+    "_semantic_correction_control",
+    "_valid_cached_comparison",
+    "_validate_a2a_source_span_review_binding",
+    "_validated_a2a_finalization_binding",
+    "annotations",
+    "assert_safe_mutable_path",
+    "build_dispositions",
+    "build_graph_change_set",
+    "build_hitl_batches",
+    "build_ingestion_decision_explanation",
+    "build_ingestion_decision_ledger",
+    "build_ingestion_plan",
+    "build_planned_graph_delta",
+    "build_routes",
+    "candidate_snapshot_profiles",
+    "candidate_strategic_profile",
+    "compare_candidates",
+    "connect_sqlite",
+    "create_artifact",
+    "digest",
+    "hydrate_comparison_context",
+    "is_link_or_reparse",
+    "json",
+    "normalize_evidence_envelope",
+    "normalize_name",
+    "re",
+    "read_json",
+    "render_ingestion_decision_ledger_markdown",
+    "require_creatable_node_type",
+    "resolve_bundle",
+    "reverify_ingress_finalization_evidence",
+    "sha256_bytes",
+    "sha256_file",
+    "source_kind_for_contract",
+    "stable_id",
+    "stage_ingress_finalization_evidence",
+    "utc_now",
+    "validate_artifact",
+    "validated_ingress_finalization_reference",
+    "verified_finalization_binding",
+    "verify_candidate_scope",
+    "verify_finalized_a2a_package_bytes",
+    "verify_manifest_package",
+    "verify_runtime_a2a_capture",
+    "write_json",
+]

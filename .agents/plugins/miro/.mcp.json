@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "miro": {
+      "serverUrl": "https://mcp.miro.com/",
+      "type": "http",
+      "url": "https://mcp.miro.com/",
+      "oauth_resource": "https://mcp.miro.com/"
+    }
+  }
+}

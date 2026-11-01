@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-09-15T00:00:00Z",
+  "description": "Governed runtime store for dynamically learned entity and system aliases.",
+  "aliases": {
+    "system:technosilva": "system:technosylva",
+    "system:tens_sharepoint": "system:tens-sharepoint",
+    "org:technosilva": "org:technosylva"
+  }
+}

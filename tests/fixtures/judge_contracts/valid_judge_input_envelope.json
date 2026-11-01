@@ -1,0 +1,13 @@
+{
+  "source_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "candidate_hash": "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0",
+  "c0_receipt_digest": "11223344556677889900aabbccddeeff11223344556677889900aabbccddeeff",
+  "c0_receipt_verified": true,
+  "rubric_version": "2.0",
+  "rubric_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "prompt_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "topology_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "bounded_context_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "collateral_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "evaluated_span_coverage": 1.0
+}

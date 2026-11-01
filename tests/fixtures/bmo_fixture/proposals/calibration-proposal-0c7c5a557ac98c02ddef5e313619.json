@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-0c7c5a557ac98c02ddef5e313619",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "20dc13e80b733041e90da8d76a02433921ce15215fb27555ee3991b058cd61e8"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-fbb556b0cfc06538202c5fe4"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "**Jennifer Pan:** EE. We have discussed in Sal one that we at the very least will say that it's a rejected status as part of how we like reopen or create or send this information to Maximo. That is part of our phase two works as part of our Maximo right back.",
+      "proposed_value": "**Jennifer Pan:** So that's what I would say I advocate for in terms of changing, right, or changing the scope is that notification or messaging process. I don't think there's anyone at the time, whether it's Conduit or Maximo, that's ready for us to Ready to accept something that we send. So that's where our advocates say like, yes, the Sal says that we'd send Ed notification or someone would be notified. We advocate that we remove it from scope at this time.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-05354b040f8ee2f021b4dc0ebacf"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-e2c19836b70f31298c7a99999d2f",
+      "assertion_id_older": "assertion-05354b040f8ee2f021b4dc0ebacf",
+      "confidence_coexist": 0.45,
+      "confidence_supersede": 0.55,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": true,
+      "margin_delta": 0.1,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-09-30",
+      "timestamp_older": "2026-09-30"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-09-30 superseded by newer claim from 2026-09-30.",
+  "proposal_id": "calibration-proposal-0c7c5a557ac98c02ddef5e313619",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-05354b040f8ee2f021b4dc0ebacf from **Jennifer Pan:** EE. We have discussed in Sal one that we at the very least will say that it's a rejected status as part of how we like reopen or create or send this information to Maximo. That is part of our phase two works as part of our Maximo right back. to **Jennifer Pan:** So that's what I would say I advocate for in terms of changing, right, or changing the scope is that notification or messaging process. I don't think there's anyone at the time, whether it's Conduit or Maximo, that's ready for us to Ready to accept something that we send. So that's where our advocates say like, yes, the Sal says that we'd send Ed notification or someone would be notified. We advocate that we remove it from scope at this time.. Requires governed approval before release.",
+  "risk": "medium",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

@@ -1,0 +1,23 @@
+{
+  "artifact_id": "pipeline-assurance-portfolio-e2",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "f05f8e224097dc0da19bc7cfdff449b44b96a5d79b878059cd05926ba2cd7706"
+  },
+  "contract_id": "urn:nee:dual-pipeline:eval-assurance-portfolio:1.0.0",
+  "extensions": {},
+  "portfolio_id": "pipeline-assurance-portfolio-e2",
+  "schema_version": "1.0.0",
+  "tracks": [
+    {"track_id": "ingestion", "runner": "eval-run", "runtime_boundary": "POST_RUNTIME_VERIFICATION", "requires_real_bge_m3": true, "release_blocking": true, "suite_path": "evals/suites/dual-deterministic-e1.json"},
+    {"track_id": "query", "runner": "eval-run", "runtime_boundary": "POST_RUNTIME_VERIFICATION", "requires_real_bge_m3": true, "release_blocking": true, "suite_path": "evals/suites/query-retrieval-evidence-e1.json"},
+    {"track_id": "classification", "runner": "unittest", "runtime_boundary": "DETERMINISTIC_PRECHECK", "requires_real_bge_m3": false, "release_blocking": true, "suite_path": "tests/test_eval_assurance_expanded.py"},
+    {"track_id": "routing", "runner": "eval-route-run", "runtime_boundary": "DETERMINISTIC_PRECHECK", "requires_real_bge_m3": false, "release_blocking": true, "suite_path": "evals/suites/query-route-robustness-e3.json"},
+    {"track_id": "bridge", "runner": "eval-bridge-run", "runtime_boundary": "POST_RUNTIME_VERIFICATION", "requires_real_bge_m3": true, "release_blocking": true, "suite_path": "evals/suites/ingestion-query-bridge-e2.json"},
+    {"track_id": "x1", "runner": "eval-run", "runtime_boundary": "RUNTIME_X1", "requires_real_bge_m3": true, "release_blocking": true, "suite_path": "evals/suites/runtime-x1-quality-e1.json"},
+    {"track_id": "artifact_quality", "runner": "unittest", "runtime_boundary": "DETERMINISTIC_PRECHECK", "requires_real_bge_m3": false, "release_blocking": true, "suite_path": "tests/test_delivery_quality.py"},
+    {"track_id": "resilience", "runner": "eval-stress-run", "runtime_boundary": "POST_RUNTIME_VERIFICATION", "requires_real_bge_m3": true, "release_blocking": true, "suite_path": "evals/suites/query-retrieval-evidence-e1.json"},
+    {"track_id": "release", "runner": "workflow-eval", "runtime_boundary": "POST_RUNTIME_VERIFICATION", "requires_real_bge_m3": false, "release_blocking": true, "suite_path": "evals/suites/agentic-workflow-assurance-e1.json"}
+  ]
+}

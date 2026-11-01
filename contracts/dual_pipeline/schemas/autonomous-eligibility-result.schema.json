@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:autonomous-eligibility-result:1.0.0",
+  "title": "Governed Autonomous Eligibility Evaluation Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "terminal_result",
+    "is_eligible",
+    "selected_option_id",
+    "margin",
+    "entropy",
+    "top_confidence",
+    "second_confidence",
+    "reason_codes",
+    "reasons",
+    "policy_snapshot",
+    "evaluated_at_iso"
+  ],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:autonomous-eligibility-result:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"},
+    "terminal_result": {
+      "type": "string",
+      "enum": [
+        "RESOLVED_AUTONOMOUSLY",
+        "HUMAN_REVIEW_REQUIRED",
+        "INVALID_INPUT",
+        "POLICY_CONFLICT",
+        "STORAGE_ERROR",
+        "AUTHENTICATION_ERROR",
+        "UNSUPPORTED_HOST"
+      ]
+    },
+    "is_eligible": {
+      "type": "boolean"
+    },
+    "selected_option_id": {
+      "type": ["string", "null"]
+    },
+    "selected_option": {
+      "type": ["object", "null"]
+    },
+    "margin": {
+      "type": "number"
+    },
+    "entropy": {
+      "type": "number"
+    },
+    "top_confidence": {
+      "type": "number"
+    },
+    "second_confidence": {
+      "type": "number"
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "reasons": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "policy_snapshot": {
+      "type": "object"
+    },
+    "evaluated_at_iso": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

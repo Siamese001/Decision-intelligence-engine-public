@@ -1,0 +1,157 @@
+{
+  "version": "3.0.0",
+  "description": "Human-facing Category labels for the PR queue 'Category' column. Independent of the P-level rubric: describes WHAT a branch changes, not how it is prioritized. Supports multi-tier resolution: archive prefix -> structural modality introspection -> dense semantic vector projection -> branch-name keywords -> dominant changed-path domain -> conventional-commit prefix fallback.",
+  "archive_prefixes": ["backup/", "archive/"],
+  "archive_label": "Archive",
+  "deliverable": {
+    "label": "Live Meeting",
+    "default_label": "Live Meeting",
+    "modality_labels": {
+      "DOCUMENT_WRITTEN": "Client Document",
+      "EXTERNAL_RESEARCH": "External Research",
+      "MEETING_SPOKEN": "Live Meeting",
+      "PRESENTATION": "Client Document"
+    },
+    "path_prefixes": ["output/"],
+    "excluded_prefixes": ["output/transcript_cache/"],
+    "min_share": 0.5
+  },
+  "ignored_path_prefixes": ["reports/", "hitl_decision_ledger.json", "implementation_plan.md", "walkthrough.md", "governance/decision_intelligence/REPO_TESTING_GAPS_AUDIT_REPORT"],
+  "domains": [
+    {
+      "label": "External Research",
+      "description": "External market intelligence, industry research, weekly energy and utilities trend updates, regulatory rate dockets (FERC/FPSC), and external sector briefings.",
+      "modality": "DOCUMENT_WRITTEN",
+      "name_keywords": ["research", "external", "thought", "leadership", "market", "intel", "intelligence", "trends", "briefing", "whitepaper", "energy", "utilities", "regulatory", "docket"],
+      "path_prefixes": ["documents/market_intelligence/", "documents/thought_leadership/", "output/market_intelligence/"],
+      "semantic_anchors": [
+        "Weekly energy and utilities market intelligence trends update",
+        "Regulatory utility finance FPSC base rate settlement dockets",
+        "Hyperscale clean energy PPAs and nuclear colocation structuring",
+        "FERC Order 1920-B long term transmission planning compliance",
+        "External research whitepaper and industry market intelligence perspective"
+      ]
+    },
+    {
+      "label": "Client Document",
+      "description": "Written client project documents, statements of work (SOW), architecture deliverables, org charts, project charters, and written client artifacts.",
+      "modality": "DOCUMENT_WRITTEN",
+      "name_keywords": ["client", "charter", "sow", "proposal", "deck", "deliverable"],
+      "path_prefixes": ["documents/client_deliverables/"],
+      "semantic_anchors": [
+        "Client statement of work SOW project charter and architecture specification",
+        "Written client project deliverable organization chart and governance deck",
+        "Client document intake and structured written deliverable projection"
+      ]
+    },
+    {
+      "label": "Decision Intelligence",
+      "description": "Typed DecisionFrame modeling, multi-option scoring, trade-off frontier analysis, and strategic reasoning waves (W1-W7).",
+      "modality": "DOCUMENT_WRITTEN",
+      "name_keywords": ["decision", "strategic", "reasoning", "tradeoff", "decisionframe"],
+      "path_prefixes": ["dual_pipeline/decision", "dual_pipeline/strategic"],
+      "semantic_anchors": [
+        "Typed decision frame modeling and option trade-off frontier scoring",
+        "Strategic reasoning taxonomy assessment and evidence bounds",
+        "Bounded decision intelligence HTTP service and query routes"
+      ]
+    },
+    {
+      "label": "Architecture",
+      "description": "Core architecture, unidirectional layer constraints, system spine, and platform foundations.",
+      "modality": "CODE_ARCHITECTURE",
+      "name_keywords": ["arch", "architecture", "framework", "spine", "bootstrap"],
+      "path_prefixes": [],
+      "semantic_anchors": [
+        "System spine and unidirectional layer architecture enforcement",
+        "Decoupled platform interfaces and dependency injection",
+        "Core runtime framework abstraction and daemon lifecycle"
+      ]
+    },
+    {
+      "label": "Live Meeting",
+      "description": "Spoken meeting sessions, live audio recording, speech-to-text transcription, speaker diarization, live copilot, and synthesized meeting deliverables (01-03).",
+      "modality": "MEETING_SPOKEN",
+      "name_keywords": ["live", "recorder", "recording", "transcript", "transcription", "whisper", "mlx", "audio", "stt", "diarization", "copilot", "speaker", "meeting", "orals", "standup"],
+      "path_prefixes": ["dual_pipeline/live_meeting_recorder", "dual_pipeline/audio", "pipeline_a_intake/local_stt_core/", "dual_pipeline/speaker_attribution_core/", "dual_pipeline/transcript"],
+      "semantic_anchors": [
+        "Live audio recording and streaming speech to text transcription",
+        "Multi-speaker diarization and cryptographic attribution lock register",
+        "In-meeting live copilot guidance and spoken meeting deliverable synthesis"
+      ]
+    },
+    {
+      "label": "Knowledge Graph",
+      "description": "Graph database schema, BGE-M3 dense/sparse vectors, hybrid retrieval, entity resolution, and graph mutations.",
+      "modality": "CODE_PLATFORM",
+      "name_keywords": ["graph", "graphdb", "bge", "vector", "retrieval", "query", "semantic", "embedding", "embeddings", "index"],
+      "path_prefixes": ["storage/", "pipeline_c_retrieval/", "dual_pipeline/graph", "dual_pipeline/retrieval", "dual_pipeline/query", "dual_pipeline/index_core/", "dual_pipeline/semantic", "dual_pipeline/storage/"],
+      "semantic_anchors": [
+        "Knowledge graph SQLite schema, entity upserts, and assertion delta",
+        "BGE-M3 dense vector, sparse weight, and colbert token sidecar index",
+        "Hybrid BM25 and semantic vector retrieval with 11-gate qualification"
+      ]
+    },
+    {
+      "label": "Ingestion",
+      "description": "Multi-source intake packages, stage U0-L4 normalization pipelines, document parsers, judge calibration, and directive tracking.",
+      "modality": "CODE_PLATFORM",
+      "name_keywords": ["ingest", "ingestion", "intake", "extraction", "document", "doc", "sheet", "chart", "data", "xlsx", "pptx", "dociq", "rca", "judge", "calibration", "retries", "reconcile"],
+      "path_prefixes": ["pipeline_a_intake/", "pipeline_b_extraction/", "dual_pipeline/intake", "dual_pipeline/normalization_core/", "dual_pipeline/canonical_pipeline/", "dual_pipeline/llm_judge_core/"],
+      "semantic_anchors": [
+        "Stage U0 through L4 multi-modal ingestion pipeline and normalizers",
+        "Governed intake package creation and RFC 8259 canonical hashing",
+        "DocIQ and presentation deck extraction with deterministic routing"
+      ]
+    },
+    {
+      "label": "Performance",
+      "description": "Latency reduction, token cost optimization, prompt caching, memory leak prevention, and speed tuning.",
+      "modality": "CODE_PLATFORM",
+      "name_keywords": ["perf", "performance", "latency", "cost", "optimization", "optimize", "caching", "speed"],
+      "path_prefixes": [],
+      "semantic_anchors": [
+        "Pipeline wall-clock latency reduction and parallelization",
+        "LLM prompt caching token optimization and cost tracking",
+        "High-performance memory management and execution profiling"
+      ]
+    },
+    {
+      "label": "Governance",
+      "description": "Pre-mutation gates, CI runners, git hooks, PR queue observability, HITL decision ledger, and compliance audits.",
+      "modality": "CODE_GOVERNANCE",
+      "name_keywords": ["governance", "pr", "prq", "queue", "observability", "hitl", "gate", "gates", "hook", "hooks", "ci", "rules", "skills", "harmonize", "drift", "council", "audit", "automation", "debt"],
+      "path_prefixes": ["tools/pr_", ".agents/", ".githooks/", "governance/", "tools/run_ci_gates.py", "tools/verify_"],
+      "semantic_anchors": [
+        "Pre-mutation governance audits and 29-gate CI runner enforcement",
+        "Human-in-the-loop atomic decision presentation and ledger prior updates",
+        "PR queue priority ordering, worktree lifecycle, and merge receipts"
+      ]
+    },
+    {
+      "label": "Testing",
+      "description": "Unit, end-to-end, adversarial stress harnesses, failure diagnostics, and test coverage gap audits.",
+      "modality": "CODE_GOVERNANCE",
+      "name_keywords": ["test", "tests", "testing", "coverage", "adversarial", "e2e"],
+      "path_prefixes": ["tests/"],
+      "semantic_anchors": [
+        "Automated regression test suites and progress bar execution",
+        "Adversarial edge-case harness and race condition stress testing",
+        "End-to-end full pipeline qualification tests and gap audits"
+      ]
+    }
+  ],
+  "prefix_fallback": {
+    "fix": "Bug Fix",
+    "hotfix": "Bug Fix",
+    "feat": "Enhancement",
+    "perf": "Performance",
+    "test": "Testing",
+    "refactor": "Refactor",
+    "chore": "Housekeeping",
+    "docs": "Housekeeping",
+    "transcript": "Live Meeting",
+    "ingest": "Ingestion"
+  },
+  "default_label": "Enhancement"
+}

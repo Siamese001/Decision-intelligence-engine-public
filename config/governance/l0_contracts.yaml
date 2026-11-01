@@ -1,0 +1,32 @@
+version: "1.0.0"
+governance_initiative: "NEE-KG-DUAL-PIPELINE-01"
+layer: 0
+digest_algorithm: "sha256"
+json_canonical_standard: "RFC-8259"
+
+namespaces:
+  client_safe:
+    id: "CLIENT_SAFE"
+    description: "Public and enterprise client-safe facts; zero political or advisory content."
+    cloud_egress_eligible: true
+  internal_advisory:
+    id: "INTERNAL_ADVISORY"
+    description: "Confidential internal strategic insight; strictly local Metal enclave only."
+    cloud_egress_eligible: false
+
+# Bound to canonical parameter SSOT: l0.quarantine_thresholds in config/runtime/parameters.json
+quarantine_thresholds:
+  confidence_min: 0.60
+  strategic_value_min: 0.40
+  evidence_quality_min: 0.50
+  tacticality_max: 0.85
+
+# Bound to canonical parameter SSOT: storage.sqlite_wal_busy_timeout_ms in config/runtime/parameters.json
+wal_storage:
+  journal_mode: "WAL"
+  busy_timeout_ms: 30000
+  synchronous: "NORMAL"
+
+compatibility_policy:
+  fail_closed: true
+  allow_unknown_fields: false

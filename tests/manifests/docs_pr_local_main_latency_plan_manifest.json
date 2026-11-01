@@ -1,0 +1,22 @@
+{
+  "name": "docs_pr_local_main_latency_plan_manifest",
+  "version": "1.0.0",
+  "description": "CI test manifest enrolling PR promotion latency benchmark and diagnostics tests for Wave 4",
+  "branch": "docs/pr-local-main-latency-plan-20261007",
+  "plan_id": "docs_pr_local_main_latency_plan_20261007",
+  "wave": 4,
+  "deterministic_tests": [
+    "tests.test_pr_latency_benchmark_adversarial",
+    "tests.test_pr_latency_scope_qualification_adversarial",
+    "tests.test_pr_latency_reuse_safety_adversarial",
+    "tests.test_pr_latency_proportional_gates_adversarial"
+  ],
+  "e2e_tests": [
+    "tests.end_to_end.test_pr_latency_benchmark_e2e",
+    "tests.end_to_end.test_pr_latency_scope_qualification_e2e",
+    "tests.end_to_end.test_pr_latency_reuse_safety_e2e",
+    "tests.end_to_end.test_pr_latency_proportional_gates_e2e"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-07T12:00:00Z"
+}

@@ -1,0 +1,20 @@
+wave_id: "Wave 1: Layer 0 Contract & Primitive Consolidation"
+wave_number: 1
+governance: "NEE-KG-DUAL-PIPELINE-01"
+required_prior_lock: "locks/baseline.lock"
+
+acceptance_criteria:
+  - "L0 schema and contract compatibility tests pass"
+  - "Provenance-first digest and claim-check tests pass"
+  - "4-dimensional independent soft quarantine tests pass"
+  - "Policy-before-retrieval pre-filtering order tests pass"
+  - "L0 downward-only dependency direction tests pass"
+  - "All L0 production modules satisfy the module size and complexity budget"
+  - "SQLite WAL evidence storage appends idempotently"
+
+test_suites:
+  - "tests/l0/test_contract_compatibility.py"
+  - "tests/l0/test_provenance_first.py"
+  - "tests/l0/test_quarantine_dimensions.py"
+  - "tests/l0/test_policy_before_retrieval.py"
+  - "tests/l0/test_dependency_direction.py"

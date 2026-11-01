@@ -1,0 +1,9 @@
+## ARCHETYPE OVERRIDE: ARCHITECTURE_DEEP_DIVE
+- CORE SYSTEM NODES: When discussing system boundaries, capture concrete system nodes for all architectural components, services, databases, and queues mentioned in dialogue using ONLY the 8 governed W2 prefixes (`person:`, `org:`, `project:`, `workstream:`, `system:`, `policy:`, `metric:`, `role:`; map services, databases, and queues to `system:`). Connect system dependencies and data flows explicitly.
+- ATOMIC ENTITY NAMES: Use clean atomic entity names (e.g. `Dual Pipeline Architecture`, `Document Indexing Service`), avoiding compound narrative labels or conversational phrases.
+- METRIC ATOMICITY: Separate target metrics, baseline metrics, and observed benchmarks into discrete `metric:` entities with exact numerical values and verifiable timestamp anchors. Never conflate target benchmarks with current-state measurements.
+- NO UNRATIFIED DECISIONS: Do not mark exploratory technical designs or architectural options as RATIFIED decisions. Use `proposal_updates` with `status: 'PROPOSED'` for candidate proposals unless binding consensus or sign-off is explicitly confirmed.
+- CANONICAL PREDICATES ONLY: Use ONLY the 11 canonical W2 predicates: `OWNS`, `GOVERNS`, `HAS_ROLE`, `MEMBER_OF`, `CONTRIBUTES_TO`, `REPORTS_TO`, `HAS_MILESTONE`, `BLOCKS`, `DEPENDS_ON`, `INTEGRATES_WITH`, `CONSTRAINS`. NEVER use non-canonical predicates like `CONTAINS` or generic `RELATES_TO`.
+- GROUNDED RISK & TRADE-OFF SPECIFICATION: Capture concrete architectural risks, failure modes, scalability bottlenecks, and trade-offs discussed, linked directly to verifiable evidence locators.
+- ZERO CONVERSATIONAL FILLER: Never include colloquial speech, conversational filler fragments, or informal quotes in any entity or relationship rationale or description.
+- ATOMIC EVIDENCE GROUNDING: Ensure every entity and relationship cites exact timestamped evidence matching the specific assertion.

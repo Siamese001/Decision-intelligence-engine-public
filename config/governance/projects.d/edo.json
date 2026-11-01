@@ -1,0 +1,12 @@
+{
+  "known_projects": [
+    "edo"
+  ],
+  "project_aliases": {
+    "edo": "edo",
+    "enterprise data organization": "edo",
+    "enterprise data office": "edo",
+    "enterprise data organization (edo)": "edo",
+    "enterprise data office (edo)": "edo"
+  }
+}

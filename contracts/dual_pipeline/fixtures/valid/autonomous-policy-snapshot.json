@@ -1,0 +1,19 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:autonomous-policy-snapshot:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "autonomous-policy-snapshot-fixture-01",
+  "snapshot_id": "snap_001",
+  "ambiguity_threshold": 0.3,
+  "conviction_floor": 0.65,
+  "max_entropy": 0.75,
+  "divergence_threshold": 0.2,
+  "policy_source": "test_fixture",
+  "policy_digest": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "frozen_at_iso": "2026-10-07T12:00:00Z",
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "cfa517f9bf52607dfa3feb01f17c99c83f53ffb710e69834bfe71b52a7456bbb"
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "$schema": "urn:nee:governance:risk-lanes-policy:1.0.0",
+  "version": "1.0.0",
+  "description": "Policy-as-code for path-classified 3-lane risk tiering (Wave 7 / Findings X-18 to X-20).",
+  "governance_classification": "LANE_2_SECURITY_CONTROL",
+  "default_lane": 2,
+  "fail_closed_on_unrecognized": true,
+  "escalate_mixed_to_highest": true,
+  "lane_definitions": {
+    "0": {
+      "name": "LANE_0_LOW_RISK",
+      "description": "Documentation, comments, guides, and isolated unit tests without pipeline modifications.",
+      "required_gates": [
+        "code_hygiene_ast",
+        "fast_linter_ruff",
+        "credential_firewall"
+      ],
+      "exempt_gates": [
+        "bge_m3_11_gates",
+        "graph_mutation_receipt",
+        "release_activation_receipt",
+        "blocking_plan_format",
+        "blocking_summary_format"
+      ]
+    },
+    "1": {
+      "name": "LANE_1_MEDIUM_RISK",
+      "description": "Standard pipeline application code, helpers, diagnostic utilities, and non-critical tools.",
+      "required_gates": [
+        "code_hygiene_ast",
+        "fast_linter_ruff",
+        "staged_shift_left_complexity",
+        "credential_firewall",
+        "deterministic_test_profile"
+      ],
+      "exempt_gates": [
+        "bge_m3_11_gates",
+        "graph_mutation_receipt",
+        "release_activation_receipt"
+      ]
+    },
+    "2": {
+      "name": "LANE_2_HIGH_RISK",
+      "description": "Knowledge graph mutations, releases, retrieval weights, ingestion gates, decision ledgers, and governance security controls.",
+      "required_gates": [
+        "full_29_gates",
+        "bge_m3_11_gates",
+        "signed_dsse_attestation",
+        "human_operator_approval",
+        "graph_delta_accounting",
+        "strict_audit_receipts"
+      ],
+      "exempt_gates": []
+    }
+  },
+  "path_rules": [
+    {
+      "pattern": "graph/**",
+      "lane": 2,
+      "reason": "Direct SQLite knowledge graph storage and schema"
+    },
+    {
+      "pattern": "storage/**",
+      "lane": 2,
+      "reason": "Core storage drivers and database connections"
+    },
+    {
+      "pattern": "dual_pipeline/storage/**",
+      "lane": 2,
+      "reason": "Dual pipeline storage layer"
+    },
+    {
+      "pattern": "dual_pipeline/release/**",
+      "lane": 2,
+      "reason": "Graph release preparation and activation"
+    },
+    {
+      "pattern": "dual_pipeline/release_core/**",
+      "lane": 2,
+      "reason": "Graph release preparation, sealing, and activation core"
+    },
+    {
+      "pattern": "dual_pipeline/release_policy.py",
+      "lane": 2,
+      "reason": "Authoritative release threshold and seal policy"
+    },
+    {
+      "pattern": "dual_pipeline/parameters.py",
+      "lane": 2,
+      "reason": "Authoritative SSOT parameter registry"
+    },
+    {
+      "pattern": "dual_pipeline/parameters_ops.py",
+      "lane": 2,
+      "reason": "Authoritative SSOT operational parameter lookups"
+    },
+    {
+      "pattern": "dual_pipeline/release_thresholds.py",
+      "lane": 2,
+      "reason": "Authoritative release threshold policy"
+    },
+    {
+      "pattern": "dual_pipeline/model_registry.py",
+      "lane": 2,
+      "reason": "Authoritative model capability tier registry"
+    },
+    {
+      "pattern": "config/runtime/parameters.json",
+      "lane": 2,
+      "reason": "Canonical runtime parameters JSON SSOT"
+    },
+    {
+      "pattern": "config/runtime/model_registry.json",
+      "lane": 2,
+      "reason": "Canonical model registry JSON SSOT"
+    },
+    {
+      "pattern": "dual_pipeline/ingestion/**",
+      "lane": 2,
+      "reason": "Source ingestion and U0/L1 normalization"
+    },
+    {
+      "pattern": "dual_pipeline/canonical_pipeline/**",
+      "lane": 2,
+      "reason": "Canonical ingestion, checkpoint memoization, and publication pipeline"
+    },
+    {
+      "pattern": "dual_pipeline/intake_core/**",
+      "lane": 2,
+      "reason": "Intake directive and completion guard core"
+    },
+    {
+      "pattern": "dual_pipeline/document_pipeline_core/**",
+      "lane": 2,
+      "reason": "Document ingestion and structural census pipeline"
+    },
+    {
+      "pattern": "dual_pipeline/audio_ingestion_core/**",
+      "lane": 2,
+      "reason": "Acoustic ASR, diarization, and voiceprint ingestion core"
+    },
+    {
+      "pattern": "dual_pipeline/graph_writer_core/**",
+      "lane": 2,
+      "reason": "Governed graph writer and assertion persistence"
+    },
+    {
+      "pattern": "dual_pipeline/graph_consolidation_core/**",
+      "lane": 2,
+      "reason": "Entity merge repointing and graph consolidation"
+    },
+    {
+      "pattern": "dual_pipeline/uwg_core/**",
+      "lane": 2,
+      "reason": "Universal Write Gateway graph mutations"
+    },
+    {
+      "pattern": "dual_pipeline/query_router*",
+      "lane": 2,
+      "reason": "Front-door query routing and temporal source existence gate"
+    },
+    {
+      "pattern": "implementation_plan.md",
+      "lane": 2,
+      "reason": "Root implementation plan blocked on main (Single Plan Location Policy)"
+    },
+    {
+      "pattern": "dual_pipeline/hitl_governance_core/**",
+      "lane": 2,
+      "reason": "Human-in-the-loop decision ledger and Bayesian calibration"
+    },
+    {
+      "pattern": "dual_pipeline/runtime_evidence_core/**",
+      "lane": 2,
+      "reason": "Runtime evidence inventory and truth invariants"
+    },
+    {
+      "pattern": "tools/govern_learning_proposals.py",
+      "lane": 2,
+      "reason": "Parameter adaptation and learning proposal governance"
+    },
+    {
+      "pattern": "tools/pr_governance*",
+      "lane": 2,
+      "reason": "PR governance lifecycle and merge controls"
+    },
+    {
+      "pattern": "tools/verify_*",
+      "lane": 2,
+      "reason": "Pre-commit and readiness verification gatekeepers"
+    },
+    {
+      "pattern": "tools/attestation_core/**",
+      "lane": 2,
+      "reason": "DSSE envelope generation and cryptographic tree digest verification"
+    },
+    {
+      "pattern": "tools/audit_root_hygiene.py",
+      "lane": 2,
+      "reason": "Root allowlist and file size enforcement"
+    },
+    {
+      "pattern": "tools/change_lane_classifier.py",
+      "lane": 2,
+      "reason": "Self-referential Lane 2 policy classifier (cannot downgrade self)"
+    },
+    {
+      "pattern": "config/governance/**",
+      "lane": 2,
+      "reason": "Lane 2 repository governance policies, exclusions, and allowlists"
+    },
+    {
+      "pattern": "config/runtime/**",
+      "lane": 2,
+      "reason": "Runtime system parameters and ambiguity thresholds"
+    },
+    {
+      "pattern": "AGENTS.md",
+      "lane": 2,
+      "reason": "Core agent operating rules and invariants"
+    },
+    {
+      "pattern": ".agents/**",
+      "lane": 2,
+      "reason": "Governed agent rules, hooks, and plugins"
+    },
+    {
+      "pattern": "hitl_decision_ledger.json",
+      "lane": 2,
+      "reason": "Authoritative human decision ledger"
+    },
+    {
+      "pattern": "models/**",
+      "lane": 2,
+      "reason": "Embedding model weights and manifests"
+    },
+    {
+      "pattern": "governance/**",
+      "lane": 2,
+      "reason": "Repository governance policies, prompts, and registries"
+    },
+    {
+      "pattern": "config/prompts/**",
+      "lane": 2,
+      "reason": "Executable pipeline prompts and synthesis stages"
+    },
+    {
+      "pattern": "dual_pipeline/prompts/**",
+      "lane": 2,
+      "reason": "Executable prompt contracts and templates"
+    },
+    {
+      "pattern": "*prompt*.md",
+      "lane": 2,
+      "reason": "Executable prompt definitions (cannot downgrade to documentation)"
+    },
+    {
+      "pattern": "*PROMPT*.md",
+      "lane": 2,
+      "reason": "Executable prompt definitions (cannot downgrade to documentation)"
+    },
+    {
+      "pattern": "output/**",
+      "lane": 1,
+      "reason": "Authentic production meeting deliverables and synthesized outputs"
+    },
+    {
+      "pattern": "documents/**",
+      "lane": 1,
+      "reason": "Intake source documents and reference materials"
+    },
+    {
+      "pattern": "docs/**",
+      "lane": 0,
+      "reason": "Documentation and plans"
+    },
+    {
+      "pattern": "documentation/**",
+      "lane": 0,
+      "reason": "Documentation and walkthroughs"
+    },
+    {
+      "pattern": "archive/**",
+      "lane": 0,
+      "reason": "Archived files and historical records"
+    },
+    {
+      "pattern": "*.md",
+      "lane": 0,
+      "reason": "Root-level markdown documentation files (non-AGENTS.md, non-implementation_plan.md)"
+    },
+    {
+      "pattern": "tests/unit/test_isolated*",
+      "lane": 0,
+      "reason": "Isolated pure unit tests without pipeline modifications"
+    },
+    {
+      "pattern": "tests/**",
+      "lane": 1,
+      "reason": "Unit and integration tests (Lane 1 ensures mock boundary and E2E coverage gates run)"
+    },
+    {
+      "pattern": "reports/*_baseline.json",
+      "lane": 2,
+      "reason": "Monotonic ratchet baselines (cannot downgrade to Lane 0 report exemptions)"
+    },
+    {
+      "pattern": "reports/**",
+      "lane": 0,
+      "reason": "Generated audit receipts, benchmark metrics, and execution reports"
+    },
+    {
+      "pattern": "dual_pipeline/**",
+      "lane": 1,
+      "reason": "General pipeline execution and components"
+    },
+    {
+      "pattern": "tools/**",
+      "lane": 1,
+      "reason": "General engineering tools and utilities"
+    },
+    {
+      "pattern": "evals/**",
+      "lane": 1,
+      "reason": "Evaluation scripts and test harness"
+    }
+  ],
+  "soft_caps": {
+    "max_non_generated_loc_per_merge": 400,
+    "max_active_worktrees": 30,
+    "max_governance_meta_ratio": 0.15
+  }
+}

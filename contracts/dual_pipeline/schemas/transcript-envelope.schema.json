@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:transcript-envelope:1.0.0",
+  "title": "NEE raw transcript envelope",
+  "description": "Typed envelope wrapping raw transcript input with meeting metadata, speaker segments, timestamps, provenance, and processing version. Produced by U0 in the transcript pipeline.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "meeting_id", "source_type", "transcript_text", "transcript_text_hash", "processing_version", "created_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:transcript-envelope:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "meeting_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "meeting_name": {"type": ["string", "null"], "maxLength": 512},
+    "meeting_date": {"type": ["string", "null"], "format": "date"},
+    "meeting_time": {"type": ["string", "null"], "maxLength": 32},
+    "source_type": {"type": "string", "enum": ["audio_transcribed", "diarized_text", "undiarized_text", "raw_text"]},
+    "audio_reference": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "filename": {"type": "string", "minLength": 1},
+        "file_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "duration_seconds": {"type": ["number", "null"], "minimum": 0},
+        "format": {"type": ["string", "null"]}
+      },
+      "required": ["filename", "file_hash"]
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "organization": {"type": ["string", "null"]},
+          "role": {"type": ["string", "null"]},
+          "speaker_label": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "speaker_segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["speaker", "text"],
+        "properties": {
+          "speaker": {"type": "string", "minLength": 1},
+          "text": {"type": "string", "minLength": 1},
+          "start_time": {"type": ["string", "null"]},
+          "end_time": {"type": ["string", "null"]},
+          "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+        }
+      }
+    },
+    "transcript_text": {"type": "string", "minLength": 1},
+    "transcript_text_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "asr_model": {"type": ["string", "null"]},
+    "asr_confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "diarization_status": {"type": "string", "enum": ["native", "undiarized", "inferred", "unknown"]},
+    "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+    "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+    "processing_version": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:uwg-governance-approval:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "uwg-governance-approval-fixture",
+  "approval_id": "uwg-approval-fixture",
+  "approval_reference": "uwg-approval-fixture-reference",
+  "approval_type": "ingestion_promotion",
+  "promotion_id": "uwg-promotion-fixture",
+  "candidate_pair": {
+    "generation_id": "generation-uwg-fixture",
+    "graph_snapshot": "snapshot-uwg-fixture",
+    "graph_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+    "sidecar_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+    "embedding_backend": "flagembedding-bge-m3-dev",
+    "model_id": "BAAI/bge-m3",
+    "model_revision": "fixture-v1",
+    "model_manifest_digest": null,
+    "production_qualified": false
+  },
+  "candidate_assertion_ids": ["assertion-uwg-fixture"],
+  "source_snapshot_bindings": [
+    {
+      "assertion_id": "assertion-uwg-fixture",
+      "evidence_id": "evidence-uwg-fixture",
+      "source_id": "source-uwg-fixture",
+      "source_version_id": "source-version-uwg-fixture",
+      "source_content_hash": "6666666666666666666666666666666666666666666666666666666666666666"
+    }
+  ],
+  "approved_by": "fixture-reviewer",
+  "approved_at": "2026-07-25T00:00:00Z",
+  "expires_at": "2026-07-25T01:00:00Z",
+  "release_version": "uwg-1.0.0",
+  "scope_confirmation": "REGISTER_EXACT_UWG_PROMOTION_SCOPE",
+  "rationale": "A signed reviewer authorized only the exact candidate and immutable source snapshot.",
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "e25a0a04b3956bc2664dcc40d2f79e9f12a8636033536388405324ad4547087b"
+  }
+}

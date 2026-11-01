@@ -1,0 +1,50 @@
+{
+  "artifact_id": "mnf-20261006-001",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "ee3a55d764bba24c1e438ad77fa4a011c8ef0c213e98dc22021f749967f1152e"
+  },
+  "claims": [
+    {
+      "assertion_ids": [
+        "asn-001"
+      ],
+      "claim_id": "clm-001",
+      "contradicting_assertion_ids": [],
+      "epistemic_status": "approved",
+      "evidence_lane": "approved",
+      "negation": false,
+      "object": "SAP SuccessFactors",
+      "predicate": "touches_system",
+      "qualifiers": [
+        "production"
+      ],
+      "scope": "PROJECT_LEVEL",
+      "source_locators": [
+        {
+          "locator_type": "transcript_paragraph",
+          "locator_value": "para_42",
+          "source_uri": "file:///transcripts/meeting_2026_10_06.md"
+        }
+      ],
+      "subject": "PRF Automation",
+      "supporting_assertion_ids": [
+        "asn-001"
+      ],
+      "temporal_validity": {
+        "valid_from": "2026-10-06T10:00:00Z",
+        "valid_to": null
+      }
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:claim-manifest:1.0.0",
+  "created_at": "2026-10-06T10:00:00Z",
+  "extensions": {},
+  "graph_generation_id": "gen-12345",
+  "graph_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "manifest_id": "mnf-20261006-001",
+  "payload_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_root": "/tmp/runtime_root",
+  "schema_version": "1.0.0"
+}

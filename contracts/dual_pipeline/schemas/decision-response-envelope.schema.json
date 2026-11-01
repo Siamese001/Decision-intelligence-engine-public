@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:decision-response-envelope:1.0.0",
+  "title": "Decision service response envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "request_id", "run_id", "destination", "handler", "terminal_state", "result", "citations", "retrieval_call_count", "provider_call_count", "latency_ms", "error", "response_digest", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:decision-response-envelope:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "request_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": ["string", "null"]},
+    "destination": {"type": "string", "minLength": 1},
+    "handler": {"type": "string", "minLength": 1},
+    "terminal_state": {"type": "string", "enum": ["DECISION_PRODUCED", "CLARIFICATION_REQUIRED", "NO_DECISION", "EVIDENCE_READY_DECISION_NOT_PRODUCED", "EVIDENCE_ANSWER_PRODUCED", "HANDOFF_READY", "REQUEST_FAILED"]},
+    "result": {},
+    "citations": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "retrieval_call_count": {"type": "integer", "minimum": 0},
+    "provider_call_count": {"type": "integer", "minimum": 0},
+    "latency_ms": {"type": "integer", "minimum": 0},
+    "error": {"type": ["object", "null"]},
+    "response_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

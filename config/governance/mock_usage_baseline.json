@@ -1,0 +1,1264 @@
+{
+  "tests/end_to_end/test_active_ingestion_entrypoints_e2e.py": [
+    {
+      "line": 16,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 126,
+      "col": 34,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 127,
+      "col": 33,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 128,
+      "col": 33,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 129,
+      "col": 33,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 131,
+      "col": 19,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_active_ingestion_publication_e2e.py": [
+    {
+      "line": 18,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (Mock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 48,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'Mock' is banned in governed test suites."
+    },
+    {
+      "line": 123,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'Mock' is banned in governed test suites."
+    },
+    {
+      "line": 162,
+      "col": 18,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'Mock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_active_ingestion_scheduled_e2e.py": [
+    {
+      "line": 18,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_alignment_w5_e2e.py": [
+    {
+      "line": 19,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 53,
+      "col": 20,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 225,
+      "col": 8,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 225,
+      "col": 27,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 225,
+      "col": 43,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 226,
+      "col": 8,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 226,
+      "col": 27,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 226,
+      "col": 43,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_atomic_spool_migration.py": [
+    {
+      "line": 1,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_canonical_ingest_invocation_e2e.py": [
+    {
+      "line": 7,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_checkpoint_memoization_e2e.py": [
+    {
+      "line": 13,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 79,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 80,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 81,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 85,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 153,
+      "col": 27,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 164,
+      "col": 30,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 170,
+      "col": 8,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 177,
+      "col": 25,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_ci_loader_fail_closed_e2e.py": [
+    {
+      "line": 7,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_circuit_breaker_e2e.py": [
+    {
+      "line": 11,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 26,
+      "col": 29,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 28,
+      "col": 29,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 30,
+      "col": 26,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 32,
+      "col": 26,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_concurrent_provider_calls_e2e.py": [
+    {
+      "line": 28,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 283,
+      "col": 19,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_copilot_engagement_wave1_e2e.py": [
+    {
+      "line": 12,
+      "col": 0,
+      "rule": "MOCK02",
+      "msg": "Banned import of 'SimpleNamespace'. High-fidelity tests must use real graph/storage fixtures."
+    },
+    {
+      "line": 62,
+      "col": 11,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_copilot_engagement_wave4_e2e.py": [
+    {
+      "line": 12,
+      "col": 0,
+      "rule": "MOCK02",
+      "msg": "Banned import of 'SimpleNamespace'. High-fidelity tests must use real graph/storage fixtures."
+    },
+    {
+      "line": 28,
+      "col": 24,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    },
+    {
+      "line": 28,
+      "col": 46,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_copilot_engagement_wave5_e2e.py": [
+    {
+      "line": 12,
+      "col": 0,
+      "rule": "MOCK02",
+      "msg": "Banned import of 'SimpleNamespace'. High-fidelity tests must use real graph/storage fixtures."
+    },
+    {
+      "line": 37,
+      "col": 24,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    },
+    {
+      "line": 37,
+      "col": 46,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_copilot_prefetch_e2e.py": [
+    {
+      "line": 15,
+      "col": 0,
+      "rule": "MOCK02",
+      "msg": "Banned import of 'SimpleNamespace'. High-fidelity tests must use real graph/storage fixtures."
+    },
+    {
+      "line": 78,
+      "col": 29,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_copilot_wave_1.py": [
+    {
+      "line": 2,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 32,
+      "col": 45,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_cost_leakage_remediation_e2e.py": [
+    {
+      "line": 70,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 113,
+      "col": 18,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 116,
+      "col": 25,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 167,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_cost_optimization_model_routing_e2e.py": [
+    {
+      "line": 174,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_d02_modular_dag_e2e.py": [
+    {
+      "line": 4,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 18,
+      "col": 17,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_d02_token_economy_e2e.py": [
+    {
+      "line": 15,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 113,
+      "col": 16,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 127,
+      "col": 16,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 143,
+      "col": 20,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_decision_evidence_recovery_e2e.py": [
+    {
+      "line": 16,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 58,
+      "col": 10,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 281,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 397,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_diarized_acoustic_resolved_e2e.py": [
+    {
+      "line": 16,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 93,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_document_ingestion_audit_e2e.py": [
+    {
+      "line": 17,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_document_ingestion_retrieval_e2e.py": [
+    {
+      "line": 9,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 103,
+      "col": 40,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 106,
+      "col": 47,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_document_ingestion_runtime_e2e.py": [
+    {
+      "line": 15,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 217,
+      "col": 16,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 234,
+      "col": 16,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_document_w4_batch_bge.py": [
+    {
+      "line": 9,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_edge_cases_retry_limits_e2e.py": [
+    {
+      "line": 9,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 34,
+      "col": 14,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 35,
+      "col": 15,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 36,
+      "col": 14,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 37,
+      "col": 20,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_google_l2_e2e.py": [
+    {
+      "line": 7,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 110,
+      "col": 20,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_gpu_wave1_e2e.py": [
+    {
+      "line": 201,
+      "col": 27,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_gpu_wave2_e2e.py": [
+    {
+      "line": 187,
+      "col": 27,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_gpu_wave3_e2e.py": [
+    {
+      "line": 219,
+      "col": 27,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_gpu_wave4_e2e.py": [
+    {
+      "line": 375,
+      "col": 23,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_graph_consolidation_release_e2e.py": [
+    {
+      "line": 22,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_graphdb_role_gate_e2e.py": [
+    {
+      "line": 11,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 77,
+      "col": 11,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 112,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 162,
+      "col": 11,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 188,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 215,
+      "col": 11,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 240,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_hitl_audio_speaker_collapse_e2e.py": [
+    {
+      "line": 19,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_l1_google_adapter_e2e.py": [
+    {
+      "line": 6,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_l2_extraction_economizer_e2e.py": [
+    {
+      "line": 11,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 35,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 68,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 96,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 139,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_l2_routing_e2e.py": [
+    {
+      "line": 17,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 45,
+      "col": 29,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 46,
+      "col": 26,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 48,
+      "col": 12,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 49,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_lens_tokenomics_full_suite_e2e.py": [
+    {
+      "line": 20,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 176,
+      "col": 28,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_live_audio_capture_hardening_e2e.py": [
+    {
+      "line": 24,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 140,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 141,
+      "col": 31,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_live_hot_path_budget_e2e.py": [
+    {
+      "line": 22,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_live_reasoning_lifecycle_e2e.py": [
+    {
+      "line": 20,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 124,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 125,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 127,
+      "col": 12,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 128,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_live_recorder_no_orphan_e2e.py": [
+    {
+      "line": 21,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_live_recording_lifecycle_e2e.py": [
+    {
+      "line": 20,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_live_recording_staging_and_copilot_e2e.py": [
+    {
+      "line": 22,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 111,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_live_single_capture_e2e.py": [
+    {
+      "line": 21,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 104,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 206,
+      "col": 23,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_live_speaker_hints_e2e.py": [
+    {
+      "line": 14,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_model_identity_lifecycle_e2e.py": [
+    {
+      "line": 19,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_no_microsecond_fork_e2e.py": [
+    {
+      "line": 3,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_pr_latency_optimization_e2e.py": [
+    {
+      "line": 18,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_pr_latency_scope_qualification_e2e.py": [
+    {
+      "line": 18,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_pr_review_gate_dedup_optimization_e2e.py": [
+    {
+      "line": 18,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_preview_exit_hook_e2e.py": [
+    {
+      "line": 13,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_prompt_cache_chokepoints_e2e.py": [
+    {
+      "line": 5,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (AsyncMock, MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 16,
+      "col": 12,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 17,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 21,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 24,
+      "col": 34,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 25,
+      "col": 38,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 32,
+      "col": 17,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 33,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 53,
+      "col": 23,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 54,
+      "col": 23,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'AsyncMock' is banned in governed test suites."
+    },
+    {
+      "line": 74,
+      "col": 17,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 75,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 96,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_prompt_cache_hit_rate_e2e.py": [
+    {
+      "line": 13,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_prompt_cache_l2_e2e.py": [
+    {
+      "line": 6,
+      "col": 0,
+      "rule": "MOCK02",
+      "msg": "Banned import of 'SimpleNamespace'. High-fidelity tests must use real graph/storage fixtures."
+    },
+    {
+      "line": 147,
+      "col": 12,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    },
+    {
+      "line": 148,
+      "col": 12,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_prompt_cache_l2_prefix_e2e.py": [
+    {
+      "line": 5,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 68,
+      "col": 17,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 70,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 72,
+      "col": 23,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_prompt_cache_layout_e2e.py": [
+    {
+      "line": 5,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 17,
+      "col": 12,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 18,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 22,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 34,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 80,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 108,
+      "col": 22,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 110,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_prompt_cache_telemetry_e2e.py": [
+    {
+      "line": 6,
+      "col": 0,
+      "rule": "MOCK02",
+      "msg": "Banned import of 'SimpleNamespace'. High-fidelity tests must use real graph/storage fixtures."
+    },
+    {
+      "line": 7,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 15,
+      "col": 20,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 18,
+      "col": 24,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    },
+    {
+      "line": 19,
+      "col": 18,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    },
+    {
+      "line": 23,
+      "col": 38,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    },
+    {
+      "line": 30,
+      "col": 20,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 44,
+      "col": 20,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_query_expansion_google_e2e.py": [
+    {
+      "line": 6,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_record_start_latency_e2e.py": [
+    {
+      "line": 20,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 52,
+      "col": 23,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_recording_service_adapter_e2e.py": [
+    {
+      "line": 16,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 47,
+      "col": 23,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 89,
+      "col": 23,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 118,
+      "col": 23,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_silent_durable_attribution_e2e.py": [
+    {
+      "line": 27,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ],
+  "tests/end_to_end/test_speaker_review_context_e2e.py": [
+    {
+      "line": 3,
+      "col": 0,
+      "rule": "MOCK02",
+      "msg": "Banned import of 'SimpleNamespace'. High-fidelity tests must use real graph/storage fixtures."
+    },
+    {
+      "line": 17,
+      "col": 11,
+      "rule": "MOCK02",
+      "msg": "Direct instantiation of 'SimpleNamespace' stub is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_wave1_mutation_hardening_e2e.py": [
+    {
+      "line": 17,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 197,
+      "col": 16,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 199,
+      "col": 24,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_wave2_telemetry_accounting_e2e.py": [
+    {
+      "line": 13,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 35,
+      "col": 20,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 86,
+      "col": 25,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_wave3_dedup_and_caching_e2e.py": [
+    {
+      "line": 17,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (MagicMock, patch). Integration/E2E tests must use real SQLite engines."
+    },
+    {
+      "line": 78,
+      "col": 21,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    },
+    {
+      "line": 89,
+      "col": 19,
+      "rule": "MOCK01",
+      "msg": "Direct instantiation of 'MagicMock' is banned in governed test suites."
+    }
+  ],
+  "tests/end_to_end/test_worktree_slug_inheritance_e2e.py": [
+    {
+      "line": 4,
+      "col": 0,
+      "rule": "MOCK01",
+      "msg": "Banned import from 'unittest.mock' (patch). Integration/E2E tests must use real SQLite engines."
+    }
+  ]
+}

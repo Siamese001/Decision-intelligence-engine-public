@@ -1,0 +1,10 @@
+{
+  "wave": "Wave 3B",
+  "status": "COMPLETE",
+  "total_queries": 50,
+  "total_candidates_pooled": 1126,
+  "average_candidates_per_query": 22.5,
+  "output_file": "evals\\qrels_candidate_pool.json",
+  "timestamp": "2026-09-09T15:21:50Z",
+  "elapsed_seconds": 72.7
+}

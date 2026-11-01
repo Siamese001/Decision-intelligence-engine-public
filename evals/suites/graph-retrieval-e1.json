@@ -1,0 +1,395 @@
+{
+  "artifact_id": "graph-retrieval-e1",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "d3352484e19ab5a7cf6209d047bc9f936349a1fb8173b1e7a886fbb89228ae29"
+  },
+  "cases": [
+    {
+      "audiences": [
+        "internal_working_team"
+      ],
+      "case_id": "q-connected-cross-workstream",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "bm25_executed": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "standard",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_path_relationship_families": [
+          "ROUTES_TO"
+        ],
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "graph_traversal_executed": true,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-c71ffbc63e7d5acd8dc4aa0bab4f": 3
+        },
+        "maximum_missing_evidence_count": 0,
+        "minimum_connected_path_count": 25,
+        "minimum_graph_expanded_record_count": 12,
+        "minimum_graph_hops_reached": 3,
+        "minimum_opportunity_context_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-c71ffbc63e7d5acd8dc4aa0bab4f"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-c71ffbc63e7d5acd8dc4aa0bab4f": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Cross-workstream recurring patterns",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3E_ALLOW_EVIDENCE_ONLY"
+      },
+      "pipeline": "query",
+      "provider_posture": "offline",
+      "query_type": "cross_workstream_synthesis",
+      "question": "How do Project Beacon, the AI Hub, partner dependencies, risks, and opportunities connect across workstreams?",
+      "tags": [
+        "query",
+        "retrieval",
+        "bm25",
+        "multi-hop"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_working_team"
+      ],
+      "case_id": "q-specific-relationship-no-hub-crowding",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "bm25_executed": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "standard",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_path_relationship_families": [
+          "ROUTES_TO"
+        ],
+        "forbidden_record_ids": [
+          "retrieval-record-466b5fafa0dfde960da5d7531bf7"
+        ],
+        "graph_mutation_count": 0,
+        "graph_traversal_executed": true,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-6dc8ec1dbe52acc5cb76afd0b9d1": 10
+        },
+        "maximum_missing_evidence_count": 0,
+        "minimum_branch_suppression_count": 1,
+        "minimum_connected_path_count": 25,
+        "minimum_graph_expanded_record_count": 12,
+        "minimum_graph_hops_reached": 3,
+        "minimum_opportunity_context_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_path_assertion_ids": [
+          "asrt_claim_v53_sherpa_offline_eval_harness_current_process"
+        ],
+        "required_record_ids": [
+          "retrieval-record-6dc8ec1dbe52acc5cb76afd0b9d1"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-6dc8ec1dbe52acc5cb76afd0b9d1": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "PDLC",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Governed relationship paths and direction",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3E_ALLOW_EVIDENCE_ONLY"
+      },
+      "pipeline": "query",
+      "provider_posture": "offline",
+      "query_type": "relationship_explanation",
+      "question": "Explain the governed connections among AI-enabled PDLC, the AI Hub, and Project Beacon delivery, including dependencies and evidence.",
+      "tags": [
+        "query",
+        "retrieval",
+        "multi-hop",
+        "hub-control"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_working_team"
+      ],
+      "case_id": "q-opportunity-connected-evidence",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "bm25_executed": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "standard",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_path_relationship_families": [
+          "ROUTES_TO"
+        ],
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "graph_traversal_executed": true,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-0f8edc087a10eef6fea487d93f7b": 3
+        },
+        "maximum_missing_evidence_count": 0,
+        "minimum_connected_path_count": 25,
+        "minimum_graph_expanded_record_count": 12,
+        "minimum_graph_hops_reached": 3,
+        "minimum_opportunity_context_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved",
+          "candidate"
+        ],
+        "required_path_assertion_ids": [
+          "ast_v49_f25a139228a51e842996a8fc8d03"
+        ],
+        "required_record_ids": [
+          "retrieval-record-0f8edc087a10eef6fea487d93f7b"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-0f8edc087a10eef6fea487d93f7b": "candidate"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Business needs, opportunities, and expected outcomes",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3E_ALLOW_EVIDENCE_ONLY"
+      },
+      "pipeline": "query",
+      "provider_posture": "offline",
+      "query_type": "opportunity_nba",
+      "question": "What are the strongest connected opportunities across NEA and Project Beacon, which pain points and dependencies do they address, and what evidence supports them?",
+      "tags": [
+        "query",
+        "retrieval",
+        "opportunity",
+        "counterevidence"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_working_team"
+      ],
+      "case_id": "q-exact-bm25-no-traversal",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "bm25_executed": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": null,
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "GRAPH_EVIDENCE_UTILITY",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_path_relationship_families": [
+          "ROUTES_TO"
+        ],
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "graph_traversal_executed": false,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-6dc8ec1dbe52acc5cb76afd0b9d1": 15
+        },
+        "maximum_missing_evidence_count": 0,
+        "minimum_connected_path_count": 1,
+        "minimum_graph_expanded_record_count": 0,
+        "minimum_graph_hops_reached": 0,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-6dc8ec1dbe52acc5cb76afd0b9d1"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-6dc8ec1dbe52acc5cb76afd0b9d1": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "PDLC",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Exact governed facts and source locators",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "none",
+      "query_type": "exact_lookup",
+      "question": "Which exact governed PDLC records are available?",
+      "tags": [
+        "query",
+        "retrieval",
+        "bm25",
+        "control"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:eval-suite:3.0.0",
+  "created_at": "2026-07-30T01:20:00Z",
+  "execution_tier": "E1",
+  "extensions": {
+    "com.partner_advisory.nee.evaluation-purpose": "BM25 fusion, typed multi-hop connectivity, opportunity and candidate context, hub suppression, evidence completeness, and read-only query behavior."
+  },
+  "graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "pipeline": "query",
+  "provider_posture": "offline",
+  "runtime_boundary": "POST_RUNTIME_VERIFICATION",
+  "schema_version": "3.0.0",
+  "suite_id": "graph-retrieval-e1",
+  "thresholds": {
+    "maximum_graph_mutation_count": 0,
+    "maximum_provider_call_count": 0,
+    "maximum_unqualified_retrieval_case_count": 0,
+    "minimum_case_pass_rate": 1
+  }
+}

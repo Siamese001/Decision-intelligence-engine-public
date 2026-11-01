@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:l2-execution-decision:2.0.0",
+  "title": "NEE evidence-bound assurance execution decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "decision_id", "run_id", "trace_id", "validated_request_digest", "destination_decision_digest", "query_plan_digest", "route_decision_digest", "coverage_manifest_digest", "evidence_report_digest", "evidence_packet_hash", "policy_config_digest", "required", "reason_code", "destination", "query_type", "route", "materiality", "assurance_profile", "delivery_profile", "artifact_type", "selected_model_profile", "selected_model", "coverage_status", "uncovered_requirement_ids", "approved_evidence_count", "candidate_evidence_count", "external_public_evidence_count", "conflict_count", "gap_count", "graph_path_count", "estimated_request_chars", "request_budget_status", "provider_egress_allowed", "maximum_primary_calls", "maximum_repair_calls", "maximum_challenger_calls", "maximum_judge_calls", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:l2-execution-decision:2.0.0"},
+    "schema_version": {"const": "2.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "decision_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "validated_request_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "destination_decision_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "query_plan_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "route_decision_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "coverage_manifest_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "evidence_report_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "evidence_packet_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "policy_config_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "required": {"type": "boolean"},
+    "reason_code": {"type": "string", "enum": ["GRAPH_EVIDENCE_UTILITY", "NEE_REASONING_REQUIRED", "RETRIEVAL_COVERAGE_INSUFFICIENT", "PROVIDER_EGRESS_NOT_AUTHORIZED", "OFFLINE_EXTERNAL_PROVIDER_FORBIDDEN"]},
+    "destination": {"type": "string", "enum": ["GRAPH_EVIDENCE_UTILITY", "NEE_DECISION_INTELLIGENCE"]},
+    "query_type": {"type": "string", "enum": ["exact_lookup", "current_state_corroboration", "project_status_current", "project_status_history", "relationship_explanation", "cross_workstream_synthesis", "gap_risk_inconsistency", "opportunity_nba", "candidate_promotion_review"]},
+    "route": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/queryRoute"},
+    "materiality": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"},
+    "assurance_profile": {"type": ["string", "null"], "enum": ["standard", "enhanced", null]},
+    "delivery_profile": {"type": "string", "enum": ["internal_technical", "internal_executive", "client_technical", "client_executive", "commercial"]},
+    "artifact_type": {"type": "string", "enum": ["answer", "decision_brief", "architecture_deck", "commercial_case", "evidence_export"]},
+    "selected_model_profile": {"type": ["string", "null"], "enum": ["standard", "enhanced", null]},
+    "selected_model": {"type": ["string", "null"]},
+    "coverage_status": {"type": "string", "enum": ["COMPLETE", "INCOMPLETE", "NOT_APPLICABLE"]},
+    "uncovered_requirement_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+    "approved_evidence_count": {"type": "integer", "minimum": 0},
+    "candidate_evidence_count": {"type": "integer", "minimum": 0},
+    "external_public_evidence_count": {"type": "integer", "minimum": 0},
+    "conflict_count": {"type": "integer", "minimum": 0},
+    "gap_count": {"type": "integer", "minimum": 0},
+    "graph_path_count": {"type": "integer", "minimum": 0},
+    "estimated_request_chars": {"type": "integer", "minimum": 0},
+    "request_budget_status": {"type": "string", "enum": ["PASS", "BLOCK", "NOT_APPLICABLE"]},
+    "provider_egress_allowed": {"type": "boolean"},
+    "maximum_primary_calls": {"type": "integer", "minimum": 0, "maximum": 1},
+    "maximum_repair_calls": {"type": "integer", "minimum": 0, "maximum": 1},
+    "maximum_challenger_calls": {"type": "integer", "minimum": 0, "maximum": 1},
+    "maximum_judge_calls": {"type": "integer", "minimum": 0, "maximum": 2},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "destination": {"const": "GRAPH_EVIDENCE_UTILITY"},
+        "required": {"const": false},
+        "reason_code": {"const": "GRAPH_EVIDENCE_UTILITY"},
+        "assurance_profile": {"const": null},
+        "selected_model_profile": {"const": null},
+        "selected_model": {"const": null},
+        "coverage_status": {"enum": ["COMPLETE", "INCOMPLETE"]},
+        "provider_egress_allowed": {"const": false},
+        "maximum_primary_calls": {"const": 0},
+        "maximum_repair_calls": {"const": 0},
+        "maximum_challenger_calls": {"const": 0},
+        "maximum_judge_calls": {"const": 0}
+      }
+    },
+    {
+      "properties": {
+        "destination": {"const": "NEE_DECISION_INTELLIGENCE"},
+        "required": {"const": true},
+        "reason_code": {"enum": ["NEE_REASONING_REQUIRED", "PROVIDER_EGRESS_NOT_AUTHORIZED", "OFFLINE_EXTERNAL_PROVIDER_FORBIDDEN"]},
+        "assurance_profile": {"const": "standard"},
+        "selected_model_profile": {"const": "standard"},
+        "selected_model": {"type": "string", "minLength": 1},
+        "coverage_status": {"const": "COMPLETE"},
+        "uncovered_requirement_ids": {"maxItems": 0},
+        "maximum_primary_calls": {"const": 1},
+        "maximum_repair_calls": {"const": 0},
+        "maximum_challenger_calls": {"const": 0},
+        "maximum_judge_calls": {"const": 1}
+      }
+    },
+    {
+      "properties": {
+        "destination": {"const": "NEE_DECISION_INTELLIGENCE"},
+        "required": {"const": true},
+        "reason_code": {"enum": ["NEE_REASONING_REQUIRED", "PROVIDER_EGRESS_NOT_AUTHORIZED", "OFFLINE_EXTERNAL_PROVIDER_FORBIDDEN"]},
+        "assurance_profile": {"const": "enhanced"},
+        "selected_model_profile": {"const": "enhanced"},
+        "selected_model": {"type": "string", "minLength": 1},
+        "coverage_status": {"const": "COMPLETE"},
+        "uncovered_requirement_ids": {"maxItems": 0},
+        "maximum_primary_calls": {"const": 1},
+        "maximum_repair_calls": {"const": 1},
+        "maximum_challenger_calls": {"const": 1},
+        "maximum_judge_calls": {"const": 2}
+      }
+    },
+    {
+      "properties": {
+        "destination": {"const": "NEE_DECISION_INTELLIGENCE"},
+        "required": {"const": false},
+        "reason_code": {"const": "RETRIEVAL_COVERAGE_INSUFFICIENT"},
+        "coverage_status": {"const": "INCOMPLETE"},
+        "uncovered_requirement_ids": {"minItems": 1},
+        "selected_model_profile": {"const": null},
+        "selected_model": {"const": null},
+        "provider_egress_allowed": {"const": false},
+        "maximum_primary_calls": {"const": 0},
+        "maximum_repair_calls": {"const": 0},
+        "maximum_challenger_calls": {"const": 0},
+        "maximum_judge_calls": {"const": 0}
+      }
+    }
+  ]
+}

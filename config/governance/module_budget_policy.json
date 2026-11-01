@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "candidate-module-budget-policy:1.0.0",
+  "status": "ACTIVE_GOVERNED",
+  "proposal_metadata": {
+    "planning_date": "2026-10-07",
+    "review_baseline_sha": "8fd6d730d398b9d7145a597df09c880094ea45fd",
+    "target_branch": "docs/module-budget-review-50-prs",
+    "description": "Governed module size policy reducing artificial fragmentation and cosmetic line packing while preserving architectural quality and complexity limits."
+  },
+  "boundaries": {
+    "clean_ceiling": 400,
+    "warning_ceiling_standard": 650,
+    "warning_ceiling_declarative": 800,
+    "exception_ceiling_cohesive": 900,
+    "exception_ceiling_table": 1200,
+    "exception_ceiling_registry": 3000
+  },
+  "boundary_rules": {
+    "up_to_400": {
+      "condition": "lines <= 400",
+      "verdict": "PASS",
+      "warning": false,
+      "blocking": false,
+      "description": "No size warning; all independent architectural checks (complexity, layer dependencies, cycles, credential, storage) still apply."
+    },
+    "401_to_650_ordinary": {
+      "condition": "400 < lines <= 650",
+      "verdict": "WARNING",
+      "warning": true,
+      "blocking": false,
+      "max_cognitive_complexity": 15,
+      "description": "Nonblocking size warning when cognitive complexity (<= 15) and dependency checks pass. Review cohesion within normal PR; zero forced splitting or operator interruption."
+    },
+    "651_to_800_declarative": {
+      "condition": "650 < lines <= 800",
+      "verdict": "WARNING",
+      "warning": true,
+      "blocking": false,
+      "declarative_validation_required": true,
+      "description": "Nonblocking size warning only for explicit declarative tables or models validated against AST executable structure. Naming a file models or placing under dual_pipeline cannot qualify it. Ordinary implementation in this range blocks."
+    },
+    "above_warning_range": {
+      "condition": "lines > 650 (ordinary) or lines > 800 (declarative)",
+      "verdict": "BLOCK",
+      "warning": false,
+      "blocking": true,
+      "exception_required": true,
+      "description": "Requires a scoped, documented size exception through the existing governed review mechanism (file_budget_exclusions.json) with active attestations and expiration date, or a concern-based refactor. No unreviewed blanket higher limit."
+    },
+    "legacy_baselines": {
+      "registered_entries": 112,
+      "growth_permitted": false,
+      "formatting_only_changes_permitted": true,
+      "description": "Preserve baseline inventory and approved exceptions. Unchanged or documentation/formatting-only executable structure does not trigger a forced size repair. Functional growth beyond registered allowance requires an explicit exception or scoped refactor; no silent baseline increase."
+    },
+    "structural_violation_invariance": {
+      "condition": "Any size with structural/complexity/layer violation",
+      "verdict": "BLOCK",
+      "warning": false,
+      "blocking": true,
+      "waivable_by_size_exception": false,
+      "description": "Preserve applicable blocking complexity, import-direction (L0-L6), cycle, credential, and storage checks. A size exception cannot waive these independent checks."
+    },
+    "parsing_and_policy_evidence_error": {
+      "condition": "Missing, malformed, expired, or mismatched policy evidence or unparseable source",
+      "verdict": "ERROR",
+      "fail_closed": true,
+      "blocking": true,
+      "description": "Report a policy/configuration error; never silently exempt the file or report a successful evaluation."
+    }
+  },
+  "audit_severity_map": {
+    "CLEAN": {
+      "range": "0-400 lines",
+      "severity": "NONE",
+      "scheduled_audit_action": "IGNORE"
+    },
+    "ADVISORY": {
+      "range": "401-650 lines (complexity <= 15)",
+      "severity": "LOW",
+      "scheduled_audit_action": "LOG_METRIC_ONLY"
+    },
+    "REVIEW_REQUIRED": {
+      "range": "651-800 lines (declarative validated)",
+      "severity": "MEDIUM",
+      "scheduled_audit_action": "LOG_METRIC_ONLY"
+    },
+    "DEFECT": {
+      "range": ">650 (ordinary) or >800 without approved exception",
+      "severity": "HIGH",
+      "scheduled_audit_action": "FLAG_DEBT_ITEM"
+    },
+    "BLOCK": {
+      "range": "Structural or complexity violation at any line count",
+      "severity": "CRITICAL",
+      "scheduled_audit_action": "FAIL_GATE_IMMEDIATE"
+    }
+  },
+  "legacy_scope_resolution": {
+    "production_packages": [
+      "pipeline_a_intake",
+      "pipeline_b_extraction",
+      "pipeline_c_retrieval",
+      "dual_pipeline",
+      "unified_pipeline",
+      "storage"
+    ],
+    "tools_and_scripts": [
+      "tools",
+      "scripts"
+    ],
+    "tests_and_evals": [
+      "tests",
+      "evals"
+    ],
+    "generated_schemas": [
+      "contracts"
+    ],
+    "package_initializers": {
+      "max_lines": 50,
+      "allow_pure_reexports": true
+    },
+    "rules": {
+      "tests_and_evals_exempt_from_production_budget": true,
+      "contracts_exempt_from_production_budget": true,
+      "tools_and_scripts_governed_under_governed_refactor_or_offline_diagnostic": true,
+      "exact_path_matches_required": true
+    }
+  },
+  "complexity_reconciliation": {
+    "standard_cognitive_complexity_ceiling": 15,
+    "domain_cyclomatic_complexity_floor": 10,
+    "reconciliation_rationale": "Reconcile stale rule complexity value of 10 with registry 15 without silently weakening stricter domain control."
+  }
+}

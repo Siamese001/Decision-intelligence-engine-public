@@ -1,0 +1,24 @@
+{
+  "name": "feat_hitl_margin_autonomous_bypass",
+  "description": "CI test discovery manifest for governed autonomous HITL margin bypass waves",
+  "branch": "feat/hitl-margin-autonomous-bypass-20261006",
+  "deterministic_tests": [],
+  "e2e_tests": [
+    "tests.end_to_end.test_hitl_resolution_w1_e2e",
+    "tests.adversarial.test_hitl_resolution_w1_adversarial",
+    "tests.end_to_end.test_hitl_resolution_w2_e2e",
+    "tests.adversarial.test_hitl_resolution_w2_adversarial",
+    "tests.end_to_end.test_hitl_resolution_w3_e2e",
+    "tests.adversarial.test_hitl_resolution_w3_adversarial",
+    "tests.end_to_end.test_hitl_resolution_w4_e2e",
+    "tests.adversarial.test_hitl_resolution_w4_adversarial",
+    "tests.end_to_end.test_hitl_resolution_w5_e2e",
+    "tests.adversarial.test_hitl_resolution_w5_adversarial",
+    "tests.end_to_end.test_hitl_resolution_w6_e2e",
+    "tests.adversarial.test_hitl_resolution_w6_adversarial",
+    "tests.end_to_end.test_hitl_resolution_w7_e2e",
+    "tests.adversarial.test_hitl_resolution_w7_adversarial"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-06T00:00:00Z"
+}

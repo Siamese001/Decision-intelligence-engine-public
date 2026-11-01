@@ -1,0 +1,169 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:active-ingestion-status-mapping:1.0.0",
+  "version": "1.0.0",
+  "description": "Canonical state mapping and lifecycle taxonomy for active graph ingestion workflows.",
+  "statuses": {
+    "RECEIVED": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": null,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Source package received and intake directive opened; preliminary validation underway.",
+      "legacy_status_equivalent": "INITIALIZED"
+    },
+    "PREPARING": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": null,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Extraction and candidate synthesis running in isolated staging sandbox.",
+      "legacy_status_equivalent": "IN_PROGRESS"
+    },
+    "READY_TO_AUTHORIZE": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": null,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Extraction QA passed; proposed graph delta sealed and ready for authorization evaluation.",
+      "legacy_status_equivalent": "PACKAGE_SEALED"
+    },
+    "AWAITING_APPROVAL": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": 2,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": true,
+      "description": "No valid standing authority found; active approval request dispatched and awaiting human operator response.",
+      "legacy_status_equivalent": "WAITING_FOR_APPROVAL"
+    },
+    "AUTHORIZED": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": null,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Authentic operator approval received or verified standing authority validated; proceeding to publication.",
+      "legacy_status_equivalent": "APPROVED"
+    },
+    "DECLINED": {
+      "is_terminal": true,
+      "is_success": false,
+      "cli_exit_code": 0,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Operator explicitly declined candidate publication; workflow halted without graph mutation.",
+      "legacy_status_equivalent": "REJECTED"
+    },
+    "PUBLISHING": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": null,
+      "graph_mutation_permitted": true,
+      "requires_human_decision": false,
+      "description": "Writing approved candidate assertions and source nodes to staging knowledge graph.",
+      "legacy_status_equivalent": "WRITING"
+    },
+    "RELEASE_PREPARED": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": null,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Candidate release package staged; preparing for gate evaluation and activation.",
+      "legacy_status_equivalent": "RELEASE_STAGED"
+    },
+    "EVALUATING": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": null,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Running retrieval release qualification gates (E1-E3) and GraphDB integrity audits.",
+      "legacy_status_equivalent": "EVAL_IN_PROGRESS"
+    },
+    "ACTION_AUTH_PENDING": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": 2,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Release gates passed; awaiting automated service action authorization (credentials/tokens).",
+      "legacy_status_equivalent": "PREPARED_ACTION_AUTH_REQUIRED"
+    },
+    "ACTIVATING": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": null,
+      "graph_mutation_permitted": true,
+      "requires_human_decision": false,
+      "description": "Activating release generation via Universal Write Gateway and updating active pair pointer.",
+      "legacy_status_equivalent": "ACTIVATING"
+    },
+    "VERIFYING": {
+      "is_terminal": false,
+      "is_success": false,
+      "cli_exit_code": null,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Performing post-activation source coverage readback and table delta verification.",
+      "legacy_status_equivalent": "READBACK_AUDIT"
+    },
+    "COMPLETE_UPDATED": {
+      "is_terminal": true,
+      "is_success": true,
+      "cli_exit_code": 0,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Active ingestion completed successfully: source deltas published, generation advanced, and coverage verified.",
+      "legacy_status_equivalent": "COMPLETE"
+    },
+    "COMPLETE_ALREADY_PRESENT": {
+      "is_terminal": true,
+      "is_success": true,
+      "cli_exit_code": 0,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Source package already present in active graph with verified readback; zero net mutation.",
+      "legacy_status_equivalent": "ALREADY_PRESENT_VERIFIED"
+    },
+    "BLOCKED": {
+      "is_terminal": true,
+      "is_success": false,
+      "cli_exit_code": 1,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": true,
+      "description": "Ingestion halted by invariant violation, extraction QA failure, or missing prerequisites.",
+      "legacy_status_equivalent": "BLOCKED"
+    },
+    "FAILED": {
+      "is_terminal": true,
+      "is_success": false,
+      "cli_exit_code": 1,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Unrecoverable runtime error encountered during ingestion or activation.",
+      "legacy_status_equivalent": "FAILED"
+    },
+    "CANCELLED": {
+      "is_terminal": true,
+      "is_success": false,
+      "cli_exit_code": 0,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": false,
+      "description": "Ingestion run explicitly aborted by operator before publication.",
+      "legacy_status_equivalent": "ABORTED"
+    },
+    "RECONCILIATION_REQUIRED": {
+      "is_terminal": true,
+      "is_success": false,
+      "cli_exit_code": 2,
+      "graph_mutation_permitted": false,
+      "requires_human_decision": true,
+      "description": "Generation drift, ambiguous identity merge, or concurrent lock conflict requires explicit reconciliation.",
+      "legacy_status_equivalent": "HOLD_FOR_REMEDIATION"
+    }
+  }
+}

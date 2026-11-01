@@ -1,0 +1,29 @@
+{
+  "artifact_id": "eval-comparison-fixture",
+  "baseline_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+  "baseline_evaluation_id": "eval-baseline-fixture",
+  "candidate_digest": "6666666666666666666666666666666666666666666666666666666666666666",
+  "candidate_evaluation_id": "eval-candidate-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "3e288ee2bed6a1faabc70703e8e5a0486ae43133c56615606957ef32665abc85"
+  },
+  "compared_at": "2026-07-27T12:00:00Z",
+  "comparison_id": "eval-comparison-fixture",
+  "contract_id": "urn:nee:dual-pipeline:eval-comparison:1.0.0",
+  "extensions": {},
+  "graph_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+  "metric_deltas": [
+    {
+      "baseline": 1,
+      "candidate": 1,
+      "delta": 0,
+      "metric": "case_pass_rate",
+      "regression": false
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "suite_id": "eval-suite-fixture"
+}

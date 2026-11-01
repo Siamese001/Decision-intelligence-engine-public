@@ -1,0 +1,53 @@
+{
+  "artifact_id": "aiar-20261006-req01",
+  "authentic_response": null,
+  "baseline_generation": 12,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "353059210eed6be7916f61ca264c8fb89766734235d939a59fbd056722ee3edb"
+  },
+  "contract_id": "urn:nee:dual-pipeline:active-ingestion-approval-request:1.0.0",
+  "directive_id": "dir-20261006-001",
+  "dispatch_status": "DISPATCHED",
+  "expires_at": "2026-10-07T12:00:00Z",
+  "extensions": {},
+  "namespace": "production",
+  "permitted_operation_class": "unauthorized_arbitrary_write",
+  "project": "project_alpha",
+  "proposed_delta_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "question_payload": {
+    "context": "Ingesting meeting transcript: 3 new assertions and 1 source node proposed.",
+    "options": [
+      {
+        "action": "Proceed with release preparation and activation",
+        "confidence_score": 0.95,
+        "confidence_tier": "HIGH",
+        "is_recommended": true,
+        "label": "Approve candidate publication into knowledge graph",
+        "option_id": "opt_approve"
+      },
+      {
+        "action": "Halt ingestion workflow and record decline",
+        "confidence_score": 0.05,
+        "confidence_tier": "LOW",
+        "is_recommended": false,
+        "label": "Decline candidate publication",
+        "option_id": "opt_decline"
+      }
+    ],
+    "question_id": "q-20261006-001",
+    "table_deltas": {
+      "assertion": 3,
+      "node": 1,
+      "source": 1
+    },
+    "title": "Ingestion Candidate Publication Approval"
+  },
+  "request_id": "req-20261006-001",
+  "response_status": "AWAITING",
+  "run_id": "run-20261006-001",
+  "runtime_root": "/tmp/test_runtime_root",
+  "schema_version": "1.0.0",
+  "source_package_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+}

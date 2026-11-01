@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-810528a64502d898584feeb9551f",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "8200c205fe6daf1709e7ab0c2554b63357e296c4a676827fd4209acdd345edd0"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-14eac867ffecad30e33793a1"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Persistent Database is an identified technical_anchor in 20260930 Pipeline Review.",
+      "proposed_value": "Persistent Database is an identified technical_anchor in Document 20261001 Commercial Scope Boundary Sow 1 Vs Sow 2.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-c4564f58f4b214de633a1e94ba3c"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-0ad2ac69a009e9ee83417a323357",
+      "assertion_id_older": "assertion-c4564f58f4b214de633a1e94ba3c",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-03cd78c50a0e662a045afe3be69b",
+      "timestamp_newer": "2026-10-01",
+      "timestamp_older": "2026-09-30"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Persistent Database' (HAS_CLAIM_TEXT). Older claim from 2026-09-30 superseded by newer claim from 2026-10-01.",
+  "proposal_id": "calibration-proposal-810528a64502d898584feeb9551f",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-c4564f58f4b214de633a1e94ba3c from Persistent Database is an identified technical_anchor in 20260930 Pipeline Review. to Persistent Database is an identified technical_anchor in Document 20261001 Commercial Scope Boundary Sow 1 Vs Sow 2.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

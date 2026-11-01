@@ -1,0 +1,22 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:route-decision:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-unknown-field",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "045e2361691deb10d548519afcfb11a2c90fd0ed40d5e4911e9bf4ddbb22668f"},
+  "decision_id": "decision-invalid-unknown-field",
+  "run_id": "run-invalid-unknown-field",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "use_case": "intake",
+  "subject_id": "candidate-invalid-unknown-field",
+  "intake_route": "QUARANTINE",
+  "query_route": null,
+  "allowed_lanes": [],
+  "materiality": "low",
+  "rule_id": "quarantine-unknown",
+  "rule_version": "1.0.0",
+  "reason_codes": ["invalid-field"],
+  "model_recommendation": null,
+  "decided_at": "2026-07-21T15:00:00Z",
+  "unexpected_field": "must fail closed",
+  "extensions": {}
+}

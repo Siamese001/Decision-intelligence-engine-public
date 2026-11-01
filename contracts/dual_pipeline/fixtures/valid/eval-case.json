@@ -1,0 +1,32 @@
+{
+  "artifact_id": "eval-case-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "c3b494f09aac74de325f5f5a7714b9978edbcd7a7e5ef1dbe6bd4db815aaad97"
+  },
+  "case": {
+    "audiences": ["nee-engineering"],
+    "case_id": "eval-query-fixture",
+    "classification": "internal",
+    "expected": {
+      "answer_present": true,
+      "forbidden_record_ids": [],
+      "graph_mutation_count": 0,
+      "provider_call_count": 0,
+      "required_record_ids": [],
+      "required_stages": ["U0"],
+      "status": "COMPLETED",
+      "x3_outcome": "X3D_ALLOW_FINISH"
+    },
+    "pipeline": "query",
+    "provider_posture": "none",
+    "query_type": "exact_lookup",
+    "question": "Which governed records are available?",
+    "tags": ["fixture"]
+  },
+  "contract_id": "urn:nee:dual-pipeline:eval-case:1.0.0",
+  "extensions": {},
+  "schema_version": "1.0.0",
+  "suite_id": "eval-suite-fixture"
+}

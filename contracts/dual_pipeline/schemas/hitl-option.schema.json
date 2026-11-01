@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:hitl-option:1.2.0",
+  "title": "HITLOptionContractV1_2",
+  "description": "Canonical schema enforcing mandatory calibrated confidence, layman clarity, and operational impact statements for interactive HITL options.",
+  "type": "object",
+  "required": [
+    "label",
+    "display_text",
+    "plain_english_summary",
+    "impact_statement",
+    "confidence_score",
+    "confidence_pct",
+    "confidence_level",
+    "tier",
+    "credible_interval",
+    "evidence_refs",
+    "recommended"
+  ],
+  "properties": {
+    "display_text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The exact fully-formatted user-facing text displayed in the interactive question interface."
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable label for the option presented to the operator."
+    },
+    "plain_english_summary": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Plain English, jargon-free summary of the option."
+    },
+    "impact_statement": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Operational reality impact statement detailing benefits, risks, and mutations."
+    },
+    "confidence_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Calibrated float confidence score in [0.0, 1.0]."
+    },
+    "confidence_pct": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 100.0,
+      "description": "Confidence percentage in [0.0, 100.0]."
+    },
+    "confidence_level": {
+      "type": "string",
+      "enum": ["HIGH", "MEDIUM", "LOW"],
+      "description": "Categorical tier (HIGH >= 85%, MEDIUM 50-84%, LOW < 50%)."
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["HIGH", "MEDIUM", "LOW"],
+      "description": "Alias for confidence_level."
+    },
+    "credible_interval": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0.0,
+        "maximum": 1.0
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "95% Bayesian credible interval [lower_bound, upper_bound] in [0.0, 1.0]."
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Grounding citations or provenance keys backing this option."
+    },
+    "recommended": {
+      "type": "boolean",
+      "description": "Whether this option is marked as recommended."
+    },
+    "prior_adjustment": {
+      "type": "number",
+      "description": "Bayesian calibration delta applied from historical ledger feedback."
+    },
+    "sample_size": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Sample count n supporting the Bayesian prior."
+    }
+  },
+  "additionalProperties": true
+}

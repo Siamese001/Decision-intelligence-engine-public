@@ -1,0 +1,36 @@
+{
+  "aggregate": {
+    "case_count": 1,
+    "failed_case_count": 0,
+    "invalid_case_count": 0,
+    "passed_case_count": 1,
+    "recovery_rate": 0.0
+  },
+  "artifact_id": "query-l1-controller-eval-result-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "c2221c2a9467c95d65d6f468d52e3908207a9e2d410cc4b5fc9c9b3a68028235"
+  },
+  "case_results": [
+    {
+      "attempt_chain_digest": "a35834e581cb53a254daf06b58f8fe6b82492ae993a8acad74fbf953350ab108",
+      "case_id": "case-1",
+      "final_terminal_class": "COMPLETED",
+      "initial_terminal_class": "COMPLETED",
+      "status": "PASS"
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:query-l1-controller-eval-result:1.0.0",
+  "extensions": {},
+  "graph_mutation_count": 0,
+  "graph_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "policy_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "provider_call_count": 0,
+  "result_id": "query-l1-controller-eval-result-fixture",
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "suite_digest": "5fcc7cd5e589c8843140729605dbb1e28aa2f1cf024431483d8d098bb4da2357",
+  "suite_id": "query-l1-controller-eval-suite-fixture",
+  "treatment_mode": "off"
+}

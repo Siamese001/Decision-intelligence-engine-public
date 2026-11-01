@@ -1,0 +1,59 @@
+{
+  "artifact_id": "strategic-packet-sherpa-example",
+  "automatic_graph_mutation_count": 0,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "6fe5f54537d95ab2f995abafd0e0bdcca6275d7d68455c61713f3a87257d1068"
+  },
+  "channel_counts": {
+    "counterevidence": 0,
+    "current_state": 0,
+    "diagnostics": 0,
+    "external_patterns": 0,
+    "gaps": 0,
+    "internal_context": 0,
+    "objectives": 1,
+    "options": 0,
+    "outcomes": 0,
+    "principles": 0
+  },
+  "channels": {
+    "counterevidence": [],
+    "current_state": [],
+    "diagnostics": [],
+    "external_patterns": [],
+    "gaps": [],
+    "internal_context": [],
+    "objectives": [
+      {
+        "answer_use": "strategic_context",
+        "applicability_scope": "nee_specific",
+        "authority_scope": "official_project_intent",
+        "evidence_ids": [
+          "evidence-sherpa-target-outcome"
+        ],
+        "knowledge_role": "target_outcome",
+        "lane": "approved",
+        "modality": "intended",
+        "realization_state": "intended",
+        "record_id": "record-sherpa-target-outcome"
+      }
+    ],
+    "options": [],
+    "outcomes": [],
+    "principles": []
+  },
+  "contract_id": "urn:nee:dual-pipeline:strategic-evidence-packet:1.0.0",
+  "extensions": {},
+  "graph_snapshot": "graph-snapshot-sherpa-example",
+  "packet_id": "strategic-packet-sherpa-example",
+  "portfolio_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "query_run_id": "query-run-sherpa-example",
+  "query_type": "opportunity_nba",
+  "role_counts": {
+    "target_outcome": 1
+  },
+  "schema_version": "1.0.0",
+  "source_packet_digest": "1111111111111111111111111111111111111111111111111111111111111111"
+}

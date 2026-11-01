@@ -1,0 +1,30 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:assertion-disposition:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "disposition-sherpa-owner-conflict",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "6ccd6ea9cb059262babc0b8f86c3bce96c536e5e087794a958fae08a4d57b2e7"
+  },
+  "disposition_id": "disposition-sherpa-owner-conflict",
+  "run_id": "run-intake-nea-update-2026-07-21",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "candidate_id": "candidate-sherpa-monitoring-owner-gap",
+  "assertion_type": "contradiction",
+  "disposition": "QUARANTINE",
+  "x3_outcome": "X3Q_QUARANTINE",
+  "persistent_lane": "none",
+  "identity_resolved": true,
+  "evidence_ids": ["evidence-speaker-matt-k-item-2"],
+  "source_authority_sufficient": false,
+  "currentness_valid": true,
+  "classification_valid": true,
+  "audience_valid": true,
+  "material_contradiction_resolved": false,
+  "hitl_required": true,
+  "hitl_complete": false,
+  "reason_codes": ["material-owner-conflict", "derivative-evidence-only"],
+  "decided_at": "2026-07-21T15:00:03Z",
+  "extensions": {}
+}

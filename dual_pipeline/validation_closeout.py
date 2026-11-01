@@ -1,0 +1,118 @@
+"""Close one validation item through an approval-bound graph/index release.
+
+Backward-compatible facade module delegating to dual_pipeline.validation_closeout_core.
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any
+
+from storage.database import sqlite3
+
+from ._validators import sql_placeholders
+from .core import (
+    ZERO_HASH,
+    assert_safe_mutable_path,
+    digest,
+    exact_file_copy,
+    sha256_file,
+    sqlite_integrity,
+    stable_id,
+    utc_now,
+    write_json,
+    write_json_exclusive,
+)
+from .index import EmbeddingBackend, build_sidecar
+from .release import ReleaseManager, _seal_receipt
+from .validation_closeout_core import (
+    _ASSERTION_FIELDS,
+    _CLOSEOUT_DISPOSITIONS,
+    _DISPOSITION_CONFIRM_CANONICAL_NAME,
+    _DISPOSITION_CONFIRM_MAPPING,
+    _DISPOSITION_REMOVE_FROM_GRAPH,
+    _DISPOSITION_RETAIN_EVIDENCE_ONLY,
+    _QUEUE_FIELDS,
+    CLOSEOUT_POLICY_VERSION,
+    _apply_irrelevant_graph_removal,
+    _assert_plan_digest,
+    _assert_removal_dependencies_clear,
+    _assertion_state,
+    _canonical_name_confirmation_authority,
+    _canonical_name_confirmation_targets,
+    _closeout_qualifiers,
+    _confirmation_assertion_state,
+    _confirmation_edge_state,
+    _confirmation_qualifiers,
+    _confirmed_edge_description,
+    _delete_by_ids,
+    _delete_canonical_routes,
+    _ids,
+    _mapping_confirmation_authority,
+    _mapping_confirmation_targets,
+    _normalized_alias,
+    _placeholders,
+    _queue_state,
+    _removal_targets,
+    _row_hash,
+    _row_state,
+    apply_validation_closeout_plan,
+    build_validation_closeout_plan,
+    prepare_validation_closeout_release,
+)
+
+__all__ = (
+    "Any",
+    "CLOSEOUT_POLICY_VERSION",
+    "EmbeddingBackend",
+    "Path",
+    "ReleaseManager",
+    "ZERO_HASH",
+    "_ASSERTION_FIELDS",
+    "_CLOSEOUT_DISPOSITIONS",
+    "_DISPOSITION_CONFIRM_CANONICAL_NAME",
+    "_DISPOSITION_CONFIRM_MAPPING",
+    "_DISPOSITION_REMOVE_FROM_GRAPH",
+    "_DISPOSITION_RETAIN_EVIDENCE_ONLY",
+    "_QUEUE_FIELDS",
+    "_apply_irrelevant_graph_removal",
+    "_assert_plan_digest",
+    "_assert_removal_dependencies_clear",
+    "_assertion_state",
+    "_canonical_name_confirmation_authority",
+    "_canonical_name_confirmation_targets",
+    "_closeout_qualifiers",
+    "_confirmation_assertion_state",
+    "_confirmation_edge_state",
+    "_confirmation_qualifiers",
+    "_confirmed_edge_description",
+    "_delete_by_ids",
+    "_delete_canonical_routes",
+    "_ids",
+    "_mapping_confirmation_authority",
+    "_mapping_confirmation_targets",
+    "_normalized_alias",
+    "_placeholders",
+    "_queue_state",
+    "_removal_targets",
+    "_row_hash",
+    "_row_state",
+    "_seal_receipt",
+    "annotations",
+    "apply_validation_closeout_plan",
+    "assert_safe_mutable_path",
+    "build_sidecar",
+    "build_validation_closeout_plan",
+    "digest",
+    "exact_file_copy",
+    "json",
+    "prepare_validation_closeout_release",
+    "sha256_file",
+    "sql_placeholders",
+    "sqlite3",
+    "sqlite_integrity",
+    "stable_id",
+    "utc_now",
+    "write_json",
+    "write_json_exclusive",
+)

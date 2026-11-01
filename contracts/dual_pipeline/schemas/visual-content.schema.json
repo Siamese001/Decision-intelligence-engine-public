@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:visual-content:1.0.0",
+  "title": "NEE Visual Content Contract",
+  "description": "Governed contract for structured visual, diagram, and presentation slide extractions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "attachment_id",
+    "filename",
+    "attachment_type",
+    "sha256",
+    "extraction_status",
+    "is_failed",
+    "extracted_text",
+    "extracted_at"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:visual-content:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "attachment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "filename": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attachment_type": {
+      "type": "string",
+      "enum": ["image", "diagram", "presentation", "document", "spreadsheet", "unknown"]
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "extraction_status": {
+      "type": "string",
+      "enum": ["SUCCESS", "FAILED", "EMPTY", "PARTIAL"]
+    },
+    "is_failed": {
+      "type": "boolean"
+    },
+    "error_reason": {
+      "type": ["string", "null"]
+    },
+    "error_type": {
+      "type": ["string", "null"]
+    },
+    "title": {
+      "type": ["string", "null"]
+    },
+    "extracted_text": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "tables": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "milestones": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "key_topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_demo_or_sample": {
+      "type": "boolean"
+    },
+    "page_number": {
+      "type": ["integer", "null"]
+    },
+    "region_locator": {
+      "type": ["object", "null"]
+    },
+    "has_diagrams": {
+      "type": "boolean"
+    },
+    "extracted_at": {
+      "type": "string"
+    }
+  }
+}

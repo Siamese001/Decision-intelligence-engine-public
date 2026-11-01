@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0",
+  "title": "NEE sealed caller-visible retrieval evidence report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "report_id", "run_id", "validated_request_digest", "query_plan_digest", "coverage_manifest_digest", "graph_snapshot", "graph_sha256", "authorization_scope_digest", "evidence_packet_digest", "selected_record_ids_by_lane", "l2_input_record_ids_by_lane", "requirement_outcomes", "view_authorized", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "report_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "validated_request_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "query_plan_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "coverage_manifest_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "graph_snapshot": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "authorization_scope_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "evidence_packet_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "selected_record_ids_by_lane": {"$ref": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0#/$defs/recordsByLane"},
+    "l2_input_record_ids_by_lane": {"$ref": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0#/$defs/recordsByLane"},
+    "required_material_record_ids_by_lane": {"$ref": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0#/$defs/recordsByLane"},
+    "requirement_outcomes": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0#/$defs/outcome"}},
+    "view_authorized": {"type": "boolean"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "recordIds": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+    "recordsByLane": {
+      "type": "object", "additionalProperties": false, "required": ["approved", "candidate", "external_public"],
+      "properties": {"approved": {"$ref": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0#/$defs/recordIds"}, "candidate": {"$ref": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0#/$defs/recordIds"}, "external_public": {"$ref": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0#/$defs/recordIds"}}
+    },
+    "outcome": {
+      "type": "object", "additionalProperties": false, "required": ["requirement_id", "outcome", "record_ids", "reason_code", "support_directions"],
+      "properties": {
+        "requirement_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "outcome": {"type": "string", "enum": ["covered", "explicit_gap", "excluded", "unauthorized", "conflict"]},
+        "record_ids": {"$ref": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0#/$defs/recordIds"},
+        "reason_code": {"type": ["string", "null"], "maxLength": 128},
+        "support_directions": {"type": "array", "uniqueItems": true, "items": {"type": "string", "enum": ["direct", "forward", "inverse_safe", "reverse_only", "not_applicable"]}}
+      }
+    }
+  }
+}

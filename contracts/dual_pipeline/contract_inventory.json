@@ -1,0 +1,750 @@
+{
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "52d51a2b5aa306842235009ffbfd4b73a1052b0ef1e01212f4214d4307484a43"
+  },
+  "compatibility_policy": "closed_world_explicit_extensions_only",
+  "initiative_id": "NEE-KG-DUAL-PIPELINE-01",
+  "inventory_version": "1.0.0",
+  "schemas": [
+    {
+      "path": "contracts/dual_pipeline/schemas/a2a-fact-vector-packet-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:a2a-fact-vector-packet-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "22c3186b89a9d508ce21bf4af9036cb59cd2a0158ee47b2caffa22e9703461d2"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/a2a-finalization-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:a2a-finalization-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "437a2ae36ba9dae8f0b090507cc7d2f4e0bed3e3a575229c84b45edd53368e63"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/active-ingestion-approval-request.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:active-ingestion-approval-request:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "3b18d6a90901fe921a3f7259c2deb54d18e84a19e27391dd2ba233775240346e"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/active-ingestion-completion-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:active-ingestion-completion-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "6f1f5d4b7681d842258bd25e6db9a5618d495075f3b16c19ce614251b0d11970"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/active-ingestion-run.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:active-ingestion-run:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "b36897a2f33f2dd8077ddd0bc02866d3940edc2a9436487e481e5f51823d18a1"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/adversarial-judge-evaluation.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:adversarial-judge-evaluation:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "c951a13bca36a04ed3eb7665b71599d9d4c6e2bc916d135464cf2ed74320052a"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/agent-autonomy-contract.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:agent-autonomy-contract:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "8e5b61c2761380b9e86cc4311d6d9e647f683a9c93bcddbb1909dfc1e2327d85"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/agent-outcome-event.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:agent-outcome-event:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "05004e7822108442cba75cfd1c0796d20d7abb275dfcf1b62d5f527e5c325e1f"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/agentic-workflow-eval-suite.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:agentic-workflow-eval-suite:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "85075c611ebc3d64992fe7d38ad4fa93c69133f41ab7f14cc1c78b85ea4b915d"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/architecture-diagram-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:architecture-diagram-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "b61cdf1fd1c5660d513ef56ac592f43195f8f2007bf2df3d3aa699ab91636bbd"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/assertion-disposition.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:assertion-disposition:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f7fbfd32c70275fe0a66c34fb2f7ac987f760c54deb789942bd14aec26178da3"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/autonomous-decision-request.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:autonomous-decision-request:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f8918d91959081844e642cf0b194613c7efe90efe86631fafd05e537f6c9f93e"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/autonomous-eligibility-result.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:autonomous-eligibility-result:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "e8ca4517f68d77d644ef8c6d5be6d9292163593e41b5c3f5650218d0e71c96e4"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/autonomous-policy-snapshot.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:autonomous-policy-snapshot:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "9a07c000a35b1b98abbe6855303f9b16b360fc8d6bd5fefdd7356b57ffb38610"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/batch-admission-manifest.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:batch-admission-manifest:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "32e07e9972e6967984c351a23346ff9d1a28132ae787f436d60ce744c36413cb"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/candidate-evidence-pool.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:candidate-evidence-pool:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f43b965a6a0c9af000558d289860db4743cc6db760fa59eb347b390886ad7804"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/card-materialization-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:card-materialization-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f9e85bac033125c55a2afc3dffb632b1fba8099cdb708bd3d01f09f28049af23"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/card-view-selector.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:card-view-selector:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "91a896aa4e8755ecf4ab6c63e26844bc1eb21ee8a26d12d3254dd769da4f0db0"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/claim-evidence-map.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:claim-evidence-map:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "bbc5f88a7f060b380abf6220f223e90541710348203debb21b224b6bca89c0a1"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/claim-manifest.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:claim-manifest:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "6f062f6bece0a6582a8cdeeeb0611ef98621380e697eefca78b7166411c11358"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/common.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:common:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "30744b5106acccc79c08d3296806b8c90b742e8b3af5888cc85f0db5e4b517a6"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/compiled-prompt-artifact.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:compiled-prompt-artifact:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "7835655f08ed59c9028f345e4c9c760168ee7c5ac7ae0b092a225aff7d5f0793"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/connected-evidence-map.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f4b204e6f1023d164413d921396a996f767dd02142513dddc9877cad561398fc"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/copilot-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:copilot-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "8d57cef28d5be58c6888cbee860bbc50887a421f671bffacd7277b7f93dcf387"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/decision-evidence-pack.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:decision-evidence-pack:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f195b37e87825b35719b69ee57d5738e4956f13ced4cfbdbb600c47f0501b7ad"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/decision-frame.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:decision-frame:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "fc17ada21bcd06739cf4b32cb198dbc45b615e83036ba0844faccc1121527797"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/decision-response-envelope.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:decision-response-envelope:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "83a35b0ad002b62a9d433f806da768fc63ee599bc18fe92cb62e0f030d40508c"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/decision-result.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:decision-result:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "e048f28a0aa438c9771fb5002080d7f3372e3f959aac8b47a1fabf7b20a43d64"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/decision-witness-subgraph.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:decision-witness-subgraph:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "c733345056c33507ffb80ff72365c662f8ef6a5207fb90d3d34877c240500b6b"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/delivery-quality-decision.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:delivery-quality-decision:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "faa3abe934ad882e1924e0c6d83338d30e8523de2cd7a70659de41c7dcac46ca"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/delivery-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:delivery-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "95e37954f3e3a09845bb8262ff013b7f4f9fc7394b3b383714376b072faaefc6"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/docx-source-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:docx-source-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "846857716913e7945719d5178117d404c4b918e48cb7b9dadb345284b04df03c"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/entity-resolution.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:entity-resolution:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "dd7015b718856b4242ccddc94532727056045ee61ed8826c015990f8588431bb"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-assurance-portfolio.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-assurance-portfolio:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "9a1c4b9dbc4e034566228a75a5bc2e8919b435be0f285ad6bfd1c96619b9e5c7"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-bridge-result.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-bridge-result:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "500ddeed4637faf3f67e3e2098ecf998af4b950b425956aff624cb1fef29fbbf"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-bridge-suite.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-bridge-suite:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "54cc09764343d934922d27cdd924c8656fd439eaf578ae98982e229291b8115b"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-case.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-case:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "d3a59ef21866a7b3bd40ffc68d8d928f266676a0a175f32116b50b2cbf399a87"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-comparison.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-comparison:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "ab06ef465967c73bbe3b36d5e3e684cf356d69dd1625d5e643bff3a174b1505e"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-comparison-v2.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-comparison:2.0.0",
+      "schema_version": "2.0.0",
+      "sha256": "911d086f724c487271e6e1bff8ae237ccf453eaa8cced59f7afe002914a1dbe2"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-execution-measurement.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-execution-measurement:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "91e403d5a1cb3104a615361e257d3fb94ea630226a08e37bb1f6ff07894c684d"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-run-result.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-run-result:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "bb41dc8360d1edaa50aaf180be882f92d40f7719bce61bd570cde1e5a9b9c76c"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-run-result-v2.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-run-result:2.0.0",
+      "schema_version": "2.0.0",
+      "sha256": "02665935cc620d1f89159c6f01ba5016c62a619dfb82114556ac49331aacfc05"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-stress-result.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-stress-result:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "909a656687dd08c6fccf447b717f4458ab3d4662ba1db55e4be5feaaa27c66db"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-suite.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-suite:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "529f2b77fce8c60b3994824cf5168af338f6f7cc2dc5aa6d4979b4c64b4bddcc"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-suite-v2.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-suite:2.0.0",
+      "schema_version": "2.0.0",
+      "sha256": "c557b77c8e493466a99a500d2302e31242c7f626d77c30d4d11576059374e5d3"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/eval-suite-v3.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:eval-suite:3.0.0",
+      "schema_version": "3.0.0",
+      "sha256": "c285bf0932ff165c38e53ccb46da4e1e064c985f109821f786fdeb4dae32650b"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/evidence-coverage.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:evidence-coverage:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "ff25251c626e1e980b0b6774326e313b7e5e4387f7af4aa789a2b1129f18b37c"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/evidence-envelope-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:evidence-envelope-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "17d774f2a21025c9e6b666d4619af6904a418a6d6b6540f87bf8adad97c7250c"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/facet-applicability-policy.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:facet-applicability-policy:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "6a5ad737a678a6f89c7d4870fe024bf79d3f2da3c35f2a734a18bdcdb77d8fb7"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/final-evidence-contract.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:final-evidence-contract:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "5adea03253af4cdc02272a8acc7f497c907b36579595faefb5e57c891cfcd99d"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/google-meet-gemini-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:google-meet-gemini-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "29ec3bab6bdcc40953326cfbd0a851b8220f6419c1f3c7f4d29b6d99c5c2b9b4"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/graph-change-set.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:graph-change-set:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f1490fd6b402f41dd0fb41d5bd6cefa6755a3327c2f4e7ae0224aba64457f37a"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/graph-label-adjudication-packet.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:graph-label-adjudication-packet:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "cd1fbb1d05cb6797caf2882586a6450534b782d37ed5d5225567109dff6a0f76"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/graph-label-deterministic-candidate-plan.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:graph-label-deterministic-candidate-plan:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "1a05f6550de65a6bc1a971682353e7f4229248552eea755d26877f79c8121639"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/hitl-decision.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:hitl-decision:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "5c121e833bb396a381508d6d80963536f76eabf56404038dc85daaafb4966b14"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/hitl-option.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:hitl-option:1.2.0",
+      "schema_version": "1.2.0",
+      "sha256": "af5ef353fc432ee16b206814a49e9d3e45e6e27e400a314f75e8f25be28da233"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/hook-performance-optimization-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:hook-performance-optimization-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "6ee52cabaa33648ea24ebe847088b5fd4c765fec83f099733c43dcf4b1534e31"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/html-source-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:html-source-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "71b379123750c4391b12afae308d7c2bce38176794d89a005b0c8eda93fc89b1"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-decision-explanation.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-decision-explanation:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "dc7d2d71f5d859e2d09d63103f6c682f7745529b621aba92854b76eaaee43937"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-l1-control-policy.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-l1-control-policy:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "6613ca1d623ab2288c2b39c91e9f1c1688d94b2480f3227071b91fcb6a8e60fd"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-l1-ledger-policy.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-l1-ledger-policy:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "1c0b8a610a0fc5f67e353e8fc4f07d3b01205ae93e87024a20938c2726678315"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-plan-checkpoint.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-plan-checkpoint:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f5eed6fd7f88bc65380a75dec2b7eb2550784b2897b18a693f1ceede3f4fd35f"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-plan-step-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-plan-step-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "153db5fd6dace2e13fb02dc1465bc65b2046e85b42ac6b8a5742ed5e69f471fa"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-plan-v2.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-plan-v2:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "737be7c66d149e3498d513beab883de672ab0c945c07c43397d23632610fa7d1"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-plan.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-plan:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "5b18d58be97082105785284423544dc7628f51558ba5dd49aacbc9734673335b"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-reasoning-decision.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-reasoning-decision:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "4f9fa605d7fa55174481da10db2549ac0633a57010ad079db08c30b1faaf307b"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-reasoning-packet.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-reasoning-packet:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "24100924b8b54515000fbaa45a5264e70bae48a2eeddf9f334ceb05e916c5ef9"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-reasoning-proposal.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-reasoning-proposal:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "8fe3511847c78c294633c1854cd7a79f823acc0cf053b5489fb450bcae035528"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-shadow-checkpoint.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-shadow-checkpoint:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "aec40953108f22b1ea33606ddac31db82fe0233ddcbd0a62df55647273908845"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-shadow-step-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:ingestion-shadow-step-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "951e48d0da862115aba84c7fd02de0a70f822be5faaa1b3b6d9b6e275eb349f1"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/internal-operational-policy.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:internal-operational-policy:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "d74df64935ea12fe9ce4d3d66e111d202491833804c3ee82f2d4a18bdc810df2"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/internal-operational-qualification-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "6979cdb0dd124e49e9b87b306498fa7f52e363063985a97c2f5f81fe91181e38"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/internal-operational-revocation-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:internal-operational-revocation-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "6c2f178236bd0603d62ee28c68f595459faff08b8b4be6f8f072425cf392f91f"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/l1-shadow-observation.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:l1-shadow-observation:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "7f3facf4735dbe70210f9c80ecc790f0134761ab683f011c15e5e6d98d61f0fd"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/l1-wave-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "af5676b5dfc9fd1cb3cc2d88bac68bf682f2d30c9522b437540f435c10fad9aa"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/l2-execution-decision.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:l2-execution-decision:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "87c915bad37b9c435472cd4d768b9a70a9a7492e82a6ce79a80af5dc9ede82ba"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/l2-execution-decision-v2.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:l2-execution-decision:2.0.0",
+      "schema_version": "2.0.0",
+      "sha256": "8692212d1126e6be510183a99c7720d55c2b0e231d7e422269fe88a644cbbc2a"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/learning-change-proposal.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "da100c2bec97902b570043ae257ba0255eee68b40f2d05ce6677f92df99e9a0b"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/learning-event.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:learning-event:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "97bca252e6b309bd00b16f7d7196cfee27fb6666a7cd404087925902234ee3c6"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/markdown-source-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:markdown-source-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f1fe924606f2aba6a84f09689bcb0ccc097ba646968e002a5eebb2155d9fd328"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/normalized-candidate-bundle.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:normalized-candidate-bundle:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "1623e74f6c4a7a589ba41298c386d6b18c0576e28bd053e0ea1d7aef77855b58"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/otel-event-envelope.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:otel-event-envelope:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "49d737a5ba8e432dd4446a245c4e8961ee4f98a5f1af19d48d68f0f2041ef9d0"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/pdf-source-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:pdf-source-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f5cf6e7e9b68718f1a8290b528ef020a6cfd19b01c44636112c36382d57259e2"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/pptx-source-intake.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:pptx-source-intake:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "022d086c919cd1de8eab780e2aceaef9d79eea554cf19c867e0b38de335a72c6"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/publication-coverage-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:publication-coverage-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "24400a2a267b341d98a46c5d8d525ba30e3ef23a3592cf5f7e80422239f10eca"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-classification.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-classification:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "25c7f5547c24ccceb599bc6970d1f76d89a559e0c840727ab58f47cb539fc499"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-coverage-manifest.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-coverage-manifest:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "e9a7f11339d3a0f8eeac5fa7df953354d510d9140ae862fb0c3cdf117482ff89"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-destination-decision.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-destination-decision:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "dac8bc5570d1376745f3cbf431880486eb527007d9bb3aad10f3d7ebdf3d4851"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-graph-fit-decision.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-graph-fit-decision:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "8d681bb569f17cd68cac769d784807c6bc24b3e17e2ea9d0d74a79216bd127c2"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-l1-control-policy.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-l1-control-policy:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "8a0ecaf592c454f9d51d9b4812410330d4f50e6497f09e1f0163ade46bd50f89"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-l1-controller-eval-comparison.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-l1-controller-eval-comparison:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "bb93d17bc8d39ebb0713747cbd0c36520259b0f33bbe6abc2d052080ef5d0995"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-l1-controller-eval-result.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-l1-controller-eval-result:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "d91b72dcfc15b6363c1ff552a96ed8cb6932d4584c7e908aff81fd1309e83ecb"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-l1-controller-eval-suite.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-l1-controller-eval-suite:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "888497885e9b483437265d99d3b1196fe114d7caaa3a41a2936bfb278266ed8e"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-plan-observation.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-plan-observation:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "013f2927fd2a5eec19fedd4be574b2149011d942d45ebeab6791bd5572bcb318"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-plan-terminal.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-plan-terminal:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "9af79e9d50b4d8f90d6cdcf9e43dedace1f2fbc5a1f0ff8e3d289f614edab807"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-plan.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-plan:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "1a745f92b3c8f59bb223a50353f4a4320e1cfef21c60985c2ac99f93e7b1780c"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-plan-v2.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-plan:2.0.0",
+      "schema_version": "2.0.0",
+      "sha256": "97c180184912bdbff10d8dc39fe1bb1c0ad8f1d1c025b8808736f2ac7f7d4543"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-plan-v3.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-plan:3.0.0",
+      "schema_version": "3.0.0",
+      "sha256": "97974d759fc365bb30a90153f2eef4f2183abe29be2d2dec0a9db4a740e30700"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-retrieval-attempt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-retrieval-attempt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "4661cdada61057aa7076d40a29f560fec33e8ffc8baee1210df873bc4e85fbfd"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-route-eval-result.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-route-eval-result:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "3f22daa29deec0206f896514350b877b12676879bd6dab6ce15382c7b2488eb5"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-route-eval-suite.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:query-route-eval-suite:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "ab542bf7aefcd19fa072a738a0d64a36386ce4e6db73ab0956d72a447e239ce1"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/recovery-manifest.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:recovery-manifest:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "93736ea2b264f27fdccd14e1c596dd357452527f3e394ed2d3820bfd3ab85495"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/retrieval-evidence-report.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "93f962b4c704e3b2b1aa992562e42f487263e673317eed14d06802bf2ebbe435"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/retrieval-record.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:retrieval-record:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "9118aa4832682512a856041e389049ec6a651724ea37947b99e3ae57b31f533c"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/retrieval-release-evaluation.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:retrieval-release-evaluation:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "2bca52f434ff2dd0d7e86fee8233d57124d5423b9bc962534c9c6c9601bebf08"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/retrieval-release-evaluation-v2.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:retrieval-release-evaluation:2.0.0",
+      "schema_version": "2.0.0",
+      "sha256": "bb11a1580628ff66c6cb67596a8fcebe33f9661ec11302f6f15afa3d4bf5376b"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/retrieval-release-suite.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:retrieval-release-suite:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "5189a8135e4064c86ba834ae64d95225b1c62b227e69f12863420e7fb11c9830"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/retrieval-release-suite-v2.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:retrieval-release-suite:2.0.0",
+      "schema_version": "2.0.0",
+      "sha256": "789d5b6d05dc725ae9a8240fc715ea0c4b44ee8f216b5d3cc4e3e064ce4b0fb1"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/route-decision.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:route-decision:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "f11d65925297aa0455d825967c4bd9969090f8720215fb7de17b90b320a7f208"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/semantic-organization-change-set.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:semantic-organization-change-set:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "0c625c0f26ed818e19c5c3f22da73c903070e90730f0552ff4992098c5da504f"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/shadow-finding.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:shadow-finding:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "9636345fe86d01946ad07726bab29422a1c1bed3ae29a64b3c0a43d4d667b6dd"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/shadow-learning-policy.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:shadow-learning-policy:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "028692b7aeee7e2515aaa2c8447accb3c38394f2df6874bb6a492c616f7a4ca9"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/strategic-assertion-profile.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:strategic-assertion-profile:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "2096c3e331712124c39e385faa2e0bd1911d460663a2a79382f1e953ef9bfd30"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/strategic-evidence-packet.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:strategic-evidence-packet:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "8c52999ce7d9543d2e714217294944af80ae2d056d80dccdb0113d688053701b"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/strategic-reasoning-output.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:strategic-reasoning-output:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "45bb47d76314c005dc9aff6e3e12f280a5a212160e38ea57ca6ad879d609f109"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/strategic-wave-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:strategic-wave-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "7da099989bfab639e58de75c8ae54594eb82b5a40a9d1c50d426dd2c06912089"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/transcript-envelope.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:transcript-envelope:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "98535d35a288741687a17d8313c688bb2ec8f5c522a891eccb7200ca8277c56b"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/uwg-benchmark.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "658023f15be4c7567c64dd34e8c6ad7fb4d50eb646de5e25e2e8bc7b99008f42"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/uwg-governance-approval.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:uwg-governance-approval:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "da27c430492d394008dc17bc070e92d6968bd3f070a26879b507a4f02efd35be"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/uwg-learning-commit-receipt.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:uwg-learning-commit-receipt:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "fc7623bae8a1b210d5771a66553729139565a1051cec3f66764c3a5c3f646b9e"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/uwg-promotion-decision.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:uwg-promotion-decision:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "936ee415376aa980d6f22d014b0f72ec4d9bd21da9d1c23658387911f73a1c48"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/uwg-runtime-evaluation.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:uwg-runtime-evaluation:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "b7ba88b0b2f27875929f3b90a5b4eb51a2f84cb887f9ff7da7a2ce41081edbdf"
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/visual-content.schema.json",
+      "schema_id": "urn:nee:dual-pipeline:visual-content:1.0.0",
+      "schema_version": "1.0.0",
+      "sha256": "3c822fc7c3b2d4dd6e471e3ce2a6e46893f47bf2f7038b5be5712651ec65997f"
+    }
+  ]
+}

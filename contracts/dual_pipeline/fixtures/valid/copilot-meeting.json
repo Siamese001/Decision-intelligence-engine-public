@@ -1,0 +1,80 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:copilot-intake:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "copilot-package-teams-2026-07-21-nea-update",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "3da4c580832c221b100e28cfdcdff4231e9702224f4543b400e5b83650452e2e"
+  },
+  "meeting": {
+    "meeting_id": "teams-2026-07-21-nea-update",
+    "title": "NEA Engineering Update",
+    "started_at": "2026-07-21T14:00:00Z",
+    "organizer": "organizer@consulting.example.com",
+    "attendees": [
+      "Matt K",
+      "Lillian Le"
+    ],
+    "teams_reference": "teams://meeting/teams-2026-07-21-nea-update",
+    "source_location": "partner_advisory-approved-location/nea/2026-07-21",
+    "transcript_reference": null,
+    "recording_reference": null,
+    "source_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "template_version": "1.0.0",
+    "classification": "internal",
+    "audiences": [
+      "nee-engineering"
+    ]
+  },
+  "speakers": [
+    {
+      "speaker_ref": "speaker-matt-k",
+      "reported_name": "Matt K",
+      "email": null,
+      "role_or_org": "Sherpa workstream",
+      "statements": [
+        {
+          "statement_id": "stmt-sherpa-nightly-eval",
+          "kind": "technical",
+          "text": "Sherpa evaluation is running nightly.",
+          "locator": {
+            "kind": "section",
+            "value": "Speaker summary / Matt K / item 1"
+          },
+          "copilot_confidence": 0.91
+        },
+        {
+          "statement_id": "stmt-sherpa-monitoring-owner",
+          "kind": "risk",
+          "text": "Production monitoring ownership is unresolved.",
+          "locator": {
+            "kind": "section",
+            "value": "Speaker summary / Matt K / item 2"
+          },
+          "copilot_confidence": 0.88
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "action-confirm-monitoring-owner",
+      "reported_owner": "Matt K",
+      "action": "Confirm the production-monitoring owner.",
+      "due_date": null,
+      "status": "open",
+      "dependency": null,
+      "requested_follow_up": "Report the governed owner and evidence.",
+      "locator": {
+        "kind": "section",
+        "value": "Action items / item 3"
+      }
+    }
+  ],
+  "adapter": {
+    "name": "nee-copilot-intake",
+    "version": "1.0.0"
+  },
+  "extensions": {}
+}

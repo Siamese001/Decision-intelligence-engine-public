@@ -1,0 +1,42 @@
+{
+  "artifact_id": "ingestion-reasoning-proposal-fixture",
+  "authority_changes_proposed": false,
+  "canonical_approval_proposed": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "6e0acf9303727acf427bfce552044cfa80ee6a29170384be753a37ad1c945ae9"
+  },
+  "contract_id": "urn:nee:dual-pipeline:ingestion-reasoning-proposal:1.0.0",
+  "created_at": "2026-07-27T12:00:02Z",
+  "decision_id": "ingestion-reasoning-decision-fixture",
+  "delivered_model": "gpt-5.6-terra",
+  "extensions": {},
+  "graph_operations_proposed": false,
+  "mode": "shadow",
+  "model_tier": "high",
+  "overall_review_priority": "high",
+  "packet_digest": "cd741bd9c91e65d8a9f45bc13a92cae8f8545712712e424d3b58198b33a736a1",
+  "proposal_id": "ingestion-reasoning-proposal-fixture",
+  "reasoning_effort": "medium",
+  "recommendations": [
+    {
+      "candidate_id": "candidate-ingestion-reasoning",
+      "evidence_ids": [
+        "evidence-ingestion-reasoning"
+      ],
+      "reason_codes": [
+        "AMBIGUOUS_IDENTITY"
+      ],
+      "recommendation": "HITL_REQUIRED",
+      "reviewer_question": "Which governed entity is intended?"
+    }
+  ],
+  "requested_model": "gpt-5.6-terra",
+  "run_id": "run-ingestion-reasoning-fixture",
+  "schema_version": "1.0.0",
+  "summary_reason_codes": [
+    "IDENTITY_REVIEW_REQUIRED"
+  ],
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

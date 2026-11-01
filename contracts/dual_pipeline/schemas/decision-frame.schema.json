@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:decision-frame:1.0.0",
+  "title": "Decision Intelligence frame",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "decision_question", "desired_outcome", "time_horizon", "options", "criteria", "constraints", "assumptions", "missing_fields", "frame_state", "frame_digest", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:decision-frame:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "decision_question": {"type": "string", "minLength": 1},
+    "desired_outcome": {"type": "string", "minLength": 1},
+    "time_horizon": {"type": "string", "minLength": 1},
+    "options": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:decision-frame:1.0.0#/$defs/option"}},
+    "criteria": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:decision-frame:1.0.0#/$defs/criterion"}},
+    "constraints": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "assumptions": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "missing_fields": {"type": "array", "uniqueItems": true, "items": {"type": "string", "enum": ["criteria"]}},
+    "frame_state": {"type": "string", "enum": ["READY", "CLARIFICATION_REQUIRED"]},
+    "frame_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["option_id", "label", "source", "rationale", "evidence_ids"],
+      "properties": {
+        "option_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "label": {"type": "string", "minLength": 1},
+        "source": {"const": "caller"},
+        "rationale": {"type": ["string", "null"]},
+        "evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "criterion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["criterion_id", "label", "weight", "source"],
+      "properties": {
+        "criterion_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "label": {"type": "string", "minLength": 1},
+        "weight": {"type": ["number", "null"], "minimum": 0},
+        "source": {"const": "caller_or_explicit_question_clause"}
+      }
+    }
+  }
+}

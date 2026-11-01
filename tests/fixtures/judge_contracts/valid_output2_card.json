@@ -1,0 +1,20 @@
+{
+  "rubric_version": "2.0",
+  "section_scores": {
+    "header_and_overview": 10.0,
+    "key_updates_technical_substance": 34.0,
+    "conditional_extensions": 19.0,
+    "appendix_stakeholder_perspectives": 34.0
+  },
+  "composite_score": 97.0,
+  "verdict": "PASS",
+  "executive_rationale": "Clear operational context, unvarnished client friction, single DRI assignments.",
+  "evaluated_span_coverage": 1.0,
+  "effective_model": "gpt-5.6-sol",
+  "effective_provider": "openai",
+  "critique_diff_envelope": {
+    "target_path": "Action & Governance Ledger",
+    "status": "APPROVED"
+  },
+  "permitted_pending_owners_count": 1
+}

@@ -1,0 +1,46 @@
+{
+  "aggregate": {
+    "case_count": 1,
+    "case_pass_rate": 1,
+    "failed_case_count": 0,
+    "graph_mutation_count": 0,
+    "hard_gate_failure_count": 0,
+    "passed_case_count": 1,
+    "provider_call_count": 0
+  },
+  "artifact_id": "eval-result-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "297fe6d0746dcfeb55c7a0c15b39dc37b6c2ea9d4354132bb8286f97ce648150"
+  },
+  "case_results": [
+    {
+      "answer_present": true,
+      "artifact_path": "cases/eval-query-fixture/case-result.json",
+      "case_id": "eval-query-fixture",
+      "cause_code": null,
+      "directive_status": null,
+      "failure_category": null,
+      "graph_mutation_count": 0,
+      "hard_gates": {"graph_never_mutates": true},
+      "pipeline": "query",
+      "provider_call_count": 0,
+      "provider_initialization_count": 0,
+      "stage": "X3",
+      "status": "PASS",
+      "terminal_receipt_digest": null
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:eval-run-result:1.0.0",
+  "evaluated_at": "2026-07-27T12:00:00Z",
+  "evaluation_id": "eval-result-fixture",
+  "extensions": {},
+  "graph_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+  "pipeline": "dual",
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "suite_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "suite_file_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "suite_id": "eval-suite-fixture"
+}

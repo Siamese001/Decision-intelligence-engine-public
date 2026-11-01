@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0",
+  "title": "NEE exact-pair internal operational qualification receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "qualification_id", "status", "assurance_tier", "operational_status", "deployment_scope", "authorization_mode", "production_qualified", "autonomous_graph_writes_allowed", "pair", "policy_binding", "directive_binding", "source_evaluation_binding", "target_validation", "target_suite", "recovery_evidence", "reviewer", "rationale", "qualified_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "qualification_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "status": {"const": "QUALIFIED"},
+    "assurance_tier": {"const": "internal_operational"},
+    "operational_status": {"const": "qualified"},
+    "deployment_scope": {"const": "local_team"},
+    "authorization_mode": {"const": "internal_operator_policy"},
+    "production_qualified": {"const": false},
+    "autonomous_graph_writes_allowed": {"const": false},
+    "pair": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/pair"},
+    "policy_binding": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/policyBinding"},
+    "directive_binding": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/directiveBinding"},
+    "source_evaluation_binding": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/sourceEvaluationBinding"},
+    "target_validation": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/targetValidation"},
+    "target_suite": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/targetSuite"},
+    "recovery_evidence": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/recoveryEvidence"},
+    "reviewer": {"type": "string", "minLength": 1},
+    "rationale": {"type": "string", "minLength": 1},
+    "qualified_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "pair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generation_id", "graph_snapshot", "graph_sha256", "sidecar_sha256", "embedding_backend", "model_id", "model_revision", "model_manifest_digest", "production_qualified", "assurance_tier", "internal_operational_policy_digest"],
+      "properties": {
+        "generation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "graph_snapshot": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "sidecar_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "embedding_backend": {"const": "flagembedding-bge-m3-internal"},
+        "model_id": {"const": "BAAI/bge-m3"},
+        "model_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "model_manifest_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "production_qualified": {"const": false},
+        "assurance_tier": {"const": "internal_operational"},
+        "internal_operational_policy_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "policyBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy_id", "policy_version", "policy_path", "policy_digest"],
+      "properties": {
+        "policy_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "policy_version": {"type": "string", "minLength": 1},
+        "policy_path": {"type": "string", "minLength": 1},
+        "policy_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "runBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_id", "status", "package_file_sha256", "provider_call_count", "graph_operation_count", "embedding_backend", "model_id", "model_revision", "model_manifest_digest"],
+      "properties": {
+        "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "status": {"const": "COMPLETED"},
+        "package_file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "provider_call_count": {"const": 0},
+        "graph_operation_count": {"type": "integer", "minimum": 0},
+        "embedding_backend": {"type": ["string", "null"], "minLength": 1},
+        "model_id": {"type": ["string", "null"], "minLength": 1},
+        "model_revision": {"type": ["string", "null"], "minLength": 1},
+        "model_manifest_digest": {"type": ["string", "null"], "minLength": 1}
+      }
+    },
+    "directiveBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["directive_id", "directive_path", "directive_digest", "package_set_digest", "approval_id", "completion_digest", "release_receipt_id", "release_receipt_digest", "source_runtime_root", "run_bindings"],
+      "properties": {
+        "directive_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "directive_path": {"type": "string", "minLength": 1},
+        "directive_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "package_set_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "approval_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "completion_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "release_receipt_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "release_receipt_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "source_runtime_root": {"type": "string", "minLength": 1},
+        "run_bindings": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/runBinding"}}
+      }
+    },
+    "sourcePair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generation_id", "graph_snapshot", "graph_sha256", "sidecar_sha256", "embedding_backend", "model_id", "model_revision", "model_manifest_digest", "production_qualified"],
+      "properties": {
+        "generation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "graph_snapshot": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "sidecar_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "embedding_backend": {"type": "string", "minLength": 1},
+        "model_id": {"const": "BAAI/bge-m3"},
+        "model_revision": {"type": "string", "minLength": 1},
+        "model_manifest_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "production_qualified": {"type": "boolean"}
+      }
+    },
+    "sourceEvaluationBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "file_sha256", "evaluation_id", "evaluation_digest", "execution_tier", "status", "source_pair"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "evaluation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "evaluation_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "execution_tier": {"const": "E3"},
+        "status": {"const": "PASS"},
+        "source_pair": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/sourcePair"}
+      }
+    },
+    "targetValidation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pair_validation_status", "graph_integrity_status", "graph_foreign_key_violation_count", "sidecar_validation_status", "lane_contamination_count", "retrieval_metadata_binding_contamination_count", "record_count", "dense_record_count", "sparse_record_count", "colbert_record_count", "label_quality_status", "legacy_debt_count", "blocking_violation_count", "label_quality_report_digest"],
+      "properties": {
+        "pair_validation_status": {"const": "PASS"},
+        "graph_integrity_status": {"const": "ok"},
+        "graph_foreign_key_violation_count": {"const": 0},
+        "sidecar_validation_status": {"const": "PASS"},
+        "lane_contamination_count": {"const": 0},
+        "retrieval_metadata_binding_contamination_count": {"const": 0},
+        "record_count": {"type": "integer", "minimum": 1},
+        "dense_record_count": {"type": "integer", "minimum": 1},
+        "sparse_record_count": {"type": "integer", "minimum": 1},
+        "colbert_record_count": {"type": "integer", "minimum": 1},
+        "label_quality_status": {"type": "string", "enum": ["PASS", "PASS_WITH_LEGACY_DEBT"]},
+        "legacy_debt_count": {"type": "integer", "minimum": 0},
+        "blocking_violation_count": {"type": "integer", "minimum": 0},
+        "label_quality_report_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "componentExecution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dense", "sparse", "colbert"],
+      "properties": {"dense": {"const": true}, "sparse": {"const": true}, "bm25": {"const": true}, "colbert": {"const": true}}
+    },
+    "caseResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "critical", "retrieved_record_ids", "missing_expected_record_ids", "forbidden_leakage_record_ids", "component_execution", "latency_ms", "status"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "critical": {"type": "boolean"},
+        "retrieved_record_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}},
+        "missing_expected_record_ids": {"type": "array", "maxItems": 0},
+        "forbidden_leakage_record_ids": {"type": "array", "maxItems": 0},
+        "component_execution": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/componentExecution"},
+        "latency_ms": {"type": "number", "minimum": 0},
+        "status": {"const": "PASS"}
+      }
+    },
+    "targetSuite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["suite_path", "suite_file_sha256", "suite_id", "suite_digest", "case_count", "pass_count", "failed_case_ids", "critical_failed_case_ids", "dense_executed", "sparse_executed", "colbert_executed", "forbidden_leakage_count", "max_latency_ms", "case_results", "status"],
+      "properties": {
+        "suite_path": {"type": "string", "minLength": 1},
+        "suite_file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "suite_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "case_count": {"type": "integer", "minimum": 1},
+        "pass_count": {"type": "integer", "minimum": 1},
+        "failed_case_ids": {"type": "array", "maxItems": 0},
+        "critical_failed_case_ids": {"type": "array", "maxItems": 0},
+        "dense_executed": {"const": true},
+        "sparse_executed": {"const": true},
+        "bm25_executed": {"const": true},
+        "colbert_executed": {"const": true},
+        "forbidden_leakage_count": {"const": 0},
+        "max_latency_ms": {"type": "number", "minimum": 0},
+        "case_results": {"type": "array", "minItems": 1, "items": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/caseResult"}},
+        "status": {"const": "PASS"}
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["integrity_check", "foreign_key_violation_count", "foreign_key_violations"],
+      "properties": {
+        "integrity_check": {"const": "ok"},
+        "foreign_key_violation_count": {"const": 0},
+        "foreign_key_violations": {"type": "array", "maxItems": 0}
+      }
+    },
+    "recoveryEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["backup_status", "restore_status", "backup_root", "graph_backup_path", "graph_backup_sha256", "sidecar_backup_path", "sidecar_backup_sha256", "restored_graph_sha256", "restored_sidecar_sha256", "graph_integrity", "sidecar_integrity"],
+      "properties": {
+        "backup_status": {"const": "PASS"},
+        "restore_status": {"const": "PASS"},
+        "backup_root": {"type": "string", "minLength": 1},
+        "graph_backup_path": {"type": "string", "minLength": 1},
+        "graph_backup_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "sidecar_backup_path": {"type": "string", "minLength": 1},
+        "sidecar_backup_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "restored_graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "restored_sidecar_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "graph_integrity": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/integrity"},
+        "sidecar_integrity": {"$ref": "urn:nee:dual-pipeline:internal-operational-qualification-receipt:1.0.0#/$defs/integrity"}
+      }
+    }
+  }
+}

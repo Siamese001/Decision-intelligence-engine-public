@@ -1,0 +1,250 @@
+{
+  "artifact_id": "query-l1-agentic-baseline-e1",
+  "baseline_id": "l1-agentic-wave-00-20260806",
+  "schema_version": "0.1.0",
+  "pipeline": "query",
+  "runtime_mode": "off",
+  "execution_tier": "E0/E1",
+  "runtime_boundary": "PRE_CONTROLLER_CHARACTERIZATION",
+  "contract_id": "urn:nee:dual-pipeline:l1-agentic-baseline:0.1.0",
+  "active_pair_or_fixture": {
+    "kind": "deterministic_fixture",
+    "graph_snapshot": "wave-00-deterministic-fixture",
+    "graph_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "sidecar_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "generation_id": "wave-00-fixture-generation"
+  },
+  "authorization_scope_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "query_type_cases": [
+    {
+      "case_id": "qla-exact-lookup",
+      "question": "Which exact governed Project Beacon records are available?",
+      "expected_destination": "GRAPH_EVIDENCE_UTILITY",
+      "expected_query_type": "exact_lookup",
+      "expected_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-current-state",
+      "question": "Which approved records corroborate the current Project Beacon status?",
+      "query_type_override": "current_state_corroboration",
+      "expected_destination": "GRAPH_EVIDENCE_UTILITY",
+      "expected_query_type": "current_state_corroboration",
+      "expected_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-project-status-current",
+      "question": "What is the current governed project status for Project Beacon?",
+      "expected_destination": "GRAPH_EVIDENCE_UTILITY",
+      "expected_query_type": "project_status_current",
+      "expected_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-project-status-history",
+      "question": "Show the historical status for Project Beacon project.",
+      "expected_destination": "GRAPH_EVIDENCE_UTILITY",
+      "expected_query_type": "project_status_history",
+      "expected_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-relationship",
+      "question": "Explain the governed relationship between NEA and Project Beacon.",
+      "expected_destination": "NEE_DECISION_INTELLIGENCE",
+      "expected_query_type": "relationship_explanation",
+      "expected_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-cross-workstream",
+      "question": "Assess governed cross-workstream patterns across Project Beacon and NEA.",
+      "expected_destination": "NEE_DECISION_INTELLIGENCE",
+      "expected_query_type": "cross_workstream_synthesis",
+      "expected_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-gap-risk",
+      "question": "Analyze governed gaps, risks, and conflicts in Project Beacon.",
+      "expected_destination": "NEE_DECISION_INTELLIGENCE",
+      "expected_query_type": "gap_risk_inconsistency",
+      "expected_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-opportunity",
+      "question": "Recommend opportunities across Project Beacon and NEA based on governed evidence.",
+      "expected_destination": "NEE_DECISION_INTELLIGENCE",
+      "expected_query_type": "opportunity_nba",
+      "expected_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-candidate-review",
+      "question": "Evaluate candidate patterns against approved evidence without promotion.",
+      "expected_destination": "NEE_DECISION_INTELLIGENCE",
+      "expected_query_type": "candidate_promotion_review",
+      "expected_terminal_class": "COMPLETED"
+    }
+  ],
+  "coverage_failure_cases": [
+    {
+      "case_id": "qla-complete-first-pass",
+      "failure_family": "complete_first_pass",
+      "requirement_label": "Exact governed evidence",
+      "allowed_lanes": ["approved"],
+      "packet_rows": [{
+        "record_id": "record-approved-exact",
+        "title": "Exact governed evidence",
+        "retrieval_text": "Exact governed evidence with source locator",
+        "evidence_ids": ["evidence-exact"]
+      }],
+      "expected_outcome": "covered",
+      "baseline_terminal_class": "COMPLETED",
+      "future_controller_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-recoverable-miss",
+      "failure_family": "recoverable_miss",
+      "requirement_label": "Requirement-scoped hybrid evidence",
+      "allowed_lanes": ["approved"],
+      "packet_rows": [],
+      "expected_outcome": "explicit_gap",
+      "expected_reason_code": "RETRIEVAL_COVERAGE_MISSING",
+      "baseline_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+      "future_controller_terminal_class": "REPLAN_ELIGIBLE"
+    },
+    {
+      "case_id": "qla-true-gap",
+      "failure_family": "true_gap",
+      "requirement_label": "Evidence for an undocumented fact",
+      "allowed_lanes": ["approved"],
+      "packet_rows": [],
+      "expected_outcome": "explicit_gap",
+      "expected_reason_code": "RETRIEVAL_COVERAGE_MISSING",
+      "baseline_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+      "future_controller_terminal_class": "EXPLICIT_GAP"
+    },
+    {
+      "case_id": "qla-irrelevant-overlap",
+      "failure_family": "irrelevant_lexical_overlap",
+      "requirement_label": "A2A durable write-back controls",
+      "allowed_lanes": ["approved"],
+      "packet_rows": [{
+        "record_id": "record-weather",
+        "title": "Weather forecast",
+        "retrieval_text": "Daily temperature and rainfall forecast",
+        "evidence_ids": ["evidence-weather"]
+      }],
+      "expected_outcome": "explicit_gap",
+      "expected_reason_code": "RETRIEVAL_COVERAGE_MISSING",
+      "baseline_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+      "future_controller_terminal_class": "EXPLICIT_GAP"
+    },
+    {
+      "case_id": "qla-unauthorized-evidence",
+      "failure_family": "unauthorized_evidence",
+      "requirement_label": "Approved evidence only",
+      "allowed_lanes": ["approved"],
+      "packet_allowed_lanes": ["candidate"],
+      "packet_rows": [{
+        "record_id": "record-candidate-only",
+        "title": "Approved evidence only",
+        "retrieval_text": "Candidate evidence must not support an approved claim",
+        "evidence_ids": ["evidence-candidate"]
+      }],
+      "expected_outcome": "unauthorized",
+      "expected_reason_code": "RETRIEVAL_LANE_NOT_AUTHORIZED",
+      "baseline_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+      "future_controller_terminal_class": "UNAUTHORIZED"
+    },
+    {
+      "case_id": "qla-reverse-only",
+      "failure_family": "reverse_only_path",
+      "requirement_label": "Service writes durable state to PostgreSQL",
+      "allowed_lanes": ["approved"],
+      "packet_rows": [{
+        "record": {
+          "record_id": "record-postgres",
+          "title": "PostgreSQL durable state",
+          "retrieval_text": "Service writes durable state to PostgreSQL",
+          "evidence_ids": ["evidence-postgres"]
+        },
+        "graph_path": {"steps": [{"traversal_direction": "reverse", "edge_type": "DEPENDS_ON"}]},
+        "evidence": [{"evidence_id": "evidence-postgres"}]
+      }],
+      "expected_outcome": "explicit_gap",
+      "expected_reason_code": "REVERSE_ONLY_DIRECTIONAL_SUPPORT",
+      "baseline_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+      "future_controller_terminal_class": "EXPLICIT_GAP"
+    },
+    {
+      "case_id": "qla-conflict",
+      "failure_family": "conflict",
+      "requirement_label": "Current governed state",
+      "allowed_lanes": ["approved"],
+      "packet_rows": [{
+        "record_id": "record-current-state",
+        "title": "Current governed state",
+        "retrieval_text": "Current governed state",
+        "evidence_ids": ["evidence-current"]
+      }],
+      "counterevidence": [{"record_id": "record-current-state"}],
+      "expected_outcome": "conflict",
+      "expected_reason_code": "RETRIEVAL_CONFLICT_REQUIRES_RESOLUTION",
+      "baseline_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+      "future_controller_terminal_class": "HITL_REQUIRED"
+    },
+    {
+      "case_id": "qla-candidate-lane",
+      "failure_family": "candidate_lane",
+      "requirement_label": "Candidate assertions under review",
+      "allowed_lanes": ["candidate"],
+      "packet_allowed_lanes": ["candidate"],
+      "packet_rows": [{
+        "record_id": "record-candidate-review",
+        "title": "Candidate assertions under review",
+        "retrieval_text": "Candidate assertions under review",
+        "evidence_ids": ["evidence-candidate-review"]
+      }],
+      "expected_outcome": "covered",
+      "expected_lane": "candidate",
+      "baseline_terminal_class": "COMPLETED",
+      "future_controller_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-cache-replay",
+      "failure_family": "cache_replay",
+      "requirement_label": "Replayable governed evidence",
+      "allowed_lanes": ["approved"],
+      "packet_rows": [{
+        "record_id": "record-cache-replay",
+        "title": "Replayable governed evidence",
+        "retrieval_text": "Replayable governed evidence with stable digest",
+        "evidence_ids": ["evidence-cache"]
+      }],
+      "expected_outcome": "covered",
+      "expected_cache_disposition": "HIT_SAME_DIGEST",
+      "baseline_terminal_class": "COMPLETED",
+      "future_controller_terminal_class": "COMPLETED"
+    },
+    {
+      "case_id": "qla-no-progress",
+      "failure_family": "no_progress",
+      "requirement_label": "Uncovered material requirement",
+      "allowed_lanes": ["approved"],
+      "packet_rows": [],
+      "expected_outcome": "explicit_gap",
+      "expected_reason_code": "RETRIEVAL_COVERAGE_MISSING",
+      "baseline_terminal_class": "BLOCKED_COVERAGE_INSUFFICIENT",
+      "future_controller_terminal_class": "NO_PROGRESS"
+    }
+  ],
+  "thresholds": {
+    "minimum_query_type_case_count": 9,
+    "minimum_failure_family_case_count": 10,
+    "maximum_provider_calls": 0,
+    "maximum_graph_mutations": 0,
+    "replay_must_be_byte_equal": true,
+    "critical_cases_must_have_nonempty_expectations": true
+  },
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "5302055646a010815f050bef9ce262b1615528e8a70710e079a9ab0105f7fa0a"
+  }
+}

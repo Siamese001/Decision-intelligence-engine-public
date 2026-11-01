@@ -1,0 +1,70 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:entity-resolution:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "entity-resolution-matt-k",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "7e873883bc7afd7d7c1445c973e4a3f9281ef5e5f83bb613d43ea75dacfa0b32"
+  },
+  "resolution_id": "resolution-matt-k-nea-update",
+  "run_id": "run-intake-nea-update-2026-07-21",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "mention_id": "mention-matt-k-action",
+  "reported_name": "Matt K",
+  "stable_identifier": {
+    "kind": null,
+    "value": null
+  },
+  "context": {
+    "attendees": [
+      "Matt K",
+      "Lillian Le"
+    ],
+    "workstream": "Sherpa",
+    "role": null,
+    "organization": "PartnerAdvisory",
+    "project": "Project Beacon",
+    "co_occurring_participants": [
+      "Lillian Le"
+    ]
+  },
+  "alternatives": [
+    {
+      "entity_id": "stakeholder-matthew-koch",
+      "canonical_name": "Matthew Koch",
+      "match_score": 0.84,
+      "supporting_context": [
+        "Sherpa workstream context"
+      ],
+      "uniqueness": "non_unique",
+      "margin_over_next": 0.03,
+      "identity_conflicts": [
+        "No stable identifier in the package"
+      ]
+    },
+    {
+      "entity_id": "stakeholder-matt-keller",
+      "canonical_name": "Matt Keller",
+      "match_score": 0.81,
+      "supporting_context": [
+        "First name and initial match"
+      ],
+      "uniqueness": "non_unique",
+      "margin_over_next": null,
+      "identity_conflicts": [
+        "No workstream corroboration"
+      ]
+    }
+  ],
+  "selected_entity_id": null,
+  "outcome": "HITL_CONFIRM_ENTITY",
+  "decision_basis": [
+    "No stable identifier",
+    "Small score margin",
+    "Multiple plausible people"
+  ],
+  "requires_hitl": true,
+  "decided_at": "2026-07-21T15:00:02Z",
+  "extensions": {}
+}

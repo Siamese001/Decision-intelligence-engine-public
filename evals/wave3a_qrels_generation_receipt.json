@@ -1,0 +1,10 @@
+{
+  "wave": "Wave 3A",
+  "status": "COMPLETE",
+  "queries_generated": 50,
+  "tier1_mean_cosine": 0.632581948240598,
+  "tier2_mean_cosine": 0.3929391662279765,
+  "output_file": "evals\\qrels_query_set.json",
+  "timestamp": "2026-09-09T15:20:25Z",
+  "elapsed_seconds": 20.79
+}

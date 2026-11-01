@@ -1,0 +1,122 @@
+{
+  "approved": [
+    {
+      "record": {
+        "record_id": "record-sherpa-business-problem",
+        "record_type": "assertion",
+        "lane": "approved",
+        "title": "Enterprise architecture bottleneck",
+        "retrieval_text": "EA is a bottleneck because too many technology decisions depend on scarce architects.",
+        "evidence_ids": ["evidence-sherpa-business-problem"],
+        "strategic_profile": {
+          "knowledge_role": "business_problem",
+          "modality": "descriptive",
+          "authority_scope": "official_project_intent",
+          "applicability_scope": "nee_specific",
+          "realization_state": "not_applicable"
+        }
+      },
+      "retrieval_metadata": {"answer_use": "strategic_context"}
+    },
+    {
+      "record": {
+        "record_id": "record-sherpa-official-intent",
+        "record_type": "assertion",
+        "lane": "approved",
+        "title": "Governed self-service intent",
+        "retrieval_text": "Project Beacon turns EA expertise into governed self-service.",
+        "evidence_ids": ["evidence-sherpa-official-intent"],
+        "strategic_profile": {
+          "knowledge_role": "official_intent",
+          "modality": "intended",
+          "authority_scope": "official_project_intent",
+          "applicability_scope": "nee_specific",
+          "realization_state": "intended"
+        }
+      },
+      "retrieval_metadata": {"answer_use": "strategic_context"}
+    },
+    {
+      "record": {
+        "record_id": "record-sherpa-target-outcome",
+        "record_type": "assertion",
+        "lane": "approved",
+        "title": "Reduced direct architect involvement",
+        "retrieval_text": "Routine work no longer requires direct architect involvement.",
+        "evidence_ids": ["evidence-sherpa-target-outcome"],
+        "strategic_profile": {
+          "knowledge_role": "target_outcome",
+          "modality": "intended",
+          "authority_scope": "official_project_intent",
+          "applicability_scope": "nee_specific",
+          "realization_state": "intended"
+        }
+      },
+      "retrieval_metadata": {"answer_use": "strategic_context"}
+    },
+    {
+      "record": {
+        "record_id": "record-sherpa-design-principle",
+        "record_type": "assertion",
+        "lane": "approved",
+        "title": "Governed self-service principle",
+        "retrieval_text": "Routine decisions must remain bounded by approved standards and escalation rules.",
+        "evidence_ids": ["evidence-sherpa-design-principle"],
+        "strategic_profile": {
+          "knowledge_role": "design_principle",
+          "modality": "normative",
+          "authority_scope": "source_position",
+          "applicability_scope": "nee_specific",
+          "realization_state": "not_applicable"
+        }
+      },
+      "retrieval_metadata": {"answer_use": "decision_constraint"}
+    }
+  ],
+  "candidate": [
+    {
+      "record": {
+        "record_id": "record-sherpa-option-candidate",
+        "record_type": "assertion",
+        "lane": "candidate",
+        "title": "Candidate decision pattern",
+        "retrieval_text": "Begin with a bounded architecture decision pattern.",
+        "evidence_ids": ["evidence-sherpa-option-candidate"],
+        "strategic_profile": {
+          "knowledge_role": "option",
+          "modality": "proposed",
+          "authority_scope": "source_position",
+          "applicability_scope": "nee_specific",
+          "realization_state": "planned"
+        }
+      },
+      "retrieval_metadata": {"answer_use": "candidate_hypothesis"}
+    }
+  ],
+  "external_public": [
+    {
+      "record": {
+        "record_id": "record-external-self-service-pattern",
+        "record_type": "assertion",
+        "lane": "external_public",
+        "title": "External governed self-service pattern",
+        "retrieval_text": "External guidance recommends bounded self-service with escalation paths.",
+        "evidence_ids": ["evidence-external-self-service-pattern"],
+        "strategic_profile": {
+          "knowledge_role": "external_pattern",
+          "modality": "descriptive",
+          "authority_scope": "external_reference",
+          "applicability_scope": "analogous_only",
+          "realization_state": "not_applicable"
+        }
+      },
+      "retrieval_metadata": {"answer_use": "external_analogy"}
+    }
+  ],
+  "graph_paths": [],
+  "counterevidence": [],
+  "gaps": [],
+  "exclusions": [],
+  "exact_anchor_ids": [],
+  "graph_snapshot": "graph-snapshot-sherpa-strategic"
+}

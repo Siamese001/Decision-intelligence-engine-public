@@ -1,0 +1,53 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:retrieval-record:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "entity-facet-agent-platform",
+  "record_id": "entity-facet-agent-platform",
+  "record_type": "entity_facet",
+  "namespace": "nee.approved.entity_facets",
+  "lane": "approved",
+  "title": "Entity facet: Agent platform",
+  "canonical_entities": [
+    "entity-agent-platform"
+  ],
+  "retrieval_text": "Entity facet for Agent platform. Evidence-bound graph relationships. | Agent platform supports governed agent workflows.",
+  "retrieval_text_hash": "de86addd7cbaba8e75ac30e804320c7322a46599b405e8504f320a4ab4ff9288",
+  "evidence_cluster_id": "evidence-cluster-agent-platform",
+  "evidence_ids": [
+    "evidence-agent-platform-overview"
+  ],
+  "graph_snapshot": "graph-snapshot-entity-facet-example",
+  "classification": "internal",
+  "audiences": [
+    "nee-engineering"
+  ],
+  "lifecycle": "current",
+  "effective_date": null,
+  "action_status": null,
+  "retrieval_kind": "entity_facet",
+  "epistemic_status": "approved",
+  "provenance_kind": "source_bound",
+  "answer_use": "navigation_only",
+  "extensions": {
+    "com.partner_advisory.nee.graph-entity-ids": [
+      "entity-agent-platform"
+    ],
+    "com.partner_advisory.nee.graph-assertion-ids": [
+      "assertion-agent-platform-supports"
+    ],
+    "com.partner_advisory.nee.graph-evidence-ids": [
+      "evidence-agent-platform-overview"
+    ],
+    "com.partner_advisory.nee.entity-facet-source-record-ids": [
+      "retrieval-record-agent-platform-supports"
+    ],
+    "com.partner_advisory.nee.entity-facet-profile-record-ids": [
+      "retrieval-record-agent-platform-supports"
+    ]
+  },
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "a94698b5d55f4b1e678f16323abd90973a62978c23c1805b350afe886491ffbe"
+  }
+}

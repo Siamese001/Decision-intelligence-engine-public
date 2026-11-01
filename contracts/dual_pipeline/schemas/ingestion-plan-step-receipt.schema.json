@@ -1,0 +1,7 @@
+{
+  "$id":"urn:nee:dual-pipeline:ingestion-plan-step-receipt:1.0.0","$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+  "required":["contract_id","schema_version","artifact_id","canonical_digest","receipt_id","plan_digest","step_id","candidate_id","status","input_artifact_digests","output_digest","proposal_only","provider_call_count","graph_mutation_count","extensions"],
+  "properties":{
+    "contract_id":{"const":"urn:nee:dual-pipeline:ingestion-plan-step-receipt:1.0.0"},"schema_version":{"const":"1.0.0"},"artifact_id":{"$ref":"urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},"canonical_digest":{"$ref":"urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},"receipt_id":{"$ref":"urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},"plan_digest":{"type":"string","pattern":"^[a-f0-9]{64}$"},"step_id":{"$ref":"urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},"candidate_id":{"type":["string","null"]},"status":{"enum":["PLANNED","BLOCKED","NOOP"]},"input_artifact_digests":{"type":"object","minProperties":1,"additionalProperties":{"type":"string","pattern":"^[a-f0-9]{64}$"}},"output_digest":{"type":["string","null"],"pattern":"^[a-f0-9]{64}$"},"proposal_only":{"const":true},"provider_call_count":{"const":0},"graph_mutation_count":{"const":0},"extensions":{"$ref":"urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:google-meet-gemini-intake:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "google-meet-gemini-package-2026-07-24-example",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "5affa9f957feeb9138e45c98ddec4fce7210c9388cbc1c299a0304f51245a8af"
+  },
+  "meeting": {
+    "meeting_id": "google-meet-gemini-2026-07-24-example",
+    "title": "Google Meet Gemini Notes Example",
+    "started_at": "2026-07-24T13:30:00-04:00",
+    "organizer": "organizer@example.com",
+    "attendees": [
+      "A. Example",
+      "B. Example"
+    ],
+    "google_meet_reference": "https://meet.google.com/example-code",
+    "source_location": "controlled/archive/google-meet/example-notes.txt",
+    "transcript_reference": "controlled/archive/google-meet/example-notes.txt",
+    "recording_reference": null,
+    "source_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "template_version": "1.0.0",
+    "classification": "internal",
+    "audiences": [
+      "nee-engineering"
+    ]
+  },
+  "speakers": [
+    {
+      "speaker_ref": "speaker-a-example",
+      "reported_name": "A. Example",
+      "email": null,
+      "role_or_org": "Example workstream",
+      "statements": [
+        {
+          "statement_id": "stmt-example-action",
+          "kind": "decision",
+          "text": "The team reported a follow-up decision.",
+          "locator": {
+            "kind": "timestamp",
+            "value": "00:01:00"
+          },
+          "gemini_confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "action-example-follow-up",
+      "reported_owner": "A. Example",
+      "action": "Complete the reported follow-up.",
+      "due_date": null,
+      "status": "planned",
+      "dependency": null,
+      "requested_follow_up": "Confirm against the preserved source export.",
+      "locator": {
+        "kind": "timestamp",
+        "value": "00:01:00"
+      }
+    }
+  ],
+  "adapter": {
+    "name": "nee-google-meet-gemini-intake",
+    "version": "1.0.0"
+  },
+  "extensions": {
+    "com.partner_advisory.nee.authority-rank": 3,
+    "com.partner_advisory.nee.source-posture": "working_notes"
+  }
+}

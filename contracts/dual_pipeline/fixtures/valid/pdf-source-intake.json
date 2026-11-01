@@ -1,0 +1,65 @@
+{
+  "adapter": {
+    "name": "nee-pdf-source-intake",
+    "version": "1.0.0"
+  },
+  "artifact_id": "pdf-source-example-pdf-strategy",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "99108f6ca4984334016e5aafde8144d48f339ffcf7e71d4a8e35b389213b255a"
+  },
+  "chunks": [
+    {
+      "chunk_id": "chunk-01-pages-1",
+      "extraction_confidence": 1.0,
+      "locator": {
+        "kind": "page",
+        "quote_digest": "377f2a10d01db8c33b5b5b801eaea38e82fbf09af3240e6e071f520779b49b26",
+        "value": "1"
+      },
+      "materiality": "high",
+      "selection_rationale": "Retains the only high-signal page.",
+      "text": "## Page 1\n\nExample PDF strategy page",
+      "title": "Strategy page"
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:pdf-source-intake:1.0.0",
+  "extensions": {
+    "com.partner_advisory.nee.chunk-selection": {
+      "authority_boundary": "Internal offering evidence; not client adoption evidence.",
+      "profile": "page-range-selection-v1"
+    },
+    "com.partner_advisory.nee.pdf-extraction": {
+      "extractor": "pypdf",
+      "extractor_version": "6.14.2",
+      "profile": "page-text-normalized-whitespace-v1",
+      "selected_page_ranges": [
+        "1"
+      ],
+      "source_byte_binding": "raw_pdf_base64+pdf_file_sha256"
+    }
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "anchor_entity": {
+      "context": "Internal offering evidence; not client adoption evidence.",
+      "reported_text": "Example strategy",
+      "stable_identifier": "example_strategy"
+    },
+    "audiences": [
+      "internal_consulting"
+    ],
+    "authority_rank": 9,
+    "classification": "confidential",
+    "page_count": 1,
+    "pdf_file_sha256": "14bcd090baf31edba64e9cbd8cdfc15f943344aa72cb3675ad8e91bfcbce03ad",
+    "raw_pdf_base64": "JVBERi0xLjQKJSVFT0YK",
+    "source_date": "2026-07-27",
+    "source_id": "example-pdf-strategy",
+    "source_location": "controlled/examples/strategy.pdf",
+    "source_posture": "authoritative_internal",
+    "source_version_id": "source-version-example-pdf-strategy",
+    "title": "Example PDF strategy"
+  }
+}

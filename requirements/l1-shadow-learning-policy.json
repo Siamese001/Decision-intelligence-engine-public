@@ -1,0 +1,1 @@
+{"policy_id":"l1-shadow-learning-policy","schema_version":"1.0.0","runtime_default":"off","minimum_repeat_count":2,"zero_tolerance_categories":["checkpoint_failure"],"automatic_policy_change_count":0,"raw_content_registry_allowed":false,"extensions":{}}

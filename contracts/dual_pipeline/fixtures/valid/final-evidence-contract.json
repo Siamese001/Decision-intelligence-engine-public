@@ -1,0 +1,75 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:final-evidence-contract:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "final-evidence-contract-fixture",
+  "query_id": "query-fixture-001",
+  "run_id": "run-fixture-001",
+  "graph_generation_id": "gen-fixture-001",
+  "graph_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "sidecar_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "evidence_records": [
+    {
+      "record_id": "record-001",
+      "lane": "approved",
+      "stratum": "MUST_USE",
+      "evidence_ids": [
+        "evidence-001"
+      ],
+      "entity_ids": [
+        "entity-001"
+      ],
+      "retrieval_text_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "dense_score": 0.89,
+      "sparse_score": 0.72,
+      "colbert_score": 0.85,
+      "rerank_score": 0.91,
+      "graph_hop_depth": 0,
+      "epistemic_status": "approved",
+      "contradiction_flag": false
+    },
+    {
+      "record_id": "record-002",
+      "lane": "candidate",
+      "stratum": "SUPPORTING",
+      "evidence_ids": [
+        "evidence-002"
+      ],
+      "entity_ids": [
+        "entity-002"
+      ],
+      "retrieval_text_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "dense_score": 0.65,
+      "sparse_score": 0.58,
+      "colbert_score": null,
+      "rerank_score": null,
+      "graph_hop_depth": 1,
+      "epistemic_status": "candidate",
+      "contradiction_flag": false
+    }
+  ],
+  "coverage_summary": {
+    "total_requirements": 3,
+    "covered_requirements": 2,
+    "coverage_sufficient": true,
+    "gap_descriptions": [
+      "No evidence for requirement R3"
+    ]
+  },
+  "retrieval_metadata": {
+    "retrieval_mode": "hybrid_colbert",
+    "retrieval_policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "total_candidates_considered": 50,
+    "total_records_selected": 2
+  },
+  "classification": "internal",
+  "audiences": [
+    "nee-engineering"
+  ],
+  "created_at": "2026-09-10T14:01:00Z",
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "079a5c16e358bbd22c22b73dd6c8d4c1d0f8a25f280245825229c6a444287fcd"
+  }
+}

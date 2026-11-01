@@ -1,0 +1,36 @@
+{
+  "name": "miro",
+  "version": "0.1.0",
+  "description": "Read, synthesize, diagram, and safely update Miro boards through Miro's official MCP server.",
+  "author": {
+    "name": "NEE Knowledge Graph contributors"
+  },
+  "homepage": "https://developers.miro.com/docs/miro-mcp",
+  "keywords": [
+    "miro",
+    "whiteboard",
+    "diagram",
+    "workshop",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Miro",
+    "shortDescription": "Read and build Miro boards with safe write previews.",
+    "longDescription": "Connect to Miro's official MCP server with OAuth to summarize boards, create diagrams and workshop layouts, update scoped board content, and report exact write results.",
+    "developerName": "NEE Knowledge Graph",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "OAuth"
+    ],
+    "websiteURL": "https://developers.miro.com/docs/miro-mcp",
+    "defaultPrompt": [
+      "Summarize this Miro board and identify decisions and open actions.",
+      "Create an architecture diagram on this Miro board.",
+      "Turn these workshop notes into a structured Miro layout."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

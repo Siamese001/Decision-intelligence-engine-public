@@ -1,0 +1,62 @@
+{
+  "artifact_id": "aiar-req-ingest-9b09476899d3f705",
+  "authentic_response": null,
+  "baseline_generation": 0,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "fcd1dd92ad9ffeee169f550744090825eccdfd47277c4694bf2ae5e462c15168"
+  },
+  "contract_id": "urn:nee:dual-pipeline:active-ingestion-approval-request:1.0.0",
+  "directive_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+  "dispatch_status": "DISPATCHED",
+  "expires_at": "2026-10-13T18:54:12.045235+00:00",
+  "extensions": {
+    "display_receipt": {
+      "delivery_status": "PENDING",
+      "dispatched_at": "2026-10-12T18:54:12.126909+00:00",
+      "display_receipt_id": "disp-req-ingest-9b09476899d3f705",
+      "question_digest": "b2a7212f200353b82dcb2f1d2c373909f560f765191533c66bdc5056772c3e8a",
+      "request_id": "req-ingest-9b09476899d3f705",
+      "runtime_tool": "ask_question"
+    }
+  },
+  "namespace": "production",
+  "permitted_operation_class": "candidate_publication",
+  "project": "bmo",
+  "proposed_delta_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+  "question_payload": {
+    "context": "Active ingestion proposes graph mutation under directive directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1.",
+    "options": [
+      {
+        "action": "Proceed with release preparation and activation",
+        "confidence_score": 0.95,
+        "confidence_tier": "HIGH",
+        "is_recommended": true,
+        "label": "Approve candidate publication into active knowledge graph",
+        "option_id": "opt_approve"
+      },
+      {
+        "action": "Halt ingestion workflow and record decline without mutating graph",
+        "confidence_score": 0.05,
+        "confidence_tier": "LOW",
+        "is_recommended": false,
+        "label": "Decline candidate publication",
+        "option_id": "opt_decline"
+      }
+    ],
+    "question_id": "q-req-ingest-9b09476899d3f705",
+    "table_deltas": {
+      "assertion": 1,
+      "node": 1,
+      "source": 1
+    },
+    "title": "Active Ingestion Approval: bmo (directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1)"
+  },
+  "request_id": "req-ingest-9b09476899d3f705",
+  "response_status": "AWAITING",
+  "run_id": "run-directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+  "runtime_root": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/output/bmo/10-12-2026/James_Beebe_Business_Management_Chad",
+  "schema_version": "1.0.0",
+  "source_package_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+}

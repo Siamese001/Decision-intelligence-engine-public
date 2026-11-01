@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0",
+  "title": "NEE Universal Write Gateway policy-bound candidate-lane benchmark",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "benchmark_id", "origin_run_id", "candidate_assertion_ids", "cases", "negative_cases", "lane_isolation_cases", "acl_cases", "thresholds", "acceptance_policy", "created_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "benchmark_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "origin_run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "candidate_assertion_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0#/$defs/positiveCase"}
+    },
+    "negative_cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0#/$defs/absenceCase"}
+    },
+    "lane_isolation_cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0#/$defs/absenceCase"}
+    },
+    "acl_cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0#/$defs/absenceCase"}
+    },
+    "thresholds": {"$ref": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0#/$defs/thresholds"},
+    "acceptance_policy": {"$ref": "urn:nee:dual-pipeline:uwg-benchmark:1.0.0#/$defs/policyBinding"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "positiveCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "query", "expected_assertion_ids", "classification", "audiences"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "query": {"type": "string", "minLength": 1, "maxLength": 4000},
+        "expected_assertion_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+        },
+        "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+        "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"}
+      }
+    },
+    "absenceCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "query", "forbidden_assertion_ids", "classification", "audiences"],
+      "properties": {
+        "case_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "query": {"type": "string", "minLength": 1, "maxLength": 4000},
+        "forbidden_assertion_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}
+        },
+        "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+        "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"}
+      }
+    },
+    "thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["top_k", "min_recall_at_k", "min_mrr", "max_latency_ms", "max_negative_leakage_rate", "max_lane_leakage_rate", "max_acl_leakage_rate"],
+      "properties": {
+        "top_k": {"type": "integer", "minimum": 1, "maximum": 100},
+        "min_recall_at_k": {"type": "number", "minimum": 0.000001, "maximum": 1},
+        "min_mrr": {"type": "number", "minimum": 0.000001, "maximum": 1},
+        "max_latency_ms": {"type": "number", "minimum": 1},
+        "max_negative_leakage_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "max_lane_leakage_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "max_acl_leakage_rate": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "policyBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy_id", "policy_version", "policy_digest", "owner"],
+      "properties": {
+        "policy_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "policy_version": {"type": "string", "minLength": 1, "maxLength": 64},
+        "policy_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "owner": {"type": "string", "minLength": 3, "maxLength": 256}
+      }
+    }
+  }
+}

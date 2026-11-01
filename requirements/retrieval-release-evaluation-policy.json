@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "bge-m3-retrieval-release-policy",
+  "policy_version": "1.1.0",
+  "owner": "NEE Knowledge Governance",
+  "thresholds": {
+    "min_core_recall_at_k": 1,
+    "min_core_mrr": 1,
+    "min_core_ndcg_at_k": 1,
+    "min_delta_recall_at_k": 1,
+    "min_delta_mrr": 1,
+    "min_delta_ndcg_at_k": 1,
+    "critical_top_k": 1,
+    "max_rank_regression": 0,
+    "repeat_run_count": 2,
+    "max_repeat_rank_drift": 0,
+    "max_latency_ms": 7500,
+    "max_forbidden_leakage_count": 0
+  },
+  "delta_case_requirements": {
+    "added_or_changed": {
+      "semantic_paraphrase": 3,
+      "alias": 1,
+      "hard_negative": 1,
+      "lane_isolation": 1,
+      "acl_boundary": 1
+    },
+    "removed": {
+      "stale_or_superseded": 1
+    }
+  }
+}

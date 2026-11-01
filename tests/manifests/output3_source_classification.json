@@ -1,0 +1,33 @@
+{
+  "name": "output3_source_classification",
+  "description": "Output 3 source classification, fail-closed boundaries, and evidence fidelity test suite",
+  "branch": "feat/output3-source-classification-plan",
+  "deterministic_tests": [
+    "tests.test_output3_wave_receipts",
+    "tests.test_document_output3_only_rca",
+    "tests.test_source_modality_classification"
+  ],
+  "e2e_tests": [
+    "tests.test_output3_fail_closed_e2e",
+    "tests.test_output3_fail_closed_adversarial",
+    "tests.test_output3_source_profile_e2e",
+    "tests.test_output3_source_profile_adversarial",
+    "tests.test_output3_visual_adapter_e2e",
+    "tests.test_output3_visual_adapter_adversarial",
+    "tests.test_output3_context_parity_e2e",
+    "tests.test_output3_context_parity_adversarial",
+    "tests.test_output3_claim_semantics_e2e",
+    "tests.test_output3_claim_semantics_adversarial",
+    "tests.test_signal_extraction",
+    "tests.test_epistemic_evidence_corroboration",
+    "tests.test_output3_edge_traits_schema",
+    "tests.test_graph_writer_edge_traits",
+    "tests.test_output3_cross_route_e2e",
+    "tests.test_output3_cross_route_adversarial",
+    "tests.test_output3_judge_cryptographic_enforcement",
+    "tests.test_output3_graph_mutation_e2e",
+    "tests.test_output3_graph_mutation_adversarial"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-06T14:40:00Z"
+}

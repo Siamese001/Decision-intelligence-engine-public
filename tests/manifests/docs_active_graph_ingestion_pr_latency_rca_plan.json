@@ -1,0 +1,12 @@
+{
+  "name": "docs_active_graph_ingestion_pr_latency_rca_plan",
+  "description": "PR promotion timing, safe readiness reuse, and stale-base fail-fast coverage",
+  "branch": "docs/active-graph-ingestion-pr-latency-rca-plan",
+  "deterministic_tests": [],
+  "e2e_tests": [
+    "tests.end_to_end.test_pr_latency_optimization_e2e",
+    "tests.end_to_end.test_pr_review_gate_dedup_optimization_e2e"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-06T00:00:00Z"
+}

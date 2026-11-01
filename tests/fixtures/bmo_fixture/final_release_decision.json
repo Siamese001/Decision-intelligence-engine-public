@@ -1,0 +1,30 @@
+{
+  "mode": "document",
+  "attempt": 1,
+  "max_attempts": 2,
+  "output_1_deterministic_gates_pass": true,
+  "output_1_llm_score_pass": true,
+  "output_1_pass": true,
+  "output_2_deterministic_gates_pass": true,
+  "output_2_llm_score_pass": true,
+  "output_2_pass": true,
+  "output_3_deterministic_gates_pass": true,
+  "output_3_llm_score_pass": true,
+  "output_3_pass": true,
+  "cross_artifact_consistency_pass": true,
+  "final_pass": true,
+  "authoritative_write_authorized": true,
+  "status": "PASS",
+  "judge_evaluation_digest": "fcfefd2ad843757fdd3da707460d89aa1e559c5e8c19d41a27ac9e0eb93e5e64",
+  "policy_version": "2.0.0",
+  "rubric_version": "2.0",
+  "artifact_manifest": {
+    "output_1_sha256": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+    "output_2_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "output_3_sha256": "ece829ecad9d36d1eb18017438414026fbda272954ff4f941725497658c2d2be",
+    "evaluator_model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "judge_evaluation_digest": "fcfefd2ad843757fdd3da707460d89aa1e559c5e8c19d41a27ac9e0eb93e5e64",
+    "decision_seal_sha256": "dd5a9dcd17e264e1de6b5ed01a749cfcf49c18f731aca405527a00824f772580"
+  }
+}

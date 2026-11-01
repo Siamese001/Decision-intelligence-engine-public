@@ -1,0 +1,5202 @@
+[
+  {
+    "photo_id": "WTG04_IMG_0001",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 110.0,
+    "laplacian_variance": 42.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.5,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.52,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0002",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 110.0,
+    "laplacian_variance": 42.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.5,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.52,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0003",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 110.0,
+    "laplacian_variance": 42.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.5,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.52,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0004",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 110.0,
+    "laplacian_variance": 42.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.5,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.52,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0005",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 110.0,
+    "laplacian_variance": 42.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.5,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.52,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0006",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 110.0,
+    "laplacian_variance": 42.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.5,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.52,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0007",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 110.0,
+    "laplacian_variance": 42.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.5,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.52,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0008",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 110.0,
+    "laplacian_variance": 42.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.5,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1",
+      "serial_number": "943434001",
+      "confidence": 0.52,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0009",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 240.0,
+    "laplacian_variance": 130.0,
+    "detected_token_count": 12,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.45,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.48,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0010",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 25.0,
+    "laplacian_variance": 130.0,
+    "detected_token_count": 12,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.45,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.48,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0011",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 240.0,
+    "laplacian_variance": 130.0,
+    "detected_token_count": 12,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.45,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.48,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0012",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 25.0,
+    "laplacian_variance": 130.0,
+    "detected_token_count": 12,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.45,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.48,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0013",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 240.0,
+    "laplacian_variance": 130.0,
+    "detected_token_count": 12,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.45,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.48,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0014",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 25.0,
+    "laplacian_variance": 130.0,
+    "detected_token_count": 12,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.45,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.48,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0015",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 240.0,
+    "laplacian_variance": 130.0,
+    "detected_token_count": 12,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.45,
+      "bounding_box_area": 1.0
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX",
+      "serial_number": "1SDA068",
+      "confidence": 0.48,
+      "bounding_box_area": 1.0
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0016",
+    "turbine_id": "WTG_04",
+    "component_type": "faa_warning_light",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 180.0,
+    "detected_token_count": 0,
+    "model_a": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "model_b": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "ground_truth_manufacturer": "DIALIGHT",
+    "ground_truth_model_number": "VRS-FAA-L864",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0017",
+    "turbine_id": "WTG_04",
+    "component_type": "faa_warning_light",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 180.0,
+    "detected_token_count": 0,
+    "model_a": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "model_b": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "ground_truth_manufacturer": "DIALIGHT",
+    "ground_truth_model_number": "VRS-FAA-L864",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0018",
+    "turbine_id": "WTG_04",
+    "component_type": "faa_warning_light",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 180.0,
+    "detected_token_count": 0,
+    "model_a": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "model_b": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "ground_truth_manufacturer": "DIALIGHT",
+    "ground_truth_model_number": "VRS-FAA-L864",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0019",
+    "turbine_id": "WTG_04",
+    "component_type": "faa_warning_light",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 180.0,
+    "detected_token_count": 0,
+    "model_a": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "model_b": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "ground_truth_manufacturer": "DIALIGHT",
+    "ground_truth_model_number": "VRS-FAA-L864",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0020",
+    "turbine_id": "WTG_04",
+    "component_type": "faa_warning_light",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 180.0,
+    "detected_token_count": 0,
+    "model_a": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "model_b": {
+      "manufacturer": "UNKNOWN",
+      "model_number": "UNKNOWN",
+      "serial_number": "UNKNOWN",
+      "confidence": 0.1,
+      "bounding_box_area": 0.0
+    },
+    "ground_truth_manufacturer": "DIALIGHT",
+    "ground_truth_model_number": "VRS-FAA-L864",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0021",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 131.0,
+    "laplacian_variance": 181.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0022",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 132.0,
+    "laplacian_variance": 182.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0023",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 133.0,
+    "laplacian_variance": 183.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0024",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 134.0,
+    "laplacian_variance": 184.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0025",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 185.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0026",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 136.0,
+    "laplacian_variance": 186.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0027",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 137.0,
+    "laplacian_variance": 187.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0028",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 138.0,
+    "laplacian_variance": 188.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0029",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 139.0,
+    "laplacian_variance": 189.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0030",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 140.0,
+    "laplacian_variance": 160.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0031",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 141.0,
+    "laplacian_variance": 161.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0032",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 142.0,
+    "laplacian_variance": 162.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0033",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 143.0,
+    "laplacian_variance": 163.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0034",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 144.0,
+    "laplacian_variance": 164.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0035",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 145.0,
+    "laplacian_variance": 165.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0036",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 146.0,
+    "laplacian_variance": 166.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0037",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 147.0,
+    "laplacian_variance": 167.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0038",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 148.0,
+    "laplacian_variance": 168.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0039",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 149.0,
+    "laplacian_variance": 169.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0040",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 170.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0041",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 131.0,
+    "laplacian_variance": 171.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0042",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 132.0,
+    "laplacian_variance": 172.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0043",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 133.0,
+    "laplacian_variance": 173.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0044",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 134.0,
+    "laplacian_variance": 174.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0045",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 175.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0046",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 136.0,
+    "laplacian_variance": 176.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0047",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 137.0,
+    "laplacian_variance": 177.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0048",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 138.0,
+    "laplacian_variance": 178.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0049",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 139.0,
+    "laplacian_variance": 179.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0050",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 140.0,
+    "laplacian_variance": 180.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0051",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 141.0,
+    "laplacian_variance": 181.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0052",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 142.0,
+    "laplacian_variance": 182.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0053",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 143.0,
+    "laplacian_variance": 183.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0054",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 144.0,
+    "laplacian_variance": 184.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0055",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 145.0,
+    "laplacian_variance": 185.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0056",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 146.0,
+    "laplacian_variance": 186.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0057",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 147.0,
+    "laplacian_variance": 187.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0058",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 148.0,
+    "laplacian_variance": 188.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0059",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 149.0,
+    "laplacian_variance": 189.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0060",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 160.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0061",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 131.0,
+    "laplacian_variance": 161.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0062",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 132.0,
+    "laplacian_variance": 162.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0063",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 133.0,
+    "laplacian_variance": 163.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0064",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 134.0,
+    "laplacian_variance": 164.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0065",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 165.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0066",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 136.0,
+    "laplacian_variance": 166.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0067",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 137.0,
+    "laplacian_variance": 167.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0068",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 138.0,
+    "laplacian_variance": 168.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0069",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 139.0,
+    "laplacian_variance": 169.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0070",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 140.0,
+    "laplacian_variance": 170.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0071",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 141.0,
+    "laplacian_variance": 171.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0072",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 142.0,
+    "laplacian_variance": 172.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0073",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 143.0,
+    "laplacian_variance": 173.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0074",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 144.0,
+    "laplacian_variance": 174.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0075",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 145.0,
+    "laplacian_variance": 175.0,
+    "detected_token_count": 22,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.94,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0076",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 141.0,
+    "laplacian_variance": 166.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0077",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 142.0,
+    "laplacian_variance": 167.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0078",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 143.0,
+    "laplacian_variance": 168.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0079",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 144.0,
+    "laplacian_variance": 169.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0080",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 125.0,
+    "laplacian_variance": 170.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0081",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 126.0,
+    "laplacian_variance": 171.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0082",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 127.0,
+    "laplacian_variance": 172.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0083",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 128.0,
+    "laplacian_variance": 173.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0084",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 129.0,
+    "laplacian_variance": 174.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0085",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 175.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0086",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 131.0,
+    "laplacian_variance": 176.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0087",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 132.0,
+    "laplacian_variance": 177.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0088",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 133.0,
+    "laplacian_variance": 178.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0089",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 134.0,
+    "laplacian_variance": 179.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0090",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 150.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0091",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 136.0,
+    "laplacian_variance": 151.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0092",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 137.0,
+    "laplacian_variance": 152.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0093",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 138.0,
+    "laplacian_variance": 153.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0094",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 139.0,
+    "laplacian_variance": 154.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0095",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 140.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0096",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 141.0,
+    "laplacian_variance": 156.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0097",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 142.0,
+    "laplacian_variance": 157.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0098",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 143.0,
+    "laplacian_variance": 158.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0099",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 144.0,
+    "laplacian_variance": 159.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0100",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 125.0,
+    "laplacian_variance": 160.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0101",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 126.0,
+    "laplacian_variance": 161.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0102",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 127.0,
+    "laplacian_variance": 162.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0103",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 128.0,
+    "laplacian_variance": 163.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0104",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 129.0,
+    "laplacian_variance": 164.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0105",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 165.0,
+    "detected_token_count": 18,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.92,
+      "bounding_box_area": 0.88
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.8,
+      "bounding_box_area": 0.12
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0106",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 126.0,
+    "laplacian_variance": 151.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-220??",
+      "serial_number": "SKF-884120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0107",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 127.0,
+    "laplacian_variance": 152.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/??",
+      "serial_number": "SEM-449102",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0108",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 128.0,
+    "laplacian_variance": 153.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A??",
+      "serial_number": "BSM-99120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0109",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 129.0,
+    "laplacian_variance": 154.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0A??",
+      "serial_number": "943434001",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0110",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPA??",
+      "serial_number": "GE9847211",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0111",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 131.0,
+    "laplacian_variance": 156.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-??",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0112",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 132.0,
+    "laplacian_variance": 157.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0??",
+      "serial_number": "BK098231",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0113",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 133.0,
+    "laplacian_variance": 158.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUAT??",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0114",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 134.0,
+    "laplacian_variance": 159.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-220??",
+      "serial_number": "SKF-884120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0115",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 160.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/??",
+      "serial_number": "SEM-449102",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0116",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 136.0,
+    "laplacian_variance": 161.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A??",
+      "serial_number": "BSM-99120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0117",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 137.0,
+    "laplacian_variance": 162.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0A??",
+      "serial_number": "943434001",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0118",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 138.0,
+    "laplacian_variance": 163.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPA??",
+      "serial_number": "GE9847211",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0119",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 139.0,
+    "laplacian_variance": 164.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-??",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0120",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 120.0,
+    "laplacian_variance": 165.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0??",
+      "serial_number": "BK098231",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0121",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 121.0,
+    "laplacian_variance": 166.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUAT??",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0122",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 122.0,
+    "laplacian_variance": 167.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-220??",
+      "serial_number": "SKF-884120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0123",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 123.0,
+    "laplacian_variance": 168.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/??",
+      "serial_number": "SEM-449102",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0124",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 124.0,
+    "laplacian_variance": 169.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A??",
+      "serial_number": "BSM-99120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0125",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 125.0,
+    "laplacian_variance": 145.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0A??",
+      "serial_number": "943434001",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0126",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 126.0,
+    "laplacian_variance": 146.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPA??",
+      "serial_number": "GE9847211",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0127",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 127.0,
+    "laplacian_variance": 147.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-??",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0128",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 128.0,
+    "laplacian_variance": 148.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0??",
+      "serial_number": "BK098231",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0129",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 129.0,
+    "laplacian_variance": 149.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUAT??",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0130",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 150.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-220??",
+      "serial_number": "SKF-884120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0131",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 131.0,
+    "laplacian_variance": 151.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/??",
+      "serial_number": "SEM-449102",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0132",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 132.0,
+    "laplacian_variance": 152.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A??",
+      "serial_number": "BSM-99120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0133",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 133.0,
+    "laplacian_variance": 153.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0A??",
+      "serial_number": "943434001",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0134",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 134.0,
+    "laplacian_variance": 154.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPA??",
+      "serial_number": "GE9847211",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0135",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-??",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0136",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 136.0,
+    "laplacian_variance": 156.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0??",
+      "serial_number": "BK098231",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0137",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 137.0,
+    "laplacian_variance": 157.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUAT??",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0138",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 138.0,
+    "laplacian_variance": 158.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-220??",
+      "serial_number": "SKF-884120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0139",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 139.0,
+    "laplacian_variance": 159.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/??",
+      "serial_number": "SEM-449102",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0140",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 120.0,
+    "laplacian_variance": 160.0,
+    "detected_token_count": 16,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.91,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A??",
+      "serial_number": "BSM-99120",
+      "confidence": 0.85,
+      "bounding_box_area": 0.78
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0141",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 131.0,
+    "laplacian_variance": 141.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434008",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0142",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 132.0,
+    "laplacian_variance": 142.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847218",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0143",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 133.0,
+    "laplacian_variance": 143.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R8",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0144",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 134.0,
+    "laplacian_variance": 144.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098238",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0145",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 145.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0146",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 136.0,
+    "laplacian_variance": 146.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-88412O",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0147",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 137.0,
+    "laplacian_variance": 147.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449108",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0148",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 138.0,
+    "laplacian_variance": 148.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-9912O",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0149",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 139.0,
+    "laplacian_variance": 149.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434008",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0150",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 125.0,
+    "laplacian_variance": 150.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847218",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0151",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 126.0,
+    "laplacian_variance": 151.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R8",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0152",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 127.0,
+    "laplacian_variance": 152.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098238",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0153",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 128.0,
+    "laplacian_variance": 153.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0154",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 129.0,
+    "laplacian_variance": 154.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-88412O",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0155",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449108",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0156",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 131.0,
+    "laplacian_variance": 156.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-9912O",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0157",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 132.0,
+    "laplacian_variance": 157.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434008",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0158",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 133.0,
+    "laplacian_variance": 158.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847211",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAH1A",
+      "serial_number": "GE9847218",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0159",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 134.0,
+    "laplacian_variance": 159.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-250",
+      "serial_number": "1SDA068143R8",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0160",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 135.0,
+    "laplacian_variance": 140.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098231",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-0000",
+      "serial_number": "BK098238",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0161",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 136.0,
+    "laplacian_variance": 141.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "[N/A - BY DESIGN]",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0162",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 137.0,
+    "laplacian_variance": 142.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-884120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "SKF",
+      "model_number": "CMSS-2200-T",
+      "serial_number": "SKF-88412O",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0163",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 138.0,
+    "laplacian_variance": 143.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449102",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "SEMIKRON",
+      "model_number": "SKKT-250/16E",
+      "serial_number": "SEM-449108",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0164",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 139.0,
+    "laplacian_variance": 144.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-99120",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "BUSSMANN",
+      "model_number": "FWX-50A14F",
+      "serial_number": "BSM-9912O",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0165",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 125.0,
+    "laplacian_variance": 145.0,
+    "detected_token_count": 20,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434001",
+      "confidence": 0.93,
+      "bounding_box_area": 0.82
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUMM",
+      "serial_number": "943434008",
+      "confidence": 0.84,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0166",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0167",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0168",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0169",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0170",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0171",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0172",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0173",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0174",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0175",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0176",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0177",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0178",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0179",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0180",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 130.0,
+    "laplacian_variance": 155.0,
+    "detected_token_count": 14,
+    "model_a": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NOT DETECTED",
+      "confidence": 0.9,
+      "bounding_box_area": 0.85
+    },
+    "model_b": {
+      "manufacturer": "PHOENIX CONTACT",
+      "model_number": "UT-4-QUATTRO",
+      "serial_number": "NONE",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0181",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 118.0,
+    "laplacian_variance": 135.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUXX",
+      "serial_number": "943434001",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "HIRSCHMANN",
+      "model_number": "RS20-0800T1T1T0AUXX",
+      "serial_number": "943434001",
+      "confidence": 0.87,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0182",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 118.0,
+    "laplacian_variance": 135.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAHXX",
+      "serial_number": "GE9847211",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "GENERAL ELECTRIC",
+      "model_number": "IS200TRPAHXX",
+      "serial_number": "GE9847211",
+      "confidence": 0.87,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0183",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 118.0,
+    "laplacian_variance": 135.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-2XX",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "ABB",
+      "model_number": "TMAX-XT4N-2XX",
+      "serial_number": "1SDA068143R1",
+      "confidence": 0.87,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0184",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 118.0,
+    "laplacian_variance": 135.0,
+    "detected_token_count": 15,
+    "model_a": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-00XX",
+      "serial_number": "BK098231",
+      "confidence": 0.88,
+      "bounding_box_area": 0.8
+    },
+    "model_b": {
+      "manufacturer": "BECKHOFF",
+      "model_number": "EL3064-00XX",
+      "serial_number": "BK098231",
+      "confidence": 0.87,
+      "bounding_box_area": 0.79
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0185",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0186",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0187",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0188",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0189",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0190",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0191",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0192",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0193",
+    "turbine_id": "WTG_04",
+    "component_type": "terminal_busbar",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "PHOENIX CONTACT",
+    "ground_truth_model_number": "UT-4-QUATTRO",
+    "ground_truth_serial_number": "[N/A - BY DESIGN]",
+    "has_factory_serial": false
+  },
+  {
+    "photo_id": "WTG04_IMG_0194",
+    "turbine_id": "WTG_04",
+    "component_type": "yaw_sensor",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "SKF",
+    "ground_truth_model_number": "CMSS-2200-T",
+    "ground_truth_serial_number": "SKF-884120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0195",
+    "turbine_id": "WTG_04",
+    "component_type": "power_converter_diode",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "SEMIKRON",
+    "ground_truth_model_number": "SKKT-250/16E",
+    "ground_truth_serial_number": "SEM-449102",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0196",
+    "turbine_id": "WTG_04",
+    "component_type": "fuse_block",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "BUSSMANN",
+    "ground_truth_model_number": "FWX-50A14F",
+    "ground_truth_serial_number": "BSM-99120",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0197",
+    "turbine_id": "WTG_04",
+    "component_type": "network_switch",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "HIRSCHMANN",
+    "ground_truth_model_number": "RS20-0800T1T1T0AUMM",
+    "ground_truth_serial_number": "943434001",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0198",
+    "turbine_id": "WTG_04",
+    "component_type": "pitch_controller",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "GENERAL ELECTRIC",
+    "ground_truth_model_number": "IS200TRPAH1A",
+    "ground_truth_serial_number": "GE9847211",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0199",
+    "turbine_id": "WTG_04",
+    "component_type": "circuit_breaker",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "ABB",
+    "ground_truth_model_number": "TMAX-XT4N-250",
+    "ground_truth_serial_number": "1SDA068143R1",
+    "has_factory_serial": true
+  },
+  {
+    "photo_id": "WTG04_IMG_0200",
+    "turbine_id": "WTG_04",
+    "component_type": "io_module",
+    "mean_luminance": 105.0,
+    "laplacian_variance": 125.0,
+    "detected_token_count": 10,
+    "model_a": {
+      "manufacturer": "SIEMENS",
+      "model_number": "6ES7-UNKNOWN",
+      "serial_number": "???",
+      "confidence": 0.55,
+      "bounding_box_area": 0.4
+    },
+    "model_b": {
+      "manufacturer": "SCHNEIDER",
+      "model_number": "MODICON-??",
+      "serial_number": "XYZ",
+      "confidence": 0.52,
+      "bounding_box_area": 0.45
+    },
+    "ground_truth_manufacturer": "BECKHOFF",
+    "ground_truth_model_number": "EL3064-0000",
+    "ground_truth_serial_number": "BK098231",
+    "has_factory_serial": true
+  }
+]

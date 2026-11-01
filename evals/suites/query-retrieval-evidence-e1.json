@@ -1,0 +1,659 @@
+{
+  "artifact_id": "query-retrieval-evidence-e1",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "606bfa494dcde55573163227577651c70fa647247b2cf9b1de1d46b43a01cf96"
+  },
+  "cases": [
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "qre-exact-lookup",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": null,
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "GRAPH_EVIDENCE_UTILITY",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-bc7c51c11b5f5087e4a110fb6cf8": 5
+        },
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-bc7c51c11b5f5087e4a110fb6cf8"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-bc7c51c11b5f5087e4a110fb6cf8": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Exact governed facts and source locators",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "none",
+      "query_type": "exact_lookup",
+      "question": "Which exact governed Project Beacon records are available?",
+      "tags": [
+        "query",
+        "evidence",
+        "exact"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "qre-current-state",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": null,
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "GRAPH_EVIDENCE_UTILITY",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-bc7c51c11b5f5087e4a110fb6cf8": 5
+        },
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-bc7c51c11b5f5087e4a110fb6cf8"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-bc7c51c11b5f5087e4a110fb6cf8": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Current governed state and effective dates",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "none",
+      "query_type": "current_state",
+      "question": "What is the governed current state of Project Beacon?",
+      "tags": [
+        "query",
+        "evidence",
+        "current"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "qre-current-corroboration",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": null,
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "GRAPH_EVIDENCE_UTILITY",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-bc7c51c11b5f5087e4a110fb6cf8": 5
+        },
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-bc7c51c11b5f5087e4a110fb6cf8"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-bc7c51c11b5f5087e4a110fb6cf8": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Current governed state and effective dates",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "query_type": "current_state_corroboration",
+      "question": "Which approved records corroborate the current Project Beacon status?",
+      "tags": [
+        "query",
+        "evidence",
+        "corroboration"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "qre-relationship",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "standard",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-1bee09c7693bc234e940d79a72e6": 5
+        },
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 1,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-1bee09c7693bc234e940d79a72e6"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-1bee09c7693bc234e940d79a72e6": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Governed relationship paths and direction",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "query_type": "relationship_explanation",
+      "question": "Explain how NEA and Project Beacon are connected and cite governed evidence.",
+      "tags": [
+        "query",
+        "evidence",
+        "relationship"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "qre-cross-workstream",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "standard",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-bb7bea6f43fc85a92bc6d99a9c1c": 5
+        },
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 1,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-bb7bea6f43fc85a92bc6d99a9c1c"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-bb7bea6f43fc85a92bc6d99a9c1c": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Cross-workstream recurring patterns",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "query_type": "cross_workstream_synthesis",
+      "question": "Synthesize governed patterns across Project Beacon and NEA.",
+      "tags": [
+        "query",
+        "evidence",
+        "multi-topic"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "qre-gap-risk",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "standard",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-051efd99dd762351fca2c6d52033": 10
+        },
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 1,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-051efd99dd762351fca2c6d52033"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-051efd99dd762351fca2c6d52033": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Observed gaps, risks, and conflicts",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "query_type": "gap_risk_inconsistency",
+      "question": "Identify governed Project Beacon gaps, risks, conflicts, and missing evidence.",
+      "tags": [
+        "query",
+        "evidence",
+        "gap"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "qre-opportunity",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": false,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "standard",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-298e29f02ab2da2719267277c496": 5
+        },
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-298e29f02ab2da2719267277c496"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-298e29f02ab2da2719267277c496": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Business needs, opportunities, and expected outcomes",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": false,
+        "semantic_retrieval_qualified": true,
+        "status": "BLOCKED",
+        "x3_outcome": "X3B_ESCALATE_HITL"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "query_type": "opportunity_nba",
+      "question": "What are the strongest connected opportunities across NEA and Project Beacon, which pain points and dependencies do they address, and what evidence supports them?",
+      "tags": [
+        "query",
+        "evidence",
+        "opportunity"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "qre-candidate-review",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": false,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "enhanced",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "maximum_fused_rank_by_record": {
+          "retrieval-record-4a7565a08d5ad235bc086f3891b1": 10
+        },
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-4a7565a08d5ad235bc086f3891b1"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-4a7565a08d5ad235bc086f3891b1": "approved"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "explicit_gap"
+            ],
+            "label_contains": "Candidate assertions and proposal-only posture",
+            "minimum_record_count": 0
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": false,
+        "semantic_retrieval_qualified": true,
+        "status": "BLOCKED",
+        "x3_outcome": "X3B_ESCALATE_HITL"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "query_type": "candidate_promotion_review",
+      "question": "Review candidate Project Beacon patterns against approved evidence without promotion.",
+      "tags": [
+        "query",
+        "evidence",
+        "candidate"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:eval-suite:3.0.0",
+  "created_at": "2026-07-30T20:00:00Z",
+  "execution_tier": "E1",
+  "extensions": {
+    "com.partner_advisory.nee.evaluation-purpose": "Query retrieval evidence visibility, coverage, grounding, lane, direction, provider-call, and graph-mutation hard gates."
+  },
+  "graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "pipeline": "query",
+  "provider_posture": "fake",
+  "runtime_boundary": "POST_RUNTIME_VERIFICATION",
+  "schema_version": "3.0.0",
+  "suite_id": "query-retrieval-evidence-e1",
+  "thresholds": {
+    "maximum_graph_mutation_count": 0,
+    "maximum_provider_call_count": 5,
+    "maximum_unqualified_retrieval_case_count": 0,
+    "minimum_case_pass_rate": 1
+  }
+}

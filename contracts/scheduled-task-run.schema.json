@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:scheduled-task-run:1.0.0",
+  "title": "NEE Governed Scheduled Task Run Contract",
+  "description": "Unified schema defining immutable run context, authority boundaries, audit coverage, and operational change accounting for the 6 canonical scheduled workflows and 6 backward-compatible task aliases.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "task_id",
+    "run_id",
+    "attempt_id",
+    "timestamp",
+    "trigger_origin",
+    "execution_mode",
+    "capabilities",
+    "check_scope",
+    "run_outcome",
+    "audit_status",
+    "expected_checks_count",
+    "observed_checks_count",
+    "remediation_status",
+    "notification_status",
+    "findings",
+    "operational_changes",
+    "evidence_manifest"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "const": "urn:nee:scheduled-task-run:1.0.0"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "task_id": {
+      "type": "string",
+      "enum": [
+        "knowledge_graph_hygiene",
+        "pr_queue_observer",
+        "repository_antipattern_audit",
+        "ssot_drift_remediation",
+        "storage_repository_hygiene",
+        "weekly_market_intelligence",
+        "worktree_coverage_cleanup",
+        "cost_quality_review",
+        "pipeline_outcome_assurance",
+        "technical_debt_elimination",
+        "timeout_lock_watchdog",
+        "third_party_tool_consolidation",
+        "frontier_llm_research_scout",
+        "testing_gaps_assurance",
+        "e2e_critical_functionality_assurance",
+        "corner_foresight_blindspot_scout",
+        "hotspot_value_enhancement",
+        "tokenomics_cost_optimization",
+        "agentic_repo_best_practices_scout",
+        "retrieval_surface_assurance",
+        "system_learning_assurance",
+        "evals_surface_assurance"
+      ]
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 4
+    },
+    "attempt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "trigger_origin": {
+      "type": "string",
+      "enum": [
+        "scheduler_cron",
+        "manual_operator",
+        "webhook_dispatch",
+        "test_runner"
+      ]
+    },
+    "execution_mode": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal",
+        "authorized_apply"
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "check_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["declared_targets", "expected_checks", "complete_scope"],
+      "properties": {
+        "declared_targets": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "expected_checks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "complete_scope": {
+          "type": "boolean"
+        },
+        "time_window_start_utc": {
+          "type": ["string", "null"]
+        },
+        "time_window_end_utc": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "run_outcome": {
+      "type": "string",
+      "enum": [
+        "succeeded",
+        "blocked",
+        "failed",
+        "cancelled"
+      ]
+    },
+    "audit_status": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "partial",
+        "not_run"
+      ]
+    },
+    "expected_checks_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "observed_checks_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "remediation_status": {
+      "type": "string",
+      "enum": [
+        "not_required",
+        "proposed",
+        "awaiting_authorization",
+        "patch_verified",
+        "applied_verified",
+        "failed"
+      ]
+    },
+    "notification_status": {
+      "type": "string",
+      "enum": [
+        "quiet",
+        "required",
+        "delivered",
+        "failed"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "finding_id",
+          "owner",
+          "first_seen",
+          "last_seen",
+          "recurrence_count",
+          "next_action",
+          "evidence_refs",
+          "closure_proof"
+        ],
+        "properties": {
+          "finding_id": { "type": "string" },
+          "owner": { "type": "string" },
+          "first_seen": { "type": "string", "format": "date-time" },
+          "last_seen": { "type": "string", "format": "date-time" },
+          "recurrence_count": { "type": "integer", "minimum": 1 },
+          "next_action": { "type": "string" },
+          "evidence_refs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "closure_proof": {
+            "type": ["string", "null"]
+          }
+        }
+      }
+    },
+    "operational_changes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "graph_delta",
+        "sidecar_delta",
+        "directive_delta",
+        "approval_delta",
+        "release_delta",
+        "filesystem_delta",
+        "git_delta",
+        "scheduler_delta",
+        "verified_defect_repairs",
+        "unauthorized_attempts"
+      ],
+      "properties": {
+        "graph_delta": { "type": "integer", "minimum": 0 },
+        "sidecar_delta": { "type": "integer", "minimum": 0 },
+        "directive_delta": { "type": "integer", "minimum": 0 },
+        "approval_delta": { "type": "integer", "minimum": 0 },
+        "release_delta": { "type": "integer", "minimum": 0 },
+        "filesystem_delta": { "type": "integer", "minimum": 0 },
+        "git_delta": { "type": "integer", "minimum": 0 },
+        "scheduler_delta": { "type": "integer", "minimum": 0 },
+        "verified_defect_repairs": { "type": "integer", "minimum": 0 },
+        "unauthorized_attempts": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "evidence_manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "input_digests",
+        "output_digests",
+        "log_path",
+        "receipt_digest"
+      ],
+      "properties": {
+        "input_digests": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "output_digests": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "log_path": { "type": "string" },
+        "receipt_digest": { "type": "string" }
+      }
+    }
+  }
+}

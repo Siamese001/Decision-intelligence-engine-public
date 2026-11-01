@@ -1,0 +1,62 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:recovery-manifest:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "rec-20261006-001",
+  "manifest_id": "rec-20261006-001",
+  "runtime_root": "/tmp/test_runtime_root",
+  "generated_at": "2026-10-06T12:00:00Z",
+  "total_sources": 3,
+  "counts_by_status": {
+    "COVERED": 1,
+    "PENDING_APPROVAL": 1,
+    "NEEDS_PUBLICATION": 0,
+    "NEEDS_REEVALUATION": 0,
+    "RECONCILIATION_REQUIRED": 0,
+    "DECLINED": 0,
+    "UNKNOWN": 1
+  },
+  "items": [
+    {
+      "source_path": "transcripts/meeting_01.txt",
+      "source_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+      "status": "COVERED",
+      "directive_id": "dir-20261006-001",
+      "active_generation": 14,
+      "prior_receipt_path": "receipts/active_graph_ingestion/wave1.json",
+      "prior_receipt_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "package_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "reconciliation_reason": "Source verified present in active generation 14 with active receipt.",
+      "suggested_action": "NO_ACTION_REQUIRED"
+    },
+    {
+      "source_path": "transcripts/meeting_02.txt",
+      "source_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+      "status": "PENDING_APPROVAL",
+      "directive_id": "dir-20261006-002",
+      "active_generation": 14,
+      "prior_receipt_path": null,
+      "prior_receipt_digest": null,
+      "package_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "reconciliation_reason": "Proposed delta extracted; awaiting operator signoff in approval_requests.",
+      "suggested_action": "PROMPT_OPERATOR_APPROVAL"
+    },
+    {
+      "source_path": "transcripts/corrupted.txt",
+      "source_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+      "status": "UNKNOWN",
+      "directive_id": null,
+      "active_generation": null,
+      "prior_receipt_path": null,
+      "prior_receipt_digest": null,
+      "package_digest": null,
+      "reconciliation_reason": "Inaccessible source or unresolvable provenance metadata.",
+      "suggested_action": "MANUAL_INVESTIGATION_REQUIRED"
+    }
+  ],
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "055dcc2b0dcbd4a7fb9d39d03671a231f793ef760ed8b2fa454f99c0836061b1"
+  }
+}

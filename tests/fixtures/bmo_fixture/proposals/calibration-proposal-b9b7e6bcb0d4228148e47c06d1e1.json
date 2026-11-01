@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-b9b7e6bcb0d4228148e47c06d1e1",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "ed7432dce1db4c31b3cf9b106ec1f0d74e0bbb65d2607e55cdfd38a9e890a4b7"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-881967206eaa19c29eb9d8bd"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Graph Mutation Breakdown is an identified technical_anchor in 20261005 Lens Scope Review.",
+      "proposed_value": "Graph Mutation Breakdown is an identified technical_anchor in Unknown.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-cca2bb3258b3ceaf44134eedbd87"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-9f6c5e0f9ba92f24438e40c875a0",
+      "assertion_id_older": "assertion-cca2bb3258b3ceaf44134eedbd87",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-9025d42fa98cb6d44141ce7e28cf",
+      "timestamp_newer": "2026-10-06",
+      "timestamp_older": "2026-10-05"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Graph Mutation Breakdown' (HAS_CLAIM_TEXT). Older claim from 2026-10-05 superseded by newer claim from 2026-10-06.",
+  "proposal_id": "calibration-proposal-b9b7e6bcb0d4228148e47c06d1e1",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-cca2bb3258b3ceaf44134eedbd87 from Graph Mutation Breakdown is an identified technical_anchor in 20261005 Lens Scope Review. to Graph Mutation Breakdown is an identified technical_anchor in Unknown.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

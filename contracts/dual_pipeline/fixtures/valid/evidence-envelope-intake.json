@@ -1,0 +1,76 @@
+{
+  "actions": [
+    {
+      "action": "Complete the architecture consolidation.",
+      "action_id": "act-01",
+      "dependency": "stmt-01",
+      "due_date": "2026-09-15",
+      "locator": {
+        "kind": "section",
+        "value": "S01"
+      },
+      "reported_owner": "Drew Oakley",
+      "requested_follow_up": "Review unified schema.",
+      "status": "open"
+    }
+  ],
+  "adapter": {
+    "name": "nee-evidence-envelope-intake",
+    "version": "1.0.0"
+  },
+  "artifact_id": "evidence-envelope-example-20260907",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "69c6e6e6ffe65a63df319e93c1ab360193b7cb86f957c6e8fb13c7f3c7130648"
+  },
+  "contract_id": "urn:nee:dual-pipeline:evidence-envelope-intake:1.0.0",
+  "extensions": {
+    "com.partner_advisory.nee.authority-rank": 5,
+    "com.partner_advisory.nee.source-posture": "working_notes"
+  },
+  "meeting": {
+    "attendees": [
+      "Drew Oakley",
+      "Amit Ayer"
+    ],
+    "audiences": [
+      "nee-engineering",
+      "internal_consulting"
+    ],
+    "classification": "confidential",
+    "google_meet_reference": null,
+    "meeting_id": "meeting-example-20260907",
+    "organizer": "Drew Oakley",
+    "platform_reference": null,
+    "recording_reference": null,
+    "source_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "source_location": "controlled/archive/meeting-example.txt",
+    "started_at": "2026-09-07T10:00:00-04:00",
+    "teams_reference": null,
+    "template_version": "1.0.0",
+    "title": "Example Evidence Envelope Meeting",
+    "transcript_reference": "controlled/archive/meeting-example.txt"
+  },
+  "schema_version": "1.0.0",
+  "speakers": [
+    {
+      "email": "dan.okray@consulting.example.com",
+      "reported_name": "Drew Oakley",
+      "role_or_org": "PartnerAdvisory",
+      "speaker_ref": "spk-dan-okray",
+      "statements": [
+        {
+          "gemini_confidence": 0.95,
+          "kind": "strategic",
+          "locator": {
+            "kind": "section",
+            "value": "S01"
+          },
+          "statement_id": "stmt-01",
+          "text": "Dan proposed unifying the intake architecture."
+        }
+      ]
+    }
+  ]
+}

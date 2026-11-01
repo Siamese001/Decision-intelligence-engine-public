@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-c51c2824389460d345c49df0a680",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "dee4ecb790d439b3dd0621b015f5e764eeee02c20889c5ce77ebf921ec42bc22"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-3f983e3f31b80de5f6797fb2"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "LENS Business Rule Registry is an identified technical_anchor in Document 20260612 Lens Visual Asset Intelligence Sow.",
+      "proposed_value": "LENS Business Rule Registry is an identified technical_anchor in Document 20261002 Project Lens Scope Closeout.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-574b9fd20a4348a98f76da34bd1e"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-3b31a38ba242d33f258aeed35ea6",
+      "assertion_id_older": "assertion-574b9fd20a4348a98f76da34bd1e",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-dd0c2fae88e29da4afe0a74f1df2",
+      "timestamp_newer": "2026-10-02",
+      "timestamp_older": "2026-06-12"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS Business Rule Registry' (HAS_CLAIM_TEXT). Older claim from 2026-06-12 superseded by newer claim from 2026-10-02.",
+  "proposal_id": "calibration-proposal-c51c2824389460d345c49df0a680",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-574b9fd20a4348a98f76da34bd1e from LENS Business Rule Registry is an identified technical_anchor in Document 20260612 Lens Visual Asset Intelligence Sow. to LENS Business Rule Registry is an identified technical_anchor in Document 20261002 Project Lens Scope Closeout.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

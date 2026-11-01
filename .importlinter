@@ -1,0 +1,139 @@
+[importlinter]
+root_package = dual_pipeline
+include_external_packages = False
+
+[importlinter:contract:cli-isolation]
+name = CLI Isolation (No core package may import dual_pipeline.cli)
+type = forbidden
+source_modules =
+    dual_pipeline.a2a_finalization_core
+    dual_pipeline.agent_architecture_core
+    dual_pipeline.ambiguity_core
+    dual_pipeline.answer_ledger_core
+    dual_pipeline.attachment_core
+    dual_pipeline.audio_ingestion_core
+    dual_pipeline.backtest_core
+    dual_pipeline.batch_core
+    dual_pipeline.candidate_cleanup_core
+    dual_pipeline.card_refactor_release_core
+    dual_pipeline.clearance_lifecycle_core
+    dual_pipeline.combined_remediation_core
+    dual_pipeline.completion_core
+    dual_pipeline.daily_intelligence_core
+    dual_pipeline.decision_adapter_core
+    dual_pipeline.decision_engine_core
+    dual_pipeline.decision_service_core
+    dual_pipeline.document_pipeline_core
+    dual_pipeline.facets_core
+    dual_pipeline.feedback_topology_core
+    dual_pipeline.graph_ambiguity_core
+    dual_pipeline.graph_consolidation_core
+    dual_pipeline.graph_delta_core
+    dual_pipeline.graph_freshness_core
+    dual_pipeline.graph_maintenance_core
+    dual_pipeline.graph_preview_core
+    dual_pipeline.graph_retrieval_core
+    dual_pipeline.graph_scout_core
+    dual_pipeline.graph_signal_core
+    dual_pipeline.graph_writer_core
+    dual_pipeline.hitl_core
+    dual_pipeline.hitl_governance_core
+    dual_pipeline.identity_core
+    dual_pipeline.identity_resolver_core
+    dual_pipeline.index_core
+    dual_pipeline.ingestion_reasoning_core
+    dual_pipeline.intake_core
+    dual_pipeline.intake_engine_core
+    dual_pipeline.internal_operational_core
+    dual_pipeline.l1_control_core
+    dual_pipeline.l2_policy_core
+    dual_pipeline.l2_providers_core
+    dual_pipeline.label_quality_core
+    dual_pipeline.learning_engine_core
+    dual_pipeline.learning_loop_core
+    dual_pipeline.live_meeting_recorder_core
+    dual_pipeline.llm_judge_core
+    dual_pipeline.normalization_core
+    dual_pipeline.operational_outcomes_core
+    dual_pipeline.preflight_core
+    dual_pipeline.query_core
+    dual_pipeline.query_l1_actions_core
+    dual_pipeline.query_l1_shadow_core
+    dual_pipeline.query_router_core
+    dual_pipeline.recap_ambiguity_core
+    dual_pipeline.release_core
+    dual_pipeline.remediation_core
+    dual_pipeline.retrieval_eval_core
+    dual_pipeline.retrieval_release_core
+    dual_pipeline.retrieval_suite_core
+    dual_pipeline.rollout_controls_core
+    dual_pipeline.runtime_evidence_core
+    dual_pipeline.semantic_cache_core
+    dual_pipeline.source_retirement_core
+    dual_pipeline.source_spans_core
+    dual_pipeline.speaker_attribution_core
+    dual_pipeline.speaker_disambiguation_core
+    dual_pipeline.staleness_core
+    dual_pipeline.strategic_reasoning_core
+    dual_pipeline.strategic_waves_core
+    dual_pipeline.telemetry_core
+    dual_pipeline.tone_analysis_core
+    dual_pipeline.transcript_metadata_core
+    dual_pipeline.transcript_pipeline_core
+    dual_pipeline.transcript_qa_core
+    dual_pipeline.transcript_stages_core
+    dual_pipeline.uwg_core
+    dual_pipeline.validation_closeout_core
+    dual_pipeline.x1_quality_core
+forbidden_modules =
+    dual_pipeline.cli
+ignore_imports =
+    dual_pipeline.transcript_pipeline_core.release_runner -> dual_pipeline.cli.handlers
+    dual_pipeline.document_pipeline_core.publisher -> dual_pipeline.cli.handlers
+    dual_pipeline.live_meeting_recorder_core.copilot_engine -> dual_pipeline.cli.copilot_handlers
+    dual_pipeline.live_meeting_recorder_core.copilot_engine -> dual_pipeline.cli.copilot_session
+    dual_pipeline.live_meeting_recorder_core.copilot_engine -> dual_pipeline.cli.copilot_speech
+    dual_pipeline.live_meeting_recorder_core.recording_host_integration -> dual_pipeline.cli.engine
+    dual_pipeline.live_meeting_recorder_core.recording_host_integration -> dual_pipeline.live_meeting_recorder
+    dual_pipeline.live_meeting_recorder_core.recording_service_adapter -> dual_pipeline.live_meeting_recorder
+    dual_pipeline.live_meeting_recorder_core.recording_service_owner -> dual_pipeline.live_meeting_recorder
+unmatched_ignore_imports_alerting = none
+
+[importlinter:contract:subsystem-layers]
+name = Dual Pipeline Subsystem Layer Hierarchy
+type = layers
+containers =
+    dual_pipeline
+layers =
+    cli
+    query_core : decision_service_core : intake_engine_core : transcript_pipeline_core
+    release_core : graph_writer_core
+    index_core
+    agent_architecture_core : telemetry_core
+ignore_imports =
+    dual_pipeline.transcript_pipeline_core.release_runner -> dual_pipeline.cli.handlers
+    dual_pipeline.index_core.release -> dual_pipeline.release_core.helpers
+    dual_pipeline.index_core.release -> dual_pipeline.release_core.manager
+    dual_pipeline.query_core -> dual_pipeline.release
+    dual_pipeline.query_core.engine -> dual_pipeline.release
+    dual_pipeline.query_core.routed_request -> dual_pipeline.release
+    dual_pipeline.query_core.engine -> dual_pipeline.l1_feedback_loop
+    dual_pipeline.release_core.manager -> dual_pipeline.intake
+    dual_pipeline.release_core.helpers -> dual_pipeline.transcript_stages_core.models
+    dual_pipeline.telemetry_core.constants -> dual_pipeline.storage.governed_context
+    dual_pipeline.telemetry_core.events -> dual_pipeline.core
+    dual_pipeline.telemetry_core.recorder -> dual_pipeline.core
+unmatched_ignore_imports_alerting = none
+
+[importlinter:contract:foundation-isolation]
+name = Foundation Layer Isolation (L0 cannot depend on L4/L5 Orchestration)
+type = forbidden
+source_modules =
+    dual_pipeline.agent_architecture_core
+forbidden_modules =
+    dual_pipeline.cli
+    dual_pipeline.transcript_pipeline_core
+    dual_pipeline.intake_core
+    dual_pipeline.query_core
+    dual_pipeline.release_core
+unmatched_ignore_imports_alerting = none

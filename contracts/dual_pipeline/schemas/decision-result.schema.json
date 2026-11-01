@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:decision-result:1.0.0",
+  "title": "Decision Intelligence result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "terminal_state", "decision_frame", "evidence_pack_digest", "considered_options", "option_assessments", "trade_off_matrix", "recommended_option", "recommendation_rationale", "alternative_options", "risks", "constraints", "assumptions", "unknowns", "confidence", "what_would_change_the_conclusion", "material_conclusions", "execution", "decision_result_digest", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:decision-result:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "terminal_state": {"type": "string", "enum": ["DECISION_PRODUCED", "CLARIFICATION_REQUIRED", "NO_DECISION", "EVIDENCE_READY_DECISION_NOT_PRODUCED"]},
+    "decision_frame": {"type": "object"},
+    "evidence_pack_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "considered_options": {"type": "array", "items": {"type": "object"}},
+    "option_assessments": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:decision-result:1.0.0#/$defs/assessment"}},
+    "trade_off_matrix": {"type": "array", "items": {"type": "object"}},
+    "recommended_option": {"type": ["object", "null"]},
+    "recommendation_rationale": {"type": "string", "minLength": 1},
+    "alternative_options": {"type": "array", "items": {"type": "object"}},
+    "risks": {"type": "array", "items": {"type": "object"}},
+    "constraints": {"type": "array", "items": {"type": "object"}},
+    "assumptions": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "unknowns": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "confidence": {"type": "object"},
+    "what_would_change_the_conclusion": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "material_conclusions": {"type": "array", "items": {"type": "object"}},
+    "execution": {"type": "object"},
+    "decision_result_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["option_id", "criterion_id", "assessment", "rationale", "supporting_evidence_ids", "counterevidence_ids", "constraint_violations", "material_unknowns", "freshness_state"],
+      "properties": {
+        "option_id": {"type": "string", "minLength": 1},
+        "criterion_id": {"type": "string", "minLength": 1},
+        "assessment": {"type": "string", "enum": ["SUPPORTS", "OPPOSES", "MIXED", "UNKNOWN"]},
+        "rationale": {"type": "string", "minLength": 1},
+        "supporting_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "counterevidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "constraint_violations": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "material_unknowns": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "freshness_state": {"type": "string", "enum": ["CURRENT", "STALE_OR_UNKNOWN"]}
+      }
+    }
+  }
+}

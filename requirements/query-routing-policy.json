@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "enforced",
+  "automatic_handoff": false,
+  "external_classifier_allowed": false,
+  "operator_override_allowed": true,
+  "default_delivery_profile": "internal_technical",
+  "default_artifact_type": "answer",
+  "allowed_destinations": [
+    "GENERAL_ASSISTANT_HANDOFF",
+    "OPERATIONAL_WORKFLOW_HANDOFF",
+    "GRAPH_EVIDENCE_UTILITY",
+    "NEE_DECISION_INTELLIGENCE",
+    "ROUTE_AMBIGUOUS"
+  ],
+  "routing_lexicon": {
+    "version": "2.1.0",
+    "general": [
+      "\\b(?:summari[sz](?:e|ing)?|rewrit(?:e|ing)|rephrase|proofread(?:ing)?|brainstorm(?:ing)?|condense|polish|edit|shorten|copyedit|generate|compose|draft(?:ing)?)\\b",
+      "\\b(?:create|write|produce)\\s+(?:a\\s+)?summary\\b",
+      "\\bcreate\\s+concise\\s+minutes\\b",
+      "\\bmeeting\\s+(?:notes|minutes)\\b",
+      "\\bturn\\s+(?:these|this)\\s+(?:notes|transcript)\\b",
+      "\\bwrite\\s+(?:an?|the)\\s+(?:email|message|paragraph)\\b",
+      "\\boutline\\s+(?:discussion\\s+)?topics\\b",
+      "\\bexplain\\s+(?:the\\s+)?(?:English\\s+)?meaning\\b",
+      "\\bexplain\\s+(?:why\\s+)?(?:the\\s+)?(?:word|term|phrase)\\b",
+      "\\bcreate\\s+(?:an?\\s+)?architecture\\s+deck\\b"
+    ],
+    "general_decisive": [
+      "\\b(?:design|create|draw|generate)\\b.{0,40}\\b(?:logo|icon|illustration|image)\\b",
+      "\\brecommend\\b.{0,40}\\b(?:restaurant|hotel|vacation|travel|recipe|movie|book)\\b",
+      "\\b(?:grammar|grammatical|copyedit|proofread|tone|writing\\s+style)\\b"
+    ],
+    "operational": [
+      "\\b(?:restart|rerun|retry|resume|stop|start)\\b.{0,60}\\b(?:workflow|pipeline|ingestion|job|service)\\b",
+      "\\b(?:workbook|spread\\s*-?\\s*sheet|staffing|resource\\s+allocation|allocat(?:e|ing)|(?<!EC\\s)(?<!EC_)(?<!Nuclear\\s)schedul(?:e|ing)|calendar)\\b",
+      "\\bsend\\s+(?:an?\\s+)?email\\b",
+      "\\bupdate\\s+(?:the\\s+)?(?:file|repository|code\\s*-?\\s*base)\\b",
+      "\\b(?:commit(?:ting)?|pull\\s+request|merge\\s+(?:the\\s+)?branch)\\b",
+      "\\bpush(?:ing)?(?:\\s+(?:the\\s+)?(?:current\\s+)?branch)?(?:\\s+(?:to\\s+)?(?:origin|github))?\\b",
+      "\\b(?:ingest|upload(?:ing)?|download)\\b",
+      "\\bmodify\\s+(?:the\\s+)?(?:source\\s+)?files?\\b",
+      "\\bopen\\s+(?:a\\s+)?(?:github\\s+)?review\\b",
+      "\\bpublish\\s+(?:the\\s+)?(?:current\\s+)?branch(?:\\s+to\\s+(?:the\\s+)?remote)?\\b",
+      "\\bbook\\s+(?:\\w+\\s+)?(?:minutes?|meeting)\\b",
+      "\\barrange\\s+(?:a\\s+)?meeting\\b",
+      "\\bdeliver\\s+(?:this\\s+)?(?:note|message|email)\\b",
+      "\\battach\\s+(?:the\\s+)?(?:csv|spreadsheet|file)\\b",
+      "\\brevise\\s+(?:the\\s+)?spreadsheet\\b",
+      "\\bstore\\s+(?:the\\s+)?(?:report|file)\\b.*\\bsharepoint\\b"
+    ],
+    "bounded": [
+      "\\bexact\\b",
+      "\\brecord(?:[-_ #][a-z0-9]+)\\b",
+      "\\brecord\\s+id\\b",
+      "\\bassertion\\s+id\\b",
+      "\\b(?:list|listing|enumerate|enumerating)\\s+(?:the\\s+)?(?:governed\\s+)?(?:NEE\\s+|A2A\\s+|Digital\\s+Sherpa\\s+)?(?:records|citations|evidence(?:\\s+items)?|artifacts)\\b",
+      "\\b(?:show|retrieval\\s+of|return|fetch|retrieve)\\s+(?:the\\s+)?(?:governed\\s+|approved\\s+)?(?:NEE\\s+|A2A\\s+|Digital\\s+Sherpa\\s+)?(?:record|assertion|fact|citation)\\b",
+      "\\bcitation\\s*-?\\s*export\\b",
+      "\\bexport\\s+(?:evidence|citation)\\s+(?:references?|items?)\\b",
+      "\\b(?:inventory|inventory\\s*/\\s*of)\\s+(?:of\\s+)?(?:records|assertions)\\b",
+      "\\b(?:provide|citations?|give\\s+me)\\s+(?:citations?\\s+)?(?:supporting|behind|for)\\b",
+      "\\bwhich\\s+(?:governed\\s+)?records?\\b",
+      "\\b(?:approved\\s+)?(?:fact|assertion)\\s+(?:with\\s+)?(?:an?\\s+)?identifier\\b",
+      "\\bcount\\s+(?:the\\s+)?(?:approved\\s+)?(?:NEE\\s+)?records\\b",
+      "\\bwhich\\s+sources?\\s+substantiate\\b",
+      "\\bfactual\\s+projection\\b",
+      "\\bshow\\s+citation\\b",
+      "\\b(?:citations?|records?|assertions?|evidence)\\s+(?:for|of)\\s+(?:the\\s+)?(?:NEE|A2A|Digital\\s+Sherpa)\\b",
+      "\\b(?:citations?|records?|assertions?|evidence|facts?)\\s+(?:for|of|in|on|supporting)\\s+(?:the\\s+)?(?:DocIQ|Project[\\s_]+Lens|Lens|Project[\\s_]+Jarvis|Jarvis|Project[\\s_]+Nexus|Nexus|Conduit|RegAI|FCDB|EC[\\s_]+Scheduling|Project[\\s_]+Spring|Spring|APEX_TRANS|Insights[\\s_]+Hub|Digital[\\s_]+Sherpa|Sherpa|Enterprise[\\s_]+Architecture|Infrastructure[\\s_]+Automation|Gemini[\\s_]+Enablement|BMO|Business[\\s_]+Management[\\s_]+Office|HRIT|HR[\\s_]+IT|ENTERPRISE4U|HR360|APEX[\\s_]+ReWire|ReWire|APEX|Florida[\\s_]+Account[\\s_]+Planning|Partner[\\s_]+Alliances|Internal[\\s_]+PartnerAdvisory|Market[\\s_]+Intelligence|NEA|Project[\\s_]+NEA|EDO|NEE|Apex Global|A2A)\\b",
+      "\\b(?:who\\s+reports\\s+to|reports?\\s+to|direct\\s+reports?|org(?:anizational)?\\s+(?:chart|structure)|leadership\\s+hierarchy)\\b"
+    ],
+    "graph": [
+      "\\b(?:governed|knowledge\\s+graph|graph\\s+evidence|graph\\s+relationship|approved\\s+(?:fact|assertion|evidence)|candidate\\s+(?:fact|assertion|pattern|review)|counterevidence|Digital\\s+Sherpa|NEE|Apex Global(?:\\s+Energy)?|EDO|Enterprise\\s+Data\\s+Office|A2A|cross[- /]source|cross[- /]workstream|evidence|reports?\\s+to|reporting\\s+structure|org(?:anizational)?\\s+(?:chart|structure)|leadership\\s+hierarchy)\\b",
+      "\\b(?:DocIQ|Project[\\s_]+Lens|Lens|Project[\\s_]+Jarvis|Jarvis|Project[\\s_]+Nexus|Nexus|Conduit|RegAI|FCDB|EC[\\s_]+Scheduling|Project[\\s_]+Spring|APEX_TRANS|Insights[\\s_]+Hub|Enterprise[\\s_]+Architecture|Infrastructure[\\s_]+Automation|Gemini[\\s_]+Enablement|BMO|Business[\\s_]+Management[\\s_]+Office|HRIT|HR[\\s_]+IT|ENTERPRISE4U|HR360|APEX[\\s_]+ReWire|ReWire|APEX|Florida[\\s_]+Account[\\s_]+Planning|Partner[\\s_]+Alliances|Internal[\\s_]+PartnerAdvisory|Market[\\s_]+Intelligence|Market[\\s_]+Trends|Weekly[\\s_]+Trends|NEA|Project[\\s_]+NEA|Apex Global[\\s_]+Analytics|BESS|FERC|FPSC|SPOG|GridOpti|Lakehouse|Databricks|Maximo|SuccessFactors|ServiceNow|Unifier|Primavera|Documentum|SCADA|LAMS|Salesforce)\\b"
+    ],
+    "material": [
+      "\\b(?:should|best|fund|funding)\\b",
+      "\\b(?:recommend(?:ing|ation)?|prioriti[sz](?:e|ation)|diagnos(?:e|is|ing)|root[-\\s]+cause|RCA|architecture|future[- ]state|target[- ]state|design|decision|assess(?:ment)?|explain|explanatory|relat(?:e|ed|es|ing|ionships?)\\s+to|who\\s+(?:leads?|owns?)|risks?|gaps?|constraints?|bottlenecks?|conflict(?:s|ing)?|investment|opportunit(?:y|ies)|compare|candidate\\s+(?:promotion|review|assessment|hypothes[ei]s)|promotion\\s+readiness|corroborat(?:e|ed|ing|ion)|current\\s+state|next[-\\s]+best|business\\s+case|governance|why|rationale|implications?|advise|evaluat(?:e|ion|ing)|determine|choose|rank|identif(?:y|ication)|propose|develop|analy[sz](?:e|is|ing)|failure|disagree|moderniz(?:e|ation|ing)|transformation)\\b"
+    ],
+    "multi_record": [
+      "\\b(?:options?|alternatives?|programs?|initiatives?|approaches?|strategies?|journey|workstreams?)\\b",
+      "\\b(?:across|relat(?:e|ed|es|ing|ionships?)|cross[- /]source|cross[- /]workstream|compare|versus|counterevidence|corroborat(?:e|ed|ing|ion)|conflict(?:s|ing)?|current\\s+state.*patterns?|business\\s+case.*current\\s+state|patterns?.*risks?|why|among|connected|against|conflicting|disagree)\\b",
+      "\\b(?:approved|candidate)\\b.*\\b(?:disagree|conflict(?:s|ing)?)\\b"
+    ],
+    "recommendation": [
+      "\\b(?:should|best|fund|funding)\\b",
+      "\\b(?:recommend(?:ing|ation)?|prioriti[sz](?:e|ation)|opportunit(?:y|ies)|next[-\\s]+best|select|advise|evaluat(?:e|ion|ing)|determine\\s+(?:which|what)|choose|rank|propose)\\b"
+    ],
+    "recommendation_explicit": [
+      "\\b(?:recommend(?:ed|ing|ations?)?|next[-\\s]+best\\s+actions?)\\b"
+    ],
+    "risk": [
+      "\\b(?:diagnos(?:e|is|ing)|root[-\\s]+cause|RCA|risks?\\s+and\\s+gaps?|gaps?\\s+and\\s+risks?|key\\s+risks?|risks?,\\s*constraints?|constraints?\\s+and\\s+bottlenecks?)\\b",
+      "\\b(?:assess|assessment)\\b.*\\bgaps?\\b",
+      "\\bdetermine\\b.*\\bdisagree\\b",
+      "\\bidentify\\b.*\\bfailure\\b",
+      "\\banaly[sz](?:e|is|ing)\\b.*\\b(?:implications?|conflict(?:s|ing)?)\\b"
+    ],
+    "risk_conclusive": [
+      "\\b(?:risks?\\s+and\\s+gaps?|gaps?\\s+and\\s+risks?|key\\s+risks?|risks?,\\s*constraints?|constraints?\\s+and\\s+bottlenecks?|conflict(?:s|ing)?|disagree|failure|inconsisten(?:cy|cies|t))\\b"
+    ],
+    "candidate": [
+      "\\bcandidate\\s+(?:promotion|review|assessment|hypothes[ei]s)\\b",
+      "\\bpromotion\\s+readiness\\b",
+      "\\b(?:review|assess|assessment|evaluate)\\s+(?:the\\s+)?candidate\\s+(?:hypothes[ei]s|patterns?|assertions?|facts?)\\b",
+      "\\bassessment\\s+of\\s+candidate\\s+(?:hypothes[ei]s|patterns?|assertions?|facts?)\\b"
+    ],
+    "synthesis": [
+      "\\b(?:architecture|future[- ]state|target[- ]state|design|cross[- /]workstream|synthesi[sz]e|compare|develop|moderniz(?:e|ation|ing)|journey|transformation)\\b"
+    ],
+    "relationship": [
+      "\\b(?:relationships?|related|how\\s+does|how\\s+do|explain|explanatory|why|rationale)\\b"
+    ],
+    "high_materiality": [
+      "\\b(?:client|commercial|investments?|budget|capital|staffing|architecture|governance|candidate\\s+promotion|(?:assessment\\s+of|review|assess|evaluate)\\s+candidate\\s+patterns?|root[-\\s]+cause|RCA|future[- ]state|target[- ]state)\\b"
+    ],
+    "independent_material": [
+      "\\b(?:recommend(?:ing|ation)?|prioriti[sz](?:e|ation)|advise|choose|rank|propose|develop|design|assess(?:ment)?|evaluat(?:e|ion|ing)|diagnos(?:e|is|ing)|analy[sz](?:e|is|ing)|architecture)\\b"
+    ],
+    "project_status": [
+      "\\b(?:project|program|portfolio|workstream|Digital\\s+Sherpa|Sherpa|EDO|Atlas\\s+Pilot|Grid\\s+Optimization|Trade\\s+Floor|Digital\\s+Thread|Project\\s+Spring|Spring|Asset\\s+Data\\s+Product|Trade\\s+Platform|DocIQ|Project[\\s_]+Lens|Lens|Project[\\s_]+Jarvis|Jarvis|Project[\\s_]+Nexus|Nexus|Conduit|RegAI|FCDB|EC[\\s_]+Scheduling|APEX_TRANS|Insights[\\s_]+Hub|Enterprise[\\s_]+Architecture|Infrastructure[\\s_]+Automation|Gemini[\\s_]+Enablement|BMO|Business[\\s_]+Management[\\s_]+Office|HRIT|HR[\\s_]+IT|ENTERPRISE4U|HR360|APEX[\\s_]+ReWire|ReWire|Florida[\\s_]+Account[\\s_]+Planning|Partner[\\s_]+Alliances|Internal[\\s_]+PartnerAdvisory|Market[\\s_]+Intelligence|NEA|Project[\\s_]+NEA)\\b.{0,80}\\bstatus\\b",
+      "\\bstatus\\b.{0,80}\\b(?:project|program|portfolio|workstream|Digital\\s+Sherpa|Sherpa|EDO|Atlas\\s+Pilot|Grid\\s+Optimization|Trade\\s+Floor|Digital\\s+Thread|Project\\s+Spring|Spring|Asset\\s+Data\\s+Product|Trade\\s+Platform|DocIQ|Project[\\s_]+Lens|Lens|Project[\\s_]+Jarvis|Jarvis|Project[\\s_]+Nexus|Nexus|Conduit|RegAI|FCDB|EC[\\s_]+Scheduling|APEX_TRANS|Insights[\\s_]+Hub|Enterprise[\\s_]+Architecture|Infrastructure[\\s_]+Automation|Gemini[\\s_]+Enablement|BMO|Business[\\s_]+Management[\\s_]+Office|HRIT|HR[\\s_]+IT|ENTERPRISE4U|HR360|APEX[\\s_]+ReWire|ReWire|Florida[\\s_]+Account[\\s_]+Planning|Partner[\\s_]+Alliances|Internal[\\s_]+PartnerAdvisory|Market[\\s_]+Intelligence|NEA|Project[\\s_]+NEA)\\b"
+    ],
+    "status_history": [
+      "\\b(?:history|historical|previous|prior|trend|movement|since)\\b",
+      "\\bas\\s+of\\s+(?!today\\b|now\\b)",
+      "\\b20[0-9]{2}[-/]?(?:0[1-9]|1[0-2])(?:[-/]?(?:0[1-9]|[12][0-9]|3[01]))?\\b",
+      "\\b(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\\b"
+    ]
+  }
+}

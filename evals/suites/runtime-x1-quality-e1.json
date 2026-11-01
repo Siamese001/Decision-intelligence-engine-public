@@ -1,0 +1,282 @@
+{
+  "artifact_id": "runtime-x1-quality-e1",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "1ea1fd10250d1c06742c4708bfa1720231891e6f2dae0d50d1d3ca02f5bc2188"
+  },
+  "cases": [
+    {
+      "audiences": [
+        "internal_consulting",
+        "nee-engineering"
+      ],
+      "case_id": "q-high-shadow-quality",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "not_qualified",
+      "evaluation_scope": "runtime_control_verification",
+      "expected": {
+        "answer_present": true,
+        "challenger_call_count": 1,
+        "content_repair_call_count": 0,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "enhanced",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "shadow",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "judge_call_count": 1,
+        "judge_release_passed": true,
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 3,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-8ac8849c55628f811605c966bd08"
+        ],
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Governed relationship paths and direction",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": false,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "quality_control": {
+        "judge_verdicts": [
+          "REPAIRABLE_FAIL"
+        ],
+        "mode": "shadow"
+      },
+      "query_type": "relationship_explanation",
+      "question": "Explain the governed Project Beacon architecture and its decision rationale for runtime quality evaluation.",
+      "tags": [
+        "query",
+        "quality",
+        "shadow"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting",
+        "nee-engineering"
+      ],
+      "case_id": "q-most-complex-repair-rejudge",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "not_qualified",
+      "evaluation_scope": "runtime_control_verification",
+      "expected": {
+        "answer_present": true,
+        "challenger_call_count": 1,
+        "content_repair_call_count": 1,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "enhanced",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "enforced",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "judge_call_count": 2,
+        "judge_release_passed": true,
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 5,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-2f35d35fd515ed6ac7a968c9ebce"
+        ],
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "NEE",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Cross-workstream recurring patterns",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": false,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "quality_control": {
+        "judge_verdicts": [
+          "REPAIRABLE_FAIL",
+          "PASS"
+        ],
+        "mode": "enforced"
+      },
+      "query_type": "cross_workstream_synthesis",
+      "question": "Synthesize the future-state architecture, functional design, technical design, A2A patterns, modularity, loose coupling, governance, security, observability, durable state, failure handling, and extension model. Synthesize the future-state architecture, functional design, technical design, A2A patterns, modularity, loose coupling, governance, security, observability, durable state, failure handling, and extension model. Synthesize the future-state architecture, functional design, technical design, A2A patterns, modularity, loose coupling, governance, security, observability, durable state, failure handling, and extension model. Synthesize the future-state architecture, functional design, technical design, A2A patterns, modularity, loose coupling, governance, security, observability, durable state, failure handling, and extension model. Synthesize the future-state architecture, functional design, technical design, A2A patterns, modularity, loose coupling, governance, security, observability, durable state, failure handling, and extension model. Synthesize the future-state architecture, functional design, technical design, A2A patterns, modularity, loose coupling, governance, security, observability, durable state, failure handling, and extension model. Synthesize the future-state architecture, functional design, technical design, A2A patterns, modularity, loose coupling, governance, security, observability, durable state, failure handling, and extension model. Synthesize the future-state architecture, functional design, technical design, A2A patterns, modularity, loose coupling, governance, security, observability, durable state, failure handling, and extension model. ",
+      "tags": [
+        "query",
+        "quality",
+        "repair"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting",
+        "nee-engineering"
+      ],
+      "case_id": "q-high-enforced-escalate",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "not_qualified",
+      "evaluation_scope": "runtime_control_verification",
+      "expected": {
+        "answer_present": true,
+        "challenger_call_count": 1,
+        "content_repair_call_count": 0,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "enhanced",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "enforced",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "judge_call_count": 1,
+        "judge_release_passed": false,
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 3,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-8ac8849c55628f811605c966bd08"
+        ],
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Project Beacon",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Governed relationship paths and direction",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": false,
+        "status": "BLOCKED",
+        "x3_outcome": "X3B_ESCALATE_HITL"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "quality_control": {
+        "judge_verdicts": [
+          "ESCALATE_HITL"
+        ],
+        "mode": "enforced"
+      },
+      "query_type": "relationship_explanation",
+      "question": "Explain the governed Project Beacon architecture and its decision rationale for enforced quality evaluation.",
+      "tags": [
+        "query",
+        "quality",
+        "enforced"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:eval-suite:3.0.0",
+  "created_at": "2026-08-01T12:00:00Z",
+  "execution_tier": "E1",
+  "extensions": {},
+  "graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "pipeline": "query",
+  "provider_posture": "fake",
+  "runtime_boundary": "POST_RUNTIME_VERIFICATION",
+  "schema_version": "3.0.0",
+  "suite_id": "runtime-x1-quality-e1",
+  "thresholds": {
+    "maximum_graph_mutation_count": 0,
+    "maximum_provider_call_count": 11,
+    "maximum_unqualified_retrieval_case_count": 0,
+    "minimum_case_pass_rate": 1
+  }
+}

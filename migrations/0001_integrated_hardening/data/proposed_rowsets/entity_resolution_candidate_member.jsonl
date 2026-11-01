@@ -1,0 +1,18 @@
+{"candidate_id":"erc_alias_1092854352324adfb2cd6259","evidence_json":"{\"normalized_alias\":\"fplswarm\"}","node_id":"model_v17_nea_q3_pod_charter_roster"}
+{"candidate_id":"erc_alias_1092854352324adfb2cd6259","evidence_json":"{\"normalized_alias\":\"fplswarm\"}","node_id":"workstream_swarm"}
+{"candidate_id":"erc_alias_3a45436b00ef91d7a2e21fd8","evidence_json":"{\"normalized_alias\":\"datastewardprogram\"}","node_id":"sow_v17_edo_activation_operating_model_detail"}
+{"candidate_id":"erc_alias_3a45436b00ef91d7a2e21fd8","evidence_json":"{\"normalized_alias\":\"datastewardprogram\"}","node_id":"workstream_edo_activation"}
+{"candidate_id":"erc_alias_8d36b30e9e6a8ccc42e68a2e","evidence_json":"{\"normalized_alias\":\"unifiers3api\"}","node_id":"source_pack_v17_edo_rfp_maximo_unifier"}
+{"candidate_id":"erc_alias_8d36b30e9e6a8ccc42e68a2e","evidence_json":"{\"normalized_alias\":\"unifiers3api\"}","node_id":"workstream_substation_onboarding"}
+{"candidate_id":"erc_node_5d28ce7523a65564397b9a20","evidence_json":"{\"canonical_name\":\"Gordon Paynter\",\"node_type\":\"stakeholder\"}","node_id":"person_gordon_paynter"}
+{"candidate_id":"erc_node_5d28ce7523a65564397b9a20","evidence_json":"{\"canonical_name\":\"Gordon Paynter\",\"node_type\":\"stakeholder\"}","node_id":"stakeholder_gordon_paynter"}
+{"candidate_id":"erc_node_63997c95d6e369a3d9b15227","evidence_json":"{\"canonical_name\":\"Customer AI\",\"node_type\":\"workstream\"}","node_id":"q3_charter_customer_ai"}
+{"candidate_id":"erc_node_63997c95d6e369a3d9b15227","evidence_json":"{\"canonical_name\":\"Customer.AI\",\"node_type\":\"workstream\"}","node_id":"workstream_customer_ai"}
+{"candidate_id":"erc_node_7ba11f85b8a23420e56f6253","evidence_json":"{\"canonical_name\":\"NEA Tech Lead Q2 Weekly Status Packet\",\"node_type\":\"source\"}","node_id":"source_nea_status_2026_06_22"}
+{"candidate_id":"erc_node_7ba11f85b8a23420e56f6253","evidence_json":"{\"canonical_name\":\"NEA Tech Lead Q2 Weekly Status Packet\",\"node_type\":\"source\"}","node_id":"source_nea_status_2026_06_29"}
+{"candidate_id":"erc_node_bf59fd861d82b253dca62703","evidence_json":"{\"canonical_name\":\"Nuclear Scheduling\",\"node_type\":\"workstream\"}","node_id":"q3_charter_nuclear_scheduling"}
+{"candidate_id":"erc_node_bf59fd861d82b253dca62703","evidence_json":"{\"canonical_name\":\"Nuclear Scheduling\",\"node_type\":\"workstream\"}","node_id":"workstream_nuclear_scheduling"}
+{"candidate_id":"erc_node_e456fffc1561d6bb2ed28fed","evidence_json":"{\"canonical_name\":\"FCDB\",\"node_type\":\"workstream\"}","node_id":"q3_charter_fcdb"}
+{"candidate_id":"erc_node_e456fffc1561d6bb2ed28fed","evidence_json":"{\"canonical_name\":\"FCDB\",\"node_type\":\"workstream\"}","node_id":"workstream_fcdb"}
+{"candidate_id":"erc_node_fad4af6c018b316ca3ad53c1","evidence_json":"{\"canonical_name\":\"Amanda Knarr\",\"node_type\":\"stakeholder\"}","node_id":"person_amanda_knarr"}
+{"candidate_id":"erc_node_fad4af6c018b316ca3ad53c1","evidence_json":"{\"canonical_name\":\"Amanda Knarr\",\"node_type\":\"stakeholder\"}","node_id":"stakeholder_amanda_knarr"}

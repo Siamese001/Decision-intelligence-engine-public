@@ -1,0 +1,48 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:candidate-evidence-pool:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "candidate-evidence-pool-fixture",
+  "query_id": "query-fixture-001",
+  "run_id": "run-fixture-001",
+  "graph_generation_id": "gen-fixture-001",
+  "retrieval_mode": "hybrid_colbert",
+  "query_text": "What is the current status of the data migration?",
+  "query_text_hash": "7ede50403122ce8074b63983035528410c5698bbe9b6b9d567073e9e26accb4a",
+  "candidates": [
+    {
+      "record_id": "record-001",
+      "lane": "approved",
+      "retrieval_text_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "dense_score": 0.89,
+      "sparse_score": 0.72,
+      "colbert_score": 0.85,
+      "fused_score": 0.82,
+      "retrieval_source": "dense",
+      "entity_ids": [
+        "entity-001"
+      ]
+    },
+    {
+      "record_id": "record-002",
+      "lane": "candidate",
+      "retrieval_text_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "dense_score": 0.65,
+      "sparse_score": 0.58,
+      "colbert_score": null,
+      "fused_score": 0.61,
+      "retrieval_source": "sparse",
+      "entity_ids": [
+        "entity-002"
+      ]
+    }
+  ],
+  "total_candidates_before_cutoff": 120,
+  "retrieval_policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "created_at": "2026-09-10T14:03:00Z",
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "e9e7359dcc72638f895fa1d44960266cef067f723e807ef663a665741f2d7ab3"
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "artifact_id": "dual-deterministic-e1",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "850ac33107d230bf1de12541507149e7079992d2acdfb0b529a3f28808c9812f"
+  },
+  "cases": [
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "q-exact-lookup-offline",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "not_qualified",
+      "evaluation_scope": "runtime_control_verification",
+      "expected": {
+        "answer_present": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": null,
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "GRAPH_EVIDENCE_UTILITY",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-0541924ff7fa090b517951c9a8fd"
+        ],
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "PDLC",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Exact governed facts and source locators",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": false,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "none",
+      "query_type": "exact_lookup",
+      "question": "Which exact governed PDLC records are available?",
+      "tags": [
+        "query",
+        "smoke",
+        "offline"
+      ]
+    },
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "q-synthesis-fake-provider",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "not_qualified",
+      "evaluation_scope": "runtime_control_verification",
+      "expected": {
+        "answer_present": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "standard",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 2,
+        "provider_call_count": 1,
+        "required_lanes": [
+          "approved"
+        ],
+        "required_record_ids": [
+          "retrieval-record-0541924ff7fa090b517951c9a8fd"
+        ],
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "PDLC",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Governed relationship paths and direction",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": false,
+        "status": "COMPLETED",
+        "x3_outcome": "X3D_ALLOW_FINISH"
+      },
+      "pipeline": "query",
+      "provider_posture": "fake",
+      "query_type": "relationship_explanation",
+      "question": "Explain the governed relationship between Project Beacon and AI-enabled SDLC / PDLC.",
+      "tags": [
+        "query",
+        "smoke",
+        "synthesis"
+      ]
+    },
+    {
+      "audience": "internal_consulting,nee-engineering",
+      "case_id": "i-copilot-graph-change",
+      "expected": {
+        "completion_receipt": true,
+        "directive_status": "COMPLETE",
+        "mutation_outcome": "GRAPH_CHANGED",
+        "provider_call_count": 0,
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "X1",
+          "X2",
+          "X3",
+          "L4",
+          "W0",
+          "E0"
+        ],
+        "run_status": "COMPLETED"
+      },
+      "package_path": "contracts/dual_pipeline/fixtures/valid/copilot-meeting.json",
+      "package_sha256": "7ae98a7d20f2f18b75a5f1c2cbf3fec92fbe1dce2bb2ad655db0d4bc86b66e35",
+      "pipeline": "ingestion",
+      "source_kind": "copilot",
+      "tags": [
+        "ingestion",
+        "smoke",
+        "release"
+      ]
+    },
+    {
+      "audience": "internal_consulting,nee-engineering",
+      "case_id": "i-architecture-noop",
+      "expected": {
+        "completion_receipt": true,
+        "directive_status": "COMPLETE",
+        "mutation_outcome": "IDEMPOTENT_NOOP",
+        "provider_call_count": 0,
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "run_status": "COMPLETED"
+      },
+      "package_path": "contracts/dual_pipeline/fixtures/valid/architecture-diagram.json",
+      "package_sha256": "db3fd78bc70b3d276e25e3e82467fc7947bce1aee37212cf476154574b132f4e",
+      "pipeline": "ingestion",
+      "source_kind": "architecture",
+      "tags": [
+        "ingestion",
+        "smoke",
+        "noop"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:eval-suite:3.0.0",
+  "created_at": "2026-07-27T12:00:00Z",
+  "execution_tier": "E1",
+  "extensions": {},
+  "graph_sha256": "856fe4505248ee70f9b524de23ce5defb3daafae4b881a5c5dd5260c31292c3c",
+  "pipeline": "dual",
+  "provider_posture": "fake",
+  "runtime_boundary": "POST_RUNTIME_VERIFICATION",
+  "schema_version": "3.0.0",
+  "suite_id": "dual-deterministic-e1",
+  "thresholds": {
+    "maximum_graph_mutation_count": 1000,
+    "maximum_provider_call_count": 2,
+    "maximum_unqualified_retrieval_case_count": 0,
+    "minimum_case_pass_rate": 1
+  }
+}

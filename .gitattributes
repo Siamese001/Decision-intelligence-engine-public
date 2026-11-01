@@ -1,0 +1,32 @@
+# Contract inventories bind byte digests of the schema documents.  Keep their
+# working-tree representation stable on platforms where Git otherwise expands
+# line endings.
+contracts/dual_pipeline/contract_inventory.json text eol=lf
+contracts/dual_pipeline/schemas/*.schema.json text eol=lf
+contracts/dual_pipeline/fixtures/valid/*.json text eol=lf
+
+# Workflow evaluation suites bind the exact evaluator and workload bytes.
+# Prevent core.autocrlf from invalidating those digests on Windows.
+dual_pipeline/evals/assurance.py text eol=lf
+evals/workloads/*.json text eol=lf
+evals/suites/*.json text eol=lf
+
+# Binary database files - force binary conflict handling and disable textual diff
+*.sqlite binary
+*.db binary
+
+# Union merge strategy for append-only logs and walkthrough summaries
+# Prevents 3-way merge conflict halts when multiple parallel worktrees update registries
+*.jsonl merge=union
+walkthrough.md merge=union
+
+# Generated reports - mark as linguist-generated to collapse in PR diffs
+reports/** linguist-generated
+
+# Preserve byte-exact planning source snapshots, including Markdown hard breaks.
+docs/plans/scheduled_task_review_sources/*.md -whitespace
+docs/plans/scheduled_task_review_supplement/*.md -whitespace
+
+# Preserve byte-exact prompt-fidelity evidence bound by immutable wave receipts.
+documentation/history/PROMPT_LENGTH_AND_STRUCTURE_CODE_FIDELITY_ASSESSMENT_reviewed_baseline_2026-10-07.md -whitespace
+reports/prompt_fidelity/prompt_design.py whitespace=-blank-at-eof

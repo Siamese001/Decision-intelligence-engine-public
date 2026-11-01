@@ -1,0 +1,40 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:facet-applicability-policy:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-facet-policy-approved-without-approval",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "281e88ce05d2f344a3a23ba0a3f54e67bbdc9e4523f8aa3ec780f7695131a4c9"
+  },
+  "policy_id": "invalid-facet-policy-approved-without-approval",
+  "policy_version": "1.0.0",
+  "status": "approved",
+  "approval_id": null,
+  "vocabularies": [
+    {
+      "vocabulary": "semantic_domain",
+      "definition": "Invalid approved policy with no approval binding.",
+      "controlled_value_source": "controlled_value_registry",
+      "requirements": [
+        {
+          "requirement_id": "invalid-requirement-current-assertions",
+          "object_type": "assertion",
+          "population": "current_canonical_assertions",
+          "minimum_assignments": 1,
+          "accepted_review_states": ["approved"],
+          "allowed_assignment_methods": ["reviewed"],
+          "exception_policy": {
+            "allowed": true,
+            "owner_required": true,
+            "review_due_required": true,
+            "maximum_review_days": 30
+          },
+          "derivation_rules": []
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-07-27T23:30:00Z",
+  "extensions": {}
+}

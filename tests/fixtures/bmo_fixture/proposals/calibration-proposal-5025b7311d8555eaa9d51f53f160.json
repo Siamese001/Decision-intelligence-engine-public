@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-5025b7311d8555eaa9d51f53f160",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "51241b4a6d3db205f8b238a901c71a32debd8440b24ba3261500a52d6d2ad495"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-d83b8b82151ae892286a5afa"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "LENS S3 Ingestion Pipeline is an identified technical_anchor in Document 20260612 Lens Visual Asset Intelligence Sow.",
+      "proposed_value": "LENS S3 Ingestion Pipeline is an identified technical_anchor in Document 20261002 Project Lens Scope Closeout.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-326d023c815603928ed191d1365c"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-4576f25c94940b5ef5b677f78744",
+      "assertion_id_older": "assertion-326d023c815603928ed191d1365c",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-11d896ccbb7cea2f8937e2d3d3ab",
+      "timestamp_newer": "2026-10-02",
+      "timestamp_older": "2026-06-12"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS S3 Ingestion Pipeline' (HAS_CLAIM_TEXT). Older claim from 2026-06-12 superseded by newer claim from 2026-10-02.",
+  "proposal_id": "calibration-proposal-5025b7311d8555eaa9d51f53f160",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-326d023c815603928ed191d1365c from LENS S3 Ingestion Pipeline is an identified technical_anchor in Document 20260612 Lens Visual Asset Intelligence Sow. to LENS S3 Ingestion Pipeline is an identified technical_anchor in Document 20261002 Project Lens Scope Closeout.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

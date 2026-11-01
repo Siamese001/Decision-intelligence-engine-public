@@ -1,0 +1,221 @@
+{
+  "mode": "document",
+  "status": "PASS",
+  "overall_status": "PASS",
+  "passed": true,
+  "gate_1": {
+    "status": "SKIPPED",
+    "passed": true,
+    "reason": "NOT_APPLICABLE_DOCUMENT_MODE",
+    "details": "Source is a written document/email; no spoken dialogue or meeting recap required."
+  },
+  "gate_2": {
+    "status": "SKIPPED",
+    "passed": true,
+    "reason": "NOT_APPLICABLE_DOCUMENT_MODE",
+    "details": "Source is a written document/email; no spoken dialogue or meeting recap required."
+  },
+  "gate_3": {
+    "status": "PASS",
+    "passed": true,
+    "gates": {
+      "Gate_3_1_Strict_Schema_Validation": {
+        "passed": true,
+        "syntax_valid": true,
+        "schema_version_5_7": true,
+        "pydantic_valid": true
+      },
+      "Gate_3_2_Semantic_Spine_and_Ontology_Conformance": {
+        "passed": true,
+        "allowed_prefixes_compliant": true
+      },
+      "Gate_3_3_Temporal_Hygiene_and_Lifecycle_Consistency": {
+        "passed": true,
+        "observed_at_format_mmddyyyy": true
+      },
+      "Gate_3_4_Evidence_Index_Fidelity_and_Grounding": {
+        "passed": true,
+        "all_statements_grounded_in_f1": true
+      },
+      "Gate_3_5_Signal_Amplification_and_Anti_Sprawl": {
+        "passed": true,
+        "total_mutations": 30,
+        "zero_orphan_nodes": true
+      },
+      "Gate_3_6_Conversational_Fragment_Suppression": {
+        "passed": true,
+        "flagged_fragments_count": 0,
+        "generic_predicates_ratio": 0.0
+      },
+      "Gate_3_7_Compound_Property_Linter": {
+        "passed": true,
+        "compound_properties_count": 0,
+        "violations": []
+      },
+      "Gate_3_8_Citation_Coverage_Linter": {
+        "passed": true,
+        "dangling_evidence_count": 0,
+        "unindexed_citations_count": 0,
+        "violations": []
+      },
+      "Gate_3_9_Predicate_Domain_Linter": {
+        "passed": true,
+        "canonical_predicates_compliant": true,
+        "architectural_edges_compliant": true,
+        "generic_ratio": 0.0,
+        "violations": []
+      },
+      "Gate_3_10_Mutation_Budget_Governor": {
+        "passed": true,
+        "total_mutations": 30,
+        "budget_ceiling": 30,
+        "evidence_only_count": 0,
+        "evidence_only_ceiling": 60,
+        "secondary_platforms_relegated": true,
+        "violations": []
+      },
+      "Gate_3_11_Person_Role_Description_Linter": {
+        "passed": true,
+        "person_entities_checked": 11,
+        "violations_count": 0
+      },
+      "Gate_3_12_Member_Of_Consistency_Linter": {
+        "passed": true,
+        "member_of_checked": 0,
+        "contradictions_count": 0
+      },
+      "Gate_3_13_Operator_Thought_Framing_Exclusion": {
+        "passed": true,
+        "failures": []
+      },
+      "Gate_3_14_Projection_Evidence_And_Reconciliation": {
+        "passed": true,
+        "substantive_transcript_evidence": true,
+        "truthful_reconciliation_counters": true,
+        "locators_and_splicing": true,
+        "material_coverage": true,
+        "topical_overlap": true,
+        "failures": []
+      }
+    },
+    "failures": [],
+    "document_signal_yield": {
+      "passed": true,
+      "evidence_count": 12,
+      "mutation_count": 30
+    }
+  },
+  "output_01_forensic_transcript": {
+    "status": "SKIPPED",
+    "passed": true,
+    "reason": "NOT_APPLICABLE_DOCUMENT_MODE",
+    "details": "Source is a written document/email; no spoken dialogue or meeting recap required."
+  },
+  "output_02_executive_recap": {
+    "status": "SKIPPED",
+    "passed": true,
+    "reason": "NOT_APPLICABLE_DOCUMENT_MODE",
+    "details": "Source is a written document/email; no spoken dialogue or meeting recap required."
+  },
+  "output_03_canonical_signal_projection": {
+    "status": "PASS",
+    "passed": true,
+    "gates": {
+      "Gate_3_1_Strict_Schema_Validation": {
+        "passed": true,
+        "syntax_valid": true,
+        "schema_version_5_7": true,
+        "pydantic_valid": true
+      },
+      "Gate_3_2_Semantic_Spine_and_Ontology_Conformance": {
+        "passed": true,
+        "allowed_prefixes_compliant": true
+      },
+      "Gate_3_3_Temporal_Hygiene_and_Lifecycle_Consistency": {
+        "passed": true,
+        "observed_at_format_mmddyyyy": true
+      },
+      "Gate_3_4_Evidence_Index_Fidelity_and_Grounding": {
+        "passed": true,
+        "all_statements_grounded_in_f1": true
+      },
+      "Gate_3_5_Signal_Amplification_and_Anti_Sprawl": {
+        "passed": true,
+        "total_mutations": 30,
+        "zero_orphan_nodes": true
+      },
+      "Gate_3_6_Conversational_Fragment_Suppression": {
+        "passed": true,
+        "flagged_fragments_count": 0,
+        "generic_predicates_ratio": 0.0
+      },
+      "Gate_3_7_Compound_Property_Linter": {
+        "passed": true,
+        "compound_properties_count": 0,
+        "violations": []
+      },
+      "Gate_3_8_Citation_Coverage_Linter": {
+        "passed": true,
+        "dangling_evidence_count": 0,
+        "unindexed_citations_count": 0,
+        "violations": []
+      },
+      "Gate_3_9_Predicate_Domain_Linter": {
+        "passed": true,
+        "canonical_predicates_compliant": true,
+        "architectural_edges_compliant": true,
+        "generic_ratio": 0.0,
+        "violations": []
+      },
+      "Gate_3_10_Mutation_Budget_Governor": {
+        "passed": true,
+        "total_mutations": 30,
+        "budget_ceiling": 30,
+        "evidence_only_count": 0,
+        "evidence_only_ceiling": 60,
+        "secondary_platforms_relegated": true,
+        "violations": []
+      },
+      "Gate_3_11_Person_Role_Description_Linter": {
+        "passed": true,
+        "person_entities_checked": 11,
+        "violations_count": 0
+      },
+      "Gate_3_12_Member_Of_Consistency_Linter": {
+        "passed": true,
+        "member_of_checked": 0,
+        "contradictions_count": 0
+      },
+      "Gate_3_13_Operator_Thought_Framing_Exclusion": {
+        "passed": true,
+        "failures": []
+      },
+      "Gate_3_14_Projection_Evidence_And_Reconciliation": {
+        "passed": true,
+        "substantive_transcript_evidence": true,
+        "truthful_reconciliation_counters": true,
+        "locators_and_splicing": true,
+        "material_coverage": true,
+        "topical_overlap": true,
+        "failures": []
+      }
+    },
+    "failures": [],
+    "document_signal_yield": {
+      "passed": true,
+      "evidence_count": 12,
+      "mutation_count": 30
+    }
+  },
+  "cross_artifact_consistency": {
+    "status": "SKIPPED",
+    "passed": true,
+    "reason": "NOT_APPLICABLE_DOCUMENT_MODE",
+    "details": "Source is a written document/email; no spoken dialogue or meeting recap required."
+  },
+  "healed_artifacts": {
+    "output_1": "",
+    "output_2": "",
+    "output_3": "{\n  \"schema_version\": \"5.7\",\n  \"meeting_id\": \"document-20261012-james-beebe-business-management-product-rd-org-structure\",\n  \"classification\": \"restricted\",\n  \"audiences\": [\n    \"internal_consulting\"\n  ],\n  \"evidence_index\": {\n    \"ev-01\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Aussprung, Chad\\nExecutive Director Business Management\",\n      \"quote_pointer\": [\n        23,\n        77\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Aussprung, Chad\\nExecutive Director Business Management\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Aussprung, Chad\\nExecutive Director Business Management\",\n      \"start_offset\": 23,\n      \"end_offset\": 77,\n      \"evidence_id\": \"ev-01\"\n    },\n    \"ev-02\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Beebe, James\\nDirector Product R&D\",\n      \"quote_pointer\": [\n        78,\n        111\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Beebe, James\\nDirector Product R&D\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Beebe, James\\nDirector Product R&D\",\n      \"start_offset\": 78,\n      \"end_offset\": 111,\n      \"evidence_id\": \"ev-02\"\n    },\n    \"ev-03\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Business Mgmt\",\n      \"quote_pointer\": [\n        112,\n        125\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Business Mgmt\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Business Mgmt\",\n      \"start_offset\": 112,\n      \"end_offset\": 125,\n      \"evidence_id\": \"ev-03\"\n    },\n    \"ev-04\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Rawat, Vikas\\nNon-APEX-Profile Worker IT Data Scientist\",\n      \"quote_pointer\": [\n        162,\n        215\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Rawat, Vikas\\nNon-APEX-Profile Worker IT Data Scientist\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Rawat, Vikas\\nNon-APEX-Profile Worker IT Data Scientist\",\n      \"start_offset\": 162,\n      \"end_offset\": 215,\n      \"evidence_id\": \"ev-04\"\n    },\n    \"ev-05\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Madhavaram, Srishma\\nNon-APEX-Profile Worker IT Developer\",\n      \"quote_pointer\": [\n        219,\n        274\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Madhavaram, Srishma\\nNon-APEX-Profile Worker IT Developer\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Madhavaram, Srishma\\nNon-APEX-Profile Worker IT Developer\",\n      \"start_offset\": 219,\n      \"end_offset\": 274,\n      \"evidence_id\": \"ev-05\"\n    },\n    \"ev-06\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Garcia, Enrique\\nNon-APEX-Profile Worker IT Developer\",\n      \"quote_pointer\": [\n        278,\n        329\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Garcia, Enrique\\nNon-APEX-Profile Worker IT Developer\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Garcia, Enrique\\nNon-APEX-Profile Worker IT Developer\",\n      \"start_offset\": 278,\n      \"end_offset\": 329,\n      \"evidence_id\": \"ev-06\"\n    },\n    \"ev-07\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Lastowski, Michael\\nNon-APEX-Profile Worker IT Business Analyst\",\n      \"quote_pointer\": [\n        330,\n        391\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Lastowski, Michael\\nNon-APEX-Profile Worker IT Business Analys\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Lastowski, Michael\\nNon-APEX-Profile Worker IT Business Analyst\",\n      \"start_offset\": 330,\n      \"end_offset\": 391,\n      \"evidence_id\": \"ev-07\"\n    },\n    \"ev-08\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Estrada, Juan Adan\\nNon-APEX-Profile Worker IT Developer\",\n      \"quote_pointer\": [\n        394,\n        448\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Estrada, Juan Adan\\nNon-APEX-Profile Worker IT Developer\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Estrada, Juan Adan\\nNon-APEX-Profile Worker IT Developer\",\n      \"start_offset\": 394,\n      \"end_offset\": 448,\n      \"evidence_id\": \"ev-08\"\n    },\n    \"ev-09\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Alperovich, Mikhail\\nNon-APEX-DATA SCIENTIST-Level 1 - Associate (0 - 5 Ye...\",\n      \"quote_pointer\": [\n        452,\n        524\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Alperovich, Mikhail\\nNon-APEX-DATA SCIENTIST-Level 1 - Associa\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Alperovich, Mikhail\\nNon-APEX-DATA SCIENTIST-Level 1 - Associate (0 - 5 Ye...\",\n      \"start_offset\": 452,\n      \"end_offset\": 524,\n      \"evidence_id\": \"ev-09\"\n    },\n    \"ev-10\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Akopian, Arsen\\nNon-APEX-Profile Worker IT Engineer\",\n      \"quote_pointer\": [\n        528,\n        577\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Akopian, Arsen\\nNon-APEX-Profile Worker IT Engineer\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Akopian, Arsen\\nNon-APEX-Profile Worker IT Engineer\",\n      \"start_offset\": 528,\n      \"end_offset\": 577,\n      \"evidence_id\": \"ev-10\"\n    },\n    \"ev-11\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Arefi, Pouya\\nNon-APEX-Profile Worker IT Engineer\",\n      \"quote_pointer\": [\n        581,\n        628\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Arefi, Pouya\\nNon-APEX-Profile Worker IT Engineer\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Arefi, Pouya\\nNon-APEX-Profile Worker IT Engineer\",\n      \"start_offset\": 581,\n      \"end_offset\": 628,\n      \"evidence_id\": \"ev-11\"\n    },\n    \"ev-12\": {\n      \"speaker\": \"Chad Aussprung\",\n      \"source_classification\": \"FACT\",\n      \"kind\": \"summary\",\n      \"text\": \"Bennetto, Jack\\nNon-APEX-Profile Worker IT Engineer\",\n      \"quote_pointer\": [\n        632,\n        681\n      ],\n      \"locator\": {\n        \"kind\": \"section\",\n        \"value\": \"Bennetto, Jack\\nNon-APEX-Profile Worker IT Engineer\"\n      },\n      \"grounding_status\": \"GROUNDED\",\n      \"exact_text\": \"Bennetto, Jack\\nNon-APEX-Profile Worker IT Engineer\",\n      \"start_offset\": 632,\n      \"end_offset\": 681,\n      \"evidence_id\": \"ev-12\"\n    }\n  },\n  \"graph_mutations\": {\n    \"entity_upserts\": [\n      {\n        \"id\": \"person:chad-aussprung\",\n        \"type\": \"person\",\n        \"name\": \"Chad Aussprung\",\n        \"description\": \"Chad Aussprung\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-01\"\n        ]\n      },\n      {\n        \"id\": \"role:executive-director-business-management\",\n        \"type\": \"role\",\n        \"name\": \"Executive Director Business Management\",\n        \"description\": \"Executive Director Business Management referenced in source document.\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-01\"\n        ]\n      },\n      {\n        \"id\": \"person:james-beebe\",\n        \"type\": \"person\",\n        \"name\": \"James Beebe\",\n        \"description\": \"James Beebe\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-02\"\n        ]\n      },\n      {\n        \"id\": \"role:director-product-r-d\",\n        \"type\": \"role\",\n        \"name\": \"Director Product R&D\",\n        \"description\": \"Director Product R&D referenced in source document.\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-02\"\n        ]\n      },\n      {\n        \"id\": \"person:vikas-rawat\",\n        \"type\": \"person\",\n        \"name\": \"Vikas Rawat\",\n        \"description\": \"Vikas Rawat\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-04\"\n        ]\n      },\n      {\n        \"id\": \"role:it-data-scientist\",\n        \"type\": \"role\",\n        \"name\": \"IT Data Scientist\",\n        \"description\": \"IT Data Scientist referenced in source document.\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-04\"\n        ]\n      },\n      {\n        \"id\": \"person:srishma-madhavaram\",\n        \"type\": \"person\",\n        \"name\": \"Srishma Madhavaram\",\n        \"description\": \"Srishma Madhavaram\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-05\"\n        ]\n      },\n      {\n        \"id\": \"role:it-developer\",\n        \"type\": \"role\",\n        \"name\": \"IT Developer\",\n        \"description\": \"IT Developer referenced in source document.\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-05\",\n          \"ev-06\",\n          \"ev-08\"\n        ]\n      },\n      {\n        \"id\": \"person:enrique-garcia\",\n        \"type\": \"person\",\n        \"name\": \"Enrique Garcia\",\n        \"description\": \"Enrique Garcia\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-06\"\n        ]\n      },\n      {\n        \"id\": \"person:michael-lastowski\",\n        \"type\": \"person\",\n        \"name\": \"Michael Lastowski\",\n        \"description\": \"Michael Lastowski\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-07\"\n        ]\n      },\n      {\n        \"id\": \"role:it-business-analyst\",\n        \"type\": \"role\",\n        \"name\": \"IT Business Analyst\",\n        \"description\": \"IT Business Analyst referenced in source document.\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-07\"\n        ]\n      },\n      {\n        \"id\": \"person:juan-adan-estrada\",\n        \"type\": \"person\",\n        \"name\": \"Juan Adan Estrada\",\n        \"description\": \"Juan Adan Estrada\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-08\"\n        ]\n      },\n      {\n        \"id\": \"person:mikhail-alperovich\",\n        \"type\": \"person\",\n        \"name\": \"Mikhail Alperovich\",\n        \"description\": \"Mikhail Alperovich\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-09\"\n        ]\n      },\n      {\n        \"id\": \"role:data-scientist-level-1-associate\",\n        \"type\": \"role\",\n        \"name\": \"DATA SCIENTIST-Level 1 - Associate (0 - 5 Ye...\",\n        \"description\": \"DATA SCIENTIST-Level 1 - Associate (0 - 5 Ye... referenced in source document.\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-09\"\n        ]\n      },\n      {\n        \"id\": \"person:arsen-akopian\",\n        \"type\": \"person\",\n        \"name\": \"Arsen Akopian\",\n        \"description\": \"Arsen Akopian\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-10\"\n        ]\n      },\n      {\n        \"id\": \"role:it-engineer\",\n        \"type\": \"role\",\n        \"name\": \"IT Engineer\",\n        \"description\": \"IT Engineer referenced in source document.\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-10\",\n          \"ev-11\",\n          \"ev-12\"\n        ]\n      },\n      {\n        \"id\": \"person:pouya-arefi\",\n        \"type\": \"person\",\n        \"name\": \"Pouya Arefi\",\n        \"description\": \"Pouya Arefi\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-11\"\n        ]\n      },\n      {\n        \"id\": \"person:jack-bennetto\",\n        \"type\": \"person\",\n        \"name\": \"Jack Bennetto\",\n        \"description\": \"Jack Bennetto\",\n        \"mutation\": \"CREATE\",\n        \"evidence_ids\": [\n          \"ev-12\"\n        ]\n      },\n      {\n        \"id\": \"org:business-mgmt\",\n        \"type\": \"org\",\n        \"name\": \"Business Mgmt\",\n        \"description\": \"Business Management Office.\",\n        \"mutation\": \"CONFIRM\",\n        \"evidence_ids\": [\n          \"ev-03\"\n        ]\n      }\n    ],\n    \"relationship_signals\": [\n      {\n        \"signal_id\": \"rel-chad-aussprung--executive-director-business-management--HAS_ROLE\",\n        \"from_id\": \"person:chad-aussprung\",\n        \"to_id\": \"role:executive-director-business-management\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-01\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-james-beebe--director-product-r-d--HAS_ROLE\",\n        \"from_id\": \"person:james-beebe\",\n        \"to_id\": \"role:director-product-r-d\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-02\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-vikas-rawat--it-data-scientist--HAS_ROLE\",\n        \"from_id\": \"person:vikas-rawat\",\n        \"to_id\": \"role:it-data-scientist\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-04\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-srishma-madhavaram--it-developer--HAS_ROLE\",\n        \"from_id\": \"person:srishma-madhavaram\",\n        \"to_id\": \"role:it-developer\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-05\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-enrique-garcia--it-developer--HAS_ROLE\",\n        \"from_id\": \"person:enrique-garcia\",\n        \"to_id\": \"role:it-developer\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-06\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-michael-lastowski--it-business-analyst--HAS_ROLE\",\n        \"from_id\": \"person:michael-lastowski\",\n        \"to_id\": \"role:it-business-analyst\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-07\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-juan-adan-estrada--it-developer--HAS_ROLE\",\n        \"from_id\": \"person:juan-adan-estrada\",\n        \"to_id\": \"role:it-developer\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-08\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-mikhail-alperovich--data-scientist-level-1-associate--HAS_ROLE\",\n        \"from_id\": \"person:mikhail-alperovich\",\n        \"to_id\": \"role:data-scientist-level-1-associate\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-09\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-arsen-akopian--it-engineer--HAS_ROLE\",\n        \"from_id\": \"person:arsen-akopian\",\n        \"to_id\": \"role:it-engineer\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-10\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-pouya-arefi--it-engineer--HAS_ROLE\",\n        \"from_id\": \"person:pouya-arefi\",\n        \"to_id\": \"role:it-engineer\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-11\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      },\n      {\n        \"signal_id\": \"rel-jack-bennetto--it-engineer--HAS_ROLE\",\n        \"from_id\": \"person:jack-bennetto\",\n        \"to_id\": \"role:it-engineer\",\n        \"relationship\": \"HAS_ROLE\",\n        \"predicate\": \"HAS_ROLE\",\n        \"evidence_ids\": [\n          \"ev-12\"\n        ],\n        \"assertion_type\": null,\n        \"confidence\": null,\n        \"evidence\": null,\n        \"lineage\": null\n      }\n    ],\n    \"decision_updates\": [],\n    \"proposal_updates\": [],\n    \"action_updates\": [],\n    \"risk_updates\": [],\n    \"strategic_intent_signals\": [],\n    \"meeting_archetype\": \"STRATEGIC_DISCOVERY\"\n  },\n  \"evidence_only_statement_ids\": [],\n  \"_strategic_analysis\": \"The visual document identifies Chad Aussprung as Executive Director Business Management and James Beebe as Director Product R&D, and lists named IT personnel with role labels. It provides role assignments but does not establish individual reporting links in the extracted text, and it states no separate strategic decision.\",\n  \"expected_base_graph_version\": \"1.0.0\",\n  \"meeting_archetype\": \"STRATEGIC_DISCOVERY\"\n}"
+  }
+}

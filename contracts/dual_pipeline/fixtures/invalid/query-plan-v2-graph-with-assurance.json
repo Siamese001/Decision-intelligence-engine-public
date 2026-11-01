@@ -1,0 +1,63 @@
+{
+  "allowed_lanes": [
+    "approved"
+  ],
+  "allowed_provider_class": null,
+  "artifact_id": "query-plan-v2-graph-assurance",
+  "artifact_type": "evidence_export",
+  "assurance_profile": "standard",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "6aa90e87dff0b39aa07ab69ef30a4823cd1202ef7e19f2164f68af3f9aa44c40"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-plan:2.0.0",
+  "delivery_profile": "internal_technical",
+  "destination": "GRAPH_EVIDENCE_UTILITY",
+  "destination_decision_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "evidence_requirements": [
+    "record-123"
+  ],
+  "exit_criteria": [
+    "exact evidence returned"
+  ],
+  "extensions": {},
+  "external_research": "denied",
+  "l2_policy": "forbidden",
+  "l2_policy_reason": "Exact graph evidence is provider-free.",
+  "materiality": "low",
+  "maximum_challenger_calls": 0,
+  "maximum_judge_calls": 0,
+  "maximum_primary_calls": 0,
+  "maximum_repair_calls": 0,
+  "output_schema": "nee-evidence-export-1.0.0",
+  "plan_id": "query-plan-v2-graph-assurance",
+  "primary_entities": [
+    "record-123"
+  ],
+  "prompt_blueprint": "exact_lookup_v2",
+  "provider_egress_allowed": false,
+  "query_type": "exact_lookup",
+  "relationships_to_inspect": [
+    "none"
+  ],
+  "request_id": "request-query-plan-graph-assurance",
+  "required_output_schema": "nee-evidence-export-1.0.0",
+  "retrieval": {
+    "bm25": false,
+    "connected_evidence_selection": false,
+    "exact_anchors": true,
+    "graph_hops": 0,
+    "lane_blending": false,
+    "semantic": false,
+    "typed_path_expansion": false
+  },
+  "retrieval_mode": "factual",
+  "run_id": "run-query-plan-graph-assurance",
+  "schema_version": "2.0.0",
+  "subquestions": [
+    "Which exact record matches?"
+  ],
+  "time_horizon": null,
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

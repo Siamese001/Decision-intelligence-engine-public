@@ -1,0 +1,18 @@
+{
+  "session_id": "e67e1fb7-a5bb-4995-b447-071e6f4870b4",
+  "engine_signature": "urn:nee:dual-pipeline:live-meeting-recorder:1.0.0",
+  "parent_pid": 66454,
+  "parent_start_time": 1791399078.809014,
+  "repo_root": "/Users/amitayer/Git/decision-intelligence-engine",
+  "ffmpeg_pid": null,
+  "sck_pid": null,
+  "ws_port": 8765,
+  "meeting_slug": "Engineering_Jarvis_Kaleena_PartnerAdvisory",
+  "transcript_md": null,
+  "copilot_jsonl": null,
+  "output_dir": null,
+  "graph_sha256": null,
+  "generation": null,
+  "created_at": 1791399078.809015,
+  "last_heartbeat": 1791399078.809015
+}

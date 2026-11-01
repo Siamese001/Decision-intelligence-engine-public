@@ -1,0 +1,17 @@
+{
+  "name": "feat_intelligent_domain_classifier",
+  "description": "Multi-tier modality introspection, semantic centroid classification, and domain caching for PR queue",
+  "branch": "feat/intelligent-domain-classifier",
+  "deterministic_tests": [
+    "tests.test_domain_models",
+    "tests.test_modality_introspector",
+    "tests.test_semantic_domain_classifier",
+    "tests.test_domain_classifier_adversarial"
+  ],
+  "e2e_tests": [
+    "tests.end_to_end.test_domain_classifier_e2e",
+    "tests.end_to_end.test_pr_queue_domain_e2e"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-04T15:50:00Z"
+}

@@ -1,0 +1,1731 @@
+{
+  "registry_version": "1.0.0",
+  "contract_id": "urn:nee:scheduled-task-registry:1.0.0",
+  "execution_mode": "report_only",
+  "description": "Canonical registry mapping the seventeen active governed scheduled tasks (plus seven consolidated legacy aliases) to stable IDs, prompts, capabilities, coverage rules, output policies, and illustrative cadences.",
+  "tasks": {
+    "knowledge_graph_hygiene": {
+      "task_id": "knowledge_graph_hygiene",
+      "title": "Graph Hygiene Agent",
+      "source_archive_member": "knowledge_graph_hygiene_scheduled_task.md",
+      "prompt_path": "automations/prompts/graph_hygiene_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "read_only_graph_inspection",
+        "dry_run_remediation_proposal",
+        "isolated_fixture_reproduction",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "storage/CANONICAL_GRAPH.db",
+          "storage/runtime/vector_sidecar.db",
+          "storage/runtime/active_pair.json"
+        ],
+        "mandatory_checks": [
+          "graph_structural_integrity",
+          "zero_mutation_invariance",
+          "orphan_node_detection"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/graph_hygiene",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 1:40 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 40 1 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "knowledge-graph-hygiene-agent",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Owned (shared repair under configured patch scope)",
+        "d02_ingestion": "Owned (exact diagnosis/recovery package)",
+        "d03_query": "Owned (requirement diagnostics and reproduced patch)"
+      },
+      "master_sequence_order": 3,
+      "master_sequence_stage": "Stage I: Physical & Topology Foundation",
+      "is_consolidated_alias": false
+    },
+    "pr_queue_observer": {
+      "task_id": "pr_queue_observer",
+      "title": "PR Queue Agent",
+      "source_archive_member": "pr_queue_observer_scheduled_task.md",
+      "prompt_path": "automations/prompts/pr_queue_observer_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive"
+      ],
+      "capabilities": [
+        "read_only_queue_inspection",
+        "exclusive_run_locking",
+        "notification_evaluation",
+        "dual_mode_table_output",
+        "sealed_run_evidence"
+      ],
+      "coverage_rules": {
+        "targets": [
+          ".worktrees/",
+          "git_stashes",
+          ".local/pr_queue_observer/runs/"
+        ],
+        "mandatory_checks": [
+          "worktree_enumeration",
+          "stash_enumeration",
+          "single_run_lock_acquisition"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": ".local/pr_queue_observer",
+        "formats": [
+          "table"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 1:20 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 20 1 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "pr-queue-governance-observer",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Observe linked action status; no repair",
+        "d02_ingestion": "Observe recovery work status; no resume/cancel",
+        "d03_query": "Observe tested patch/review status; no query repair"
+      },
+      "master_sequence_order": 2,
+      "master_sequence_stage": "Stage I: Physical & Topology Foundation",
+      "is_consolidated_alias": false
+    },
+    "repository_antipattern_audit": {
+      "task_id": "repository_antipattern_audit",
+      "title": "Repository Anti-Pattern & Architecture Auditor",
+      "source_archive_member": "repository_antipattern_audit_scheduled_task.md",
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "ast_inspection",
+        "line_budget_audit",
+        "layer_integrity_audit",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "dual_pipeline/",
+          "tools/",
+          "storage/",
+          "pipeline_a_intake/",
+          "pipeline_b_extraction/"
+        ],
+        "mandatory_checks": [
+          "layer_dependency_dag",
+          "module_line_budgets",
+          "cyclomatic_complexity"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/antipattern_audit",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily / Bi-weekly (e.g. Every day at 07:00 UTC)",
+        "cadence_is_illustrative": true,
+        "cadence_ambiguity": true,
+        "declared_cron": null,
+        "declared_timezone": "UTC"
+      },
+      "registration_status": {
+        "registered": false,
+        "registration_id": null,
+        "status": "UNRESOLVED",
+        "reconciliation_note": "Ambiguous cadence (Daily vs Bi-weekly); no registered scheduler entry."
+      },
+      "domain_routing": {
+        "d01_queue": "Detect structural defect; route to shared owner/action",
+        "d02_ingestion": "Detect missing lineage controls; route same action",
+        "d03_query": "Detect guard bypasses; route same action"
+      },
+      "is_consolidated_alias": true,
+      "consolidated_into": "ssot_drift_remediation"
+    },
+    "ssot_drift_remediation": {
+      "task_id": "ssot_drift_remediation",
+      "title": "SSOT Remediation Agent",
+      "source_archive_member": "ssot_drift_remediation_scheduled_task.md",
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "ssot_scan",
+        "prompt_to_judge_drift_scan",
+        "judge_to_contract_parity_scan",
+        "deterministic_gate_vs_judge_alignment",
+        "config_drift_detection",
+        "credential_leak_scan",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "governance/policy_registry.yaml",
+          "governance/decision_intelligence/",
+          "config/prompts/synthesis/stages/",
+          "dual_pipeline/prompts/contracts/",
+          "dual_pipeline/transcript_stages_core/x_gates.py",
+          "dual_pipeline/release_policy.py",
+          "dual_pipeline/cli/parser.py",
+          "dual_pipeline/canonical_pipeline/lifecycle.py",
+          "AGENTS.md",
+          ".agents/rules/",
+          "config/"
+        ],
+        "mandatory_checks": [
+          "threshold_drift_detection",
+          "prompt_judge_contract_parity",
+          "deterministic_gate_judge_alignment",
+          "unconditional_worktree_enforcement",
+          "duplicate_constant_detection",
+          "credential_leak_scan"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/drift_remediation",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 2:00 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 0 2 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "ssot-configuration-deduplication-model-pinning-anti-hardcoding",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Route runtime/classifier drift; no independent queue rewrite",
+        "d02_ingestion": "Verify configuration/root alignment and route lineage failure",
+        "d03_query": "Detect threshold/config drift; preserve guard values"
+      },
+      "master_sequence_order": 4,
+      "master_sequence_stage": "Stage II: Static Code, Architecture & Contract Alignment",
+      "is_consolidated_alias": false
+    },
+    "storage_repository_hygiene": {
+      "task_id": "storage_repository_hygiene",
+      "title": "Storage Hygiene Agent",
+      "source_archive_member": "storage_repository_hygiene_scheduled_task.md",
+      "prompt_path": "automations/prompts/storage_hygiene_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "authorized_apply"
+      ],
+      "capabilities": [
+        "read_only_storage_inspection",
+        "quarantine_planning",
+        "report_generation",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          ".local/dual_pipeline/generations/",
+          "output/transcript_cache/",
+          "reports/"
+        ],
+        "mandatory_checks": [
+          "active_generation_pin_protection",
+          "quarantine_candidate_enumeration",
+          "zero_graph_mutation_check"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/storage_hygiene",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 1:00 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 0 1 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "autonomous-storage-repository-clutter-hygiene-protocol",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Route queue symptoms; no bulk archival as repair",
+        "d02_ingestion": "Protect staging/recovery inputs; route missing package",
+        "d03_query": "Not applicable to cleanup execution; route incidental finding without query repair"
+      },
+      "master_sequence_order": 1,
+      "master_sequence_stage": "Stage I: Physical & Topology Foundation",
+      "is_consolidated_alias": false
+    },
+    "weekly_market_intelligence": {
+      "task_id": "weekly_market_intelligence",
+      "title": "Energy Intelligence Agent",
+      "source_archive_member": "weekly_market_intelligence_scheduled_task.md",
+      "prompt_path": "automations/prompts/weekly_market_intelligence_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run"
+      ],
+      "capabilities": [
+        "read_only_research",
+        "briefing_generation",
+        "dry_run_preview",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "output/weekly_market_intel/"
+        ],
+        "mandatory_checks": [
+          "source_grounding_audit",
+          "dry_run_zero_mutation_check",
+          "preview_artifact_generation"
+        ],
+        "time_window_required": true
+      },
+      "output_policy": {
+        "base_directory": "output/weekly_market_intel",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Weekly on Monday at 5:20 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 20 5 * * 1",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "energy-utilities-best-practices",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Apply classification to its failures; route shared defect once",
+        "d02_ingestion": "Consume exact package checks and resume lineage for its ingestion",
+        "d03_query": "Route query/coverage faults encountered; no weakened grounding"
+      },
+      "master_sequence_order": 14,
+      "master_sequence_stage": "Stage V: External Intelligence & Strategic Foresight",
+      "is_consolidated_alias": false
+    },
+    "worktree_coverage_cleanup": {
+      "task_id": "worktree_coverage_cleanup",
+      "title": "Worktree Coverage & Cleanup Agent",
+      "source_archive_member": "worktree_coverage_cleanup_scheduled_task.md",
+      "prompt_path": "automations/prompts/pr_queue_observer_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run"
+      ],
+      "capabilities": [
+        "worktree_inventory",
+        "stash_inventory",
+        "orphan_detection",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          ".worktrees/",
+          "git_stashes"
+        ],
+        "mandatory_checks": [
+          "complete_worktree_enumeration",
+          "uncommitted_deliverable_protection",
+          "empty_stub_identification"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/worktree_coverage",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily (e.g. Every day at 06:30 UTC)",
+        "cadence_is_illustrative": true,
+        "cadence_ambiguity": true,
+        "declared_cron": null,
+        "declared_timezone": "UTC"
+      },
+      "registration_status": {
+        "registered": false,
+        "registration_id": null,
+        "status": "UNRESOLVED",
+        "reconciliation_note": "No live registered cron found; zero uncommitted deliverables may be pruned."
+      },
+      "domain_routing": {
+        "d01_queue": "Route detected repair-worktree issue; no queue mutation",
+        "d02_ingestion": "Preserve worktrees/packages referenced by unresolved recovery",
+        "d03_query": "Not applicable to inventory; route incidental finding"
+      },
+      "is_consolidated_alias": true,
+      "consolidated_into": "pr_queue_observer"
+    },
+    "cost_quality_review": {
+      "task_id": "cost_quality_review",
+      "title": "Measured Cost, Latency & Quality Review Agent",
+      "source_archive_member": "cost_quality_review_scheduled_task.md",
+      "prompt_path": "automations/prompts/pipeline_outcome_assurance_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run"
+      ],
+      "capabilities": [
+        "read_only_telemetry_reconciliation",
+        "cost_latency_analysis",
+        "workload_quality_comparison",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "storage/CANONICAL_GRAPH.db",
+          "storage/runtime/active_pair.json",
+          "reports/"
+        ],
+        "mandatory_checks": [
+          "graph_structural_integrity",
+          "zero_mutation_invariance",
+          "telemetry_coverage_reconciliation"
+        ],
+        "time_window_required": true
+      },
+      "output_policy": {
+        "base_directory": "reports/cost_quality",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Weekly on Sunday at 01:00 UTC",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "0 1 * * 0",
+        "declared_timezone": "UTC"
+      },
+      "registration_status": {
+        "registered": false,
+        "registration_id": null,
+        "status": "UNRESOLVED",
+        "reconciliation_note": "Awaiting operator authorization for live cron registration."
+      },
+      "domain_routing": {
+        "d01_queue": "Reconcile retry cost; route queue symptoms",
+        "d02_ingestion": "Reconcile ingestion cost; route missing package",
+        "d03_query": "Reconcile query latency, token usage, and retrieval cost; route query coverage faults to shared owner"
+      },
+      "is_consolidated_alias": true,
+      "consolidated_into": "pipeline_outcome_assurance"
+    },
+    "pipeline_outcome_assurance": {
+      "task_id": "pipeline_outcome_assurance",
+      "title": "Pipeline Assurance Agent",
+      "source_archive_member": "pipeline_outcome_assurance_scheduled_task.md",
+      "prompt_path": "automations/prompts/pipeline_outcome_assurance_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run"
+      ],
+      "capabilities": [
+        "read_only_lifecycle_reconciliation",
+        "intake_directive_audit",
+        "retrieval_assurance_audit",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "storage/CANONICAL_GRAPH.db",
+          "storage/runtime/active_pair.json",
+          "output/"
+        ],
+        "mandatory_checks": [
+          "graph_structural_integrity",
+          "zero_mutation_invariance",
+          "lifecycle_chain_reconciliation"
+        ],
+        "time_window_required": true
+      },
+      "output_policy": {
+        "base_directory": "reports/pipeline_assurance",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 4:20 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 20 4 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "pipeline-outcome-retrieval-assurance",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Reconcile queue and dead-letter records; route defects",
+        "d02_ingestion": "Reconcile intake directive completions; route ingestion failures",
+        "d03_query": "Reconcile pipeline outcome retrieval assurance and verify query evaluation gates"
+      },
+      "master_sequence_order": 11,
+      "master_sequence_stage": "Stage IV: Operational Assurance, Cost & Closed-Loop Learning",
+      "is_consolidated_alias": false
+    },
+    "technical_debt_elimination": {
+      "task_id": "technical_debt_elimination",
+      "title": "Repository Technical Debt Elimination Agent",
+      "source_archive_member": "technical_debt_elimination_scheduled_task.md",
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "ast_inspection",
+        "line_budget_audit",
+        "dead_code_detection",
+        "layer_integrity_audit",
+        "test_coverage_audit",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "dual_pipeline/",
+          "pipeline_a_intake/",
+          "pipeline_b_extraction/",
+          "pipeline_c_retrieval/",
+          "storage/",
+          "tools/",
+          "config/"
+        ],
+        "mandatory_checks": [
+          "module_line_budgets",
+          "cyclomatic_complexity",
+          "layer_dependency_dag",
+          "credential_leak_scan",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/tech_debt_audit",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Weekly on Sunday at 02:00 UTC",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "0 2 * * 0",
+        "declared_timezone": "UTC"
+      },
+      "registration_status": {
+        "registered": false,
+        "registration_id": null,
+        "status": "UNRESOLVED",
+        "reconciliation_note": "Awaiting operator authorization for live cron registration."
+      },
+      "domain_routing": {
+        "d01_queue": "Detect structural debt; route to shared owner",
+        "d02_ingestion": "Preserve active staging and recovery lineage during refactoring",
+        "d03_query": "Verify query/retrieval test parity; route graph coverage faults to shared owner"
+      },
+      "is_consolidated_alias": true,
+      "consolidated_into": "ssot_drift_remediation"
+    },
+    "timeout_lock_watchdog": {
+      "task_id": "timeout_lock_watchdog",
+      "title": "Runtime Timeout, Hung Process & Lock Watchdog Agent",
+      "source_archive_member": "timeout_lock_watchdog_scheduled_task.md",
+      "prompt_path": "automations/prompts/pipeline_outcome_assurance_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run"
+      ],
+      "capabilities": [
+        "read_only_runtime_inspection",
+        "hung_process_detection",
+        "lock_file_audit",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          ".local/",
+          "storage/runtime/",
+          "reports/"
+        ],
+        "mandatory_checks": [
+          "process_timeout_inspection",
+          "lock_file_staleness_check",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/timeout_watchdog",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 04:00 UTC",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "0 4 * * *",
+        "declared_timezone": "UTC"
+      },
+      "registration_status": {
+        "registered": false,
+        "registration_id": null,
+        "status": "UNRESOLVED",
+        "reconciliation_note": "Awaiting operator authorization for live cron registration."
+      },
+      "domain_routing": {
+        "d01_queue": "Observe runtime lock status; route hung lock defects",
+        "d02_ingestion": "Detect stalled pipeline runs; preserve active staging files",
+        "d03_query": "Observe query engine timeouts; report deadlock risks"
+      },
+      "is_consolidated_alias": true,
+      "consolidated_into": "pipeline_outcome_assurance"
+    },
+    "third_party_tool_consolidation": {
+      "task_id": "third_party_tool_consolidation",
+      "title": "Local Third-Party Tool & Custom Code Elimination Agent",
+      "source_archive_member": "third_party_tool_consolidation_scheduled_task.md",
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "read_only_dependency_inspection",
+        "redundant_wrapper_detection",
+        "custom_code_consolidation_proposal",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "tools/",
+          "dual_pipeline/",
+          "config/"
+        ],
+        "mandatory_checks": [
+          "third_party_dependency_inventory",
+          "unused_utility_detection",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/tool_consolidation",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Weekly on Wednesday at 03:00 UTC",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "0 3 * * 3",
+        "declared_timezone": "UTC"
+      },
+      "registration_status": {
+        "registered": false,
+        "registration_id": null,
+        "status": "UNRESOLVED",
+        "reconciliation_note": "Awaiting operator authorization for live cron registration."
+      },
+      "domain_routing": {
+        "d01_queue": "Route redundant tool usage; no independent queue rewrite",
+        "d02_ingestion": "Verify standard library tool replacements; preserve intake lineage",
+        "d03_query": "Audit custom retrieval adapters; ensure zero regression"
+      },
+      "is_consolidated_alias": true,
+      "consolidated_into": "ssot_drift_remediation"
+    },
+    "frontier_llm_research_scout": {
+      "task_id": "frontier_llm_research_scout",
+      "title": "Frontier Research Agent",
+      "source_archive_member": "frontier_llm_research_scout_scheduled_task.md",
+      "prompt_path": "automations/prompts/agentic_repo_best_practices_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run"
+      ],
+      "capabilities": [
+        "read_only_web_research",
+        "arxiv_preprint_fetching",
+        "digest_synthesis",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "reports/frontier_llm_scout/",
+          "storage/runtime/active_pair.json"
+        ],
+        "mandatory_checks": [
+          "primary_source_verification",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": true
+      },
+      "output_policy": {
+        "base_directory": "reports/frontier_llm_scout",
+        "formats": [
+          "markdown"
+        ],
+        "requires_sealed_manifest": false
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Weekly on Monday at 2:20 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 20 2 * * 1",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": false,
+        "registration_id": null,
+        "status": "CONSOLIDATED",
+        "reconciliation_note": "Consolidated into agentic_repo_best_practices_scout (Agentic Frontier Architecture Agent)."
+      },
+      "domain_routing": {
+        "d01_queue": "Route shared defects to queue owner",
+        "d02_ingestion": "Consume exact package checks for optional ingestion",
+        "d03_query": "Route query coverage faults without lowering thresholds"
+      },
+      "is_consolidated_alias": true,
+      "consolidated_into": "agentic_repo_best_practices_scout"
+    },
+    "testing_gaps_assurance": {
+      "task_id": "testing_gaps_assurance",
+      "title": "Testing Gaps Agent",
+      "source_archive_member": "testing_gaps_assurance_scheduled_task.md",
+      "prompt_path": "automations/prompts/testing_gaps_assurance_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "nine_dimension_testing_audit",
+        "e2e_runtime_authenticity_scan",
+        "mutation_kill_rate_analysis",
+        "hypothesis_property_gap_detection",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "tests/",
+          "dual_pipeline/",
+          "storage/",
+          "pipeline_a_intake/",
+          "pipeline_b_extraction/",
+          "tools/",
+          "reports/testing_gaps/"
+        ],
+        "mandatory_checks": [
+          "nine_dimension_verification_maturity",
+          "e2e_runtime_authenticity",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/testing_gaps",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 4:00 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 0 4 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "testing-gaps-assurance-agent",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Verify queue/worktree test coverage; route live queue state to pr_queue_observer",
+        "d02_ingestion": "Verify U0-EVALS E2E and Tier-1 replay tests; preserve active staging lineage",
+        "d03_query": "Verify 11 BGE-M3 retrieval gate tests; route live coverage faults to knowledge_graph_hygiene"
+      },
+      "master_sequence_order": 10,
+      "master_sequence_stage": "Stage III: Functional, Retrieval & Evaluation Assurance",
+      "is_consolidated_alias": false
+    },
+    "e2e_critical_functionality_assurance": {
+      "task_id": "e2e_critical_functionality_assurance",
+      "title": "Functionality Assurance Agent",
+      "source_archive_member": "e2e_critical_functionality_assurance_scheduled_task.md",
+      "prompt_path": "automations/prompts/e2e_critical_functionality_assurance_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "e2e_critical_functionality_audit",
+        "anti_enhancement_firewall_enforcement",
+        "ast_lazy_import_and_ipc_wiring_scan",
+        "stage_handoff_and_resume_verification",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "dual_pipeline/",
+          "unified_pipeline/",
+          "storage/",
+          "pipeline_a_intake/",
+          "pipeline_b_extraction/",
+          "evals/",
+          "tools/",
+          "reports/e2e_critical_assurance/"
+        ],
+        "mandatory_checks": [
+          "six_pillar_e2e_criticality_audit",
+          "anti_enhancement_firewall",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/e2e_critical_assurance",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 3:00 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 0 3 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "e2e-critical-functionality-assurance-agent",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Audit CLI/IPC entrypoint wiring and worktree handoffs; route live queue state to pr_queue_observer",
+        "d02_ingestion": "Audit and repair U0-EVALS E2E stage handoffs, live recording IPC, and --resume checkpoints",
+        "d03_query": "Audit and repair 16-table GraphDB/sidecar sync, W0/E0 release activation, and 8-route Query/Copilot/Decision API"
+      },
+      "master_sequence_order": 7,
+      "master_sequence_stage": "Stage III: Functional, Retrieval & Evaluation Assurance",
+      "is_consolidated_alias": false
+    },
+    "corner_foresight_blindspot_scout": {
+      "task_id": "corner_foresight_blindspot_scout",
+      "title": "Corner Foresight Agent",
+      "source_archive_member": "corner_foresight_blindspot_scout_scheduled_task.md",
+      "prompt_path": "automations/prompts/corner_foresight_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "proactive_blindspot_discovery",
+        "multi_hop_domino_graph_traversal",
+        "topological_bridge_spof_centrality",
+        "stakeholder_velocity_drift_analysis",
+        "forgotten_commitment_tracking",
+        "expiring_decision_frame_radar",
+        "second_order_domino_risk_analysis",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "storage/CANONICAL_GRAPH.db",
+          "storage/runtime/active_pair.json",
+          "reports/corner_foresight/"
+        ],
+        "mandatory_checks": [
+          "five_pillar_blindspot_radar",
+          "multi_hop_domino_blast_radius_scoring",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/corner_foresight",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 6:00 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 0 6 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "corner-foresight-blindspot-scout",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Inspect cross-worktree collision horizons and forgotten branch work; route queue state to pr_queue_observer",
+        "d02_ingestion": "Inspect unlinked source commitments and pending intake directives; route recovery execution to pipeline_outcome_assurance",
+        "d03_query": "Traverse Knowledge Graph for expiring decision frames, silent stakeholder drift, and uncorroborated single-source bets"
+      },
+      "master_sequence_order": 15,
+      "master_sequence_stage": "Stage V: External Intelligence & Strategic Foresight",
+      "is_consolidated_alias": false
+    },
+    "hotspot_value_enhancement": {
+      "task_id": "hotspot_value_enhancement",
+      "title": "Hotspot Enhancement Agent",
+      "source_archive_member": "hotspot_value_enhancement_scheduled_task.md",
+      "prompt_path": "automations/prompts/hotspot_enhancement_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "hotspot_bug_recurrence_mining",
+        "value_to_effort_roi_ranking",
+        "healer_root_cause_structural_enhancement",
+        "e2e_runtime_execution_hardening",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "dual_pipeline/",
+          "unified_pipeline/",
+          "storage/",
+          "pipeline_a_intake/",
+          "pipeline_b_extraction/",
+          "tools/",
+          "tests/",
+          "reports/hotspot_enhancement/"
+        ],
+        "mandatory_checks": [
+          "five_pillar_hotspot_roi_audit",
+          "e2e_runtime_execution_fidelity",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/hotspot_enhancement",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 2:40 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 40 2 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "hotspot-value-enhancement-agent",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Analyze recurring bug-fix churn across CLI/PR lifecycle hotspots; route live PR queue state to pr_queue_observer",
+        "d02_ingestion": "Harden high-churn ingestion, healer, resume, and stage-handoff hotspots with true E2E runtime execution; route stalled live directives to pipeline_outcome_assurance",
+        "d03_query": "Enhance GraphDB/sidecar write-gateway resilience, retrieval evaluation fidelity, and query/copilot runtime robustness"
+      },
+      "master_sequence_order": 6,
+      "master_sequence_stage": "Stage II: Static Code, Architecture & Contract Alignment",
+      "is_consolidated_alias": false
+    },
+    "tokenomics_cost_optimization": {
+      "task_id": "tokenomics_cost_optimization",
+      "title": "Cost Optimization Agent",
+      "source_archive_member": "tokenomics_cost_optimization_scheduled_task.md",
+      "prompt_path": "automations/prompts/tokenomics_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "model_pinning_pareto_benchmarking",
+        "multi_provider_prompt_caching_audit",
+        "semantic_and_multi_tier_cache_verification",
+        "surgical_healer_and_judge_retry_optimization",
+        "closed_loop_tokenomics_learning"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "config/runtime/model_registry.json",
+          "dual_pipeline/token_optimization/",
+          "reports/tokenomics/"
+        ],
+        "mandatory_checks": [
+          "eight_pillar_tokenomics_audit",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/tokenomics",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 4:40 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 40 4 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "tokenomics-cost-optimization-agent",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Inspect cross-worktree cache reuse and retry waste; route queue state to pr_queue_observer",
+        "d02_ingestion": "Inspect stage token amplification and healer/judge retry burn; route ingestion recovery to pipeline_outcome_assurance",
+        "d03_query": "Inspect query/extraction semantic cache hit rates and subgraph memoization without mutating live GraphDB"
+      },
+      "master_sequence_order": 12,
+      "master_sequence_stage": "Stage IV: Operational Assurance, Cost & Closed-Loop Learning",
+      "is_consolidated_alias": false
+    },
+    "agentic_repo_best_practices_scout": {
+      "task_id": "agentic_repo_best_practices_scout",
+      "title": "Agentic Frontier Architecture Agent",
+      "source_archive_member": "agentic_repo_best_practices_scout_scheduled_task.md",
+      "prompt_path": "automations/prompts/agentic_repo_best_practices_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "frontier_lab_agentic_pattern_discovery",
+        "arxiv_preprint_fetching",
+        "mechanistic_interpretability_digest",
+        "empirical_ablation_and_hype_filtering",
+        "lane0_governance_reference_playbook_curation",
+        "three_tier_repo_integration_mapping",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "docs/governance/",
+          "reports/frontier_llm_scout/",
+          ".agents/skills/",
+          ".agents/rules/",
+          "reports/agentic_repo_best_practices/"
+        ],
+        "mandatory_checks": [
+          "tested_pattern_only_filter",
+          "primary_source_verification",
+          "model_neutral_reference_naming",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/agentic_repo_best_practices",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Weekly on Monday at 2:20 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 20 2 * * 1",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "agentic-repo-best-practices-scout",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Apply failure classification; route shared PR queue state to pr_queue_observer",
+        "d02_ingestion": "Preserve intake package checks and resume lineage; route ingestion recovery to pipeline_outcome_assurance",
+        "d03_query": "Route query coverage faults without lowering retrieval gates; maintain strict separation between external reference playbooks and canonical project GraphDB"
+      },
+      "master_sequence_order": 5,
+      "master_sequence_stage": "Stage II: Static Code, Architecture & Contract Alignment",
+      "is_consolidated_alias": false
+    },
+    "retrieval_surface_assurance": {
+      "task_id": "retrieval_surface_assurance",
+      "title": "Retrieval Surface Agent",
+      "source_archive_member": "retrieval_surface_assurance_scheduled_task.md",
+      "prompt_path": "automations/prompts/retrieval_surface_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "exhaustive_seven_surface_retrieval_audit",
+        "mandatory_gap_first_retrieval_remediation",
+        "high_roi_retrieval_enhancement_ranking",
+        "eleven_gate_bge_m3_surface_verification",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "dual_pipeline/index_core/",
+          "dual_pipeline/retrieval/",
+          "dual_pipeline/graph_retrieval_core/",
+          "dual_pipeline/live_meeting_recorder_core/",
+          "dual_pipeline/ptc/",
+          "dual_pipeline/semantic_cache_core/",
+          "reports/retrieval_surface_assurance/"
+        ],
+        "mandatory_checks": [
+          "retrieval_gaps_first_gate",
+          "retrieval_roi_enhancement_gate",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/retrieval_surface_assurance",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 3:20 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 20 3 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "retrieval-surface-assurance-agent",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Audit CLI/MCP/SDK retrieval entrypoint wiring and worktree handoffs; route live PR queue state to pr_queue_observer",
+        "d02_ingestion": "Verify post-ingestion retrieval visibility, offline context retrieval, and sidecar vector indexing parity; route stalled intake directives to pipeline_outcome_assurance",
+        "d03_query": "Exhaustively audit all 7 repository retrieval surfaces, remediate 100% of retrieval functionality gaps first, and then execute the highest value-to-effort retrieval enhancements across every surface without mutating live production GraphDB prior to governed PR merge"
+      },
+      "master_sequence_order": 8,
+      "master_sequence_stage": "Stage III: Functional, Retrieval & Evaluation Assurance",
+      "is_consolidated_alias": false
+    },
+    "system_learning_assurance": {
+      "task_id": "system_learning_assurance",
+      "title": "System Learning Agent",
+      "source_archive_member": "system_learning_assurance_scheduled_task.md",
+      "prompt_path": "automations/prompts/system_learning_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "exhaustive_six_surface_system_learning_audit",
+        "exhaustive_eight_surface_system_learning_audit",
+        "unified_eight_surface_learning_cycle",
+        "mandatory_gap_first_learning_remediation",
+        "high_roi_learning_enhancement_ranking",
+        "post_apply_canary_and_rollback_verification",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "dual_pipeline/learning_loop_core/",
+          "dual_pipeline/learning_engine_core/",
+          "dual_pipeline/learning_adapters/",
+          "dual_pipeline/system_learning/",
+          "dual_pipeline/transcript_metadata_core/speaker_priors_registry.py",
+          "dual_pipeline/agent_architecture_core/",
+          "dual_pipeline/token_optimization/",
+          "dual_pipeline/hitl_governance_core/",
+          "reports/system_learning_assurance/"
+        ],
+        "mandatory_checks": [
+          "learning_gaps_first_gate",
+          "learning_roi_enhancement_gate",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/system_learning_assurance",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 5:00 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 0 5 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "system-learning-assurance-agent",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Audit CLI/MCP/SDK learning proposal and runtime outcome entrypoint wiring and worktree handoffs; route live PR queue state to pr_queue_observer",
+        "d02_ingestion": "Verify post-ingestion entity alias reconciliation, acoustic voiceprint speaker priors, operator correction feedback, temporal staleness decay learning, and runtime outcome emission parity; route stalled intake directives to pipeline_outcome_assurance",
+        "d03_query": "Exhaustively audit all 8 repository system learning surfaces, remediate 100% of closed-loop learning functionality gaps first, and then execute the highest value-to-effort system learning enhancements across every surface without mutating live production GraphDB prior to governed PR merge"
+      },
+      "master_sequence_order": 13,
+      "master_sequence_stage": "Stage IV: Operational Assurance, Cost & Closed-Loop Learning",
+      "is_consolidated_alias": false
+    },
+    "evals_surface_assurance": {
+      "task_id": "evals_surface_assurance",
+      "title": "Evals Surface Agent",
+      "source_archive_member": "evals_surface_assurance_scheduled_task.md",
+      "prompt_path": "automations/prompts/evals_surface_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive",
+        "audit_only",
+        "dry_run",
+        "isolated_patch_proposal"
+      ],
+      "capabilities": [
+        "exhaustive_seven_surface_evals_audit",
+        "construct_validity_gap_remediation",
+        "anti_tautology_verification",
+        "high_roi_eval_enhancement_ranking",
+        "operational_change_journaling"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "evals/",
+          "dual_pipeline/evals/",
+          "dual_pipeline/retrieval_eval_core/",
+          "dual_pipeline/retrieval_suite_core/",
+          "tools/",
+          "reports/evals_surface_assurance/"
+        ],
+        "mandatory_checks": [
+          "evals_construct_validity_gate",
+          "evals_zero_tautology_gate",
+          "zero_mutation_invariance"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/evals_surface_assurance",
+        "formats": [
+          "json",
+          "markdown"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Daily at 3:40 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 40 3 * * *",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "evals-surface-assurance-agent",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "Audit evaluation CLI/CI entrypoint wiring and worktree handoffs; route live PR queue state to pr_queue_observer",
+        "d02_ingestion": "Verify U0/L1/L0/C0-PA/L2/X1-X3 stage evaluator construct validity and Tier-1 replay evaluation fidelity; route stalled live intake directives to pipeline_outcome_assurance",
+        "d03_query": "Exhaustively audit all 7 repository evaluation surfaces, verify that every evaluator measures the real production behavior it claims to measure without tautological or clamped shortcuts, and remediate 100% of construct-validity gaps first before applying high-ROI evaluation enhancements without mutating live production GraphDB prior to governed PR merge"
+      },
+      "master_sequence_order": 9,
+      "master_sequence_stage": "Stage III: Functional, Retrieval & Evaluation Assurance",
+      "is_consolidated_alias": false
+    },
+    "nea_charter_portfolio_roster": {
+      "task_id": "nea_charter_portfolio_roster",
+      "title": "NEA Charter Portfolio & Roster Agent",
+      "prompt_path": "automations/prompts/sidecars/nea_charter_portfolio_roster_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive"
+      ],
+      "capabilities": [
+        "read_only_graph_inspection",
+        "portfolio_table_generation"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "storage/CANONICAL_GRAPH.db"
+        ],
+        "mandatory_checks": [
+          "canonical_eligible_filtering"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/nea_roster",
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Weekly on Monday at 7:00 AM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 0 7 * * 1",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "nea-charter-portfolio-roster",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "NOT_APPLICABLE",
+        "d02_ingestion": "NOT_APPLICABLE",
+        "d03_query": "Owned (weekly charter portfolio and roster table)"
+      },
+      "master_sequence_order": 16,
+      "master_sequence_stage": "Stage VI: Executive Briefing & Portfolio Sidecars",
+      "is_consolidated_alias": false
+    },
+    "google_partner_advisory_weekly_sync": {
+      "task_id": "google_partner_advisory_weekly_sync",
+      "title": "Google x PartnerAdvisory Weekly Sync Agenda Agent",
+      "prompt_path": "automations/prompts/sidecars/google_partner_advisory_weekly_sync_agent.md",
+      "default_mode": "interactive",
+      "allowed_modes": [
+        "scheduled",
+        "interactive"
+      ],
+      "capabilities": [
+        "read_only_graph_inspection",
+        "exponential_decay_traversal",
+        "speaker_notes_generation"
+      ],
+      "coverage_rules": {
+        "targets": [
+          "storage/CANONICAL_GRAPH.db"
+        ],
+        "mandatory_checks": [
+          "canonical_eligible_filtering",
+          "rule_9_formatting"
+        ],
+        "time_window_required": false
+      },
+      "output_policy": {
+        "base_directory": "reports/google_partner_advisory",
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "requires_sealed_manifest": true
+      },
+      "cadence_specification": {
+        "illustrative_cadence": "Weekly on Tuesday at 2:30 PM America/New_York",
+        "cadence_is_illustrative": false,
+        "cadence_ambiguity": false,
+        "declared_cron": "CRON_TZ=America/New_York 30 14 * * 2",
+        "declared_timezone": "America/New_York"
+      },
+      "registration_status": {
+        "registered": true,
+        "registration_id": "google-partner_advisory-weekly-sync",
+        "status": "RECONCILED_ACTIVE",
+        "reconciliation_note": "Reconciled active scheduled automation sidecar."
+      },
+      "domain_routing": {
+        "d01_queue": "NOT_APPLICABLE",
+        "d02_ingestion": "NOT_APPLICABLE",
+        "d03_query": "Owned (weekly executive speaker notes and agenda)"
+      },
+      "master_sequence_order": 17,
+      "master_sequence_stage": "Stage VI: Executive Briefing & Portfolio Sidecars",
+      "is_consolidated_alias": false
+    }
+  },
+  "sidecar_map": {
+    "storage_repository_hygiene": {
+      "sidecar_dir": "autonomous-storage-repository-clutter-hygiene-protocol",
+      "canonical_prompt": "automations/prompts/storage_hygiene_agent.md",
+      "title": "Storage Hygiene Agent",
+      "cron": "CRON_TZ=America/New_York 0 1 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 1,
+      "master_sequence_stage": "Stage I: Physical & Topology Foundation"
+    },
+    "pr_queue_observer": {
+      "sidecar_dir": "pr-queue-governance-observer",
+      "canonical_prompt": "automations/prompts/pr_queue_observer_agent.md",
+      "title": "PR Queue Agent",
+      "cron": "CRON_TZ=America/New_York 20 1 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 2,
+      "master_sequence_stage": "Stage I: Physical & Topology Foundation"
+    },
+    "knowledge_graph_hygiene": {
+      "sidecar_dir": "knowledge-graph-hygiene-agent",
+      "canonical_prompt": "automations/prompts/graph_hygiene_agent.md",
+      "title": "Graph Hygiene Agent",
+      "cron": "CRON_TZ=America/New_York 40 1 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 3,
+      "master_sequence_stage": "Stage I: Physical & Topology Foundation"
+    },
+    "ssot_drift_remediation": {
+      "sidecar_dir": "ssot-configuration-deduplication-model-pinning-anti-hardcoding",
+      "canonical_prompt": "automations/prompts/ssot_drift_remediation_agent.md",
+      "title": "SSOT Remediation Agent",
+      "cron": "CRON_TZ=America/New_York 0 2 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 4,
+      "master_sequence_stage": "Stage II: Static Code, Architecture & Contract Alignment"
+    },
+    "agentic_repo_best_practices_scout": {
+      "sidecar_dir": "agentic-repo-best-practices-scout",
+      "canonical_prompt": "automations/prompts/agentic_repo_best_practices_agent.md",
+      "title": "Agentic Frontier Architecture Agent",
+      "cron": "CRON_TZ=America/New_York 20 2 * * 1",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 5,
+      "master_sequence_stage": "Stage II: Static Code, Architecture & Contract Alignment"
+    },
+    "hotspot_value_enhancement": {
+      "sidecar_dir": "hotspot-value-enhancement-agent",
+      "canonical_prompt": "automations/prompts/hotspot_enhancement_agent.md",
+      "title": "Hotspot Enhancement Agent",
+      "cron": "CRON_TZ=America/New_York 40 2 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 6,
+      "master_sequence_stage": "Stage II: Static Code, Architecture & Contract Alignment"
+    },
+    "e2e_critical_functionality_assurance": {
+      "sidecar_dir": "e2e-critical-functionality-assurance-agent",
+      "canonical_prompt": "automations/prompts/e2e_critical_functionality_assurance_agent.md",
+      "title": "Functionality Assurance Agent",
+      "cron": "CRON_TZ=America/New_York 0 3 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 7,
+      "master_sequence_stage": "Stage III: Functional, Retrieval & Evaluation Assurance"
+    },
+    "retrieval_surface_assurance": {
+      "sidecar_dir": "retrieval-surface-assurance-agent",
+      "canonical_prompt": "automations/prompts/retrieval_surface_agent.md",
+      "title": "Retrieval Surface Agent",
+      "cron": "CRON_TZ=America/New_York 20 3 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 8,
+      "master_sequence_stage": "Stage III: Functional, Retrieval & Evaluation Assurance"
+    },
+    "evals_surface_assurance": {
+      "sidecar_dir": "evals-surface-assurance-agent",
+      "canonical_prompt": "automations/prompts/evals_surface_agent.md",
+      "title": "Evals Surface Agent",
+      "cron": "CRON_TZ=America/New_York 40 3 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 9,
+      "master_sequence_stage": "Stage III: Functional, Retrieval & Evaluation Assurance"
+    },
+    "testing_gaps_assurance": {
+      "sidecar_dir": "testing-gaps-assurance-agent",
+      "canonical_prompt": "automations/prompts/testing_gaps_assurance_agent.md",
+      "title": "Testing Gaps Agent",
+      "cron": "CRON_TZ=America/New_York 0 4 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 10,
+      "master_sequence_stage": "Stage III: Functional, Retrieval & Evaluation Assurance"
+    },
+    "pipeline_outcome_assurance": {
+      "sidecar_dir": "pipeline-outcome-retrieval-assurance",
+      "canonical_prompt": "automations/prompts/pipeline_outcome_assurance_agent.md",
+      "title": "Pipeline Assurance Agent",
+      "cron": "CRON_TZ=America/New_York 20 4 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 11,
+      "master_sequence_stage": "Stage IV: Operational Assurance, Cost & Closed-Loop Learning"
+    },
+    "tokenomics_cost_optimization": {
+      "sidecar_dir": "tokenomics-cost-optimization-agent",
+      "canonical_prompt": "automations/prompts/tokenomics_agent.md",
+      "title": "Cost Optimization Agent",
+      "cron": "CRON_TZ=America/New_York 40 4 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 12,
+      "master_sequence_stage": "Stage IV: Operational Assurance, Cost & Closed-Loop Learning"
+    },
+    "system_learning_assurance": {
+      "sidecar_dir": "system-learning-assurance-agent",
+      "canonical_prompt": "automations/prompts/system_learning_agent.md",
+      "title": "System Learning Agent",
+      "cron": "CRON_TZ=America/New_York 0 5 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 13,
+      "master_sequence_stage": "Stage IV: Operational Assurance, Cost & Closed-Loop Learning"
+    },
+    "weekly_market_intelligence": {
+      "sidecar_dir": "energy-utilities-best-practices",
+      "canonical_prompt": "automations/prompts/weekly_market_intelligence_agent.md",
+      "title": "Energy Intelligence Agent",
+      "cron": "CRON_TZ=America/New_York 20 5 * * 1",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 14,
+      "master_sequence_stage": "Stage V: External Intelligence & Strategic Foresight"
+    },
+    "corner_foresight_blindspot_scout": {
+      "sidecar_dir": "corner-foresight-blindspot-scout",
+      "canonical_prompt": "automations/prompts/corner_foresight_agent.md",
+      "title": "Corner Foresight Agent",
+      "cron": "CRON_TZ=America/New_York 0 6 * * *",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 15,
+      "master_sequence_stage": "Stage V: External Intelligence & Strategic Foresight"
+    },
+    "nea_charter_portfolio_roster": {
+      "sidecar_dir": "nea-charter-portfolio-roster",
+      "canonical_prompt": "automations/prompts/sidecars/nea_charter_portfolio_roster_agent.md",
+      "title": "NEA Charter Portfolio & Roster Agent",
+      "cron": "CRON_TZ=America/New_York 0 7 * * 1",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 16,
+      "master_sequence_stage": "Stage VI: Executive Briefing & Portfolio Sidecars"
+    },
+    "google_partner_advisory_weekly_sync": {
+      "sidecar_dir": "google-partner_advisory-weekly-sync",
+      "canonical_prompt": "automations/prompts/sidecars/google_partner_advisory_weekly_sync_agent.md",
+      "title": "Google x PartnerAdvisory Weekly Sync Agenda Agent",
+      "cron": "CRON_TZ=America/New_York 30 14 * * 2",
+      "extra_args": [
+        "--model=pro"
+      ],
+      "master_sequence_order": 17,
+      "master_sequence_stage": "Stage VI: Executive Briefing & Portfolio Sidecars"
+    }
+  },
+  "consolidated_task_aliases": {
+    "worktree_coverage_cleanup": "pr_queue_observer",
+    "repository_antipattern_audit": "ssot_drift_remediation",
+    "technical_debt_elimination": "ssot_drift_remediation",
+    "third_party_tool_consolidation": "ssot_drift_remediation",
+    "cost_quality_review": "pipeline_outcome_assurance",
+    "timeout_lock_watchdog": "pipeline_outcome_assurance",
+    "frontier_llm_research_scout": "agentic_repo_best_practices_scout"
+  },
+  "retired_sidecar_dirs": [
+    "worktree-coverage-cleanup",
+    "repository-antipattern-audit-exhaustive-discovery-and-deep-review",
+    "repository-technical-debt-elimination",
+    "local-third-party-tool-consolidation",
+    "measured-cost-latency-quality-review",
+    "runtime-timeout-and-lock-watchdog",
+    "frontier-llm-research-scout"
+  ],
+  "shared_governance_contract": "docs/governance/shared_automation_governance_contract.md"
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:entity-resolution:1.0.0",
+  "title": "NEE entity-resolution evidence and decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "resolution_id", "run_id", "trace_id", "mention_id", "reported_name", "stable_identifier", "context", "alternatives", "selected_entity_id", "outcome", "decision_basis", "requires_hitl", "decided_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:entity-resolution:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "resolution_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "trace_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "mention_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "reported_name": {"type": "string", "minLength": 1},
+    "stable_identifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "value"],
+      "properties": {
+        "kind": {"type": ["string", "null"], "enum": ["email", "upn", "directory_id", "system_id", "canonical_project_id", null]},
+        "value": {"type": ["string", "null"]}
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attendees", "workstream", "role", "organization", "project", "co_occurring_participants"],
+      "properties": {
+        "attendees": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "workstream": {"type": ["string", "null"]},
+        "role": {"type": ["string", "null"]},
+        "organization": {"type": ["string", "null"]},
+        "project": {"type": ["string", "null"]},
+        "co_occurring_participants": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["entity_id", "canonical_name", "match_score", "supporting_context", "uniqueness", "margin_over_next", "identity_conflicts"],
+        "properties": {
+          "entity_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "canonical_name": {"type": "string", "minLength": 1},
+          "match_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "supporting_context": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "uniqueness": {"type": "string", "enum": ["unique", "non_unique", "unknown"]},
+          "margin_over_next": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+          "identity_conflicts": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "selected_entity_id": {"type": ["string", "null"]},
+    "outcome": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/entityResolutionOutcome"},
+    "decision_basis": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "requires_hitl": {"type": "boolean"},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

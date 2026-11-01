@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-4ca50763ff1676bc67c396f080d3",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "67efb4508dd0642eb67f114ddfd0c734258fd4bef59480543fac58dae6978680"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-2a77d92136f6649cff522d41"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Large Language Model is an identified technical_anchor in 20260930 Pipeline Review.",
+      "proposed_value": "Large Language Model is an identified technical_anchor in 20261005 Lens Scope Review.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-7bf72aff33e381242bef1cb07de9"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-82008a06e3564d243ded9e3b3291",
+      "assertion_id_older": "assertion-7bf72aff33e381242bef1cb07de9",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-8c7af885b0a198c44ddee463fb18",
+      "timestamp_newer": "2026-10-05",
+      "timestamp_older": "2026-09-30"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Large Language Model' (HAS_CLAIM_TEXT). Older claim from 2026-09-30 superseded by newer claim from 2026-10-05.",
+  "proposal_id": "calibration-proposal-4ca50763ff1676bc67c396f080d3",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-7bf72aff33e381242bef1cb07de9 from Large Language Model is an identified technical_anchor in 20260930 Pipeline Review. to Large Language Model is an identified technical_anchor in 20261005 Lens Scope Review.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

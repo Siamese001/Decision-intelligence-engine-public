@@ -1,0 +1,32 @@
+[
+  {
+    "start": 0.0,
+    "end": 4.5,
+    "speaker": "Speaker 1",
+    "text": "And what do you have after four weeks? Do you have something like what are you gonna start working on?"
+  },
+  {
+    "start": 5.0,
+    "end": 9.5,
+    "speaker": "Speaker 2",
+    "text": "Yeah. Community development, information, and information."
+  },
+  {
+    "start": 10.0,
+    "end": 18.0,
+    "speaker": "Speaker 1",
+    "text": "They're looking to finalize. We have to give some stuff to them, right? Some resources to show that we're aligning them."
+  },
+  {
+    "start": 18.5,
+    "end": 26.0,
+    "speaker": "Speaker 2",
+    "text": "Through the well, we have two roles open currently in platform engineering."
+  },
+  {
+    "start": 26.5,
+    "end": 30.0,
+    "speaker": "Speaker 1",
+    "text": "Sounds great, let's align with Dan and follow up later today."
+  }
+]

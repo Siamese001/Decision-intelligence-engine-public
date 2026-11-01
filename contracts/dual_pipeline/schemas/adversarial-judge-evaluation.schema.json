@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:adversarial-judge-evaluation:1.0.0",
+  "title": "Adversarial LLM Judge Evaluation and Tier 1 Deterministic Pre-Check Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "evaluation_id",
+    "target_artifact",
+    "tier1_gate_receipt",
+    "tier2_evaluation",
+    "verdict",
+    "evaluated_at",
+    "extensions"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:adversarial-judge-evaluation:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "artifact_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "canonical_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"
+    },
+    "evaluation_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "target_artifact": {
+      "type": "string",
+      "enum": ["OUTPUT_01", "OUTPUT_02", "OUTPUT_03", "HOLISTIC_BUNDLE"]
+    },
+    "tier1_gate_receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "pre_check_tier", "violations", "diagnostics", "tokens_spent"],
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "pre_check_tier": {
+          "type": "string"
+        },
+        "violations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["code", "message", "dimension"],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "dimension": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "diagnostics": {
+          "type": "object"
+        },
+        "tokens_spent": {
+          "type": "integer",
+          "const": 0
+        },
+        "tokens_saved_estimate": {
+          "type": "integer"
+        }
+      }
+    },
+    "tier2_evaluation": {
+      "type": ["object", "null"]
+    },
+    "verdict": {
+      "type": "string",
+      "enum": ["PASS", "FAIL", "HITL_REQUIRED", "TIER_1_BLOCKED"]
+    },
+    "evaluated_at": {
+      "type": "string"
+    },
+    "extensions": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"
+    }
+  }
+}

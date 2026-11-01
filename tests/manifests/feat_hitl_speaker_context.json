@@ -1,0 +1,14 @@
+{
+  "name": "feat_hitl_speaker_context",
+  "description": "Speaker review context windows, unresolved styling, and context-bound grouped approvals",
+  "branch": "feat/hitl-speaker-context",
+  "deterministic_tests": [
+    "tests.unit.test_grouped_speaker_review"
+  ],
+  "e2e_tests": [
+    "tests.end_to_end.test_grouped_speaker_context_e2e",
+    "tests.adversarial.test_grouped_speaker_context_adversarial"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-08T00:00:00Z"
+}

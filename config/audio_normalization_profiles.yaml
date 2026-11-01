@@ -1,0 +1,74 @@
+# config/audio_normalization_profiles.yaml
+# Source-Agnostic Audio Normalization Profiles
+
+version: "1.0.0"
+target_standard:
+  sample_rate_hz: 16000
+  bit_depth: 16
+  format: "pcm_s16le"
+  container: "wav"
+
+profiles:
+  teams:
+    container: "webm"
+    codec: "opus"
+    downmix_method: "balanced_pan_arithmetic"
+    highpass_cutoff_hz: 80
+    quality_snr_baseline_db: 25.0
+    coverage_pass_threshold_pct: 95.0
+
+  webex:
+    container: "arf_or_mp4"
+    codec: "proprietary_or_aac"
+    downmix_method: "balanced_pan_arithmetic"
+    highpass_cutoff_hz: 80
+    quality_snr_baseline_db: 20.0
+    coverage_pass_threshold_pct: 95.0
+
+  zoom:
+    container: "mp4_or_m4a"
+    codec: "aac"
+    downmix_method: "balanced_pan_arithmetic"
+    highpass_cutoff_hz: 80
+    quality_snr_baseline_db: 25.0
+    coverage_pass_threshold_pct: 95.0
+
+  bluetooth:
+    container: "wav_raw_stream"
+    codec: "pcm_s16le"
+    downmix_method: "balanced_pan_arithmetic"
+    highpass_cutoff_hz: 100
+    quality_snr_baseline_db: 15.0
+    coverage_pass_threshold_pct: 90.0
+
+  screencapturekit:
+    container: "wav_stream"
+    codec: "pcm_s16le"
+    downmix_method: "direct"
+    highpass_cutoff_hz: 60
+    quality_snr_baseline_db: 35.0
+    coverage_pass_threshold_pct: 98.0
+
+  loopback:
+    container: "wav_stream"
+    codec: "pcm_s16le"
+    downmix_method: "direct"
+    highpass_cutoff_hz: 60
+    quality_snr_baseline_db: 30.0
+    coverage_pass_threshold_pct: 98.0
+
+  mic:
+    container: "wav_stream"
+    codec: "pcm_s16le"
+    downmix_method: "direct"
+    highpass_cutoff_hz: 80
+    quality_snr_baseline_db: 22.0
+    coverage_pass_threshold_pct: 95.0
+
+  generic:
+    container: "any"
+    codec: "any"
+    downmix_method: "balanced_pan_arithmetic"
+    highpass_cutoff_hz: 80
+    quality_snr_baseline_db: 20.0
+    coverage_pass_threshold_pct: 95.0

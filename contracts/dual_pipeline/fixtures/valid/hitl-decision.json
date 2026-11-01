@@ -1,0 +1,27 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:hitl-decision:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "hitl-decision-matt-k-hold",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "e09df2ce89ab7550ca68c95e7f61dd55d83986802efa5febd30486d884f45a8a"
+  },
+  "decision_id": "decision-matt-k-hold",
+  "review_item_id": "review-item-matt-k-identity",
+  "run_id": "run-intake-nea-update-2026-07-21",
+  "trace_id": "0123456789abcdef0123456789abcdef",
+  "tier": 2,
+  "decision": "HOLD",
+  "reviewer": "authorized-identity-reviewer",
+  "decided_at": "2026-07-21T15:05:00Z",
+  "rationale": "The partial name has two plausible matches and no stable identifier.",
+  "evidence_reviewed": ["evidence-speaker-matt-k-item-2", "evidence-action-item-3"],
+  "alternatives": ["CONFIRM Matthew Koch", "CONFIRM Matt Keller", "CREATE_NEW"],
+  "before_state_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "proposed_after_state_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "affected_candidate_ids": ["candidate-confirm-monitoring-owner-action"],
+  "challenger_required": false,
+  "challenger_id": null,
+  "extensions": {}
+}

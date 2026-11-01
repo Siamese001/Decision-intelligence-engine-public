@@ -1,0 +1,42 @@
+{
+  "schema_version": "urn:nee:dual-pipeline:source-manifest:1.0.0",
+  "timestamp": "2026-10-12T18:52:12.283244+00:00",
+  "sources": [
+    {
+      "path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+      "filename": "2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+      "sha256": "a46cbf74b141650533e8e398568040bd2810dbcb9be1137e25a5b01012c383cb",
+      "bytes": 199244,
+      "format": "png",
+      "is_summary": false,
+      "converted_text_sha256": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+      "converted_text_chars": 681,
+      "pages": [],
+      "sheets": [],
+      "slides": [],
+      "unit_coverage": {
+        "unit_type": "line_block",
+        "total_units": 9,
+        "included_units": 9,
+        "excluded_units": 0,
+        "disposition": "INCLUDED",
+        "locator_pattern": "L{line_number}",
+        "visual_policy": "NEVER",
+        "details": {
+          "total_records": 9,
+          "processed_records": 9,
+          "complete": true,
+          "ocr_text_length": 681,
+          "visual_components": 9
+        }
+      },
+      "summary_provenance": null
+    }
+  ],
+  "total_sources": 1,
+  "total_raw_bytes": 199244,
+  "total_converted_chars": 681,
+  "full_ingestion_claim": true,
+  "ingested_representation": "raw_sources",
+  "claim_rationale": "All 1 raw sources and their sheets/pages fully accounted for."
+}

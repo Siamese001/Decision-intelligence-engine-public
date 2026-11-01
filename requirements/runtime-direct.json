@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "python": {
+    "implementation": "CPython",
+    "major": 3,
+    "minor": 12,
+    "architecture": "64bit"
+  },
+  "compute": {
+    "platform": "cpu",
+    "wheel_channel": "cpu",
+    "device": "cpu"
+  },
+  "distributions": {
+    "boto3": "1.43.48",
+    "cryptography": "49.0.0",
+    "FlagEmbedding": "1.4.0",
+    "huggingface-hub": "1.24.0",
+    "numpy": "2.5.1",
+    "pypdf": "6.14.2",
+    "safetensors": "0.8.0",
+    "sentencepiece": "0.2.2",
+    "torch": "2.11.0+cpu",
+    "transformers": "5.14.1"
+  }
+}

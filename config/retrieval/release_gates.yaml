@@ -1,0 +1,75 @@
+version: "1.0.0"
+governance_initiative: "NEE-KG-DUAL-PIPELINE-01"
+
+gates:
+  - id: 1
+    name: "SCHEMA_AND_ENVELOPE_COMPATIBILITY"
+    description: "Validates all ingress and egress payloads against strict JSON schemas (additionalProperties: false)"
+    required: true
+    failure_action: "ABORT_RELEASE"
+
+  - id: 2
+    name: "CLAIM_CHECK_DIGEST_AND_PROVENANCE"
+    description: "Verifies deterministic SHA-256 content digests, parent digests, and immutable provenance chains"
+    required: true
+    failure_action: "ABORT_RELEASE"
+
+  - id: 3
+    name: "AUTHORIZATION_AND_TENANT_ISOLATION"
+    description: "Enforces strict tenant boundary isolation; blocks multi-tenant bleed"
+    required: true
+    failure_action: "QUARANTINE_AND_ABORT"
+
+  - id: 4
+    name: "PRE_RETRIEVAL_QUARANTINE_AND_NAMESPACE_POLICY"
+    description: "Evaluates Law 6 policy and multi-dimensional quarantine before any engine execution"
+    required: true
+    failure_action: "FAIL_CLOSED"
+
+  - id: 5
+    name: "BGE_M3_ACTIVE_PAIR_AND_MODEL_INTEGRITY"
+    description: "Verifies pinned BAAI/bge-m3 model revision, sidecar digest, and active_pair binding"
+    required: true
+    failure_action: "TRIGGER_ROLLBACK"
+
+  - id: 6
+    name: "DENSE_VECTOR_RETRIEVAL_CORRECTNESS"
+    description: "Validates dense embedding vector similarity, top-k candidate scoring, and normalized rankings"
+    required: true
+    failure_action: "ABORT_RELEASE"
+
+  - id: 7
+    name: "SPARSE_VECTOR_RETRIEVAL_CORRECTNESS"
+    description: "Validates lexical sparse weight token retrieval and score calibration"
+    required: true
+    failure_action: "ABORT_RELEASE"
+
+  - id: 8
+    name: "BM25_LEXICAL_RETRIEVAL_CORRECTNESS"
+    description: "Validates exact keyword matching and BM25 score monotonicity"
+    required: true
+    failure_action: "ABORT_RELEASE"
+
+  - id: 9
+    name: "COLBERT_LATE_INTERACTION_CORRECTNESS"
+    description: "Validates multi-vector MaxSim late interaction scoring and token alignment"
+    required: true
+    failure_action: "ABORT_RELEASE"
+
+  - id: 10
+    name: "FUSION_RERANKING_CITATION_AND_LATENCY"
+    description: "Verifies RRF rank fusion, citation lineage preservation, and p95 latency < 7,500ms"
+    required: true
+    max_latency_ms: 7500.0
+    failure_action: "FAIL_LATENCY_GATE"
+
+  - id: 11
+    name: "DECISION_CONTEXT_SEQUENCING_AND_RECAP_INTEGRITY"
+    description: "Enforces Evidence Record -> Canonical Graph Delta -> Executive Recap invariant ordering"
+    required: true
+    failure_action: "FAIL_SEQUENCING_GATE"
+
+rollback_policy:
+  auto_rollback_on_gate_failure: true
+  target_generation: "previous_generation_id"
+  notify_operator: true

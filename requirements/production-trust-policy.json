@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "status": "UNCONFIGURED",
+  "issuer": null,
+  "audience": null,
+  "public_key_sha256": null,
+  "owner": "NEE deployment identity and security owner"
+}

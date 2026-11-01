@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-e1d11cb367b5c037fdea8b4581e9",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "31d38c06ab2cf4ee2966873fd8bffb81d711811f7f410e3c2077de4ae39a6b48"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-493038eb004d5cf75bfa5fc3"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Conduit is an identified technical_anchor in 20260915 Lens Catch Up.",
+      "proposed_value": "Conduit is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-43fa2bab9f3f5259738b06093abd"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-b4e298b6504f7873b272dfa2e06c",
+      "assertion_id_older": "assertion-43fa2bab9f3f5259738b06093abd",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-35dec923aff582773e5c640e1e04",
+      "timestamp_newer": "2026-09-30",
+      "timestamp_older": "2026-09-15"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Conduit' (HAS_CLAIM_TEXT). Older claim from 2026-09-15 superseded by newer claim from 2026-09-30.",
+  "proposal_id": "calibration-proposal-e1d11cb367b5c037fdea8b4581e9",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-43fa2bab9f3f5259738b06093abd from Conduit is an identified technical_anchor in 20260915 Lens Catch Up. to Conduit is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

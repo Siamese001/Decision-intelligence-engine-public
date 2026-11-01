@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:automation-prompt-link-governance:1.0.0",
+  "title": "Antigravity Automation Prompt SSOT Link Contract",
+  "description": "Unified schema governing the Single Source of Truth master pointer specification for Antigravity scheduled automation sidecars, outlawing inlined prompt duplicates.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "task_id",
+    "canonical_ssot_path",
+    "ssot_link_uri",
+    "dereferencer_prompt",
+    "max_pointer_words",
+    "allow_inline_prompt_body"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "const": "urn:nee:automation-prompt-link-governance:1.0.0"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "task_id": {
+      "type": "string",
+      "enum": [
+        "knowledge_graph_hygiene",
+        "pr_queue_observer",
+        "repository_antipattern_audit",
+        "ssot_drift_remediation",
+        "storage_repository_hygiene",
+        "weekly_market_intelligence",
+        "worktree_coverage_cleanup",
+        "cost_quality_review",
+        "pipeline_outcome_assurance",
+        "technical_debt_elimination",
+        "timeout_lock_watchdog",
+        "third_party_tool_consolidation"
+      ]
+    },
+    "canonical_ssot_path": {
+      "type": "string",
+      "pattern": "^automations/prompts/[a-z0-9_]+_agent\\.md$"
+    },
+    "ssot_link_uri": {
+      "type": "string",
+      "pattern": "^(file://|/|automations/prompts/).*_agent\\.md$"
+    },
+    "dereferencer_prompt": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "max_pointer_words": {
+      "type": "integer",
+      "maximum": 40
+    },
+    "allow_inline_prompt_body": {
+      "type": "boolean",
+      "const": false
+    }
+  }
+}

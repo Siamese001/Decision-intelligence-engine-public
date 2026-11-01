@@ -1,0 +1,36 @@
+{
+  "artifact_id": "destination-decision-fixture",
+  "artifact_type": "architecture_deck",
+  "automatic_egress_count": 0,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "2ef3cb82efd1cdf364e7c8fd23268090ece67f703cb90b06fcd6b93b51d39e3f"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-destination-decision:1.0.0",
+  "decided_at": "2026-08-01T12:00:00Z",
+  "decision_id": "destination-decision-fixture",
+  "delivery_profile": "client_executive",
+  "destination": "NEE_DECISION_INTELLIGENCE",
+  "eligibility_checks": {
+    "authorized": "PASS",
+    "graph_essential": "PASS",
+    "l2_reasoning_required": "PASS",
+    "material_outcome": "PASS",
+    "multi_record_reasoning": "PASS"
+  },
+  "eligibility_status": "ELIGIBLE_PRE_RETRIEVAL",
+  "extensions": {},
+  "handoff_permitted": false,
+  "materiality": "high",
+  "operator_override": false,
+  "policy_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "query_type": "cross_workstream_synthesis",
+  "reason_codes": [
+    "MATERIAL_GRAPH_DECISION"
+  ],
+  "request_id": "request-destination-fixture",
+  "run_id": "run-destination-fixture",
+  "schema_version": "1.0.0",
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

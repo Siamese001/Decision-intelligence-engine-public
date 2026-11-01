@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "BAAI/bge-m3",
+  "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "revision_type": "git_commit",
+  "source": "https://huggingface.co/BAAI/bge-m3/tree/5617a9f61b028005a4858fdac845db406aefb181",
+  "snapshot_policy": "complete",
+  "network_policy_at_runtime": "offline",
+  "expected_dense_dimensions": 1024,
+  "expected_manifest_digest": "a598d96187ae03e498914543ca2637b95ef61c496faf4d5d9e471764f893905e",
+  "expected_snapshot_file_count": 30,
+  "expected_snapshot_size_bytes": 4587317404
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ingestion_modality_hardening",
+  "description": "Ingestion efficiency v2 modality protection and regression test manifest",
+  "branch": "docs/rca-document-ingestion-efficiency-20261008",
+  "deterministic_tests": [
+    "tests.test_zero_cloud_audio_invariants",
+    "tests.test_document_output3_only_rca",
+    "tests.test_copilot_notes_ingestion_output2_output3",
+    "tests.test_stage_coordinator_checkpoint",
+    "tests.test_recording_owner_lifecycle",
+    "tests.live_audio.test_advisory_boundary",
+    "tests.test_provider_request_budget",
+    "tests.test_document_resume_bounded_remediation",
+    "tests.test_parallel_synthesis",
+    "tests.test_transcript_source_spans_e2e"
+  ],
+  "e2e_tests": [
+    "tests.test_canonical_pipeline_matrix_e2e",
+    "tests.end_to_end.test_document_ingestion_runtime_e2e",
+    "tests.end_to_end.test_live_hot_path_budget_e2e",
+    "tests.adversarial.test_canonical_functional_adversarial",
+    "tests.adversarial.test_document_ingestion_runtime_adversarial",
+    "tests.adversarial.test_ingestion_shared_mode_sentinels_adversarial",
+    "tests.adversarial.test_ingestion_hardening_wave1_adversarial",
+    "tests.adversarial.test_ingestion_hardening_wave2_adversarial",
+    "tests.adversarial.test_ingestion_hardening_wave3_adversarial",
+    "tests.adversarial.test_ingestion_hardening_wave4_adversarial",
+    "tests.adversarial.test_ingestion_hardening_wave5_adversarial",
+    "tests.test_zero_cloud_audio_chunk_egress",
+    "tests.test_transcript_source_spans_adversarial",
+    "tests.test_d02_retry_concurrency_adversarial",
+    "tests.adversarial.test_ingestion_hardening_wave6_adversarial",
+    "tests.adversarial.test_ingestion_hardening_wave7_adversarial",
+    "tests.adversarial.test_ingestion_hardening_wave8_adversarial"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-08T20:00:00Z"
+}

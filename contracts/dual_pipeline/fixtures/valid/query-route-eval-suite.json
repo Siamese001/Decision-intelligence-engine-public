@@ -1,0 +1,68 @@
+{
+  "artifact_id": "query-route-eval-suite-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "04d0fff94c29a3c7c3dd4d42caa5673a14897f21e9475d8c90272ec0b468e6d8"
+  },
+  "cases": [
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-fixture-general",
+      "classification": "internal",
+      "critical": false,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "GENERAL_ASSISTANT_HANDOFF",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "enters_query_runtime": false,
+        "materiality": "low",
+        "query_type": null
+      },
+      "question": "Summarize these meeting notes.",
+      "tags": [
+        "fixture"
+      ]
+    },
+    {
+      "artifact_type": "evidence_export",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "route-fixture-graph",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "GRAPH_EVIDENCE_UTILITY",
+        "eligibility_status": "NOT_APPLICABLE",
+        "enters_query_runtime": true,
+        "materiality": "low",
+        "query_type": "exact_lookup"
+      },
+      "question": "Show governed record record-123.",
+      "tags": [
+        "fixture"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:query-route-eval-suite:1.0.0",
+  "created_at": "2026-08-01T12:00:00Z",
+  "extensions": {},
+  "policy_digest": "619ee8de6338fa58c5050a6e8b0f0292e069c92b2b788c8f9dd4564855de3951",
+  "runtime_boundary": "PRE_RETRIEVAL_PROVIDER_FREE_ROUTING",
+  "schema_version": "1.0.0",
+  "suite_id": "query-route-eval-suite-fixture",
+  "thresholds": {
+    "maximum_critical_false_negative_count": 0,
+    "minimum_destination_accuracy": 1,
+    "minimum_graph_entry_precision": 1,
+    "minimum_graph_entry_recall": 1,
+    "minimum_nee_decision_recall": 1
+  }
+}

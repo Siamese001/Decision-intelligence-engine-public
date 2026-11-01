@@ -1,0 +1,59 @@
+{
+  "action_id": "initial-retrieval",
+  "action_type": "requirement_hybrid_retrieval",
+  "active_pair": {
+    "backend": "deterministic_fixture",
+    "generation_id": "wave1-generation",
+    "graph_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "model_id": "fixture-model",
+    "model_revision": "fixture-revision",
+    "sidecar_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "artifact_id": "query-retrieval-attempt-fixture",
+  "attempt_id": "attempt-1",
+  "attempt_ordinal": 0,
+  "authorization_scope_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "budget_after": {
+    "actions_used": 1,
+    "bytes_used": 100,
+    "elapsed_ms": 5,
+    "records_used": 1
+  },
+  "budget_before": {
+    "actions_used": 0,
+    "bytes_used": 0,
+    "elapsed_ms": 0,
+    "records_used": 0
+  },
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "4dd388f95e34b999a7b7527f5d81c35180f1d4cfd28c20453405467e71c7c4aa"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-retrieval-attempt:1.0.0",
+  "coverage_manifest_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+  "extensions": {},
+  "graph_sha256_after": "3333333333333333333333333333333333333333333333333333333333333333",
+  "graph_sha256_before": "0000000000000000000000000000000000000000000000000000000000000000",
+  "input_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+  "parent_plan_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "provider_call_count": 0,
+  "provider_initialization_count": 0,
+  "requirement_ids": [
+    "requirement-1"
+  ],
+  "result": {
+    "bytes": 100,
+    "elapsed_ms": 5,
+    "provider_call_count": 0,
+    "provider_initialization_count": 0,
+    "record_ids_by_lane": {
+      "approved": [
+        "record-1"
+      ]
+    },
+    "result_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+    "status": "completed"
+  },
+  "schema_version": "1.0.0"
+}

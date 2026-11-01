@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:batch-admission-manifest:1.0.0",
+  "title": "NEE source-bound batch admission manifest",
+  "allOf": [
+    {"$ref": "urn:nee:dual-pipeline:common:1.0.0"}
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "created_at",
+    "policy",
+    "packages",
+    "extensions",
+    "canonical_digest"
+  ],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:batch-admission-manifest:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "created_at": {"type": "string", "minLength": 20, "maxLength": 64},
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy_id",
+        "policy_version",
+        "admission_mode",
+        "candidate_only",
+        "classification",
+        "audiences",
+        "permitted_source_postures",
+        "permitted_source_location_prefixes",
+        "max_package_count"
+      ],
+      "properties": {
+        "policy_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"},
+        "policy_version": {"type": "string", "minLength": 1, "maxLength": 64},
+        "admission_mode": {"enum": ["HITL_REQUIRED", "SIGNED_POLICY"]},
+        "candidate_only": {"const": true},
+        "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+        "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+        "permitted_source_postures": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[a-z][a-z_]{2,63}$"}
+        },
+        "permitted_source_location_prefixes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1, "maxLength": 1024}
+        },
+        "max_package_count": {"type": "integer", "minimum": 1, "maximum": 10000}
+      }
+    },
+    "packages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "artifact_id",
+          "contract_id",
+          "package_file_sha256",
+          "source_kind",
+          "classification",
+          "audiences",
+          "source_posture",
+          "source_location"
+        ],
+        "properties": {
+          "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "contract_id": {"type": "string", "pattern": "^urn:nee:dual-pipeline:[a-z0-9-]+:1\\.0\\.0$"},
+          "package_file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+            "source_kind": {"enum": ["copilot", "google_meet_gemini", "architecture", "markdown_source", "docx_source", "html_source", "pdf_source", "a2a_fact_vector_packet", "evidence_envelope"]},
+          "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+          "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"},
+          "source_posture": {"type": "string", "pattern": "^[a-z][a-z_]{2,63}$"},
+          "source_location": {"type": "string", "minLength": 1, "maxLength": 4096}
+        }
+      }
+    },
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"}
+  }
+}

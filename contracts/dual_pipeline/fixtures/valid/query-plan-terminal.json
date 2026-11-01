@@ -1,0 +1,31 @@
+{
+  "artifact_id": "query-plan-terminal-fixture",
+  "attempt_chain": [
+    "a35834e581cb53a254daf06b58f8fe6b82492ae993a8acad74fbf953350ab108"
+  ],
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "b605e5fcb0b3382baede93d27dc5c671b49d26ab43d0b2a78ad383a26a13ac04"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-plan-terminal:1.0.0",
+  "coverage_complete": true,
+  "coverage_manifest_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+  "extensions": {},
+  "final_evidence_report_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "final_provider_call_count": 0,
+  "graph_sha256_after": "0000000000000000000000000000000000000000000000000000000000000000",
+  "graph_sha256_before": "0000000000000000000000000000000000000000000000000000000000000000",
+  "parent_plan_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "permitted_next_stage": "L2D",
+  "schema_version": "1.0.0",
+  "terminal_id": "terminal-1",
+  "terminal_reason": "COMPLETED",
+  "total_work": {
+    "actions": 1,
+    "attempts": 1,
+    "bytes": 100,
+    "elapsed_ms": 5,
+    "unique_records": 1
+  }
+}

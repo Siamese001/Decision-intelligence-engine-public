@@ -1,0 +1,63 @@
+{
+  "artifact_id": "retrieval-evidence-report-fixture",
+  "authorization_scope_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "a299e683b201e46f57e9b3b8912e7e2ef8833434f874f7dafdb1edb30e825ffd"
+  },
+  "contract_id": "urn:nee:dual-pipeline:retrieval-evidence-report:1.0.0",
+  "coverage_manifest_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+  "evidence_packet_digest": "6666666666666666666666666666666666666666666666666666666666666666",
+  "extensions": {},
+  "graph_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "graph_snapshot": "graph-snapshot-evidence-fixture",
+  "l2_input_record_ids_by_lane": {
+    "approved": [
+      "retrieval-record-a2a"
+    ],
+    "candidate": [],
+    "external_public": [
+      "retrieval-record-public-pattern"
+    ]
+  },
+  "query_plan_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "report_id": "retrieval-evidence-report-fixture",
+  "requirement_outcomes": [
+    {
+      "outcome": "covered",
+      "reason_code": null,
+      "record_ids": [
+        "retrieval-record-a2a"
+      ],
+      "requirement_id": "coverage-requirement-a2a",
+      "support_directions": [
+        "direct"
+      ]
+    },
+    {
+      "outcome": "covered",
+      "reason_code": null,
+      "record_ids": [
+        "retrieval-record-public-pattern"
+      ],
+      "requirement_id": "coverage-requirement-evidence",
+      "support_directions": [
+        "not_applicable"
+      ]
+    }
+  ],
+  "run_id": "run-query-evidence-fixture",
+  "schema_version": "1.0.0",
+  "selected_record_ids_by_lane": {
+    "approved": [
+      "retrieval-record-a2a"
+    ],
+    "candidate": [],
+    "external_public": [
+      "retrieval-record-public-pattern"
+    ]
+  },
+  "validated_request_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "view_authorized": true
+}

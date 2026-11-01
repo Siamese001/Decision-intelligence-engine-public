@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:nee:dual-pipeline:l0:evidence-record:1.0.0",
+  "title": "EvidenceRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id",
+    "session_id",
+    "source_id",
+    "speaker",
+    "text",
+    "timestamp",
+    "namespace",
+    "tenant_id",
+    "digest"
+  ],
+  "properties": {
+    "evidence_id": { "type": "string" },
+    "session_id": { "type": "string" },
+    "source_id": { "type": "string" },
+    "speaker": { "type": "string" },
+    "text": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "number" },
+    "namespace": {
+      "type": "string",
+      "enum": ["CLIENT_SAFE", "INTERNAL_ADVISORY"]
+    },
+    "tenant_id": { "type": "string" },
+    "digest": { "type": "string" },
+    "spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["start_offset", "end_offset", "quote"],
+        "properties": {
+          "start_offset": { "type": "integer" },
+          "end_offset": { "type": "integer" },
+          "quote": { "type": "string" },
+          "speaker": { "type": "string" },
+          "timestamp_ms": { "type": ["integer", "null"] }
+        }
+      }
+    },
+    "properties": { "type": "object" },
+    "created_at": { "type": "number" }
+  }
+}

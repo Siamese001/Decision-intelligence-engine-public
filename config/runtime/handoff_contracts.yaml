@@ -1,0 +1,35 @@
+version: "1.0.0"
+governance_initiative: "NEE-KG-DUAL-PIPELINE-01"
+
+interfaces:
+  a_to_b:
+    protocol: "IN_MEMORY_ZERO_COPY_RING"
+    source: "PIPELINE_A"
+    target: "PIPELINE_B"
+    payload_type: "AUDIO_OR_TRANSCRIPT_DELTA"
+    requires_claim_check: true
+    polling_allowed: false
+
+  b_to_c:
+    protocol: "DIRECT_PROGRAMMATIC_UWG"
+    source: "PIPELINE_B"
+    target: "PIPELINE_C"
+    payload_type: "CANONICAL_GRAPH_DELTA"
+    requires_claim_check: true
+    subprocess_spawning_allowed: false
+
+  a_to_d:
+    protocol: "FAST_PATH_STREAM"
+    source: "PIPELINE_A"
+    target: "PIPELINE_D"
+    payload_type: "FAST_PATH_TURNS"
+    badge_enforced: "[UNTRUSTED_FAST_PATH]"
+    read_only_enforced: true
+
+  c_to_d:
+    protocol: "SINGLE_TRIP_EVIDENCE_PACK"
+    source: "PIPELINE_C"
+    target: "PIPELINE_D"
+    payload_type: "EVIDENCE_PACK"
+    policy_pre_filtering_enforced: true
+    sequential_citation_loops_allowed: false

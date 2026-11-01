@@ -1,0 +1,25 @@
+{
+  "artifact_id": "decision-evidence-pack-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "aca11c0378b430156f840588be906c2af06a1fbc23cbe1367fb06f8b1ba653d4"
+  },
+  "conflicts": [],
+  "constraints": [],
+  "contract_id": "urn:nee:dual-pipeline:decision-evidence-pack:1.0.0",
+  "coverage": {},
+  "extensions": {},
+  "facts": [],
+  "generation": {},
+  "pack_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "records": [],
+  "relationships": [],
+  "retrieval_execution": {},
+  "risks": [],
+  "schema_version": "1.0.0",
+  "source_evidence_ids": [
+    "evidence-alpha"
+  ],
+  "unknowns": []
+}

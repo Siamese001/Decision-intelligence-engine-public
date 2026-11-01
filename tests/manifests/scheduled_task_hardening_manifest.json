@@ -1,0 +1,27 @@
+{
+  "name": "scheduled_task_hardening_manifest",
+  "version": "1.5.0",
+  "description": "CI test manifest enrolling scheduled task contracts, execution authority, evidence bundle sealing, storage hygiene, findings remediation, DLQ lifecycle, ingestion recovery, query coverage repair, adapter qualification, and lifecycle repeat execution tests for Waves 1-6",
+  "branch": "docs/scheduled-task-core4-hardening-plan",
+  "plan_id": "docs_scheduled_task_core4_hardening_plan",
+  "wave": 6,
+  "deterministic_tests": [
+    "tests.test_scheduled_task_contracts",
+    "tests.test_scheduled_task_authority",
+    "tests.test_scheduled_task_evidence",
+    "tests.test_scheduled_task_remediation",
+    "tests.test_scheduled_dlq_lifecycle",
+    "tests.test_scheduled_ingestion_recovery",
+    "tests.test_scheduled_query_coverage_repair",
+    "tests.test_scheduled_task_adapters",
+    "tests.test_scheduled_task_lifecycle",
+    "tests.test_storage_hygiene_apply",
+    "tests.test_scheduled_task_remediation_plan_generation",
+    "tests.test_automation_prompts_plan_gate_adversarial"
+  ],
+  "e2e_tests": [
+    "tests.end_to_end.test_automation_prompts_implementation_plan_e2e"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-06T19:45:00Z"
+}

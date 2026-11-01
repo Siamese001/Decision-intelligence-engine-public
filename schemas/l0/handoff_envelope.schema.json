@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:nee:dual-pipeline:l0:handoff-envelope:1.0.0",
+  "title": "HandoffEnvelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "envelope_id",
+    "source_pipeline",
+    "target_pipeline",
+    "payload_type",
+    "claim_check",
+    "payload",
+    "created_at"
+  ],
+  "properties": {
+    "envelope_id": { "type": "string" },
+    "source_pipeline": { "type": "string" },
+    "target_pipeline": { "type": "string" },
+    "payload_type": { "type": "string" },
+    "claim_check": {
+      "type": "object",
+      "required": ["claim_id", "digest", "storage_uri"],
+      "properties": {
+        "claim_id": { "type": "string" },
+        "digest": { "type": "string" },
+        "storage_uri": { "type": "string" },
+        "namespace": { "type": "string" },
+        "tenant_id": { "type": "string" },
+        "created_at": { "type": "number" }
+      }
+    },
+    "payload": { "type": "object" },
+    "traceparent": { "type": ["string", "null"] },
+    "created_at": { "type": "number" }
+  }
+}

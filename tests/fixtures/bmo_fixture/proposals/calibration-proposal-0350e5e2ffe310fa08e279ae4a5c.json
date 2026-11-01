@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-0350e5e2ffe310fa08e279ae4a5c",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "757ad9b4a61187bba2b22ceedffac497e4a9a072953dac540869a85ba44380eb"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-5c4a5def0f70fd8ec70a6f0f"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "**harper Hoffman:** Let's see, I think it was in my, and that's the product I was in before I was in PGD copilot and this technician area. I think I have a really good slide in my kickoff doc. What do you have to do? Yes. All right, now let me share. All right, this is really kind of, I'm going to tell you a little bit about the Atlas project and what we're doing organizationally. So just as, if you look at this, think about how Amazon, Target, Walmart operate their businesses. They have distribution centers and lots of stores or facilities. This is the model that Apex Global wants to move to, that we have centralized warehousing, and this is our parts inventory management. But in order to enable this, we got to know what's on the shelf, because there's some compatibility implications that the spare parts and everything down to the grease and the filter that I can use on a wind turbine depends on like my model of car, maybe a Toyota Camry, but depending on who manufactured the transmission, I have a different, I have different compatibility that I got to solve for in sourcing and distributing my parts. So we have this whole transformation and how we manage our parts inventory, but also our assets and the trend analysis that we're able to do about. And there's a really cool example where the same solar panel manufacturer, depending on which lot we get, they degrade faster. That like the Korea factory has higher quality than the Malaysia factory. And there's other examples of that. We just haven't tracked the data. So we're on a whole mission to understand the assets, not just it's a GE brand turbine, but there's 150 assets within the turbine that we want to understand. I can't send 1000 technicians out with a pencil and paper. So what we did is we sent the technicians out and told them to take pictures. And these are some of the pictures that we told them to take. And I'm going to,",
+      "proposed_value": "**Amit Ayer:** But I'd love to take a look at it again. He did show me, and I have a, you know, high-level thesis of what it's looking to achieve from a business standpoint and some of the Maximo integrations I've been, you know, getting closer to.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-605e6a8c475a4aed699392d1f759"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-d0948e70cba25515d806c673bdf1",
+      "assertion_id_older": "assertion-605e6a8c475a4aed699392d1f759",
+      "confidence_coexist": 0.45,
+      "confidence_supersede": 0.55,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": true,
+      "margin_delta": 0.1,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-09-15",
+      "timestamp_older": "2026-09-15"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-09-15 superseded by newer claim from 2026-09-15.",
+  "proposal_id": "calibration-proposal-0350e5e2ffe310fa08e279ae4a5c",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-605e6a8c475a4aed699392d1f759 from **harper Hoffman:** Let's see, I think it was in my, and that's the product I was in before I was in PGD copilot and this technician area. I think I have a really good slide in my kickoff doc. What do you have to do? Yes. All right, now let me share. All right, this is really kind of, I'm going to tell you a little bit about the Atlas project and what we're doing organizationally. So just as, if you look at this, think about how Amazon, Target, Walmart operate their businesses. They have distribution centers and lots of stores or facilities. This is the model that Apex Global wants to move to, that we have centralized warehousing, and this is our parts inventory management. But in order to enable this, we got to know what's on the shelf, because there's some compatibility implications that the spare parts and everything down to the grease and the filter that I can use on a wind turbine depends on like my model of car, maybe a Toyota Camry, but depending on who manufactured the transmission, I have a different, I have different compatibility that I got to solve for in sourcing and distributing my parts. So we have this whole transformation and how we manage our parts inventory, but also our assets and the trend analysis that we're able to do about. And there's a really cool example where the same solar panel manufacturer, depending on which lot we get, they degrade faster. That like the Korea factory has higher quality than the Malaysia factory. And there's other examples of that. We just haven't tracked the data. So we're on a whole mission to understand the assets, not just it's a GE brand turbine, but there's 150 assets within the turbine that we want to understand. I can't send 1000 technicians out with a pencil and paper. So what we did is we sent the technicians out and told them to take pictures. And these are some of the pictures that we told them to take. And I'm going to, to **Amit Ayer:** But I'd love to take a look at it again. He did show me, and I have a, you know, high-level thesis of what it's looking to achieve from a business standpoint and some of the Maximo integrations I've been, you know, getting closer to.. Requires governed approval before release.",
+  "risk": "medium",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "lucidchart",
+  "version": "0.1.0",
+  "description": "Search, summarize, create, edit, and share Lucid diagrams through Lucid's official MCP server.",
+  "author": {
+    "name": "NEE Knowledge Graph contributors"
+  },
+  "homepage": "https://lucid.co/mcp-server",
+  "keywords": [
+    "lucid",
+    "lucidchart",
+    "diagram",
+    "architecture",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Lucidchart",
+    "shortDescription": "Find and build Lucid diagrams with safe write previews.",
+    "longDescription": "Connect to Lucid's official MCP server with OAuth to find and summarize documents, generate diagrams, update scoped diagram content, and share confirmed results.",
+    "developerName": "NEE Knowledge Graph",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "OAuth"
+    ],
+    "websiteURL": "https://lucid.co/mcp-server",
+    "defaultPrompt": [
+      "Summarize this Lucidchart document and list open decisions.",
+      "Create an architecture diagram in Lucidchart from this design.",
+      "Update this Lucidchart diagram after previewing the exact changes."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

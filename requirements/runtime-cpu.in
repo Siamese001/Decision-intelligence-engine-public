@@ -1,0 +1,15 @@
+--index-url https://pypi.org/simple
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Direct production dependencies. Transitive versions and hashes are resolved
+# into runtime-cpu.lock.txt for CPython 3.12 on Windows x86-64.
+boto3==1.43.48
+cryptography==49.0.0
+FlagEmbedding==1.4.0
+huggingface-hub==1.24.0
+numpy==2.5.1
+pypdf==6.14.2
+safetensors==0.8.0
+sentencepiece==0.2.2
+torch==2.11.0+cpu
+transformers==5.14.1

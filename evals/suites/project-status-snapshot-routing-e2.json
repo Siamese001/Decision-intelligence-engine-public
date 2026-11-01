@@ -1,0 +1,100 @@
+{
+  "artifact_id": "project-status-snapshot-routing-e2",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "b89412fe1987848e2678cd1061296b8a3a615958d565fd043da48e48a503aae0"
+  },
+  "cases": [
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "status-current-is-citation-only",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "GRAPH_EVIDENCE_UTILITY",
+        "eligibility_status": "NOT_APPLICABLE",
+        "enters_query_runtime": true,
+        "materiality": "low",
+        "query_type": "project_status_current"
+      },
+      "question": "What is the current status of the EDO Atlas Pilot project?",
+      "tags": [
+        "e2",
+        "project-status",
+        "current",
+        "citation-only"
+      ]
+    },
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "status-history-is-explicit",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "GRAPH_EVIDENCE_UTILITY",
+        "eligibility_status": "NOT_APPLICABLE",
+        "enters_query_runtime": true,
+        "materiality": "low",
+        "query_type": "project_status_history"
+      },
+      "question": "Show the status history of the EDO Atlas Pilot project since June 2026.",
+      "tags": [
+        "e2",
+        "project-status",
+        "history",
+        "citation-only"
+      ]
+    },
+    {
+      "artifact_type": "answer",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "authorized": true,
+      "case_id": "status-update-remains-operational",
+      "classification": "internal",
+      "critical": true,
+      "delivery_profile": "internal_technical",
+      "expected": {
+        "destination": "OPERATIONAL_WORKFLOW_HANDOFF",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "enters_query_runtime": false,
+        "materiality": "low",
+        "query_type": null
+      },
+      "question": "Update the current status of the EDO Atlas Pilot project.",
+      "tags": [
+        "e2",
+        "project-status",
+        "operational-boundary"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:query-route-eval-suite:1.0.0",
+  "created_at": "2026-08-04T16:00:00Z",
+  "extensions": {
+    "com.partner_advisory.nee.evaluation-purpose": "Prove that weekly project status is routed as dated citation-only evidence and never as a durable fact or graph mutation."
+  },
+  "policy_digest": "6cfc8ebb6446d072eafedb4639370798aaa2da0578a30dfd3fcf5fad495c5c15",
+  "runtime_boundary": "PRE_RETRIEVAL_PROVIDER_FREE_ROUTING",
+  "schema_version": "1.0.0",
+  "suite_id": "project-status-snapshot-routing-e2",
+  "thresholds": {
+    "maximum_critical_false_negative_count": 0,
+    "minimum_destination_accuracy": 1,
+    "minimum_graph_entry_precision": 1,
+    "minimum_graph_entry_recall": 1,
+    "minimum_nee_decision_recall": 1
+  }
+}

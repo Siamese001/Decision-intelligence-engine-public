@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-51f656c97a23e70f4564366e62cc",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "3bb8f0db02504570caed0425bf43b134a29425899837d833f1c877fd0a57bb83"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-d9c26581b9bfbf8535e809d1"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "IBM Maximo is an identified technical_anchor in 20261001 Lens Sprint Review.",
+      "proposed_value": "IBM Maximo is an identified technical_anchor in 20261005 Lens Scope Review.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-8d66dab8d29be96739090819e4a7"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-2905eaa7a8b0da5878fad8c4f64b",
+      "assertion_id_older": "assertion-8d66dab8d29be96739090819e4a7",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-01df27a08eb5371349397af2885e",
+      "timestamp_newer": "2026-10-05",
+      "timestamp_older": "2026-10-01"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'IBM Maximo' (HAS_CLAIM_TEXT). Older claim from 2026-10-01 superseded by newer claim from 2026-10-05.",
+  "proposal_id": "calibration-proposal-51f656c97a23e70f4564366e62cc",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-8d66dab8d29be96739090819e4a7 from IBM Maximo is an identified technical_anchor in 20261001 Lens Sprint Review. to IBM Maximo is an identified technical_anchor in 20261005 Lens Scope Review.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

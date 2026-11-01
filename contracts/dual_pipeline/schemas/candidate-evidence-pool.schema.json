@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:candidate-evidence-pool:1.0.0",
+  "title": "NEE candidate evidence pool",
+  "description": "Typed contract representing the raw candidate evidence pool after hybrid retrieval (dense + sparse + ColBERT) and before graph hydration, reranking, and stratification. Produced by C0 retrieval, consumed by evidence contract builder.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "query_id", "run_id", "graph_generation_id", "retrieval_mode", "candidates", "created_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:candidate-evidence-pool:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "query_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "run_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "graph_generation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "retrieval_mode": {"type": "string", "enum": ["dense_only", "sparse_only", "hybrid", "hybrid_colbert"]},
+    "query_text": {"type": "string", "minLength": 1},
+    "query_text_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["record_id", "lane", "retrieval_text_hash"],
+        "properties": {
+          "record_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "lane": {"type": "string", "enum": ["approved", "candidate", "external_public"]},
+          "retrieval_text_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+          "dense_score": {"type": ["number", "null"]},
+          "sparse_score": {"type": ["number", "null"]},
+          "colbert_score": {"type": ["number", "null"]},
+          "fused_score": {"type": ["number", "null"]},
+          "retrieval_source": {"type": "string", "enum": ["dense", "sparse", "colbert", "graph_hop", "cache", "exact"]},
+          "entity_ids": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"}}
+        }
+      }
+    },
+    "total_candidates_before_cutoff": {"type": "integer", "minimum": 0},
+    "retrieval_policy_digest": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

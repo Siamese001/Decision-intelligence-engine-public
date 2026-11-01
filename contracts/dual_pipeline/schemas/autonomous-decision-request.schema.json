@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:autonomous-decision-request:1.0.0",
+  "title": "Governed Autonomous Decision Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "decision_id",
+    "revision",
+    "scope",
+    "options",
+    "authority_type",
+    "mode",
+    "category",
+    "action_description"
+  ],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:autonomous-decision-request:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"},
+    "decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["worktree", "run_id", "wave", "action_target"],
+      "properties": {
+        "worktree": {"type": "string", "minLength": 1},
+        "run_id": {"type": "string", "minLength": 1},
+        "wave": {"type": "integer", "minimum": 0},
+        "action_target": {"type": "string", "minLength": 1},
+        "plan_digest": {"type": ["string", "null"]}
+      }
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["option_id", "description", "confidence"],
+        "properties": {
+          "option_id": {"type": "string", "minLength": 1},
+          "description": {"type": "string", "minLength": 1},
+          "confidence": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+          "action": {"type": ["string", "null"]},
+          "evidence_refs": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "metadata": {"type": "object"}
+        }
+      }
+    },
+    "authority_type": {
+      "type": "string",
+      "enum": ["AUTONOMOUS", "HUMAN", "SYSTEM", "UNKNOWN"]
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["ROUTINE", "TACTICAL", "ARCHITECTURAL", "DESTRUCTIVE", "POLICY", "GOVERNANCE", "UNKNOWN"]
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action_description": {
+      "type": "string"
+    },
+    "target_files": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "context": {
+      "type": "object"
+    },
+    "decision_content_digest": {
+      "type": ["string", "null"]
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "artifact_id": "edo-june-candidate-source-evidence-e2",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "210763432ae4178b176a926cc45df98ab73db1b7931241f0421a74c7d6e24ad7"
+  },
+  "cases": [
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "case_id": "edo-june-candidate-source-evidence",
+      "classification": "internal",
+      "critical": true,
+      "embedding_qualification": "real_bge_m3",
+      "evaluation_scope": "graph_retrieval_qualification",
+      "expected": {
+        "answer_present": true,
+        "expected_artifact_type": "answer",
+        "expected_assurance_profile": "enhanced",
+        "expected_delivery_profile": "internal_technical",
+        "expected_destination": "NEE_DECISION_INTELLIGENCE",
+        "expected_runtime_quality_mode": "off",
+        "forbidden_record_ids": [],
+        "graph_mutation_count": 0,
+        "minimum_connected_path_count": 1,
+        "minimum_safe_direction_requirement_count": 1,
+        "minimum_supported_requirement_count": 1,
+        "provider_call_count": 0,
+        "required_lanes": [
+          "approved",
+          "candidate"
+        ],
+        "required_record_ids": [
+          "retrieval-record-56c62a5b3ad109e9d5ad844477f6"
+        ],
+        "required_record_lanes": {
+          "retrieval-record-56c62a5b3ad109e9d5ad844477f6": "candidate"
+        },
+        "required_requirement_assertions": [
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Candidate assertions and proposal-only posture",
+            "minimum_record_count": 1
+          },
+          {
+            "expected_outcomes": [
+              "covered"
+            ],
+            "label_contains": "Resolvable evidence and source locators",
+            "minimum_record_count": 1
+          }
+        ],
+        "required_stages": [
+          "U0",
+          "L1",
+          "L0",
+          "C0.1",
+          "C0.2",
+          "C0.3",
+          "L2D",
+          "PA",
+          "L2",
+          "X1",
+          "X2",
+          "X3",
+          "L4"
+        ],
+        "runtime_judge_receipt_required": true,
+        "semantic_retrieval_qualified": true,
+        "status": "COMPLETED",
+        "x3_outcome": "X3E_ALLOW_EVIDENCE_ONLY"
+      },
+      "pipeline": "query",
+      "provider_posture": "offline",
+      "query_type": "candidate_promotion_review",
+      "question": "Which citation-only candidate source evidence from the June 29, 2026 EDO Program-Level Updates should a promotion review inspect regarding transition packages, backlog ownership, and reusable patterns?",
+      "tags": [
+        "edo",
+        "june-2026",
+        "candidate-source-evidence",
+        "e2e"
+      ]
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:eval-suite:3.0.0",
+  "created_at": "2026-08-04T14:00:00Z",
+  "execution_tier": "E2",
+  "extensions": {
+    "com.partner_advisory.nee.evaluation-purpose": "Validate real BGE-M3 candidate-review routing and safe citation-only June 2026 source-evidence retrieval."
+  },
+  "graph_sha256": "a03e4a4a13d645177312c67595fbf96e7cbc06c446ee67f183a348580dbf4e30",
+  "pipeline": "query",
+  "provider_posture": "offline",
+  "runtime_boundary": "POST_RUNTIME_VERIFICATION",
+  "schema_version": "3.0.0",
+  "suite_id": "edo-june-candidate-source-evidence-e2",
+  "thresholds": {
+    "maximum_graph_mutation_count": 0,
+    "maximum_provider_call_count": 0,
+    "maximum_unqualified_retrieval_case_count": 0,
+    "minimum_case_pass_rate": 1
+  }
+}

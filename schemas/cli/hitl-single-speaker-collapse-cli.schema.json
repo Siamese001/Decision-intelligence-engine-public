@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:dual-pipeline:cli:hitl:single-speaker-collapse:v2",
+  "title": "Dual Pipeline Single Speaker Collapse HITL CLI Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol",
+    "status",
+    "reason",
+    "request_id",
+    "context_sha256",
+    "gate",
+    "dry_run",
+    "evidence",
+    "action"
+  ],
+  "properties": {
+    "protocol": {
+      "const": "dual_pipeline.cli.v1"
+    },
+    "status": {
+      "const": "hitl_required"
+    },
+    "reason": {
+      "const": "single_speaker_collapse"
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "context_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "gate": {
+      "const": "1"
+    },
+    "dry_run": {
+      "type": "boolean"
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attendee_count",
+        "total_turns",
+        "dominant_label",
+        "dominant_label_turns",
+        "max_share_bps"
+      ],
+      "properties": {
+        "attendee_count": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "total_turns": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "dominant_label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "dominant_label_turns": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_share_bps": {
+          "const": 8500
+        }
+      }
+    },
+    "action": {
+      "const": "ask_user_question"
+    }
+  }
+}

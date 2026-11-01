@@ -1,0 +1,22 @@
+{
+  "applicability_scope": "nee_specific",
+  "artifact_id": "strategic-profile-sherpa-target-outcome",
+  "assertion_id": "assertion-sherpa-target-outcome",
+  "authority_scope": "official_project_intent",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "b06816aaf4dca4e98f84f64500e5c2b00a1ac752dc1f0e17a9d8b595cbef76fe"
+  },
+  "contract_id": "urn:nee:dual-pipeline:strategic-assertion-profile:1.0.0",
+  "evidence_ids": [
+    "evidence-sherpa-target-outcome"
+  ],
+  "extensions": {},
+  "knowledge_role": "target_outcome",
+  "modality": "intended",
+  "profile_id": "strategic-profile-sherpa-target-outcome",
+  "realization_state": "intended",
+  "schema_version": "1.0.0",
+  "source_id": "source-sherpa-official-business-case"
+}

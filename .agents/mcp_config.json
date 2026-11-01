@@ -1,0 +1,185 @@
+{
+  "mcpServers": {
+    "notebooks": {
+      "command": "node",
+      "args": [
+        "/Users/amitayer/.antigravity-ide/extensions/googlecloudtools.datacloud-0.11.0-universal/mcp_servers/cli/mcp_proxy_bundle.js",
+        "notebooks-antigravityide"
+      ],
+      "ownership": "deployment",
+      "transport": "stdio",
+      "mutability": "read_write",
+      "credentials_source": "GCP_ADC",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5
+    },
+    "visualization": {
+      "command": "node",
+      "args": [
+        "/Users/amitayer/.antigravity-ide/extensions/googlecloudtools.datacloud-0.11.0-universal/mcp_servers/cli/mcp_proxy_bundle.js",
+        "visualization-antigravityide"
+      ],
+      "ownership": "deployment",
+      "transport": "stdio",
+      "mutability": "read_only",
+      "credentials_source": "NONE",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5
+    },
+    "data-agent-kit": {
+      "command": "node",
+      "args": [
+        "/Users/amitayer/.antigravity-ide/extensions/googlecloudtools.datacloud-0.11.0-universal/mcp_servers/cli/mcp_proxy_bundle.js",
+        "dataAgentKit-antigravityide"
+      ],
+      "ownership": "deployment",
+      "transport": "stdio",
+      "mutability": "read_only",
+      "credentials_source": "GCP_ADC",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "ownership": "deployment",
+      "transport": "stdio",
+      "mutability": "read_only",
+      "credentials_source": "NONE",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5
+    },
+    "nee-knowledge-graph": {
+      "command": ".venv/bin/python",
+      "args": [
+        "tools/nee_mcp_server.py"
+      ],
+      "cwd": ".",
+      "ownership": "checkout",
+      "transport": "stdio",
+      "mutability": "read_only",
+      "credentials_source": "NONE",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5,
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "graphdb-inspector": {
+      "command": ".venv/bin/python",
+      "args": [
+        "tools/mcp_graphdb_server.py"
+      ],
+      "cwd": ".",
+      "ownership": "checkout",
+      "transport": "stdio",
+      "mutability": "read_only",
+      "credentials_source": "NONE",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5,
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "speech-transcript-synthesizer": {
+      "command": ".venv/bin/python",
+      "args": [
+        "tools/mcp_speech_server.py"
+      ],
+      "cwd": ".",
+      "ownership": "checkout",
+      "transport": "stdio",
+      "mutability": "read_write",
+      "credentials_source": "NONE",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5,
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "contract-governance": {
+      "command": ".venv/bin/python",
+      "args": [
+        "tools/mcp_contract_server.py"
+      ],
+      "cwd": ".",
+      "ownership": "checkout",
+      "transport": "stdio",
+      "mutability": "read_only",
+      "credentials_source": "NONE",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5,
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "judge-retrieval-eval": {
+      "command": ".venv/bin/python",
+      "args": [
+        "tools/mcp_judge_eval_server.py"
+      ],
+      "cwd": ".",
+      "ownership": "checkout",
+      "transport": "stdio",
+      "mutability": "read_only",
+      "credentials_source": "LOCAL_ADC",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5,
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "test-orchestrator": {
+      "command": ".venv/bin/python",
+      "args": [
+        "tools/mcp_test_orchestrator_server.py"
+      ],
+      "cwd": ".",
+      "ownership": "checkout",
+      "transport": "stdio",
+      "mutability": "read_write",
+      "credentials_source": "NONE",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5,
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "deepwiki": {
+      "command": ".venv/bin/python",
+      "args": [
+        "tools/mcp_deepwiki_server.py"
+      ],
+      "cwd": ".",
+      "ownership": "checkout",
+      "transport": "stdio",
+      "mutability": "read_only",
+      "credentials_source": "NONE",
+      "timeout_seconds": 60,
+      "retry_count": 0,
+      "shutdown_timeout_seconds": 5,
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}

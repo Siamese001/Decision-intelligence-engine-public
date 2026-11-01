@@ -1,0 +1,58 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:pptx-source-intake:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "pptx-source-sample-playbook",
+  "source": {
+    "source_id": "sample-playbook",
+    "source_version_id": "source-version-sample-playbook-v1",
+    "title": "Sample Executive Playbook",
+    "source_location": "controlled/examples/playbook.pptx",
+    "raw_pptx_base64": "UEsDBBQAAAAAACglLF0GPXhRQgIAAEICAAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04IiBzdGFuZGFsb25lPSJ5ZXMiPz4KPFR5cGVzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L2NvbnRlbnQtdHlwZXMiPgogIDxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIi8+CiAgPERlZmF1bHQgRXh0ZW5zaW9uPSJ4bWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi94bWwiLz4KICA8T3ZlcnJpZGUgUGFydE5hbWU9Ii9wcHQvcHJlc2VudGF0aW9uLnhtbCIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1vZmZpY2Vkb2N1bWVudC5wcmVzZW50YXRpb25tbC5wcmVzZW50YXRpb24ubWFpbit4bWwiLz4KICA8T3ZlcnJpZGUgUGFydE5hbWU9Ii9wcHQvc2xpZGVzL3NsaWRlMS54bWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtb2ZmaWNlZG9jdW1lbnQucHJlc2VudGF0aW9ubWwuc2xpZGUreG1sIi8+CjwvVHlwZXM+UEsDBBQAAAAAACglLF062VMkMQEAADEBAAALAAAAX3JlbHMvLnJlbHM8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCIgc3RhbmRhbG9uZT0ieWVzIj8+CjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPgogIDxSZWxhdGlvbnNoaXAgSWQ9InJJZDEiIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9vZmZpY2VEb2N1bWVudC8yMDA2L3JlbGF0aW9uc2hpcHMvb2ZmaWNlRG9jdW1lbnQiIFRhcmdldD0icHB0L3ByZXNlbnRhdGlvbi54bWwiLz4KPC9SZWxhdGlvbnNoaXBzPlBLAwQUAAAAAAAoJSxdqJMknjABAAAwAQAAFAAAAHBwdC9wcmVzZW50YXRpb24ueG1sPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8cDpwcmVzZW50YXRpb24geG1sbnM6cD0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3ByZXNlbnRhdGlvbm1sLzIwMDYvbWFpbiIgeG1sbnM6cj0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL29mZmljZURvY3VtZW50LzIwMDYvcmVsYXRpb25zaGlwcyI+CiAgPHA6c2xkSWRMc3Q+CiAgICA8cDpzbGRJZCBpZD0iMjU2IiByOmlkPSJySWQxIi8+CiAgPC9wOnNsZElkTHN0Pgo8L3A6cHJlc2VudGF0aW9uPlBLAwQUAAAAAAAoJSxddXti8yUBAAAlAQAAHwAAAHBwdC9fcmVscy9wcmVzZW50YXRpb24ueG1sLnJlbHM8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCIgc3RhbmRhbG9uZT0ieWVzIj8+CjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPgogIDxSZWxhdGlvbnNoaXAgSWQ9InJJZDEiIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9vZmZpY2VEb2N1bWVudC8yMDA2L3JlbGF0aW9uc2hpcHMvc2xpZGUiIFRhcmdldD0ic2xpZGVzL3NsaWRlMS54bWwiLz4KPC9SZWxhdGlvbnNoaXBzPlBLAwQUAAAAAAAoJSxdU32yKAoDAAAKAwAAFQAAAHBwdC9zbGlkZXMvc2xpZGUxLnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04IiBzdGFuZGFsb25lPSJ5ZXMiPz4KPHA6c2xkIHhtbG5zOnA9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wcmVzZW50YXRpb25tbC8yMDA2L21haW4iIHhtbG5zOmE9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9kcmF3aW5nbWwvMjAwNi9tYWluIj4KICA8cDpjU2xkPgogICAgPHA6c3BUcmVlPgogICAgICA8cDpzcD4KICAgICAgICA8cDpudlNwUHI+PHA6Y052UHIgaWQ9IjEiIG5hbWU9IlRpdGxlIi8+PHA6Y052U3BQcj48YTpzcExvY2tzIG5vR3JwPSIxIi8+PC9wOmNOdlNwUHI+PHA6bnZQcj48cDpwaCB0eXBlPSJ0aXRsZSIvPjwvcDpudlByPjwvcDpudlNwUHI+CiAgICAgICAgPHA6dHhCb2R5PjxhOmJvZHlQci8+PGE6cD48YTpyPjxhOnQ+U2FtcGxlIEV4ZWN1dGl2ZSBQbGF5Ym9vazwvYTp0PjwvYTpyPjwvYTpwPjwvcDp0eEJvZHk+CiAgICAgIDwvcDpzcD4KICAgICAgPHA6c3A+CiAgICAgICAgPHA6bnZTcFByPjxwOmNOdlByIGlkPSIyIiBuYW1lPSJDb250ZW50Ii8+PHA6Y052U3BQci8+PHA6bnZQcj48cDpwaCB0eXBlPSJib2R5Ii8+PC9wOm52UHI+PC9wOm52U3BQcj4KICAgICAgICA8cDp0eEJvZHk+PGE6Ym9keVByLz48YTpwPjxhOnI+PGE6dD5TdHJhdGVnaWMgaW5pdGlhdGl2ZXMgYW5kIGFjY291bnQgcGxhbnMuPC9hOnQ+PC9hOnI+PC9hOnA+PC9wOnR4Qm9keT4KICAgICAgPC9wOnNwPgogICAgPC9wOnNwVHJlZT4KICA8L3A6Y1NsZD4KPC9wOnNsZD5QSwECFAMUAAAAAAAoJSxdBj14UUICAABCAgAAEwAAAAAAAAAAAAAAgAEAAAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLAQIUAxQAAAAAACglLF062VMkMQEAADEBAAALAAAAAAAAAAAAAACAAXMCAABfcmVscy8ucmVsc1BLAQIUAxQAAAAAACglLF2okySeMAEAADABAAAUAAAAAAAAAAAAAACAAc0DAABwcHQvcHJlc2VudGF0aW9uLnhtbFBLAQIUAxQAAAAAACglLF11e2LzJQEAACUBAAAfAAAAAAAAAAAAAACAAS8FAABwcHQvX3JlbHMvcHJlc2VudGF0aW9uLnhtbC5yZWxzUEsBAhQDFAAAAAAAKCUsXVN9sigKAwAACgMAABUAAAAAAAAAAAAAAIABkQYAAHBwdC9zbGlkZXMvc2xpZGUxLnhtbFBLBQYAAAAABQAFAEwBAADOCQAAAAA=",
+    "pptx_file_sha256": "520cc7fee7c7311013279b10cdce09688c55acdfc673402003d44e2b86633076",
+    "extracted_markdown": "# Sample Executive Playbook\n\n\n<!-- SLIDE 1 -->\n\n## Slide 1: Sample Executive Playbook\n\nStrategic initiatives and account plans.\n",
+    "extracted_markdown_sha256": "10295e37e1949d8a78303408924b4ba35b6fade876bfee0650eabb1a0d7a6f64",
+    "slide_count": 1,
+    "source_date": "2026-09-11",
+    "classification": "confidential",
+    "audiences": [
+      "internal_consulting"
+    ],
+    "source_posture": "derivative_internal",
+    "authority_rank": 5,
+    "anchor_entity": {
+      "reported_text": "Sample Executive Playbook",
+      "stable_identifier": "sample_playbook",
+      "context": "Executive account planning and strategy playbook."
+    }
+  },
+  "chunks": [
+    {
+      "chunk_id": "chunk-01-slide-01",
+      "title": "Sample Executive Playbook",
+      "text": "## Slide 1: Sample Executive Playbook\n\nStrategic initiatives and account plans.",
+      "locator": {
+        "kind": "section",
+        "value": "Slide 1",
+        "quote_digest": "05a40abed389f70e368da3278e898c4adf809c1b2e7b7203002b8f8f48f6597c"
+      },
+      "selection_rationale": "Retains title slide context for bounded retrieval.",
+      "materiality": "high",
+      "extraction_confidence": 1.0
+    }
+  ],
+  "adapter": {
+    "name": "nee-pptx-source-intake",
+    "version": "1.0.0"
+  },
+  "extensions": {
+    "com.partner_advisory.nee.pptx-extraction": {
+      "profile": "visible-shape-table-markdown-v1",
+      "source_byte_binding": "raw_pptx_base64+pptx_file_sha256"
+    }
+  },
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "a2bd67247aaa5a8b93216eab057066ec8c1a0c371a98e9b4108fd5d03932fa91"
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "schema_version": "5.7",
+  "meeting_id": "document-20261012-james-beebe-business-management-product-rd-org-structure",
+  "classification": "restricted",
+  "audiences": [
+    "internal_consulting"
+  ],
+  "evidence_index": {
+    "ev-01": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Aussprung, Chad\nExecutive Director Business Management",
+      "quote_pointer": [
+        23,
+        77
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Aussprung, Chad\nExecutive Director Business Management"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Aussprung, Chad\nExecutive Director Business Management",
+      "start_offset": 23,
+      "end_offset": 77,
+      "evidence_id": "ev-01"
+    },
+    "ev-02": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Beebe, James\nDirector Product R&D",
+      "quote_pointer": [
+        78,
+        111
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Beebe, James\nDirector Product R&D"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Beebe, James\nDirector Product R&D",
+      "start_offset": 78,
+      "end_offset": 111,
+      "evidence_id": "ev-02"
+    },
+    "ev-03": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Business Mgmt",
+      "quote_pointer": [
+        112,
+        125
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Business Mgmt"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Business Mgmt",
+      "start_offset": 112,
+      "end_offset": 125,
+      "evidence_id": "ev-03"
+    },
+    "ev-04": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Rawat, Vikas\nNon-APEX-Profile Worker IT Data Scientist",
+      "quote_pointer": [
+        162,
+        215
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Rawat, Vikas\nNon-APEX-Profile Worker IT Data Scientist"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Rawat, Vikas\nNon-APEX-Profile Worker IT Data Scientist",
+      "start_offset": 162,
+      "end_offset": 215,
+      "evidence_id": "ev-04"
+    },
+    "ev-05": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Madhavaram, Srishma\nNon-APEX-Profile Worker IT Developer",
+      "quote_pointer": [
+        219,
+        274
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Madhavaram, Srishma\nNon-APEX-Profile Worker IT Developer"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Madhavaram, Srishma\nNon-APEX-Profile Worker IT Developer",
+      "start_offset": 219,
+      "end_offset": 274,
+      "evidence_id": "ev-05"
+    },
+    "ev-06": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Garcia, Enrique\nNon-APEX-Profile Worker IT Developer",
+      "quote_pointer": [
+        278,
+        329
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Garcia, Enrique\nNon-APEX-Profile Worker IT Developer"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Garcia, Enrique\nNon-APEX-Profile Worker IT Developer",
+      "start_offset": 278,
+      "end_offset": 329,
+      "evidence_id": "ev-06"
+    },
+    "ev-07": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Lastowski, Michael\nNon-APEX-Profile Worker IT Business Analyst",
+      "quote_pointer": [
+        330,
+        391
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Lastowski, Michael\nNon-APEX-Profile Worker IT Business Analys"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Lastowski, Michael\nNon-APEX-Profile Worker IT Business Analyst",
+      "start_offset": 330,
+      "end_offset": 391,
+      "evidence_id": "ev-07"
+    },
+    "ev-08": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Estrada, Juan Adan\nNon-APEX-Profile Worker IT Developer",
+      "quote_pointer": [
+        394,
+        448
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Estrada, Juan Adan\nNon-APEX-Profile Worker IT Developer"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Estrada, Juan Adan\nNon-APEX-Profile Worker IT Developer",
+      "start_offset": 394,
+      "end_offset": 448,
+      "evidence_id": "ev-08"
+    },
+    "ev-09": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Alperovich, Mikhail\nNon-APEX-DATA SCIENTIST-Level 1 - Associate (0 - 5 Ye...",
+      "quote_pointer": [
+        452,
+        524
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Alperovich, Mikhail\nNon-APEX-DATA SCIENTIST-Level 1 - Associa"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Alperovich, Mikhail\nNon-APEX-DATA SCIENTIST-Level 1 - Associate (0 - 5 Ye...",
+      "start_offset": 452,
+      "end_offset": 524,
+      "evidence_id": "ev-09"
+    },
+    "ev-10": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Akopian, Arsen\nNon-APEX-Profile Worker IT Engineer",
+      "quote_pointer": [
+        528,
+        577
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Akopian, Arsen\nNon-APEX-Profile Worker IT Engineer"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Akopian, Arsen\nNon-APEX-Profile Worker IT Engineer",
+      "start_offset": 528,
+      "end_offset": 577,
+      "evidence_id": "ev-10"
+    },
+    "ev-11": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Arefi, Pouya\nNon-APEX-Profile Worker IT Engineer",
+      "quote_pointer": [
+        581,
+        628
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Arefi, Pouya\nNon-APEX-Profile Worker IT Engineer"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Arefi, Pouya\nNon-APEX-Profile Worker IT Engineer",
+      "start_offset": 581,
+      "end_offset": 628,
+      "evidence_id": "ev-11"
+    },
+    "ev-12": {
+      "speaker": "Chad Aussprung",
+      "source_classification": "FACT",
+      "kind": "summary",
+      "text": "Bennetto, Jack\nNon-APEX-Profile Worker IT Engineer",
+      "quote_pointer": [
+        632,
+        681
+      ],
+      "locator": {
+        "kind": "section",
+        "value": "Bennetto, Jack\nNon-APEX-Profile Worker IT Engineer"
+      },
+      "grounding_status": "GROUNDED",
+      "exact_text": "Bennetto, Jack\nNon-APEX-Profile Worker IT Engineer",
+      "start_offset": 632,
+      "end_offset": 681,
+      "evidence_id": "ev-12"
+    }
+  },
+  "graph_mutations": {
+    "entity_upserts": [
+      {
+        "id": "person:chad-aussprung",
+        "type": "person",
+        "name": "Chad Aussprung",
+        "description": "Chad Aussprung",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-01"
+        ]
+      },
+      {
+        "id": "role:executive-director-business-management",
+        "type": "role",
+        "name": "Executive Director Business Management",
+        "description": "Executive Director Business Management referenced in source document.",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-01"
+        ]
+      },
+      {
+        "id": "person:james-beebe",
+        "type": "person",
+        "name": "James Beebe",
+        "description": "James Beebe",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-02"
+        ]
+      },
+      {
+        "id": "role:director-product-r-d",
+        "type": "role",
+        "name": "Director Product R&D",
+        "description": "Director Product R&D referenced in source document.",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-02"
+        ]
+      },
+      {
+        "id": "person:vikas-rawat",
+        "type": "person",
+        "name": "Vikas Rawat",
+        "description": "Vikas Rawat",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-04"
+        ]
+      },
+      {
+        "id": "role:it-data-scientist",
+        "type": "role",
+        "name": "IT Data Scientist",
+        "description": "IT Data Scientist referenced in source document.",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-04"
+        ]
+      },
+      {
+        "id": "person:srishma-madhavaram",
+        "type": "person",
+        "name": "Srishma Madhavaram",
+        "description": "Srishma Madhavaram",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-05"
+        ]
+      },
+      {
+        "id": "role:it-developer",
+        "type": "role",
+        "name": "IT Developer",
+        "description": "IT Developer referenced in source document.",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-05",
+          "ev-06",
+          "ev-08"
+        ]
+      },
+      {
+        "id": "person:enrique-garcia",
+        "type": "person",
+        "name": "Enrique Garcia",
+        "description": "Enrique Garcia",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-06"
+        ]
+      },
+      {
+        "id": "person:michael-lastowski",
+        "type": "person",
+        "name": "Michael Lastowski",
+        "description": "Michael Lastowski",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-07"
+        ]
+      },
+      {
+        "id": "role:it-business-analyst",
+        "type": "role",
+        "name": "IT Business Analyst",
+        "description": "IT Business Analyst referenced in source document.",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-07"
+        ]
+      },
+      {
+        "id": "person:juan-adan-estrada",
+        "type": "person",
+        "name": "Juan Adan Estrada",
+        "description": "Juan Adan Estrada",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-08"
+        ]
+      },
+      {
+        "id": "person:mikhail-alperovich",
+        "type": "person",
+        "name": "Mikhail Alperovich",
+        "description": "Mikhail Alperovich",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-09"
+        ]
+      },
+      {
+        "id": "role:data-scientist-level-1-associate",
+        "type": "role",
+        "name": "DATA SCIENTIST-Level 1 - Associate (0 - 5 Ye...",
+        "description": "DATA SCIENTIST-Level 1 - Associate (0 - 5 Ye... referenced in source document.",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-09"
+        ]
+      },
+      {
+        "id": "person:arsen-akopian",
+        "type": "person",
+        "name": "Arsen Akopian",
+        "description": "Arsen Akopian",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-10"
+        ]
+      },
+      {
+        "id": "role:it-engineer",
+        "type": "role",
+        "name": "IT Engineer",
+        "description": "IT Engineer referenced in source document.",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-10",
+          "ev-11",
+          "ev-12"
+        ]
+      },
+      {
+        "id": "person:pouya-arefi",
+        "type": "person",
+        "name": "Pouya Arefi",
+        "description": "Pouya Arefi",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-11"
+        ]
+      },
+      {
+        "id": "person:jack-bennetto",
+        "type": "person",
+        "name": "Jack Bennetto",
+        "description": "Jack Bennetto",
+        "mutation": "CREATE",
+        "evidence_ids": [
+          "ev-12"
+        ]
+      },
+      {
+        "id": "org:business-mgmt",
+        "type": "org",
+        "name": "Business Mgmt",
+        "description": "Business Management Office.",
+        "mutation": "CONFIRM",
+        "evidence_ids": [
+          "ev-03"
+        ]
+      }
+    ],
+    "relationship_signals": [
+      {
+        "signal_id": "rel-chad-aussprung--executive-director-business-management--HAS_ROLE",
+        "from_id": "person:chad-aussprung",
+        "to_id": "role:executive-director-business-management",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-01"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-james-beebe--director-product-r-d--HAS_ROLE",
+        "from_id": "person:james-beebe",
+        "to_id": "role:director-product-r-d",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-02"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-vikas-rawat--it-data-scientist--HAS_ROLE",
+        "from_id": "person:vikas-rawat",
+        "to_id": "role:it-data-scientist",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-04"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-srishma-madhavaram--it-developer--HAS_ROLE",
+        "from_id": "person:srishma-madhavaram",
+        "to_id": "role:it-developer",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-05"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-enrique-garcia--it-developer--HAS_ROLE",
+        "from_id": "person:enrique-garcia",
+        "to_id": "role:it-developer",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-06"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-michael-lastowski--it-business-analyst--HAS_ROLE",
+        "from_id": "person:michael-lastowski",
+        "to_id": "role:it-business-analyst",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-07"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-juan-adan-estrada--it-developer--HAS_ROLE",
+        "from_id": "person:juan-adan-estrada",
+        "to_id": "role:it-developer",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-08"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-mikhail-alperovich--data-scientist-level-1-associate--HAS_ROLE",
+        "from_id": "person:mikhail-alperovich",
+        "to_id": "role:data-scientist-level-1-associate",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-09"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-arsen-akopian--it-engineer--HAS_ROLE",
+        "from_id": "person:arsen-akopian",
+        "to_id": "role:it-engineer",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-10"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-pouya-arefi--it-engineer--HAS_ROLE",
+        "from_id": "person:pouya-arefi",
+        "to_id": "role:it-engineer",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-11"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      },
+      {
+        "signal_id": "rel-jack-bennetto--it-engineer--HAS_ROLE",
+        "from_id": "person:jack-bennetto",
+        "to_id": "role:it-engineer",
+        "relationship": "HAS_ROLE",
+        "predicate": "HAS_ROLE",
+        "evidence_ids": [
+          "ev-12"
+        ],
+        "assertion_type": null,
+        "confidence": null,
+        "evidence": null,
+        "lineage": null
+      }
+    ],
+    "decision_updates": [],
+    "proposal_updates": [],
+    "action_updates": [],
+    "risk_updates": [],
+    "strategic_intent_signals": [],
+    "meeting_archetype": "STRATEGIC_DISCOVERY"
+  },
+  "evidence_only_statement_ids": [],
+  "_strategic_analysis": "The visual document identifies Chad Aussprung as Executive Director Business Management and James Beebe as Director Product R&D, and lists named IT personnel with role labels. It provides role assignments but does not establish individual reporting links in the extracted text, and it states no separate strategic decision.",
+  "expected_base_graph_version": "1.0.0",
+  "meeting_archetype": "STRATEGIC_DISCOVERY"
+}

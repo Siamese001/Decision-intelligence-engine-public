@@ -1,0 +1,28 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:architecture-diagram-intake:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-architecture-missing-region",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "4e081e8d96a539302087c7f99ac600d5b6833d6f00ba145bcd18029f2afdd561"},
+  "source": {
+    "source_id": "source-invalid-architecture",
+    "source_version_id": "source-version-invalid-architecture-v1",
+    "file_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "diagram_id": "diagram-invalid-architecture",
+    "page_id": "page-1",
+    "version": "1",
+    "source_date": "2026-07-21",
+    "classification": "internal",
+    "audiences": ["nee-engineering"]
+  },
+  "components": [
+    {
+      "component_ref": "component-without-region",
+      "reported_label": "Unknown Component",
+      "candidate_type": "service",
+      "extraction_confidence": 0.7
+    }
+  ],
+  "relationships": [],
+  "open_ambiguities": [],
+  "extensions": {}
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:eval-stress-result:1.0.0",
+  "title": "NEE sealed repeated evaluation stress result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "stress_id", "suite_id", "suite_digest", "suite_file_sha256", "graph_sha256", "embedding_backend", "iteration_count", "iterations", "aggregate", "status", "evaluated_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:eval-stress-result:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "stress_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "suite_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "suite_file_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "embedding_backend": {"$ref": "urn:nee:dual-pipeline:eval-stress-result:1.0.0#/$defs/embeddingBackend"},
+    "iteration_count": {"type": "integer", "minimum": 2, "maximum": 20},
+    "iterations": {"type": "array", "minItems": 2, "items": {"$ref": "urn:nee:dual-pipeline:eval-stress-result:1.0.0#/$defs/iteration"}},
+    "aggregate": {"$ref": "urn:nee:dual-pipeline:eval-stress-result:1.0.0#/$defs/aggregate"},
+    "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "embeddingBackend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["backend_id", "model_id", "model_revision", "model_manifest_digest", "assurance_tier", "production_qualified"],
+      "properties": {
+        "backend_id": {"type": "string", "minLength": 1, "maxLength": 128},
+        "model_id": {"type": "string", "minLength": 1, "maxLength": 256},
+        "model_revision": {"type": "string", "minLength": 1, "maxLength": 256},
+        "model_manifest_digest": {"type": ["string", "null"], "maxLength": 128},
+        "assurance_tier": {"type": "string", "minLength": 1, "maxLength": 64},
+        "production_qualified": {"type": "boolean"}
+      }
+    },
+    "iteration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ordinal", "evaluation_id", "result_path", "result_digest", "status", "case_count", "provider_call_count", "graph_mutation_count", "hard_gate_failure_count", "behavior_signature"],
+      "properties": {
+        "ordinal": {"type": "integer", "minimum": 1, "maximum": 20},
+        "evaluation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "result_path": {"type": "string", "minLength": 1, "maxLength": 2048},
+        "result_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+        "case_count": {"type": "integer", "minimum": 1},
+        "provider_call_count": {"type": "integer", "minimum": 0},
+        "graph_mutation_count": {"type": "integer", "minimum": 0},
+        "hard_gate_failure_count": {"type": "integer", "minimum": 0},
+        "behavior_signature": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["all_iterations_passed", "behavior_stable", "provider_call_count_stable", "case_count_stable", "seed_graph_unchanged", "pass_workspaces_cleaned", "hard_gate_failure_count"],
+      "properties": {
+        "all_iterations_passed": {"type": "boolean"},
+        "behavior_stable": {"type": "boolean"},
+        "provider_call_count_stable": {"type": "boolean"},
+        "case_count_stable": {"type": "boolean"},
+        "seed_graph_unchanged": {"type": "boolean"},
+        "pass_workspaces_cleaned": {"type": "boolean"},
+        "hard_gate_failure_count": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

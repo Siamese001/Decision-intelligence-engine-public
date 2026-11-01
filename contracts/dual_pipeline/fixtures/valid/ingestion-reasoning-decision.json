@@ -1,0 +1,42 @@
+{
+  "ambiguous_identity_count": 1,
+  "artifact_id": "ingestion-reasoning-decision-fixture",
+  "bundle_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "call_selected": true,
+  "candidate_count": 1,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "441e54422d6489fbd1f853c83a3e6982ab8b04da62d67b5a3c78eefdd630e8db"
+  },
+  "comparison_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "contract_id": "urn:nee:dual-pipeline:ingestion-reasoning-decision:1.0.0",
+  "decided_at": "2026-07-27T12:00:00Z",
+  "decision_id": "ingestion-reasoning-decision-fixture",
+  "entity_mention_count": 1,
+  "estimated_prompt_size_chars": 1200,
+  "extensions": {},
+  "final_complexity": "high",
+  "governed_context_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "initial_complexity": "normal",
+  "maximum_escalation_calls": 0,
+  "maximum_primary_calls": 1,
+  "maximum_repair_calls": 1,
+  "mode": "shadow",
+  "plan_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "policy_config_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "promotion_reasons": [
+    "AMBIGUOUS_IDENTITY"
+  ],
+  "provider_egress_allowed": true,
+  "reason_code": "CONDITIONAL_MODEL_SELECTED",
+  "reasoning_effort": "medium",
+  "resolution_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "route_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "run_id": "run-ingestion-reasoning-fixture",
+  "schema_version": "1.0.0",
+  "selected_model": "gpt-5.6-terra",
+  "selected_model_tier": "high",
+  "semantic_match_count": 2,
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

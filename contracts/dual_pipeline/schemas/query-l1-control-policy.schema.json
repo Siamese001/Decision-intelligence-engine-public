@@ -1,0 +1,146 @@
+{
+  "$id": "urn:nee:dual-pipeline:query-l1-control-policy:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "action_allowlist": {
+      "items": {
+        "enum": [
+          "requirement_hybrid_retrieval",
+          "stop"
+        ]
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "budget": {
+      "additionalProperties": false,
+      "properties": {
+        "max_actions": {
+          "maximum": 16,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "max_additional_attempts": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "max_elapsed_ms": {
+          "maximum": 300000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "max_result_bytes": {
+          "maximum": 10000000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "max_unique_records": {
+          "maximum": 500,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "max_additional_attempts",
+        "max_actions",
+        "max_unique_records",
+        "max_result_bytes",
+        "max_elapsed_ms"
+      ],
+      "type": "object"
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:query-l1-control-policy:1.0.0"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "graph_mutations_before_l2d": {
+      "const": 0,
+      "type": "integer"
+    },
+    "mode": {
+      "enum": [
+        "off",
+        "shadow",
+        "bounded"
+      ]
+    },
+    "policy_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "policy_version": {
+      "const": "1.0.0"
+    },
+    "progress_rule": {
+      "const": "newly_covered_material_requirements"
+    },
+    "provider_calls_before_l2d": {
+      "const": 0,
+      "type": "integer"
+    },
+    "runtime_default": {
+      "const": "off"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "terminal_reasons": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "policy_id",
+    "policy_version",
+    "mode",
+    "action_allowlist",
+    "budget",
+    "progress_rule",
+    "terminal_reasons",
+    "provider_calls_before_l2d",
+    "graph_mutations_before_l2d",
+    "runtime_default"
+  ],
+  "title": "L1 controller policy",
+  "type": "object"
+}

@@ -1,0 +1,57 @@
+{
+  "artifact_id": "strategic-output-sherpa-example",
+  "assumptions": [],
+  "automatic_graph_mutation_count": 0,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "7a72e8878e57b1c5808660045a86c583adb3ba2bc48ed9c9187013d5a56cf6f4"
+  },
+  "contract_id": "urn:nee:dual-pipeline:strategic-reasoning-output:1.0.0",
+  "counterarguments": [],
+  "decision_frame": {
+    "query_type": "opportunity_nba",
+    "rationale": "Convert routine enterprise architecture decisions into governed self-service."
+  },
+  "evidence_gaps": [
+    "Realized outcome evidence is not yet expected for an intended outcome."
+  ],
+  "evidence_packet_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "extensions": {},
+  "next_best_actions": [
+    {
+      "action": "Define the first bounded decision pattern and assurance gate.",
+      "basis_citations": [
+        "record-sherpa-target-outcome"
+      ],
+      "basis_roles": [
+        "target_outcome"
+      ]
+    }
+  ],
+  "options": [
+    {
+      "addresses": [
+        "EA decision-cycle bottleneck"
+      ],
+      "basis_roles": [
+        "target_outcome"
+      ],
+      "citations": [
+        "record-sherpa-target-outcome"
+      ],
+      "option": "Prioritize a governed self-service decision path.",
+      "rationale": "It directly addresses the official Sherpa business problem and intended outcome."
+    }
+  ],
+  "outcome_measures": [
+    "Architecture decision cycle time"
+  ],
+  "output_id": "strategic-output-sherpa-example",
+  "query_run_id": "query-run-sherpa-example",
+  "recommendation": {
+    "action_count": 1,
+    "summary": "Prioritize governed self-service for repeatable architecture decisions."
+  },
+  "schema_version": "1.0.0"
+}

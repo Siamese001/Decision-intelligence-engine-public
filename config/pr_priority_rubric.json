@@ -1,0 +1,237 @@
+{
+  "version": "2.1",
+  "description": "First-principles PR queue priority definitions (SSOT)",
+  "classification_rules": {
+    "noise": [
+      "reports/test_timing_db.json",
+      "reports/testing_gaps_audit_report.json",
+      "*receipt*.json",
+      "hitl_decision_ledger.json"
+    ],
+    "artifact": [
+      "output/**",
+      "reports/**",
+      "exports/**",
+      "receipts/**",
+      "approvals/**",
+      "metrics/**",
+      "tmp/**",
+      ".archive/**",
+      "inputs/**",
+      "archive/**"
+    ],
+    "test": [
+      "tests/**",
+      "archive/tests/**",
+      "test_*.py",
+      "*_test.py",
+      "*_tests.py",
+      "retrieval_tests/**"
+    ],
+    "doc": [
+      "*.md",
+      "docs/**",
+      "governance/**",
+      "Figma/**",
+      "*.rst",
+      "*.txt"
+    ],
+    "govcfg": [
+      ".agents/**",
+      "config/**",
+      "hooks/**",
+      ".githooks/**",
+      "contracts/**",
+      "schemas/**",
+      "pyproject.toml"
+    ],
+    "tool": [
+      "tools/**",
+      "scripts/**",
+      "fix_registry.py",
+      "patch_*.py",
+      "update_hooks.py",
+      "automations/**",
+      "inject_align.py",
+      "probe_cache.py"
+    ],
+    "prod": [
+      "dual_pipeline/**",
+      "pipeline_a_intake/**",
+      "pipeline_b_extraction/**",
+      "storage/**",
+      "migrations/**",
+      "agentic_core/**",
+      "apps_*/**",
+      "evals/**",
+      "config/runtime/**",
+      "core/**",
+      "ingestion/**",
+      "pipeline_c_retrieval/**",
+      "ui/**",
+      "graph/**",
+      "database/**",
+      "nee.py",
+      "app.py",
+      "analyze_costs.py"
+    ]
+  },
+  "tiers": {
+    "P0": {
+      "name": "Economic & Latency Core",
+      "definition": "Merges measurably reduce tokens/$ or pipeline/audio-ML wall-clock.",
+      "path_globs": [
+        "**/token_optimization/**",
+        "**/cost_tracker.py",
+        "**/*cache*.py",
+        "**/l1_*_adapter.py",
+        "config/runtime/model_registry.json",
+        "**/audio*/**",
+        "**/*whisper*",
+        "**/*diariz*",
+        "**/semantic_cache*",
+        "**/audio*.py",
+        "**/*whisper*/**",
+        "**/*diariz*/**"
+      ],
+      "min_loc": 20,
+      "min_ratio": 0.1,
+      "hotfix_exception": true,
+      "qualifying_evidence": [
+        "Net diff touches runtime code in cost/latency path set with >=20 prod LOC or >=10% prod LOC",
+        "Hotfix commit prefix (fix:) touching cost/latency path set qualifies at any LOC"
+      ],
+      "demotion_rules": [
+        "Docs/plan-only or research-only diff demotes to P3 research",
+        "LLM-judge correctness/threshold edits are not cost evidence (llm_judge_core removed from P0 globs, PRQ hardening)"
+      ]
+    },
+    "P1": {
+      "name": "Graph & Query Integrity",
+      "definition": "GraphDB schema, storage, retrieval, hash chain, query correctness.",
+      "path_globs": [
+        "storage/**",
+        "migrations/**",
+        "**/retrieval/**",
+        "**/query_core/**",
+        "**/graph_freshness_core/**",
+        "**/*schema*",
+        "**/write_gateway*",
+        "**/active_pair*",
+        "pipeline_c_retrieval/**"
+      ],
+      "min_loc": 20,
+      "min_ratio": 0.1,
+      "hotfix_exception": true,
+      "qualifying_evidence": [
+        "Net diff touches storage/, schema, query, retrieval, or graph freshness paths (non-test-only)"
+      ],
+      "demotion_rules": [
+        "Test-only or doc-only diff demotes to P3"
+      ]
+    },
+    "P2": {
+      "name": "Live Meeting & Client Deliverables",
+      "definition": "Ingestion/streaming/capture code or sealed output/ deliverables.",
+      "path_globs": [
+        "**/ingest_meeting*",
+        "**/live_*/**",
+        "**/transcript_pipeline_core/**",
+        "**/live_*.py"
+      ],
+      "min_loc": 20,
+      "min_ratio": 0.1,
+      "hotfix_exception": true,
+      "artifact_only_qualifies": true,
+      "qualifying_evidence": [
+        "Diff in live-meeting paths or output/<project>/... only"
+      ],
+      "demotion_rules": [
+        "Zero unique commits demotes to D (PRUNE)"
+      ]
+    },
+    "P3": {
+      "name": "Governance & Housekeeping",
+      "definition": "Governance, housekeeping, research, fixtures, styling, docs.",
+      "path_globs": [],
+      "min_loc": 0,
+      "min_ratio": 0.0,
+      "qualifying_evidence": [
+        "Everything else, including docs-only, test-only, tools-only, and cosmetic churn"
+      ],
+      "demotion_rules": []
+    }
+  },
+  "demotions": {
+    "research": "Docs, plans, research, or governance configs only (no prod/tool LOC)",
+    "test_only": "Test files only (no prod/tool LOC)",
+    "cosmetic": "Style, formatting, or chore with churn imbalance <= 5%",
+    "governance": "Tools or scripts only (no prod LOC)",
+    "misc": "Fallback default"
+  },
+  "scoring": {
+    "p0_business_order": ["COST_REDUCTION", "LATENCY_IMPROVEMENT", "UNKNOWN"],
+    "p0_business_order_before_merge_risk": true,
+    "business_order": [
+      "COST_REDUCTION",
+      "LATENCY_IMPROVEMENT",
+      "GRAPH_INTEGRITY",
+      "FEATURE_AND_DELIVERABLE",
+      "HOUSEKEEPING",
+      "UNKNOWN"
+    ],
+    "structural_weights": {
+      "e2e_test": 2.0,
+      "adversarial_test": 2.0,
+      "fix_commit": 1.0,
+      "target_regex": 1.0
+    },
+    "value_weights": {
+      "COST_REDUCTION": 5.0,
+      "LATENCY_IMPROVEMENT": 4.5,
+      "GRAPH_INTEGRITY": 3.5,
+      "FEATURE_AND_DELIVERABLE": 2.5,
+      "HOUSEKEEPING": 1.0
+    },
+    "business_value_governance": {
+      "allow_loc_as_value": false,
+      "allow_commit_regex_as_value": false,
+      "allow_test_filename_as_value": false,
+      "default_unmeasured_statement": "UNKNOWN: Unmeasured business value (structural heuristics only)",
+      "valid_benefit_categories": [
+        "COST_REDUCTION",
+        "LATENCY_IMPROVEMENT",
+        "GRAPH_INTEGRITY",
+        "INTEGRITY_PROTECTION",
+        "FEATURE_AND_DELIVERABLE",
+        "FEATURE_CAPABILITY",
+        "CLIENT_DELIVERABLE",
+        "HOUSEKEEPING",
+        "UNKNOWN"
+      ]
+    },
+    "override_contract": {
+      "required_fields": [
+        "owner",
+        "reason",
+        "scope",
+        "expires_at"
+      ],
+      "date_format": "YYYY-MM-DD",
+      "fail_closed_on_expired": true,
+      "advisory_summary_immutable": true
+    },
+    "risk_penalties": {
+      "behind_threshold": 20,
+      "behind_penalty": 3,
+      "conflict_penalty": 2,
+      "xl_files_threshold": 150,
+      "xl_churn_threshold": 3000,
+      "xl_penalty": 2,
+      "untested_prod_penalty": 2,
+      "multi_tier_split_penalty": 1,
+      "comprehensive_tests_bonus": -1
+    }
+  },
+  "glob_semantics": "Anchored: patterns with '/' match from repo root; bare patterns match basename; '*' never crosses '/'; '**/' = zero or more directories. Most specific (longest literal prefix) category wins; unmatched paths are 'unclassified' and never count as prod LOC."
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:nee:dual-pipeline:l0:mutation-record:1.0.0",
+  "title": "MutationRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mutation_id",
+    "delta_id",
+    "operation_type",
+    "entity_id",
+    "before_hash",
+    "after_hash",
+    "timestamp",
+    "applied"
+  ],
+  "properties": {
+    "mutation_id": { "type": "string" },
+    "delta_id": { "type": "string" },
+    "operation_type": {
+      "type": "string",
+      "enum": [
+        "CREATE_NODE",
+        "UPDATE_NODE",
+        "MERGE_NODE",
+        "CREATE_EDGE",
+        "UPDATE_EDGE",
+        "QUARANTINE_NODE",
+        "RELEASE_QUARANTINE"
+      ]
+    },
+    "entity_id": { "type": "string" },
+    "before_hash": { "type": "string" },
+    "after_hash": { "type": "string" },
+    "timestamp": { "type": "number" },
+    "applied": { "type": "boolean" }
+  }
+}

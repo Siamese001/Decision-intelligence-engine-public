@@ -1,0 +1,29 @@
+{
+  "artifact_id": "delivery-quality-fixture",
+  "artifact_type": "architecture_deck",
+  "automatic_provider_call_count": 0,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "d913149397e992c272ffd0cdb64cef2e1c9c9ed9df5b2055de65c442112b42de"
+  },
+  "checks": {
+    "audience_fit": true,
+    "business_language": true,
+    "persona_relevance": true,
+    "principle_mapping": true,
+    "render_review": true,
+    "source_coverage": true,
+    "terminology_defined": true,
+    "visual_hierarchy": true
+  },
+  "client_release_allowed": true,
+  "contract_id": "urn:nee:dual-pipeline:delivery-quality-decision:1.0.0",
+  "decision_id": "delivery-quality-fixture",
+  "defect_codes": [],
+  "delivery_profile": "client_executive",
+  "extensions": {},
+  "run_id": "run-delivery-quality-fixture",
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

@@ -1,0 +1,18 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:query-coverage-manifest:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-query-coverage-manifest",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "d07be71273292f057d740cfb20162132c38a1914fd5a8e4eddad3e912ccaf002"},
+  "manifest_id": "invalid-query-coverage-manifest",
+  "run_id": "run-query-evidence-fixture",
+  "validated_request_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "query_plan_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "graph_snapshot": "graph-snapshot-evidence-fixture",
+  "graph_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "authorization_scope_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+  "requirements": [
+    {"requirement_id": "coverage-requirement-a2a", "requirement_label": "A2A relationship", "requirement_kind": "relationship", "allowed_lanes": ["approved"], "missing_evidence_disposition": "explicit_gap", "materiality": "high"},
+    {"requirement_id": "coverage-requirement-a2a", "requirement_label": "Supporting evidence", "requirement_kind": "evidence", "allowed_lanes": ["approved"], "missing_evidence_disposition": "block", "materiality": "medium"}
+  ],
+  "extensions": {}
+}

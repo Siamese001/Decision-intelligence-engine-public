@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+COMMIT_MSG_FILE=$1
+
+SCRIPT_DIR=$(dirname "$0")
+. "$SCRIPT_DIR/_common.sh"
+cd "$ROOT"
+
+run_python -B tools/lint_commit_message.py -f "$COMMIT_MSG_FILE"

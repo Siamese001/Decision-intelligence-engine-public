@@ -1,0 +1,150 @@
+{
+  "$id": "urn:nee:dual-pipeline:query-plan-observation:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "attempt_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:query-plan-observation:1.0.0"
+    },
+    "coverage_manifest_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "evidence_report_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "graph_sha256_after": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "graph_sha256_before": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "newly_covered_requirement_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "observation_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "parent_plan_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "progress": {
+      "enum": [
+        "progress",
+        "no_progress",
+        "complete",
+        "blocked"
+      ]
+    },
+    "progress_reason": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "provider_call_count": {
+      "const": 0,
+      "type": "integer"
+    },
+    "requirement_outcomes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "outcome": {
+            "enum": [
+              "covered",
+              "explicit_gap",
+              "unauthorized",
+              "conflict",
+              "excluded"
+            ]
+          },
+          "requirement_id": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "requirement_id",
+          "outcome"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "unresolved_requirement_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "observation_id",
+    "parent_plan_digest",
+    "attempt_digest",
+    "evidence_report_digest",
+    "coverage_manifest_digest",
+    "requirement_outcomes",
+    "newly_covered_requirement_ids",
+    "unresolved_requirement_ids",
+    "progress",
+    "progress_reason",
+    "graph_sha256_before",
+    "graph_sha256_after",
+    "provider_call_count"
+  ],
+  "title": "Governed L1 plan observation",
+  "type": "object"
+}

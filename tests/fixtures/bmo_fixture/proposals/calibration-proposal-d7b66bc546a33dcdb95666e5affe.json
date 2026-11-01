@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-d7b66bc546a33dcdb95666e5affe",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "df5daacd97b2529879cf354f437af651e70bc7ffb3e659f5e0d9958d883c3dbd"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-c707d0c47f0510008f8af909"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Nea Screener Sync 9 1 2026 is an identified technical_anchor in 20260915 Lens Catch Up.",
+      "proposed_value": "Nea Screener Sync 9 1 2026 is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-f113a800f8c954d962d523bad867"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-7de2a664c791f4d55aa10614e668",
+      "assertion_id_older": "assertion-f113a800f8c954d962d523bad867",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-b17c2502c6cd8193bd39f75b5d16",
+      "timestamp_newer": "2026-09-30",
+      "timestamp_older": "2026-09-15"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Nea Screener Sync 9 1 2026' (HAS_CLAIM_TEXT). Older claim from 2026-09-15 superseded by newer claim from 2026-09-30.",
+  "proposal_id": "calibration-proposal-d7b66bc546a33dcdb95666e5affe",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-f113a800f8c954d962d523bad867 from Nea Screener Sync 9 1 2026 is an identified technical_anchor in 20260915 Lens Catch Up. to Nea Screener Sync 9 1 2026 is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

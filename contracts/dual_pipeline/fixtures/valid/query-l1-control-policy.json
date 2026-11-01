@@ -1,0 +1,39 @@
+{
+  "action_allowlist": [
+    "requirement_hybrid_retrieval",
+    "stop"
+  ],
+  "artifact_id": "query-l1-control-policy-fixture",
+  "budget": {
+    "max_actions": 2,
+    "max_additional_attempts": 1,
+    "max_elapsed_ms": 30000,
+    "max_result_bytes": 100000,
+    "max_unique_records": 50
+  },
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "59cae6465eb8bcc7c4a3c12265bbc64d26d60b2dd38c35b8b266c87ffd1497d7"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-l1-control-policy:1.0.0",
+  "extensions": {},
+  "graph_mutations_before_l2d": 0,
+  "mode": "off",
+  "policy_id": "query-l1-control-policy-fixture",
+  "policy_version": "1.0.0",
+  "progress_rule": "newly_covered_material_requirements",
+  "provider_calls_before_l2d": 0,
+  "runtime_default": "off",
+  "schema_version": "1.0.0",
+  "terminal_reasons": [
+    "COMPLETED",
+    "EXPLICIT_GAP",
+    "NO_PROGRESS",
+    "BUDGET_EXHAUSTED",
+    "UNAUTHORIZED",
+    "CONFLICT",
+    "HITL_REQUIRED",
+    "SHADOW"
+  ]
+}

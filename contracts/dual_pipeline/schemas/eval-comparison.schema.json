@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:eval-comparison:1.0.0",
+  "title": "NEE like-for-like dual-pipeline evaluation comparison",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "comparison_id", "baseline_evaluation_id", "baseline_digest", "candidate_evaluation_id", "candidate_digest", "suite_id", "graph_sha256", "metric_deltas", "status", "compared_at", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:eval-comparison:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "comparison_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "baseline_evaluation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "baseline_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "candidate_evaluation_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "candidate_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "suite_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "graph_sha256": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+    "metric_deltas": {"type": "array", "items": {"$ref": "urn:nee:dual-pipeline:eval-comparison:1.0.0#/$defs/metricDelta"}},
+    "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+    "compared_at": {"type": "string", "format": "date-time"},
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  },
+  "$defs": {
+    "metricDelta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["metric", "baseline", "candidate", "delta", "regression"],
+      "properties": {
+        "metric": {"type": "string", "minLength": 1, "maxLength": 128},
+        "baseline": {"type": "number"},
+        "candidate": {"type": "number"},
+        "delta": {"type": "number"},
+        "regression": {"type": "boolean"}
+      }
+    }
+  }
+}

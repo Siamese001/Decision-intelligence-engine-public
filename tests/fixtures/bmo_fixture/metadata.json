@@ -1,0 +1,217 @@
+{
+  "project": "bmo",
+  "title": "James Beebe Business Management Office Product R&D Org Structure",
+  "date": "10/12/2026",
+  "classification": "restricted",
+  "author": "Chad Aussprung",
+  "force_rerun": false,
+  "allow_duplicate": false,
+  "no_subfolder": false,
+  "progress_mode": "auto",
+  "enforce_worktree": true,
+  "resume": false,
+  "dry_run": false,
+  "dry_run_graph": false,
+  "mutate_graph": true,
+  "backtest": false,
+  "runtime_root": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline",
+  "allow_visual_image": true,
+  "enable_visual_ocr": true,
+  "is_visual_document": true,
+  "outputs": [
+    "03"
+  ],
+  "is_document": true,
+  "canonical_modality": "DOCUMENT",
+  "output3_only": true,
+  "skip_output_1": true,
+  "skip_output_2": true,
+  "input_path": "intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+  "input_ext": ".png",
+  "package_only": true,
+  "provider_type": "llm",
+  "provider": "llm",
+  "directive_id": "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1",
+  "auto_mutate_on_pass": false,
+  "extraction_effort": "high",
+  "judge_effort": "high",
+  "_extraction_execution": {
+    "status": "COMPLETED",
+    "provider_type": "llm",
+    "requested_model": "gpt-6-luna",
+    "requested_effort": "high",
+    "declared_revision": null,
+    "effective_model": "gpt-6-luna",
+    "effective_effort": "high",
+    "resolved_model": "gpt-6-luna",
+    "dispatched_model": "gpt-6-luna",
+    "observed_model": "gpt-6-luna",
+    "evidence_strength": "OBSERVED_RESPONSE",
+    "model_identity": "response",
+    "operation": "extraction"
+  },
+  "source_file_hash": "a46cbf74b141650533e8e398568040bd2810dbcb9be1137e25a5b01012c383cb",
+  "raw_source_sha256": "a46cbf74b141650533e8e398568040bd2810dbcb9be1137e25a5b01012c383cb",
+  "intake_preflight": {
+    "valid": true,
+    "dependencies_verified": [],
+    "detected_formats": [
+      "png"
+    ],
+    "total_bytes": 199244
+  },
+  "_source_coverage": {
+    "total_records": 9,
+    "processed_records": 9,
+    "complete": true,
+    "ocr_text_length": 681,
+    "visual_components": 9
+  },
+  "visual_extraction": {
+    "title": "2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart",
+    "components": [
+      {
+        "component_ref": "comp-444",
+        "label": ":444",
+        "type": "system_component"
+      },
+      {
+        "component_ref": "comp-organization",
+        "label": "Organization",
+        "type": "system_component"
+      },
+      {
+        "component_ref": "comp-aussprung-chad",
+        "label": "Aussprung, Chad",
+        "type": "system_component"
+      },
+      {
+        "component_ref": "comp-executive-director-busin",
+        "label": "Executive Director Business Management",
+        "type": "system_component"
+      },
+      {
+        "component_ref": "comp-beebe-james",
+        "label": "Beebe, James",
+        "type": "system_component"
+      },
+      {
+        "component_ref": "comp-director-product-r-d",
+        "label": "Director Product R&D",
+        "type": "system_component"
+      },
+      {
+        "component_ref": "comp-business-mgmt",
+        "label": "Business Mgmt",
+        "type": "system_component"
+      },
+      {
+        "component_ref": "comp-reporting-to-beebe-james",
+        "label": "Reporting to Beebe, James (13)",
+        "type": "system_component"
+      },
+      {
+        "component_ref": "comp-rawat-vikas",
+        "label": "Rawat, Vikas",
+        "type": "system_component"
+      }
+    ],
+    "connections": [],
+    "summary": "Visual artifact '2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png' titled '11:444' with 35 detected text lines."
+  },
+  "source_preflight": {
+    "source_char_count": 681,
+    "statement_max_chars": 4000,
+    "raw_source_chunk_count": 1
+  },
+  "source_manifest": {
+    "schema_version": "urn:nee:dual-pipeline:source-manifest:1.0.0",
+    "timestamp": "2026-10-12T18:52:12.283244+00:00",
+    "sources": [
+      {
+        "path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+        "filename": "2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+        "sha256": "a46cbf74b141650533e8e398568040bd2810dbcb9be1137e25a5b01012c383cb",
+        "bytes": 199244,
+        "format": "png",
+        "is_summary": false,
+        "converted_text_sha256": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+        "converted_text_chars": 681,
+        "pages": [],
+        "sheets": [],
+        "slides": [],
+        "unit_coverage": {
+          "unit_type": "line_block",
+          "total_units": 9,
+          "included_units": 9,
+          "excluded_units": 0,
+          "disposition": "INCLUDED",
+          "locator_pattern": "L{line_number}",
+          "visual_policy": "NEVER",
+          "details": {
+            "total_records": 9,
+            "processed_records": 9,
+            "complete": true,
+            "ocr_text_length": 681,
+            "visual_components": 9
+          }
+        },
+        "summary_provenance": null
+      }
+    ],
+    "total_sources": 1,
+    "total_raw_bytes": 199244,
+    "total_converted_chars": 681,
+    "full_ingestion_claim": true,
+    "ingested_representation": "raw_sources",
+    "claim_rationale": "All 1 raw sources and their sheets/pages fully accounted for."
+  },
+  "input_hash": "44925c80757917bf92d1745d0ab59cee93b8c04d1e8922fb3f5b57914cfd5d3a",
+  "source_text": "11:444\n84\nOrganization\nAussprung, Chad\nExecutive Director Business Management\nBeebe, James\nDirector Product R&D\nBusiness Mgmt\nReporting to Beebe, James (13)\nVR\nO\nRawat, Vikas\nNon-APEX-Profile Worker IT Data Scientist\nSM\nMadhavaram, Srishma\nNon-APEX-Profile Worker IT Developer\nEG\nGarcia, Enrique\nNon-APEX-Profile Worker IT Developer\nLastowski, Michael\nNon-APEX-Profile Worker IT Business Analyst\nO\nEstrada, Juan Adan\nNon-APEX-Profile Worker IT Developer\nMA\nAlperovich, Mikhail\nNon-APEX-DATA SCIENTIST-Level 1 - Associate (0 - 5 Ye...\nAkopian, Arsen\nNon-APEX-Profile Worker IT Engineer\nPA\nArefi, Pouya\nNon-APEX-Profile Worker IT Engineer\nJB\nBennetto, Jack\nNon-APEX-Profile Worker IT Engineer",
+  "retrieval_preflight": {
+    "status": "ELIGIBLE",
+    "reason_code": "ELIGIBLE",
+    "classification": "restricted",
+    "audiences": [
+      "internal_consulting"
+    ],
+    "retrieval_requested": false,
+    "labels_changed": false
+  },
+  "_document_source_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/intake/2026-10-12_James_Beebe_BMO_Product_RD_Org_Chart.png",
+  "_document_checkpoint_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline/checkpoints/document_8980586b5e8de0bf8cb248713ae2cded649e46ff9ee2cfc29bb5e875c318e50f.json",
+  "required_deliverables": [
+    "03"
+  ],
+  "meeting_name": "James Beebe Business Management Office Product R&D Org Structure",
+  "organizer": "Chad Aussprung",
+  "attendees": [
+    "Chad Aussprung"
+  ],
+  "date_filename": "10-12-2026",
+  "time": "0252PM_ET",
+  "time_filename": "0252PM_ET",
+  "audiences": [
+    "internal_consulting"
+  ],
+  "source_type": "document",
+  "filename_slug": "James_Beebe_Business_Management_Chad",
+  "worktree_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org",
+  "worktree_branch": "ingest/chart-bmo-james-beebe-org",
+  "output_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/output/bmo/10-12-2026/James_Beebe_Business_Management_Chad",
+  "target_output_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/output/bmo/10-12-2026/James_Beebe_Business_Management_Chad",
+  "bounded_context": "BoundedContext(authorized_scope='bmo', source_ids=[''], graph_generation=None, runtime_generation=None, retrieval_policy='STRICT_BOUNDARY', retrieval_version='1.0.0', bounds={'max_tokens': 8000, 'confidentiality': 'STRICT'}, availability_status='AVAILABLE', entities=[], assertions=[], prior_session_context='')",
+  "document_resume": {
+    "reused_synthesis": false,
+    "reason": "NEW_CHECKPOINT",
+    "binding_sha256": "7b3dba63517cac5718d533cc684806ff06870f197ac0e13cdd9840be11e5fb31",
+    "checkpoint": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/.local/dual_pipeline/checkpoints/document_8980586b5e8de0bf8cb248713ae2cded649e46ff9ee2cfc29bb5e875c318e50f.json"
+  },
+  "state_machine": "<dual_pipeline.remediation_core.state_machine.SelectiveRemediationStateMachine object at 0x10d5c7aa0>",
+  "circuit_breaker": "<dual_pipeline.token_optimization.circuit_breaker.CandidateCircuitBreaker object at 0x10da0ab70>",
+  "deliverable_dir": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/output/bmo/10-12-2026/James_Beebe_Business_Management_Chad",
+  "deliverable_receipt_path": "/Users/amitayer/Git/decision-intelligence-engine/.worktrees/ingest_chart_bmo_james_beebe_org/output/bmo/10-12-2026/James_Beebe_Business_Management_Chad/pipeline_execution_receipt.json",
+  "retrieval_completion": {
+    "status": "NOT_REQUESTED"
+  }
+}

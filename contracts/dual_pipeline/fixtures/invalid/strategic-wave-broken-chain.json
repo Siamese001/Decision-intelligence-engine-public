@@ -1,0 +1,41 @@
+{
+  "activation_state": "NOT_APPLICABLE",
+  "active_pair_mutation_count": 0,
+  "artifact_id": "strategic-wave-receipt-example",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "214562f6f0965d50bd29124f1adb264590d19bb111c5e99c660380232a6e28a6"
+  },
+  "completed_at": "2026-07-29T00:00:00Z",
+  "contract_id": "urn:nee:dual-pipeline:strategic-wave-receipt:1.0.0",
+  "evidence": [
+    {
+      "kind": "contract",
+      "name": "Strategic profile contract",
+      "reference": "contracts/dual_pipeline/schemas/strategic-assertion-profile.schema.json",
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+    }
+  ],
+  "extensions": {},
+  "gates": [
+    {
+      "detail": "The strategic assertion profile is closed-world and validates.",
+      "gate_id": "strategic-profile-contract-valid",
+      "status": "PASS"
+    }
+  ],
+  "graph_mutation_count": 0,
+  "graph_sha256_after": "2222222222222222222222222222222222222222222222222222222222222222",
+  "graph_sha256_before": "2222222222222222222222222222222222222222222222222222222222222222",
+  "index_mutation_count": 0,
+  "model_call_count": 0,
+  "prior_receipt_digest": null,
+  "program_id": "strategic-reasoning-refactor-v1",
+  "provider_call_count": 0,
+  "receipt_id": "strategic-wave-receipt-example",
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "wave_name": "Source-bound ingestion projection",
+  "wave_number": 2
+}

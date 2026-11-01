@@ -1,0 +1,22 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:uwg-promotion-decision:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "uwg-decision-fixture",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "a9c94da8ebe5f1ab177d6dfbf5d6736f372f05e630d87042efcc1f5272db9c91"},
+  "promotion_id": "uwg-decision-fixture",
+  "evaluation_id": "uwg-evaluation-fixture",
+  "evaluation_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+  "origin_run_id": "run-uwg-fixture",
+  "candidate_pair": {"generation_id": "generation-uwg-fixture", "graph_snapshot": "snapshot-uwg-fixture", "graph_sha256": "3333333333333333333333333333333333333333333333333333333333333333", "sidecar_sha256": "4444444444444444444444444444444444444444444444444444444444444444", "embedding_backend": "flagembedding-bge-m3-dev", "model_id": "BAAI/bge-m3", "model_revision": "5617a9f61b028005a4858fdac845db406aefb181", "model_manifest_digest": "a598d96187ae03e498914543ca2637b95ef61c496faf4d5d9e471764f893905e", "production_qualified": false},
+  "candidate_assertion_ids": ["assertion-uwg-fixture"],
+  "evidence_bindings": [{"assertion_id": "assertion-uwg-fixture", "evidence_snapshots": [{"evidence_id": "evidence-uwg-fixture", "source_id": "source-uwg-fixture", "source_version_id": "source-version-uwg-fixture", "source_content_hash": "6666666666666666666666666666666666666666666666666666666666666666"}]}],
+  "decision": "PROMOTE_APPROVED",
+  "promotion_mode": "ONE_TIME_EXACT_SCOPE",
+  "scope_confirmation": "PROMOTE_EXACT_CANDIDATES_ONLY",
+  "approval_id": "uwg-approval-fixture",
+  "approval_scope_digest": "7777777777777777777777777777777777777777777777777777777777777777",
+  "reviewer": "fixture-reviewer",
+  "decided_at": "2026-07-25T00:02:00Z",
+  "rationale": "Direct first-party evidence and the policy-bound benchmark passed.",
+  "extensions": {}
+}

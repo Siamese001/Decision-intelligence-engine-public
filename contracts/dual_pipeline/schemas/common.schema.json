@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:common:1.0.0",
+  "title": "NEE dual-pipeline common definitions",
+  "description": "Shared closed-world definitions for NEE-KG-DUAL-PIPELINE-01 Wave 1.",
+  "$defs": {
+    "artifactId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "canonicalDigest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "scope", "value"],
+      "properties": {
+        "algorithm": {"const": "sha256"},
+        "scope": {"const": "artifact_without_canonical_digest"},
+        "value": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+$"
+      },
+      "additionalProperties": true
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["public", "internal", "confidential", "restricted"]
+    },
+    "audiences": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{1,63}$"
+      }
+    },
+    "materiality": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "evidenceLane": {
+      "type": "string",
+      "enum": ["approved", "candidate", "external_public", "none"]
+    },
+    "sourcePosture": {
+      "type": "string",
+      "enum": ["authoritative_internal", "governed_internal", "derivative_internal", "working_notes", "external_first_party", "external_partner", "external_independent", "external_contextual"]
+    },
+    "strategicProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["knowledge_role", "modality", "authority_scope", "applicability_scope", "realization_state"],
+      "properties": {
+        "knowledge_role": {
+          "type": "string",
+          "enum": ["current_state_fact", "official_intent", "business_problem", "design_principle", "target_outcome", "capability", "option", "evaluation_criterion", "constraint", "risk", "dependency", "external_pattern", "decision", "observed_outcome", "metric", "source_position", "assumption", "open_question"]
+        },
+        "modality": {
+          "type": "string",
+          "enum": ["descriptive", "normative", "intended", "proposed", "predictive", "observed"]
+        },
+        "authority_scope": {
+          "type": "string",
+          "enum": ["nee_current_state", "official_project_intent", "source_position", "external_reference", "stakeholder_perspective"]
+        },
+        "applicability_scope": {
+          "type": "string",
+          "enum": ["nee_specific", "client_specific", "generalizable", "analogous_only"]
+        },
+        "realization_state": {
+          "type": "string",
+          "enum": ["not_applicable", "intended", "planned", "in_progress", "observed", "measured"]
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"knowledge_role": {"enum": ["official_intent", "target_outcome"]}}, "required": ["knowledge_role"]},
+          "then": {
+            "properties": {
+              "modality": {"enum": ["intended", "normative"]},
+              "authority_scope": {"const": "official_project_intent"},
+              "realization_state": {"enum": ["intended", "planned"]}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"knowledge_role": {"const": "external_pattern"}}, "required": ["knowledge_role"]},
+          "then": {
+            "properties": {
+              "authority_scope": {"const": "external_reference"},
+              "applicability_scope": {"enum": ["generalizable", "analogous_only"]},
+              "realization_state": {"const": "not_applicable"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"knowledge_role": {"const": "observed_outcome"}}, "required": ["knowledge_role"]},
+          "then": {
+            "properties": {
+              "modality": {"const": "observed"},
+              "realization_state": {"enum": ["observed", "measured"]}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"realization_state": {"enum": ["observed", "measured"]}}, "required": ["realization_state"]},
+          "then": {"properties": {"modality": {"not": {"enum": ["intended", "proposed"]}}}}
+        }
+      ]
+    },
+    "candidateType": {
+      "type": "string",
+      "enum": ["entity_mention", "assertion", "relationship", "action", "decision", "risk", "dependency", "open_question", "architecture_component", "architecture_relationship", "source_chunk"]
+    },
+    "assertionType": {
+      "type": "string",
+      "enum": ["approved_factual_assertion", "candidate_assertion", "decision", "action_item", "risk", "dependency", "proposal", "hypothesis", "opinion", "question", "architecture_component", "architecture_relationship", "contradiction", "supersession", "speaker_role"]
+    },
+    "intakeRoute": {
+      "type": "string",
+      "enum": ["EXACT_DUPLICATE", "CORROBORATING_EVIDENCE", "ENTITY_ALIAS_REVIEW", "NEW_ENTITY", "NEW_ASSERTION", "NEW_RELATIONSHIP", "STATUS_UPDATE", "SUPERSESSION", "CONTRADICTION", "ACTION_ITEM", "CANDIDATE_PROMOTION_REVIEW", "EXTERNAL_VALIDATION", "SOURCE_ONLY", "QUARANTINE"]
+    },
+    "queryRoute": {
+      "type": "string",
+      "enum": ["EXACT_LOOKUP", "CURRENT_STATE_CORROBORATION", "PROJECT_STATUS_CURRENT", "PROJECT_STATUS_HISTORY", "RELATIONSHIP_EXPLANATION", "CROSS_WORKSTREAM_SYNTHESIS", "GAP_RISK_INCONSISTENCY", "OPPORTUNITY_NBA", "CANDIDATE_PROMOTION_REVIEW"]
+    },
+    "entityResolutionOutcome": {
+      "type": "string",
+      "enum": ["AUTO_LINK_EXACT", "AUTO_LINK_HIGH_CONFIDENCE", "HITL_CONFIRM_ENTITY", "CREATE_NEW_ENTITY_PROPOSAL", "CREATE_EXTERNAL_CONCEPT", "ADD_ALIAS_PROPOSAL", "REJECT_MATCH", "QUARANTINE_IDENTITY", "SOURCE_ONLY"]
+    },
+    "disposition": {
+      "type": "string",
+      "enum": ["APPROVED", "CANDIDATE", "QUARANTINE", "REJECTED_NOOP"]
+    },
+    "x3IntakeOutcome": {
+      "type": "string",
+      "enum": ["X3D_ALLOW_CANDIDATE_STAGE", "X3D_ALLOW_APPROVED_WRITE", "X3B_ESCALATE_HITL", "X3Q_QUARANTINE", "X3R_REJECT_NOOP", "X3F_BLOCK", "X3C_COMMIT_REQUEST_TO_UWG", "X3A_DENY_REROUTE"]
+    },
+    "stage": {
+      "type": "string",
+      "enum": ["U0", "L1", "L0", "C0.1", "C0.2", "C0.3", "L2D", "PA", "L3", "L2", "X1", "X2", "X3", "W0", "E0", "L4", "L6", "H0", "H1", "H2", "H3", "LP0", "LP1", "LP2", "LP3", "LP4", "LP5"]
+    },
+    "useCase": {
+      "type": "string",
+      "enum": ["intake", "query", "shared", "hitl", "learning"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["PASS", "FAIL", "BLOCKED", "QUARANTINED", "PENDING", "COMPLETED", "NOOP"]
+    },
+    "sourceLocator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "value"],
+      "properties": {
+        "kind": {"type": "string", "enum": ["section", "timestamp", "page", "region", "cell", "record", "uri_fragment"]},
+        "value": {"type": "string", "minLength": 1, "maxLength": 512},
+        "quote_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "evidenceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "source_id", "source_version_id", "locator", "relationship", "directness", "authority_rank"],
+      "properties": {
+        "evidence_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "source_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "source_version_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "locator": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourceLocator"},
+        "relationship": {"type": "string", "enum": ["supports", "contradicts", "contextualizes"]},
+        "directness": {"type": "string", "enum": ["direct", "derivative", "contextual"]},
+        "authority_rank": {"type": "integer", "minimum": 1, "maximum": 9},
+        "content_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"}
+      }
+    },
+    "correlation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "candidate_id", "query_id", "graph_operation_id", "hitl_item_id"],
+      "properties": {
+        "source_id": {"type": ["string", "null"], "minLength": 3},
+        "candidate_id": {"type": ["string", "null"], "minLength": 3},
+        "query_id": {"type": ["string", "null"], "minLength": 3},
+        "graph_operation_id": {"type": ["string", "null"], "minLength": 3},
+        "hitl_item_id": {"type": ["string", "null"], "minLength": 3}
+      }
+    }
+  }
+}

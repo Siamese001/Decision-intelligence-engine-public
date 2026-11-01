@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "nee-pre-intake-classification",
+  "policy_version": "1.0.0",
+  "default_classification": "internal",
+  "public_requires_explicit_operator_classification": true,
+  "domain_rules": {
+    "consulting.example.com": {
+      "organization": "partner_advisory",
+      "audience": "internal_consulting"
+    },
+    "grid.example.com": {
+      "organization": "apex_global",
+      "audience": "nee-engineering"
+    },
+    "enterprise.example.com": {
+      "organization": "apex_global",
+      "audience": "nee-engineering"
+    }
+  },
+  "cross_organization_rule": {
+    "signal_type": "customer_partner_participant_boundary",
+    "classification": "confidential",
+    "minimum_organization_count": 2,
+    "reason": "Explicit meeting metadata spans more than one governed organization boundary."
+  },
+  "signal_rules": [
+    {
+      "signal_type": "private_key_material",
+      "classification": "restricted",
+      "pattern": "-----BEGIN(?: [A-Z]+)? PRIVATE KEY-----",
+      "ignore_case": false,
+      "reason": "The exact source contains a high-confidence private-key shape."
+    },
+    {
+      "signal_type": "cloud_access_key",
+      "classification": "restricted",
+      "pattern": "\\b(?:AKIA|ASIA)[A-Z0-9]{16}\\b",
+      "ignore_case": false,
+      "reason": "The exact source contains a high-confidence cloud access-key shape."
+    },
+    {
+      "signal_type": "credential_token",
+      "classification": "restricted",
+      "pattern": "\\b(?:sk-[A-Za-z0-9_-]{20,}|gh[pousr]_[A-Za-z0-9]{20,})\\b",
+      "ignore_case": false,
+      "reason": "The exact source contains a high-confidence credential-token shape."
+    },
+    {
+      "signal_type": "us_social_security_number",
+      "classification": "confidential",
+      "pattern": "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+      "ignore_case": false,
+      "reason": "The exact source contains a high-confidence US Social Security number shape."
+    },
+    {
+      "signal_type": "regulated_or_payment_data",
+      "classification": "confidential",
+      "pattern": "\\b(?:protected health information|PHI|HIPAA|FERPA|PCI[ -]?DSS|payment card)\\b",
+      "ignore_case": true,
+      "reason": "The exact source references regulated health, education, or payment data."
+    },
+    {
+      "signal_type": "contractual_or_commercial_material",
+      "classification": "confidential",
+      "pattern": "\\b(?:contractual|contract terms?|pricing|rate card|statement of work|SOW|procurement)\\b",
+      "ignore_case": true,
+      "reason": "The exact source contains contractual, pricing, or procurement material."
+    },
+    {
+      "signal_type": "security_sensitive_architecture",
+      "classification": "confidential",
+      "pattern": "\\b(?:authentication|authorization|cross-account|separate AWS accounts?|IAM permissions?|security architecture)\\b",
+      "ignore_case": true,
+      "reason": "The exact source discusses security-sensitive architecture or identity boundaries."
+    },
+    {
+      "signal_type": "nonpublic_delivery_or_leadership_planning",
+      "classification": "confidential",
+      "pattern": "\\b(?:delivery capacity|committed delivery|Q[1-4] commitments?|leadership alignment|leadership priorit(?:y|ies|ize|izes|ized))\\b",
+      "ignore_case": true,
+      "reason": "The exact source contains non-public delivery or leadership-planning material."
+    },
+    {
+      "signal_type": "explicit_client_confidentiality",
+      "classification": "confidential",
+      "pattern": "\\b(?:client confidential|customer confidential|confidential client|non-public customer)\\b",
+      "ignore_case": true,
+      "reason": "The exact source explicitly identifies customer or client confidentiality."
+    }
+  ]
+}

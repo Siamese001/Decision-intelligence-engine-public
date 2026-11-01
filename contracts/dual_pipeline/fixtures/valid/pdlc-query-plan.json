@@ -1,0 +1,72 @@
+{
+  "allowed_lanes": [
+    "approved",
+    "candidate",
+    "external_public"
+  ],
+  "allowed_provider_class": "openai",
+  "artifact_id": "query-plan-nea-pdlc-opportunities",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "387bf553f26fc7d5dbf69299684630d477d0355dda93c87351ad13426d214597"
+  },
+  "challenger_required": false,
+  "classification_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "classification_source": "deterministic",
+  "contract_id": "urn:nee:dual-pipeline:query-plan:1.0.0",
+  "evidence_requirements": [
+    "Approved internal facts for current state",
+    "Role-separated intent, principles, options, constraints, outcomes, candidate hypotheses, and external analogies without factual-status leakage",
+    "Source locators for material claims"
+  ],
+  "exit_criteria": [
+    "Citations resolve",
+    "Lane separation is preserved",
+    "X1, X2, and X3 pass"
+  ],
+  "extensions": {},
+  "external_research": "denied",
+  "l2_policy": "required",
+  "l2_policy_reason": "QUERY_TYPE_OPPORTUNITY_NBA_REQUIRES_SYNTHESIS",
+  "materiality": "high",
+  "maximum_escalation_calls": 1,
+  "maximum_primary_calls": 1,
+  "maximum_repair_calls": 1,
+  "output_schema": "nee-opportunity-nba-answer-1",
+  "plan_id": "plan-query-nea-pdlc-opportunities",
+  "preferred_model_tier": "high_materiality",
+  "primary_entities": [
+    "NEA",
+    "PDLC"
+  ],
+  "prompt_blueprint": "opportunity_nba_v1",
+  "provider_egress_allowed": true,
+  "query_complexity": "high",
+  "query_type": "opportunity_nba",
+  "relationships_to_inspect": [
+    "ADDRESSES",
+    "DEPENDS_ON",
+    "SUPPORTED_BY"
+  ],
+  "request_id": "request-nea-pdlc-opportunities",
+  "required_output_schema": "nee-opportunity-nba-answer-1",
+  "retrieval": {
+    "exact_anchors": true,
+    "graph_hops": 2,
+    "lane_blending": false,
+    "semantic": true
+  },
+  "retrieval_mode": "strategic",
+  "route_high_materiality": false,
+  "run_id": "run-query-nea-pdlc-opportunities",
+  "schema_version": "1.0.0",
+  "subquestions": [
+    "Which PDLC opportunities are represented?",
+    "What pain points are represented?",
+    "How do the opportunities address those pain points?",
+    "What approved evidence supports prioritization?"
+  ],
+  "time_horizon": "current governed state",
+  "trace_id": "fedcba9876543210fedcba9876543210"
+}

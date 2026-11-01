@@ -1,0 +1,75 @@
+{
+  "adapter": {
+    "name": "nee-docx-source-intake",
+    "version": "1.0.0"
+  },
+  "artifact_id": "docx-source-example-proposal",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "e7c2e4381088191b955348c2be560e3f39b0e990dbc9b36f3687f315e5985333"
+  },
+  "chunks": [
+    {
+      "chunk_id": "chunk-01-overview",
+      "extraction_confidence": 1.0,
+      "locator": {
+        "kind": "section",
+        "quote_digest": "2f9bc03b8af91c9a353cea70e0f2b37c86bca75bd92a3a826265d848f31a2edc",
+        "value": "Overview"
+      },
+      "materiality": "high",
+      "selection_rationale": "Retains the source-attributed section for bounded, candidate-only retrieval.",
+      "text": "## Overview\n\nSource-bound test material.\n\n- One delivery track.",
+      "title": "Overview"
+    },
+    {
+      "chunk_id": "chunk-02-assumptions",
+      "extraction_confidence": 1.0,
+      "locator": {
+        "kind": "section",
+        "quote_digest": "a4905a611b6cd87b45aa2f35c594377cd603df0c6b46aa3230ba377c7661ede4",
+        "value": "Assumptions"
+      },
+      "materiality": "high",
+      "selection_rationale": "Retains the source-attributed section for bounded, candidate-only retrieval.",
+      "text": "## Assumptions\n\nAccess is supplied by the client.",
+      "title": "Assumptions"
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:docx-source-intake:1.0.0",
+  "extensions": {
+    "com.partner_advisory.nee.chunk-selection": {
+      "authority_boundary": "Internal client proposal; not deployed capability evidence.",
+      "profile": "section-selection-v1"
+    },
+    "com.partner_advisory.nee.docx-extraction": {
+      "extracted_text_binding": "recomputed-from-raw-docx-v1",
+      "profile": "visible-paragraph-table-markdown-v1",
+      "source_byte_binding": "raw_docx_base64+docx_file_sha256"
+    }
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "anchor_entity": {
+      "context": "Internal client proposal; not deployed capability evidence.",
+      "reported_text": "Example proposal",
+      "stable_identifier": "example_proposal"
+    },
+    "audiences": [
+      "internal_consulting"
+    ],
+    "authority_rank": 5,
+    "classification": "confidential",
+    "docx_file_sha256": "fa5011f9793db2d658fb8f97efd2544163569842aa0801bc452796f0e52f2746",
+    "extracted_markdown": "# Example proposal\n\n## Overview\n\nSource-bound test material.\n\n- One delivery track.\n\n## Assumptions\n\nAccess is supplied by the client.\n",
+    "extracted_markdown_sha256": "8214c9bc6d3d8be29cfb850eb94cb4533433ae5b756122dbda6a0e246838436b",
+    "raw_docx_base64": "UEsDBBQAAAAIAL0h+1yLrKiZHwEAAHsCAAARAAAAd29yZC9kb2N1bWVudC54bWydUk1vwjAMvfMrrNwhsMM0VbSIw6YdJg2J7QeE1Guj5UtxSuHfzwF2mIS2icuT7fjZz3aWq4OzsMdEJvhaLGZzAeh1aI3vavH+9jR9EKtmshyrNujBoc/ABE/VWIs+51hJSbpHp2gWInp++wjJqcxu6uQYUhtT0EjE9ZyVd/P5vXTKeNFMALjqLrTHYp6c2DCkArl5PCgXLQLTYyBll7JEC6YTxp+suDnx4jYfmTRWe2Vr8YyqzLEQ8kw551wavPLQe4PjH4Uv2dswJI3TXRh8CxkpAw+JySg7u0XZi6G8UUl1ScX+ujyP0KI1rPIIOSn9eVOjX1ewJhpczHx5+t8W1rqcEgwBDTFagy3sWF2PoNnx+brEYpzvXKzvf9R8AVBLAQIUABQAAAAIAL0h+1yLrKiZHwEAAHsCAAARAAAAAAAAAAAAAACAAQAAAAB3b3JkL2RvY3VtZW50LnhtbFBLBQYAAAAAAQABAD8AAABOAQAAAAA=",
+    "source_date": "2026-07-27",
+    "source_id": "example-proposal",
+    "source_location": "controlled/examples/proposal.docx",
+    "source_posture": "derivative_internal",
+    "source_version_id": "source-version-79fdbd16e5d410a7fa68c95597c9",
+    "title": "Example proposal"
+  }
+}

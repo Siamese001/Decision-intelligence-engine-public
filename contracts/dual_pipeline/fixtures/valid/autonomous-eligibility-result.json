@@ -1,0 +1,33 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:autonomous-eligibility-result:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "autonomous-eligibility-result-fixture-01",
+  "terminal_result": "RESOLVED_AUTONOMOUSLY",
+  "is_eligible": true,
+  "selected_option_id": "opt_01",
+  "selected_option": {
+    "option_id": "opt_01",
+    "description": "Autonomous fast path",
+    "confidence": 0.95
+  },
+  "margin": 0.45,
+  "entropy": 0.25,
+  "top_confidence": 0.95,
+  "second_confidence": 0.5,
+  "reason_codes": [
+    "MARGIN_EXCEEDS_THRESHOLD"
+  ],
+  "reasons": [
+    "Top confidence exceeds margin floor."
+  ],
+  "policy_snapshot": {
+    "snapshot_id": "snap_001"
+  },
+  "evaluated_at_iso": "2026-10-07T12:00:00Z",
+  "extensions": {},
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "46db150c902fd7f5922ef037ad5f69d9b258a271cb82b189d602c30c73803965"
+  }
+}

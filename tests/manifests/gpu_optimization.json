@@ -1,0 +1,22 @@
+{
+  "name": "gpu_optimization",
+  "description": "GPU optimization, trustworthy execution, and vector decoding test suite",
+  "branch": "docs/gpu-optimization-debate-plan-20261006",
+  "deterministic_tests": [],
+  "e2e_tests": [
+    "tests.end_to_end.test_gpu_wave1_e2e",
+    "tests.adversarial.test_gpu_wave1_adversarial",
+    "tests.end_to_end.test_gpu_wave2_e2e",
+    "tests.adversarial.test_gpu_wave2_adversarial",
+    "tests.end_to_end.test_gpu_wave3_e2e",
+    "tests.adversarial.test_gpu_wave3_adversarial",
+    "tests.end_to_end.test_gpu_wave4_e2e",
+    "tests.adversarial.test_gpu_wave4_adversarial",
+    "tests.end_to_end.test_gpu_wave5_e2e",
+    "tests.adversarial.test_gpu_wave5_adversarial",
+    "tests.end_to_end.test_gpu_wave6_e2e",
+    "tests.adversarial.test_gpu_wave6_adversarial"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-06T20:00:00Z"
+}

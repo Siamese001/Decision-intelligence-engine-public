@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:active-ingestion-approval-request:1.0.0",
+  "title": "Active Ingestion Approval Request Record",
+  "description": "Scoped approval request artifact presented to human operator before candidate publication or canonical promotion.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "request_id",
+    "run_id",
+    "directive_id",
+    "runtime_root",
+    "project",
+    "namespace",
+    "source_package_digest",
+    "proposed_delta_digest",
+    "baseline_generation",
+    "permitted_operation_class",
+    "expires_at",
+    "dispatch_status",
+    "response_status",
+    "question_payload",
+    "authentic_response",
+    "extensions",
+    "canonical_digest"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:active-ingestion-approval-request:1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "artifact_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "request_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "run_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "directive_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "runtime_root": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "namespace": {
+      "type": "string"
+    },
+    "source_package_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"
+    },
+    "proposed_delta_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"
+    },
+    "baseline_generation": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "permitted_operation_class": {
+      "type": "string",
+      "enum": [
+        "candidate_publication",
+        "canonical_promotion"
+      ]
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dispatch_status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "DISPATCHED",
+        "FAILED",
+        "EXPIRED"
+      ]
+    },
+    "response_status": {
+      "type": "string",
+      "enum": [
+        "AWAITING",
+        "APPROVED",
+        "DECLINED",
+        "EXPIRED",
+        "CANCELLED"
+      ]
+    },
+    "question_payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "question_id",
+        "title",
+        "context",
+        "table_deltas",
+        "options"
+      ],
+      "properties": {
+        "question_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "context": {
+          "type": "string"
+        },
+        "table_deltas": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        },
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "option_id",
+              "label",
+              "confidence_tier",
+              "confidence_score",
+              "is_recommended",
+              "action"
+            ],
+            "properties": {
+              "option_id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "confidence_tier": {
+                "type": "string",
+                "enum": ["HIGH", "MEDIUM", "LOW"]
+              },
+              "confidence_score": {
+                "type": "number",
+                "minimum": 0.0,
+                "maximum": 1.0
+              },
+              "is_recommended": {
+                "type": "boolean"
+              },
+              "action": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "authentic_response": {
+      "type": ["object", "null"]
+    },
+    "extensions": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"
+    },
+    "canonical_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:authorization-ref:1.0.0",
+  "authorization_id": "auth-wave7-20261006-001",
+  "operator_identity": "human_operator",
+  "approval_origin": "human_operator",
+  "qualification_manifest_digest": "a0ed33524ec29e841d6fbd7d8d34cc09449e0f9d916f9db3cef1881bed98da67",
+  "approved_scope": "candidate_publication",
+  "runtime_root": "dual_pipeline/retrieval",
+  "granted_at": "2026-10-06T12:00:00Z",
+  "valid_until": "2026-10-07T12:00:00Z",
+  "status": "AUTHORIZED",
+  "notes": "Wave 7 authentic scoped authorization granted by operator for candidate publication recovery.",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "ad1f5572ca7da0d8705d9f9360097d1bbe49833e635bee4eed360570e0b90052"
+  }
+}

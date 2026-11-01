@@ -1,0 +1,32 @@
+{
+  "name": "retrieval_calibration",
+  "description": "BGE-M3 and QRELS retrieval calibration, metric SSOT, and consumer alignment test suite",
+  "branch": "feat/retrieval-calibration",
+  "deterministic_tests": [
+    "tests.property.test_retrieval_metrics_properties",
+    "tests.unit.test_retrieval_metric_ssot_consolidation",
+    "tests.unit.test_retrieval_ground_truth_w2",
+    "tests.unit.test_retrieval_paired_experiments_w3",
+    "tests.property.test_calibration_invariants",
+    "tests.unit.test_retrieval_decision_calibration_w4",
+    "tests.unit.test_retrieval_falsification_w5",
+    "tests.unit.test_retrieval_prospective_validation_w6"
+  ],
+  "e2e_tests": [
+    "tests.adversarial.test_retrieval_calibration_w1_adversarial",
+    "tests.end_to_end.test_retrieval_calibration_w1_e2e",
+    "tests.adversarial.test_retrieval_ground_truth_w2_adversarial",
+    "tests.end_to_end.test_retrieval_ground_truth_w2_e2e",
+    "tests.adversarial.test_retrieval_paired_experiments_w3_adversarial",
+    "tests.end_to_end.test_retrieval_paired_experiments_w3_e2e",
+    "tests.adversarial.test_retrieval_decision_calibration_w4_adversarial",
+    "tests.end_to_end.test_retrieval_decision_calibration_w4_e2e",
+    "tests.adversarial.test_retrieval_falsification_w5_adversarial",
+    "tests.end_to_end.test_retrieval_falsification_w5_e2e",
+    "tests.end_to_end.test_retrieval_11gates_and_holdout_e2e",
+    "tests.adversarial.test_retrieval_prospective_validation_w6_adversarial",
+    "tests.end_to_end.test_retrieval_prospective_validation_w6_e2e"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-18T14:15:00Z"
+}

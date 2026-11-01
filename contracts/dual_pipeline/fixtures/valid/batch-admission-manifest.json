@@ -1,0 +1,41 @@
+{
+  "artifact_id": "batch-admission-markdown-candidate",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "8a0377623b29e3d471ee0db5e37a46997a1156411890f315fd75d8e1636a088a"
+  },
+  "contract_id": "urn:nee:dual-pipeline:batch-admission-manifest:1.0.0",
+  "created_at": "2026-07-26T20:30:00Z",
+  "extensions": {},
+  "packages": [
+    {
+      "artifact_id": "markdown-source-protocol-guidance",
+      "audiences": [
+        "internal_consulting"
+      ],
+      "classification": "internal",
+      "contract_id": "urn:nee:dual-pipeline:markdown-source-intake:1.0.0",
+      "package_file_sha256": "ab7726755ec6f1ec4a6671e8e54974d3267d049be9ce4ee3993dc8c8e3d7b817",
+      "source_kind": "markdown_source",
+      "source_location": "controlled/examples/protocol-guidance.md",
+      "source_posture": "derivative_internal"
+    }
+  ],
+  "policy": {
+    "admission_mode": "HITL_REQUIRED",
+    "audiences": [
+      "internal_consulting"
+    ],
+    "candidate_only": true,
+    "classification": "internal",
+    "max_package_count": 1000,
+    "permitted_source_location_prefixes": [],
+    "permitted_source_postures": [
+      "derivative_internal"
+    ],
+    "policy_id": "nee-internal-candidate-batch",
+    "policy_version": "1.0.0"
+  },
+  "schema_version": "1.0.0"
+}

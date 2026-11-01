@@ -1,0 +1,34 @@
+{
+  "alias": {
+    "canonical_rows_sha256": "5e280928cd8034bc585290fc017d8810820d19a4412b5775f808acb5371fdc0f",
+    "row_count": 393
+  },
+  "card": {
+    "canonical_rows_sha256": "53af8221c20875fd01f10caf53e0e05426747e1be13bb7c831b541365e2c9c04",
+    "row_count": 19
+  },
+  "claim": {
+    "canonical_rows_sha256": "8531078cf0ba51758f1a7364582bc06e644b7ac2947d17fadd7484390657864e",
+    "row_count": 520
+  },
+  "edge": {
+    "canonical_rows_sha256": "c226ed1f4833fad016e02aac393342cd2286cd8b2c330a7dfcbf170bd50e0068",
+    "row_count": 1026
+  },
+  "node": {
+    "canonical_rows_sha256": "e5f77827e9793519f9f627498a42b36d0be4482bbd8b23abc9b82197ead65954",
+    "row_count": 632
+  },
+  "node_card_map": {
+    "canonical_rows_sha256": "1848ba561c335482b31f1d645fe5587c0843db44dc7a2d7d6f6b848fbd9dced7",
+    "row_count": 1566
+  },
+  "source": {
+    "canonical_rows_sha256": "2d4ccbac0da5bdf57ae25164d85183b7d8f9600ba68a43f5e338f84ddfb08124",
+    "row_count": 147
+  },
+  "validation_queue": {
+    "canonical_rows_sha256": "c7ca99bec42578a069633e4ece30729d77e410125ccc03ffd595af52a1be29dc",
+    "row_count": 173
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "feat_pr_healing_judge_retry_simplification",
+  "description": "8-wave PR rebase, tree-OID attestation, lossless structural normalizer, U0/L1/Pydantic, prompt SSOT, judge consolidation, unified retry ledger, and UWG/governance gate tests",
+  "branch": "feat/pr-healing-judge-retry-simplification",
+  "deterministic_tests": [
+    "tests.test_pr_governance_merge_queue",
+    "tests.test_pr_governance_tree_oid_receipts_adversarial",
+    "tests.test_lossless_structural_normalizer_adversarial",
+    "tests.test_u0_l1_pydantic_fail_closed_adversarial",
+    "tests.test_judge_pipeline_consolidation_adversarial",
+    "tests.test_release_uwg_and_governance_gates_adversarial"
+  ],
+  "e2e_tests": [
+    "tests.test_pr_governance_unified_rebase_e2e",
+    "tests.test_prompt_ssot_deduplication_e2e",
+    "tests.test_unified_retry_ledger_e2e"
+  ],
+  "bge_tests": [],
+  "created_at": "2026-10-28T23:45:00Z"
+}

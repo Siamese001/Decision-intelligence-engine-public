@@ -1,0 +1,136 @@
+{
+  "benchmark_suite": "nea_org_chart_retrieval_benchmark_v1",
+  "domain": "people_and_organization",
+  "target_backend": "flagembedding-bge-m3-dev",
+  "queries": [
+    {
+      "query_id": "q01-scott-herold-manager",
+      "query": "Who does Scott Herold report to?",
+      "expected_target_ids": [
+        "person:rianne-donst"
+      ],
+      "expected_target_names": [
+        "Rianne Donst"
+      ],
+      "query_type": "hierarchical_single_hop",
+      "max_hops": 1
+    },
+    {
+      "query_id": "q02-nea-president",
+      "query": "Who is the President of Apex Global Analytics (NEA)?",
+      "expected_target_ids": [
+        "person:richard-argentieri"
+      ],
+      "expected_target_names": [
+        "Richard Argentieri"
+      ],
+      "query_type": "root_leadership",
+      "max_hops": 2
+    },
+    {
+      "query_id": "q03-scott-herold-chain-to-president",
+      "query": "What is the reporting chain from Scott Herold to Richard Argentieri?",
+      "expected_target_ids": [
+        "person:rianne-donst",
+        "person:chakra-sankaraiah",
+        "person:richard-argentieri"
+      ],
+      "expected_target_names": [
+        "Rianne Donst",
+        "Chakra Sankaraiah",
+        "Richard Argentieri"
+      ],
+      "query_type": "hierarchical_multi_hop",
+      "max_hops": 3
+    },
+    {
+      "query_id": "q04-jennifer-belger-management",
+      "query": "Who does Jennifer Belger report to in Operational Excellence?",
+      "expected_target_ids": [
+        "person:javid-khan"
+      ],
+      "expected_target_names": [
+        "Javid Khan"
+      ],
+      "query_type": "hierarchical_single_hop",
+      "max_hops": 1
+    },
+    {
+      "query_id": "q05-pgd-tech-services-leadership",
+      "query": "Who leads PGD Technical Services?",
+      "expected_target_ids": [
+        "person:kk-venkataraman"
+      ],
+      "expected_target_names": [
+        "KK Venkataraman"
+      ],
+      "query_type": "org_leadership",
+      "max_hops": 1
+    },
+    {
+      "query_id": "q06-eric-haskell-pgd-subordinates",
+      "query": "Who reports to Eric Haskell in PGD Tech Services?",
+      "expected_target_ids": [
+        "person:delia-conrado",
+        "person:cody-johnson"
+      ],
+      "expected_target_names": [
+        "Delia Conrado",
+        "Cody Johnson"
+      ],
+      "query_type": "downward_subordinates",
+      "max_hops": 1
+    },
+    {
+      "query_id": "q07-apm-carlos-sanchez",
+      "query": "What systems does Carlos E Sanchez govern as Application Portfolio Manager?",
+      "expected_target_ids": [
+        "person:carlos-e-sanchez",
+        "role:application-portfolio-manager"
+      ],
+      "expected_target_names": [
+        "Carlos E Sanchez"
+      ],
+      "query_type": "portfolio_governance",
+      "max_hops": 1
+    },
+    {
+      "query_id": "q08-apm-ben-miron",
+      "query": "Who is the APM for Generation Analytics and Trading systems?",
+      "expected_target_ids": [
+        "person:ben-miron",
+        "person:josh-millar"
+      ],
+      "expected_target_names": [
+        "Ben Miron",
+        "logan Miller"
+      ],
+      "query_type": "portfolio_governance",
+      "max_hops": 1
+    },
+    {
+      "query_id": "q09-jack-oshea-reporting",
+      "query": "Who does Jack O'Shea report to at Apex Global Analytics?",
+      "expected_target_ids": [
+        "person:tj-kudalis"
+      ],
+      "expected_target_names": [
+        "TJ Kudalis"
+      ],
+      "query_type": "hierarchical_single_hop",
+      "max_hops": 1
+    },
+    {
+      "query_id": "q10-lens-chief-architect",
+      "query": "Who is the Chief Architect for Project LENS?",
+      "expected_target_ids": [
+        "person:brett-gavagni"
+      ],
+      "expected_target_names": [
+        "Brett Gavagni"
+      ],
+      "query_type": "role_leadership",
+      "max_hops": 1
+    }
+  ]
+}

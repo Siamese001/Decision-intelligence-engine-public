@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "project": "project_lens",
+  "contract_name": "LENS Phase 1 SOW",
+  "updated_at": "2026-10-13T00:00:00Z",
+  "milestones": {
+    "M1": {
+      "id": "M1",
+      "canonical_name": "Milestone 1",
+      "metric_name": "Extraction Accuracy",
+      "target_threshold": 0.90,
+      "confidence_gate": 0.85,
+      "denominator_description": "Accepted nameplate assets with readable text",
+      "definition": "Percentage of accepted assets where target data fields (model, serial, manufacturer, etc.) are correctly extracted. High-confidence predictions must be accurate >= 85% of the time.",
+      "prohibited_conflation": "DO NOT label OCR accuracy as M1. Technical execution order (running OCR before extraction) does not make OCR Milestone 1."
+    },
+    "M2": {
+      "id": "M2",
+      "canonical_name": "Milestone 2",
+      "metric_name": "OCR Accuracy",
+      "target_threshold": 0.90,
+      "condition": "known nameplate type with an active rule",
+      "denominator_description": "Processable nameplates with active rules",
+      "definition": "Percentage of processable nameplates on known asset types with an active rule where OCR correctly recognizes nameplate text.",
+      "prohibited_conflation": "DO NOT label Extraction accuracy as M2."
+    }
+  }
+}

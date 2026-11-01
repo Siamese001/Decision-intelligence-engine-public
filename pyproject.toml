@@ -1,0 +1,139 @@
+[build-system]
+requires = ["setuptools==81.0.0", "wheel==0.47.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nee-decision-intelligence"
+version = "0.1.0"
+description = "Hybrid NEE decision intelligence over governed graph and retrieval evidence"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "anthropic>=1.4.0",
+  "boto3==1.43.48",
+  "cryptography==49.0.0",
+  "diskcache>=5.6.3",
+  "FlagEmbedding==1.4.0",
+  "google-antigravity>=0.1.0",
+  "google-genai>=2.22.0",
+  "huggingface-hub==1.24.0",
+  "imageio-ffmpeg>=0.5.0",
+  "mcp>=2.2.0",
+  "mcp-server-fetch>=2026.10.28",
+  "msgspec>=0.22.0",
+  "numpy==2.5.1",
+  "openai>=1.14.0",
+  "pyannote-audio==3.3.2",
+  "pydantic>=2.0.0",
+  "pypdf==6.14.2",
+  "python-dotenv>=1.0.0",
+  "rank-bm25>=0.2.2",
+  "rapidfuzz>=3.14.0",
+  "safetensors==0.8.0",
+  "sentencepiece==0.2.2",
+  "torch==2.11.0+cpu",
+  "transformers==5.14.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pip-tools==7.6.0",
+  "pytest==9.0.2",
+  "pytest-timeout>=2.3",
+  "ruff==0.15.22",
+  "uv==0.11.31",
+]
+spark = [
+  "google-cloud-dataproc>=5.0.0",
+  "google-cloud-spark-connect>=1.0.0",
+]
+
+[project.scripts]
+nee = "dual_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dual_pipeline*", "unified_pipeline*"]
+
+[tool.setuptools.package-data]
+"dual_pipeline.resources" = ["*.json"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [
+  "approvals",
+  "backups",
+  "exports",
+  "governance",
+  "reports",
+  "rollback",
+  "archive",
+  "Figma",
+  "migrations",
+  ".agents",
+  "evals",
+  "ui",
+  "retrieval_tests",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "SIM", "C90", "TID"]
+ignore = [
+  "E501", "E402", "E701", "E702", "SIM102", "SIM105", "SIM115", "SIM117",
+  "W291", "W293", "B905", "B007", "B904", "B017", "B023", "B018", "E741",
+  "SIM103", "SIM108", "SIM118", "SIM110", "SIM113", "SIM210", "E731", "F811",
+  "F822", "F403", "F401", "F821", "F841", "F405", "C901", "I001", "TID252",
+]
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"sqlite3.connect" = { msg = "Direct sqlite3.connect is prohibited outside storage/. Use storage.connection or storage.database." }
+
+[tool.ruff.lint.per-file-ignores]
+"storage/**" = ["TID251"]
+"database/**" = ["TID251"]
+"dual_pipeline/storage/**" = ["TID251"]
+"dual_pipeline/l0/wal_evidence.py" = ["TID251"]
+"dual_pipeline/core.py" = ["TID251"]
+"dual_pipeline/semantic_cache_core/cache.py" = ["TID251"]
+"dual_pipeline/evals/sandbox/environment.py" = ["TID251"]
+"tests/**" = ["TID251"]
+"tools/**" = ["TID251"]
+"scripts/**" = ["TID251"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 15
+
+
+[tool.nee.budgets]
+max_file_lines = 400
+warning_file_lines_standard = 650
+warning_file_lines_declarative = 800
+max_cyclomatic_complexity = 15
+hitl_ambiguity_margin_threshold = 0.20
+hitl_unresolved_entity_margin_threshold = 0.15
+hitl_divergence_margin_threshold = 0.20
+agents_md_max_bytes = 12288
+min_e2e_coverage_score = 80.0
+
+[tool.pytest.ini_options]
+# Hard per-test timeout — prevents any single test from hanging indefinitely.
+# Enforces the pytest run governance protocol (wave-progression.md).
+# Defaults to POSIX signal preemption on Linux/Darwin to interrupt native/GIL execution.
+timeout = 60
+testpaths = ["tests"]
+markers = [
+  "unit: pure, isolated, provider-free unit tests with mock boundaries",
+  "integration: cross-subsystem, storage, concurrency, and inter-process tests",
+  "e2e: end-to-end pipeline lifecycle and multi-agent workflow tests",
+  "governance: machine-enforced invariant shields and compliance gates",
+  "benchmark: latency, performance budgets, and memory stability soak tests",
+  "heavy_model: tests that load heavy neural models (e.g. BGE-M3, Whisper) and require process/scope isolation",
+  "storage_stress: high concurrency and stress tests for storage engines",
+  "audio_soak: audio processing and streaming soak tests",
+  "adversarial: red-team adversarial inputs, security boundaries, and edge cases",
+  "property: property-based generative testing (Hypothesis) for boundary and overflow invariants",
+]
+
+[tool.mutmut]
+source_paths = ["dual_pipeline/agent_architecture_core"]
+

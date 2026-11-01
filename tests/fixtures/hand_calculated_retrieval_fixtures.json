@@ -1,0 +1,129 @@
+{
+  "description": "Hand-calculated verification fixtures for Wave 1 standard IR metric evaluation",
+  "generated_at": "2026-10-06T20:00:00Z",
+  "fixtures": {
+    "rank_10_improvement_anomaly": {
+      "retrieved_state_1": ["doc_A", "doc_B", "doc_C", "doc_D", "doc_E", "doc_F", "doc_G", "doc_H", "doc_I", "doc_J"],
+      "retrieved_state_2": ["doc_A", "doc_B", "doc_C", "doc_D", "doc_E", "doc_F", "doc_G", "doc_H", "doc_I", "doc_J"],
+      "judgments_state_1": {
+        "doc_truth": 2,
+        "doc_A": 1,
+        "doc_B": 0,
+        "doc_C": 0,
+        "doc_D": 0,
+        "doc_E": 0,
+        "doc_F": 0,
+        "doc_G": 0,
+        "doc_H": 0,
+        "doc_I": 0,
+        "doc_J": 0
+      },
+      "judgments_state_2": {
+        "doc_truth": 2,
+        "doc_A": 1,
+        "doc_B": 0,
+        "doc_C": 0,
+        "doc_D": 0,
+        "doc_E": 0,
+        "doc_F": 0,
+        "doc_G": 0,
+        "doc_H": 0,
+        "doc_I": 0,
+        "doc_J": 2
+      },
+      "expected": {
+        "state_1_rr_threshold_1": 1.0,
+        "state_1_rr_threshold_2": 0.0,
+        "state_2_rr_threshold_1": 1.0,
+        "state_2_rr_threshold_2": 0.1,
+        "monotonic_threshold_1": true,
+        "monotonic_threshold_2": true
+      }
+    },
+    "graded_ndcg_fixed_query_judgments": {
+      "ground_truth_query_judgments": {
+        "doc_1": 2,
+        "doc_2": 2,
+        "doc_3": 1,
+        "doc_4": 1
+      },
+      "top_k": 4,
+      "gain_mapping": "exponential",
+      "hand_calculated_ideal_dcg_4": 5.823465818787765,
+      "candidate_ranking_perfect": ["doc_1", "doc_2", "doc_3", "doc_4"],
+      "expected_ndcg_perfect": 1.0,
+      "candidate_ranking_missing_positives": ["doc_3", "doc_4", "doc_irr_1", "doc_irr_2"],
+      "hand_calculated_dcg_missing_positives": 1.6309297535714574,
+      "expected_ndcg_missing_positives": 0.28006170341774353
+    },
+    "duplicate_ids_validation": {
+      "candidate_ranking_with_duplicates": ["doc_1", "doc_1", "doc_2"],
+      "query_judgments": {
+        "doc_1": 2,
+        "doc_2": 1
+      },
+      "expected_error": "Duplicate record IDs detected in retrieved ranking"
+    },
+    "no_answer_query_isolation": {
+      "positive_case": {
+        "retrieved": ["doc_pos"],
+        "expected_record_ids": ["doc_pos"],
+        "candidate_reciprocal_rank": 1.0,
+        "candidate_ndcg_at_k": 1.0,
+        "candidate_recall_at_k": 1.0
+      },
+      "no_answer_case": {
+        "retrieved": [],
+        "expected_record_ids": [],
+        "candidate_reciprocal_rank": null,
+        "candidate_ndcg_at_k": null,
+        "candidate_recall_at_k": null,
+        "candidate_first_relevant_rank": null,
+        "forbidden_leakage": []
+      },
+      "expected_aggregate": {
+        "case_count": 2,
+        "positive_case_count": 1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "no_answer_case_count": 1,
+        "no_answer_rejection_rate": 1.0
+      }
+    },
+    "empty_dataset_rejection": {
+      "cases": [],
+      "expected_aggregate": {
+        "case_count": 0,
+        "positive_case_count": 0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "no_answer_case_count": 0,
+        "no_answer_rejection_rate": 0.0,
+        "status": "FAIL_EMPTY_DATASET"
+      }
+    },
+    "linear_gain_mapping": {
+      "query_judgments": {
+        "doc_1": 2,
+        "doc_2": 1
+      },
+      "top_k": 2,
+      "candidate_ranking": ["doc_2", "doc_1"],
+      "hand_calculated_ideal_dcg": 2.6309297535714574,
+      "hand_calculated_actual_dcg": 2.261859507142915,
+      "expected_ndcg": 0.8597186985072044
+    },
+    "unjudged_items_zero_gain": {
+      "query_judgments": {
+        "doc_1": 2
+      },
+      "top_k": 2,
+      "candidate_ranking": ["doc_unjudged", "doc_1"],
+      "hand_calculated_ideal_dcg": 3.0,
+      "hand_calculated_actual_dcg": 1.8927892607143721,
+      "expected_ndcg": 0.6309297535714574
+    }
+  }
+}

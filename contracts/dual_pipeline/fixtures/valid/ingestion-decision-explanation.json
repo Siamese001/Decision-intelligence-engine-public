@@ -1,0 +1,94 @@
+{
+  "artifact_id": "ingestion-explanation-fixture",
+  "authority": "derived_explanation_only",
+  "bindings": {
+    "graph_delta_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+    "graph_delta_path": "graph_delta_summary.json",
+    "graph_sha256_before": "4444444444444444444444444444444444444444444444444444444444444444",
+    "technical_ledger_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+    "technical_ledger_path": "ingestion_decision_ledger.json",
+    "technical_ledger_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "425db07e57ba64f4a675a4f9b17180a513f67769d6831fca39df063cf9ce49cb"
+  },
+  "contract_id": "urn:nee:dual-pipeline:ingestion-decision-explanation:1.0.0",
+  "decision_groups": [
+    {
+      "affected_source_locations": [
+        {
+          "kind": "section",
+          "value": "Fixture section"
+        }
+      ],
+      "candidate_ids": [
+        "candidate-fixture"
+      ],
+      "checks_passed": [
+        "source evidence is present"
+      ],
+      "declared_node_type": "program",
+      "exact_identity_explanation": "No exact existing identity was found.",
+      "exact_identity_found": false,
+      "graph_effect": "No graph operation is proposed before review.",
+      "group_id": "identity-decision-group-fixture",
+      "missing_information": [
+        "the grouped human review decision"
+      ],
+      "new_node_explanation": "The declared program type is active and the source identifier is present.",
+      "new_node_recommended": true,
+      "pipeline_recognition": "No exact identity was found; one candidate node is proposed.",
+      "possible_duplicates": [],
+      "proposal_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+      "reported_label": "Fixture Program",
+      "reviewer_choices": [
+        {
+          "available": false,
+          "decision": "CONFIRM",
+          "effect": "No graph operation.",
+          "reason": "No exact existing identity was selected."
+        },
+        {
+          "available": true,
+          "decision": "CREATE_NEW",
+          "effect": "Propose one candidate entity after review.",
+          "reason": "The exact proposal digest is available."
+        },
+        {
+          "available": true,
+          "decision": "HOLD",
+          "effect": "No graph operation.",
+          "reason": "Retain review evidence."
+        },
+        {
+          "available": true,
+          "decision": "REJECT",
+          "effect": "No graph operation.",
+          "reason": "Reject the source candidate."
+        }
+      ],
+      "technical_resolution_ids": [
+        "entity-resolution-fixture"
+      ]
+    }
+  ],
+  "explanation_id": "ingestion-explanation-fixture",
+  "extensions": {},
+  "mutation_authority": false,
+  "run_id": "run-intake-fixture",
+  "schema_version": "1.0.0",
+  "source_id": "source-fixture",
+  "source_version_id": "source-version-fixture",
+  "summary": {
+    "candidate_count": 1,
+    "decision_group_count": 1,
+    "exact_link_count": 0,
+    "proposed_graph_operation_count": 0,
+    "proposed_new_node_count": 1,
+    "review_required_count": 1,
+    "source_only_count": 0
+  },
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Frozen engagement graph fixtures, negative controls, and unresolved narrative markers for Copilot engagement isolation",
+  "frozen_at": "2026-10-07T15:30:00Z",
+  "isolated_graph": {
+    "nodes": {
+      "project:jarvis": {
+        "canonical_name": "JARVIS",
+        "node_type": "project",
+        "engagement_id": "project:jarvis"
+      },
+      "project:lens": {
+        "canonical_name": "LENS",
+        "node_type": "project",
+        "engagement_id": "project:lens"
+      },
+      "project:solar": {
+        "canonical_name": "Solar Telemetry",
+        "node_type": "project",
+        "engagement_id": "project:solar"
+      },
+      "person:mitch": {
+        "canonical_name": "Alex Rivera",
+        "node_type": "person",
+        "engagement_id": "project:jarvis",
+        "aliases": [
+          "Mitch"
+        ]
+      },
+      "person:shared": {
+        "canonical_name": "Shared Engineer",
+        "node_type": "person",
+        "engagement_id": "cross_engagement"
+      },
+      "person:alex": {
+        "canonical_name": "Alex",
+        "node_type": "person",
+        "engagement_id": "project:lens"
+      },
+      "system:jira": {
+        "canonical_name": "JIRA",
+        "node_type": "system",
+        "engagement_id": "project:lens"
+      },
+      "feature:spatial_upload": {
+        "canonical_name": "Spatial File Upload",
+        "node_type": "feature",
+        "engagement_id": "project:lens"
+      },
+      "tech:metal": {
+        "canonical_name": "Apple Silicon Metal",
+        "node_type": "technology",
+        "engagement_id": "project:jarvis"
+      },
+      "tech:sso": {
+        "canonical_name": "Single Sign-On",
+        "node_type": "capability",
+        "engagement_id": "project:lens"
+      },
+      "meeting:lens_0925": {
+        "canonical_name": "20260925 Google PartnerAdvisory apex_global Lens",
+        "node_type": "meeting",
+        "engagement_id": "project:lens"
+      }
+    },
+    "assertions": {
+      "assertion-jarvis-1": {
+        "assertion_id": "assertion-jarvis-1",
+        "subject_node_id": "project:jarvis",
+        "predicate": "EXECUTES_ON",
+        "object_node_id": "tech:metal",
+        "claim_text": "JARVIS executes local meeting transcription on Apple Silicon Metal.",
+        "project_scope": "JARVIS",
+        "engagement_id": "project:jarvis"
+      },
+      "assertion-jarvis-2": {
+        "assertion_id": "assertion-jarvis-2",
+        "subject_node_id": "person:mitch",
+        "predicate": "DISCUSSED",
+        "object_node_id": "project:jarvis",
+        "claim_text": "Mitch reviewed real-time audio capture constraints for Engineering Jarvis.",
+        "project_scope": "JARVIS",
+        "engagement_id": "project:jarvis"
+      },
+      "assertion-b7cd2f78b3a1c4995bd4cfb1ee31": {
+        "assertion_id": "assertion-b7cd2f78b3a1c4995bd4cfb1ee31",
+        "subject_node_id": "feature:spatial_upload",
+        "predicate": "DEPENDS_ON",
+        "object_node_id": "system:jira",
+        "claim_text": "Spatial File Upload depends on JIRA.",
+        "project_scope": "LENS",
+        "engagement_id": "project:lens"
+      },
+      "assertion-a2a1b8a5ac993f9c52beccaba9ea": {
+        "assertion_id": "assertion-a2a1b8a5ac993f9c52beccaba9ea",
+        "subject_node_id": "project:lens",
+        "predicate": "DEPENDS_ON",
+        "object_node_id": "tech:sso",
+        "claim_text": "Nexus Jarvis depends on Single Sign-On.",
+        "project_scope": "LENS",
+        "engagement_id": "project:lens"
+      },
+      "assertion-6edba0488c78801f0085e8dfb268": {
+        "assertion_id": "assertion-6edba0488c78801f0085e8dfb268",
+        "subject_node_id": "project:lens",
+        "predicate": "DISCUSSED_IN",
+        "object_node_id": "meeting:lens_0925",
+        "claim_text": "Nexus Jarvis is an identified technical_anchor in 20260925 Google PartnerAdvisory apex_global Lens on 2026-09-25.",
+        "project_scope": "LENS",
+        "engagement_id": "project:lens"
+      },
+      "assertion-shared-1": {
+        "assertion_id": "assertion-shared-1",
+        "subject_node_id": "person:shared",
+        "predicate": "WORKS_ON",
+        "object_node_id": "project:lens",
+        "claim_text": "Shared Engineer works on LENS Phase II schemas.",
+        "project_scope": "LENS",
+        "engagement_id": "project:lens"
+      },
+      "assertion-solar-1": {
+        "assertion_id": "assertion-solar-1",
+        "subject_node_id": "project:solar",
+        "predicate": "MONITORS",
+        "object_node_id": "tech:inverter",
+        "claim_text": "Solar Telemetry monitors commercial inverter voltage.",
+        "project_scope": "SOLAR",
+        "engagement_id": "project:solar"
+      }
+    },
+    "forward_adjacency": {
+      "project:jarvis": [
+        "assertion-jarvis-1"
+      ],
+      "person:mitch": [
+        "assertion-jarvis-2"
+      ],
+      "feature:spatial_upload": [
+        "assertion-b7cd2f78b3a1c4995bd4cfb1ee31"
+      ],
+      "project:lens": [
+        "assertion-a2a1b8a5ac993f9c52beccaba9ea",
+        "assertion-6edba0488c78801f0085e8dfb268"
+      ],
+      "person:shared": [
+        "assertion-shared-1"
+      ],
+      "project:solar": [
+        "assertion-solar-1"
+      ]
+    }
+  },
+  "negative_controls": {
+    "renamed_engagements": [
+      {
+        "original": "JARVIS",
+        "renamed": "PartnerAdvisory_Jarvis_Core",
+        "canonical_id": "project:jarvis"
+      },
+      {
+        "original": "LENS",
+        "renamed": "Project_Lens_Analytics",
+        "canonical_id": "project:lens"
+      }
+    ],
+    "unrelated_engagements": [
+      {
+        "canonical_id": "project:solar",
+        "display_name": "Solar Telemetry"
+      }
+    ]
+  },
+  "unresolved_historical_narratives": {
+    "missing_three_issue_narrative": {
+      "pasted_text_excerpt": "At Apex Global, SecOps review and enterprise identity provisioning typically have a 2-week turnaround... Spatial File Upload depends on JIRA...",
+      "binding_status": "UNRESOLVED_HISTORICAL_ATTRIBUTION",
+      "reason": "Exact pasted prose absent from eight snapshotted JSONL records in Engineering_Jarvis_Kaleena_PartnerAdvisory. Invocation route and rendered paragraph remain unbound.",
+      "missing_historical_binding": true
+    }
+  }
+}

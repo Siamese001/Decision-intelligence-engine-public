@@ -1,0 +1,274 @@
+{
+  "$id": "urn:nee:dual-pipeline:query-retrieval-attempt:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "action_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "action_type": {
+      "enum": [
+        "requirement_hybrid_retrieval",
+        "stop"
+      ]
+    },
+    "active_pair": {
+      "additionalProperties": false,
+      "properties": {
+        "backend": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "generation_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "graph_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "model_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sidecar_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "generation_id",
+        "graph_sha256",
+        "sidecar_sha256",
+        "backend",
+        "model_id",
+        "model_revision"
+      ],
+      "type": "object"
+    },
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "attempt_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "attempt_ordinal": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "authorization_scope_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "budget_after": {
+      "additionalProperties": false,
+      "properties": {
+        "actions_used": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "bytes_used": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "elapsed_ms": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "records_used": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "actions_used",
+        "records_used",
+        "bytes_used",
+        "elapsed_ms"
+      ],
+      "type": "object"
+    },
+    "budget_before": {
+      "additionalProperties": false,
+      "properties": {
+        "actions_used": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "bytes_used": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "elapsed_ms": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "records_used": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "actions_used",
+        "records_used",
+        "bytes_used",
+        "elapsed_ms"
+      ],
+      "type": "object"
+    },
+    "canonical_digest": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "scope": {
+          "const": "artifact_without_canonical_digest"
+        },
+        "value": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "scope",
+        "value"
+      ],
+      "type": "object"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:query-retrieval-attempt:1.0.0"
+    },
+    "coverage_manifest_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "graph_sha256_after": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "graph_sha256_before": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "input_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "parent_plan_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "provider_call_count": {
+      "const": 0,
+      "type": "integer"
+    },
+    "provider_initialization_count": {
+      "const": 0,
+      "type": "integer"
+    },
+    "requirement_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "result": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "elapsed_ms": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "provider_call_count": {
+          "const": 0,
+          "type": "integer"
+        },
+        "provider_initialization_count": {
+          "const": 0,
+          "type": "integer"
+        },
+        "record_ids_by_lane": {
+          "additionalProperties": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array",
+            "uniqueItems": true
+          },
+          "type": "object"
+        },
+        "result_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "completed",
+            "blocked",
+            "skipped"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "record_ids_by_lane",
+        "result_digest",
+        "elapsed_ms",
+        "bytes",
+        "provider_initialization_count",
+        "provider_call_count"
+      ],
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "extensions",
+    "attempt_id",
+    "parent_plan_digest",
+    "coverage_manifest_digest",
+    "attempt_ordinal",
+    "action_id",
+    "action_type",
+    "requirement_ids",
+    "authorization_scope_digest",
+    "active_pair",
+    "input_digest",
+    "budget_before",
+    "result",
+    "budget_after",
+    "graph_sha256_before",
+    "graph_sha256_after",
+    "provider_initialization_count",
+    "provider_call_count"
+  ],
+  "title": "Governed L1 retrieval attempt",
+  "type": "object"
+}

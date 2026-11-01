@@ -1,0 +1,7 @@
+{
+  "$id":"urn:nee:dual-pipeline:ingestion-l1-control-policy:1.0.0","$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+  "required":["contract_id","schema_version","artifact_id","canonical_digest","policy_id","mode","runtime_default","proposal_only","provider_calls_before_l2d","graph_mutations_before_l2d","extensions"],
+  "properties":{
+    "contract_id":{"const":"urn:nee:dual-pipeline:ingestion-l1-control-policy:1.0.0"},"schema_version":{"const":"1.0.0"},"artifact_id":{"$ref":"urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},"canonical_digest":{"$ref":"urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},"policy_id":{"$ref":"urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},"mode":{"const":"off"},"runtime_default":{"const":"off"},"proposal_only":{"const":true},"provider_calls_before_l2d":{"const":0},"graph_mutations_before_l2d":{"const":0},"extensions":{"$ref":"urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

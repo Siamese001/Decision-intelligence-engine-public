@@ -1,0 +1,535 @@
+{
+  "$id": "urn:nee:dual-pipeline:query-plan:3.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "properties": {
+        "allowed_provider_class": {
+          "const": null
+        },
+        "assurance_profile": {
+          "const": null
+        },
+        "destination": {
+          "const": "GRAPH_EVIDENCE_UTILITY"
+        },
+        "l2_policy": {
+          "const": "forbidden"
+        },
+        "maximum_challenger_calls": {
+          "const": 0
+        },
+        "maximum_judge_calls": {
+          "const": 0
+        },
+        "maximum_primary_calls": {
+          "const": 0
+        },
+        "maximum_repair_calls": {
+          "const": 0
+        },
+        "provider_egress_allowed": {
+          "const": false
+        },
+        "query_type": {
+          "enum": [
+            "exact_lookup",
+            "current_state_corroboration",
+            "project_status_current",
+            "project_status_history"
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "allowed_provider_class": {
+          "const": "openai"
+        },
+        "assurance_profile": {
+          "const": "standard"
+        },
+        "destination": {
+          "const": "NEE_DECISION_INTELLIGENCE"
+        },
+        "l2_policy": {
+          "const": "required"
+        },
+        "maximum_challenger_calls": {
+          "const": 0
+        },
+        "maximum_judge_calls": {
+          "const": 1
+        },
+        "maximum_primary_calls": {
+          "const": 1
+        },
+        "maximum_repair_calls": {
+          "const": 0
+        },
+        "query_type": {
+          "enum": [
+            "relationship_explanation",
+            "cross_workstream_synthesis",
+            "gap_risk_inconsistency",
+            "opportunity_nba",
+            "candidate_promotion_review"
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "allowed_provider_class": {
+          "const": "openai"
+        },
+        "assurance_profile": {
+          "const": "enhanced"
+        },
+        "destination": {
+          "const": "NEE_DECISION_INTELLIGENCE"
+        },
+        "l2_policy": {
+          "const": "required"
+        },
+        "maximum_challenger_calls": {
+          "const": 1
+        },
+        "maximum_judge_calls": {
+          "const": 2
+        },
+        "maximum_primary_calls": {
+          "const": 1
+        },
+        "maximum_repair_calls": {
+          "const": 1
+        },
+        "query_type": {
+          "enum": [
+            "relationship_explanation",
+            "cross_workstream_synthesis",
+            "gap_risk_inconsistency",
+            "opportunity_nba",
+            "candidate_promotion_review"
+          ]
+        }
+      }
+    }
+  ],
+  "properties": {
+    "allowed_lanes": {
+      "items": {
+        "enum": [
+          "approved",
+          "candidate",
+          "external_public"
+        ],
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "allowed_provider_class": {
+      "enum": [
+        "openai",
+        null
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "artifact_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "artifact_type": {
+      "enum": [
+        "answer",
+        "decision_brief",
+        "architecture_deck",
+        "commercial_case",
+        "evidence_export"
+      ],
+      "type": "string"
+    },
+    "assurance_profile": {
+      "enum": [
+        "standard",
+        "enhanced",
+        null
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "canonical_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"
+    },
+    "contract_id": {
+      "const": "urn:nee:dual-pipeline:query-plan:3.0.0"
+    },
+    "controller": {
+      "additionalProperties": false,
+      "properties": {
+        "action_allowlist": {
+          "items": {
+            "enum": [
+              "requirement_hybrid_retrieval",
+              "stop"
+            ]
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "aggregate_budget": {
+          "additionalProperties": false,
+          "properties": {
+            "max_actions": {
+              "maximum": 16,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "max_additional_attempts": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "max_elapsed_ms": {
+              "maximum": 300000,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "max_result_bytes": {
+              "maximum": 10000000,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "max_unique_records": {
+              "maximum": 500,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "max_additional_attempts",
+            "max_actions",
+            "max_unique_records",
+            "max_result_bytes",
+            "max_elapsed_ms"
+          ],
+          "type": "object"
+        },
+        "coverage_manifest_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "initial_action_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "mode": {
+          "enum": [
+            "off",
+            "shadow",
+            "bounded"
+          ]
+        },
+        "policy_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "progress_rule": {
+          "const": "newly_covered_material_requirements"
+        },
+        "terminal_predicates": {
+          "items": {
+            "enum": [
+              "coverage_complete",
+              "explicit_gap",
+              "no_progress",
+              "budget_exhausted",
+              "unauthorized",
+              "conflict",
+              "hitl_required",
+              "shadow"
+            ]
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "mode",
+        "policy_digest",
+        "coverage_manifest_digest",
+        "action_allowlist",
+        "aggregate_budget",
+        "progress_rule",
+        "initial_action_ids",
+        "terminal_predicates"
+      ],
+      "type": "object"
+    },
+    "delivery_profile": {
+      "enum": [
+        "internal_technical",
+        "internal_executive",
+        "client_technical",
+        "client_executive",
+        "commercial"
+      ],
+      "type": "string"
+    },
+    "destination": {
+      "enum": [
+        "GRAPH_EVIDENCE_UTILITY",
+        "NEE_DECISION_INTELLIGENCE"
+      ],
+      "type": "string"
+    },
+    "destination_decision_digest": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"
+    },
+    "evidence_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "exit_criteria": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "extensions": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"
+    },
+    "external_research": {
+      "enum": [
+        "denied",
+        "allowed_public_context",
+        "required_public_fact"
+      ],
+      "type": "string"
+    },
+    "l2_policy": {
+      "enum": [
+        "forbidden",
+        "required"
+      ],
+      "type": "string"
+    },
+    "l2_policy_reason": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "materiality": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/materiality"
+    },
+    "maximum_challenger_calls": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "maximum_judge_calls": {
+      "maximum": 2,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "maximum_primary_calls": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "maximum_repair_calls": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "output_schema": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "plan_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "primary_entities": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "prompt_blueprint": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "provider_egress_allowed": {
+      "type": "boolean"
+    },
+    "query_type": {
+      "enum": [
+        "exact_lookup",
+        "current_state_corroboration",
+        "project_status_current",
+        "project_status_history",
+        "relationship_explanation",
+        "cross_workstream_synthesis",
+        "gap_risk_inconsistency",
+        "opportunity_nba",
+        "candidate_promotion_review"
+      ],
+      "type": "string"
+    },
+    "relationships_to_inspect": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "request_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "required_output_schema": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "retrieval": {
+      "additionalProperties": false,
+      "properties": {
+        "bm25": {
+          "type": "boolean"
+        },
+        "connected_evidence_selection": {
+          "type": "boolean"
+        },
+        "exact_anchors": {
+          "type": "boolean"
+        },
+        "graph_hops": {
+          "maximum": 3,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "lane_blending": {
+          "const": false
+        },
+        "semantic": {
+          "type": "boolean"
+        },
+        "typed_path_expansion": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "exact_anchors",
+        "semantic",
+        "graph_hops",
+        "lane_blending",
+        "bm25",
+        "typed_path_expansion",
+        "connected_evidence_selection"
+      ],
+      "type": "object"
+    },
+    "retrieval_mode": {
+      "enum": [
+        "factual",
+        "guidance",
+        "candidate_review",
+        "strategic",
+        "status_snapshot_current",
+        "status_snapshot_history"
+      ],
+      "type": "string"
+    },
+    "run_id": {
+      "$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"
+    },
+    "schema_version": {
+      "const": "3.0.0"
+    },
+    "subquestions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "time_horizon": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "trace_id": {
+      "pattern": "^[a-f0-9]{32}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_id",
+    "schema_version",
+    "artifact_id",
+    "canonical_digest",
+    "plan_id",
+    "request_id",
+    "run_id",
+    "trace_id",
+    "destination_decision_digest",
+    "destination",
+    "query_type",
+    "materiality",
+    "assurance_profile",
+    "delivery_profile",
+    "artifact_type",
+    "l2_policy",
+    "l2_policy_reason",
+    "allowed_provider_class",
+    "maximum_primary_calls",
+    "maximum_repair_calls",
+    "maximum_challenger_calls",
+    "maximum_judge_calls",
+    "required_output_schema",
+    "provider_egress_allowed",
+    "primary_entities",
+    "time_horizon",
+    "subquestions",
+    "relationships_to_inspect",
+    "evidence_requirements",
+    "retrieval_mode",
+    "allowed_lanes",
+    "retrieval",
+    "external_research",
+    "prompt_blueprint",
+    "output_schema",
+    "exit_criteria",
+    "extensions",
+    "controller"
+  ],
+  "title": "NEE controller-bound query execution plan",
+  "type": "object"
+}

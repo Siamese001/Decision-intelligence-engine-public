@@ -1,0 +1,49 @@
+{
+  "artifact_id": "ingestion-reasoning-packet-fixture",
+  "candidates": [
+    {
+      "candidate_id": "candidate-ingestion-reasoning",
+      "candidate_type": "risk",
+      "classification": "internal",
+      "entity_resolution_outcomes": [
+        "HITL_CONFIRM_ENTITY"
+      ],
+      "evidence_ids": [
+        "evidence-ingestion-reasoning"
+      ],
+      "exact_record_ids": [],
+      "intake_route": "QUARANTINE",
+      "materiality": "high",
+      "normalized_text": "A source-bound candidate requires advisory review.",
+      "semantic_matches": [
+        {
+          "lane": "candidate",
+          "record_id": "record-ingestion-reasoning",
+          "score": 0.6
+        }
+      ]
+    }
+  ],
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "cd741bd9c91e65d8a9f45bc13a92cae8f8545712712e424d3b58198b33a736a1"
+  },
+  "contract_id": "urn:nee:dual-pipeline:ingestion-reasoning-packet:1.0.0",
+  "created_at": "2026-07-27T12:00:01Z",
+  "decision_digest": "441e54422d6489fbd1f853c83a3e6982ab8b04da62d67b5a3c78eefdd630e8db",
+  "decision_id": "ingestion-reasoning-decision-fixture",
+  "evidence_ids": [
+    "evidence-ingestion-reasoning"
+  ],
+  "extensions": {},
+  "governed_context_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "packet_id": "ingestion-reasoning-packet-fixture",
+  "raw_source_included": false,
+  "run_id": "run-ingestion-reasoning-fixture",
+  "schema_version": "1.0.0",
+  "source_bound_only": true,
+  "source_id": "source-ingestion-reasoning",
+  "source_version_id": "source-version-ingestion-reasoning",
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

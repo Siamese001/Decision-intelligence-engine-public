@@ -1,0 +1,49 @@
+{
+  "acceptance_policy": {
+    "owner": "NEE Knowledge Governance",
+    "policy_digest": "a5e72d6936a2ed0b5c224386b49a083f7fbe0cd8a7e7dcaf8e3d19d8d2ceb856",
+    "policy_id": "bge-m3-retrieval-release-policy",
+    "policy_version": "1.1.0"
+  },
+  "artifact_id": "retrieval-release-suite-fixture",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "38e164db320425c6c4432e885ce9ecd55ee1867a2661ee3d624d3c09506bb793"
+  },
+  "cases": [
+    {
+      "audiences": [
+        "internal_consulting"
+      ],
+      "allowed_assertion_ids": [
+        "assertion-core-fixture"
+      ],
+      "case_id": "core-fixture",
+      "classification": "internal",
+      "critical": true,
+      "expected_record_ids": [
+        "record-core-fixture"
+      ],
+      "forbidden_record_ids": [],
+      "facet_filters": {
+        "semantic_domain": [
+          "architecture"
+        ]
+      },
+      "lane": "approved",
+      "query": "Find the approved record.",
+      "query_kind": "semantic_paraphrase",
+      "retrieval_mode": "factual",
+      "scope": "core",
+      "top_k": 5
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:retrieval-release-suite:1.0.0",
+  "coverage": [],
+  "created_at": "2026-07-28T00:00:00Z",
+  "extensions": {},
+  "execution_tier": "E3",
+  "schema_version": "1.0.0",
+  "suite_id": "retrieval-release-suite-fixture"
+}

@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-dd72c9a68749f8d31e86226cfdf5",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "4aff6cee9314a44c838cf5dd5964a3f1f2ff174c2c42484026945576d621a61b"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-3b0ff3d204c65d88836d8d68"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Golden Dataset is an identified technical_anchor in 09 25 2026 Project_Lens Lens_Sow_Plan_Morgan Vance_Jake_Alex_Jen_Amit.",
+      "proposed_value": "Golden Dataset is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-68de6cae2127e93eca7e21f47788"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-ab339e04e7ff4a7a2ce2614c30e1",
+      "assertion_id_older": "assertion-68de6cae2127e93eca7e21f47788",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-de7ce8aebb7b4dc5ca71a6b1a5a5",
+      "timestamp_newer": "2026-09-30",
+      "timestamp_older": "2026-09-25"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Golden Dataset' (HAS_CLAIM_TEXT). Older claim from 2026-09-25 superseded by newer claim from 2026-09-30.",
+  "proposal_id": "calibration-proposal-dd72c9a68749f8d31e86226cfdf5",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-68de6cae2127e93eca7e21f47788 from Golden Dataset is an identified technical_anchor in 09 25 2026 Project_Lens Lens_Sow_Plan_Morgan Vance_Jake_Alex_Jen_Amit. to Golden Dataset is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

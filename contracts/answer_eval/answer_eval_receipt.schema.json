@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:eval:answer-eval-receipt:1.0.0",
+  "title": "NEE Answer Evaluation Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "schema_version",
+    "eval_id",
+    "timestamp",
+    "pipeline",
+    "ledger_range",
+    "metrics",
+    "receipt_digest"
+  ],
+  "properties": {
+    "contract_id": { "const": "urn:nee:eval:answer-eval-receipt:1.0.0" },
+    "schema_version": { "const": "1.0.0" },
+    "eval_id": {
+      "type": "string",
+      "pattern": "^eval-ans-[0-9a-fA-F]+$"
+    },
+    "timestamp": { "type": "string" },
+    "pipeline": {
+      "type": "string",
+      "enum": ["copilot", "query", "both"]
+    },
+    "ledger_range": {
+      "type": "object",
+      "required": ["start_answer_id", "end_answer_id", "record_count", "chain_valid"],
+      "properties": {
+        "start_answer_id": { "type": ["string", "null"] },
+        "end_answer_id": { "type": ["string", "null"] },
+        "record_count": { "type": "integer", "minimum": 0 },
+        "chain_valid": { "type": "boolean" }
+      }
+    },
+    "graph_sha256": { "type": ["string", "null"] },
+    "generation": { "type": ["string", "integer", "null"] },
+    "parameter_snapshot_digest": { "type": ["string", "null"] },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "groundedness",
+        "citation_durability",
+        "staleness_rate",
+        "conflict_miss_rate",
+        "context_recall",
+        "operator_usefulness",
+        "post_meeting_uptake",
+        "latency",
+        "fail_closed_rate"
+      ],
+      "properties": {
+        "groundedness": { "type": "number", "minimum": 0, "maximum": 1 },
+        "citation_durability": { "type": "number", "minimum": 0, "maximum": 1 },
+        "staleness_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "conflict_miss_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "context_recall": { "type": "number", "minimum": 0, "maximum": 1 },
+        "operator_usefulness": {
+          "type": "object",
+          "required": [
+            "useful_count",
+            "not_useful_count",
+            "wrong_count",
+            "total_feedback",
+            "beta_posterior_mean"
+          ],
+          "properties": {
+            "useful_count": { "type": "integer", "minimum": 0 },
+            "not_useful_count": { "type": "integer", "minimum": 0 },
+            "wrong_count": { "type": "integer", "minimum": 0 },
+            "total_feedback": { "type": "integer", "minimum": 0 },
+            "beta_posterior_mean": { "type": "number", "minimum": 0.05, "maximum": 0.95 }
+          }
+        },
+        "post_meeting_uptake": { "type": "number", "minimum": 0, "maximum": 1 },
+        "latency": {
+          "type": "object",
+          "required": ["p50_ms", "p95_ms", "by_rigor_tier"],
+          "properties": {
+            "p50_ms": { "type": "number", "minimum": 0 },
+            "p95_ms": { "type": "number", "minimum": 0 },
+            "by_rigor_tier": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object",
+                "required": ["p50_ms", "p95_ms", "count"],
+                "properties": {
+                  "p50_ms": { "type": "number", "minimum": 0 },
+                  "p95_ms": { "type": "number", "minimum": 0 },
+                  "count": { "type": "integer", "minimum": 0 }
+                }
+              }
+            }
+          }
+        },
+        "fail_closed_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "by_intent_or_type": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "count": { "type": "integer", "minimum": 0 },
+              "groundedness": { "type": "number", "minimum": 0, "maximum": 1 },
+              "citation_durability": { "type": "number", "minimum": 0, "maximum": 1 }
+            }
+          }
+        }
+      }
+    },
+    "replay_comparison": {
+      "type": ["object", "null"],
+      "properties": {
+        "candidate_parameter_snapshot_digest": { "type": ["string", "null"] },
+        "candidate_params": { "type": "object" },
+        "reproduced_citation_exact_match_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "groundedness_delta": { "type": "number" },
+        "latency_p95_delta_ms": { "type": "number" },
+        "replayed_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "llm_judge": {
+      "type": ["object", "null"],
+      "properties": {
+        "evaluated_count": { "type": "integer", "minimum": 0 },
+        "average_relevance_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "provider_bound": { "type": "boolean" },
+        "model_id": { "type": ["string", "null"] },
+        "evaluator_kind": { "type": "string" },
+        "semantic_validation_passed": { "type": "boolean" },
+        "details": { "type": "object" }
+      }
+    },
+    "receipt_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{64}$"
+    },
+    "_output_file": {
+      "type": "string"
+    }
+  }
+}

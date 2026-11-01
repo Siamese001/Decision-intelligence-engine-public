@@ -1,0 +1,24 @@
+wave_id: "Wave 6: Bind every authoritative exit"
+wave_number: 6
+governance: "NEE-KG-ALIGNMENT-06"
+plan_path: "docs/plans/docs_pipeline_alignment_debate_plan_20261006.md"
+ledger_path: "hitl_decision_ledger.json"
+surface_catalog: "config/governance/alignment/surface_catalog.yaml"
+required_prior_lock: "reports/alignment/wave-5.lock"
+
+acceptance_criteria:
+  - "Missing/swapped evidence, changed artifacts, stale policy, and obsolete graph coverage fail applicable CLI/MCP/public exits"
+  - "Valid reuse proves current coverage"
+  - "Advisory/partial outcomes cannot implicitly authorize publication"
+  - "Streamed and ordinary copilot responses consume identical grounding evidence and yield identical exits"
+  - "Crash, retry, concurrent publication, and approval-resume preserve the decision and immutable evidence"
+  - "Predecessor verification cryptographically confirms Wave 5 lock"
+
+test_suites:
+  - "tests/end_to_end/test_alignment_w6_e2e.py"
+  - "tests/test_alignment_w6_adversarial.py"
+
+artifacts:
+  - "dual_pipeline/l0/authoritative_exit_binding.py"
+  - "dual_pipeline/l0/__init__.py"
+  - "config/governance/alignment/wave-6.yaml"

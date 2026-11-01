@@ -1,0 +1,29 @@
+version: "1.0.0"
+governance_initiative: "NEE-KG-DUAL-PIPELINE-01"
+
+rollback_governance:
+  enabled: true
+  auto_trigger_on_gate_failure: true
+  require_operator_override_for_production: false
+  max_rollback_window_sec: 86400
+
+prior_active_pair:
+  generation_id: "generation-d5c6bfc4279b8892904b7c4f4e80"
+  graph_path: "generations/generation-d5c6bfc4279b8892904b7c4f4e80/graph.sqlite"
+  sidecar_path: "generations/generation-d5c6bfc4279b8892904b7c4f4e80/sidecar.sqlite"
+  model_id: "BAAI/bge-m3"
+  model_revision: "5617a9f61b028005a4858fdac845db406aefb181"
+
+index_compatibility:
+  supported_sidecar_tables:
+    - "dense_vector"
+    - "sparse_weight"
+    - "colbert_token"
+    - "retrieval_record"
+  vector_dimension: 1024
+  max_colbert_tokens: 512
+
+receipt_requirements:
+  preceding_receipt_required: true
+  sign_rollback_receipt: true
+  preserve_audit_trail: true

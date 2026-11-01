@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-a4da71197c323f9959de548930d5",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "2b978cbfee63a01a2b6e3b38550b91568ed4f53b349527600b5a9c835177d4a5"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-a72e088c8ce1ede8918b10a2"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Project LENS is an identified technical_anchor in Document 20260924 Lens Catch Up Chat Sizing Scope.",
+      "proposed_value": "Project LENS is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-de33534be92d7eb341c14b0a4141"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-2648a310b0977961120956c37194",
+      "assertion_id_older": "assertion-de33534be92d7eb341c14b0a4141",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "entity-6740ccf9259e9a2e05ad7883a8bc",
+      "timestamp_newer": "2026-09-30",
+      "timestamp_older": "2026-09-24"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Project LENS' (HAS_CLAIM_TEXT). Older claim from 2026-09-24 superseded by newer claim from 2026-09-30.",
+  "proposal_id": "calibration-proposal-a4da71197c323f9959de548930d5",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-de33534be92d7eb341c14b0a4141 from Project LENS is an identified technical_anchor in Document 20260924 Lens Catch Up Chat Sizing Scope. to Project LENS is an identified technical_anchor in 20260930 Lens Pipeline Review Sign Off.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

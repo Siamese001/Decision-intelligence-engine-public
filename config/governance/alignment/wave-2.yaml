@@ -1,0 +1,27 @@
+wave_id: "Wave 2: Resolve policy authority"
+wave_number: 2
+governance: "NEE-KG-ALIGNMENT-02"
+plan_path: "docs/plans/docs_pipeline_alignment_debate_plan_20261006.md"
+ledger_path: "hitl_decision_ledger.json"
+surface_catalog: "config/governance/alignment/surface_catalog.yaml"
+required_prior_lock: "reports/alignment/wave-1.lock"
+
+acceptance_criteria:
+  - "Resolve 0.15 versus 0.30, 0.60 versus 0.65, and < versus <= through authentic authority evidence"
+  - "Unresolved choices block this wave; authentic operator ratification is recorded in ledger"
+  - "Boundary (spread <= threshold), single-candidate, and invalid-value cases agree across policy evaluation"
+  - "Immutable policy snapshot per run is sealed and bound; mid-run mutation attempts fail closed"
+  - "Next-run update cases agree while active runs retain their bound snapshot"
+  - "Mutating any bound authority makes the audit fail"
+
+test_suites:
+  - "tests/end_to_end/test_alignment_w2_e2e.py"
+  - "tests/test_alignment_w2_adversarial.py"
+
+artifacts:
+  - "governance/policy_registry.yaml"
+  - "pyproject.toml"
+  - "dual_pipeline/l0/policy_snapshot.py"
+  - "dual_pipeline/ambiguity_core/models.py"
+  - "dual_pipeline/hitl_core/margin_evaluator.py"
+  - "config/governance/alignment/wave-2.yaml"

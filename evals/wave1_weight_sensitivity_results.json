@@ -1,0 +1,2164 @@
+{
+  "summary": {
+    "total_queries": 133,
+    "found_count": 133,
+    "disagreement_count": 1,
+    "spread_threshold": 5,
+    "sample_size": 30,
+    "current_weights": {
+      "dense": 0.34,
+      "sparse": 0.17,
+      "bm25": 0.15,
+      "colbert": 0.34
+    },
+    "decision": "NEEDS_WAVE_2"
+  },
+  "disagreement_cases": [
+    {
+      "record_id": "retrieval-record-a8e92d2935619e7e88626313b684",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT and how it connects to the broader strategic context",
+      "title": "Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 11
+      },
+      "spread": 10,
+      "fused_rank": 1
+    }
+  ],
+  "all_results": [
+    {
+      "record_id": "retrieval-record-3aeb622927829c5d208f6209f6b4",
+      "query_type": "title_exact",
+      "query_text": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification",
+      "title": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Class",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-3aeb622927829c5d208f6209f6b4",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification SOW-backed commercial/scope au?",
+      "title": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Class",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-3aeb622927829c5d208f6209f6b4",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Classification and how it connects to the broader strategic context",
+      "title": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Class",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-3aeb622927829c5d208f6209f6b4",
+      "query_type": "partial",
+      "query_text": "PGD Automated Document Classification",
+      "title": "PGD Automated Document Classification SOW_BACKED_BY PGD Automated Document Class",
+      "found": true,
+      "ranks": {
+        "fused": 2,
+        "dense": 4,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 3,
+      "fused_rank": 2
+    },
+    {
+      "record_id": "retrieval-record-0b4a328895f7530aeba40841a754",
+      "query_type": "title_exact",
+      "query_text": "Project Spring / SPRING Platform SOW_BACKED_BY Project Spring Final",
+      "title": "Project Spring / SPRING Platform SOW_BACKED_BY Project Spring Final",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0b4a328895f7530aeba40841a754",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Project Spring / SPRING Platform SOW_BACKED_BY Project Spring Final SOW-backed commercial/scope authority. sow-backed?",
+      "title": "Project Spring / SPRING Platform SOW_BACKED_BY Project Spring Final",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0b4a328895f7530aeba40841a754",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Project Spring / SPRING Platform SOW_BACKED_BY Project Spring Final and how it connects to the broader strategic context",
+      "title": "Project Spring / SPRING Platform SOW_BACKED_BY Project Spring Final",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0b4a328895f7530aeba40841a754",
+      "query_type": "partial",
+      "query_text": "Project Spring / SPRING",
+      "title": "Project Spring / SPRING Platform SOW_BACKED_BY Project Spring Final",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 2,
+        "bm25": 1
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-8e10d51b1c193239259868b94bc6",
+      "query_type": "title_exact",
+      "query_text": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling",
+      "title": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-8e10d51b1c193239259868b94bc6",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Jacob Wellington CONTEXT_FOR Nuclear Scheduling Jacob Wellington has Nuclear Scheduling alignment. user-confirmed HITL?",
+      "title": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-8e10d51b1c193239259868b94bc6",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Jacob Wellington CONTEXT_FOR Nuclear Scheduling and how it connects to the broader strategic context",
+      "title": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-8e10d51b1c193239259868b94bc6",
+      "query_type": "partial",
+      "query_text": "Jacob Wellington",
+      "title": "Jacob Wellington CONTEXT_FOR Nuclear Scheduling",
+      "found": true,
+      "ranks": {
+        "fused": 2,
+        "dense": 2,
+        "sparse": 3,
+        "colbert": 2,
+        "bm25": 1
+      },
+      "spread": 2,
+      "fused_rank": 2
+    },
+    {
+      "record_id": "retrieval-record-7fd07241ebda18397108ad46231b",
+      "query_type": "title_exact",
+      "query_text": "FCDB ROUTES_TO_CARD NEE_02",
+      "title": "FCDB ROUTES_TO_CARD NEE_02",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 4
+      },
+      "spread": 3,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-7fd07241ebda18397108ad46231b",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about FCDB?",
+      "title": "FCDB ROUTES_TO_CARD NEE_02",
+      "found": true,
+      "ranks": {
+        "fused": 5,
+        "dense": 6,
+        "sparse": 2,
+        "colbert": 6,
+        "bm25": 4
+      },
+      "spread": 4,
+      "fused_rank": 5
+    },
+    {
+      "record_id": "retrieval-record-7fd07241ebda18397108ad46231b",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about FCDB ROUTES_TO_CARD NEE_02 and how it connects to the broader strategic context",
+      "title": "FCDB ROUTES_TO_CARD NEE_02",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 4
+      },
+      "spread": 3,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-7fd07241ebda18397108ad46231b",
+      "query_type": "synonym_drift",
+      "query_text": "FCDB connects to_CARD decision engine_02",
+      "title": "FCDB ROUTES_TO_CARD NEE_02",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 5
+      },
+      "spread": 4,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-753fbd57a5d6624c411206261e75",
+      "query_type": "title_exact",
+      "query_text": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+      "title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-753fbd57a5d6624c411206261e75",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about v17 NEE / NEA stakeholder org-chart working model?",
+      "title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+      "found": true,
+      "ranks": {
+        "fused": 2,
+        "dense": 3,
+        "sparse": 2,
+        "colbert": 2,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 2
+    },
+    {
+      "record_id": "retrieval-record-753fbd57a5d6624c411206261e75",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10 and how it connects to the broader strategic context",
+      "title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-753fbd57a5d6624c411206261e75",
+      "query_type": "partial",
+      "query_text": "v17 NEE / NEA stakeholder",
+      "title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+      "found": true,
+      "ranks": {
+        "fused": 3,
+        "dense": 3,
+        "sparse": 2,
+        "colbert": 3,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 3
+    },
+    {
+      "record_id": "retrieval-record-753fbd57a5d6624c411206261e75",
+      "query_type": "synonym_drift",
+      "query_text": "v17 decision engine / NEA stakeholder org-chart working model connects to_CARD decision engine_10",
+      "title": "v17 NEE / NEA stakeholder org-chart working model ROUTES_TO_CARD NEE_10",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-48220469adb827ee5da98ff28503",
+      "query_type": "title_exact",
+      "query_text": "GridOpti ROUTES_TO_CARD NEE_11",
+      "title": "GridOpti ROUTES_TO_CARD NEE_11",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-48220469adb827ee5da98ff28503",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about GridOpti?",
+      "title": "GridOpti ROUTES_TO_CARD NEE_11",
+      "found": true,
+      "ranks": {
+        "fused": 4,
+        "dense": 4,
+        "sparse": 5,
+        "colbert": 4,
+        "bm25": 2
+      },
+      "spread": 3,
+      "fused_rank": 4
+    },
+    {
+      "record_id": "retrieval-record-48220469adb827ee5da98ff28503",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about GridOpti ROUTES_TO_CARD NEE_11 and how it connects to the broader strategic context",
+      "title": "GridOpti ROUTES_TO_CARD NEE_11",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-48220469adb827ee5da98ff28503",
+      "query_type": "synonym_drift",
+      "query_text": "GridOpti connects to_CARD decision engine_11",
+      "title": "GridOpti ROUTES_TO_CARD NEE_11",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-34019da83075e83efda95adb6476",
+      "query_type": "title_exact",
+      "query_text": "SAP-Maximo mapping ANCHOR_FOR v17 EDO Core Data Product detailed SOW memory",
+      "title": "SAP-Maximo mapping ANCHOR_FOR v17 EDO Core Data Product detailed SOW memory",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-34019da83075e83efda95adb6476",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about SAP-Maximo mapping ANCHOR_FOR v17 EDO Core Data Product detailed SOW memory SAP-Maximo mapping is a retrieval anchor for?",
+      "title": "SAP-Maximo mapping ANCHOR_FOR v17 EDO Core Data Product detailed SOW memory",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-34019da83075e83efda95adb6476",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about SAP-Maximo mapping ANCHOR_FOR v17 EDO Core Data Product detailed SOW memory and how it connects to the broader strategic context",
+      "title": "SAP-Maximo mapping ANCHOR_FOR v17 EDO Core Data Product detailed SOW memory",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-34019da83075e83efda95adb6476",
+      "query_type": "partial",
+      "query_text": "SAP-Maximo mapping ANCHOR_FOR v17 EDO",
+      "title": "SAP-Maximo mapping ANCHOR_FOR v17 EDO Core Data Product detailed SOW memory",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2a10af82119fec00bc6717b73ad1",
+      "query_type": "title_exact",
+      "query_text": "Anuj Chokshi LANE_CONTEXT_FOR Enterprise AI Products",
+      "title": "Anuj Chokshi LANE_CONTEXT_FOR Enterprise AI Products",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2a10af82119fec00bc6717b73ad1",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Anuj Chokshi LANE_CONTEXT_FOR Enterprise AI Products Anuj Chokshi is Enterprise AI Products context; do not force Gemini?",
+      "title": "Anuj Chokshi LANE_CONTEXT_FOR Enterprise AI Products",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2a10af82119fec00bc6717b73ad1",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Anuj Chokshi LANE_CONTEXT_FOR Enterprise AI Products and how it connects to the broader strategic context",
+      "title": "Anuj Chokshi LANE_CONTEXT_FOR Enterprise AI Products",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2a10af82119fec00bc6717b73ad1",
+      "query_type": "partial",
+      "query_text": "Anuj Chokshi LANE_CONTEXT_FOR",
+      "title": "Anuj Chokshi LANE_CONTEXT_FOR Enterprise AI Products",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-d0a8015e048936ba7f845328af0c",
+      "query_type": "title_exact",
+      "query_text": "FCDB Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+      "title": "FCDB Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-d0a8015e048936ba7f845328af0c",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about FCDB Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026 Connected to NEA Q3 fixed-capacity charter/outcome ?",
+      "title": "FCDB Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-d0a8015e048936ba7f845328af0c",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about FCDB Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026 and how it connects to the broader strategic context",
+      "title": "FCDB Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-d0a8015e048936ba7f845328af0c",
+      "query_type": "partial",
+      "query_text": "FCDB Q3_CAPACITY_BACKED_BY NEA AI",
+      "title": "FCDB Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0f784c991c96c80c3f5df2498195",
+      "query_type": "title_exact",
+      "query_text": "v17-to-v22 spine coverage audit SOURCED_FROM v17 NEE_10 Source Intake Map and Lineage Reconciliation",
+      "title": "v17-to-v22 spine coverage audit SOURCED_FROM v17 NEE_10 Source Intake Map and Li",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0f784c991c96c80c3f5df2498195",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about v17-to-v22 spine coverage audit SOURCED_FROM v17 NEE_10 Source Intake Map and Lineage Reconciliation component_v17_spine?",
+      "title": "v17-to-v22 spine coverage audit SOURCED_FROM v17 NEE_10 Source Intake Map and Li",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0f784c991c96c80c3f5df2498195",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about v17-to-v22 spine coverage audit SOURCED_FROM v17 NEE_10 Source Intake Map and Lineage Reconciliation and how it connects to the broader strategic context",
+      "title": "v17-to-v22 spine coverage audit SOURCED_FROM v17 NEE_10 Source Intake Map and Li",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0f784c991c96c80c3f5df2498195",
+      "query_type": "partial",
+      "query_text": "v17-to-v22 spine coverage audit SOURCED_FROM v17",
+      "title": "v17-to-v22 spine coverage audit SOURCED_FROM v17 NEE_10 Source Intake Map and Li",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0f784c991c96c80c3f5df2498195",
+      "query_type": "synonym_drift",
+      "query_text": "v17-to-v22 spine coverage audit SOURCED_FROM v17 decision engine_10 Source Intake Map and Lineage Reconciliation",
+      "title": "v17-to-v22 spine coverage audit SOURCED_FROM v17 NEE_10 Source Intake Map and Li",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+      "query_type": "title_exact",
+      "query_text": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+      "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about PD Design Automation / APEX SSUP Design Tool?",
+      "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 3,
+        "dense": 3,
+        "sparse": 3,
+        "colbert": 2,
+        "bm25": 1
+      },
+      "spread": 2,
+      "fused_rank": 3
+    },
+    {
+      "record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04 and how it connects to the broader strategic context",
+      "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+      "query_type": "partial",
+      "query_text": "PD Design Automation / APEX",
+      "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 2,
+        "dense": 2,
+        "sparse": 3,
+        "colbert": 2,
+        "bm25": 1
+      },
+      "spread": 2,
+      "fused_rank": 2
+    },
+    {
+      "record_id": "retrieval-record-0e05f5289ce0d1148ba19a0b7796",
+      "query_type": "synonym_drift",
+      "query_text": "PD Design Automation / APEX SSUP Design Tool connects to_CARD decision engine_04",
+      "title": "PD Design Automation / APEX SSUP Design Tool ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2e6659008eb10ff6f783c9cb7af8",
+      "query_type": "title_exact",
+      "query_text": "NEA Nexus access model SPLITS_INTO Pipeline-level access",
+      "title": "NEA Nexus access model SPLITS_INTO Pipeline-level access",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2e6659008eb10ff6f783c9cb7af8",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about NEA Nexus access model SPLITS_INTO Pipeline-level access NEA Nexus access model distinguishes pipeline-level access. use?",
+      "title": "NEA Nexus access model SPLITS_INTO Pipeline-level access",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2e6659008eb10ff6f783c9cb7af8",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about NEA Nexus access model SPLITS_INTO Pipeline-level access and how it connects to the broader strategic context",
+      "title": "NEA Nexus access model SPLITS_INTO Pipeline-level access",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2e6659008eb10ff6f783c9cb7af8",
+      "query_type": "partial",
+      "query_text": "NEA Nexus access",
+      "title": "NEA Nexus access model SPLITS_INTO Pipeline-level access",
+      "found": true,
+      "ranks": {
+        "fused": 2,
+        "dense": 2,
+        "sparse": 2,
+        "colbert": 2,
+        "bm25": 1
+      },
+      "spread": 1,
+      "fused_rank": 2
+    },
+    {
+      "record_id": "retrieval-record-71af4fd0c376cc019115d48034c2",
+      "query_type": "title_exact",
+      "query_text": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+      "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-71af4fd0c376cc019115d48034c2",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about v24 ad hoc query response protocol?",
+      "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+      "found": true,
+      "ranks": {
+        "fused": 2,
+        "dense": 1,
+        "sparse": 2,
+        "colbert": 2,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 2
+    },
+    {
+      "record_id": "retrieval-record-71af4fd0c376cc019115d48034c2",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99 and how it connects to the broader strategic context",
+      "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-71af4fd0c376cc019115d48034c2",
+      "query_type": "partial",
+      "query_text": "v24 ad hoc query",
+      "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+      "found": true,
+      "ranks": {
+        "fused": 3,
+        "dense": 2,
+        "sparse": 2,
+        "colbert": 3,
+        "bm25": 3
+      },
+      "spread": 1,
+      "fused_rank": 3
+    },
+    {
+      "record_id": "retrieval-record-71af4fd0c376cc019115d48034c2",
+      "query_type": "synonym_drift",
+      "query_text": "v24 ad hoc query response protocol connects to_CARD decision engine_99",
+      "title": "v24 ad hoc query response protocol ROUTES_TO_CARD NEE_99",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-7ae399ac9758cb284ff5f1309567",
+      "query_type": "title_exact",
+      "query_text": "logan Miller SOURCED_FROM LinkedIn profile pointer — logan Miller",
+      "title": "logan Miller SOURCED_FROM LinkedIn profile pointer — logan Miller",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-7ae399ac9758cb284ff5f1309567",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about logan Miller SOURCED_FROM LinkedIn profile pointer — logan Miller Links canonical or proposed stakeholder logan Miller to t?",
+      "title": "logan Miller SOURCED_FROM LinkedIn profile pointer — logan Miller",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-7ae399ac9758cb284ff5f1309567",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about logan Miller SOURCED_FROM LinkedIn profile pointer — logan Miller and how it connects to the broader strategic context",
+      "title": "logan Miller SOURCED_FROM LinkedIn profile pointer — logan Miller",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-7ae399ac9758cb284ff5f1309567",
+      "query_type": "partial",
+      "query_text": "logan Miller SOURCED_FROM LinkedIn",
+      "title": "logan Miller SOURCED_FROM LinkedIn profile pointer — logan Miller",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-fa005c732931d60d064c4241ec61",
+      "query_type": "title_exact",
+      "query_text": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+      "title": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-fa005c732931d60d064c4241ec61",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Nuclear Scheduling?",
+      "title": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 5,
+        "dense": 4,
+        "sparse": 7,
+        "colbert": 4,
+        "bm25": 5
+      },
+      "spread": 3,
+      "fused_rank": 5
+    },
+    {
+      "record_id": "retrieval-record-fa005c732931d60d064c4241ec61",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Nuclear Scheduling ROUTES_TO_CARD NEE_04 and how it connects to the broader strategic context",
+      "title": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-fa005c732931d60d064c4241ec61",
+      "query_type": "partial",
+      "query_text": "Nuclear Scheduling",
+      "title": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 5,
+        "dense": 4,
+        "sparse": 7,
+        "colbert": 5,
+        "bm25": 5
+      },
+      "spread": 3,
+      "fused_rank": 5
+    },
+    {
+      "record_id": "retrieval-record-fa005c732931d60d064c4241ec61",
+      "query_type": "synonym_drift",
+      "query_text": "Nuclear Scheduling connects to_CARD decision engine_04",
+      "title": "Nuclear Scheduling ROUTES_TO_CARD NEE_04",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0b9f4f223d6ef7062e60b4b46f70",
+      "query_type": "title_exact",
+      "query_text": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+      "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0b9f4f223d6ef7062e60b4b46f70",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Atlas Pilot / ALR?",
+      "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+      "found": true,
+      "ranks": {
+        "fused": 4,
+        "dense": 3,
+        "sparse": 2,
+        "colbert": 4,
+        "bm25": 2
+      },
+      "spread": 2,
+      "fused_rank": 4
+    },
+    {
+      "record_id": "retrieval-record-0b9f4f223d6ef7062e60b4b46f70",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Atlas Pilot / ALR ROUTES_TO_CARD NEE_13 and how it connects to the broader strategic context",
+      "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0b9f4f223d6ef7062e60b4b46f70",
+      "query_type": "partial",
+      "query_text": "Atlas Pilot /",
+      "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+      "found": true,
+      "ranks": {
+        "fused": 3,
+        "dense": 3,
+        "sparse": 2,
+        "colbert": 4,
+        "bm25": 2
+      },
+      "spread": 2,
+      "fused_rank": 3
+    },
+    {
+      "record_id": "retrieval-record-0b9f4f223d6ef7062e60b4b46f70",
+      "query_type": "synonym_drift",
+      "query_text": "Atlas Pilot / ALR connects to_CARD decision engine_13",
+      "title": "Atlas Pilot / ALR ROUTES_TO_CARD NEE_13",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-6709e2af54052f57b35fbccce77c",
+      "query_type": "title_exact",
+      "query_text": "Satyam Patel CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "title": "Satyam Patel CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-6709e2af54052f57b35fbccce77c",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Satyam Patel CONTRIBUTES_TO Enterprise Data Office / EDO Satyam Patel is confirmed as part of the PartnerAdvisory EDO population.?",
+      "title": "Satyam Patel CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-6709e2af54052f57b35fbccce77c",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Satyam Patel CONTRIBUTES_TO Enterprise Data Office / EDO and how it connects to the broader strategic context",
+      "title": "Satyam Patel CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-6709e2af54052f57b35fbccce77c",
+      "query_type": "partial",
+      "query_text": "Satyam Patel CONTRIBUTES_TO Enterprise",
+      "title": "Satyam Patel CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-6709e2af54052f57b35fbccce77c",
+      "query_type": "synonym_drift",
+      "query_text": "Satyam Patel feeds into Enterprise Data Office / EDO",
+      "title": "Satyam Patel CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-d024fba013e0e1782af0315a416a",
+      "query_type": "title_exact",
+      "query_text": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026",
+      "title": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Enginee",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-d024fba013e0e1782af0315a416a",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026 Connected to?",
+      "title": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Enginee",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-d024fba013e0e1782af0315a416a",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Engineering Delivery Teams Q3 2026 and how it connects to the broader strategic context",
+      "title": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Enginee",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-d024fba013e0e1782af0315a416a",
+      "query_type": "partial",
+      "query_text": "PD Design Automation / APEX SSUP Design Tool",
+      "title": "PD Design Automation / APEX SSUP Design Tool Q3_CAPACITY_BACKED_BY NEA AI Enginee",
+      "found": true,
+      "ranks": {
+        "fused": 3,
+        "dense": 3,
+        "sparse": 1,
+        "colbert": 3,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 3
+    },
+    {
+      "record_id": "retrieval-record-73e8aa094c3e8f53fae5f50f3bf5",
+      "query_type": "title_exact",
+      "query_text": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_03",
+      "title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD ",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-73e8aa094c3e8f53fae5f50f3bf5",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about PGD CoPilot / technician assistant / Bedrock Data Automation POC?",
+      "title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD ",
+      "found": true,
+      "ranks": {
+        "fused": 2,
+        "dense": 2,
+        "sparse": 2,
+        "colbert": 2,
+        "bm25": 1
+      },
+      "spread": 1,
+      "fused_rank": 2
+    },
+    {
+      "record_id": "retrieval-record-73e8aa094c3e8f53fae5f50f3bf5",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD NEE_03 and how it connects to the broader strategic context",
+      "title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD ",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-73e8aa094c3e8f53fae5f50f3bf5",
+      "query_type": "partial",
+      "query_text": "PGD CoPilot / technician assistant /",
+      "title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD ",
+      "found": true,
+      "ranks": {
+        "fused": 2,
+        "dense": 2,
+        "sparse": 2,
+        "colbert": 2,
+        "bm25": 1
+      },
+      "spread": 1,
+      "fused_rank": 2
+    },
+    {
+      "record_id": "retrieval-record-73e8aa094c3e8f53fae5f50f3bf5",
+      "query_type": "synonym_drift",
+      "query_text": "PGD CoPilot / technician assistant / Bedrock Data Automation POC connects to_CARD decision engine_03",
+      "title": "PGD CoPilot / technician assistant / Bedrock Data Automation POC ROUTES_TO_CARD ",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-dff0c98b2a902f7b698da24e22d1",
+      "query_type": "title_exact",
+      "query_text": "v17 AI Hub Foundations / NEE IT engineering epic detail SOURCED_FROM v17 NEE_18 NEE IT AI Hub Engineering SOWs",
+      "title": "v17 AI Hub Foundations / NEE IT engineering epic detail SOURCED_FROM v17 NEE_18 ",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-dff0c98b2a902f7b698da24e22d1",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about v17 AI Hub Foundations / NEE IT engineering epic detail SOURCED_FROM v17 NEE_18 NEE IT AI Hub Engineering SOWs sow_v17_a?",
+      "title": "v17 AI Hub Foundations / NEE IT engineering epic detail SOURCED_FROM v17 NEE_18 ",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-dff0c98b2a902f7b698da24e22d1",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about v17 AI Hub Foundations / NEE IT engineering epic detail SOURCED_FROM v17 NEE_18 NEE IT AI Hub Engineering SOWs and how it connects to the broader strategic context",
+      "title": "v17 AI Hub Foundations / NEE IT engineering epic detail SOURCED_FROM v17 NEE_18 ",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-dff0c98b2a902f7b698da24e22d1",
+      "query_type": "partial",
+      "query_text": "v17 AI Hub Foundations / NEE IT engineering epic",
+      "title": "v17 AI Hub Foundations / NEE IT engineering epic detail SOURCED_FROM v17 NEE_18 ",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-dff0c98b2a902f7b698da24e22d1",
+      "query_type": "synonym_drift",
+      "query_text": "v17 Intelligence Platform Foundations / decision engine IT engineering epic detail SOURCED_FROM v17 decision engine_18 decision engine IT Intelligence Platform Engineering SOWs",
+      "title": "v17 AI Hub Foundations / NEE IT engineering epic detail SOURCED_FROM v17 NEE_18 ",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-8eef8b258f8f4ab6416f360fbe1a",
+      "query_type": "title_exact",
+      "query_text": "NEA/PartnerAdvisory Engineering Exchange SUPPORTS Monthly strategic engineering connection",
+      "title": "NEA/PartnerAdvisory Engineering Exchange SUPPORTS Monthly strategic engineering connectio",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-8eef8b258f8f4ab6416f360fbe1a",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about NEA/PartnerAdvisory Engineering Exchange SUPPORTS Monthly strategic engineering connection The existing Engineering Exchange rhyt?",
+      "title": "NEA/PartnerAdvisory Engineering Exchange SUPPORTS Monthly strategic engineering connectio",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-8eef8b258f8f4ab6416f360fbe1a",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about NEA/PartnerAdvisory Engineering Exchange SUPPORTS Monthly strategic engineering connection and how it connects to the broader strategic context",
+      "title": "NEA/PartnerAdvisory Engineering Exchange SUPPORTS Monthly strategic engineering connectio",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 5
+      },
+      "spread": 4,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-8eef8b258f8f4ab6416f360fbe1a",
+      "query_type": "partial",
+      "query_text": "NEA/PartnerAdvisory Engineering Exchange SUPPORTS",
+      "title": "NEA/PartnerAdvisory Engineering Exchange SUPPORTS Monthly strategic engineering connectio",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 3,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 2,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0427105a07d53776911075f0226b",
+      "query_type": "title_exact",
+      "query_text": "Apex Global Enterprises / NEE HAS_HORIZONTAL_LAYER NEE IT / Enterprise IT",
+      "title": "Apex Global Enterprises / NEE HAS_HORIZONTAL_LAYER NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0427105a07d53776911075f0226b",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Apex Global Enterprises / NEE HAS_HORIZONTAL_LAYER NEE IT / Enterprise IT Apex Global Enterprises / NEE operating model includes org_nee_i?",
+      "title": "Apex Global Enterprises / NEE HAS_HORIZONTAL_LAYER NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0427105a07d53776911075f0226b",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Apex Global Enterprises / NEE HAS_HORIZONTAL_LAYER NEE IT / Enterprise IT and how it connects to the broader strategic context",
+      "title": "Apex Global Enterprises / NEE HAS_HORIZONTAL_LAYER NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 3
+      },
+      "spread": 2,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0427105a07d53776911075f0226b",
+      "query_type": "partial",
+      "query_text": "Apex Global Enterprises / NEE HAS_HORIZONTAL_LAYER",
+      "title": "Apex Global Enterprises / NEE HAS_HORIZONTAL_LAYER NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-0427105a07d53776911075f0226b",
+      "query_type": "synonym_drift",
+      "query_text": "Apex Global Enterprises / decision engine HAS_HORIZONTAL_LAYER decision engine IT / Enterprise IT",
+      "title": "Apex Global Enterprises / NEE HAS_HORIZONTAL_LAYER NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-51986967f79ec41c77e5d91383ec",
+      "query_type": "title_exact",
+      "query_text": "NEXTbrain ANCHOR_FOR EDO RFP - Substation Onboarding / Maximo / Unifier",
+      "title": "NEXTbrain ANCHOR_FOR EDO RFP - Substation Onboarding / Maximo / Unifier",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-51986967f79ec41c77e5d91383ec",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about NEXTbrain ANCHOR_FOR EDO RFP - Substation Onboarding / Maximo / Unifier NEXTbrain is a retrieval anchor for EDO RFP / Su?",
+      "title": "NEXTbrain ANCHOR_FOR EDO RFP - Substation Onboarding / Maximo / Unifier",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-51986967f79ec41c77e5d91383ec",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about NEXTbrain ANCHOR_FOR EDO RFP - Substation Onboarding / Maximo / Unifier and how it connects to the broader strategic context",
+      "title": "NEXTbrain ANCHOR_FOR EDO RFP - Substation Onboarding / Maximo / Unifier",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-51986967f79ec41c77e5d91383ec",
+      "query_type": "partial",
+      "query_text": "NEXTbrain ANCHOR_FOR EDO RFP -",
+      "title": "NEXTbrain ANCHOR_FOR EDO RFP - Substation Onboarding / Maximo / Unifier",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-aa7b39f8fa7b9af692b371b35129",
+      "query_type": "title_exact",
+      "query_text": "Valerie Perez AFFILIATED_WITH PartnerAdvisory",
+      "title": "Valerie Perez AFFILIATED_WITH PartnerAdvisory",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-aa7b39f8fa7b9af692b371b35129",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Valerie Perez AFFILIATED_WITH PartnerAdvisory Valerie Perez is confirmed by the user as a PartnerAdvisory resource. Email alias is retaine?",
+      "title": "Valerie Perez AFFILIATED_WITH PartnerAdvisory",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-aa7b39f8fa7b9af692b371b35129",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Valerie Perez AFFILIATED_WITH PartnerAdvisory and how it connects to the broader strategic context",
+      "title": "Valerie Perez AFFILIATED_WITH PartnerAdvisory",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-aa7b39f8fa7b9af692b371b35129",
+      "query_type": "partial",
+      "query_text": "Valerie Perez",
+      "title": "Valerie Perez AFFILIATED_WITH PartnerAdvisory",
+      "found": true,
+      "ranks": {
+        "fused": 2,
+        "dense": 2,
+        "sparse": 2,
+        "colbert": 2,
+        "bm25": 1
+      },
+      "spread": 1,
+      "fused_rank": 2
+    },
+    {
+      "record_id": "retrieval-record-4f8ae626ed5f13e8c6d832ac3061",
+      "query_type": "title_exact",
+      "query_text": "harper Hoffman SOURCED_FROM LinkedIn profile pointer — Mandy Bambenek Hopmann",
+      "title": "harper Hoffman SOURCED_FROM LinkedIn profile pointer — Mandy Bambenek Hopmann",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-4f8ae626ed5f13e8c6d832ac3061",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about harper Hoffman SOURCED_FROM LinkedIn profile pointer — Mandy Bambenek Hopmann Links canonical or proposed stakeholder Man?",
+      "title": "harper Hoffman SOURCED_FROM LinkedIn profile pointer — Mandy Bambenek Hopmann",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-4f8ae626ed5f13e8c6d832ac3061",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about harper Hoffman SOURCED_FROM LinkedIn profile pointer — Mandy Bambenek Hopmann and how it connects to the broader strategic context",
+      "title": "harper Hoffman SOURCED_FROM LinkedIn profile pointer — Mandy Bambenek Hopmann",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-4f8ae626ed5f13e8c6d832ac3061",
+      "query_type": "partial",
+      "query_text": "harper Hoffman SOURCED_FROM LinkedIn profile",
+      "title": "harper Hoffman SOURCED_FROM LinkedIn profile pointer — Mandy Bambenek Hopmann",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-71164a0ef4a6016e853372fcb441",
+      "query_type": "title_exact",
+      "query_text": "Chaitanya Vemula CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "title": "Chaitanya Vemula CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-71164a0ef4a6016e853372fcb441",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Chaitanya Vemula CONTRIBUTES_TO Enterprise Data Office / EDO Chaitanya Vemula is confirmed as part of the PartnerAdvisory EDO pop?",
+      "title": "Chaitanya Vemula CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-71164a0ef4a6016e853372fcb441",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Chaitanya Vemula CONTRIBUTES_TO Enterprise Data Office / EDO and how it connects to the broader strategic context",
+      "title": "Chaitanya Vemula CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-71164a0ef4a6016e853372fcb441",
+      "query_type": "partial",
+      "query_text": "Chaitanya Vemula CONTRIBUTES_TO Enterprise",
+      "title": "Chaitanya Vemula CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-71164a0ef4a6016e853372fcb441",
+      "query_type": "synonym_drift",
+      "query_text": "Chaitanya Vemula feeds into Enterprise Data Office / EDO",
+      "title": "Chaitanya Vemula CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-a8e92d2935619e7e88626313b684",
+      "query_type": "title_exact",
+      "query_text": "Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT",
+      "title": "Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-a8e92d2935619e7e88626313b684",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT HITL: NEE IT definitely does not own Rewire; ?",
+      "title": "Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-a8e92d2935619e7e88626313b684",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT and how it connects to the broader strategic context",
+      "title": "Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 11
+      },
+      "spread": 10,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-a8e92d2935619e7e88626313b684",
+      "query_type": "partial",
+      "query_text": "Rewire business transformation mandate NOT_OWNED_BY",
+      "title": "Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 2
+      },
+      "spread": 1,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-a8e92d2935619e7e88626313b684",
+      "query_type": "synonym_drift",
+      "query_text": "Rewire business transformation mandate NOT_OWNED_BY decision engine IT / Enterprise IT",
+      "title": "Rewire business transformation mandate NOT_OWNED_BY NEE IT / Enterprise IT",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2e25ab8b5b31ab4fa1bea69b773c",
+      "query_type": "title_exact",
+      "query_text": "Anece Elakkari CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "title": "Anece Elakkari CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2e25ab8b5b31ab4fa1bea69b773c",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Anece Elakkari CONTRIBUTES_TO Enterprise Data Office / EDO Anece Elakkari is confirmed as part of the PartnerAdvisory EDO populat?",
+      "title": "Anece Elakkari CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2e25ab8b5b31ab4fa1bea69b773c",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Anece Elakkari CONTRIBUTES_TO Enterprise Data Office / EDO and how it connects to the broader strategic context",
+      "title": "Anece Elakkari CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2e25ab8b5b31ab4fa1bea69b773c",
+      "query_type": "partial",
+      "query_text": "Anece Elakkari CONTRIBUTES_TO Enterprise",
+      "title": "Anece Elakkari CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-2e25ab8b5b31ab4fa1bea69b773c",
+      "query_type": "synonym_drift",
+      "query_text": "Anece Elakkari feeds into Enterprise Data Office / EDO",
+      "title": "Anece Elakkari CONTRIBUTES_TO Enterprise Data Office / EDO",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-bd4322b575756b59cf8942a8842c",
+      "query_type": "title_exact",
+      "query_text": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR AI Software Engineering",
+      "title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR AI Software Engi",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-bd4322b575756b59cf8942a8842c",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR AI Software Engineering Rewire is a core business-transf?",
+      "title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR AI Software Engi",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-bd4322b575756b59cf8942a8842c",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR AI Software Engineering and how it connects to the broader strategic context",
+      "title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR AI Software Engi",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 4
+      },
+      "spread": 3,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-bd4322b575756b59cf8942a8842c",
+      "query_type": "partial",
+      "query_text": "Rewire business transformation mandate",
+      "title": "Rewire business transformation mandate CORE_MANDATE_CONTEXT_FOR AI Software Engi",
+      "found": true,
+      "ranks": {
+        "fused": 6,
+        "dense": 5,
+        "sparse": 5,
+        "colbert": 6,
+        "bm25": 3
+      },
+      "spread": 3,
+      "fused_rank": 6
+    },
+    {
+      "record_id": "retrieval-record-306a4c31c135648b18ac2ab3b5ea",
+      "query_type": "title_exact",
+      "query_text": "LENS OCR ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails",
+      "title": "LENS OCR ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrai",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-306a4c31c135648b18ac2ab3b5ea",
+      "query_type": "paraphrase",
+      "query_text": "What do we know about LENS OCR ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails LENS OCR is a first-class Q3 pod/char?",
+      "title": "LENS OCR ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrai",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-306a4c31c135648b18ac2ab3b5ea",
+      "query_type": "diluted",
+      "query_text": "I'm trying to understand the overall program landscape and was wondering if you could help me find information about LENS OCR ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrails and how it connects to the broader strategic context",
+      "title": "LENS OCR ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrai",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    },
+    {
+      "record_id": "retrieval-record-306a4c31c135648b18ac2ab3b5ea",
+      "query_type": "partial",
+      "query_text": "LENS OCR ROSTER_ROW_IN v17 NEA",
+      "title": "LENS OCR ROSTER_ROW_IN v17 NEA Q3 pod-charter roster and fixed-capacity guardrai",
+      "found": true,
+      "ranks": {
+        "fused": 1,
+        "dense": 1,
+        "sparse": 1,
+        "colbert": 1,
+        "bm25": 1
+      },
+      "spread": 0,
+      "fused_rank": 1
+    }
+  ]
+}

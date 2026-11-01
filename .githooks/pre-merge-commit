@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+SCRIPT_DIR=$(dirname "$0")
+. "$SCRIPT_DIR/_common.sh"
+cd "$ROOT"
+
+echo "Running pre-merge-commit receipt verification gate..."
+run_python -B tools/verify_merge_receipt.py
+echo "✅ Pre-merge-commit governance checks passed."

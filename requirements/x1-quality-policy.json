@@ -1,0 +1,27 @@
+{
+  "schema_version": "2.0.0",
+  "mode": "off",
+  "provider_egress_allowed": false,
+  "endpoint_template": "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+  "api_key_env": "GOOGLE_API_KEY",
+  "eligible_assurance_profiles": ["standard", "enhanced"],
+  "maximum_request_chars": 256000,
+  "challenger": {
+    "provider": "google",
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "medium",
+    "maximum_calls_per_run": 1,
+    "maximum_output_tokens": 1200
+  },
+  "judge": {
+    "provider": "google",
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "high",
+    "maximum_calls_per_run": 2,
+    "maximum_output_tokens": 1600
+  },
+  "content_repair": {
+    "maximum_calls_per_run": 1,
+    "eligible_assurance_profiles": ["enhanced"]
+  }
+}

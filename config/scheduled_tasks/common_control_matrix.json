@@ -1,0 +1,1768 @@
+{
+  "matrix_version": "1.0.0",
+  "contract_id": "urn:nee:scheduled-task-common-control-matrix:1.0.0",
+  "generated_at": "2026-10-06T19:40:00Z",
+  "common_control_clauses": [
+    "C01_TRUSTED_LAUNCH",
+    "C02_BOUNDED_AUTHORITY",
+    "C03_CHANGE_ACCOUNTING",
+    "C04_EVIDENCE_ACTION_OUTCOME",
+    "C05_DURABLE_IDENTITY_CLOSURE",
+    "C06_REPRODUCIBLE_RECONCILIATION",
+    "C07_HONEST_COVERAGE",
+    "C08_SEALED_EVIDENCE",
+    "C09_FAILURE_LIFECYCLE",
+    "C10_BOUNDED_REPEAT_EXECUTION",
+    "C11_TESTED_EXECUTABLE_BINDING",
+    "C12_PRESERVE_GUARDRAILS"
+  ],
+  "domain_repair_clauses": [
+    "D01_QUEUE_REPAIR",
+    "D02_INGESTION_RECOVERY",
+    "D03_QUERY_COVERAGE"
+  ],
+  "tasks": {
+    "knowledge_graph_hygiene": {
+      "prompt_path": "automations/prompts/graph_hygiene_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "OWNED",
+          "reason": "Owns shared repair package under configured patch scope."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "OWNED",
+          "reason": "Owns exact diagnosis and recovery package emission."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "OWNED",
+          "reason": "Owns requirement diagnostics and reproduced patch verification."
+        }
+      }
+    },
+    "storage_repository_hygiene": {
+      "prompt_path": "automations/prompts/storage_hygiene_agent.md",
+      "executable": "python -m tools.storage_hygiene_core.apply",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:is_staging_package_pinned",
+          "assertion": "Storage pins active in-flight packages against cleanup pruners."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Routes queue symptoms to shared owner; no bulk archival as repair."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Protects staging/recovery inputs and pins active packages."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "NOT_APPLICABLE",
+          "reason": "Not applicable to cleanup execution; routes incidental findings."
+        }
+      }
+    },
+    "weekly_market_intelligence": {
+      "prompt_path": "automations/prompts/weekly_market_intelligence_agent.md",
+      "executable": "python -m dual_pipeline.query_service",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Applies failure classification and routes shared defects."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Consumes exact package checks and resume lineage for ingestion."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Routes query coverage faults encountered without lowering thresholds."
+        }
+      }
+    },
+    "worktree_coverage_cleanup": {
+      "prompt_path": "automations/prompts/pr_queue_observer_agent.md",
+      "executable": "python tools/pr_governance.py inventory --json",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:is_staging_package_pinned",
+          "assertion": "Preserves worktrees and packages needed by active operations."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Routes repair worktree issues; no queue mutation."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Preserves worktrees and packages cited by open recovery records."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "NOT_APPLICABLE",
+          "reason": "Not applicable to worktree inventory; routes incidental findings."
+        }
+      }
+    },
+    "repository_antipattern_audit": {
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "executable": "python tools/lint_layer_imports.py",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Detects structural antipatterns and routes to shared owner."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Detects missing lineage controls and routes to shared action."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Detects guard bypasses and routes to shared action."
+        }
+      }
+    },
+    "ssot_drift_remediation": {
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "executable": "python automations/drift_guard.py",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Routes classifier drift without independent queue rewriting."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Verifies configuration alignment and routes lineage failures."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Detects threshold drift while preserving guard values."
+        }
+      }
+    },
+    "pr_queue_observer": {
+      "prompt_path": "automations/prompts/pr_queue_observer_agent.md",
+      "executable": "python tools/pr_governance.py inventory --json",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Strict observation only; forbidden from creating branches or mutating state."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Guarantees zero operational changes (0 delta across all categories)."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; observation cannot close defects."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Observes linked action status; no queue mutation."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified inventory runner without worktree modification."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Never creates repair branches or modifies PR queue directives."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Observes linked action status; no repair mutation."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Observes recovery work status; no resume or cancel."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Observes review status; no query coverage repair."
+        }
+      }
+    },
+    "cost_quality_review": {
+      "prompt_path": "automations/prompts/pipeline_outcome_assurance_agent.md",
+      "executable": "python -m tools.scheduled_task_core.adapters_core.audits",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Routes PR queue cost anomalies without mutating queue directives."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Routes ingestion token/model cost regressions to pipeline owners."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Routes retrieval quality degradation without modifying query engine."
+        }
+      }
+    },
+    "pipeline_outcome_assurance": {
+      "prompt_path": "automations/prompts/pipeline_outcome_assurance_agent.md",
+      "executable": "python -m tools.scheduled_task_core.adapters_core.audits",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Routes pipeline delivery blockers to PR queue governance."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Verifies pipeline stage completions and routes ingestion failures."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Audits retrieval and decision fidelity; routes coverage gaps."
+        }
+      }
+    },
+    "technical_debt_elimination": {
+      "prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "executable": "python -m tools.scheduled_task_core.adapters_core.intelligence",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Routes stale PR queue debt without direct queue mutation."
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Routes deprecated pipeline patterns without touching active ingestion."
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Routes query engine debt and obsolete mock dependencies."
+        }
+      }
+    },
+    "agentic_repo_best_practices_scout": {
+      "prompt_path": "automations/prompts/agentic_repo_best_practices_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Apply failure classification; route shared PR queue state to pr_queue_observer"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Preserve intake package checks and resume lineage; route ingestion recovery to pipeline_outcome_assurance"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Route query coverage faults without lowering retrieval gates; maintain strict separation between external reference playbooks and canonical project GraphDB"
+        }
+      }
+    },
+    "hotspot_value_enhancement": {
+      "prompt_path": "automations/prompts/hotspot_enhancement_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Analyze recurring bug-fix churn across CLI/PR lifecycle hotspots; route live PR queue state to pr_queue_observer"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Harden high-churn ingestion, healer, resume, and stage-handoff hotspots with true E2E runtime execution; route stalled live directives to pipeline_outcome_assurance"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Enhance GraphDB/sidecar write-gateway resilience, retrieval evaluation fidelity, and query/copilot runtime robustness"
+        }
+      }
+    },
+    "e2e_critical_functionality_assurance": {
+      "prompt_path": "automations/prompts/e2e_critical_functionality_assurance_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Audit CLI/IPC entrypoint wiring and worktree handoffs; route live queue state to pr_queue_observer"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Audit and repair U0-EVALS E2E stage handoffs, live recording IPC, and --resume checkpoints"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Audit and repair 16-table GraphDB/sidecar sync, W0/E0 release activation, and 8-route Query/Copilot/Decision API"
+        }
+      }
+    },
+    "retrieval_surface_assurance": {
+      "prompt_path": "automations/prompts/retrieval_surface_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Audit CLI/MCP/SDK retrieval entrypoint wiring and worktree handoffs; route live PR queue state to pr_queue_observer"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Verify post-ingestion retrieval visibility, offline context retrieval, and sidecar vector indexing parity; route stalled intake directives to pipeline_outcome_assurance"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Exhaustively audit all 7 repository retrieval surfaces, remediate 100% of retrieval functionality gaps first, and then execute the highest value-to-effort retrieval enhancements across every surface without mutating live production GraphDB prior to governed PR merge"
+        }
+      }
+    },
+    "evals_surface_assurance": {
+      "prompt_path": "automations/prompts/evals_surface_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Audit evaluation CLI/CI entrypoint wiring and worktree handoffs; route live PR queue state to pr_queue_observer"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Verify U0/L1/L0/C0-PA/L2/X1-X3 stage evaluator construct validity and Tier-1 replay evaluation fidelity; route stalled live intake directives to pipeline_outcome_assurance"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Exhaustively audit all 7 repository evaluation surfaces, verify that every evaluator measures the real production behavior it claims to measure without tautological or clamped shortcuts, and remediate 100% of construct-validity gaps first before applying high-ROI evaluation enhancements without mutating live production GraphDB prior to governed PR merge"
+        }
+      }
+    },
+    "testing_gaps_assurance": {
+      "prompt_path": "automations/prompts/testing_gaps_assurance_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Verify queue/worktree test coverage; route live queue state to pr_queue_observer"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Verify U0-EVALS E2E and Tier-1 replay tests; preserve active staging lineage"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Verify 11 BGE-M3 retrieval gate tests; route live coverage faults to knowledge_graph_hygiene"
+        }
+      }
+    },
+    "tokenomics_cost_optimization": {
+      "prompt_path": "automations/prompts/tokenomics_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Inspect cross-worktree cache reuse and retry waste; route queue state to pr_queue_observer"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Inspect stage token amplification and healer/judge retry burn; route ingestion recovery to pipeline_outcome_assurance"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Inspect query/extraction semantic cache hit rates and subgraph memoization without mutating live GraphDB"
+        }
+      }
+    },
+    "system_learning_assurance": {
+      "prompt_path": "automations/prompts/system_learning_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Audit CLI/MCP/SDK learning proposal and runtime outcome entrypoint wiring and worktree handoffs; route live PR queue state to pr_queue_observer"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Verify post-ingestion entity alias reconciliation, acoustic voiceprint speaker priors, operator correction feedback, temporal staleness decay learning, and runtime outcome emission parity; route stalled intake directives to pipeline_outcome_assurance"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Exhaustively audit all 8 repository system learning surfaces, remediate 100% of closed-loop learning functionality gaps first, and then execute the highest value-to-effort system learning enhancements across every surface without mutating live production GraphDB prior to governed PR merge"
+        }
+      }
+    },
+    "corner_foresight_blindspot_scout": {
+      "prompt_path": "automations/prompts/corner_foresight_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "ROUTED",
+          "reason": "Inspect cross-worktree collision horizons and forgotten branch work; route queue state to pr_queue_observer"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "ROUTED",
+          "reason": "Inspect unlinked source commitments and pending intake directives; route recovery execution to pipeline_outcome_assurance"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "ROUTED",
+          "reason": "Traverse Knowledge Graph for expiring decision frames, silent stakeholder drift, and uncorroborated single-source bets"
+        }
+      }
+    },
+    "nea_charter_portfolio_roster": {
+      "prompt_path": "automations/prompts/sidecars/nea_charter_portfolio_roster_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "NOT_APPLICABLE",
+          "reason": "NOT_APPLICABLE"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "NOT_APPLICABLE",
+          "reason": "NOT_APPLICABLE"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "OWNED",
+          "reason": "Owned (weekly charter portfolio and roster table)"
+        }
+      }
+    },
+    "google_partner_advisory_weekly_sync": {
+      "prompt_path": "automations/prompts/sidecars/google_partner_advisory_weekly_sync_agent.md",
+      "executable": "python -m tools.verify_scheduled_task_wave",
+      "common_controls": {
+        "C01_TRUSTED_LAUNCH": {
+          "implemented": true,
+          "reference": "authority.py:AuthorityContext",
+          "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+        },
+        "C02_BOUNDED_AUTHORITY": {
+          "implemented": true,
+          "reference": "authority.py:assert_can_mutate",
+          "assertion": "Discovery is strictly read-only; mutation requires operator token."
+        },
+        "C03_CHANGE_ACCOUNTING": {
+          "implemented": true,
+          "reference": "journal.py:OperationalChangeJournal",
+          "assertion": "Separately reports code, directive, graph, and file mutations."
+        },
+        "C04_EVIDENCE_ACTION_OUTCOME": {
+          "implemented": true,
+          "reference": "remediation_planner.py:synthesize_remediation_plan",
+          "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+        },
+        "C05_DURABLE_IDENTITY_CLOSURE": {
+          "implemented": true,
+          "reference": "findings.py:FalseClosureError",
+          "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+        },
+        "C06_REPRODUCIBLE_RECONCILIATION": {
+          "implemented": true,
+          "reference": "coverage.py:TypedCoverageReconciliation",
+          "assertion": "Single typed model renders JSON and Markdown identically."
+        },
+        "C07_HONEST_COVERAGE": {
+          "implemented": true,
+          "reference": "coverage.py:assert_honest_coverage",
+          "assertion": "Unreadable evidence remains in expected denominator."
+        },
+        "C08_SEALED_EVIDENCE": {
+          "implemented": true,
+          "reference": "remediation_planner.py:attach_plan_if_findings",
+          "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+        },
+        "C09_FAILURE_LIFECYCLE": {
+          "implemented": true,
+          "reference": "dlq.lifecycle:classify_failure",
+          "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+        },
+        "C10_BOUNDED_REPEAT_EXECUTION": {
+          "implemented": true,
+          "reference": "findings.py:record_observation",
+          "assertion": "Unchanged repeat runs update observation count without alerting."
+        },
+        "C11_TESTED_EXECUTABLE_BINDING": {
+          "implemented": true,
+          "reference": "verify_scheduled_task_wave.py",
+          "assertion": "Bound to qualified runner in isolated task-owned worktree."
+        },
+        "C12_PRESERVE_GUARDRAILS": {
+          "implemented": true,
+          "reference": "staging_recovery.py:validate_staging_package",
+          "assertion": "Maintains tenant, firewall, and graph schema invariants."
+        }
+      },
+      "domain_dispositions": {
+        "D01_QUEUE_REPAIR": {
+          "disposition": "NOT_APPLICABLE",
+          "reason": "NOT_APPLICABLE"
+        },
+        "D02_INGESTION_RECOVERY": {
+          "disposition": "NOT_APPLICABLE",
+          "reason": "NOT_APPLICABLE"
+        },
+        "D03_QUERY_COVERAGE": {
+          "disposition": "OWNED",
+          "reason": "Owned (weekly executive speaker notes and agenda)"
+        }
+      }
+    }
+  },
+  "default_common_controls": {
+    "C01_TRUSTED_LAUNCH": {
+      "implemented": true,
+      "reference": "authority.py:AuthorityContext",
+      "assertion": "Launch mode resolved exclusively by trusted invoker, not prompt text."
+    },
+    "C02_BOUNDED_AUTHORITY": {
+      "implemented": true,
+      "reference": "authority.py:assert_can_mutate",
+      "assertion": "Discovery is strictly read-only; mutation requires operator token."
+    },
+    "C03_CHANGE_ACCOUNTING": {
+      "implemented": true,
+      "reference": "journal.py:OperationalChangeJournal",
+      "assertion": "Separately reports code, directive, graph, and file mutations."
+    },
+    "C04_EVIDENCE_ACTION_OUTCOME": {
+      "implemented": true,
+      "reference": "remediation_planner.py:synthesize_remediation_plan",
+      "assertion": "Every actionable finding links to a validated wave-based implementation plan or tested patch."
+    },
+    "C05_DURABLE_IDENTITY_CLOSURE": {
+      "implemented": true,
+      "reference": "findings.py:FalseClosureError",
+      "assertion": "Preserves finding IDs; cancellation cannot satisfy repair closure."
+    },
+    "C06_REPRODUCIBLE_RECONCILIATION": {
+      "implemented": true,
+      "reference": "coverage.py:TypedCoverageReconciliation",
+      "assertion": "Single typed model renders JSON and Markdown identically."
+    },
+    "C07_HONEST_COVERAGE": {
+      "implemented": true,
+      "reference": "coverage.py:assert_honest_coverage",
+      "assertion": "Unreadable evidence remains in expected denominator."
+    },
+    "C08_SEALED_EVIDENCE": {
+      "implemented": true,
+      "reference": "remediation_planner.py:attach_plan_if_findings",
+      "assertion": "Final report, validated implementation plan, and cited artifacts sealed with SHA-256 digests."
+    },
+    "C09_FAILURE_LIFECYCLE": {
+      "implemented": true,
+      "reference": "dlq.lifecycle:classify_failure",
+      "assertion": "Classifies errors; approval waits do not produce duplicate incidents."
+    },
+    "C10_BOUNDED_REPEAT_EXECUTION": {
+      "implemented": true,
+      "reference": "findings.py:record_observation",
+      "assertion": "Unchanged repeat runs update observation count without alerting."
+    },
+    "C11_TESTED_EXECUTABLE_BINDING": {
+      "implemented": true,
+      "reference": "verify_scheduled_task_wave.py",
+      "assertion": "Bound to qualified runner in isolated task-owned worktree."
+    },
+    "C12_PRESERVE_GUARDRAILS": {
+      "implemented": true,
+      "reference": "staging_recovery.py:validate_staging_package",
+      "assertion": "Maintains tenant, firewall, and graph schema invariants."
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-86cd80aa1e9d978087217efb1eda",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "9d2f08366a6c35283d18c74bce84add1e154495e21d6ac68865106fb2a7d240a"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-12d16f2564220707ebf01c15"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "Amit Ayer is an identified stakeholder in Document 20261002 Prf Sow Scope Alignment.",
+      "proposed_value": "Amit Ayer is an identified stakeholder in 20261005 Lens Scope Review.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-ef7763f9c0effad54792b015dc32"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-fe8934f8f5dd3c91f5c2228f8a23",
+      "assertion_id_older": "assertion-ef7763f9c0effad54792b015dc32",
+      "confidence_coexist": 0.35,
+      "confidence_supersede": 0.85,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": false,
+      "margin_delta": 0.5,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "person_amit",
+      "timestamp_newer": "2026-10-05",
+      "timestamp_older": "2026-10-02"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'Amit Ayer' (HAS_CLAIM_TEXT). Older claim from 2026-10-02 superseded by newer claim from 2026-10-05.",
+  "proposal_id": "calibration-proposal-86cd80aa1e9d978087217efb1eda",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-ef7763f9c0effad54792b015dc32 from Amit Ayer is an identified stakeholder in Document 20261002 Prf Sow Scope Alignment. to Amit Ayer is an identified stakeholder in 20261005 Lens Scope Review.. Requires governed approval before release.",
+  "risk": "low",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-7c8fe03c78edc0df7772e09a9a1c",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "a5a76818c935a639b047533dcff5469af79ac8e1b73dcaa246467dcdc370c3b9"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-e1670bb7f8fb23fe7076e092"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "**Amit Ayer:** let's just say notifying that means you route the rejected items directly into an actionable rejected or retake review queue, and there's clear visual badging of that, right? And you have the reason codes. And... Basically, every rejected photo, whether caught by like, you know, we're going to put this stage 0 quality gate that takes out all the blurring or, you know, if there's like, we'll do some manual flags that gets a standardized reason code. And it sits in the reviewer queue. So Atlas has 100% auditability on what failed and why.",
+      "proposed_value": "**Jake Stark:** Yeah, I mean, this first section is just about intake. I don't think it's a big part of, you know, what the actual solution that we're delivering, but the meat of it is this asset pipeline down here where we have distinct steps, which is download, extract, assess, refine, and then write to the database. And then. The big three is our extraction, assess, and then refine. So we have two models that extract all of this Ocr information, and then there is some, let's call it like... Um... Gate like pre like. pre-assessment gate checks for images that shouldn't be let into the pipeline that are otherwise unusable because of glare, blur, something like that. And then those get kicked to just like a rejection status. So one thing we should probably. Discuss what this is. How we're gonna like. kick that back to their, like for another work order or something to like retake a photo that needs to be, you know, redone. But in the moment, as it is today, it'll just mark it as rejected in our system so that it doesn't go through the rest of the steps. Let's see, then we have our assessment stage.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-893bcba3a637bfb3ce0b675748a4"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-53fb97970c98ab43582f30d5c64c",
+      "assertion_id_older": "assertion-893bcba3a637bfb3ce0b675748a4",
+      "confidence_coexist": 0.45,
+      "confidence_supersede": 0.55,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": true,
+      "margin_delta": 0.1,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-09-30",
+      "timestamp_older": "2026-09-30"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-09-30 superseded by newer claim from 2026-09-30.",
+  "proposal_id": "calibration-proposal-7c8fe03c78edc0df7772e09a9a1c",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-893bcba3a637bfb3ce0b675748a4 from **Amit Ayer:** let's just say notifying that means you route the rejected items directly into an actionable rejected or retake review queue, and there's clear visual badging of that, right? And you have the reason codes. And... Basically, every rejected photo, whether caught by like, you know, we're going to put this stage 0 quality gate that takes out all the blurring or, you know, if there's like, we'll do some manual flags that gets a standardized reason code. And it sits in the reviewer queue. So Atlas has 100% auditability on what failed and why. to **Jake Stark:** Yeah, I mean, this first section is just about intake. I don't think it's a big part of, you know, what the actual solution that we're delivering, but the meat of it is this asset pipeline down here where we have distinct steps, which is download, extract, assess, refine, and then write to the database. And then. The big three is our extraction, assess, and then refine. So we have two models that extract all of this Ocr information, and then there is some, let's call it like... Um... Gate like pre like. pre-assessment gate checks for images that shouldn't be let into the pipeline that are otherwise unusable because of glare, blur, something like that. And then those get kicked to just like a rejection status. So one thing we should probably. Discuss what this is. How we're gonna like. kick that back to their, like for another work order or something to like retake a photo that needs to be, you know, redone. But in the moment, as it is today, it'll just mark it as rejected in our system so that it doesn't go through the rest of the steps. Let's see, then we have our assessment stage.. Requires governed approval before release.",
+  "risk": "medium",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

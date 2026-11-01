@@ -1,0 +1,22 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:claim-evidence-map:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "claim-evidence-map-fixture",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "f7a5b1aba85d4e858dc20cad34337fdee30ada26af5134166e74df8b92a0816b"},
+  "map_id": "claim-evidence-map-fixture",
+  "run_id": "run-query-evidence-fixture",
+  "validated_request_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "query_plan_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "coverage_manifest_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+  "evidence_report_digest": "7777777777777777777777777777777777777777777777777777777777777777",
+  "evidence_packet_digest": "6666666666666666666666666666666666666666666666666666666666666666",
+  "graph_snapshot": "graph-snapshot-evidence-fixture",
+  "graph_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "authorization_scope_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+  "answer_digest": "8888888888888888888888888888888888888888888888888888888888888888",
+  "claims": [
+    {"claim_id": "claim-a2a-forward", "claim_kind": "factual", "materiality": "high", "status": "grounded", "directional_claim": true, "evidence": [{"record_id": "retrieval-record-a2a", "lane": "approved", "answer_use": "factual_answer", "traversal_direction": "forward"}]},
+    {"claim_id": "claim-gap", "claim_kind": "gap", "materiality": "medium", "status": "explicit_gap", "directional_claim": false, "evidence": []}
+  ],
+  "extensions": {}
+}

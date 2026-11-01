@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "uwg-promotion-qualification-policy",
+  "policy_version": "1.0.0",
+  "owner": "NEE Knowledge Governance",
+  "thresholds": {
+    "top_k": 1,
+    "min_recall_at_k": 1,
+    "min_mrr": 1,
+    "max_latency_ms": 5000,
+    "max_negative_leakage_rate": 0,
+    "max_lane_leakage_rate": 0,
+    "max_acl_leakage_rate": 0
+  }
+}

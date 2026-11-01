@@ -1,0 +1,86 @@
+{
+  "artifact_id": "connected-evidence-map-invalid-auto-mutation",
+  "automatic_graph_mutation_count": 1,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "f369bf18c3eab5a104f343d6c63318dc6831618d71348e4e2c9a813543329886"
+  },
+  "contract_id": "urn:nee:dual-pipeline:connected-evidence-map:1.0.0",
+  "counterevidence": [],
+  "extensions": {},
+  "gaps": [
+    "No governed counterevidence was found within the selected connected scope."
+  ],
+  "graph_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "graph_snapshot": "graph-snapshot-fixture",
+  "map_id": "connected-evidence-map-invalid-auto-mutation",
+  "max_hop_reached": 0,
+  "metrics": {
+    "bm25_seed_count": 1,
+    "branch_suppression_count": 0,
+    "candidate_context_count": 0,
+    "counterevidence_count": 0,
+    "expanded_record_count": 0,
+    "hub_edge_suppression_count": 0,
+    "isolated_seed_count": 1,
+    "missing_evidence_count": 0,
+    "navigation_edge_suppression_count": 0,
+    "navigation_record_suppression_count": 0,
+    "opportunity_context_count": 0,
+    "path_count": 1,
+    "reached_node_count": 1,
+    "relationship_family_count": 0,
+    "seed_record_count": 1,
+    "selected_record_count": 1
+  },
+  "paths": [
+    {
+      "attachment_kind": "seed",
+      "hop_count": 0,
+      "lane": "approved",
+      "origin": "hybrid_seed",
+      "path_id": "connected-path-invalid-auto-mutation",
+      "path_score": 0.5,
+      "seed_record_id": "retrieval-record-fixture",
+      "steps": [],
+      "target_assertion_id": "assertion-fixture",
+      "target_record_id": "retrieval-record-fixture",
+      "topology_score": 1.0
+    }
+  ],
+  "query_plan_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "requested_hops": 3,
+  "retrieval_policy": {
+    "excluded_node_types": [
+      "card"
+    ],
+    "excluded_relationship_families": [
+      "ROUTES_TO"
+    ],
+    "hub_degree_threshold": 12,
+    "maximum_expanded_records": 24,
+    "maximum_hops": 3,
+    "maximum_node_fanout": 12,
+    "maximum_records_per_bridge_node": 3,
+    "maximum_seed_records": 20,
+    "policy_digest": "da08e05db9172be43545c0486db206463e7002c94b9aa7b069930e2b8c298c48",
+    "policy_id": "typed-connected-evidence-v1",
+    "policy_version": "1.0.0",
+    "terminal_node_types": [
+      "source"
+    ]
+  },
+  "run_id": "run-connected-evidence-invalid-auto-mutation",
+  "schema_version": "1.0.0",
+  "seed_record_ids": [
+    "retrieval-record-fixture"
+  ],
+  "selected_record_ids_by_lane": {
+    "approved": [
+      "retrieval-record-fixture"
+    ],
+    "candidate": [],
+    "external_public": []
+  }
+}

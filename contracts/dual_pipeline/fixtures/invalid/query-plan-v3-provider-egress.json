@@ -1,0 +1,99 @@
+{
+  "allowed_lanes": [
+    "approved"
+  ],
+  "allowed_provider_class": "openai",
+  "artifact_id": "query-plan-v3-fixture",
+  "artifact_type": "architecture_deck",
+  "assurance_profile": "enhanced",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "f79bfd2f6e2d2b625ebba9c71e6b0504648d7d3ae3595a88fa9b7300905951ac"
+  },
+  "contract_id": "urn:nee:dual-pipeline:query-plan:3.0.0",
+  "controller": {
+    "action_allowlist": [
+      "stop"
+    ],
+    "aggregate_budget": {
+      "max_actions": 2,
+      "max_additional_attempts": 1,
+      "max_elapsed_ms": 30000,
+      "max_result_bytes": 100000,
+      "max_unique_records": 50
+    },
+    "coverage_manifest_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+    "initial_action_ids": [
+      "initial-retrieval"
+    ],
+    "mode": "off",
+    "policy_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+    "progress_rule": "newly_covered_material_requirements",
+    "terminal_predicates": [
+      "coverage_complete",
+      "explicit_gap",
+      "no_progress",
+      "budget_exhausted",
+      "unauthorized",
+      "conflict",
+      "hitl_required",
+      "shadow"
+    ]
+  },
+  "delivery_profile": "client_executive",
+  "destination": "NEE_DECISION_INTELLIGENCE",
+  "destination_decision_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "evidence_requirements": [
+    "business case",
+    "current state",
+    "A2A patterns",
+    "risks and gaps"
+  ],
+  "exit_criteria": [
+    "requirement-specific coverage complete",
+    "runtime X1 judge passes",
+    "client architecture gates pass"
+  ],
+  "extensions": {},
+  "external_research": "denied",
+  "l2_policy": "required",
+  "l2_policy_reason": "A material graph-dependent architecture decision requires governed synthesis.",
+  "materiality": "high",
+  "maximum_challenger_calls": 1,
+  "maximum_judge_calls": 2,
+  "maximum_primary_calls": 1,
+  "maximum_repair_calls": 1,
+  "output_schema": "nee-governed-answer-2.0.0",
+  "plan_id": "query-plan-v3-fixture",
+  "primary_entities": [
+    "Project Beacon"
+  ],
+  "prompt_blueprint": "nee_decision_intelligence_v2",
+  "provider_egress_allowed": true,
+  "query_type": "cross_workstream_synthesis",
+  "relationships_to_inspect": [
+    "approved and candidate A2A patterns",
+    "current-state constraints"
+  ],
+  "request_id": "request-query-plan-v2",
+  "required_output_schema": "nee-governed-answer-2.0.0",
+  "retrieval": {
+    "bm25": true,
+    "connected_evidence_selection": true,
+    "exact_anchors": true,
+    "graph_hops": 3,
+    "lane_blending": false,
+    "semantic": true,
+    "typed_path_expansion": true
+  },
+  "retrieval_mode": "factual",
+  "run_id": "run-query-plan-v2",
+  "schema_version": "3.0.0",
+  "subquestions": [
+    "What decision should be made?",
+    "What governed evidence supports it?"
+  ],
+  "time_horizon": "future state",
+  "trace_id": "0123456789abcdef0123456789abcdef"
+}

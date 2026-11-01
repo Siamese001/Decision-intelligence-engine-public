@@ -1,0 +1,19 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "invalid-learning-auto-apply",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "796e146efec2a7763c9ecdb4a4dc06401ca883105b4eddfc59d5f7d48bd72bed"},
+  "proposal_id": "proposal-invalid-auto-apply",
+  "run_ids": ["run-invalid-auto-apply"],
+  "proposal_type": "threshold",
+  "status": "proposed",
+  "problem": "A threshold may need evaluation.",
+  "evidence_event_ids": ["event-invalid-auto-apply"],
+  "proposed_change": "Change the entity threshold without review.",
+  "evaluation_plan": ["Skip isolated evaluation"],
+  "risk": "high",
+  "approval_required": false,
+  "auto_apply": true,
+  "created_at": "2026-07-21T15:00:00Z",
+  "extensions": {}
+}

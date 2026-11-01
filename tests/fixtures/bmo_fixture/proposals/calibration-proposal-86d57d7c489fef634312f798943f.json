@@ -1,0 +1,51 @@
+{
+  "approval_required": true,
+  "artifact_id": "calibration-proposal-86d57d7c489fef634312f798943f",
+  "auto_apply": false,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "fb22993e49482954866ccbb3103b13aebfbf77cbff77a6b36344525371099901"
+  },
+  "contract_id": "urn:nee:dual-pipeline:learning-change-proposal:1.0.0",
+  "created_at": "2026-10-12T18:54:11Z",
+  "evaluation_plan": [
+    "Verify supersession history in assertion audit table",
+    "Validate affected retrieval queries for currentness precision"
+  ],
+  "evidence_event_ids": [
+    "evidence-supersession-d86bca312e0295553fc08060"
+  ],
+  "extensions": {
+    "com.partner_advisory.nee.calibration": {
+      "auto_mutation_permitted": false,
+      "current_value": "**Jennifer Pan:** So that's what I would say I advocate for in terms of changing, right, or changing the scope is that notification or messaging process. I don't think there's anyone at the time, whether it's Conduit or Maximo, that's ready for us to Ready to accept something that we send. So that's where our advocates say like, yes, the Sal says that we'd send Ed notification or someone would be notified. We advocate that we remove it from scope at this time.",
+      "proposed_value": "**Amit Ayer:** All right, Lens pipeline. Why don't we pull up the pipeline and go through like, you know, we can start with that ASCII probably that was from Claude. And, you know, I had some comments. I think you had said another version, Jake and Alex, I think you had some good pushback. Why don't we just align on everything we need to do to to finalize this because I just want to have a single source of truth. If the client says, show us your pipeline, right? I want to be able to pull something up. It can be very, it's not to be beautiful, right, but just something sketched out that has all the details. I'll have to expand this, okay. Okay, Jake, do you want to go through? certain sections or do you want to, maybe we just go through everything at a high level and focus on the questions that I had that works or if there are any, you know, if anyone else wants to focus on any other pieces, let's just, let's just solidify this now.",
+      "requires_release_gate": true,
+      "target_parameter": "supersede_assertion:assertion-e2c19836b70f31298c7a99999d2f"
+    },
+    "com.partner_advisory.nee.graph-scout": {
+      "assertion_id_newer": "assertion-902d7ad1ff718bb900a400274254",
+      "assertion_id_older": "assertion-e2c19836b70f31298c7a99999d2f",
+      "confidence_coexist": 0.45,
+      "confidence_supersede": 0.55,
+      "finding_type": "temporal_contradiction",
+      "hitl_required": true,
+      "margin_delta": 0.1,
+      "predicate": "HAS_CLAIM_TEXT",
+      "subject_node_id": "workstream_lens",
+      "timestamp_newer": "2026-09-30",
+      "timestamp_older": "2026-09-30"
+    }
+  },
+  "problem": "Temporal contradiction detected on 'LENS' (HAS_CLAIM_TEXT). Older claim from 2026-09-30 superseded by newer claim from 2026-09-30.",
+  "proposal_id": "calibration-proposal-86d57d7c489fef634312f798943f",
+  "proposal_type": "workflow",
+  "proposed_change": "Calibrate supersede_assertion:assertion-e2c19836b70f31298c7a99999d2f from **Jennifer Pan:** So that's what I would say I advocate for in terms of changing, right, or changing the scope is that notification or messaging process. I don't think there's anyone at the time, whether it's Conduit or Maximo, that's ready for us to Ready to accept something that we send. So that's where our advocates say like, yes, the Sal says that we'd send Ed notification or someone would be notified. We advocate that we remove it from scope at this time. to **Amit Ayer:** All right, Lens pipeline. Why don't we pull up the pipeline and go through like, you know, we can start with that ASCII probably that was from Claude. And, you know, I had some comments. I think you had said another version, Jake and Alex, I think you had some good pushback. Why don't we just align on everything we need to do to to finalize this because I just want to have a single source of truth. If the client says, show us your pipeline, right? I want to be able to pull something up. It can be very, it's not to be beautiful, right, but just something sketched out that has all the details. I'll have to expand this, okay. Okay, Jake, do you want to go through? certain sections or do you want to, maybe we just go through everything at a high level and focus on the questions that I had that works or if there are any, you know, if anyone else wants to focus on any other pieces, let's just, let's just solidify this now.. Requires governed approval before release.",
+  "risk": "medium",
+  "run_ids": [
+    "directive-bmo-james_beebe_business_management_office_product_rd_org_structure-10-12-2026-v1"
+  ],
+  "schema_version": "1.0.0",
+  "status": "proposed"
+}

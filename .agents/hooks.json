@@ -1,0 +1,880 @@
+{
+  "nee-hitl-atomic-guard": {
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "python3 scripts/hitl_post_invocation_guard.py",
+        "timeout": 10
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "ask_question|ask_user_question|write_to_file|replace_file_content|edit_file|write_file|multi_replace_file_content|run_command|call_mcp_tool",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 scripts/hitl_pre_tool_guard.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "ask_question|ask_user_question",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 scripts/hitl_post_tool_ledger_writer.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostInvocation": [
+      {
+        "type": "command",
+        "command": "python3 scripts/hitl_post_invocation_guard.py",
+        "timeout": 10
+      }
+    ]
+  },
+  "hooks": [
+    {
+      "id": "nee-pre-mutation-guard",
+      "event": "pre_tool_call",
+      "description": "Before any run_command that invokes a graph-mutating nee CLI command, verify that an open directive exists with bound approval and execution is inside an isolated .worktrees/<slug> directory. This enforces the AGENTS.md controls: approval before mutation and worktree isolation.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "nee intake-publish",
+          "intake-publish",
+          "nee intake-directive-open",
+          "nee release-prepare",
+          "nee release-activate",
+          "nee activate-"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before executing a graph-mutating command, verify: (1) execution is occurring within an isolated worktree (.worktrees/<slug>) rather than directly on the primary repository root (main), (2) an ingestion directive is open with a bound approval, (3) all prior intake stages completed, (4) the pre-mutation gate passes. If any check fails, warn the user and request explicit authorization before proceeding, or allow active ingestion to register a durable approval request without mutating the graph.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-prohibited-command-guard",
+      "event": "pre_tool_call",
+      "description": "Before any run_command execution, intercept dangerous unindexed shell searches (grep -r, grep -ri, find ., rg) targeting output/, dual_pipeline/, or root. Enforces fail-closed blocking with ProhibitedQueryPatternError and directs to GraphDB inspection tools.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "grep -r",
+          "grep -ri",
+          "grep -R",
+          "grep -rni",
+          "grep --recursive",
+          "rg ",
+          "ripgrep ",
+          "find .",
+          "find output",
+          "find dual_pipeline",
+          "ag ",
+          "ack "
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before executing any shell search command: (1) check if command uses unindexed recursive search (grep -r, grep -ri, rg, find) targeting output/, dual_pipeline/, or workspace root, (2) BLOCK the execution immediately if matched — this violates Rule 5 (Scope Containment) and causes severe I/O exhaustion, non-deterministic text parsing, and bypasses entity resolution and assertion confidence, (3) direct the agent to use governed GraphDB tools instead: graphdb_read_query for direct SQLite indexing, nee_query for semantic retrieval, or EvidenceLocatorService for byte/line offset artifact inspection.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-anti-bypass-direct-graph-write-guard",
+      "event": "pre_tool_call",
+      "description": "Before any run_command execution, intercept and block ad-hoc python -c snippets, scripts, or sqlite3 shell commands that attempt direct graph mutation, import graph-mutating functions (e.g. apply_visual_org_projection_to_graph), or execute direct write queries against *.sqlite. Enforces the AGENTS.md invariant: graph mutations must route through operator approval via ask_user_question and Universal Write Gateway activation.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "apply_visual_org_projection_to_graph",
+          "apply_projection",
+          "python.*-c.*dual_pipeline.*graph",
+          "python.*-c.*sqlite.*execute.*INSERT",
+          "python.*-c.*sqlite.*execute.*UPDATE",
+          "python.*-c.*sqlite.*execute.*DELETE",
+          "sqlite3.*\\.sqlite.*INSERT",
+          "sqlite3.*\\.sqlite.*UPDATE",
+          "sqlite3.*\\.sqlite.*DELETE"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "BLOCK immediately if a command attempts direct ad-hoc graph mutation or invokes internal write helpers via python -c or sqlite3 CLI outside the governed intake pipeline (nee intake-* / nee ingest-*). Graph mutations MUST pass through operator approval via ask_user_question and UniversalWriteGateway activation.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-post-ingestion-receipt",
+      "event": "post_tool_call",
+      "description": "After any ingestion completion command, verify the receipt and update the wave ledger if a wave plan is active.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "nee intake-publish",
+          "nee intake-directive-publish",
+          "intake-publish",
+          "ingest-meeting"
+        ]
+      },
+      "action": "verify_and_log",
+      "instructions": "After an ingestion completion command, verify: (1) the receipt is digest-valid and approval-bound, (2) the activation receipt matches active_pair.json, (3) if a wave plan is active, update the wave ledger with the receipt identifier and validation result. If the run ended with AWAITING_APPROVAL, verify that a durable approval request was registered and graph mutation was not committed. Report the directive ID, run IDs, receipt digest, terminal outcome, and active generation.",
+      "severity": "informational"
+    },
+    {
+      "id": "nee-preview-pass-activation-prompt-hook",
+      "event": "post_tool_call",
+      "description": "After an ingestion preview pass or live replay completes (PASS or partial-pass/circuit-breaker halt), prompt the operator via ask_user_question for disposition.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "ingest-meeting",
+          "ingest-document",
+          "dual_pipeline.cli ingest",
+          "nee ingest"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Whenever an ingestion preview pass completes without --mutate-graph and passes all QA gates (receipt terminal outcome PASS/COMPLETE, graph_mutated=false, intake_package generated): PROMPT the human operator immediately via ask_user_question with structured clickable options to authorize triggering graph activation (nee intake-publish on the staged intake package). Whenever an ingestion or live replay exits with a partial pass or rubric circuit-breaker halt where competing next steps exist (e.g. rubric tuning vs PR promotion), PROMPT the operator via ask_user_question with calibrated confidence options; never conclude the turn with plain-text 'we can X, or Y' prose.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-classification-check",
+      "event": "pre_tool_call",
+      "description": "Before preparing any intake package, verify source material has been classified per pre-intake-classification-policy.json.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "tools/prepare_",
+          "prepare_copilot_intake",
+          "prepare_markdown_source",
+          "prepare_docx_source",
+          "prepare_html_source",
+          "prepare_pdf_source",
+          "prepare_google_meet"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before preparing an intake package, check the source material against the classification patterns in policy/pre-intake-classification-policy.json. If restricted patterns are detected (private keys, cloud access keys, credential tokens), block the operation. If confidential patterns are detected, warn the user and require acknowledgment.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-retrieval-release-eval-guard",
+      "event": "pre_tool_call",
+      "description": "Before running retrieval-release-evaluate or activating a release, verify scoped delta resolution, query caching, and passing evaluation evidence.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "retrieval-release-evaluate",
+          "release-activate",
+          "intake-release-activate"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before evaluating or activating a release: (1) verify that retrieval release delta calculation is scoped to component run operations to prevent phantom regressions from legacy baseline clearance filtering, (2) ensure query encoding caching is enabled during evaluation to protect against CPU starvation and query latency timeouts, (3) verify that all 11 evaluation gates pass before executing release-activate.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-hitl-atomic-guard",
+      "event": "pre_tool_call",
+      "description": "Before presenting any operator decision, verify one-at-a-time per the AGENTS.md rule for atomic, optionated, confidence-scored decisions. Enforce enumerated options and calibrated confidence. The hook also fires when writing implementation_plan.md so design decisions with delta <= 20% (needs_operator_decision) are resolved via ask_user_question before Proceed is offered.",
+      "match": {
+        "tool": "ask_user_question",
+        "also_match": [
+          {
+            "tool": "write_to_file",
+            "path_pattern": "implementation_plan.md"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "implementation_plan.md"
+          },
+          {
+            "tool": "ask_question"
+          }
+        ],
+        "command_patterns": [
+          "ask_user_question",
+          "hitl-clarification",
+          "hitl-decision",
+          "intake-review"
+        ]
+      },
+      "action": "verify_and_warn",
+      "type": "command",
+      "command": "python3 scripts/hitl_pre_tool_guard.py",
+      "timeout": 10,
+      "instructions": "For ask_user_question calls: (1) verify only ONE decision is presented at a time (never bundle), (2) verify explicit mutually exclusive options are enumerated as interactive arguments (not plain text markdown), (3) verify every option has an assigned confidence level with evidence. For implementation_plan.md writes: (1) scan for Open Questions section — if present, verify each question either has delta > 20% documented (autonomous decision) or has already been resolved via ask_user_question with a receipt. If unscored design decisions are present, BLOCK the write and present them via ask_user_question first, individually.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-hitl-ledger-capture",
+      "event": "post_tool_call",
+      "description": "After ask_user_question returns an operator response, verify authentic human origin and persist the resolution into hitl_decision_ledger.json with cryptographic hashing and emit learning_event telemetry.",
+      "match": {
+        "tool": "ask_user_question",
+        "command_patterns": [],
+        "also_match": [
+          {
+            "tool": "ask_question"
+          }
+        ]
+      },
+      "action": "verify_and_log",
+      "type": "command",
+      "command": "python3 scripts/hitl_post_tool_ledger_writer.py",
+      "timeout": 10,
+      "instructions": "Upon receiving ask_user_question result: (1) validate human operator origin via validate_approval_origin(), (2) record the decision, prompt, options, selected option, and outcome type in hitl_decision_ledger.json under file locking, (3) verify Merkle digest chaining and SQLite store synchronization, (4) emit H3 telemetry event.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-pre-wave-decision-guard",
+      "event": "pre_tool_call",
+      "description": "Before executing any wave gate runner, test execution, or sealing wave receipts, invoke tools/pre_wave_decision_gate.py to intercept unratified decisions. If exit code 2 is returned, halts autonomous execution and forces interactive ask_user_question surfacing.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "tools/run_wave_gate.py",
+          "tools/record_wave_receipt.py",
+          "run_wave_gate",
+          "record_wave_receipt"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before running wave execution or recording receipts: (1) execute python tools/pre_wave_decision_gate.py --wave <N>, (2) if the gate exits with code 2, HALT immediately and surface the formatted ask_user_question payload to the user, (3) do not proceed to test execution or receipt sealing until the user has resolved all open decisions via ask_user_question.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-transcript-synthesis-guard",
+      "event": "pre_tool_call",
+      "description": "Before preparing an evidence envelope package from meeting transcripts or running transcript synthesis, verify conformance to RAW_TRANSCRIPT_SYNTHESIS_PROMPT_V5_7.md (three required artifacts, downloadable links only, closed-enum kinds, Negative Exclusion Filter, and W2/W3 constraints).",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "prepare_evidence_envelope_intake",
+          "transcript_synthesis",
+          "canonical_signal_projection"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before finalizing an intake package from meeting transcripts: (1) verify that all three required artifacts exist (01_hitl_resolved_transcript.md, 02_executive_recap.md, 03_canonical_signal_projection.json), (2) verify that 03_canonical_signal_projection.json conforms to evidence-envelope-intake.schema.json and contains W3 temporal fields (observed_at, stale_after), (3) verify that classification and audiences are populated, (4) verify that no inline dumps were produced.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-implementation-plan-guard",
+      "event": "pre_tool_call",
+      "description": "Before writing or editing any wave-based implementation plan, enforce the bounded word budget and per-wave execution evidence contract as well as sequential wave structure and required sections.",
+      "match": {
+        "tool": "write_to_file",
+        "path_pattern": "implementation_plan.md",
+        "also_match": [
+          {
+            "tool": "write_to_file",
+            "path_pattern": "docs/plans/"
+          },
+          {
+            "tool": "write_to_file",
+            "path_pattern": "documentation/"
+          },
+          {
+            "tool": "write_to_file",
+            "path_pattern": ".md"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "implementation_plan.md"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "docs/plans/"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "documentation/"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": ".md"
+          },
+          {
+            "tool": "run_command",
+            "command_patterns": [
+              ".md",
+              "implementation_plan.md",
+              "_plan.md",
+              "wave_plan",
+              "/plans/"
+            ]
+          }
+        ],
+        "command_patterns": []
+      },
+      "action": "verify_and_warn",
+      "instructions": "For any Markdown write or edit, first determine whether the content is a wave-based or implementation plan; if not, proceed normally. For plans: (1) keep it to the shortest useful length, target 500-800 words and hard-cap it at 1,000 words including headings and tables for 1-2 wave plans (scaling up to min(2500, max(1000, 400 + 250*N_waves + 25*M_items)) words for complex multi-wave plans, with HITL decision tables exempt), (2) require sequential wave headings and Objective & Scope, Milestones & Deliverables, Acceptance Criteria, and Runtime Receipt & Completion Gate in every wave, (3) make each Acceptance Criteria section test working behavior with a representative input and an observable expected result, (4) require these explicit fields inside every completion gate: 'Run:', 'Input:', 'Expected:', 'Verify independently:', 'Fail if:', and 'Record:', (5) reject receipts, mocks, status fields, or generated summaries as sole proof; the run's behavior must be checked independently, and simulations must be labeled, (6) block progression when any declared run or criterion fails. After writing, run 'python tools/validate_implementation_plan.py --file <path>'; fix any failure before execution. Staged plans are checked again by the pre-commit validator. If this tool call only runs the plan validator, allow it without recursively treating it as a plan write.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-implementation-plan-postwrite-validation",
+      "event": "post_tool_call",
+      "description": "After creating or editing a wave-based implementation plan, mechanically validate its word budget, wave structure, and per-wave execution evidence fields before any wave begins.",
+      "match": {
+        "tool": "write_to_file",
+        "path_pattern": "implementation_plan.md",
+        "also_match": [
+          {
+            "tool": "write_to_file",
+            "path_pattern": "docs/plans/"
+          },
+          {
+            "tool": "write_to_file",
+            "path_pattern": "documentation/"
+          },
+          {
+            "tool": "write_to_file",
+            "path_pattern": ".md"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "implementation_plan.md"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "docs/plans/"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "documentation/"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": ".md"
+          },
+          {
+            "tool": "run_command",
+            "command_patterns": [
+              ".md",
+              "implementation_plan.md",
+              "_plan.md",
+              "wave_plan",
+              "/plans/"
+            ]
+          }
+        ],
+        "command_patterns": []
+      },
+      "action": "verify_and_warn",
+      "instructions": "After a Markdown file is created or modified, determine whether it is a wave-based or implementation plan. If not, take no action. For a plan, run 'python tools/validate_implementation_plan.py --file <path>'. If it fails, repair the plan and rerun the validator before wave execution or progression. Do not mark a wave complete from a receipt alone; confirm independently observed behavior and retain the run evidence. Skip this hook when the command itself is the validator to prevent recursion.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-wave-progression-guard",
+      "event": "pre_tool_call",
+      "description": "Before claiming wave completion or proceeding across a wave boundary, verify acceptance criteria against independently observed behavior, preserve run provenance, and enforce the decision gate.",
+      "match": {
+        "tool": "run_command",
+        "also_match": [
+          {
+            "tool": "write_to_file",
+            "path_pattern": "dual_pipeline/"
+          },
+          {
+            "tool": "write_to_file",
+            "path_pattern": "tests/"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "dual_pipeline/"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "tests/"
+          }
+        ],
+        "command_patterns": [
+          "wave-complete",
+          "wave-progress",
+          "wave-ledger",
+          "pytest",
+          "-m pytest"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before marking Wave N complete or proceeding to Wave N+1: (1) inspect the actual run output and independently verify the promised behavior/state with the declared input, (2) confirm every criterion and milestone passed; a receipt, mocked result, self-reported status, or generated summary alone is insufficient, (3) keep failures/retries visible and record exact run provenance plus raw evidence links, (4) verify all prior waves are COMPLETE in the ledger, (5) block code modification or tests for Wave N+1 while Wave N is OPEN or BLOCKED, (6) verify required HITL decisions are resolved, and (7) confirm the test scope matches the plan. A later pass qualifies only if it reruns the declared scope and independently passes every criterion.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-terminal-outcome-guard",
+      "event": "pre_tool_call",
+      "description": "Before reporting ingestion completion, verify that the directive leaves intake only as COMPLETED_MUTATED (proven by valid release receipts), COMPLETED_NOOP (for zero proposed operations), BLOCKED (with an exact repeatable blocker and reason code), or CANCELLED (after explicit user cancellation).",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "intake-completion",
+          "intake-publish",
+          "intake-directive-publish",
+          "intake-directive-block",
+          "intake-directive-cancel"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before completing or terminating an ingestion directive: (1) verify that completion is proven by COMPLETED_MUTATED with valid release receipts or COMPLETED_NOOP for zero proposed operations, (2) verify that the completion report includes directive ID, run IDs, receipt digest, terminal outcome, active generation and graph hash, (3) never report completion from intermediate intake status, extraction, normalization, or prepared-but-inactive release.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-provider-egress-guard",
+      "event": "pre_tool_call",
+      "description": "Before running nee query or query commands that invoke L2 provider egress, verify that provider egress is authorized, call budgets are within bounds, and the evidence packet is digest-sealed.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "nee query",
+          "query-l2",
+          "query_l2",
+          "--l2",
+          "--decision"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before executing a query command that may invoke L2 provider calls: (1) verify provider_egress_allowed is true from config, plan, and environment, (2) verify that call budget hard caps (_CallBudget) are not exceeded, (3) verify that evidence packets are minimized, source-bound, and digest-sealed before the provider call, (4) verify that L2 output schema conforms to non-authoritative recommendation bounds (never alters deterministic dispositions or writes to graph/index directly).",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-pytest-scope-guard",
+      "event": "pre_tool_call",
+      "description": "Before any pytest invocation: enforce Class A (debug) or Class B (receipt) run protocol. Block full-suite runs, multi-file debug runs, and any run missing --timeout=60. Require explicit user authorization for full suite.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "pytest",
+          "-m pytest"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before running pytest: (1) Classify the run: single-file/single-test = Class A (debug), wave-scoped multi-file = Class B (receipt). (2) Block full-suite runs (no args, or 'pytest tests/') without explicit user authorization — they are always governance violations unless the user explicitly requested a full suite run. (3) Require '--timeout=60' on every invocation — add it if missing. (4) For Class B receipt runs: WaitMsBeforeAsync must be >= 120000; if the run goes to background, immediately call manage_task kill and report. (5) If pytest already passed for this wave, do not re-run — the receipt already exists.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-background-task-kill-guard",
+      "event": "post_tool_call",
+      "description": "After any run_command that was sent to the background (i.e. WaitMsBeforeAsync elapsed before completion), check task status and kill if still running after 2 minutes. Prevents ghost processes from consuming resources indefinitely.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "pytest",
+          "python -m",
+          ".venv"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "After a run_command that may have gone to background: (1) If the command opend synchronously within WaitMsBeforeAsync, no action needed. (2) If the task was sent to background (output truncated or task ID visible), immediately call manage_task status to check progress. (3) If the task is still running after its expected duration (pytest: 2 min max, other commands: 5 min max), call manage_task kill immediately and report the partial output. (4) Never leave a background task running without a scheduled check — use manage_task list at the start of each turn to catch orphaned tasks.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-architecture-lifecycle-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before executing multi-step agent workflows or tool calls, verify adherence to the 7-step lifecycle flow: Step 1 (Rule Verification) and Step 2 (Planning/Skill Selection) must precede Step 4 (Skill Execution) and Step 7 (Upstream Synthesis).",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "nee",
+          "tools/run_",
+          "pipeline",
+          "dual_pipeline"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before executing workflow commands: (1) verify active Rules permit the action, (2) verify appropriate Skills have been selected, (3) verify that any sub-agent delegations follow binding contracts, and (4) ensure upstream synthesis concludes the execution cycle.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-subagent-delegation-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before delegating work to a sub-agent or spawning a specialized worker, verify that a contract-bound delegation is established with all 10 required fields, bounded budget, and upstream result reporting.",
+      "match": {
+        "tool": "run_command",
+        "also_match": [
+          {
+            "tool": "invoke_subagent"
+          }
+        ],
+        "command_patterns": [
+          "delegate",
+          "subagent",
+          "spawn_agent",
+          "sub-agent"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before task delegation: (1) verify task_id, parent_task_id, objective, scope_in, scope_out, allowed_tools, deliverable, definition_of_done, budget, and escalation_rule are explicitly declared, (2) verify budget has concrete limits, (3) verify results are configured to return upstream to the delegating agent.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-hook-extension-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before registering or triggering lifecycle hooks, verify timing conforms to PRE, POST, or AROUND semantics, addresses cross-cutting concerns (logging, metrics, caching, notifications, guardrails, moderation), and preserves non-intrusive core execution.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "hook",
+          "register_hook",
+          "trigger_hook"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before hook execution: (1) verify hook timing is strictly PRE, POST, or AROUND, (2) verify hook targets a valid cross-cutting concern, (3) verify hook is non-intrusive and does not mutate core orchestrator logic or bypass governance rules.",
+      "severity": "blocking"
+    },
+    {
+      "id": "figma-pre-release-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before running runtime.govern release or issuing a Figma 4K release gate command, verify builder and reviewer run_ids are distinct, candidate PNG dimensions are exactly 3840x2160, and hash pointers resolve.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "runtime.govern release",
+          "run_release_gate.py",
+          "runtime.govern"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before executing a Figma release gate: (1) verify candidate PNG is 3840x2160 with valid luminance variance >= 8.0, (2) verify candidate.sha256 matches actual file bytes, (3) verify builder run_id is distinct from all reviewer run_ids, (4) verify self-attestation sections are absent. Block release if any invariant fails.",
+      "severity": "blocking"
+    },
+    {
+      "id": "figma-post-release-receipt",
+      "event": "post_tool_call",
+      "timing": "POST",
+      "description": "After a successful Figma release gate execution, verify that runtime.govern returned DELIVERY_READY and log the immutable release receipt digest.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "runtime.govern release",
+          "run_release_gate.py"
+        ]
+      },
+      "action": "verify_and_log",
+      "instructions": "After runtime.govern opens: (1) verify the output indicates DELIVERY_READY, (2) log the candidate SHA-256, slide class, and distinct reviewer run IDs into the visual delivery audit log, (3) advance baseline ID if operating in revision mode.",
+      "severity": "informational"
+    },
+    {
+      "id": "nee-pytest-governance-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before running pytest, enforce Class A vs Class B protocol: require --timeout=60, prohibit unbounded pytest or pytest tests/ during fix cycles, and mandate tools/run_tests_with_progress.py for multi-module suites.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "pytest",
+          "py.test"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before executing pytest: (1) verify command includes '--timeout=60', (2) verify scope is limited to a single test file during debug cycles (reject 'pytest' or 'pytest tests/'), (3) reject sending pytest to background without explicit authorization, (4) recommend tools/run_tests_with_progress.py for multi-file runs.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-pre-egress-sanitizer-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before any outbound cloud provider API call or network transmission, scan payload for career leverage markers (executive compensation band), rate cards, and IAM keys.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "openai",
+          "anthropic",
+          "google-genai",
+          "llm_judge",
+          "query_reasoning"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before dispatching outbound provider requests: (1) execute LocalPreEgressSanitizer to scrub compensation figures, rate cards, and secret tokens, (2) verify advisory insights route strictly to INTERNAL_ADVISORY shadow graph, (3) block egress if sensitive terms are detected.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-post-run-output-hierarchy-guard",
+      "event": "post_tool_call",
+      "timing": "POST",
+      "description": "After any command producing artifacts under output/, verify compliance with strict output/<project_name>/<MM-DD-YYYY>/ hierarchy.",
+      "match": {
+        "tool": "run_command",
+        "command_patterns": [
+          "output/",
+          "prepare_evidence_envelope_intake",
+          "transcript_synthesis"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "After generating output artifacts: (1) execute 'python tools/validate_output_hierarchy.py --check', (2) verify date subdirectories use strictly hyphenated MM-DD-YYYY, (3) verify multi-meeting dates use dedicated subfolders (<meeting_name>/) with isolated 01/02/03 deliverables and 4 governance receipts, (4) verify meeting names follow concise {Scope}_{KeyAttendees} standard, (5) fail closed if flat artifact dumps, multi-meeting collisions, or irregular paths are detected.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-multi-meeting-subfolder-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before writing or organizing meeting deliverables under output/, verify that if multiple meetings occur on the same date, each is routed to a dedicated subfolder with standardized {Scope}_{KeyAttendees} naming.",
+      "match": {
+        "tool": "write_to_file",
+        "also_match": [
+          {
+            "tool": "run_command",
+            "command_patterns": [
+              "ingest-meeting",
+              "output/"
+            ]
+          }
+        ],
+        "command_patterns": []
+      },
+      "action": "verify_and_warn",
+      "instructions": "When creating or updating meeting output paths: (1) check if the target project/date directory already contains or will contain multiple meetings, (2) if >=2 meetings occur on the same date, require a dedicated subfolder output/<project>/<date>/<meeting_name>/, (3) enforce concise high-signal meeting naming ({Scope}_{KeyAttendees}, max 40 chars, no boilerplate prefixes), (4) ensure full receipt isolation in each subfolder.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-model-neutral-artifact-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before writing, modifying, moving, or generating any file or artifact (reports/, receipts/, docs/, output/), verify that the target path does not contain LLM model identifiers, provider names, or reasoning tier tags (gpt*, astra, luna, sol, terra, claude*, gemini*, llama*). Enforces Invariant 7 of AGENTS.md.",
+      "match": {
+        "tool": "write_to_file",
+        "also_match": [
+          {
+            "tool": "replace_file_content"
+          },
+          {
+            "tool": "run_command"
+          }
+        ],
+        "command_patterns": [
+          "touch",
+          "mv",
+          "git mv",
+          "cp",
+          "reports/",
+          "receipts/",
+          "docs/",
+          "output/"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before creating, writing, or renaming files or persistent artifacts: (1) verify target file path does NOT contain model names or reasoning tier tags (gpt*, astra, luna, sol, terra, claude*, gemini*, llama*), (2) verify file is named strictly by its domain function, architectural scope, or lifecycle role, (3) verify model identity is placed exclusively inside JSON metadata fields (e.g. 'model_id'), never in the filesystem namespace. Block execution if model names appear in the path.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-scratchpad-transparency-guard",
+      "event": "post_tool_call",
+      "timing": "POST",
+      "description": "Validate user-facing response format by route. Engineering turns, RCAs, and explanations must adhere to universal layman plain-language reporting with concrete operational rigor under engineering-output.md (target ~120 words, max 300 words, zero technical jargon/code/SQL tokens, observed effects required); copilot and knowledge queries require direct answers; operational diagnostics are internal and emitted only upon explicit request.",
+      "match": {
+        "tool": "run_command",
+        "also_match": [
+          {
+            "tool": "write_to_file"
+          },
+          {
+            "tool": "replace_file_content"
+          },
+          {
+            "tool": "ask_user_question"
+          }
+        ],
+        "command_patterns": [
+          "python",
+          "pytest",
+          "nee"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "For engineering turns, RCAs, and explanations, verify concise layman reporting conforming to engineering-output.md: strictly omit visible scratchpads, model telemetry, tool call audits, all-wave tables, raw code/SQL syntax, snake_case identifiers, database table/column names, and git plumbing jargon; explain mechanisms in clear layman terms backed by exact numbers and verified outcomes; require clickable deliverable links (01, 02, 03, judge) with plain-English labels when generated as results; enforce target ~120 words, <=300 words, and <=3500 characters; lead with action and independently observed effect. For nee copilot and NEE knowledge queries, verify direct answer with no scratchpad or tool logs. Retain full execution records in internal receipts/ledgers. Emit diagnostic details only upon explicit operator request.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-learning-proposal-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before applying any learning change proposal, updating system parameters from telemetry, or invoking govern_learning_proposals.py, verify: (1) proposal status is proposed, (2) dry-run simulation passed successfully, (3) human approval origin is authentic (validate_approval_origin), (4) auto_apply is false, (5) parameter changes remain strictly within ParameterRegistry bounds, and (6) rollback receipt is recorded.",
+      "match": {
+        "tool": "run_command",
+        "also_match": [
+          {
+            "tool": "write_to_file",
+            "path_pattern": "learning_proposals/"
+          },
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "parameters.py"
+          }
+        ],
+        "command_patterns": [
+          "govern_learning_proposals.py approve-and-apply",
+          "govern_learning_proposals.py apply",
+          "govern_learning_proposals.py",
+          "ClosedLoopLearningEngine",
+          "learning-change-proposal"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before applying learning proposals or parameter mutations: (1) ensure dry-run simulation passed, (2) verify authentic human approval (reject synthetic stop hook origin), (3) verify proposal declared auto_apply=false and approval_required=true, (4) verify proposed parameter values fall within ParameterRegistry allowed ranges, (5) verify retrieval release clearance is preserved under 11 BGE-M3 gates, and (6) ensure bidirectional rollback receipt is generated.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-anti-overfitting-guard",
+      "event": "pre_tool_call",
+      "description": "Before writing or editing code in dual_pipeline/, verify: (1) no meeting-specific files are created (e.g. *_healer.py or graph_post_*.py named after meetings), (2) no keyword branches matching meeting titles or attendee names are introduced, (3) no hardcoded markdown table constants or synthetic statement IDs are embedded, and (4) knowledge graph mutations are derived from source inputs via prompts rather than Python string injections.",
+      "match": {
+        "tool": "write_to_file",
+        "also_match": [
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "dual_pipeline/"
+          },
+          {
+            "tool": "run_command",
+            "command_patterns": [
+              "lint_no_transcript_overfitting"
+            ]
+          }
+        ],
+        "path_pattern": "dual_pipeline/",
+        "command_patterns": []
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before creating or modifying modules in dual_pipeline/: (1) reject any meeting-specific file naming or branching, (2) ensure all healing is 100% domain-blind and structural only, (3) verify zero hardcoded markdown tables or fake statement IDs, and (4) ensure tools/lint_no_transcript_overfitting.py passes cleanly.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-knowledge-popping-guard",
+      "event": "pre_tool_call",
+      "description": "Inspects AST of Stage 03 mutation pipelines and blocks any unranked signals.pop() in while loops or slice truncation (signals[:-excess]). Enforces Deterministic Semantic Gravity.",
+      "match": {
+        "tool": "write_to_file",
+        "also_match": [
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "dual_pipeline/"
+          },
+          {
+            "tool": "run_command",
+            "command_patterns": [
+              "lint_no_knowledge_popping"
+            ]
+          }
+        ],
+        "path_pattern": "dual_pipeline/",
+        "command_patterns": []
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before modifying Stage 03 mutation logic in dual_pipeline/: (1) verify no while loops use blind .pop() on signal lists, (2) verify no slice truncation is used to satisfy budget caps, and (3) verify tools/lint_no_knowledge_popping.py passes cleanly.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-word-salad-guard",
+      "event": "pre_tool_call",
+      "description": "Intercepts Output 02 generation and files closed if banned pseudo-academic word salad, foreign system cross-contamination, or duplicate speaker paragraphs are detected.",
+      "match": {
+        "tool": "write_to_file",
+        "also_match": [
+          {
+            "tool": "replace_file_content",
+            "path_pattern": "output/"
+          },
+          {
+            "tool": "run_command",
+            "command_patterns": [
+              "lint_plain_english_executive_recap"
+            ]
+          }
+        ],
+        "path_pattern": "output/",
+        "command_patterns": []
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before creating or editing Output 02 executive recaps: (1) verify the text passes the 60-second executive test, (2) verify zero academic word-salad patterns, (3) verify no foreign system contamination, and (4) verify tools/lint_plain_english_executive_recap.py passes cleanly.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-e2e-coverage-guard",
+      "event": "pre_tool_call",
+      "timing": "PRE",
+      "description": "Before executing a pytest Class B receipt run or run_ci_gates.py, verify that the command scope includes at least one E2E test file and at least one adversarial/edge-case test file when the current wave touches pipeline code (dual_pipeline/, pipeline_a_intake/, pipeline_b_extraction/, storage/). Also verifies that any newly written test file in tests/ is enrolled in E2E_TESTS or DETERMINISTIC_TESTS in tools/run_ci_gates.py. Enforces .agents/rules/e2e-and-edge-case-coverage.md.",
+      "match": {
+        "tool": "run_command",
+        "also_match": [
+          {
+            "tool": "run_command",
+            "command_patterns": [
+              "run_ci_gates.py"
+            ]
+          },
+          {
+            "tool": "run_command",
+            "command_patterns": [
+              "run_tests_with_progress.py"
+            ]
+          }
+        ],
+        "command_patterns": [
+          "pytest tests/",
+          "pytest tests/test_",
+          "run_ci_gates.py --profile",
+          "run_tests_with_progress.py",
+          "-m unittest"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before executing a pytest Class B receipt run or a CI gate profile for a pipeline-touching wave: (1) check if the command includes at least one *_e2e*.py or tests/end_to_end/*.py test file — if not, warn: 'E2E coverage guard: pipeline-touching wave Class B receipt must include at least one E2E test file per .agents/rules/e2e-and-edge-case-coverage.md'; (2) check if the command includes at least one *_adversarial*.py or *_edge_cases*.py test — if not, warn: 'E2E coverage guard: Class B receipt must include adversarial/edge-case coverage'; (3) if new test files were written in tests/ during this wave, verify each is listed in E2E_TESTS, BGE_TESTS, or DETERMINISTIC_TESTS in tools/run_ci_gates.py — if unenrolled, block: 'E2E coverage guard: new test file not enrolled in CI gates'; (4) for --profile deterministic or --profile e2e, this guard is satisfied automatically — no intervention needed. Exempt waves that declare no pipeline code changes in their Acceptance Criteria.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-prompt-caching-telemetry-hook",
+      "event": "post_invocation",
+      "type": "command",
+      "command": "python3 scripts/hitl_post_invocation_guard.py",
+      "timeout": 5
+    },
+    {
+      "id": "nee-copilot-prohibited-read-guard",
+      "event": "pre_tool_call",
+      "description": "Deny raw reads (grep, tail, view_file, etc.) on *_live_transcript.md and output/** to enforce graph-grounded copilot access.",
+      "match": {
+        "tool": "*",
+        "command_patterns": [
+          "*_live_transcript.md",
+          "output/"
+        ]
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before executing view_file, replace_file_content, or run_command: (1) Check if the target is a *_live_transcript.md file or any file inside the output/ directory. (2) If so, BLOCK the execution immediately. Raw reads or greps on these files are strictly prohibited during a live meeting. (3) Direct the agent to use `nee copilot` for AI-guided querying and graph-grounding instead.",
+      "severity": "blocking"
+    },
+    {
+      "id": "nee-graphdb-prompt-template-guard",
+      "event": "pre_tool_call",
+      "description": "Enforce .agents/rules/graphdb-context-prompt-governance.md and .agents/rules/conversational-communication-style.md whenever generating or executing a GraphDB context prompt, onboarding care package, multi-channel brief (Word, Outlook, Teams), or ad-hoc Teams/Slack/Outlook copy-paste message.",
+      "match": {
+        "tool": "write_file",
+        "also_match": [
+          {
+            "tool": "edit_file",
+            "path_pattern": "prompt"
+          },
+          {
+            "tool": "write_to_file",
+            "path_pattern": "prompt"
+          }
+        ],
+        "path_pattern": "prompt",
+        "command_patterns": []
+      },
+      "action": "verify_and_warn",
+      "instructions": "Before writing or editing a GraphDB context prompt template, SBAI+ performance review prompt, onboarding care package, or Teams/Outlook copy-paste block: (1) scope strictly to the target person/workstream requested by the user without injecting another project's acronyms, engineers, or roster exclusions, (2) verify zero em-dashes (\\u2014), en-dashes (\\u2013), or ' -- ' spacers and zero AI buzzwords, (3) verify every section starts with a plain-English Section Introduction and defines target workstream acronyms first, (4) verify a 3-column table frames delivery gaps or verbatim evidence diplomatically without throwing team members under the bus, (5) when evaluating personnel performance, require dual-source GraphDB + transcript retrieval, onboarding/offboarding tenure window and inherited-debt separation, role-calibrated rubric, 1st-party vs 3rd-party evidence separation, cross-meeting commitment say-do tracking, ramp trajectory, fail-closed Not Observed guardrails, and SBAI+ structure, and (6) verify multi-channel outputs are copy-paste ready for Word (.docx + RTF clipboard), Microsoft Outlook, and Microsoft Teams (strictly zero '**' bold syntax, zero backticks, zero '#' headings, and zero em-dashes in Teams/Outlook copy-paste blocks).",
+      "severity": "blocking"
+    }
+  ]
+}

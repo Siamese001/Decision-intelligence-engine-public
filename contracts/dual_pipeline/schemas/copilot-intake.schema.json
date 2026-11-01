@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nee:dual-pipeline:copilot-intake:1.0.0",
+  "title": "NEE Copilot intake package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "schema_version", "artifact_id", "canonical_digest", "meeting", "speakers", "actions", "adapter", "extensions"],
+  "properties": {
+    "contract_id": {"const": "urn:nee:dual-pipeline:copilot-intake:1.0.0"},
+    "schema_version": {"const": "1.0.0"},
+    "artifact_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+    "canonical_digest": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/canonicalDigest"},
+    "meeting": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["meeting_id", "title", "started_at", "organizer", "attendees", "teams_reference", "source_location", "source_hash", "template_version", "classification", "audiences"],
+      "properties": {
+        "meeting_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+        "title": {"type": "string", "minLength": 1, "maxLength": 256},
+        "started_at": {"type": "string", "format": "date-time"},
+        "organizer": {"type": "string", "minLength": 1},
+        "attendees": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "teams_reference": {"type": "string", "minLength": 1},
+        "source_location": {"type": "string", "minLength": 1},
+        "transcript_reference": {"type": ["string", "null"]},
+        "recording_reference": {"type": ["string", "null"]},
+        "source_hash": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sha256"},
+        "template_version": {"type": "string", "pattern": "^[0-9]+(?:\\.[0-9]+){0,2}$"},
+        "classification": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/classification"},
+        "audiences": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/audiences"}
+      }
+    },
+    "speakers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["speaker_ref", "reported_name", "email", "role_or_org", "statements"],
+        "properties": {
+          "speaker_ref": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "reported_name": {"type": "string", "minLength": 1},
+          "email": {"type": ["string", "null"], "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"},
+          "role_or_org": {"type": ["string", "null"]},
+          "statements": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["statement_id", "kind", "text", "locator", "copilot_confidence"],
+              "properties": {
+                "statement_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+                "kind": {"type": "string", "enum": ["summary", "decision", "risk", "dependency", "technical", "strategic"]},
+                "text": {"type": "string", "minLength": 1, "maxLength": 4000},
+                "locator": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourceLocator"},
+                "copilot_confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+              }
+            }
+          }
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action_id", "reported_owner", "action", "due_date", "status", "dependency", "requested_follow_up", "locator"],
+        "properties": {
+          "action_id": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/artifactId"},
+          "reported_owner": {"type": ["string", "null"]},
+          "action": {"type": "string", "minLength": 1, "maxLength": 2000},
+          "due_date": {"type": ["string", "null"], "format": "date"},
+          "status": {"type": "string", "enum": ["open", "planned", "completed", "cancelled"]},
+          "dependency": {"type": ["string", "null"]},
+          "requested_follow_up": {"type": ["string", "null"]},
+          "locator": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/sourceLocator"}
+        }
+      }
+    },
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"const": "nee-copilot-intake"},
+        "version": {"const": "1.0.0"}
+      }
+    },
+    "extensions": {"$ref": "urn:nee:dual-pipeline:common:1.0.0#/$defs/extensions"}
+  }
+}

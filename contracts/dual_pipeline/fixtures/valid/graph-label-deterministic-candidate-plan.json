@@ -1,0 +1,59 @@
+{
+  "artifact_id": "graph-label-candidate-fixture-001",
+  "base_graph_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "candidate_only": true,
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "258efa419ef11c9798816bcc8bc36ba770ed16e36a1e957b290f8788b4d5af8d"
+  },
+  "contract_id": "urn:nee:dual-pipeline:graph-label-deterministic-candidate-plan:1.0.0",
+  "extensions": {},
+  "graph_mutation_count": 0,
+  "operations": [
+    {
+      "expected_legacy_state_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "expected_normalized_state_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "field": "source_posture",
+      "legacy_value": "governed_internal",
+      "mapping_rule_id": "graph-label-map-fixture-001",
+      "normalized_label": {
+        "mapping_state": "deterministic_mapped",
+        "source_format": "legacy_unknown",
+        "source_kind": "legacy_source",
+        "source_origin": "legacy_unknown",
+        "source_posture_code": "governed_internal",
+        "source_posture_note": "Value already matches the closed-world source-posture contract."
+      },
+      "operation": "insert_source_label_state",
+      "operation_id": "graph-label-operation-fixture-001",
+      "reason": "Value already matches the closed-world source-posture contract.",
+      "record_id": "source-fixture-001",
+      "record_type": "source",
+      "source_id": "source-fixture-001"
+    }
+  ],
+  "plan_type": "graph_label_deterministic_candidate",
+  "policy": {
+    "enforcement_state": "shadow",
+    "policy_id": "nee-graph-labeling",
+    "policy_version": "1.0.0"
+  },
+  "provider_call_count": 0,
+  "quality_report_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "schema_version": "1.0.0",
+  "schema_migration": {
+    "migration_id": "0010_graph_labeling_hardening",
+    "state": "APPLY_TO_CANDIDATE"
+  },
+  "source_review_plan_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "status": "CANDIDATE_ONLY_NOT_AUTHORIZED",
+  "summary": {
+    "assertion_label_state_insert_count": 0,
+    "deterministic_operation_count": 1,
+    "evidence_label_state_insert_count": 0,
+    "excluded_hitl_required_count": 3,
+    "source_label_state_insert_count": 1
+  },
+  "mutation_authorized": false
+}
