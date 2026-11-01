@@ -1,0 +1,26 @@
+{
+  "approval_decision_id": "AD-V54-EDO-AUTHORITY-BOUNDARY-2026-001",
+  "approval_precedes_first_write": true,
+  "approval_record_file_mtime": "2026-07-14T15:54:53.830801Z",
+  "approved_at_recorded": "2026-07-14T15:54:53Z",
+  "canonical_graph_file_mtime_after_write": "2026-07-14T15:54:54.013850Z",
+  "filesystem_order": {
+    "approval_before_prewrite": true,
+    "prewrite_before_final_graph_write": true
+  },
+  "first_canonical_write_at_recorded": "2026-07-14T15:54:53Z",
+  "implementation_script_order": {
+    "approval_record_written_before_prewrite_revalidation": true,
+    "byte_offsets": {
+      "approval_record": 7696,
+      "first_canonical_copy": 8978,
+      "prewrite_revalidation": 8019
+    },
+    "prewrite_revalidation_before_first_canonical_copy": true
+  },
+  "implementation_script_sha256": "4bdcf3b0f847953b1f0880718f2d2a084e9c31601fd5b3b4b96b433d5798284a",
+  "prewrite_revalidation_file_mtime": "2026-07-14T15:54:53.879770Z",
+  "recorded_timestamp_precision": "second",
+  "result": "PASS",
+  "timestamp_precision_note": "The approval and first-write semantic timestamps fall in the same UTC second. Ordering is therefore proven by the immutable implementation script sequence plus nanosecond filesystem evidence, not by lexicographic comparison of the coarse timestamps."
+}

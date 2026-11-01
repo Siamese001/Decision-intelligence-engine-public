@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_semantic_spine_contract",
+  "contract_id": "nee-decision-intelligence-semantic-spine",
+  "contract_version": "2026-08-08.1",
+  "status": "DESIGN_AND_AUDIT_ONLY",
+  "purpose": "Define a small, typed semantic spine for NEE facts, observations, agentic readiness, and derived intelligence. Legacy labels remain immutable until a separately approved migration.",
+  "invariants": [
+    "A semantic edge has one normalized predicate and declared source and target domains.",
+    "Evidence/provenance edges are not confused with business or delivery relationships.",
+    "Compound predicates are split in the target vocabulary; the legacy form is retained only as migration provenance.",
+    "Generic relatedness is never treated as a causal, ownership, dependency, or readiness relationship.",
+    "A normalized edge does not change authority, audience, currentness, or retrieval eligibility.",
+    "The NEE Knowledge Base remains the system of record; decision intelligence is a derived consumer."
+  ],
+  "node_domains": {
+    "initiative": {
+      "description": "A bounded portfolio, program, workstream, product lane, opportunity, or strategy initiative.",
+      "current_node_types": ["workstream", "program", "product_lane", "opportunity", "strategy"],
+      "target_node_types": ["initiative"]
+    },
+    "capability": {
+      "description": "A capability, technical anchor, reusable pattern, operating model, product family, or external concept.",
+      "current_node_types": ["capability", "technical_anchor", "pattern", "operating_model", "product_family", "external_concept"],
+      "target_node_types": ["capability", "pattern", "operating_model", "external_concept"]
+    },
+    "organization": {
+      "description": "An organization, person, role, stakeholder, audience, or organizational model.",
+      "current_node_types": ["org", "org_model", "stakeholder", "internal_person", "role_group", "audience"],
+      "target_node_types": ["organization", "person", "role", "audience"]
+    },
+    "delivery_artifact": {
+      "description": "A deliverable, statement of work, staffing footprint, staffing pool, or product artifact.",
+      "current_node_types": ["deliverable", "sow", "staffing_footprint", "staffing_pool"],
+      "target_node_types": ["deliverable", "sow", "staffing_artifact"]
+    },
+    "governance": {
+      "description": "A risk, control, control protocol, or open question.",
+      "current_node_types": ["risk", "control", "control_protocol", "open_question"],
+      "target_node_types": ["risk", "control", "open_question"]
+    },
+    "commercial": {
+      "description": "Commercial, pricing, contract, and statement-of-work context.",
+      "current_node_types": ["pricing_model", "sow"],
+      "target_node_types": ["pricing_model", "commercial_constraint", "sow"]
+    },
+    "evidence": {
+      "description": "A source, source lineage, source package, glossary term, or evidence concept.",
+      "current_node_types": ["source", "source_lineage", "source_pack", "glossary_term"],
+      "target_node_types": ["source", "evidence_item", "glossary_term"]
+    },
+    "editorial": {
+      "description": "An editorial card or historical fragment that must not masquerade as a canonical domain entity.",
+      "current_node_types": ["card", "deprecated_stakeholder_fragment"],
+      "target_node_types": ["editorial_artifact"]
+    },
+    "decision_intelligence_target": {
+      "description": "Typed observations and governed agentic/decision artifacts required by later waves.",
+      "current_node_types": [],
+      "target_node_types": [
+        "decision",
+        "status_observation",
+        "metric_observation",
+        "dependency_observation",
+        "readiness_observation",
+        "pain_point",
+        "agent",
+        "agent_version",
+        "agent_deployment",
+        "tool",
+        "evaluation_run",
+        "derived_artifact"
+      ]
+    }
+  },
+  "predicate_mapping": {
+    "HAS_CLAIM_TEXT": {
+      "normalized_predicate": "has_claim_text",
+      "handling": "provenance_only",
+      "source_domains": ["evidence"],
+      "target_domains": ["evidence"],
+      "note": "Retain as source/claim text linkage; do not use as a semantic business relationship."
+    },
+    "ROUTES_TO": {
+      "normalized_predicate": "routes_to",
+      "handling": "normalize",
+      "source_domains": ["initiative", "governance"],
+      "target_domains": ["initiative", "governance"]
+    },
+    "AFFILIATED_WITH": {
+      "normalized_predicate": "affiliated_with",
+      "handling": "normalize",
+      "source_domains": ["organization"],
+      "target_domains": ["organization"]
+    },
+    "SUPPORTED_BY": {
+      "normalized_predicate": "supported_by",
+      "handling": "normalize",
+      "source_domains": ["initiative", "capability", "governance", "decision_intelligence_target"],
+      "target_domains": ["evidence", "capability", "initiative"]
+    },
+    "CONTRIBUTES_TO": {
+      "normalized_predicate": "contributes_to",
+      "handling": "normalize",
+      "source_domains": ["initiative", "capability", "delivery_artifact"],
+      "target_domains": ["initiative", "capability", "delivery_artifact"]
+    },
+    "HAS_ROLE_IN": {
+      "normalized_predicate": "has_role_in",
+      "handling": "normalize",
+      "source_domains": ["organization"],
+      "target_domains": ["initiative", "delivery_artifact"]
+    },
+    "CONTAINS": {
+      "normalized_predicate": "contains",
+      "handling": "normalize",
+      "source_domains": ["evidence", "initiative", "delivery_artifact"],
+      "target_domains": ["evidence", "initiative", "delivery_artifact"]
+    },
+    "CONTEXT_FOR": {
+      "normalized_predicate": "context_for",
+      "handling": "normalize",
+      "source_domains": ["evidence", "capability", "governance"],
+      "target_domains": ["initiative", "capability", "governance"]
+    },
+    "USES_PATTERN": {
+      "normalized_predicate": "uses",
+      "handling": "normalize",
+      "source_domains": ["initiative", "delivery_artifact"],
+      "target_domains": ["capability"]
+    },
+    "OWNS_OR_LEADS": {
+      "normalized_predicate": ["owns", "leads"],
+      "handling": "split",
+      "source_domains": ["organization"],
+      "target_domains": ["initiative", "capability", "delivery_artifact"],
+      "note": "Requires semantic disambiguation before migration; the compound legacy edge is not decision-safe."
+    },
+    "REPORTS_TO": {
+      "normalized_predicate": "reports_to",
+      "handling": "normalize",
+      "source_domains": ["organization"],
+      "target_domains": ["organization"]
+    },
+    "DEPENDS_ON": {
+      "normalized_predicate": "depends_on",
+      "handling": "normalize",
+      "source_domains": ["initiative", "capability", "delivery_artifact"],
+      "target_domains": ["initiative", "capability", "delivery_artifact"]
+    },
+    "HAS_RISK": {
+      "normalized_predicate": "has_risk",
+      "handling": "normalize",
+      "source_domains": ["initiative", "capability", "delivery_artifact"],
+      "target_domains": ["governance"]
+    },
+    "CANDIDATE_FOR": {
+      "normalized_predicate": "candidate_for",
+      "handling": "derived_candidate_only",
+      "source_domains": ["initiative", "capability", "governance"],
+      "target_domains": ["initiative", "capability", "governance"]
+    },
+    "VALIDATES": {
+      "normalized_predicate": "validates",
+      "handling": "normalize",
+      "source_domains": ["evidence", "governance", "decision_intelligence_target"],
+      "target_domains": ["initiative", "capability", "governance", "evidence"]
+    },
+    "GOVERNS": {
+      "normalized_predicate": "governs",
+      "handling": "normalize",
+      "source_domains": ["governance", "organization"],
+      "target_domains": ["initiative", "capability", "organization"]
+    },
+    "TRANSITIONS_TO": {
+      "normalized_predicate": "transitions_to",
+      "handling": "normalize",
+      "source_domains": ["initiative", "governance"],
+      "target_domains": ["initiative", "governance"]
+    },
+    "DELIVERS": {
+      "normalized_predicate": "delivers",
+      "handling": "normalize",
+      "source_domains": ["initiative", "organization"],
+      "target_domains": ["delivery_artifact", "capability"]
+    },
+    "CONSTRAINS": {
+      "normalized_predicate": "constrains",
+      "handling": "normalize",
+      "source_domains": ["governance", "capability", "initiative"],
+      "target_domains": ["initiative", "capability", "delivery_artifact"]
+    },
+    "RELATED_TO": {
+      "normalized_predicate": "related_to",
+      "handling": "quarantine_for_review",
+      "source_domains": ["initiative", "capability", "organization", "governance", "evidence"],
+      "target_domains": ["initiative", "capability", "organization", "governance", "evidence"],
+      "note": "Generic relatedness is not sufficient for decision intelligence; replace with a typed relation or retain as contextual evidence."
+    }
+  },
+  "future_required_predicates": [
+    "has_observation",
+    "has_decision",
+    "has_pain_point",
+    "has_readiness_observation",
+    "measured_by",
+    "mitigates",
+    "informed_by",
+    "deployed_as",
+    "evaluated_by",
+    "uses_tool",
+    "supersedes"
+  ],
+  "gate": {
+    "provider_calls_allowed": 0,
+    "graph_mutations_allowed": 0,
+    "release_activation_allowed": false,
+    "pass_conditions": [
+      "Every current predicate has an explicit mapping or quarantine disposition.",
+      "Every current node type has a semantic domain or editorial disposition.",
+      "Compound and generic relations are measured as migration debt.",
+      "The target observation and agentic node types are explicitly enumerated for later waves.",
+      "The exact active graph hash is unchanged by the audit."
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+wave_number: 8
+wave_id: "Wave 8: Qualify request-scoped live copilot reasoning"
+description: "Provide timely, deeper insights for material live moments without compromising capture, grounding or engagement isolation"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_live_reasoning_lifecycle_e2e.py"
+  - "tests/adversarial/test_live_reasoning_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_8.yaml"
+criteria:
+  - "Deadlines start per request; topic/generation change, shutdown and cancellation suppress stale callbacks on priority and normal paths"
+  - "Valid abstention/grounding rejection does not trigger another completion"
+  - "Cached evidence/vector keys bind session/context/generation/model; no graph/encoder blocking work reaches the audio callback"
+  - "Actual final recorder delivery gets a stable ledger ID"
+  - "Resolved questions stop recurring, contradictions can reopen them, and inferred memory never becomes canonical fact"
+  - "Raw unverified token deltas remain undisplayed"

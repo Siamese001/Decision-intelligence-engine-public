@@ -1,0 +1,267 @@
+{
+  "baseline_zip_sha256": "bc524c0f45bc98ff19f07d51e5def0b5d9384b6779ff9cb9b322a58c74849a6d",
+  "canonical_serialization_sha256": "50c2d6405b2e8f05156f7dde585413f6f3af5f14bd0fd4f83eb646807155dc15",
+  "cards": [
+    {
+      "before_sha256": "4ca5fbc3e12f11b5e391b9c4950cabfd4d4c3dff0a2ea19c561ac829c2861ed5",
+      "card_id": "NEE_00",
+      "frontmatter_changes": {},
+      "impact_types": [
+        "source_authority",
+        "currentness",
+        "validation_routing"
+      ],
+      "path": "cards/NEE_00_Authority_Source_Map_and_Synthesis_Protocol.md",
+      "proposed_after_sha256": "3d5471267fc701828c851ea34a25bf6879e26fd5e66225d19a04bcca7c4d3098",
+      "rationale": "Explicit user confirmations/instruction dated 2026-07-11; no role, identity, or location inference beyond the stated propositions.",
+      "rollback_or_forward_repair": "Restore the exact baseline card bytes; for NEE_99 also restore the baseline root mirror and declared body hash, then regenerate approved derivatives.",
+      "routing_changes": [
+        "No card-home or card-spine change; adds exact affected-source routes only."
+      ],
+      "supporting_graph_items": [
+        "source::source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "node::source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "node_card_map::source_chat_linkedin_person_name_spelling_rule_2026_07_11::NEE_00",
+        "daily_ingest_event::ingest_chat_pm_product_leadership_2026_07_11"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_00_Authority_Source_Map_and_Synthesis_Protocol.md\n+++ b/cards/NEE_00_Authority_Source_Map_and_Synthesis_Protocol.md\n@@ -354,3 +354,10 @@\n \n Primary source register: `exports/v42_external_source_register.csv`. Full audit: `exports/v42_material_gap_audit_and_q4_toolkit.html`.\n <!-- V42_END -->\n+\n+## 2026-07-11 user-confirmation and personal-name spelling authority\n+\n+- User confirmation upgrades only the exact proposition stated. In this update, it supports Lancey Lexima as an NEA Product Manager and his Juno Beach context as of 2026-07-11; it does not independently establish charter-specific decision rights, a permanent office, or any other Product Manager's location.\n+- For a correctly resolved person/profile match, the **LinkedIn profile display name** controls canonical personal-name spelling. A URL slug, search snippet, nickname/full-name similarity, or candidate profile does not.\n+- The LinkedIn spelling rule does not establish identity equivalence, current title, affiliation, reporting line, ownership, decision rights, or currentness. Preserve materially useful source variants as governed aliases or source mentions after identity resolution.\n+\n"
+    },
+    {
+      "before_sha256": "5ff6df77f22e478a90e7d21fcf07d34be3d41295909d14190d25ee73c6089a38",
+      "card_id": "NEE_06",
+      "frontmatter_changes": {},
+      "impact_types": [
+        "source_authority",
+        "currentness",
+        "validation_routing"
+      ],
+      "path": "cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md",
+      "proposed_after_sha256": "a036dce5c62d51f41e551184c6379c308f017dcd85a9d0b1418a7b7c016def65",
+      "rationale": "User-attributed internal feedback; existing product-leadership and fast-user-evidence principles already provide the correct card home.",
+      "rollback_or_forward_repair": "Restore the exact baseline card bytes; for NEE_99 also restore the baseline root mirror and declared body hash, then regenerate approved derivatives.",
+      "routing_changes": [
+        "No card-home or card-spine change; adds exact affected-source routes only."
+      ],
+      "supporting_graph_items": [
+        "source::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "node::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "edge::edge_chat_rich_feedback_source_for_nea_product_manager_2026_07_11",
+        "edge::edge_chat_cohydrated_model_sourced_from_pm_feedback_2026_07_11",
+        "claim::claim_chat_rich_pm_product_leadership_gap_2026_07_11",
+        "claim::claim_chat_nea_ux_research_cadence_constraint_2026_07_11",
+        "validation::val_chat_pm_product_leadership_and_fast_evidence_standard_p1",
+        "node_card_map::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11::NEE_06",
+        "p1_validation_sprint::p1_chat_pm_product_leadership_standard_2026_07_11",
+        "source_request_matrix::src_req_chat_pm_product_leadership_standard_2026_07_11",
+        "claim_confidence_hitl_matrix::claim_chat_rich_pm_product_leadership_gap_2026_07_11",
+        "claim_confidence_hitl_matrix::claim_chat_nea_ux_research_cadence_constraint_2026_07_11",
+        "claim_hitl_validation_queue::claim_chat_rich_pm_product_leadership_gap_2026_07_11",
+        "claim_hitl_validation_queue::claim_chat_nea_ux_research_cadence_constraint_2026_07_11"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md\n+++ b/cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md\n@@ -312,3 +312,17 @@\n The July 11 workbook directly supports a repeated charter-level schema: **Vertical Lead + Tech Lead + Product Manager + Engineering Manager + Delivery Model**. This strengthens the `NEA charter leadership triad` as a retrieval and validation pattern.\n \n It does **not** establish a formal RACI, decision rights, reporting lines, staffing commitments, or one universal meaning for `NEA Led` and `PartnerAdvisory Led`. Current operating-model use remains review-gated pending an effective date, accountable approver, and role semantics. The workbook's 11/6 delivery-label split is source-attributed only.\n+\n+## 2026-07-11 PM product-leadership and evidence-cadence validation\n+\n+**Source posture:** user-attributed internal feedback; not a formal NEA policy or a validated statement about every Product Manager.\n+\n+- Amit attributes to Rich Argentieri a concern that some Product Managers are acting as feature-intake owners rather than product leaders: they may say yes to a request such as “leather seats” without first testing whether it reduces cost, improves reliability or adoption, lowers risk, or creates measurable business value.\n+- Amit separately reports that Humanity / UX Product Managers can take longer to complete user research and field studies than NEA's current tempo allows. The responsible team label, frequency of this issue, and acceptable minimum evidence are still open.\n+- These data points sharpen—but do not replace—the existing candidate principles of product leadership over feature ordering and fast user evidence.\n+\n+### Surgical validations for Dan, Stephane, and Andrew\n+\n+1. Which 2–4 additional Juno Beach Product Managers should Amit prioritize after Lancey, based on product-lane value and actual decision authority?\n+2. What minimum product-value case and minimum viable user evidence should be consistent across Juno Beach and Saint Paul so Product Managers can make faster, defensible tradeoffs?\n+\n"
+    },
+    {
+      "before_sha256": "ab3b0c470c05a45e4072eb796b36e3a3ecc901f23a241573760770484208c49d",
+      "card_id": "NEE_10",
+      "frontmatter_changes": {},
+      "impact_types": [
+        "source_authority",
+        "currentness",
+        "validation_routing"
+      ],
+      "path": "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+      "proposed_after_sha256": "f0d1b5b4f042ae5bd3ac02d131b68c348c951ad15fab3352877d2f5d1c040345",
+      "rationale": "Direct user confirmation and action context; Colleen roster assignments remain separately source-attributed.",
+      "rollback_or_forward_repair": "Restore the exact baseline card bytes; for NEE_99 also restore the baseline root mirror and declared body hash, then regenerate approved derivatives.",
+      "routing_changes": [
+        "No card-home or card-spine change; adds exact affected-source routes only."
+      ],
+      "supporting_graph_items": [
+        "source::source_chat_lancey_role_location_confirmation_2026_07_11",
+        "source::source_chat_lancey_lunch_and_pm_outreach_2026_07_11",
+        "source::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "node::source_chat_lancey_role_location_confirmation_2026_07_11",
+        "node::source_chat_lancey_lunch_and_pm_outreach_2026_07_11",
+        "node::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "node::stakeholder_lancey_lexima",
+        "node::location_juno_beach",
+        "edge::edge_chat_lancey_lane_context_for_juno_beach_2026_07_11",
+        "edge::edge_chat_lancey_sourced_from_role_location_confirmation_2026_07_11",
+        "edge::edge_chat_rich_feedback_source_for_nea_product_manager_2026_07_11",
+        "edge::edge_chat_cohydrated_model_sourced_from_pm_feedback_2026_07_11",
+        "edge::edge_chat_name_policy_sourced_from_linkedin_spelling_rule_2026_07_11",
+        "claim::claim_chat_lancey_is_nea_product_manager_2026_07_11",
+        "claim::claim_chat_lancey_juno_beach_context_2026_07_11",
+        "validation::val_chat_juno_beach_pm_priority_map_p1",
+        "node_card_map::source_chat_lancey_role_location_confirmation_2026_07_11::NEE_10",
+        "node_card_map::source_chat_lancey_lunch_and_pm_outreach_2026_07_11::NEE_10",
+        "node_card_map::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11::NEE_10",
+        "p0_p1_action_register::action_chat_lancey_lunch_pm_product_leadership_2026_07_14",
+        "p1_validation_sprint::p1_chat_juno_beach_pm_priority_map_2026_07_11",
+        "source_request_matrix::src_req_chat_juno_beach_pm_priority_map_2026_07_11",
+        "claim_confidence_hitl_matrix::claim_chat_lancey_is_nea_product_manager_2026_07_11",
+        "claim_confidence_hitl_matrix::claim_chat_lancey_juno_beach_context_2026_07_11"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md\n+++ b/cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md\n@@ -413,3 +413,11 @@\n | Francisco Guzman | https://www.linkedin.com/in/francisco-guzman-a5179b12/ | Internal identity lookup and explicitly source-attributed URL reference only; current internal title, affiliation, scope, reporting line, effective date, and decision rights remain P2. |\n \n The remaining 21 URLs are proposed as `SOURCED_FROM` pointers to existing canonical stakeholders. The complete registry is `exports/v46_linkedin_profile_registry.csv`.\n+\n+## 2026-07-11 Lancey and Juno Beach Product Manager priority update\n+\n+- **Lancey Lexima:** Amit directly confirmed that Lancey is an NEA Product Manager and has Juno Beach context. Existing DocIQ and Fault Code Database assignments remain source-attributed to Colleen's undated roster; this confirmation does not independently establish charter-specific decision rights.\n+- **Relationship action:** Amit has lunch with Lancey on **2026-07-14**. Treat the lunch and outreach details as private-coaching context.\n+- **Outreach status:** Amit already sent Dan, Stephane, and Andrew the request to identify the highest-priority Juno Beach Product Managers and clarify Rich/Chakra's Product Manager expectations. No answer or priority ranking is inferred until they respond.\n+- **Open P1 output:** identify 2–4 additional Juno Beach Product Managers, their product lanes, decision authority, why Amit should meet them, and the best sequencing after Lancey.\n+\n"
+    },
+    {
+      "before_sha256": "c6b5a782d58c04db5ae3f7edd84c452bb664c8ffc4a609b9cffa46d2a2b5caa9",
+      "card_id": "NEE_15",
+      "frontmatter_changes": {},
+      "impact_types": [
+        "source_authority",
+        "currentness",
+        "validation_routing"
+      ],
+      "path": "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md",
+      "proposed_after_sha256": "e00d4498fc4a67a358cd4f1b1abb0852457958c3cb06f9d10132784ba42aa6f4",
+      "rationale": "Explicit user spelling instruction and direct Lancey location context; no identity merge evidence.",
+      "rollback_or_forward_repair": "Restore the exact baseline card bytes; for NEE_99 also restore the baseline root mirror and declared body hash, then regenerate approved derivatives.",
+      "routing_changes": [
+        "No card-home or card-spine change; adds exact affected-source routes only."
+      ],
+      "supporting_graph_items": [
+        "source::source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "node::source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "node::stakeholder_lancey_lexima",
+        "node::location_juno_beach",
+        "edge::edge_chat_lancey_lane_context_for_juno_beach_2026_07_11",
+        "edge::edge_chat_lancey_sourced_from_role_location_confirmation_2026_07_11",
+        "edge::edge_chat_rich_feedback_source_for_nea_product_manager_2026_07_11",
+        "edge::edge_chat_cohydrated_model_sourced_from_pm_feedback_2026_07_11",
+        "edge::edge_chat_name_policy_sourced_from_linkedin_spelling_rule_2026_07_11",
+        "claim::claim_chat_linkedin_display_name_spelling_authority_2026_07_11",
+        "validation::val_v44_nick_krivov_identity_p1",
+        "node_card_map::source_chat_linkedin_person_name_spelling_rule_2026_07_11::NEE_15",
+        "claim_confidence_hitl_matrix::claim_chat_linkedin_display_name_spelling_authority_2026_07_11"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md\n+++ b/cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md\n@@ -221,7 +221,7 @@\n \n ## v39 identity and alias controls\n \n-- **“Juneau” → Juno Beach:** candidate transcription correction only; do not assign any person to Juno Beach without exact confirmation.\n+- **“Juneau” → Juno Beach:** Juno Beach is the canonical location spelling. Lancey Lexima’s Juno Beach context is user-confirmed as of 2026-07-11; all other person-level location assignments still require exact confirmation, and no permanent-office inference is made from meeting location alone.\n - **“Sprinkler” → Sprinklr:** candidate product spelling only; validate the platform and outage-intelligence use case.\n - **Nexus repository ≠ Nuclear Nexus charter:** keep separate unless authoritative evidence establishes a relationship.\n - **Miles / Matt K / Justin / Tyler:** unresolved partial-name mentions; no canonical merge, surname expansion, employer assignment, or confirmed leadership edge without explicit evidence. Miles retains only a low-confidence dated role cue to Nexus Nuclear so charter retrieval works without asserting identity.\n@@ -250,3 +250,11 @@\n - **Steve Barr:** the supplied URL handle is `stevenrbarr`. Preserve the Steve Barr canonical record; do not add a Steven Barr alias or rename from the handle alone.\n - **Richard Argentieri:** the supplied URL handle is surname-only (`argentieri`). Preserve the existing Richard Argentieri canonical-name lock and do not add Rich/Rich Argentieri aliases without an explicit policy decision.\n - **Identity merges proposed or completed in v46:** 0.\n+\n+\n+## 2026-07-11 LinkedIn personal-name spelling rule\n+\n+- After a person is correctly matched to a LinkedIn profile, use the profile's **display name** as the canonical spelling for that person.\n+- Do not use a profile URL slug, search-result snippet, nickname/full-name similarity, or candidate match as spelling or identity authority.\n+- Spelling authority is not identity authority: it does not prove that two source records are one person and does not establish role, affiliation, reporting line, ownership, decision rights, or currentness.\n+- **Nick Krivov / Nicholas Krivov:** keep the two roster records separate until each mention is resolved to the correct LinkedIn profile or equivalent direct identity evidence. Once resolved, normalize spelling to the matched display name and retain the other source form only as a governed alias/source mention when useful.\n"
+    },
+    {
+      "before_sha256": "b7b3db7d6606407d6812c47d767a41f7222dde3aa14956e35db126b62a0d603f",
+      "card_id": "NEE_16",
+      "frontmatter_changes": {},
+      "impact_types": [
+        "source_authority",
+        "currentness",
+        "validation_routing"
+      ],
+      "path": "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+      "proposed_after_sha256": "097131a93cbb585f9f615a519174adf7a2a6ead45041a7a4ca9955328e8292f9",
+      "rationale": "Exact user evidence plus immutable baseline comparison.",
+      "rollback_or_forward_repair": "Restore the exact baseline card bytes; for NEE_99 also restore the baseline root mirror and declared body hash, then regenerate approved derivatives.",
+      "routing_changes": [
+        "No card-home or card-spine change; adds exact affected-source routes only."
+      ],
+      "supporting_graph_items": [
+        "source::source_chat_lancey_role_location_confirmation_2026_07_11",
+        "source::source_chat_lancey_lunch_and_pm_outreach_2026_07_11",
+        "source::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "source::source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "node::source_chat_lancey_role_location_confirmation_2026_07_11",
+        "node::source_chat_lancey_lunch_and_pm_outreach_2026_07_11",
+        "node::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "node::source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "edge::edge_chat_lancey_lane_context_for_juno_beach_2026_07_11",
+        "edge::edge_chat_lancey_sourced_from_role_location_confirmation_2026_07_11",
+        "edge::edge_chat_rich_feedback_source_for_nea_product_manager_2026_07_11",
+        "edge::edge_chat_cohydrated_model_sourced_from_pm_feedback_2026_07_11",
+        "edge::edge_chat_name_policy_sourced_from_linkedin_spelling_rule_2026_07_11",
+        "node_card_map::source_chat_lancey_role_location_confirmation_2026_07_11::NEE_16",
+        "node_card_map::source_chat_lancey_lunch_and_pm_outreach_2026_07_11::NEE_16",
+        "node_card_map::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11::NEE_16",
+        "node_card_map::source_chat_linkedin_person_name_spelling_rule_2026_07_11::NEE_16",
+        "daily_ingest_event::ingest_chat_pm_product_leadership_2026_07_11"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md\n+++ b/cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md\n@@ -415,3 +415,15 @@\n - **Authority boundary:** authoritative for the exact supplied URL and the governed identity-routing proposal only; not authoritative for profile contents, current title, affiliation, reporting line, ownership, RACI, decision rights, delivery accountability, or effective date.\n - **Artifact hygiene:** no raw LinkedIn payload is included. Only governed URL pointers, concise reconciliation notes, graph lineage, validation routes, and derivatives are proposed.\n - **Registry:** `exports/v46_linkedin_profile_registry.csv`.\n+\n+## 2026-07-11 chat-source provenance — PM product leadership and name spelling\n+\n+| Source | Exact authority | Boundary |\n+|---|---|---|\n+| Lancey role/location confirmation | User-confirmed that Lancey Lexima is an NEA Product Manager and has Juno Beach context as of 2026-07-11 | Does not establish permanent office, charter-specific decision rights, or other PM locations |\n+| Lancey lunch and PM outreach | User-confirmed private action context: lunch on 2026-07-14 and outreach already sent to Dan, Stephane, and Andrew | Does not establish their answers or the resulting priority list |\n+| Rich / UX Product Manager feedback | User-attributed internal feedback about feature-order taking, business-value tradeoffs, and research cadence | Not formal NEA policy; population, frequency, attribution, and target operating standard require validation |\n+| LinkedIn personal-name spelling instruction | User instruction that LinkedIn is canonical for personal-name spelling after the profile/person match is correctly resolved | Display name only; URL slug and name similarity do not prove identity, role, currentness, or organizational facts |\n+\n+The Jessica Narvaez, Casey O'Keefe, Nicholas Krivov, Ramya Purumani, and Mandy Hopmann Product Manager assignments remain governed by the existing Colleen workbook source already present in V47.1.1. This update does not duplicate that ingest.\n+\n"
+    },
+    {
+      "before_sha256": "1d255d35deb0ff21f43dabd4355a449c465211119ba220f4d1185fb0cb0a3e1f",
+      "card_id": "NEE_99",
+      "frontmatter_changes": {
+        "body_sha256": {
+          "after": "17d0c5d6aeafc2b2c0be371cc2a738a6733419bba77a1c31df58e102c829dfa9",
+          "before": "e9973000e8271902a942b835d44888a07791ef55778c3755038c562062030fe7"
+        },
+        "package": {
+          "after": "NEE_v47.2",
+          "before": "NEE_v47.1.1"
+        },
+        "policy_version": {
+          "after": "47.2",
+          "before": "47.1.1"
+        }
+      },
+      "impact_types": [
+        "control_policy",
+        "identity_resolution",
+        "mirror_synchronization"
+      ],
+      "path": "cards/NEE_99_Project_Instructions.md",
+      "proposed_after_sha256": "e09f60241146d071d31daa9febb1d7578c850e9287b1352710e55a5a3f9f4da1",
+      "rationale": "Explicit user request is valid problem evidence; activation remains contingent on exact digest-bound G1/C1 approval.",
+      "rollback_or_forward_repair": "Restore the exact baseline card bytes; for NEE_99 also restore the baseline root mirror and declared body hash, then regenerate approved derivatives.",
+      "routing_changes": [
+        "Canonical NEE_99 body changes; root PROJECT_INSTRUCTIONS.md must be regenerated body-identically after approval."
+      ],
+      "supporting_graph_items": [
+        "source::source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "node::source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "node_card_map::source_chat_linkedin_person_name_spelling_rule_2026_07_11::NEE_99"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_99_Project_Instructions.md\n+++ b/cards/NEE_99_Project_Instructions.md\n@@ -2,18 +2,18 @@\n project: NEE\n card_id: NEE_99\n card_type: control_file\n-policy_version: \"47.1.1\"\n+policy_version: \"47.2\"\n last_updated: 2026-07-11\n freshness: living\n-package: NEE_v47.1.1\n+package: NEE_v47.2\n canonical: true\n mirror_path: ../PROJECT_INSTRUCTIONS.md\n-body_sha256: e9973000e8271902a942b835d44888a07791ef55778c3755038c562062030fe7\n+body_sha256: 17d0c5d6aeafc2b2c0be371cc2a738a6733419bba77a1c31df58e102c829dfa9\n ---\n \n # NEE Project Instructions — Governed Knowledge, Version Update, and Query Protocol\n \n-**Policy version:** 47.1.1  \n+**Policy version:** 47.2  \n **Effective date:** 2026-07-11  \n **Canonical control file:** `cards/NEE_99_Project_Instructions.md`  \n **Generated mirror:** `PROJECT_INSTRUCTIONS.md`\n@@ -365,6 +365,7 @@\n 5. Normal stakeholder outputs should display canonical names; hidden retrieval aliases may remain governed metadata.\n 6. If the user provides a stale or incorrect alias, answer with the canonical name when established and preserve the alias only when useful for retrieval or history.\n 7. Alias retention does not require normal display.\n+8. After a person is correctly resolved to a LinkedIn profile, the profile display name controls canonical personal-name spelling. A URL slug, search snippet, nickname/full-name similarity, or candidate profile does not establish spelling or identity. This rule does not establish identity equivalence, current role, affiliation, reporting line, ownership, decision rights, or currentness; preserve useful source variants as governed aliases or source mentions.\n \n ### 10.3 Active unresolved examples\n \n@@ -1089,6 +1090,7 @@\n | `PD-47-MANDATORY-GRAPH-CHANGE-METRIC-GATE` | `approved_active` | 47 | Requires every semantic graph change to include the fixed before/after graph-health metric table in Gate G1 and Gate R1. Failed rows block implementation or release unless an explicit pre-approved exception exists; comments must state the improvement, corrective action, and accountable owner. |\n | `PD-47.1-THREE-TABLE-INLINE-OUTPUT-GATE` | `approved_active` | 47.1 | Requires exactly three inline gate tables—graph delta with retrieval rationale, fixed graph metrics, and card additions with retrieval rationale—while filing all other detail separately. The control utility generates and validates the output, binds G1 to approval and R1 to conformance, and blocks packaging on any omission, extra content, reconciliation failure, metric failure, or hash mismatch. |\n | `PD-47.1.1-ZERO-DELTA-NA-RATIONALE` | `approved_active` | 47.1.1 | Requires every all-zero graph-delta row to render `NA` in the retrieval-rationale column and rejects `NA`, `N/A`, blank, or generic rationale on any non-zero scalar or vector delta. The rule is enforced in G1 and R1 with regression tests. |\n+| `PD-47.2-LINKEDIN-NAME-SPELLING-AUTHORITY` | `approved_active` | 47.2 | After a person/profile match is correctly resolved, the LinkedIn profile display name controls canonical personal-name spelling. URL slugs, snippets, and name similarity do not prove spelling or identity; the rule does not establish role, affiliation, reporting line, ownership, decision rights, or currentness. Activation is contingent on exact digest-bound approval of the associated G1/C1 proposal. |\n \n Future decisions must use the metadata and approval requirements in Section 16.\n \n"
+    }
+  ],
+  "generated_at": "2026-07-11T20:30:00Z",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Add exact-proposition user-confirmation boundaries and the LinkedIn display-name spelling authority rule.",
+        "card": "NEE_00",
+        "change_type": "body",
+        "defense_or_evidence": "Explicit user confirmations/instruction dated 2026-07-11; no role, identity, or location inference beyond the stated propositions.",
+        "retrieval_improvement": "Authority ranking can distinguish exact user confirmation and display-name spelling authority from identity, role, and currentness evidence."
+      },
+      {
+        "addition": "Add attributed Rich Product Manager leadership-gap and UX research-cadence hypotheses plus two surgical validations.",
+        "card": "NEE_06",
+        "change_type": "body",
+        "defense_or_evidence": "User-attributed internal feedback; existing product-leadership and fast-user-evidence principles already provide the correct card home.",
+        "retrieval_improvement": "Operating-model queries retrieve the specific business-value and minimum-evidence questions without presenting them as formal NEA policy."
+      },
+      {
+        "addition": "Add Lancey’s confirmed NEA Product Manager/Juno Beach context, July 14 lunch, sent outreach status, and the remaining PM-priority output.",
+        "card": "NEE_10",
+        "change_type": "body",
+        "defense_or_evidence": "Direct user confirmation and action context; Colleen roster assignments remain separately source-attributed.",
+        "retrieval_improvement": "Stakeholder queries return Lancey as the confirmed anchor and keep all additional Juno Beach priorities explicitly unknown until team validation."
+      },
+      {
+        "addition": "Resolve Juno Beach spelling for Lancey context; add LinkedIn display-name spelling rule; preserve Nick/Nicholas as separate pending profile resolution.",
+        "card": "NEE_15",
+        "change_type": "body",
+        "defense_or_evidence": "Explicit user spelling instruction and direct Lancey location context; no identity merge evidence.",
+        "retrieval_improvement": "Name resolution uses the correctly matched LinkedIn display name while collision handling prevents nickname similarity from merging records."
+      },
+      {
+        "addition": "Register four chat-source authority boundaries and state that Colleen’s roster is reconciliation-only, not re-ingested.",
+        "card": "NEE_16",
+        "change_type": "body",
+        "defense_or_evidence": "Exact user evidence plus immutable baseline comparison.",
+        "retrieval_improvement": "Provenance lookup separates confirmation, private action, attributed feedback, and policy instruction and prevents duplicate roster lineage."
+      },
+      {
+        "addition": "Activate the LinkedIn display-name spelling authority protocol in the proposed 47.2 policy state and register PD-47.2.",
+        "card": "NEE_99",
+        "change_type": "control_policy",
+        "defense_or_evidence": "Explicit user request is valid problem evidence; activation remains contingent on exact digest-bound G1/C1 approval.",
+        "retrieval_improvement": "Identity queries gain a deterministic spelling source after profile resolution while retaining fail-closed separation of spelling, identity, role, and currentness."
+      }
+    ]
+  },
+  "policy_sha256": "1d255d35deb0ff21f43dabd4355a449c465211119ba220f4d1185fb0cb0a3e1f",
+  "proposal_id": "C1-PM-PRODUCT-LEADERSHIP-JUNO-BEACH-2026-07-11",
+  "proposal_type": "proposed_card_delta",
+  "status": "proposed",
+  "unlisted_cards_unchanged": true
+}

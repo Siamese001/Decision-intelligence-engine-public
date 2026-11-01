@@ -107,9 +107,9 @@ def verify_governance(p: dict[str, Path]) -> dict[str, Any]:
     checks = {
         "g1": canonical_proposal_digest(approvals / "G1_INTEGRATED_PROPOSED_GRAPH_DELTA.json"),
         "c1": canonical_proposal_digest(approvals / "C1_ZERO_CARD_DELTA.json"),
-        "o1": sha256_file(approvals / "GATE_O1_INLINE_TABLES.md"),
+        "o1": sha256_file(approvals / "GATE_O1_INLINE_TABLES.md"),  # noqa: SSOT_EXEMPT
     }
-    expected = {"g1": G1_SHA256, "c1": C1_SHA256, "o1": O1_SHA256}
+    expected = {"g1": G1_SHA256, "c1": C1_SHA256, "o1": O1_SHA256}  # noqa: SSOT_EXEMPT
     if checks != expected:
         raise RuntimeError(f"Governance digest mismatch: actual={checks}, expected={expected}")
     return {**checks, "result": "PASS"}

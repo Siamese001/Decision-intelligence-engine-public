@@ -1,0 +1,399 @@
+{
+  "actual_card_diff_sha256": "782186124e20bacf98562f338e2861d34ab557947e27323490e5815cff8af732",
+  "actual_graph_delta_sha256": "54b9adfa5dd1c2adb7f21fc59a8b475648d0635c7994a5e50b76a24fe83002b8",
+  "approval_chronology": {
+    "approval_precedes_first_write": true,
+    "approved_at": "2026-07-13T19:47:17Z",
+    "proposal_clock_label_reconciliation": "The approved proposal embedded 23:00Z is preserved as a disclosed non-semantic label inconsistency; conversation ordering and runtime approval/write records control chronology.",
+    "result": "PASS"
+  },
+  "approval_decision_id": "AD-V52-UPLOADED-MATERIALS-2026-001",
+  "approved_card_diff_sha256": "7d3cd99d409e4083963d6c8b0987c59310b13f8ef28fb1af075cce587432b5b4",
+  "approved_graph_delta_sha256": "44dd71d411a83079a9f5bd78694c5e8d76d136a55cd1b3cad1e1024efac4db98",
+  "automatic_release_state_activation": {
+    "decision_id": "PD-51.1-AUTO-PROMOTION-AFTER-R1-O1",
+    "result": "approved_current",
+    "separate_promotion_step": false
+  },
+  "baseline_graph_sha256": "c802383576a6556aff228ac46c36f8ad66ce440aebe21e7420bc893cb78cf781",
+  "baseline_immutability_result": "PASS",
+  "baseline_zip_sha256": "4fa99350443291e9243d09312752dcbf6dc5bdb0e6ccf653f23233772cf62c2f",
+  "card_conformance": {
+    "affected": "11/11",
+    "byte_edits": "9/9",
+    "result": "PASS",
+    "route_only_unchanged": "2/2",
+    "unlisted_card_changes": 0
+  },
+  "changed_file_count": 144,
+  "changed_file_inventory": "governance/v52/CHANGED_FILE_INVENTORY.json",
+  "changed_file_inventory_self_reference_policy": "The inventory excludes itself and manifest.json; manifest.json separately excludes itself.",
+  "drift_result": "PASS — exact approved operations and card bytes; only approval-bound normalization and deterministic derivatives.",
+  "first_canonical_write_at": "2026-07-13T19:48:03Z",
+  "g1_inline_output_sha256": "2b59202a111b972911112e4920f45865e6d77604dba1715638c63e13c7a26270",
+  "generated_at": "2026-07-13T19:56:00Z",
+  "graph_health": {
+    "graph_health_rows": 15,
+    "mandatory_metrics": "10/10 PASS",
+    "overall_status": "PASS"
+  },
+  "graph_operation_conformance": "341/341 exact",
+  "implementation_id": "R1-V52-UPLOADED-MATERIALS-2026-001",
+  "implementation_normalization": "governance/v52/IMPLEMENTATION_NORMALIZATION_RECORD.json",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "Addition": "July 6 formal status overlay, 2-yellow/0-red rollup, 11 refreshed core rows, and Nuclear June 29 conflict note.",
+        "Card": "NEE_02",
+        "Change type": "implemented body+frontmatter+route",
+        "Defense / evidence": "July 6 formal internal status packet.",
+        "Retrieval improvement": "Current status lookup returns July 6 posture while preserving June 29 history."
+      },
+      {
+        "Addition": "TRM draft RFP/SOW-like document-authority and nonexecution guardrail.",
+        "Card": "NEE_03",
+        "Change type": "implemented body+frontmatter+route",
+        "Defense / evidence": "TRM document title/body mismatch and absence of execution/commercial markers.",
+        "Retrieval improvement": "Contract/SOW queries abstain from treating the TRM draft as executed."
+      },
+      {
+        "Addition": "July 6 Q3 entry controls; PD/DocIQ P0 closures and narrower P1 follow-ups.",
+        "Card": "NEE_04",
+        "Change type": "implemented body+frontmatter+route",
+        "Defense / evidence": "July 6 executive readout and tech-lead detail.",
+        "Retrieval improvement": "Q3 action lookup resolves cleared gates and surfaces named remaining controls."
+      },
+      {
+        "Addition": "AI-usage interpretation boundary, DocIQ phase-two controls, TRM agent guardrails, and Google announcement caveat.",
+        "Card": "NEE_07",
+        "Change type": "implemented body+frontmatter+route",
+        "Defense / evidence": "Status usage indicators, DocIQ detail, TRM sections 4.10–4.11, and official Google technology section.",
+        "Retrieval improvement": "AI queries distinguish self-report, guardrails, and public intent from telemetry or deployment."
+      },
+      {
+        "Addition": "Official dated Apex Global / Google Cloud announcement with currentness validation gate.",
+        "Card": "NEE_09",
+        "Change type": "implemented body+frontmatter+route",
+        "Defense / evidence": "Official December 8, 2025 Apex Global / Google Cloud release.",
+        "Retrieval improvement": "Public-strategy retrieval uses the primary source and blocks stale launch/completion inference."
+      },
+      {
+        "Addition": "Route-only impact from 11 July 6 workstream node-status refreshes; no card-body or mapping change.",
+        "Card": "NEE_10",
+        "Change type": "implemented route",
+        "Defense / evidence": "Existing NEE_10 routes and the July 6 formal internal status packet.",
+        "Retrieval improvement": "Stakeholder/workstream navigation returns refreshed dated status text without upgrading delivery leads into client decision owners."
+      },
+      {
+        "Addition": "Cross-pod reuse of access, certification, lineage, cost, review, and charter controls.",
+        "Card": "NEE_11",
+        "Change type": "implemented body+frontmatter+route",
+        "Defense / evidence": "Cross-source reuse synthesis with source-attribution boundaries.",
+        "Retrieval improvement": "Pattern retrieval connects similar controls without inventing implementation equivalence."
+      },
+      {
+        "Addition": "TRM governed-data-foundation, data-product, Unity Catalog, operating-model, and interoperability requirements.",
+        "Card": "NEE_13",
+        "Change type": "implemented body+frontmatter+route",
+        "Defense / evidence": "TRM sections 3–4.12 and knowledge-transfer requirements.",
+        "Retrieval improvement": "TRM data-foundation queries route to certified-data-product and governance patterns."
+      },
+      {
+        "Addition": "TRM Endur/ETRM source-of-record and future Risk Engine implementation boundaries.",
+        "Card": "NEE_14",
+        "Change type": "implemented body+frontmatter+route",
+        "Defense / evidence": "TRM sections 4.4, 4.12, and out-of-scope list.",
+        "Retrieval improvement": "Trading queries distinguish analytical foundation, ETRM authority, and future risk-engine interface."
+      },
+      {
+        "Addition": "Route-only currentness impact for PD Conduit / Conductor name resolution; no card-body, alias, or mapping change.",
+        "Card": "NEE_15",
+        "Change type": "implemented route",
+        "Defense / evidence": "Existing NEE_15 name-resolution route and the July 6 PD Conduit evidence.",
+        "Retrieval improvement": "Alias lookup resolves the same PD Conduit entity while returning the July 6 dated posture rather than the superseded June 29 status."
+      },
+      {
+        "Addition": "Hashes, source dates, authority posture, and allowed-use boundaries for all three uploads.",
+        "Card": "NEE_16",
+        "Change type": "implemented body+frontmatter+route",
+        "Defense / evidence": "Recorded SHA-256 values and source-authority reconciliation.",
+        "Retrieval improvement": "Provenance lookup exposes exact hashes, dates, authority, and use limits."
+      }
+    ],
+    "graph_delta_rows": [
+      {
+        "Baseline": "169",
+        "Delta": "3",
+        "Graph component": "Sources",
+        "Proposed / actual": "172",
+        "Retrieval rationale": "Adds exact source-attribution boundaries for July 6 status, the official Google announcement, and the TRM draft artifact.",
+        "What changed": "Implemented exactly: 3 adds"
+      },
+      {
+        "Baseline": "169",
+        "Delta": "3",
+        "Graph component": "Source versions",
+        "Proposed / actual": "172",
+        "Retrieval rationale": "Binds each uploaded source to immutable hashes, dates, scope, and authority posture.",
+        "What changed": "Implemented exactly: 3 adds"
+      },
+      {
+        "Baseline": "1592",
+        "Delta": "10",
+        "Graph component": "Evidence items",
+        "Proposed / actual": "1602",
+        "Retrieval rationale": "Provides page/section/card locators for status, public-announcement, and TRM requirements assertions.",
+        "What changed": "Implemented exactly: 10 adds"
+      },
+      {
+        "Baseline": "651 / 646",
+        "Delta": "1 / 1",
+        "Graph component": "Nodes (total / active)",
+        "Proposed / actual": "652 / 647",
+        "Retrieval rationale": "Creates one exact-match TRM Lakehouse workstream and refreshes dated workstream status text used by node lookup.",
+        "What changed": "Implemented exactly: 1 add + 11 updates"
+      },
+      {
+        "Baseline": "651",
+        "Delta": "1",
+        "Graph component": "Node states",
+        "Proposed / actual": "652",
+        "Retrieval rationale": "Keeps node search currentness and status-mirror text synchronized without changing ontology or RAG vocabulary.",
+        "What changed": "Implemented exactly: 1 add + 11 updates"
+      },
+      {
+        "Baseline": "426",
+        "Delta": "3",
+        "Graph component": "Legacy aliases",
+        "Proposed / actual": "429",
+        "Retrieval rationale": "Enables exact lookup of three source-grounded TRM Lakehouse name variants.",
+        "What changed": "Implemented exactly: 3 adds"
+      },
+      {
+        "Baseline": "421 / 421",
+        "Delta": "3 / 3",
+        "Graph component": "Canonical aliases (total / active)",
+        "Proposed / actual": "424 / 424",
+        "Retrieval rationale": "Normalizes the TRM variants to one reviewed entity and blocks duplicate node creation.",
+        "What changed": "Implemented exactly: 3 adds"
+      },
+      {
+        "Baseline": "426",
+        "Delta": "3",
+        "Graph component": "Alias lineage maps",
+        "Proposed / actual": "429",
+        "Retrieval rationale": "Preserves deterministic alias lineage from legacy lookup rows to canonical aliases.",
+        "What changed": "Implemented exactly: 3 adds"
+      },
+      {
+        "Baseline": "1066 / 1038",
+        "Delta": "3 / 3",
+        "Graph component": "Edges (total / active)",
+        "Proposed / actual": "1069 / 1041",
+        "Retrieval rationale": "Adds approved-vocabulary traversal from TRM Lakehouse to Databricks, Unity Catalog, and the Endur boundary.",
+        "What changed": "Implemented exactly: 3 adds"
+      },
+      {
+        "Baseline": "544 / 499",
+        "Delta": "24 / 9",
+        "Graph component": "Claims (total / active)",
+        "Proposed / actual": "568 / 508",
+        "Retrieval rationale": "Adds atomic source-bounded status and requirements statements while preserving June 29 claims as historical.",
+        "What changed": "Implemented exactly: 24 adds + 15 supersedes"
+      },
+      {
+        "Baseline": "1643",
+        "Delta": "27",
+        "Graph component": "Canonical assertions",
+        "Proposed / actual": "1670",
+        "Retrieval rationale": "Promotes evidence-backed dated assertions, supersedes stale status candidates, and reconciles official Google evidence.",
+        "What changed": "Implemented exactly: 27 adds + 2 updates + 15 supersedes"
+      },
+      {
+        "Baseline": "1668",
+        "Delta": "29",
+        "Graph component": "Assertion-evidence links",
+        "Proposed / actual": "1697",
+        "Retrieval rationale": "Prevents unsupported canonical retrieval by attaching every promoted assertion to exact source evidence.",
+        "What changed": "Implemented exactly: 29 adds"
+      },
+      {
+        "Baseline": "1066",
+        "Delta": "3",
+        "Graph component": "Edge-assertion lineage maps",
+        "Proposed / actual": "1069",
+        "Retrieval rationale": "Maintains exact lineage from each new legacy edge to its canonical relationship assertion.",
+        "What changed": "Implemented exactly: 3 adds"
+      },
+      {
+        "Baseline": "544",
+        "Delta": "24",
+        "Graph component": "Claim-assertion lineage maps",
+        "Proposed / actual": "568",
+        "Retrieval rationale": "Maintains exact lineage from each new claim to its canonical assertion.",
+        "What changed": "Implemented exactly: 24 adds"
+      },
+      {
+        "Baseline": "176 / 143",
+        "Delta": "6 / 4",
+        "Graph component": "Validations (total / open)",
+        "Proposed / actual": "182 / 147",
+        "Retrieval rationale": "Resolves two cleared P0 gates and opens/narrows currentness, authority, staffing, and control questions with owners/dates.",
+        "What changed": "Implemented exactly: 6 adds + 4 updates"
+      },
+      {
+        "Baseline": "3812 / 3811",
+        "Delta": "78 / 78",
+        "Graph component": "Canonical routes (total / active)",
+        "Proposed / actual": "3890 / 3889",
+        "Retrieval rationale": "Adds primary/support homes across the existing spine and upgrades Google routes from candidate to approved source-attributed.",
+        "What changed": "Implemented exactly: 78 adds + 2 updates"
+      },
+      {
+        "Baseline": "1624",
+        "Delta": "4",
+        "Graph component": "Node-card maps",
+        "Proposed / actual": "1628",
+        "Retrieval rationale": "Routes the new TRM workstream to existing cards without adding or re-scoping the spine.",
+        "What changed": "Implemented exactly: 4 adds"
+      },
+      {
+        "Baseline": "2222 / 1304",
+        "Delta": "28 / 30",
+        "Graph component": "Search documents (total / eligible)",
+        "Proposed / actual": "2250 / 1334",
+        "Retrieval rationale": "Indexes exact names, current dated statuses, source-attributed requirements, and non-inference boundaries while hiding superseded rows.",
+        "What changed": "Implemented exactly: 28 adds + 28 updates"
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "Comment / required improvement": "Actual verification: No new operational orphan is introduced; the one new TRM node has approved-vocabulary edges and explicit card mappings.",
+        "Metric": "Operational orphan rate",
+        "Pass threshold": "≤5% and no increase",
+        "Result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "Status": "PASS"
+      },
+      {
+        "Comment / required improvement": "Actual verification: The TRM workstream is a distinct instance; three reviewed aliases normalize to it without merging existing entities.",
+        "Metric": "Duplicate node count",
+        "Pass threshold": "0 new high-impact duplicates",
+        "Result": "5 candidate groups → 5 candidate groups (+0; 0 new high-impact duplicates)",
+        "Status": "PASS"
+      },
+      {
+        "Comment / required improvement": "Actual verification: The three new relationship assertions use distinct subject-predicate-object combinations and preserve edge/evidence lineage.",
+        "Metric": "Duplicate edge rate",
+        "Pass threshold": "≤1% unexplained and no increase",
+        "Result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "Status": "PASS"
+      },
+      {
+        "Comment / required improvement": "Actual verification: No ontology vocabulary is added; TRM relationships reuse USES_PATTERN, DEPENDS_ON, and RETAINS_DEPENDENCY_ON.",
+        "Metric": "Rare edge-type rate",
+        "Pass threshold": "≤25% or no increase",
+        "Result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "Status": "PASS"
+      },
+      {
+        "Comment / required improvement": "Actual verification: All 24 proposed claims have subject, source, confidence, HITL posture, evidence lineage, and active canonical routing.",
+        "Metric": "Claim completeness",
+        "Pass threshold": "100%",
+        "Result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "Status": "PASS"
+      },
+      {
+        "Comment / required improvement": "Actual verification: All three material uploads have immutable hashes, source versions, dates/date posture, authority rank, scope, and allowed-use posture.",
+        "Metric": "Source metadata completeness",
+        "Pass threshold": "≥95%; 100% for material sources",
+        "Result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "Status": "PASS"
+      },
+      {
+        "Comment / required improvement": "Actual verification: July 6 status is dated exactly; the December 2025 announcement remains dated intent; the TRM snapshot date is explicitly estimated rather than execution-effective.",
+        "Metric": "Temporal completeness",
+        "Pass threshold": "≥90% and no decrease",
+        "Result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "Status": "PASS"
+      },
+      {
+        "Comment / required improvement": "Actual verification: No promoted alias collision is created; the proposal avoids a bare Endur alias and preserves all existing identity candidates.",
+        "Metric": "High-impact identity collisions",
+        "Pass threshold": "0 unresolved",
+        "Result": "0 → 0 (+0)",
+        "Status": "PASS"
+      },
+      {
+        "Comment / required improvement": "Actual verification: Two cleared P0 gates resolve, four existing items are updated, and six focused validations are added; every remaining open P0/P1 has one owner and due date.",
+        "Metric": "P0/P1 SLA breach rate",
+        "Pass threshold": "0%",
+        "Result": "0.0000% (0/108 undated) → 0.0000% (0/112 undated) (+0.0000 pp; +4 open items, all owned and dated)",
+        "Status": "PASS"
+      },
+      {
+        "Comment / required improvement": "Actual verification: All 21 behavioral cases pass; V51 hardcoded authority counts differ only by the exact G1 proposal deltas and are separately reconciled.",
+        "Metric": "Decision-safe answer regression",
+        "Pass threshold": "0 regression on approved test set",
+        "Result": "0 failures / 21 cases → 0 failures / 21 cases (+0 failures)",
+        "Status": "PASS"
+      }
+    ],
+    "table_count": 3
+  },
+  "inline_output_gate_result": "PASS",
+  "lineage_currentness_audience_hitl_results": {
+    "allowed_audiences": [
+      "internal_working_team",
+      "slalom_account_leadership"
+    ],
+    "approval_bound_assertions": 29,
+    "approved_assertions_missing_evidence": 0,
+    "approved_high_critical_assertions_missing_active_route": 0,
+    "candidate_search_leakage": 0,
+    "needs_review_search_leakage": 0,
+    "new_claims_missing_assertion_lineage": 0,
+    "open_p0_p1": 112,
+    "open_p0_p1_missing_owner_or_due": 0,
+    "open_validations": 147,
+    "result": "PASS"
+  },
+  "migration_rollback": "PASS",
+  "packaging_gate_result": "PASS",
+  "packaging_hygiene": {
+    "governed_pointer": "inputs/v52_source_pointers.json",
+    "prior_baseline_preserved": true,
+    "raw_uploaded_inputs": [],
+    "raw_uploaded_inputs_included": false,
+    "result": "PASS"
+  },
+  "r1_inline_output_sha256": "63fb103aed7e0aa823e96b58cf114b621b73dd9307a6088a7807deb1c2dca0ee",
+  "release_state": "approved_current",
+  "retrieval_results": {
+    "authority_layer": "PASS",
+    "candidate_search_leakage": 0,
+    "cases": 21,
+    "failures": 0,
+    "needs_review_search_leakage": 0,
+    "results_sha256": "1ba18b8a98cb3dfb38d6718e3ab8b4455597a80a75bae9947a94a16a92dd1e80"
+  },
+  "schema_and_integrity_results": {
+    "clean_schema_rebuild": {
+      "indexes": 47,
+      "result": "PASS",
+      "tables": 85,
+      "triggers": 40,
+      "views": 40
+    },
+    "database_sha256": "d2fccfee82f5b944a0eedc5cf99dff34f2f22385a143cadb4218e0231b489b44",
+    "foreign_key_violations": 0,
+    "integrity_check": [
+      "ok"
+    ],
+    "quick_check": [
+      "ok"
+    ],
+    "schema_unchanged": true
+  },
+  "status": "PASS",
+  "unapproved_semantic_changes": []
+}

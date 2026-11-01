@@ -1,0 +1,13 @@
+{
+  "approval_decision_id": "AD-V54-EDO-AUTHORITY-BOUNDARY-2026-001",
+  "first_canonical_write_at": "2026-07-14T15:54:53Z",
+  "generated_at": "2026-07-14T16:20:00Z",
+  "normalizations": [
+    "Six simulation-only assertion approval references were rebound to the approved V54 decision reference.",
+    "Deterministic trigger updated_at values were excluded from semantic projection comparison.",
+    "One governance approval control row was added outside the 125 semantic operations.",
+    "Three approved card bodies were replaced with exact C1 bytes; three route-only affected cards remained byte-identical.",
+    "Only release-specific inventories, exports, migration, QA, and packaging derivatives were regenerated."
+  ],
+  "status": "PASS"
+}

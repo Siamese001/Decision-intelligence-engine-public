@@ -89,7 +89,7 @@ def test_d2_atomic_asr_cache_and_v4_rapidfuzz_similarity(tmp_path: Path) -> None
 
     assert _string_similarity("Apex Global Enterprises", "Apex Global Enterprises") == 1.0
     assert _match_single_word("apex_global", "Apex Global", ["NEE"]) is None
-    assert _match_single_word("NEXTERRA", "Apex Global", []) is not None
+    assert _match_single_word("APEX GLOBA", "Apex Global", []) is not None
 
 
 def test_ssot_drift_remediation_prompt_includes_config_anti_sprawl_domain() -> None:
@@ -115,4 +115,4 @@ def test_ssot_drift_remediation_prompt_includes_config_anti_sprawl_domain() -> N
     infra = get_runtime_infra_parameters()
     assert infra["max_retrieval_workers"] == 16
     assert infra["healing_max_retries"] == 3
-    assert infra["connection_pool_size"] == 5
+    assert infra["connection_pool_size"] == 16

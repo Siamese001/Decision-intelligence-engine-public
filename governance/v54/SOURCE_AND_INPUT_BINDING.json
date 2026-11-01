@@ -1,0 +1,11 @@
+{
+  "cold_archive_ref": "conversation://2026-07-14/edo-authority-boundary-correction",
+  "generated_at": "2026-07-14T16:20:00Z",
+  "input_artifact_hashes": {
+    "user_edo_authority_boundary_correction_2026-07-14.txt": "28b1305e14b83fa9ed6efaf5ed2067cf0b1ef08ff4507fc6d42551d115f1b2f5"
+  },
+  "raw_artifact_classification": "approved exact user instruction text",
+  "raw_artifact_in_package": true,
+  "scope": "EDO authority, Pod 4 retirement, and enterprise-wide boundary only",
+  "source_id": "source_v54_user_edo_authority_boundary_2026_07_14"
+}

@@ -1,0 +1,60 @@
+{
+  "approval_decision_id": "AD-V53-SHERPA-ANDY-LILLIAN-2026-001",
+  "approved_card_proposal_sha256": "a33c083d2321413d38ec9e4bb67430eee965d4cd5dd91cf80b3559c7ab24c9c2",
+  "byte_edit_count": 5,
+  "c1_card_count": 4,
+  "canonical_serialization_sha256": "9175674415870a148385a4bb5fa0f7dbff2691937c195df9d88e7af737764828",
+  "card_count": 5,
+  "cards": [
+    {
+      "actual_after_sha256": "1e9ff68db795a8a72af3c4b5f0eccc49c329473d0e80881244608a36215bfe5a",
+      "approved_after_sha256": "1e9ff68db795a8a72af3c4b5f0eccc49c329473d0e80881244608a36215bfe5a",
+      "before_sha256": "2183dafde77dc64f05071372821b0aa1ef92d21f51ba05650a78566c1a9ab847",
+      "card_id": "NEE_07",
+      "change_type": "body+frontmatter+route",
+      "exact_match": true,
+      "path": "cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md"
+    },
+    {
+      "actual_after_sha256": "a827f4ad8a2936d188d5e9d139157fe121f6fa87e9a9116f43ec424b8ac8594c",
+      "approved_after_sha256": "a827f4ad8a2936d188d5e9d139157fe121f6fa87e9a9116f43ec424b8ac8594c",
+      "before_sha256": "e4f86c9d920b00bd2c28d5121933d9ff3890eeda8aa92fd0218d09810b368313",
+      "card_id": "NEE_12",
+      "change_type": "body+frontmatter+route",
+      "exact_match": true,
+      "path": "cards/NEE_12_AI_Hub_Sherpa_DevHub_PGD_Platform_Lessons.md"
+    },
+    {
+      "actual_after_sha256": "e5d5915acac35b461d9c4ab4c90a1dc5bc3933652a5b8ac4baf21f89d137c66a",
+      "approved_after_sha256": "e5d5915acac35b461d9c4ab4c90a1dc5bc3933652a5b8ac4baf21f89d137c66a",
+      "before_sha256": "af803c25f3f09cc60e16fa6645e05a0a4fe8f99cdfce74b74a6a9e87f33c871f",
+      "card_id": "NEE_16",
+      "change_type": "body+frontmatter+route",
+      "exact_match": true,
+      "path": "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md"
+    },
+    {
+      "actual_after_sha256": "eefcf9bc0f1ba54a2549fc54eeaf7643a03d433388545a5acbb50327422aa27f",
+      "approved_after_sha256": "eefcf9bc0f1ba54a2549fc54eeaf7643a03d433388545a5acbb50327422aa27f",
+      "before_sha256": "36cef5c925c23a0a020a1c8cd9885da370e1f60a2f40f028148eff10109d9b94",
+      "card_id": "NEE_22",
+      "change_type": "body+frontmatter+route",
+      "exact_match": true,
+      "path": "cards/NEE_22_Digital_Sherpa_A2A_and_Platform_Advisor_Context.md"
+    },
+    {
+      "actual_after_sha256": "4f1885acfa7f82c577abb4506cdbd52c343cabbc404f37d198670d705e8a1697",
+      "approved_after_sha256": "control-policy:PD-53-NATURAL-LANGUAGE-APPROVAL-BINDING",
+      "before_sha256": "e623840b5283c21d92b9cd083224e4bdd40aa6527b6e9ca12ae6854fa09a7cbc",
+      "card_id": "NEE_99",
+      "change_type": "control_policy",
+      "exact_match": true,
+      "path": "cards/NEE_99_Project_Instructions.md"
+    }
+  ],
+  "control_policy_count": 1,
+  "generated_at": "2026-07-13T22:48:35Z",
+  "implementation_id": "R1-V53-SHERPA-ANDY-LILLIAN-2026-001",
+  "route_only_count": 0,
+  "status": "PASS"
+}

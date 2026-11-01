@@ -1,0 +1,410 @@
+# Canonical Governance Policy Registry (SSOT)
+# Schema Version: 1.0.0
+# Machine-readable single source of truth for all quantitative, structural,
+# and lifecycle invariants across the Decision Intelligence Engine repository.
+
+version: "1.1.0"
+updated_at: "2026-10-07T05:00:00Z"
+description: "Single Source of Truth for repository governance thresholds, budgets, and invariant enforcers."
+
+policies:
+  - id: "INV-BUDGET-FILE-LINES"
+    title: "File Size Line Budget"
+    category: "architecture"
+    threshold: 400
+    unit: "lines"
+    description: "Clean module line budget with nonblocking review allowances (401-650 standard, 651-800 declarative) and strict complexity/ratchet enforcement."
+    enforcer: "tools/file_budget_core/policy.py"
+    rule_reference: ".agents/rules/layer-architectural-integrity.md"
+    pyproject_binding: "tool.nee.budgets.max_file_lines"
+    warning_allowances:
+      standard_ordinary: 650
+      declarative_pure_ast: 800
+      max_cognitive_complexity: 15
+
+  - id: "INV-COMPLEXITY-MAX"
+    title: "Maximum Cyclomatic Complexity"
+    category: "architecture"
+    threshold: 15
+    unit: "mccabe_score"
+    description: "Maximum allowable cyclomatic complexity per function or method across first-party code."
+    enforcer: "pyproject.toml"
+    rule_reference: ".agents/rules/layer-architectural-integrity.md"
+    pyproject_binding: "tool.ruff.lint.mccabe.max-complexity"
+
+  - id: "INV-HITL-AMBIGUITY-MARGIN"
+    title: "HITL Ambiguity Margin Threshold"
+    category: "decision_intelligence"
+    threshold: 0.20
+    boundary_inclusivity: "<="
+    unit: "fraction"
+    description: "Confidence margin between top two options at or below which (Delta <= 0.20) Human-in-the-Loop review is strictly required (SSOT 20% inclusive)."
+    enforcer: "dual_pipeline/parameters.py"
+    rule_reference: ".agents/rules/hitl-decisions.md"
+    runtime_parameter: "config/runtime/parameters.json -> hitl.ambiguity_margin_threshold"
+    pyproject_binding: "tool.nee.budgets.hitl_ambiguity_margin_threshold"
+    named_domain_exceptions:
+      - name: "hitl.unresolved_entity_margin_threshold"
+        threshold: 0.15
+        domain: "entity_resolution"
+        justification: "Entity extraction candidates operate on a narrower 0.15 margin to avoid over-prompting on high-volume name aliases."
+
+  - id: "INV-HITL-UNRESOLVED-ENTITY-MARGIN"
+    title: "HITL Unresolved Entity Margin Threshold"
+    category: "decision_intelligence"
+    threshold: 0.15
+    unit: "fraction"
+    description: "Confidence margin between candidate entities below which human operator clarification is triggered."
+    enforcer: "dual_pipeline/ambiguity_core/detector_d6_entity.py"
+    rule_reference: ".agents/rules/hitl-decisions.md"
+    runtime_parameter: "config/runtime/parameters.json -> hitl.unresolved_entity_margin_threshold"
+    pyproject_binding: "tool.nee.budgets.hitl_unresolved_entity_margin_threshold"
+
+  - id: "INV-HITL-DIVERGENCE-MARGIN"
+    title: "HITL Divergence Margin Threshold"
+    category: "decision_intelligence"
+    threshold: 0.20
+    unit: "fraction"
+    description: "Dialectical divergence spread between agent panel proposals above which human operator arbitration is surfaced."
+    enforcer: "dual_pipeline/parameters.py"
+    rule_reference: ".agents/rules/hitl-decisions.md"
+    runtime_parameter: "config/runtime/parameters.json -> hitl.divergence_margin_threshold"
+    pyproject_binding: "tool.nee.budgets.hitl_divergence_margin_threshold"
+
+  - id: "INV-AGENTS-MD-MAX-SIZE"
+    title: "AGENTS.md Size Injection Ceiling"
+    category: "context_management"
+    threshold: 12288
+    unit: "bytes"
+    description: "Maximum allowable byte size for AGENTS.md to prevent context compaction truncation during agent startup."
+    enforcer: "tools/generate_agents_index.py"
+    rule_reference: "AGENTS.md"
+    pyproject_binding: "tool.nee.budgets.agents_md_max_bytes"
+
+  - id: "INV-SSOT-LINK-02"
+    title: "Zero Inline Prompt Body & Maximum Pointer Word Limit"
+    category: "context_management"
+    threshold: 40
+    unit: "words"
+    description: "Scheduled automation dereferencer pointers must never inline prompt bodies or raw markdown headers and must not exceed 40 words."
+    enforcer: "tools/lint_automation_ssot_links.py"
+    rule_reference: ".agents/rules/unified-agent-architecture.md"
+    runtime_parameter: "config/runtime/parameters.json -> engineering_output.ssot_pointer_max_words"
+
+  - id: "INV-TEST-TIMEOUT-HARD"
+    title: "Hard Pytest Execution Timeout"
+    category: "testing"
+    threshold: 60
+    unit: "seconds"
+    description: "Hard per-test timeout enforced across pytest configuration and runner to prevent hanging processes or deadlocked storage connections."
+    enforcer: "pyproject.toml"
+    rule_reference: ".agents/rules/wave-progression.md"
+    pyproject_binding: "tool.pytest.ini_options.timeout"
+
+  - id: "INV-WAVE-PLAN-MAX-WORDS"
+    title: "Maximum New Wave Plan Length"
+    category: "planning"
+    threshold: 1000
+    unit: "words"
+    description: "Base word ceiling (1,000 words) for 1-2 wave plans, scaling by scope (min(2500, max(1000, 400 + 250*N_waves + 25*M_items))) with HITL decision tables exempt; each wave gate must specify Run, Input, Expected, Verify independently, Fail if, and Record."
+    enforcer: "tools/validate_implementation_plan.py"
+    rule_reference: ".agents/rules/wave-progression.md"
+    runtime_parameter: "config/runtime/parameters.json -> planning.max_plan_words"
+
+  - id: "INV-TEST-TIMEOUT-CLASS-B"
+    title: "Class B Fast Verification Timeout"
+    category: "testing"
+    threshold: 60
+    unit: "seconds"
+    description: "Standard per-test timeout enforced by tools/run_tests_with_progress.py during wave receipt generation."
+    enforcer: "tools/run_tests_with_progress.py"
+    rule_reference: ".agents/rules/wave-progression.md"
+
+  - id: "INV-MIN-E2E-COVERAGE-SCORE"
+    title: "Minimum E2E Testing Dimension Score"
+    category: "testing"
+    threshold: 80.0
+    unit: "percent"
+    description: "Minimum required Gate 10 score from tools/audit_testing_gaps.py to authorize PR promotion."
+    enforcer: "tools/audit_testing_gaps.py"
+    rule_reference: ".agents/rules/e2e-and-edge-case-coverage.md"
+    pyproject_binding: "tool.nee.budgets.min_e2e_coverage_score"
+
+  - id: "INV-HITL-BAYESIAN-PRIOR-STRENGTH"
+    title: "HITL Bayesian Prior Strength Default"
+    category: "learning"
+    threshold: 4.0
+    unit: "float"
+    description: "Initial pseudo-count strength for Beta/Dirichlet posterior calibration before live evidence accumulation."
+    enforcer: "dual_pipeline/parameters.py"
+    rule_reference: ".agents/rules/system-learning-and-feedback.md"
+    runtime_parameter: "config/runtime/parameters.json -> hitl.bayesian_prior_strength"
+
+  - id: "INV-HITL-MIN-CONFIDENCE-FLOOR"
+    title: "Minimum Autonomous Confidence Floor"
+    category: "decision_intelligence"
+    threshold: 0.65
+    boundary_inclusivity: ">="
+    unit: "fraction"
+    description: "Minimum top-option confidence required (top_confidence >= 0.65) before tactical decisions may be resolved autonomously."
+    enforcer: "dual_pipeline/parameters.py"
+    rule_reference: ".agents/rules/hitl-decisions.md"
+    runtime_parameter: "config/runtime/parameters.json -> hitl.min_autonomous_confidence_floor"
+    named_domain_exceptions:
+      - name: "l0_quarantine_admission_threshold"
+        threshold: 0.60
+        domain: "layer_0_quarantine"
+        justification: "Layer 0 quarantine admission uses DEFAULT_CONFIDENCE_THRESHOLD = 0.60 to quarantine low-signal assertions before canonical graph admission."
+      - name: "medium_tier_confidence_score"
+        threshold: 0.60
+        domain: "hitl_surfacing"
+        justification: "Pre-wave and HITL surfacing assign 0.60 as nominal representative score for the MEDIUM confidence tier."
+
+  - id: "INV-HITL-ENTROPY-CEILING"
+    title: "Maximum Uncertainty Entropy Ceiling"
+    category: "decision_intelligence"
+    threshold: 0.75
+    unit: "fraction"
+    description: "Normalized Shannon entropy limit above which decision uncertainty mandates operator consultation."
+    enforcer: "dual_pipeline/parameters.py"
+    rule_reference: ".agents/rules/hitl-decisions.md"
+    runtime_parameter: "config/runtime/parameters.json -> hitl.entropy_ambiguity_threshold"
+
+  - id: "INV-GROUNDING-MANDATORY-ASSERTION"
+    title: "Mandatory GraphDB Assertion Grounding"
+    category: "grounding"
+    threshold: 1.0
+    unit: "ratio"
+    description: "Every released factual claim must bind to a confirmed assertion in the active GraphDB snapshot."
+    enforcer: "dual_pipeline/grounding/delivery_boundary.py"
+    rule_reference: ".agents/rules/runtime-evidence.md"
+
+  - id: "INV-GROUNDING-STRICT-METRICS"
+    title: "Deterministic Text Metric Limits"
+    category: "grounding"
+    threshold: 500
+    unit: "words"
+    description: "Text metrics must strictly satisfy bounds (<= 500 words for capped routes, verified persona titles, exact count; uncapped query routes exempt per INV-QUERY-CLEAN-PROSE)."
+    enforcer: "dual_pipeline/grounding/metrics.py"
+    rule_reference: ".agents/rules/runtime-evidence.md"
+    runtime_parameter: "config/runtime/parameters.json -> grounding.delivery_max_words"
+
+  - id: "INV-GROUNDING-DELIVERY-IMMUTABILITY"
+    title: "Post-Verification Delivery Immutability"
+    category: "grounding"
+    threshold: 1.0
+    unit: "hash_parity"
+    description: "Payload bytes must match certified receipt payload_digest with zero mutations prior to sink release."
+    enforcer: "dual_pipeline/grounding/delivery_boundary.py"
+    rule_reference: ".agents/rules/runtime-evidence.md"
+
+  - id: "INV-GROUNDING-SAFE-FAILURE-RESPONSE"
+    title: "Safe Failure Response Sanitization"
+    category: "grounding"
+    threshold: 1.0
+    unit: "suppression_ratio"
+    description: "Failed delivery qualifications must suppress ungrounded drafts and restricted evidence."
+    enforcer: "dual_pipeline/grounding/delivery_boundary.py"
+    rule_reference: ".agents/rules/runtime-evidence.md"
+
+  - id: "INV-INGESTION-ACTIVE-COMPLETION"
+    title: "Production Ingestion Active Completion"
+    category: "ingestion"
+    threshold: 1.0
+    unit: "ratio"
+    description: "Production ingestion must publish approved source deltas and verify active graph coverage to report COMPLETE."
+    enforcer: "dual_pipeline/canonical_pipeline/publish_helper.py"
+    rule_reference: ".agents/rules/ingestion-lifecycle.md"
+
+  - id: "INV-INGESTION-ENGINEERING-ISOLATION"
+    title: "Engineering Graph Isolation"
+    category: "testing"
+    threshold: 1.0
+    unit: "isolation_parity"
+    description: "Engineering waves and test executions must never mutate canonical/deployment graphs, executing writes exclusively in disposable sandboxes."
+    enforcer: "storage/connection.py"
+    rule_reference: ".agents/rules/concurrency-and-storage-safety.md"
+
+  - id: "INV-OUTPUT-MAX-WORDS"
+    title: "Maximum Engineering Completion Word Ceiling"
+    category: "presentation"
+    threshold: 300
+    unit: "words"
+    description: "Maximum allowable whitespace-delimited words in ordinary engineering turn completion response (target ~120 words)."
+    enforcer: "tools/engineering_output/verifier.py"
+    rule_reference: ".agents/rules/engineering-output.md"
+    runtime_parameter: "config/runtime/parameters.json -> engineering_output.max_words"
+
+  - id: "INV-OUTPUT-MAX-CHARS"
+    title: "Maximum Engineering Completion Character Ceiling"
+    category: "presentation"
+    threshold: 3500
+    unit: "characters"
+    description: "Maximum allowable raw characters in ordinary engineering turn completion response."
+    enforcer: "tools/engineering_output/verifier.py"
+    rule_reference: ".agents/rules/engineering-output.md"
+    runtime_parameter: "config/runtime/parameters.json -> engineering_output.max_chars"
+
+  - id: "INV-OUTPUT-PROGRESS-MAX-WORDS"
+    title: "Maximum Progress Update Word Ceiling"
+    category: "presentation"
+    threshold: 20
+    unit: "words"
+    description: "Maximum allowable words per progress update during engineering execution."
+    enforcer: "tools/engineering_output/verifier.py"
+    rule_reference: ".agents/rules/engineering-output.md"
+    runtime_parameter: "config/runtime/parameters.json -> engineering_output.progress_max_words"
+
+  - id: "INV-PR-QUEUE-MAX-WORDS"
+    title: "Maximum PR Queue Summary Response Words"
+    category: "presentation"
+    threshold: 1000
+    unit: "words"
+    description: "Total PR Queue response (markdown tables plus surrounding commentary) must strictly never exceed 1,000 words."
+    enforcer: "config/scheduled_tasks/pr_queue_output_contract.json"
+    rule_reference: ".agents/rules/pr-queue-summary.md"
+    runtime_parameter: "config/runtime/parameters.json -> engineering_output.pr_queue_max_words"
+
+  - id: "INV-GRAPH-MUTATION-PHYSICAL-PROOF"
+    title: "Mandatory Physical Proof for Graph Mutations"
+    category: "storage"
+    threshold: 5
+    unit: "checks"
+    description: "Every graph mutation must pass 5 physical proof checks (file change, raw byte scan bypassing SQLite, integrity check, readback, row delta)."
+    enforcer: "tools/graph_mutation_proof_core/proof.py"
+    rule_reference: ".agents/rules/graph-mutation-physical-proof.md"
+
+  - id: "INV-QUERY-CLEAN-PROSE"
+    title: "Two-Part Seamless Query & Executive Notes Clean Prose"
+    category: "query"
+    threshold: 0
+    unit: "scratchpad_markers"
+    description: "Knowledge query responses must deliver clean, executive-ready prose with lightweight footnote markers, moving all raw hashes, entity paths, confidence badges, and citation locators strictly to a decoupled Evidence & Graph Lineage footer table; strictly exempt from engineering word count ceilings."
+    enforcer: "dual_pipeline/query_core/lineage_formatter.py"
+    rule_reference: ".agents/rules/engineering-output.md"
+
+  - id: "INV-QUERY-ENTITY-ADVISORY-TRAVERSAL"
+    title: "Mandatory GraphDB Traversal for Entity Advisory Queries"
+    category: "query"
+    threshold: 1.0
+    unit: "traversal_ratio"
+    description: "Executive agenda, talking-point, and advisory entity queries must execute live GraphDB traversal against canonical tables and bind to confirmed graph assertions before emitting delivery payloads, rejecting :memory: SQLite fallbacks and empty claim manifests."
+    enforcer: "dual_pipeline/query_router.py"
+    rule_reference: ".agents/rules/agent-routing.md"
+
+  - id: "INV-GROUNDING-NO-OUTPUT-FILESYSTEM-BYPASS"
+    title: "Prohibition of Output Directory Filesystem Scans for Knowledge Retrieval"
+    category: "security"
+    threshold: 0
+    unit: "prohibited_commands"
+    description: "Directory enumeration (ls, tree, stat, find) and inline Python file scans on output/ are strictly blocked for knowledge lookup, query-drift investigations, and deliverable drafting; all entity knowledge must derive exclusively from live GraphDB traversal."
+    enforcer: "dual_pipeline/query_core/firewall.py"
+    rule_reference: ".agents/rules/production-purity.md"
+
+  - id: "INV-QUERY-TEMPORAL-SOURCE-EXISTENCE"
+    title: "Temporal Source Existence Verification Before Dated Meeting Query"
+    category: "query"
+    threshold: 1.0
+    unit: "verification_ratio"
+    description: "Queries targeting a specific date or time meeting must verify source.source_date existence in graph.sqlite via verify_temporal_source_existence() before answering, reporting Not in Knowledge Graph when absent rather than silently substituting older meetings."
+    enforcer: "dual_pipeline/query_router.py"
+    rule_reference: ".agents/rules/agent-routing.md"
+
+  - id: "INV-QUERY-DELIVERABLE-ALIAS-BINDING"
+    title: "Strict Deliverable Alias Binding for Synthesis Outputs"
+    category: "query"
+    threshold: 1.0
+    unit: "binding_ratio"
+    description: "User references to output(s) 1/2/3 must bind strictly to canonical synthesis deliverables 01_*, 02_*, and 03_*."
+    enforcer: "dual_pipeline/query_router.py"
+    rule_reference: ".agents/rules/agent-routing.md"
+
+  - id: "INV-QUERY-UNPROMOTED-WORKTREE-DLQ-CHECK"
+    title: "Unpromoted Worktree and DLQ Diagnostic on Missing Dated Meeting"
+    category: "query"
+    threshold: 1.0
+    unit: "diagnostic_ratio"
+    description: "When a requested dated meeting returns zero records in graph.sqlite, agents must state Not in Knowledge Graph and inspect .local/dual_pipeline/dlq/ and git worktree list via verify_temporal_source_existence() without scanning output/ directly."
+    enforcer: "dual_pipeline/query_router.py"
+    rule_reference: ".agents/rules/tool-routing.md"
+
+  - id: "INV-DECISIVE-RECOMMENDATION"
+    title: "Decisive Recommendation & Zero-Fence-Sitting Standard"
+    category: "decision_intelligence"
+    threshold: 1.0
+    unit: "decision_clarity"
+    description: "Strategic advice and post-wave transition recommendations must be concrete, unambiguous, and decisive, explicitly naming the recommended option and its trade-offs rather than offering disjunctive fence-sitting or passive multiple-choice deferral."
+    enforcer: "dual_pipeline/grounding/delivery_boundary.py"
+    rule_reference: ".agents/rules/hitl-decisions.md"
+
+  - id: "INV-WT-01"
+    title: "Worktree Root Isolation"
+    category: "git_governance"
+    threshold: 1
+    unit: "worktree_parity"
+    description: "Branch main is strictly reserved for the primary repository root; secondary worktrees checking out main or named *main_merge* are strictly forbidden."
+    enforcer: "tools/pr_governance_core/registry.py"
+    rule_reference: ".agents/rules/git-worktree-governance.md"
+
+  - id: "INV-WT-02"
+    title: "Canonical Worktree Location"
+    category: "git_governance"
+    threshold: 1
+    unit: "directory_parity"
+    description: "All secondary worktrees must reside directly in <repo_root>/.worktrees/<slug>."
+    enforcer: "tools/pr_governance_core/registry.py"
+    rule_reference: ".agents/rules/git-worktree-governance.md"
+
+  - id: "INV-WT-03"
+    title: "Deterministic Worktree Slug"
+    category: "git_governance"
+    threshold: 1
+    unit: "slug_parity"
+    description: "The directory name <slug> must exactly equal slugify_branch(branch)."
+    enforcer: "tools/pr_governance_core/registry.py"
+    rule_reference: ".agents/rules/git-worktree-governance.md"
+
+  - id: "INV-WT-04"
+    title: "Conventional Feature Branch Naming"
+    category: "git_governance"
+    threshold: 1
+    unit: "naming_parity"
+    description: "Every worktree branch must match CONVENTIONAL_BRANCH_RE."
+    enforcer: "tools/pr_governance_core/registry.py"
+    rule_reference: ".agents/rules/git-worktree-governance.md"
+
+  - id: "INV-WT-05"
+    title: "No Detached or Bare Worktrees"
+    category: "git_governance"
+    threshold: 0
+    unit: "bare_worktrees"
+    description: "Secondary worktrees must track a named conventional feature branch; detached HEAD and bare worktrees are rejected."
+    enforcer: "tools/pr_governance_core/registry.py"
+    rule_reference: ".agents/rules/git-worktree-governance.md"
+
+  - id: "INV-WT-06"
+    title: "Full Worktree & Stash Coverage"
+    category: "git_governance"
+    threshold: 1.0
+    unit: "coverage_ratio"
+    description: "The live PR queue enforces complete enumeration and fail-closed gap detection across all .worktrees/ entries and git stashes."
+    enforcer: "tools/pr_governance_core/inspection.py"
+    rule_reference: ".agents/rules/git-worktree-governance.md"
+
+  - id: "INV-WT-COVERAGE"
+    title: "Mandatory Worktree & Stash Coverage"
+    category: "git_governance"
+    threshold: 1.0
+    unit: "coverage_ratio"
+    description: "Every linked worktree directory and git stash entry must be enumerated and accounted for in PR queue summaries."
+    enforcer: "tools/pr_governance_core/inspection.py"
+    rule_reference: ".agents/rules/pr-queue-summary.md"
+
+  - id: "INV-ZERO-DISJUNCTIVE-ADVICE"
+    title: "Zero Disjunctive Disposition Invariant"
+    category: "git_governance"
+    threshold: 0
+    unit: "disjunctive_dispositions"
+    description: "Dispositions in the PR Queue must be single, concrete, and unambiguous (e.g. merge, rebase, close) rather than disjunctive compound options."
+    enforcer: "tools/pr_governance.py"
+    rule_reference: ".agents/rules/pr-queue-summary.md"

@@ -1,0 +1,13 @@
+{
+  "approval_decision_id": "AD-V52-UPLOADED-MATERIALS-2026-001",
+  "baseline_graph_sha256": "c802383576a6556aff228ac46c36f8ad66ce440aebe21e7420bc893cb78cf781",
+  "baseline_zip_sha256": "4fa99350443291e9243d09312752dcbf6dc5bdb0e6ccf653f23233772cf62c2f",
+  "governed_pointer": "inputs/v52_source_pointers.json",
+  "input_artifact_hashes": {
+    "NEA Tech Lead Q2 Weekly Status Packet 07062026.html": "c23d985dcfe19b864af622505eb2552e92a6427f92972ee2ba8f30de8f1ef6bd",
+    "Apex Global and Google Cloud Announce Landmark Strategic Energy and Technology Partnership to Accelerate AI Growth and Transform the Energy Industry ΓÇô Apex Global, Inc_.pdf": "d48c21fe8491f9684263a7372199313d245057f8b585d5783c1f2ef1c6e52c1a",
+    "Scope of Work (SOW) TRM Lakehouse Implementation on Databricks.docx": "a19c569fefd789697a40a589ac6c90fd481ea8eb48bf431cfdd5830a27696eeb"
+  },
+  "raw_inputs_included_in_release": false,
+  "status": "PASS"
+}

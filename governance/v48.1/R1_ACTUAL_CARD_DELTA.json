@@ -1,0 +1,44 @@
+{
+  "actual_card_count": 19,
+  "approved_c1_canonical_sha256": "d8e6230fc930de19fe8ab41ea1f8a4fe116c9951dc96788e4420ff3a8c1c5001",
+  "baseline_card_count": 19,
+  "canonical_serialization_sha256": "ef4695fa94a81bfb7697e432519df062ae8fef749bc81ae446f30cfcfbd5c510",
+  "card_body_delta": 0,
+  "card_rows": [
+    {
+      "addition": "Frontmatter only: last_updated 2026-07-11 → 2026-07-12; package NEE_v47.2 → NEE_v48.1",
+      "card": "NEE_99",
+      "change_type": "frontmatter",
+      "defense_or_evidence": "Policy version 47.2 and the full body remain byte-identical; body SHA-256 remains 17d0c5d6aeafc2b2c0be371cc2a738a6733419bba77a1c31df58e102c829dfa9. The candidate card SHA-256 is 0b840894add8dc6f71c22178000b55959524b28526ecc01bb199af2bb44ff0d2.",
+      "retrieval_improvement": "Removes competing package-version authority while preserving every policy rule and canonical card meaning."
+    }
+  ],
+  "card_spine_delta": 0,
+  "changed_card_files": [
+    "cards/NEE_99_Project_Instructions.md"
+  ],
+  "nee_99": {
+    "actual_sha256": "0b840894add8dc6f71c22178000b55959524b28526ecc01bb199af2bb44ff0d2",
+    "baseline_sha256": "e09f60241146d071d31daa9febb1d7578c850e9287b1352710e55a5a3f9f4da1",
+    "body_sha256": "17d0c5d6aeafc2b2c0be371cc2a738a6733419bba77a1c31df58e102c829dfa9",
+    "expected_actual_sha256": "0b840894add8dc6f71c22178000b55959524b28526ecc01bb199af2bb44ff0d2",
+    "expected_body_sha256": "17d0c5d6aeafc2b2c0be371cc2a738a6733419bba77a1c31df58e102c829dfa9",
+    "frontmatter_changes": {
+      "last_updated": {
+        "after": "2026-07-12",
+        "before": "2026-07-11"
+      },
+      "package": {
+        "after": "NEE_v48.1",
+        "before": "NEE_v47.2"
+      }
+    },
+    "root_mirror_body_identical": true
+  },
+  "record_id": "R1-C1-V48.1-NEE99-PACKAGE-METADATA-001",
+  "record_type": "actual_card_delta",
+  "route_delta": 0,
+  "status": "PASS",
+  "unapproved_card_changes": [],
+  "unchanged_non_policy_card_files": 18
+}

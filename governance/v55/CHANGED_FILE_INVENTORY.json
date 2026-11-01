@@ -1,0 +1,456 @@
+{
+  "added_file_count_excluding_self_referential_controls": 58,
+  "added_files": [
+    {
+      "after_bytes": 5397,
+      "after_sha256": "7d8e820c89293ff862ef3607a989641d1a2d15e4c6d70c9b4f4510833281629c",
+      "classification": "governance",
+      "path": "approvals/PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS.json"
+    },
+    {
+      "after_bytes": 3326,
+      "after_sha256": "738f5748345b3026e545fb654f726e28694556b5613eb0ef50149799dcbdc33b",
+      "classification": "governance",
+      "path": "approvals/v55/APPROVAL_RECORD.json"
+    },
+    {
+      "after_bytes": 53,
+      "after_sha256": "d32730755334c430dd638a91e52fb6fc0cf51e0b07c1d8fca9469e087374300c",
+      "classification": "governance",
+      "path": "approvals/v55/APPROVAL_SOURCE.txt"
+    },
+    {
+      "after_bytes": 654,
+      "after_sha256": "c92affb037551f5e6356cf4fa2fa8102a8e0d519658c3b7c46024a581ff8171c",
+      "classification": "governance",
+      "path": "approvals/v55/APPROVAL_VALIDATION.json"
+    },
+    {
+      "after_bytes": 590,
+      "after_sha256": "a53036c333477f08326594a8221da6f29a1fdaed41dc15a39940a0f0afcc9818",
+      "classification": "governance",
+      "path": "approvals/v55/BASELINE_AND_INPUT_HASHES.json"
+    },
+    {
+      "after_bytes": 179397,
+      "after_sha256": "5e377c14927958feb41c5d6a5df72e1af64ddb08168c7277f64d2b7d1862e35b",
+      "classification": "governance",
+      "path": "approvals/v55/BASELINE_IMMUTABLE_SEMANTIC_HASHES.json"
+    },
+    {
+      "after_bytes": 38321,
+      "after_sha256": "74f28eb22b6671d6d998891c69dbbe8611e4c45022e970e326faf1751894c550",
+      "classification": "governance",
+      "path": "approvals/v55/C1_PROPOSED_CARD_DELTA.json"
+    },
+    {
+      "after_bytes": 11616,
+      "after_sha256": "efe20dde3f688ba6699ba169560a021b4916f55a18846cf1c8b43dd9b5f94a4c",
+      "classification": "governance",
+      "path": "approvals/v55/G1_PROPOSED_GRAPH_DELTA.json"
+    },
+    {
+      "after_bytes": 3903,
+      "after_sha256": "ed76033b149f883ae5d93cbcc730a2b205a7f9c26999cefaab3127687a3f49af",
+      "classification": "governance",
+      "path": "approvals/v55/GATE_O1_INLINE_TABLES.md"
+    },
+    {
+      "after_bytes": 585,
+      "after_sha256": "140e59d903c13ee9f4c297a25e4a476f296295a36209bfab0d1ec4d59c332613",
+      "classification": "governance",
+      "path": "approvals/v55/GATE_O1_VALIDATION.json"
+    },
+    {
+      "after_bytes": 2915,
+      "after_sha256": "58b107ef4b1bdc71aa6c1541795a8f4a84db67d6e6ea84f6eec1da8cf005cb6b",
+      "classification": "governance",
+      "path": "approvals/v55/HITL_CLARIFICATION_PROMPTS.md"
+    },
+    {
+      "after_bytes": 5896,
+      "after_sha256": "79ecb0d42b4f0d8bc6ab7d3be973c96a830b56593d56dc2b6df9610b34663a2e",
+      "classification": "governance",
+      "path": "approvals/v55/HITL_CLARIFICATION_REGISTER.json"
+    },
+    {
+      "after_bytes": 1619,
+      "after_sha256": "e2c80c816a7ec1e6dedf6709184d9de855ce85b34770bf42d427850737974df6",
+      "classification": "governance",
+      "path": "approvals/v55/HITL_CLARIFICATION_RESOLUTIONS.json"
+    },
+    {
+      "after_bytes": 1621,
+      "after_sha256": "16f7353ab49d4f44017bd7e75bcbe0d5536ba07935999522678a9fdc17b8b654",
+      "classification": "governance",
+      "path": "approvals/v55/PHASE_A_QA_REPORT.md"
+    },
+    {
+      "after_bytes": 684,
+      "after_sha256": "31772e5b61c73e0e90060247392205fb95bcf19c26b7c64ef4d98d54a38ac9a3",
+      "classification": "governance",
+      "path": "approvals/v55/PREWRITE_REVALIDATION.json"
+    },
+    {
+      "after_bytes": 17080,
+      "after_sha256": "14da5d3e5b842694cccf99acef4b97ec68f228cff1dfefc8c18d6f0a1c060331",
+      "classification": "governance",
+      "path": "approvals/v55/PROJECT_INSTRUCTIONS.diff"
+    },
+    {
+      "after_bytes": 881,
+      "after_sha256": "2cbedc6a9f7345c09b4448e706f4483f5df4e258fccb91ff69ce1188753fadc2",
+      "classification": "governance",
+      "path": "approvals/v55/PROPOSAL_DIGESTS.json"
+    },
+    {
+      "after_bytes": 81264,
+      "after_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+      "classification": "governance",
+      "path": "approvals/v55/PROPOSED_PROJECT_INSTRUCTIONS.md"
+    },
+    {
+      "after_bytes": 4965,
+      "after_sha256": "c1f5cb4e59cb7a50c8a8244d4dc62a18077bc15cb277f849e4665b9e0fd47051",
+      "classification": "governance",
+      "path": "approvals/v55/PROPOSED_PROTOCOL_DECISION_PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS.json"
+    },
+    {
+      "after_bytes": 1185,
+      "after_sha256": "cab5573e21747adff9529aae5b046445bf02fc6a36740bff5b5e5a36078ad53f",
+      "classification": "governance",
+      "path": "approvals/v55/README.md"
+    },
+    {
+      "after_bytes": 279,
+      "after_sha256": "be7da7ff7d0f2f4b681dcbeb6de7152ec12b077b1f846275f9312fd1d5fbd0bf",
+      "classification": "governance",
+      "path": "approvals/v55/README_IMPLEMENTATION.md"
+    },
+    {
+      "after_bytes": 3104,
+      "after_sha256": "6d3a0bf3c41d1e960e43f3d3bff4a45e3ee6e70973766233be64e843daab0814",
+      "classification": "governance",
+      "path": "approvals/v55/REVIEW_BUNDLE_MANIFEST.json"
+    },
+    {
+      "after_bytes": 219,
+      "after_sha256": "930def8efacbae9a7061b8f36e0c7eeaf1df105b9cb001113f9d7f98bf80012d",
+      "classification": "governance",
+      "path": "approvals/v55/REVIEW_BUNDLE_STATUS.json"
+    },
+    {
+      "after_bytes": 1166,
+      "after_sha256": "bdaf5bc021071c6658be0a6203d682f08f83da06a115488dfe37a29c346b7e81",
+      "classification": "governance",
+      "path": "approvals/v55/SOURCE_ASSESSMENT.md"
+    },
+    {
+      "after_bytes": 17543,
+      "after_sha256": "1be78dce4d7210db60bb1d4787d84b4866cbc6f04a6afc803b527eeb280b9b17",
+      "classification": "governance",
+      "path": "approvals/v55/card_diffs/NEE_99_Project_Instructions.md.diff"
+    },
+    {
+      "after_bytes": 81542,
+      "after_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+      "classification": "governance",
+      "path": "approvals/v55/proposed_cards/NEE_99_Project_Instructions.md"
+    },
+    {
+      "after_bytes": 17543,
+      "after_sha256": "1be78dce4d7210db60bb1d4787d84b4866cbc6f04a6afc803b527eeb280b9b17",
+      "classification": "derived_export_or_release_evidence",
+      "path": "exports/v55_NEE_99_change.diff"
+    },
+    {
+      "after_bytes": 17080,
+      "after_sha256": "14da5d3e5b842694cccf99acef4b97ec68f228cff1dfefc8c18d6f0a1c060331",
+      "classification": "derived_export_or_release_evidence",
+      "path": "exports/v55_policy_change.diff"
+    },
+    {
+      "after_bytes": 20273,
+      "after_sha256": "bf61c95bdda6d75d654cd03a2d4069c96770cbbd0ea6e87879ade6668ace414c",
+      "classification": "derived_export_or_release_evidence",
+      "path": "exports/v55_post_synthesis_hitl_activation_qa.json"
+    },
+    {
+      "after_bytes": 928,
+      "after_sha256": "ac90ad9bac30f7d3fbb5bdd88b4c9854297b0534a27bac8db917e16dd1758a7b",
+      "classification": "derived_export_or_release_evidence",
+      "path": "exports/v55_post_synthesis_hitl_activation_summary.json"
+    },
+    {
+      "after_bytes": 416,
+      "after_sha256": "1c29cd43c6922f4589a8cddfcbd6dcc46e717875b5274a4cde516a5e3864410b",
+      "classification": "governance",
+      "path": "governance/v55/APPROVAL_CHRONOLOGY.json"
+    },
+    {
+      "after_bytes": 409,
+      "after_sha256": "a2a9004d841ec11b9de1aad6a4fd7597ba77c1929176410eef7d229719112beb",
+      "classification": "governance",
+      "path": "governance/v55/BASELINE_IMMUTABILITY.json"
+    },
+    {
+      "after_bytes": 1173,
+      "after_sha256": "695466eb0602e1e5f4e10414ea1374ecb7b2c6e9bde03ddfa10612095c7711fc",
+      "classification": "governance",
+      "path": "governance/v55/FIRST_CANONICAL_WRITE_RECORD.json"
+    },
+    {
+      "after_bytes": 886,
+      "after_sha256": "1d05be8afd5640835c138e9d9b06395f462cc0bde6e061a18d79e59c3d63c97a",
+      "classification": "governance",
+      "path": "governance/v55/IMPLEMENTATION_NORMALIZATION_RECORD.json"
+    },
+    {
+      "after_bytes": 1366,
+      "after_sha256": "5b41532c0e318c41e3a99dee3face5241fb94c04d55dd024889308acf3d3e90b",
+      "classification": "governance",
+      "path": "governance/v55/POST_SYNTHESIS_HITL_CHECK.json"
+    },
+    {
+      "after_bytes": 2471,
+      "after_sha256": "767449ffcc175e8168f014d5feb6d0a6c4b7fc0a626f483b161b32ccb37747c3",
+      "classification": "governance",
+      "path": "governance/v55/PROTOCOL_DECISION.md"
+    },
+    {
+      "after_bytes": 2281,
+      "after_sha256": "9de73834936005c6bbb5196df64b3ca6540469678493f6cc96b4eeb4a7853d69",
+      "classification": "governance",
+      "path": "governance/v55/R1_ACTUAL_CARD_DELTA.json"
+    },
+    {
+      "after_bytes": 11558,
+      "after_sha256": "38ae5e92e21e98468db1dd142ef58de701def7d428fc94a3f042091695dc06c9",
+      "classification": "governance",
+      "path": "governance/v55/R1_ACTUAL_GRAPH_DELTA.json"
+    },
+    {
+      "after_bytes": 799,
+      "after_sha256": "8c1d39e804c2817e641b4e2a7dd47ff528a57c70ddda9afb45ef4bb419b9a80d",
+      "classification": "governance",
+      "path": "governance/v55/R1_BUILD_RESULT.json"
+    },
+    {
+      "after_bytes": 3903,
+      "after_sha256": "ed76033b149f883ae5d93cbcc730a2b205a7f9c26999cefaab3127687a3f49af",
+      "classification": "governance",
+      "path": "governance/v55/R1_GATE_O1_INLINE_TABLES.md"
+    },
+    {
+      "after_bytes": 847,
+      "after_sha256": "074fa9f2174aaa0462d5f993653e6134ee7f39eb3190bbf52ff40d702a352d82",
+      "classification": "governance",
+      "path": "governance/v55/R1_GATE_O1_VALIDATION.json"
+    },
+    {
+      "after_bytes": 3694,
+      "after_sha256": "247b11790d8bd2b15de3922d24e2201dac7bd253a8b5bdee203dd7f208eaef08",
+      "classification": "governance",
+      "path": "governance/v55/R1_IMPLEMENTATION_CONFORMANCE.json"
+    },
+    {
+      "after_bytes": 393,
+      "after_sha256": "b512f3f1510b9e60595ea5662f21c914a94a52be39f8de45557e2b5361f26f96",
+      "classification": "governance",
+      "path": "governance/v55/RELEASE_STATE_ACTIVATION.json"
+    },
+    {
+      "after_bytes": 521,
+      "after_sha256": "1988a6c647b4084c4b7425c48751304de2184cfece8d3e84d40f427e59b60085",
+      "classification": "governance",
+      "path": "governance/v55/SCHEMA_AND_INTEGRITY.json"
+    },
+    {
+      "after_bytes": 761,
+      "after_sha256": "49bbe62500bdc37a2f2ad9ff5ce6cd66376484df34a13c438fd6c4c5b0acfaa7",
+      "classification": "governance",
+      "path": "governance/v55/SOURCE_AND_INPUT_BINDING.json"
+    },
+    {
+      "after_bytes": 1078,
+      "after_sha256": "b95fecdac6e753fda20125c4ad44f58fcd7619f7e1357e7b7809505419303e53",
+      "classification": "report",
+      "path": "reports/V54_0_VS_V55_0_COMPARISON.json"
+    },
+    {
+      "after_bytes": 758,
+      "after_sha256": "2e3548d291540e1a0e4d0d49f07a3eb4d06d8371e4e0e9c3dac0e8e4115160f1",
+      "classification": "report",
+      "path": "reports/V54_0_VS_V55_0_COMPARISON.md"
+    },
+    {
+      "after_bytes": 2025,
+      "after_sha256": "d1e8eea5e4c60a99c741c3484f86daef36c4ac78924835f04f28b82c0866ba48",
+      "classification": "report",
+      "path": "reports/release_gate_results_v55.json"
+    },
+    {
+      "after_bytes": 1226,
+      "after_sha256": "fd39ff4490120b44fec1717017bbc7bd9e63e057158828ed4bdc86606ea747f6",
+      "classification": "report",
+      "path": "reports/release_gate_v55.md"
+    },
+    {
+      "after_bytes": 12566,
+      "after_sha256": "0e629bbb781552d4dd2c793c6b8cb0ed522771975924fb562e1b78ea14681aba",
+      "classification": "test",
+      "path": "tests/run_v55_policy_acceptance.py"
+    },
+    {
+      "after_bytes": 8757,
+      "after_sha256": "d8caae9df68d2f6172fa28dc0156750993710f0554dca0cacceccbcaf20cca60",
+      "classification": "test",
+      "path": "tests/run_v55_release_acceptance.py"
+    },
+    {
+      "after_bytes": 216,
+      "after_sha256": "88b35b19ae08f2b6a00e35e59052b35418abadc2c00795fffc93a572c837bdee",
+      "classification": "test",
+      "path": "tests/v55_gate_unit_test_results.json"
+    },
+    {
+      "after_bytes": 2104,
+      "after_sha256": "0f60b35f02cb27724938d46dff2ce8a6456b30c2d799f127b0eee9fcd6b0cb9e",
+      "classification": "test",
+      "path": "tests/v55_gate_unit_tests.log"
+    },
+    {
+      "after_bytes": 850,
+      "after_sha256": "197e0c11ff2fef0527140890535e317b007e71578f4184bdae13f00477410b5e",
+      "classification": "test",
+      "path": "tests/v55_inherited_v54_acceptance_results.json"
+    },
+    {
+      "after_bytes": 2666,
+      "after_sha256": "6f1211d0ba23382679d0f40c9b3d0f0ccb85b2684fb45ac7c5ed5e2c1e562f1a",
+      "classification": "test",
+      "path": "tests/v55_policy_acceptance_report.md"
+    },
+    {
+      "after_bytes": 4689,
+      "after_sha256": "de3a1cf3cb4d995095cedc162ff1f393ba48b8a44555f16e268d9dae9a70c937",
+      "classification": "test",
+      "path": "tests/v55_policy_acceptance_results.json"
+    },
+    {
+      "after_bytes": 4361,
+      "after_sha256": "96da451f800ff63349be97f03118520fc84fb511fc8832ef05e4a9297f86b54d",
+      "classification": "test",
+      "path": "tests/v55_release_acceptance_report.md"
+    },
+    {
+      "after_bytes": 12803,
+      "after_sha256": "55f02a01af13ff4249d073489c42f48cf33775a52649a3ffb53149234327ec97",
+      "classification": "test",
+      "path": "tests/v55_release_acceptance_results.json"
+    }
+  ],
+  "baseline": "NEE_v54",
+  "changed_file_count_excluding_self_referential_controls": 11,
+  "changed_files": [
+    {
+      "after_bytes": 1163,
+      "after_sha256": "4ef94ad5f901e04da54f35a0068871776d2570afb13c85bc0ff2dfb34d7f63d9",
+      "before_bytes": 1076,
+      "before_sha256": "098bd5f8e0ef0fe69402f2f3cf1c305364bea6b8537c6ed7b7ad865cd6470811",
+      "classification": "package_control_or_preserved_artifact",
+      "path": "CHANGELOG.md"
+    },
+    {
+      "after_bytes": 1933,
+      "after_sha256": "31aedec507893627445358063b588f1cf41f6f6c8ce5c4142e5085a30f7bf241",
+      "before_bytes": 1391,
+      "before_sha256": "e4e1c02eb747fd3473d48f676f536fe04864cce94c28dce8477658bfc4e0ad1e",
+      "classification": "package_control_or_preserved_artifact",
+      "path": "MANIFEST.md"
+    },
+    {
+      "after_bytes": 81264,
+      "after_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+      "before_bytes": 74326,
+      "before_sha256": "c736087c1ef6c646b3ae3b5a54b43074e5285f36434bcf24ccb0fce2e826ce70",
+      "classification": "generated_policy_mirror",
+      "path": "PROJECT_INSTRUCTIONS.md"
+    },
+    {
+      "after_bytes": 1010,
+      "after_sha256": "8b7395adfc4caacb006b753d73b0208e435db8ad70789051170d6ab15f740fbf",
+      "before_bytes": 570,
+      "before_sha256": "a625cedf35cb5a100b56cbd0cfb2addee5ceb886edbf04789adfeac2131dbe9c",
+      "classification": "package_control_or_preserved_artifact",
+      "path": "QA_REPORT.md"
+    },
+    {
+      "after_bytes": 1464,
+      "after_sha256": "0d6f01b06082db41b2f768778853ab158177d285e641ee114aafe9a7c6c6e100",
+      "before_bytes": 829,
+      "before_sha256": "5ffa83f3d1d2548a0cd87db247b940097c4f6ee286eec824bd2d3743034ee003",
+      "classification": "package_control_or_preserved_artifact",
+      "path": "README.md"
+    },
+    {
+      "after_bytes": 81542,
+      "after_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+      "before_bytes": 74604,
+      "before_sha256": "4f1885acfa7f82c577abb4506cdbd52c343cabbc404f37d198670d705e8a1697",
+      "classification": "canonical_policy_card",
+      "path": "cards/NEE_99_Project_Instructions.md"
+    },
+    {
+      "after_bytes": 1226,
+      "after_sha256": "fd39ff4490120b44fec1717017bbc7bd9e63e057158828ed4bdc86606ea747f6",
+      "before_bytes": 395,
+      "before_sha256": "d4364c04e2084ee3772675f679c2c6f805e3f45b0c40474aa561924f8a9fef0a",
+      "classification": "package_control_or_preserved_artifact",
+      "path": "release_gate_report.md"
+    },
+    {
+      "after_bytes": 1080,
+      "after_sha256": "67c7031afeaf192465081abeb3b974b8dcd5ec734c3d126ceaf6b3862cb9f019",
+      "before_bytes": 469,
+      "before_sha256": "f105c06d7451a97705c9377332dbbb85fda7b4b82ed6bc79272e4c9ceff63867",
+      "classification": "package_control_or_preserved_artifact",
+      "path": "release_notes.md"
+    },
+    {
+      "after_bytes": 854,
+      "after_sha256": "0836ad81d95f1710b3070254362c4dc333fd62678dae3e6d0fd18b4caa2e5219",
+      "before_bytes": 1982,
+      "before_sha256": "86c5ba093435cbdcafa8b6c2bf40508ba68be7e8fdcddf0a52217568f95890f3",
+      "classification": "package_control_or_preserved_artifact",
+      "path": "release_state.json"
+    },
+    {
+      "after_bytes": 1079,
+      "after_sha256": "4fabca9a0b2da7768dfae55981dfd19ba0818057933a5d3c281e935bfe9c9955",
+      "before_bytes": 1384,
+      "before_sha256": "b98bfc9cc7720caa14bb4e0705e04cb3a4ee2cff9fd3891109cb1df958726569",
+      "classification": "report",
+      "path": "reports/r1_conformance_summary.json"
+    },
+    {
+      "after_bytes": 2025,
+      "after_sha256": "d1e8eea5e4c60a99c741c3484f86daef36c4ac78924835f04f28b82c0866ba48",
+      "before_bytes": 489,
+      "before_sha256": "38289455b3bc4d6b08f6349903c7d44e4a4286c68d095af766c5afc54df7be8a",
+      "classification": "report",
+      "path": "reports/release_gate_results.json"
+    }
+  ],
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "deleted_file_count": 0,
+  "deleted_files": [],
+  "excluded_self_referential_control_files": [
+    "governance/v55/CHANGED_FILE_INVENTORY.json",
+    "governance/v55/CHANGED_SEMANTIC_FILE_INVENTORY.json",
+    "manifest.json"
+  ],
+  "generated_at_utc": "2026-07-14T18:36:31Z",
+  "release": "NEE_v55",
+  "status": "PASS"
+}

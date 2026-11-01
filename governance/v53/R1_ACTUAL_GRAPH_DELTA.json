@@ -1,0 +1,1081 @@
+{
+  "approval_decision_id": "AD-V53-SHERPA-ANDY-LILLIAN-2026-001",
+  "approved_graph_delta_sha256": "12dc925855f4bceca22cda2dfe87af1dfa11541f7678db16d9f161d21c55c59a",
+  "canonical_serialization_sha256": "c09818c22df0918fbcf94d1ea762ee71ab03b96a762d6d1cc527ce0712857836",
+  "component_counts": {
+    "alias": {
+      "after": 429,
+      "before": 429,
+      "delta": 0
+    },
+    "assertion": {
+      "after": 1682,
+      "before": 1670,
+      "delta": 12
+    },
+    "assertion_evidence": {
+      "after": 1720,
+      "before": 1697,
+      "delta": 23
+    },
+    "canonical_alias": {
+      "after": 424,
+      "before": 424,
+      "delta": 0
+    },
+    "canonical_route": {
+      "after": 3940,
+      "before": 3890,
+      "delta": 50
+    },
+    "card": {
+      "after": 19,
+      "before": 19,
+      "delta": 0
+    },
+    "claim": {
+      "after": 580,
+      "before": 568,
+      "delta": 12
+    },
+    "edge": {
+      "after": 1069,
+      "before": 1069,
+      "delta": 0
+    },
+    "evidence_item": {
+      "after": 1614,
+      "before": 1602,
+      "delta": 12
+    },
+    "legacy_claim_assertion_map": {
+      "after": 580,
+      "before": 568,
+      "delta": 12
+    },
+    "legacy_edge_assertion_map": {
+      "after": 1069,
+      "before": 1069,
+      "delta": 0
+    },
+    "node": {
+      "after": 652,
+      "before": 652,
+      "delta": 0
+    },
+    "node_card_map": {
+      "after": 1628,
+      "before": 1628,
+      "delta": 0
+    },
+    "node_state": {
+      "after": 652,
+      "before": 652,
+      "delta": 0
+    },
+    "search_document": {
+      "after": 2262,
+      "before": 2250,
+      "delta": 12
+    },
+    "source": {
+      "after": 173,
+      "before": 172,
+      "delta": 1
+    },
+    "source_version": {
+      "after": 173,
+      "before": 172,
+      "delta": 1
+    },
+    "validation": {
+      "after": 184,
+      "before": 182,
+      "delta": 2
+    }
+  },
+  "exact_match_count": 139,
+  "generated_at": "2026-07-13T22:48:35Z",
+  "implementation_id": "R1-V53-SHERPA-ANDY-LILLIAN-2026-001",
+  "normalization": [
+    "Digest-bound governance approval row inserted before assertion promotion.",
+    "PD-53 policy clarification applied separately with explicit user approval."
+  ],
+  "operation_count": 139,
+  "operations": [
+    {
+      "exact_match": true,
+      "index": 1,
+      "object_type": "source",
+      "operation_type": "add",
+      "proposed_id": "source_sherpa_andy_lillian_meeting_2026_07_13"
+    },
+    {
+      "exact_match": true,
+      "index": 2,
+      "object_type": "source_version",
+      "operation_type": "add",
+      "proposed_id": "srcver_source_sherpa_andy_lillian_meeting_2026_07_13_v1"
+    },
+    {
+      "exact_match": true,
+      "index": 3,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_lillian_offline_harness"
+    },
+    {
+      "exact_match": true,
+      "index": 4,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_lillian_runtime_constraints"
+    },
+    {
+      "exact_match": true,
+      "index": 5,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_lillian_ai_sdlc"
+    },
+    {
+      "exact_match": true,
+      "index": 6,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_lillian_nightly_evals"
+    },
+    {
+      "exact_match": true,
+      "index": 7,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_lillian_visibility_gap"
+    },
+    {
+      "exact_match": true,
+      "index": 8,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_amit_feedback_no_kpi"
+    },
+    {
+      "exact_match": true,
+      "index": 9,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_amit_governance_view"
+    },
+    {
+      "exact_match": true,
+      "index": 10,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_amit_evidence_request_maturity"
+    },
+    {
+      "exact_match": true,
+      "index": 11,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_andy_velocity_metric_question"
+    },
+    {
+      "exact_match": true,
+      "index": 12,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_andy_foundational_work"
+    },
+    {
+      "exact_match": true,
+      "index": 13,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_andy_ai_dev_process"
+    },
+    {
+      "exact_match": true,
+      "index": 14,
+      "object_type": "evidence_item",
+      "operation_type": "add",
+      "proposed_id": "ev_v53_andy_method_repo_and_reports"
+    },
+    {
+      "exact_match": true,
+      "index": 15,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_offline_eval_harness_current_process"
+    },
+    {
+      "exact_match": true,
+      "index": 16,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_offline_eval_harness_current_process"
+    },
+    {
+      "exact_match": true,
+      "index": 17,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_offline_eval_harness_current_process|ev_v53_lillian_offline_harness"
+    },
+    {
+      "exact_match": true,
+      "index": 18,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_offline_eval_harness_current_process"
+    },
+    {
+      "exact_match": true,
+      "index": 19,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_b759149ae3f3494e45290a8fa2000fcd"
+    },
+    {
+      "exact_match": true,
+      "index": 20,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_0137a3ebf1aaa13cc9f945224ef501d1"
+    },
+    {
+      "exact_match": true,
+      "index": 21,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_2cc768e5a41cfd7b3f37c1d73afc1513"
+    },
+    {
+      "exact_match": true,
+      "index": 22,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_6fe58158650a5bbb7a2cfbce2f867f98"
+    },
+    {
+      "exact_match": true,
+      "index": 23,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_8e8da24e48b389bd1fec96dc224ecc18"
+    },
+    {
+      "exact_match": true,
+      "index": 24,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_nightly_deployed_agent_eval_monitoring"
+    },
+    {
+      "exact_match": true,
+      "index": 25,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_nightly_deployed_agent_eval_monitoring"
+    },
+    {
+      "exact_match": true,
+      "index": 26,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_nightly_deployed_agent_eval_monitoring|ev_v53_lillian_nightly_evals"
+    },
+    {
+      "exact_match": true,
+      "index": 27,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_nightly_deployed_agent_eval_monitoring|ev_v53_andy_method_repo_and_reports"
+    },
+    {
+      "exact_match": true,
+      "index": 28,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_nightly_deployed_agent_eval_monitoring"
+    },
+    {
+      "exact_match": true,
+      "index": 29,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_e270700333b9119c25f314488b72734c"
+    },
+    {
+      "exact_match": true,
+      "index": 30,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_092547bf5744fe2f9c15a0cb27b51bc2"
+    },
+    {
+      "exact_match": true,
+      "index": 31,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_7f9e5f1475cb4b664d1657409719172d"
+    },
+    {
+      "exact_match": true,
+      "index": 32,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_a503fc526edf51cad72799b03fdfebeb"
+    },
+    {
+      "exact_match": true,
+      "index": 33,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_d394ab93abed95f5d545007b6b6b5781"
+    },
+    {
+      "exact_match": true,
+      "index": 34,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_runtime_eval_feasibility_constraints"
+    },
+    {
+      "exact_match": true,
+      "index": 35,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_runtime_eval_feasibility_constraints"
+    },
+    {
+      "exact_match": true,
+      "index": 36,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_runtime_eval_feasibility_constraints|ev_v53_lillian_runtime_constraints"
+    },
+    {
+      "exact_match": true,
+      "index": 37,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_runtime_eval_feasibility_constraints"
+    },
+    {
+      "exact_match": true,
+      "index": 38,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_56c8cc1fe332f5f661b355ccc52fbdff"
+    },
+    {
+      "exact_match": true,
+      "index": 39,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_49b365026d28007b349ec1a52c36c28f"
+    },
+    {
+      "exact_match": true,
+      "index": 40,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_5bdb4fe075b94751c3fff5d5d09caad2"
+    },
+    {
+      "exact_match": true,
+      "index": 41,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_82488c699decbf92b5400293c04218f7"
+    },
+    {
+      "exact_match": true,
+      "index": 42,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_39d39b994b7b8003d93b3db867054ce3"
+    },
+    {
+      "exact_match": true,
+      "index": 43,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_ai_sdlc_structured_operating_model"
+    },
+    {
+      "exact_match": true,
+      "index": 44,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_ai_sdlc_structured_operating_model"
+    },
+    {
+      "exact_match": true,
+      "index": 45,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_ai_sdlc_structured_operating_model|ev_v53_lillian_ai_sdlc"
+    },
+    {
+      "exact_match": true,
+      "index": 46,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_ai_sdlc_structured_operating_model|ev_v53_andy_ai_dev_process"
+    },
+    {
+      "exact_match": true,
+      "index": 47,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_ai_sdlc_structured_operating_model|ev_v53_andy_method_repo_and_reports"
+    },
+    {
+      "exact_match": true,
+      "index": 48,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_ai_sdlc_structured_operating_model"
+    },
+    {
+      "exact_match": true,
+      "index": 49,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_27699d60fd8ae79465cb291ac5fb9611"
+    },
+    {
+      "exact_match": true,
+      "index": 50,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_ed0fa16d1a19fb5516feb9e60405aa1f"
+    },
+    {
+      "exact_match": true,
+      "index": 51,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_0bac6e62acc65dc6026d5aaad80443ae"
+    },
+    {
+      "exact_match": true,
+      "index": 52,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_41705897dccc2dc9217908dfa49bfa91"
+    },
+    {
+      "exact_match": true,
+      "index": 53,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_6e7e8b9a9b06e1e75c88dbf09506a9f2"
+    },
+    {
+      "exact_match": true,
+      "index": 54,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_c8f339004d0ff57983df18616e2bd40e"
+    },
+    {
+      "exact_match": true,
+      "index": 55,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_662427e2f96231e21ae22a629b5f291e"
+    },
+    {
+      "exact_match": true,
+      "index": 56,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_eval_visibility_gap"
+    },
+    {
+      "exact_match": true,
+      "index": 57,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_eval_visibility_gap"
+    },
+    {
+      "exact_match": true,
+      "index": 58,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_eval_visibility_gap|ev_v53_lillian_visibility_gap"
+    },
+    {
+      "exact_match": true,
+      "index": 59,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_eval_visibility_gap|ev_v53_amit_evidence_request_maturity"
+    },
+    {
+      "exact_match": true,
+      "index": 60,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_eval_visibility_gap"
+    },
+    {
+      "exact_match": true,
+      "index": 61,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_c93f921e44b6f16cc452e24e163b9fd7"
+    },
+    {
+      "exact_match": true,
+      "index": 62,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_0f91f8b3f6fc84e110a5c3e294163ec1"
+    },
+    {
+      "exact_match": true,
+      "index": 63,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_b26420abbdf872eb8f3878485d7abcd3"
+    },
+    {
+      "exact_match": true,
+      "index": 64,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_6790ca8a50bf4c19671d49d9da90f11c"
+    },
+    {
+      "exact_match": true,
+      "index": 65,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_5e396adc927aa78d42eba0b115c88b0b"
+    },
+    {
+      "exact_match": true,
+      "index": 66,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_velocity_metric_basis_open"
+    },
+    {
+      "exact_match": true,
+      "index": 67,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_velocity_metric_basis_open"
+    },
+    {
+      "exact_match": true,
+      "index": 68,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_velocity_metric_basis_open|ev_v53_amit_feedback_no_kpi"
+    },
+    {
+      "exact_match": true,
+      "index": 69,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_velocity_metric_basis_open|ev_v53_andy_velocity_metric_question"
+    },
+    {
+      "exact_match": true,
+      "index": 70,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_velocity_metric_basis_open"
+    },
+    {
+      "exact_match": true,
+      "index": 71,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_6b2e76793679f4bee02bae71abe57a52"
+    },
+    {
+      "exact_match": true,
+      "index": 72,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_8ab54317652aba578e00a69c14c010fc"
+    },
+    {
+      "exact_match": true,
+      "index": 73,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_ad31007505c5ce3bee7a484dc92c5343"
+    },
+    {
+      "exact_match": true,
+      "index": 74,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_76ffc471ceeb8bab8092681ec712c72c"
+    },
+    {
+      "exact_match": true,
+      "index": 75,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_89632f76c06eb74429338bdd93559533"
+    },
+    {
+      "exact_match": true,
+      "index": 76,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_foundational_work_visibility_limit"
+    },
+    {
+      "exact_match": true,
+      "index": 77,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_foundational_work_visibility_limit"
+    },
+    {
+      "exact_match": true,
+      "index": 78,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_foundational_work_visibility_limit|ev_v53_andy_foundational_work"
+    },
+    {
+      "exact_match": true,
+      "index": 79,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_foundational_work_visibility_limit"
+    },
+    {
+      "exact_match": true,
+      "index": 80,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_507980e8d682afc048e91cdebafaa588"
+    },
+    {
+      "exact_match": true,
+      "index": 81,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_0aae773106955a645ba2c65732396e5e"
+    },
+    {
+      "exact_match": true,
+      "index": 82,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_cbaac824683a847d4107d0efb5c5c6a7"
+    },
+    {
+      "exact_match": true,
+      "index": 83,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_e7d43bf1b37c95ef607c1695e7841b24"
+    },
+    {
+      "exact_match": true,
+      "index": 84,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_148f32a3321d005e3afb55f83713975c"
+    },
+    {
+      "exact_match": true,
+      "index": 85,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_ai_assisted_development_workflow"
+    },
+    {
+      "exact_match": true,
+      "index": 86,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_ai_assisted_development_workflow"
+    },
+    {
+      "exact_match": true,
+      "index": 87,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_ai_assisted_development_workflow|ev_v53_andy_ai_dev_process"
+    },
+    {
+      "exact_match": true,
+      "index": 88,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_ai_assisted_development_workflow|ev_v53_andy_method_repo_and_reports"
+    },
+    {
+      "exact_match": true,
+      "index": 89,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_ai_assisted_development_workflow"
+    },
+    {
+      "exact_match": true,
+      "index": 90,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_1dd1d76267ecbe103be95c75b11afba1"
+    },
+    {
+      "exact_match": true,
+      "index": 91,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_00294a3c9f1b6c91333ebc015d676258"
+    },
+    {
+      "exact_match": true,
+      "index": 92,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_931b2ed84aa28763c2e33ce2d89a384d"
+    },
+    {
+      "exact_match": true,
+      "index": 93,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_bd366d37486ab48baf4fbd4a86904bbb"
+    },
+    {
+      "exact_match": true,
+      "index": 94,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_1ef7d9915806b6153940d224b8cb0e22"
+    },
+    {
+      "exact_match": true,
+      "index": 95,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_ai_cycle_time_improvement_reported"
+    },
+    {
+      "exact_match": true,
+      "index": 96,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_ai_cycle_time_improvement_reported"
+    },
+    {
+      "exact_match": true,
+      "index": 97,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_ai_cycle_time_improvement_reported|ev_v53_andy_ai_dev_process"
+    },
+    {
+      "exact_match": true,
+      "index": 98,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_ai_cycle_time_improvement_reported"
+    },
+    {
+      "exact_match": true,
+      "index": 99,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_cc3f70c23dd99388a073f2f56a1a5aa3"
+    },
+    {
+      "exact_match": true,
+      "index": 100,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_1bc93077c387ba05112b74da185665a3"
+    },
+    {
+      "exact_match": true,
+      "index": 101,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_e0142ede1c9132e1dfc35e768c0e8dbf"
+    },
+    {
+      "exact_match": true,
+      "index": 102,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_7a2fdeb9af8ba1693df6da268f11c5ed"
+    },
+    {
+      "exact_match": true,
+      "index": 103,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_43210ca9fcec8919eee6809f76b2b881"
+    },
+    {
+      "exact_match": true,
+      "index": 104,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_last_mile_loss_led_inhouse_eval"
+    },
+    {
+      "exact_match": true,
+      "index": 105,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_last_mile_loss_led_inhouse_eval"
+    },
+    {
+      "exact_match": true,
+      "index": 106,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_last_mile_loss_led_inhouse_eval|ev_v53_lillian_offline_harness"
+    },
+    {
+      "exact_match": true,
+      "index": 107,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_last_mile_loss_led_inhouse_eval"
+    },
+    {
+      "exact_match": true,
+      "index": 108,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_192d6ec24f042211d48afbd3a675c170"
+    },
+    {
+      "exact_match": true,
+      "index": 109,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_e9c8da9385744a35ee6f409170da67e4"
+    },
+    {
+      "exact_match": true,
+      "index": 110,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_f4c7e8c324a2da75f815c8e41a8f5ccd"
+    },
+    {
+      "exact_match": true,
+      "index": 111,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_0890b73e6c6786a98a8f48a0525c8c0d"
+    },
+    {
+      "exact_match": true,
+      "index": 112,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_56e7aeb5cb6f023982ac510b77a65ef0"
+    },
+    {
+      "exact_match": true,
+      "index": 113,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_eval_gap_reframed"
+    },
+    {
+      "exact_match": true,
+      "index": 114,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_eval_gap_reframed"
+    },
+    {
+      "exact_match": true,
+      "index": 115,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_eval_gap_reframed|ev_legacy_claim_claim_v32_brien_velocity_execution_feedback"
+    },
+    {
+      "exact_match": true,
+      "index": 116,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_eval_gap_reframed|ev_legacy_claim_claim_v32_brien_agentic_eval_feedback"
+    },
+    {
+      "exact_match": true,
+      "index": 117,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_eval_gap_reframed|ev_v53_lillian_offline_harness"
+    },
+    {
+      "exact_match": true,
+      "index": 118,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_eval_gap_reframed|ev_v53_lillian_nightly_evals"
+    },
+    {
+      "exact_match": true,
+      "index": 119,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_eval_gap_reframed|ev_v53_andy_ai_dev_process"
+    },
+    {
+      "exact_match": true,
+      "index": 120,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_eval_gap_reframed"
+    },
+    {
+      "exact_match": true,
+      "index": 121,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_8e4c9f7f05dc82cb779ce400d498025d"
+    },
+    {
+      "exact_match": true,
+      "index": 122,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_c2b796f7d75bbbca2a59cd97be9cdd64"
+    },
+    {
+      "exact_match": true,
+      "index": 123,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_20fdc1bb262b455cd72ae384349e9526"
+    },
+    {
+      "exact_match": true,
+      "index": 124,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_bfc5dc42b54943f12239b6057aec5aab"
+    },
+    {
+      "exact_match": true,
+      "index": 125,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_e9bb720f9bcc9217dd6d1d2c4fedfaca"
+    },
+    {
+      "exact_match": true,
+      "index": 126,
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_nightly_eval_classification"
+    },
+    {
+      "exact_match": true,
+      "index": 127,
+      "object_type": "assertion",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_nightly_eval_classification"
+    },
+    {
+      "exact_match": true,
+      "index": 128,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_nightly_eval_classification|ev_v53_lillian_nightly_evals"
+    },
+    {
+      "exact_match": true,
+      "index": 129,
+      "object_type": "assertion_evidence",
+      "operation_type": "add",
+      "proposed_id": "asrt_claim_v53_sherpa_nightly_eval_classification|ev_v53_lillian_runtime_constraints"
+    },
+    {
+      "exact_match": true,
+      "index": 130,
+      "object_type": "legacy_claim_assertion_map",
+      "operation_type": "add",
+      "proposed_id": "claim_v53_sherpa_nightly_eval_classification"
+    },
+    {
+      "exact_match": true,
+      "index": 131,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_43aa67b97d870df3d969f2a83f003088"
+    },
+    {
+      "exact_match": true,
+      "index": 132,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_345591b102c3943164fb10deefb93997"
+    },
+    {
+      "exact_match": true,
+      "index": 133,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_5265497a3dc70bea07c2f0b68ec8e2c3"
+    },
+    {
+      "exact_match": true,
+      "index": 134,
+      "object_type": "canonical_route",
+      "operation_type": "add",
+      "proposed_id": "route_v53_865fb1d45c525cd4db081a506dd9c638"
+    },
+    {
+      "exact_match": true,
+      "index": 135,
+      "object_type": "search_document",
+      "operation_type": "add",
+      "proposed_id": "search_v53_0878fdccd78814031b19f33bfcc4fe25"
+    },
+    {
+      "exact_match": true,
+      "index": 136,
+      "object_type": "validation",
+      "operation_type": "update",
+      "proposed_id": "validation_v36_sherpa_eval_design_evidence_p1"
+    },
+    {
+      "exact_match": true,
+      "index": 137,
+      "object_type": "validation",
+      "operation_type": "update",
+      "proposed_id": "validation_v42_sherpa_evidence_package_p1"
+    },
+    {
+      "exact_match": true,
+      "index": 138,
+      "object_type": "validation",
+      "operation_type": "add",
+      "proposed_id": "validation_v53_sherpa_velocity_outcome_scorecard_p1"
+    },
+    {
+      "exact_match": true,
+      "index": 139,
+      "object_type": "validation",
+      "operation_type": "add",
+      "proposed_id": "validation_v53_brian_note_identity_p1"
+    }
+  ],
+  "status": "PASS"
+}

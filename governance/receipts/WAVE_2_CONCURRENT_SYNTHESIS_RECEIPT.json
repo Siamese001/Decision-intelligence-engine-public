@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_type": "wave_runtime_receipt",
+  "wave": "Wave 2",
+  "wave_title": "Concurrent Dual-Path Synthesis Engine (Parallel Outputs 2 & 3)",
+  "executed_at": "2026-09-09T19:06:15.385578+00:00",
+  "runtime_environment": "c:\\Git\\decision-intelligence-engine\\.venv\\Scripts\\python.exe",
+  "terminal_result": "PASS",
+  "wave_status": "COMPLETE",
+  "acceptance_criteria": {
+    "concurrent_fork_execution": "PASS (Stage 02 & Stage 03 executed simultaneously via ThreadPoolExecutor)",
+    "latency_reduction_threshold": "PASS (45.4% wall-clock latency reduction achieved, exceeding >= 35% requirement)",
+    "exit_gate_compliance": "PASS (All concurrent outputs validate against X1-X3 exit gates)",
+    "backward_compatibility": "PASS (Chained signature and decoupled signature both supported in L2GraphExtractorExecutor)",
+    "unit_and_benchmark_tests": "PASS (27/27 tests passing including test_concurrent_synthesis_latency_reduction)"
+  },
+  "scope_inputs": {
+    "dual_pipeline/transcript_pipeline.py": "dfe328d5cda9b35bcc75de81a02e5db26a7dff8e080d283c09c4f0ef4a668285",
+    "dual_pipeline/transcript_stages.py": "489118b51076ca64deb38339bc3a3312b859b43db36491e7cfdc65731dabdd35",
+    "tests/test_parallel_synthesis.py": "d3353ea1b15e6f3c57ce17ecac987287481bf01fc636267b3f61eaf9417ddd91"
+  },
+  "telemetry": {
+    "serial_baseline_seconds": 0.502,
+    "parallel_execution_seconds": 0.274,
+    "wall_clock_latency_reduction_pct": 45.4,
+    "concurrency_max_workers": 2
+  },
+  "receipt_digest": "56118cddca3727f8674c5ef985f4c3f73d3c2c96d38bbd2bdeb0f9528899be8c"
+}

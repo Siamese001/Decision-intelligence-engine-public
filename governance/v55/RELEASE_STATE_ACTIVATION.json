@@ -1,0 +1,13 @@
+{
+  "activated_at_utc": "2026-07-14T18:34:45Z",
+  "authority": "PD-51.1-AUTO-PROMOTION-AFTER-R1-O1",
+  "candidate_only_requested": false,
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "promotion_withheld": false,
+  "r1_gate_o1_status": "PASS",
+  "r1_status": "PASS",
+  "release": "NEE_v55",
+  "resulting_state": "approved_current",
+  "status": "PASS",
+  "version": "55.0"
+}

@@ -1,0 +1,1455 @@
+{
+  "approval_reference": "AD-V51-IDENTITY-ROLE-STANDARDS-2026-001",
+  "baseline_zip_sha256": "d9d818a1308d284a754f967074a33d983b48688f848b24cd2d978072ce53a1c3",
+  "canonical_serialization_sha256": "0076129e98b89d1f3b0a48d61101cead6c149784edfe9f3b09701bba10388930",
+  "cards": [
+    {
+      "before_sha256": "ca58362d76529acd127f2e92db86e94443c710120cc5d3328ae2055f9d0c1e5a",
+      "card_id": "NEE_01",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-13"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v50"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_01_Executive_Account_Thesis.md",
+      "proposed_after_sha256": "d0dac16b10707628978f2f4f139826a1f4e4d58f2a6f73c12b06d42cd211796c",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "risk_neeit_nea_agentic_design_architecture_gap|NEE_01",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_3abb263e883ba0c9479f75df8aa403",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_929d1ee039bc105cea2d2d39928d2f",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_agentic_standards_gap_2026_07_13|NEE_01",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "risk_neeit_nea_agentic_design_architecture_gap|NEE_01",
+        "route_v51_3abb263e883ba0c9479f75df8aa403",
+        "route_v51_929d1ee039bc105cea2d2d39928d2f",
+        "source_v51_user_agentic_standards_gap_2026_07_13|NEE_01"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_01_Executive_Account_Thesis.md\n+++ b/cards/NEE_01_Executive_Account_Thesis.md\n@@ -4,7 +4,7 @@\n card_type: synthesis_card\n last_updated: 2026-07-13\n freshness: living\n-package: NEE_v50\n+package: NEE_v51\n ---\n \n # Executive Account Thesis: PartnerAdvisory as NEA Strategic Engineering Transformation Partner\n@@ -105,3 +105,9 @@\n PartnerAdvisory will prioritize AI-PDLC thought leadership with Chakra as a **strategic-partner contribution** to shaping the proposed co-hydrated operating model. This is a proactive PartnerAdvisory point of view intended to demonstrate engineering-transformation value beyond staff augmentation; it is not encoded as a Chakra request, endorsement, approval, adoption decision, or current implementation.\n \n The thought-leadership package should connect role-specific agentic assistants, continuous context hydration, specification-driven development, role evolution, adaptive change orchestration, lifecycle controls, co-build enablement, and bottleneck-displacement measures. Client-facing use still requires sanitation and audience approval.\n+\n+## v51 enterprise consistency gap and strategic-partner opportunity\n+\n+PartnerAdvisory’s internal account synthesis now names the broader problem more precisely: NEE IT and NEA use different working styles and cultures, and there is no consistently applied enterprise foundation for agentic design patterns, architectural standards, evaluation controls, governance, and reuse. The strategic opportunity with Chakra is to use AI-PDLC as the shared minimum foundation—without claiming Chakra stated the pain point, requested the solution, or has adopted it.\n+\n+The executive outcome is not uniform process. It is interoperability: common context and architecture guardrails, traceable design decisions, reusable agent/tool patterns, evaluation evidence, production controls, and an exception path that allows teams to execute locally while remaining governable and portable.\n"
+    },
+    {
+      "before_sha256": "5ab5a706fe2cf9371c62101317bef591457c54a9759b948cc09ad1597d25d976",
+      "card_id": "NEE_02",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-10"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v36"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md",
+      "proposed_after_sha256": "450405cb85d273d57be772ea36945eb77a20a68cc5e787c8ae3ba75a62026b79",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "asrt_v51_664b0cd21f86f88a7ef398290ff7b8",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_6a0c978d36b1ffcfbacc364034e272",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_77086bd272547d7dbbfe840540e02d",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_8168fdf33788fefa45fa1b058f5537",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_a0651a0a041f6c8399f03721e36954",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_df74a5d91a5a25d40094b7e98deef1",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_e89f514a515350fdc4a18c38619cef",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_dociq_acceptance_and_cost_driver",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_fcdb_aruna_support",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_lens_design_during_access_delay",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_outage_comms_and_q3_objective",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_swarm_data_automation",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_alberto_castagnara|NEE_02",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_0db5142a49b813a0ec535e2a10edb2",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_2c73dab283675c5cf5ce2e0c6add6b",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_3e8673c026f862cba57422b67e1bbe",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_550bed8e92c47ed85c40dc3270c5d2",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_805de0c09ae20b9b32bffdda79bd3a",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_84e474571e1bd931ba3e0b0e00debf",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_abeaf498347c5a251056e03e0d42b5",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_b122066b061a7df4163a7ee60df57a",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_b3834f3820cef3b1e6237a817b419e",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_b8eefc08de90aa4b1f37787c5bd17e",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_d32e0d97f6d7cdd6080995257f2afc",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_ddde8c2bc778bf2188c9976843e866",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_e095a1b8013df337d100181c1ee85f",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_fc383ebc03dc025cc150a658d1319f",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_02",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "asrt_v51_664b0cd21f86f88a7ef398290ff7b8",
+        "asrt_v51_6a0c978d36b1ffcfbacc364034e272",
+        "asrt_v51_77086bd272547d7dbbfe840540e02d",
+        "asrt_v51_8168fdf33788fefa45fa1b058f5537",
+        "asrt_v51_a0651a0a041f6c8399f03721e36954",
+        "asrt_v51_df74a5d91a5a25d40094b7e98deef1",
+        "asrt_v51_e89f514a515350fdc4a18c38619cef",
+        "claim_v51_dociq_acceptance_and_cost_driver",
+        "claim_v51_fcdb_aruna_support",
+        "claim_v51_lens_design_during_access_delay",
+        "claim_v51_outage_comms_and_q3_objective",
+        "claim_v51_swarm_data_automation",
+        "person_alberto_castagnara|NEE_02",
+        "route_v51_0db5142a49b813a0ec535e2a10edb2",
+        "route_v51_2c73dab283675c5cf5ce2e0c6add6b",
+        "route_v51_3e8673c026f862cba57422b67e1bbe",
+        "route_v51_550bed8e92c47ed85c40dc3270c5d2",
+        "route_v51_805de0c09ae20b9b32bffdda79bd3a",
+        "route_v51_84e474571e1bd931ba3e0b0e00debf",
+        "route_v51_abeaf498347c5a251056e03e0d42b5",
+        "route_v51_b122066b061a7df4163a7ee60df57a",
+        "route_v51_b3834f3820cef3b1e6237a817b419e",
+        "route_v51_b8eefc08de90aa4b1f37787c5bd17e",
+        "route_v51_d32e0d97f6d7cdd6080995257f2afc",
+        "route_v51_ddde8c2bc778bf2188c9976843e866",
+        "route_v51_e095a1b8013df337d100181c1ee85f",
+        "route_v51_fc383ebc03dc025cc150a658d1319f",
+        "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_02"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md\n+++ b/cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md\n@@ -2,9 +2,9 @@\n project: NEE\n card_id: NEE_02\n card_type: synthesis_card\n-last_updated: 2026-07-10\n+last_updated: 2026-07-13\n freshness: living\n-package: NEE_v36\n+package: NEE_v51\n ---\n \n # Portfolio Status and Project Dossiers\n@@ -518,3 +518,16 @@\n - **Transition:** suitable NEE.AI capabilities and assistants move to Gemini where feasible.\n - **Risks:** approvals, authentication, agent sharing, and inherited configuration remediation.\n - **Health posture:** positive participant-reported feedback and no major issue reported, but not a formal green RAG.\n+\n+## v51 June 29 NEA companion-note enrichment\n+\n+The speaker notes are a non-independent companion to the formal June 29 status packet and therefore add detail without creating a second corroboration vote or overriding formal RAG.\n+\n+| Workstream | Incremental dated detail |\n+|---|---|\n+| LENS | Preliminary design and wireframing continued while environment, repository, and collaboration-tool access remained pending. |\n+| Swarm | Data availability for real and synthetic storms was being automated to remove manual handoffs; Alberto Castagnara was driving data-science quality improvements. |\n+| DocIQ | Production acceptance was reopened by renewed stakeholder hesitation; image-heavy processing was the principal cost driver behind the already-recorded reduction from about $0.95 to $0.12–$0.13 per document. |\n+| Outage | No outbound customer-communication mechanism was approved; Twilio/custom SMS was only a considered option, and Q3 production remained dependent on communication, security, and authentication decisions. |\n+| EVA | A scheduled automated integration-test harness existed; Q3 planning included hallucination/accuracy evaluation, Salesforce escalation-case creation, and website/mobile authentication work. |\n+| FCDB | Aruna Chinthakindi helped resolve IAP/authentication; RBAC and undefined Q3 scope remained. |\n"
+    },
+    {
+      "before_sha256": "c69953b55c7dd87e4f8ee9fe1bc4cebcf9cc650100da6da682c2adc1d73a1684",
+      "card_id": "NEE_04",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-11"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v44"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md",
+      "proposed_after_sha256": "1be34f3212a436a77f2dfeae9b2b8960c326c7c1522461413282edef34d4ae8f",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "person_alberto_castagnara|NEE_04",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_5d55b57053f6128e4271c91b9c66b8",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_6485e98b1825e6b6a6198975a49607",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_04",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "person_alberto_castagnara|NEE_04",
+        "route_v51_5d55b57053f6128e4271c91b9c66b8",
+        "route_v51_6485e98b1825e6b6a6198975a49607",
+        "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_04"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md\n+++ b/cards/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md\n@@ -2,9 +2,9 @@\n project: NEE\n card_id: NEE_04\n card_type: synthesis_card\n-last_updated: 2026-07-11\n+last_updated: 2026-07-13\n freshness: stable_contract_capacity\n-package: NEE_v44\n+package: NEE_v51\n ---\n \n # NEA Q3 Capacity, Charters, and Strategic Capacity Lens\n@@ -248,3 +248,7 @@\n - Blank verticals remain blank for DocIQ, LENS, FastPass Orchestrator + License.AI, and Talent360.\n - The roster partially fulfills the Q3 leadership-map commitment, but location, effective date, reporting lane, per-row source, confidence, validation owner, and formal approval remain missing.\n - All role, affiliation, and delivery-model values are allowed for internal source-attributed lookup only until current authority is validated.\n+\n+## v51 roster and Q3-capacity boundary\n+\n+The NEA Tech Leads distribution confirms named PartnerAdvisory identities and dual PartnerAdvisory/Apex Utility/Apex Global aliases. It does **not** establish attendance, a current pod/EM/EL map, formal role, allocation, decision rights, Q3 charter, or the 106-SWE counting rule. Javier Ochoa and Sarah Borkowski should be canonical people in the graph; their exact current role/workstream remains an open validation. Alberto Castagnara is a dated Swarm contributor, with the formal title/allocation and assignment effective dates and transition-versus-overlap still open.\n"
+    },
+    {
+      "before_sha256": "f46d8ddedf463a22005614e375b955fb6d593b3650908538e8c32991af5167a0",
+      "card_id": "NEE_05",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-13"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v50"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_05_Chakra_Synthesis_and_August_Rebaseline.md",
+      "proposed_after_sha256": "6f93a0ea54deaebb520c45696954b8ff738b3e05ffe75715d8b14f429a57012b",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "risk_neeit_nea_agentic_design_architecture_gap|NEE_05",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_1c7acbbcab0c75fce735543c9e12fd",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_e52b79e4398d37c546efab30e70061",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_agentic_standards_gap_2026_07_13|NEE_05",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "risk_neeit_nea_agentic_design_architecture_gap|NEE_05",
+        "route_v51_1c7acbbcab0c75fce735543c9e12fd",
+        "route_v51_e52b79e4398d37c546efab30e70061",
+        "source_v51_user_agentic_standards_gap_2026_07_13|NEE_05"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_05_Chakra_Synthesis_and_August_Rebaseline.md\n+++ b/cards/NEE_05_Chakra_Synthesis_and_August_Rebaseline.md\n@@ -4,7 +4,7 @@\n card_type: synthesis_card\n last_updated: 2026-07-13\n freshness: living\n-package: NEE_v50\n+package: NEE_v51\n ---\n \n # Chakra Meeting Synthesis, Q3 Prerequisites, and Q4 Solutioning\n@@ -196,3 +196,9 @@\n | Evidence | User clarification dated 2026-07-13 plus the dated PartnerAdvisory Adaptive AI-PDLC deck |\n \n The earlier graph proposition `Chakra PRIORITIZES AI-enabled SDLC / PDLC` is retained historically but superseded for current retrieval by the PartnerAdvisory-led strategic-partner framing.\n+\n+## v51 AI-PDLC goal for Chakra\n+\n+**Goal:** partner with Chakra to establish a common AI-PDLC and agentic architecture foundation that bridges NEE IT and NEA ways of working, creates consistency in design and engineering standards, and enables teams to build, govern, reuse, and scale agentic solutions more effectively.\n+\n+This is PartnerAdvisory strategic-partner thought leadership responding to an enterprise consistency gap identified through NEE IT evidence and internal synthesis. It is not a Chakra-stated pain point, a committed pilot, or proof of current implementation. Q3 should close the EL/workstream map, 106-SWE decomposition, baseline measures, and Chakra feedback; Q4 should solution the detailed co-hydrated operating model and only then decide whether implementation or a representative pilot is warranted.\n"
+    },
+    {
+      "before_sha256": "4e6496c6edd53a8287556d8d7d9ce916c25c574c588dae2e5698248fd3e44bf1",
+      "card_id": "NEE_06",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-13"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v50"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md",
+      "proposed_after_sha256": "0728e3bca29ba5bd8043d457a58edfe841d6cca2868e861ea9980a10f3890c3b",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "risk_neeit_nea_agentic_design_architecture_gap|NEE_06",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_3e502d522f0567fc13e5142c7ce009",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_41bbe19360d26da1446b5366613ce1",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_agentic_standards_gap_2026_07_13|NEE_06",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "risk_neeit_nea_agentic_design_architecture_gap|NEE_06",
+        "route_v51_3e502d522f0567fc13e5142c7ce009",
+        "route_v51_41bbe19360d26da1446b5366613ce1",
+        "source_v51_user_agentic_standards_gap_2026_07_13|NEE_06"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md\n+++ b/cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md\n@@ -4,7 +4,7 @@\n card_type: synthesis_card\n last_updated: 2026-07-13\n freshness: living\n-package: NEE_v50\n+package: NEE_v51\n ---\n \n # Co-Delivery / Co-Hydrated Operating Model\n@@ -339,3 +339,7 @@\n | Bottleneck displacement | `risk_ai_pdlc_bottleneck_displacement` | Design measures and controls for review, test, security, deployment, discovery, validation, acceptance, and support constraints. |\n \n These patterns complement—not replace—the Q3 prerequisites, Chakra alignment feedback, and Q4 role/decision-right solutioning sequence already governed by this card.\n+\n+## v51 federated standards design principle\n+\n+The co-hydrated model should standardize the **interfaces and controls**, not force identical team culture. Shared minimums should cover product/context artifacts, agent orchestration patterns, architecture decisions, identity and tool access, evaluation evidence, security/human-review gates, observability, production acceptance, and reusable components. NEE IT and NEA teams may retain local ceremonies and working styles as long as they conform to those minimums and use a governed exception path.\n"
+    },
+    {
+      "before_sha256": "6acf091e795bf5abebf0bcbe264e63e154c8c76fd9d1b629c82f3081d73804e5",
+      "card_id": "NEE_07",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-13"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v50"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md",
+      "proposed_after_sha256": "73a9648cc875c9ff05650b92f13eda325254597892f25d25d933cd4778d9408a",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "asrt_v51_39e2c61c8ea02096d0dac108c8d119",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_4a4a21e9ce65d07c93c0be9da8b1f5",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_8d43120b9eb53494dfd20b22b42d14",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_c243e860c3de6ad14dd2a079301423",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_agentic_consistency_gap",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_eva_test_and_eval_progression",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "risk_neeit_nea_agentic_design_architecture_gap|NEE_07",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_14b4b2f804818e218a4e8c598c9f3e",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_1c59611bb7ff0a52ce1fdce8292d83",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_1f3baa869fedcca8b62edaddfb3f4d",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_9bce7a36a425e86444543635c70f6c",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_a9420b2a87854d70a52e1bb28efc05",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_b4269a2c686d5dd9d96f7e84919805",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_bc0e9f80197dd68ebe8348d2c9c9ff",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_c805c2d1812cb6d629da11cb971df0",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_ec04521cfba6e513915f50f5bc6a24",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_07",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_agentic_standards_gap_2026_07_13|NEE_07",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "asrt_v51_39e2c61c8ea02096d0dac108c8d119",
+        "asrt_v51_4a4a21e9ce65d07c93c0be9da8b1f5",
+        "asrt_v51_8d43120b9eb53494dfd20b22b42d14",
+        "asrt_v51_c243e860c3de6ad14dd2a079301423",
+        "claim_v51_agentic_consistency_gap",
+        "claim_v51_eva_test_and_eval_progression",
+        "risk_neeit_nea_agentic_design_architecture_gap|NEE_07",
+        "route_v51_14b4b2f804818e218a4e8c598c9f3e",
+        "route_v51_1c59611bb7ff0a52ce1fdce8292d83",
+        "route_v51_1f3baa869fedcca8b62edaddfb3f4d",
+        "route_v51_9bce7a36a425e86444543635c70f6c",
+        "route_v51_a9420b2a87854d70a52e1bb28efc05",
+        "route_v51_b4269a2c686d5dd9d96f7e84919805",
+        "route_v51_bc0e9f80197dd68ebe8348d2c9c9ff",
+        "route_v51_c805c2d1812cb6d629da11cb971df0",
+        "route_v51_ec04521cfba6e513915f50f5bc6a24",
+        "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_07",
+        "source_v51_user_agentic_standards_gap_2026_07_13|NEE_07"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md\n+++ b/cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md\n@@ -4,7 +4,7 @@\n card_type: synthesis_card\n last_updated: 2026-07-13\n freshness: living\n-package: NEE_v50\n+package: NEE_v51\n ---\n \n # AI SDLC, Evals, Survey, and Control Framework\n@@ -369,3 +369,15 @@\n 7. AI-PDLC Ops plus co-build/champion propagation for learning, standards, reporting, and scale.\n \n The source is authoritative for what the PartnerAdvisory deck depicts. NEE applicability is an approved internal recommendation to be evaluated during co-hydrated solutioning; current NEE implementation, measured maturity, productivity gains, vendor adoption, and Chakra approval remain unproven.\n+\n+## v51 gap-to-AI-PDLC response\n+\n+| Enterprise gap | AI-PDLC response |\n+|---|---|\n+| Inconsistent agentic design patterns | Governed reference patterns for orchestration, memory/context, tools, human oversight, and integration. |\n+| Different architecture standards and review practices | Common principles, decision records, evidence requirements, review gates, and exception handling. |\n+| Different NEE IT and NEA working styles | Shared lifecycle vocabulary and minimum controls with local execution flexibility. |\n+| Weak reuse across workstreams | Reusable context assets, prompts/skills, components, evaluation suites, and implementation playbooks. |\n+| AI speed can hide quality/security risk | Human-review gates, traceability, scheduled tests, evaluations, security controls, and production monitoring. |\n+\n+Concrete June 29 examples include EVA’s scheduled integration harness and planned hallucination/accuracy evaluation, Swarm’s data-flow automation, DocIQ’s cost-control learning, and Outage’s production/security dependencies. These are examples to inform the framework—not proof of enterprise-wide AI-PDLC adoption.\n"
+    },
+    {
+      "before_sha256": "075fd6d101c7d916f6861f3215b45e1c1dcc2d4df46e76c1ff241a7f062a1b09",
+      "card_id": "NEE_10",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-13"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v50"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+      "proposed_after_sha256": "1b8ae2358efa6943a513b2f10d644decc8144bb3b794a1166cdca5acaac4d33a",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "asrt_claim_claim_v44_damyn_affiliation_conflict",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_38488cc6a96b333fdb51e12e5af124",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_3ed1d20d91c0f1aee931ec153e0db6",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_7132c07bd9313da420c617b71a69cf",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_94b1fd72e7cb39660a70fb22d5b7ec",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_aea67dfbd700929b154fc759ea66e8",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_b508df8c026c64229b48c517f5b075",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_cb43dc3057124d94b5a6f567cec898",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_dc5940c93c02717076193342156474",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v44_damyn_affiliation_conflict",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_alberto_dated_assignments",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_damyn_affiliation_correction",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_alberto_castagnara|NEE_10",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_clay_palumbo|NEE_10",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_javier_ochoa|NEE_10",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_sarah_borkowski|NEE_10",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_8759287f86c0d23766d6abc7",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_1c6766f6d21214301c02ccd5d5727f",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_1f8818a347da9c41b52f3ea08fc396",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_27df095cb7482ae3badcb32b91460a",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_2931aa7f8ef837a3494d8f2dadda09",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_2fa9de751712bfa1122fd05b851a47",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_4020f5ad5dc7435ba989e65a65d8a7",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_4c7e67d4e6e7e668e88058a0cc9382",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_4f14db6c1180e03982d6731a69be88",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_4f87bcd1eec1b2cf7388161ffd7c18",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_51616f86af5d4c33cc01031722756a",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_79174df06829ccf31d4b7bc0c8b167",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_7d5f5891ea12989169d1f848b69190",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_9d44bc3155ea86353b0d978a3609aa",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_cf6c16354cee9b4317888c593202f9",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_d3f794f4fb854a26b1a7c9bfec5bab",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_d59f664420874e4b8135b3689dc4c7",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_e6a60eefda03385132f8a5645d77bc",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_e95b989511743185991aa55069e284",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_edo_meeting_notes_2026_06_29|NEE_10",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_10",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_person_resolution_2026_07_13|NEE_10",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_roster_identity_boundary_2026_07_13|NEE_10",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "asrt_claim_claim_v44_damyn_affiliation_conflict",
+        "asrt_v51_38488cc6a96b333fdb51e12e5af124",
+        "asrt_v51_3ed1d20d91c0f1aee931ec153e0db6",
+        "asrt_v51_7132c07bd9313da420c617b71a69cf",
+        "asrt_v51_94b1fd72e7cb39660a70fb22d5b7ec",
+        "asrt_v51_aea67dfbd700929b154fc759ea66e8",
+        "asrt_v51_b508df8c026c64229b48c517f5b075",
+        "asrt_v51_cb43dc3057124d94b5a6f567cec898",
+        "asrt_v51_dc5940c93c02717076193342156474",
+        "claim_v44_damyn_affiliation_conflict",
+        "claim_v51_alberto_dated_assignments",
+        "claim_v51_damyn_affiliation_correction",
+        "person_alberto_castagnara|NEE_10",
+        "person_clay_palumbo|NEE_10",
+        "person_javier_ochoa|NEE_10",
+        "person_sarah_borkowski|NEE_10",
+        "route_8759287f86c0d23766d6abc7",
+        "route_v51_1c6766f6d21214301c02ccd5d5727f",
+        "route_v51_1f8818a347da9c41b52f3ea08fc396",
+        "route_v51_27df095cb7482ae3badcb32b91460a",
+        "route_v51_2931aa7f8ef837a3494d8f2dadda09",
+        "route_v51_2fa9de751712bfa1122fd05b851a47",
+        "route_v51_4020f5ad5dc7435ba989e65a65d8a7",
+        "route_v51_4c7e67d4e6e7e668e88058a0cc9382",
+        "route_v51_4f14db6c1180e03982d6731a69be88",
+        "route_v51_4f87bcd1eec1b2cf7388161ffd7c18",
+        "route_v51_51616f86af5d4c33cc01031722756a",
+        "route_v51_79174df06829ccf31d4b7bc0c8b167",
+        "route_v51_7d5f5891ea12989169d1f848b69190",
+        "route_v51_9d44bc3155ea86353b0d978a3609aa",
+        "route_v51_cf6c16354cee9b4317888c593202f9",
+        "route_v51_d3f794f4fb854a26b1a7c9bfec5bab",
+        "route_v51_d59f664420874e4b8135b3689dc4c7",
+        "route_v51_e6a60eefda03385132f8a5645d77bc",
+        "route_v51_e95b989511743185991aa55069e284",
+        "source_v51_edo_meeting_notes_2026_06_29|NEE_10",
+        "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_10",
+        "source_v51_user_person_resolution_2026_07_13|NEE_10",
+        "source_v51_user_roster_identity_boundary_2026_07_13|NEE_10"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md\n+++ b/cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md\n@@ -4,7 +4,7 @@\n card_type: synthesis_card\n last_updated: 2026-07-13\n freshness: living_stakeholder_map\n-package: NEE_v50\n+package: NEE_v51\n ---\n \n # Stakeholders, Champions, Org, Credentialing, and Open Questions\n@@ -434,3 +434,26 @@\n | Explicit non-claims | No deck authorship, Adaptive AI-PDLC offering ownership, NEE/Chakra follow-up ownership, reporting line, or decision rights are inferred |\n \n Canonical graph node: `stakeholder_jon_perkins`.\n+\n+## v51 identity and open-question reconciliation\n+\n+### Closed\n+\n+- `person_stephane` is **Stephan Marceau**; PartnerAdvisory and Apex Utility accounts are aliases on one person.\n+- `person_matthew_koch` is **Matthew “Matt” Koch**.\n+- `person_amanda_knarr` is the canonical survivor for the duplicate Amanda Knarr nodes; the Gemini contribution moves to it.\n+- Damyn Gessler is a PartnerAdvisory employee; the NEA affiliation conflict is superseded.\n+- Clay is **Clay Palumbo**, former Project Beacon lead, and has left PartnerAdvisory.\n+- Alberto is **Alberto Castagnara**, a Swarm contributor as of June 29, with a historical March 16 Conduit AI assignment.\n+- Every named person in the pasted NEA/EDO rosters is a PartnerAdvisory employee; dual client-domain addresses are aliases. Attendance is ignored, and opaque accounts are excluded.\n+\n+### New canonical people\n+\n+Javier Ochoa, Sarah Borkowski, Clay Palumbo, and Alberto Castagnara.\n+\n+### Still open\n+\n+- Current H2 staffing/hiring authority and any superseding process for Javier Ochoa, Stephan Marceau, Bryce Poeter, Colleen Barbato, Andrew Cudworth, and Sanskriti Lamsal.\n+- Javier Ochoa’s current NEA role/workstream and Sarah Borkowski’s current role/workstream, allocation, and decision rights.\n+- Alberto Castagnara’s formal title, allocation, and assignment effective dates and whether the contexts overlapped.\n+- The partial onboarding identity `Gessica T` must **not** be merged with Gessica Tortolano without direct confirmation.\n"
+    },
+    {
+      "before_sha256": "fb0d53a41359df02e938870f752cc8d3643220d2689fa96738d6af61d9436e27",
+      "card_id": "NEE_11",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-13"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v50"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+      "proposed_after_sha256": "79ee9beb915fc5531cb648dc7c59238e3b40d7717f8844f671c3a90e2b7e2723",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "person_alberto_castagnara|NEE_11",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "risk_neeit_nea_agentic_design_architecture_gap|NEE_11",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_31e9a87a3fe96c53f6a5521e0ca658",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_43707e9a7022ff4f2d8b713a80ff44",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_51e59e71d2076900d0da34fba55af6",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_697a0df745b4c51cf3f590932431c6",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_e3660e1d0ed7333bbfb95af319e0ff",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_edo_meeting_notes_2026_06_29|NEE_11",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_11",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_agentic_standards_gap_2026_07_13|NEE_11",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "person_alberto_castagnara|NEE_11",
+        "risk_neeit_nea_agentic_design_architecture_gap|NEE_11",
+        "route_v51_31e9a87a3fe96c53f6a5521e0ca658",
+        "route_v51_43707e9a7022ff4f2d8b713a80ff44",
+        "route_v51_51e59e71d2076900d0da34fba55af6",
+        "route_v51_697a0df745b4c51cf3f590932431c6",
+        "route_v51_e3660e1d0ed7333bbfb95af319e0ff",
+        "source_v51_edo_meeting_notes_2026_06_29|NEE_11",
+        "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_11",
+        "source_v51_user_agentic_standards_gap_2026_07_13|NEE_11"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md\n+++ b/cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md\n@@ -4,7 +4,7 @@\n card_type: synthesis_card\n last_updated: 2026-07-13\n freshness: living_relationship_map\n-package: NEE_v50\n+package: NEE_v51\n ---\n \n # Cross-Workstream Synthesis and Reuse Map\n@@ -246,3 +246,12 @@\n | `risk_ai_pdlc_bottleneck_displacement` | Detect shifted constraints in review, test, security, deployment, discovery, validation, acceptance, and support | Must be measured; not assumed from tool adoption |\n \n The corridor links the AI-PDLC POV to the strategic-partner opportunity, Q4 co-hydrated solutioning, Engineering Exchange, delivery metrics, and existing context/governance patterns while preserving the no-current-implementation boundary.\n+\n+## v51 reusable patterns surfaced from June 29 notes\n+\n+- **Swarm:** event-driven availability of real/synthetic storm data can replace manual data handoffs.\n+- **EVA:** scheduled integration testing can mature into model-quality and hallucination evaluation, but planned evals must remain distinct from operating controls.\n+- **DocIQ:** image-processing intensity is a reusable cost-governance signal for multimodal workloads.\n+- **Outage:** lower-environment shutdown controls and customer-communication dependencies belong in production-readiness patterns.\n+- **EDO:** Atlas operationalization, GridOpti data-quality patterns, Digital Thread transition, and cross-team CI/CD reuse should be indexed as dated examples, not generalized standards until validated.\n+- **AI-PDLC:** the reusable library should bridge NEE IT and NEA through common patterns and controls while preserving local execution styles.\n"
+    },
+    {
+      "before_sha256": "422307b33436a7e62fa58e272337377539bbb820912ebc72f8f8b2aff2b0db20",
+      "card_id": "NEE_12",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-10"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v42"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_12_AI_Hub_Sherpa_DevHub_PGD_Platform_Lessons.md",
+      "proposed_after_sha256": "e4f86c9d920b00bd2c28d5121933d9ff3890eeda8aa92fd0218d09810b368313",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "asrt_v51_8e5bf660a10cd6c04bf7dc8bc81cda",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_c5e08b454ecd542d68105137da42fc",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_ca8baf056bdbf55dbb743428d64b44",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_clay_identity_and_status",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_clay_palumbo|NEE_12",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_18597069d5235c5e7650a302d17507",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_48dd415a81321cabc9d6f07dce3ca5",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_8f8cd26a5fe574216a3df5def5d1c2",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_a21aeb3d4004b1cb99fab4dcc17040",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_a7d5889201f15665139f3bed81a7a6",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_b22603ebeacb321a704620dc48fef8",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_person_resolution_2026_07_13|NEE_12",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "asrt_v51_8e5bf660a10cd6c04bf7dc8bc81cda",
+        "asrt_v51_c5e08b454ecd542d68105137da42fc",
+        "asrt_v51_ca8baf056bdbf55dbb743428d64b44",
+        "claim_v51_clay_identity_and_status",
+        "person_clay_palumbo|NEE_12",
+        "route_v51_18597069d5235c5e7650a302d17507",
+        "route_v51_48dd415a81321cabc9d6f07dce3ca5",
+        "route_v51_8f8cd26a5fe574216a3df5def5d1c2",
+        "route_v51_a21aeb3d4004b1cb99fab4dcc17040",
+        "route_v51_a7d5889201f15665139f3bed81a7a6",
+        "route_v51_b22603ebeacb321a704620dc48fef8",
+        "source_v51_user_person_resolution_2026_07_13|NEE_12"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_12_AI_Hub_Sherpa_DevHub_PGD_Platform_Lessons.md\n+++ b/cards/NEE_12_AI_Hub_Sherpa_DevHub_PGD_Platform_Lessons.md\n@@ -2,9 +2,9 @@\n project: NEE\n card_id: NEE_12\n card_type: synthesis_card\n-last_updated: 2026-07-10\n+last_updated: 2026-07-13\n freshness: living\n-package: NEE_v42\n+package: NEE_v51\n ---\n \n # AI Hub, Project Beacon, DevHub, and PGD Platform Lessons\n@@ -228,3 +228,7 @@\n \n Sherpa may be assessed against the same lifecycle, evaluation, retrieval, observability, release, and support criteria, but it is not production proof until the grouped evidence package and client authority validations close.\n <!-- V42_END -->\n+\n+## v51 Clay Palumbo resolution\n+\n+The “Clay” referenced in Brien Muschett’s Project Beacon feedback is **Clay Palumbo**. He was the former Project Beacon lead and has left PartnerAdvisory. The identity question is closed; the exact departure date and historical decision rights are not asserted. Current Sherpa leadership remains governed by the later Lillian Le / Andy Kilinskis evidence.\n"
+    },
+    {
+      "before_sha256": "24c242b63d1bfa897a977d29c8124f1e3e8d41f3df65de274302930f3d65b858",
+      "card_id": "NEE_13",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-10"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v36"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md",
+      "proposed_after_sha256": "24a92da43cb8ca9c70100fd6a4dfaa9d7fdfecfa1e5e6320f35ab17f679cabe8",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "asrt_v51_23332d5c915e780b205146a2830492",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_32800c5524baed7a31d134f4b64047",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_331ae72215326f1933e8b8917da7c6",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_36a6f822b2dd05d6df0cb34ddb022f",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_3e6522ae4eff35e5808dda61ce18ee",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_4c99805f394a6b6f1c296f469a0172",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_60cc8dc01cade22f02626de2b9f390",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_7afa7ecaf993ed8fe4130b91fc0080",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_7fccee141b48822a324914cc19024d",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_b5c8b212d08cfa1e42ae02c6180b54",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_e226e5a9790ec996dfd13cb6510d01",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_e5df8e3fb2ddad693c90c9a7b52044",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_eaa5d1d5dbc492fc24ecf0ccc43362",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "asrt_v51_fd90d9973e44a518f4d1176d81bab9",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_edo_amit_context",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_edo_andrew_context",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_edo_anece_context",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_edo_calvin_context",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_edo_formal_role_boundary",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_edo_francis_context",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_edo_joyce_boundary",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_edo_lan_context",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_edo_venkat_context",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_01330f3c5299966c8a27e8d48f8e70",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_04fc333d8901b2802aa1622b3cf515",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_05068328638c98a92ac783a5088777",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_080f007cde6dbf24bd3098dbe9f107",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_08bf6f0a4c61b8f65b63a25ec31652",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_0cb28a5450a886abde3f8b896cd8ca",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_2a67d81729a843fc0c1317e9550aae",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_352bdf74a360d7733d4b3d5f0a36c3",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_41e89e2a3b5299a98db00d1f6c8606",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_700662928e88d94ff58d69ed3d330e",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_7ac1187d280b57573956e78d2838c4",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_86f531b84615db6bb363f74f5b19b4",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_928dd3fb9d17f8f6b2f4370ebe8c69",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_9cdd56ec9412ee098143c406da27df",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_aa0569b967fdb3feefa8ec41ff6f0a",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_ae2a8f793faed52de21047cda9c919",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_b4910942dd96dcc6152e4fc513be0f",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_d342e7158e6f37b4425c794ab07149",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_d829e57b42875ede1dd1e4bf038f00",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_e5b5134e0601c150a21d4c7acee61a",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_e6f5ce2dbe1f7f4542f2b58716de08",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_e864544a00c6546ff25e795aab25d1",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_f72459dc3aa2c8e80443545a0db664",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_fec1badff2b47c553ba2d929c38705",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_edo_meeting_notes_2026_06_29|NEE_13",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "asrt_v51_23332d5c915e780b205146a2830492",
+        "asrt_v51_32800c5524baed7a31d134f4b64047",
+        "asrt_v51_331ae72215326f1933e8b8917da7c6",
+        "asrt_v51_36a6f822b2dd05d6df0cb34ddb022f",
+        "asrt_v51_3e6522ae4eff35e5808dda61ce18ee",
+        "asrt_v51_4c99805f394a6b6f1c296f469a0172",
+        "asrt_v51_60cc8dc01cade22f02626de2b9f390",
+        "asrt_v51_7afa7ecaf993ed8fe4130b91fc0080",
+        "asrt_v51_7fccee141b48822a324914cc19024d",
+        "asrt_v51_b5c8b212d08cfa1e42ae02c6180b54",
+        "asrt_v51_e226e5a9790ec996dfd13cb6510d01",
+        "asrt_v51_e5df8e3fb2ddad693c90c9a7b52044",
+        "asrt_v51_eaa5d1d5dbc492fc24ecf0ccc43362",
+        "asrt_v51_fd90d9973e44a518f4d1176d81bab9",
+        "claim_v51_edo_amit_context",
+        "claim_v51_edo_andrew_context",
+        "claim_v51_edo_anece_context",
+        "claim_v51_edo_calvin_context",
+        "claim_v51_edo_formal_role_boundary",
+        "claim_v51_edo_francis_context",
+        "claim_v51_edo_joyce_boundary",
+        "claim_v51_edo_lan_context",
+        "claim_v51_edo_venkat_context",
+        "route_v51_01330f3c5299966c8a27e8d48f8e70",
+        "route_v51_04fc333d8901b2802aa1622b3cf515",
+        "route_v51_05068328638c98a92ac783a5088777",
+        "route_v51_080f007cde6dbf24bd3098dbe9f107",
+        "route_v51_08bf6f0a4c61b8f65b63a25ec31652",
+        "route_v51_0cb28a5450a886abde3f8b896cd8ca",
+        "route_v51_2a67d81729a843fc0c1317e9550aae",
+        "route_v51_352bdf74a360d7733d4b3d5f0a36c3",
+        "route_v51_41e89e2a3b5299a98db00d1f6c8606",
+        "route_v51_700662928e88d94ff58d69ed3d330e",
+        "route_v51_7ac1187d280b57573956e78d2838c4",
+        "route_v51_86f531b84615db6bb363f74f5b19b4",
+        "route_v51_928dd3fb9d17f8f6b2f4370ebe8c69",
+        "route_v51_9cdd56ec9412ee098143c406da27df",
+        "route_v51_aa0569b967fdb3feefa8ec41ff6f0a",
+        "route_v51_ae2a8f793faed52de21047cda9c919",
+        "route_v51_b4910942dd96dcc6152e4fc513be0f",
+        "route_v51_d342e7158e6f37b4425c794ab07149",
+        "route_v51_d829e57b42875ede1dd1e4bf038f00",
+        "route_v51_e5b5134e0601c150a21d4c7acee61a",
+        "route_v51_e6f5ce2dbe1f7f4542f2b58716de08",
+        "route_v51_e864544a00c6546ff25e795aab25d1",
+        "route_v51_f72459dc3aa2c8e80443545a0db664",
+        "route_v51_fec1badff2b47c553ba2d929c38705",
+        "source_v51_edo_meeting_notes_2026_06_29|NEE_13"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md\n+++ b/cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md\n@@ -2,9 +2,9 @@\n project: NEE\n card_id: NEE_13\n card_type: synthesis_card\n-last_updated: 2026-07-10\n+last_updated: 2026-07-13\n freshness: living\n-package: NEE_v36\n+package: NEE_v51\n ---\n \n # EDO Data Product and Operating Model Patterns\n@@ -162,3 +162,18 @@\n ### Reusable patterns\n \n The packet supports four immediate internal patterns: the Data1 service blueprint, DQT functional architecture, GridOpti DQX framework, and Trade Floor/GridOpti Databricks CI/CD practice. E&C and Digital Thread also provide a transition-pattern hypothesis. Reuse should be evidence-led and should preserve workstream-specific ownership, security, and acceptance controls.\n+\n+## v51 June 29 EDO role/workstream reconciliation\n+\n+| Person | Dated context now supported | Still open |\n+|---|---|---|\n+| Lan Tran | Portfolio coordination; Brand & Change; data-strategy reconstruction | Formal title and decision rights if needed for current use |\n+| Andrew Hanson | Project Spring; Asset Data Product; Trade Platform pursuit | Allocation and current decision rights |\n+| Anece Elakkari | Atlas / ALR; CI/CD; QA migration; documentation/KT/operationalization | Formal title, allocation, ownership authority |\n+| Calvin Gilmartin | GridOpti closure; Trade Floor; DQ reuse | Formal title, allocation split, ownership authority |\n+| Venkat Puppala | Digital Thread completion/transition; Project Spring architecture | Formal allocation and current decision rights |\n+| Francis Tam | Data-quality capability and AI-augmented operations | Whether dated role remains current and exact authority |\n+| Joyce Tsui | Onboarding experience only | Role, workstream, allocation, decision rights |\n+| Amit Ayer | Broader AI initiatives across the portfolio | No new client authority inferred |\n+\n+The notes add no substantive role/workstream evidence for Jenn Schaefer, Nava Wexler, Steve Moch, Steve McGill, Megan Orzell, Ethan Sachs, Marco Kilongkilong, or Valerie Perez. Amanda Knarr’s Gemini contribution is known, but formal EDO title/allocation/decision rights remain open. Gessica Tortolano is a confirmed PartnerAdvisory employee, but `Gessica T` remains a separate unresolved partial-name candidate.\n"
+    },
+    {
+      "before_sha256": "e00d4498fc4a67a358cd4f1b1abb0852457958c3cb06f9d10132784ba42aa6f4",
+      "card_id": "NEE_15",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-11"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v44"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md",
+      "proposed_after_sha256": "cd87a80292ee6ea88dbd8aa2ae28d4c0536268ef9a2c36d2e7c36b74cd7c26db",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "asrt_v51_bd72de5a0e1560ee89492c42602632",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "claim_v51_roster_identity_boundary",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_alberto_castagnara|NEE_15",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_clay_palumbo|NEE_15",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_javier_ochoa|NEE_15",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_sarah_borkowski|NEE_15",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_0e3ccebf5b497f8f702a04e1a54b65",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_1ac07ece535993908eb59e05081b88",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_824353b9b58faf0cf8b25d0ba30a5e",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_ab12940ac31787a2aaa5fed60cac89",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_b14892d3299766517654e0a418d5d5",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_bfe879ffdc3799445310fd193ab5ec",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_e1e0475370bb66561dfd6735ef3b8b",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_f3bfdb240bb3730740b5183dbbfdd7",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_person_resolution_2026_07_13|NEE_15",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_roster_identity_boundary_2026_07_13|NEE_15",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "asrt_v51_bd72de5a0e1560ee89492c42602632",
+        "claim_v51_roster_identity_boundary",
+        "person_alberto_castagnara|NEE_15",
+        "person_clay_palumbo|NEE_15",
+        "person_javier_ochoa|NEE_15",
+        "person_sarah_borkowski|NEE_15",
+        "route_v51_0e3ccebf5b497f8f702a04e1a54b65",
+        "route_v51_1ac07ece535993908eb59e05081b88",
+        "route_v51_824353b9b58faf0cf8b25d0ba30a5e",
+        "route_v51_ab12940ac31787a2aaa5fed60cac89",
+        "route_v51_b14892d3299766517654e0a418d5d5",
+        "route_v51_bfe879ffdc3799445310fd193ab5ec",
+        "route_v51_e1e0475370bb66561dfd6735ef3b8b",
+        "route_v51_f3bfdb240bb3730740b5183dbbfdd7",
+        "source_v51_user_person_resolution_2026_07_13|NEE_15",
+        "source_v51_user_roster_identity_boundary_2026_07_13|NEE_15"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md\n+++ b/cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md\n@@ -2,9 +2,9 @@\n project: NEE\n card_id: NEE_15\n card_type: synthesis_card\n-last_updated: 2026-07-11\n+last_updated: 2026-07-13\n freshness: living_aliases\n-package: NEE_v44\n+package: NEE_v51\n ---\n \n # Glossary, Aliases, and Name Resolution\n@@ -258,3 +258,15 @@\n - Do not use a profile URL slug, search-result snippet, nickname/full-name similarity, or candidate match as spelling or identity authority.\n - Spelling authority is not identity authority: it does not prove that two source records are one person and does not establish role, affiliation, reporting line, ownership, decision rights, or currentness.\n - **Nick Krivov / Nicholas Krivov:** keep the two roster records separate until each mention is resolved to the correct LinkedIn profile or equivalent direct identity evidence. Once resolved, normalize spelling to the matched display name and retain the other source form only as a governed alias/source mention when useful.\n+\n+## v51 roster identity and alias rule\n+\n+For the pasted NEA and EDO rosters:\n+\n+1. Every named person is a PartnerAdvisory employee.\n+2. `@PartnerAdvisory.com`, `@fpl.com`, and `@nexteraenergy.com` accounts may be confirmed aliases on the same canonical person.\n+3. Email-domain duplication does not create a second person or an employment change.\n+4. The roster is not evidence of attendance, title, role, workstream, allocation, authority, or decision rights.\n+5. The six opaque Apex Utility accounts are excluded entirely unless the user explicitly reopens them.\n+\n+v51 adds the confirmed roster aliases and retains canonical identity lineage for Stephan Marceau, Matthew “Matt” Koch, Amanda Knarr, Damyn Gessler, Clay Palumbo, and Alberto Castagnara.\n"
+    },
+    {
+      "before_sha256": "fd17f6babcaf14a62fd82ead56ab2a899681ccb14431d20f99b6f4367a5ad060",
+      "card_id": "NEE_16",
+      "frontmatter_changes": {
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-13"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v50"
+        }
+      },
+      "impact_types": [
+        "identity",
+        "currentness",
+        "role_scope",
+        "risk",
+        "routing",
+        "provenance",
+        "allowed_use"
+      ],
+      "path": "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+      "proposed_after_sha256": "fa0b5e4dd80a2245ec87aae972fad6954006754c238e6ade09eb0ee4797925a5",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [
+        {
+          "object_id": "person_alberto_castagnara|NEE_16",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_clay_palumbo|NEE_16",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_javier_ochoa|NEE_16",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "person_sarah_borkowski|NEE_16",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_07b9224df4a2eebaf681c7df907740",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_1fc2fae2b4cb58fdc58c2a40cce72f",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_28515a6069d61a68faf0920fd1b308",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_42ed0172a028b6f705107f55b7f294",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_435cc9407554f9fc7587f1fa002bbe",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_43b658af10a9e40917c63797813b82",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_550d0ff54973737595a61f37cd86fb",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_db78aa5b9b7424e6e318739fe36f3f",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "route_v51_f4a057bfd5c9e041a56a6ec42fb373",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_edo_meeting_notes_2026_06_29|NEE_16",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_16",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_agentic_standards_gap_2026_07_13|NEE_16",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_person_resolution_2026_07_13|NEE_16",
+          "operation_type": "add_or_update"
+        },
+        {
+          "object_id": "source_v51_user_roster_identity_boundary_2026_07_13|NEE_16",
+          "operation_type": "add_or_update"
+        }
+      ],
+      "supporting_graph_items": [
+        "person_alberto_castagnara|NEE_16",
+        "person_clay_palumbo|NEE_16",
+        "person_javier_ochoa|NEE_16",
+        "person_sarah_borkowski|NEE_16",
+        "route_v51_07b9224df4a2eebaf681c7df907740",
+        "route_v51_1fc2fae2b4cb58fdc58c2a40cce72f",
+        "route_v51_28515a6069d61a68faf0920fd1b308",
+        "route_v51_42ed0172a028b6f705107f55b7f294",
+        "route_v51_435cc9407554f9fc7587f1fa002bbe",
+        "route_v51_43b658af10a9e40917c63797813b82",
+        "route_v51_550d0ff54973737595a61f37cd86fb",
+        "route_v51_db78aa5b9b7424e6e318739fe36f3f",
+        "route_v51_f4a057bfd5c9e041a56a6ec42fb373",
+        "source_v51_edo_meeting_notes_2026_06_29|NEE_16",
+        "source_v51_nea_technical_meeting_notes_2026_06_29|NEE_16",
+        "source_v51_user_agentic_standards_gap_2026_07_13|NEE_16",
+        "source_v51_user_person_resolution_2026_07_13|NEE_16",
+        "source_v51_user_roster_identity_boundary_2026_07_13|NEE_16"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md\n+++ b/cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md\n@@ -4,7 +4,7 @@\n card_type: synthesis_card\n last_updated: 2026-07-13\n freshness: provenance\n-package: NEE_v50\n+package: NEE_v51\n ---\n \n # Source Provenance and Cold Archive Pointer\n@@ -437,3 +437,15 @@\n | `source_v50_linkedin_jon_perkins_2026_07_13` | Exact user-supplied profile URL: https://www.linkedin.com/in/jon-perkins-tech/ | Pointer-only; no LinkedIn page content was collected or relied upon |\n \n Raw screenshots and LinkedIn payloads are excluded from the active successor package. The governed graph stores hashes, exact slide locators, scoped source metadata, and the URL pointer.\n+\n+## v51 source additions and lineage\n+\n+| Source | Authority and boundary |\n+|---|---|\n+| User-confirmed roster identity boundary, 2026-07-13 | Controls named PartnerAdvisory employment, dual-domain aliases, attendance exclusion, and opaque-account exclusion only. |\n+| User-confirmed person resolutions, 2026-07-13 | Controls Stephan/Matt/Amanda/Damyn/Clay/Alberto identity and status propositions only. |\n+| User strategic synthesis: NEE IT–NEA agentic consistency gap, 2026-07-13 | Controls PartnerAdvisory internal strategy and the explicit non-Chakra attribution boundary. |\n+| EDO June 29 speaker notes | Dated speaker/workstream context; not formal title, allocation, attendance, decision rights, or independent corroboration. |\n+| NEA June 29 speaker notes | Non-independent companion to the formal June 29 NEA packet; adds detail without overriding formal RAG or creating a second corroboration vote. |\n+\n+Input hashes and exact source-version fingerprints are recorded in the v51 Phase A review bundle.\n"
+    },
+    {
+      "before_sha256": "0b840894add8dc6f71c22178000b55959524b28526ecc01bb199af2bb44ff0d2",
+      "card_id": "NEE_99",
+      "derivative_impact": [
+        "PROJECT_INSTRUCTIONS.md body-identical mirror must be regenerated only after approval."
+      ],
+      "frontmatter_changes": {
+        "body_sha256": {
+          "after": "dffdf02e5b26cea9ca67b8ed7f3c0082158850854c35142233892367d65b03fd",
+          "before": "17d0c5d6aeafc2b2c0be371cc2a738a6733419bba77a1c31df58e102c829dfa9"
+        },
+        "last_updated": {
+          "after": "2026-07-13",
+          "before": "2026-07-12"
+        },
+        "package": {
+          "after": "NEE_v51",
+          "before": "NEE_v48.1"
+        }
+      },
+      "impact_types": [
+        "allowed_use",
+        "control_policy",
+        "identity",
+        "packaging",
+        "release_state"
+      ],
+      "path": "cards/NEE_99_Project_Instructions.md",
+      "proposed_after_sha256": "e623840b5283c21d92b9cd083224e4bdd40aa6527b6e9ca12ae6854fa09a7cbc",
+      "rationale": "Synchronize the v50 synthesis with the explicit user confirmations, June 29 dated details, remaining-open boundaries, and v51 source lineage. Includes the separately authorized automatic approved-current rule after Gate R1/O1.",
+      "rollback_or_forward_repair": "Restore the exact v50 card bytes from before_sha256; regenerate the root policy mirror from NEE_99 only after approval.",
+      "routing_changes": [],
+      "supporting_graph_items": [],
+      "unified_or_section_diff": "--- a/cards/NEE_99_Project_Instructions.md\n+++ b/cards/NEE_99_Project_Instructions.md\n@@ -2,19 +2,19 @@\n project: NEE\n card_id: NEE_99\n card_type: control_file\n-policy_version: \"47.2\"\n-last_updated: 2026-07-12\n+policy_version: \"51.0\"\n+last_updated: 2026-07-13\n freshness: living\n-package: NEE_v48.1\n+package: NEE_v51\n canonical: true\n mirror_path: ../PROJECT_INSTRUCTIONS.md\n-body_sha256: 17d0c5d6aeafc2b2c0be371cc2a738a6733419bba77a1c31df58e102c829dfa9\n+body_sha256: dffdf02e5b26cea9ca67b8ed7f3c0082158850854c35142233892367d65b03fd\n ---\n \n # NEE Project Instructions — Governed Knowledge, Version Update, and Query Protocol\n \n-**Policy version:** 47.2  \n-**Effective date:** 2026-07-11  \n+**Policy version:** 51.0  \n+**Effective date:** 2026-07-13  \n **Canonical control file:** `cards/NEE_99_Project_Instructions.md`  \n **Generated mirror:** `PROJECT_INSTRUCTIONS.md`\n \n@@ -195,12 +195,12 @@\n 17. Regenerate only approved affected derivatives and metadata.\n 18. Record the actual graph delta, actual card diff, first canonical write time, and implementation-normalization details.\n \n-### 6.4 Phase D — conformance, packaging, and promotion\n+### 6.4 Phase D — conformance, packaging, and release-state activation\n \n 19. Run Gate R1 QA. Prove baseline immutability, approval chronology, exact-delta conformance, zero unapproved semantic-file changes, lineage, currentness, confidence, audience/HITL, schema, integrity, and packaging hygiene.\n 19a. Generate and validate the exact Gate O1 R1 three-table decision surface from the conformance record. Packaging is blocked unless the G1 and R1 inline outputs both validate and their hashes are bound to approval/conformance.\n 20. Create the successor versioned ZIP only after Gate R1 and Gate O1 pass.\n-21. Label the release `candidate` unless the user separately authorizes promotion or the explicit task approval unambiguously includes release promotion.\n+21. For an authorized successor build, passing Gate R1 and Gate O1 automatically sets the release to `approved_current` and records the release-state activation. Keep the release `candidate` only when the user explicitly requests `candidate-only` or explicitly withholds promotion before packaging.\n 22. Preserve the prior approved-current package and the approval/conformance records.\n \n For each materially changed component, report prior state, proposed state, approved state, implemented state, change, rationale, evidence, time posture, confidence dimensions, audience/HITL posture, affected routes, proposal digest, and conformance result. For unchanged components, a concise zero-change declaration is sufficient.\n@@ -372,7 +372,7 @@\n These are current validation cases, not universal identity rules:\n \n - The Josh mentioned in Brien’s feedback remains unresolved and is not mapped to Joshua Gary, Josh Millar, Josh A, or another person without direct evidence.\n-- The Clay feedback target remains unresolved and is not mapped to Clay Palumbo without direct evidence.\n+- The Clay feedback target is resolved as Clay Palumbo, the former Project Beacon lead, who has left PartnerAdvisory. Exact departure date and historical decision rights remain unasserted.\n \n ---\n \n@@ -662,7 +662,7 @@\n | Protocol activation or waiver | Explicit user approval; instruction-only activation may use Section 6.5 when graph and non-policy card deltas are zero |\n | Export-only regeneration from unchanged approved canonical state | No separate approval if zero semantic delta is proven and no unapproved proposal is embedded |\n | Successor versioned ZIP creation | Gate R1 must pass; candidate status is not a substitute for G1/C1 approval |\n-| Promotion to `approved_current` | Explicit user authorization or an explicit task approval that unambiguously includes promotion |\n+| Release state after Gate R1 and Gate O1 | Automatically `approved_current` for an authorized successor build; use `candidate` only when the user explicitly requests `candidate-only` or withholds promotion |\n | Client/external use of blocked or restricted material | Explicit authorized approval after evidence requirements are met |\n | Destructive deletion or semantic ID reuse | Prohibited unless a legal/privacy/security exception explicitly authorizes deletion; semantic ID reuse remains prohibited |\n \n@@ -780,7 +780,7 @@\n \n Queries default to the latest `approved_current` package unless the user explicitly requests a candidate, review bundle, quarantined artifact, or historical version.\n \n-A review bundle is not a versioned NEE release. Candidate status controls promotion; it does not substitute for pre-mutation approval.\n+A review bundle is not a versioned NEE release. Candidate status is an explicit release-state override; it does not substitute for pre-mutation approval.\n \n ### 18.2 Packaging defaults\n \n@@ -793,7 +793,7 @@\n 7. Include only artifacts required by the authorized change scope.\n 8. State what changed, what did not, the approval decision and digests, and any known synchronization limitations.\n 9. Preserve or quarantine a failed or unapproved build under a distinct name; never silently relabel it as approved.\n-10. Promotion to `approved_current` is separate from packaging unless the user’s explicit authorization clearly includes both.\n+10. An authorized successor build becomes `approved_current` automatically after Gate R1 and Gate O1 pass. Package it as `candidate` only when the user explicitly requests `candidate-only` or withholds promotion.\n \n ### 18.3 Stable artifact capabilities\n \n@@ -1074,6 +1074,14 @@\n - Stakeholder titles, organizational lines, decision rights, and ownership require direct authoritative evidence.\n - Proprietary architecture, restricted demos, and confidential methods remain restricted regardless of confidence.\n \n+## A5. NEA and EDO roster identity boundary\n+\n+- Every named person in the user-supplied NEA Tech Leads and EDO roster emails is a PartnerAdvisory employee.\n+- A PartnerAdvisory address and an `@fpl.com` or `@nexteraenergy.com` address may be confirmed aliases on one canonical PartnerAdvisory person; the client-domain account does not establish separate identity or NEE/Apex Utility employment.\n+- Roster placement is not evidence of attendance, title, role, workstream, allocation, authority, or decision rights.\n+- The six opaque Apex Utility accounts supplied in the NEA email are excluded entirely unless the user explicitly reopens them.\n+- Partial names remain unresolved unless the user or an authoritative source explicitly confirms the mapping.\n+\n ---\n \n # Appendix B — Protocol decision register\n@@ -1091,6 +1099,8 @@\n | `PD-47.1-THREE-TABLE-INLINE-OUTPUT-GATE` | `approved_active` | 47.1 | Requires exactly three inline gate tables—graph delta with retrieval rationale, fixed graph metrics, and card additions with retrieval rationale—while filing all other detail separately. The control utility generates and validates the output, binds G1 to approval and R1 to conformance, and blocks packaging on any omission, extra content, reconciliation failure, metric failure, or hash mismatch. |\n | `PD-47.1.1-ZERO-DELTA-NA-RATIONALE` | `approved_active` | 47.1.1 | Requires every all-zero graph-delta row to render `NA` in the retrieval-rationale column and rejects `NA`, `N/A`, blank, or generic rationale on any non-zero scalar or vector delta. The rule is enforced in G1 and R1 with regression tests. |\n | `PD-47.2-LINKEDIN-NAME-SPELLING-AUTHORITY` | `approved_active` | 47.2 | After a person/profile match is correctly resolved, the LinkedIn profile display name controls canonical personal-name spelling. URL slugs, snippets, and name similarity do not prove spelling or identity; the rule does not establish role, affiliation, reporting line, ownership, decision rights, or currentness. Activation is contingent on exact digest-bound approval of the associated G1/C1 proposal. |\n+| `PD-51-ROSTER-IDENTITY-BOUNDARY` | `approved_active` | 51.0 | Confirms named NEA/EDO roster people as PartnerAdvisory employees, treats PartnerAdvisory and client-domain accounts as aliases on one canonical person, prohibits attendance/role/authority inference from roster placement, excludes the six opaque accounts unless reopened, resolves Clay Palumbo, and standardizes Stephan Marceau spelling. Activated only by exact digest-bound approval of the associated v51 G1/C1 proposal. |\n+| `PD-51.1-AUTO-PROMOTION-AFTER-R1-O1` | `approved_active` | 51.0 | Removes the separate promotion step. Every authorized successor build becomes `approved_current` automatically after Gate R1 and Gate O1 pass unless the user explicitly requests `candidate-only` or withholds promotion before packaging. This decision does not weaken pre-mutation approval, exact-delta conformance, or R1/O1 blocking controls. |\n \n Future decisions must use the metadata and approval requirements in Section 16.\n \n@@ -1133,7 +1143,7 @@\n |---|---|\n | Dan | Account cadence and stakeholder follow-up |\n | Amit Ayer | Synthesis, operating model, and rebaseline preparation |\n-| Stephane | Engineering model, pod-to-EM, and Q3 alignment |\n+| Stephan Marceau | Engineering model, pod-to-EM, and Q3 alignment |\n | Andrew | AI evals, control framework, and technical quality |\n \n Future updates should preserve the responsibility types in Section 15 and update person mappings separately when assignments change.\n"
+    }
+  ],
+  "generated_at": "2026-07-13T16:33:59Z",
+  "implementation_id": "R1-v51-cards-2026-07-13",
+  "status": "implemented_exactly",
+  "unlisted_cards_unchanged": true
+}

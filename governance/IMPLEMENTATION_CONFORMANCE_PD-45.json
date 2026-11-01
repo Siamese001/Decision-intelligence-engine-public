@@ -1,0 +1,113 @@
+{
+  "actual_card_diff_sha256": "b43b658f6d27067bcd78f6f35d02018e4285304467aecf4334423596e1cabf36",
+  "actual_graph_delta_sha256": "2f1f56bcb2de27285c768d91f6475af53c6a2c4bd8e2c361e27df18cf8a2902c",
+  "approval_chronology": {
+    "approval_date": "2026-07-11",
+    "approval_source_order": "user turn precedes implementation turn",
+    "result": "pass"
+  },
+  "approval_decision_id": "PD-45-PRE-MUTATION-GRAPH-CARD-GATES",
+  "approved_card_diff_sha256": "b43b658f6d27067bcd78f6f35d02018e4285304467aecf4334423596e1cabf36",
+  "approved_graph_delta_sha256": "2f1f56bcb2de27285c768d91f6475af53c6a2c4bd8e2c361e27df18cf8a2902c",
+  "archive_preflight_verification": {
+    "file_count": 446,
+    "pycache_entries": [],
+    "raw_artifact_entries": [],
+    "single_root": true,
+    "status": "pass",
+    "testzip": "ok"
+  },
+  "baseline_immutability_result": {
+    "baseline_graph_sha256": "1dd1f557279a1f0c43d7f420f954494c76ef4a74cd638cb4d9e6a0317d9f629a",
+    "baseline_zip_current_sha256": "714b3468810e44abed9ed30c2721dfcf39eca6016996cb99d258d4bea9867531",
+    "baseline_zip_sha256": "714b3468810e44abed9ed30c2721dfcf39eca6016996cb99d258d4bea9867531",
+    "status": "pass"
+  },
+  "changed_file_count": 25,
+  "changed_file_inventory": [
+    "CHANGELOG.md",
+    "MANIFEST.md",
+    "PROJECT_INSTRUCTIONS.md",
+    "QA_REPORT.md",
+    "README.md",
+    "approvals/PD-45-PRE-MUTATION-GRAPH-CARD-GATES.json",
+    "cards/NEE_99_Project_Instructions.md",
+    "exports/v45_gate_activation_qa.json",
+    "exports/v45_gate_activation_summary.json",
+    "exports/v45_policy_change_diff.md",
+    "governance/IMPLEMENTATION_CONFORMANCE_PD-45.json",
+    "governance/PRIOR_UNAPPROVED_V45_DISPOSITION.md",
+    "governance/PROTOCOL_DECISION_PD-45_PRE_MUTATION_GATES.md",
+    "governance/RCA_PRE_MUTATION_GRAPH_CARD_APPROVAL_GATES_2026_07_11.md",
+    "governance/audit/PRIOR_UNAPPROVED_v45_card_change_matrix.csv",
+    "governance/audit/PRIOR_UNAPPROVED_v45_graph_delta_summary.md",
+    "governance/proposals/PD-45_ZERO_GRAPH_DELTA.json",
+    "governance/proposals/PD-45_ZERO_NONPOLICY_CARD_DELTA.json",
+    "governance/templates/approval_record.template.json",
+    "governance/templates/card_delta_proposal.template.json",
+    "governance/templates/conformance_record.template.json",
+    "governance/templates/graph_delta_proposal.template.json",
+    "tests/test_nee_pre_mutation_gate.py",
+    "tools/README.md",
+    "tools/nee_pre_mutation_gate.py"
+  ],
+  "drift_result": "none",
+  "first_canonical_write_at": "2026-07-11T10:56:02Z",
+  "gate_tool_tests": {
+    "result": "OK",
+    "status": "pass",
+    "tests": 6
+  },
+  "graph_zero_delta_verification": {
+    "graph_database_byte_identical": true,
+    "graph_migrations_byte_identical": true,
+    "status": "pass"
+  },
+  "implementation_id": "I1-R1-PD-45-CONTROL-ACTIVATION",
+  "limitations": [
+    "This conformance record covers the C6 instruction-only activation only.",
+    "It does not approve the original attachment-derived v45 semantic delta."
+  ],
+  "lineage_currentness_audience_hitl_results": {
+    "status": "not_applicable_zero_knowledge_delta"
+  },
+  "manifest_verification": {
+    "entries": 445,
+    "failures": 0,
+    "status": "pass"
+  },
+  "non_policy_card_zero_delta_verification": {
+    "cards_checked": 18,
+    "changed_cards": [],
+    "status": "pass"
+  },
+  "packaging_gate_result": "pass",
+  "policy_change": {
+    "baseline_policy_sha256": "735f683daa97a0b34c48846ab73934dac02846c6cb406c3d3abc84a440d41638",
+    "change_class": "C6",
+    "control_card": "NEE_99",
+    "implemented_policy_sha256": "917f5128160397f8ec583e8c58c00d4d21c06472b228f00c2888588b375cdf84",
+    "root_mirror": "PROJECT_INSTRUCTIONS.md"
+  },
+  "policy_mirror_verification": {
+    "body_identical": true,
+    "declared_hash_matches": true,
+    "status": "pass"
+  },
+  "release_state": "approved_current",
+  "schema_and_integrity_results": {
+    "ontology_unchanged": true,
+    "relationship_vocabulary_unchanged": true,
+    "schema_unchanged": true,
+    "sqlite_foreign_key_violations": 0,
+    "sqlite_integrity_check": "ok"
+  },
+  "scope_verification": {
+    "graph_zero_delta_verified": true,
+    "non_policy_card_zero_delta_verified": true,
+    "status": "pass",
+    "unapproved_files": []
+  },
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

@@ -1,0 +1,16 @@
+wave_number: 11
+wave_id: "Wave 11: Connect operational and product surfaces to observed outcomes"
+description: "Make UI, scheduled adapters, tooling and incident diagnosis consume authentic execution evidence and produce useful reviewable proposals"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_operational_outcomes_e2e.py"
+  - "tests/adversarial/test_operational_receipts_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_11.yaml"
+criteria:
+  - "UI completion/stage/activation labels derive from the actual run and independent state readback"
+  - "Fixture markers never count as real audits"
+  - "A recurring failure produces a source-linked explanation and a bounded proposed fix/test scope, not self-modification, merge, publication or unsolicited messaging"
+  - "Read-only diagnosis cannot alter active sessions or auto-resume mutation"
+  - "Explicit feedback remains linked to the delivered result"
+  - "Adapter errors/pending/partial state remain visible"

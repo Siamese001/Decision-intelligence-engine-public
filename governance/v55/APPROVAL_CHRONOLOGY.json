@@ -1,0 +1,12 @@
+{
+  "approval_precedes_first_canonical_write": true,
+  "approval_received_at_utc": "2026-07-14T18:24:41Z",
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "first_canonical_write_at_utc": "2026-07-14T18:28:17Z",
+  "first_canonical_writes": [
+    "PROJECT_INSTRUCTIONS.md",
+    "cards/NEE_99_Project_Instructions.md"
+  ],
+  "prewrite_revalidation_at_utc": "2026-07-14T18:27:37Z",
+  "status": "PASS"
+}

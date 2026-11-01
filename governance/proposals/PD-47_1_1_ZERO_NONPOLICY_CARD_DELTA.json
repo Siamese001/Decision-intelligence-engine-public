@@ -1,0 +1,35 @@
+{
+  "baseline_zip_sha256": "001a4755ae7fb76350da06988ffcb69c7fe513151c46e6ff95d9a1bf1ccc3755",
+  "canonical_serialization_sha256": "f2ea1c43c633c3c168ee65c52c4ce54c068523f1b485e71fb64593f589c9ae1f",
+  "cards": [],
+  "control_plane_exception": {
+    "approval_basis_sha256": "739263fc6019211e83789e454868652713b99a0d780e6b43094f8a35638ed181",
+    "authority": "Section 6.5 protocol-only activation and explicit user instruction",
+    "card_id": "NEE_99",
+    "change_class": "C6"
+  },
+  "generated_at": "2026-07-11T16:31:05Z",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Make Graph Delta rationale delta-aware: render NA for every all-zero scalar or vector delta and reject NA/N/A for any non-zero delta; add five regression tests.",
+        "card": "NEE_99",
+        "change_type": "control_policy",
+        "defense_or_evidence": "The user directed that unchanged graph rows should use NA and explicitly instructed “V47.1.1 - generate” after the enforcement gap was identified.",
+        "retrieval_improvement": "Removes non-informative rationale prose from zero-change rows while preserving mandatory mechanism-specific rationale for material graph changes, making retrieval-impact review faster and safer."
+      }
+    ]
+  },
+  "policy_sha256": "b784a88893bea7dee2861ff1cb6e77f4ea04f322216e57b04c4c69da4dd9702e",
+  "proposal_id": "C1-PD-47.1.1-CONTROL-ACTIVATION-ZERO-NONPOLICY-CARDS",
+  "proposal_type": "proposed_card_delta",
+  "scope": "All canonical cards except control card NEE_99",
+  "status": "approved_zero_change",
+  "unlisted_cards_unchanged": true,
+  "zero_change_declarations": {
+    "all_non_policy_cards_byte_identical_to_v47_1": true,
+    "card_lifecycle_unchanged": true,
+    "card_spine_unchanged": true,
+    "non_policy_card_count": 18
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "contract_id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+  "schema_version": "1.0.0",
+  "artifact_id": "l1-wave-11-completion",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "8dd2004789d69d79215600729292b4ff527b22afae0d29725e03bb0277b1711a"},
+  "wave_id": "W11",
+  "program_id": "NEE-KG-DUAL-PIPELINE-01",
+  "branch": "codex/l1-agentic-gap-analysis",
+  "base_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "result_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "predecessor_receipt_digest": "fbd6539887990631a2d9864912eb61b9f3c8e2e9e0dd8aeea0f13628f51a77c8",
+  "changed_files": [
+    "contracts/dual_pipeline/schemas/ingestion-l1-ledger-policy.schema.json",
+    "contracts/dual_pipeline/schemas/ingestion-shadow-step-receipt.schema.json",
+    "contracts/dual_pipeline/schemas/ingestion-shadow-checkpoint.schema.json",
+    "contracts/dual_pipeline/fixtures/valid/ingestion-l1-ledger-policy.json",
+    "contracts/dual_pipeline/fixtures/valid/ingestion-shadow-step-receipt.json",
+    "contracts/dual_pipeline/fixtures/valid/ingestion-shadow-checkpoint.json",
+    "contracts/dual_pipeline/fixtures/invalid/ingestion-l1-ledger-policy-enabled-default.json",
+    "contracts/dual_pipeline/fixtures/invalid/ingestion-shadow-step-receipt-provider-call.json",
+    "contracts/dual_pipeline/fixtures/invalid/ingestion-shadow-checkpoint-mutation.json",
+    "contracts/dual_pipeline/contract_inventory.json",
+    "requirements/ingestion-l1-ledger-policy.json",
+    "dual_pipeline/ingestion_planning.py",
+    "tools/validate_dual_pipeline_contracts.py",
+    "tests/test_l1_ingestion_shadow.py",
+    "tests/test_l1_ingestion_checkpoint.py",
+    "documentation/L1_AGENTIC_AUGMENTATION_GAP_ANALYSIS.md",
+    "reports/l1_agentic_augmentation/wave-11/l1-agentic-wave-11-20260806/ingestion-shadow-ledger-evaluation.json",
+    "governance/dual_pipeline/l1_agentic/wave-11-completion.json"
+  ],
+  "contract_inventory_digest": "071880262d3e94a06a45bad2676f12bdbc6967e00077687d960e5fdc91f9f4b3",
+  "policy_digest": "cfa744a4e3b0104eac60e0ac9e4968ae0eaa4766be8b25417f5e4dacdd4eea8b",
+  "commands": [
+    {"command": ".\\.venv\\Scripts\\python.exe -m py_compile dual_pipeline/ingestion_planning.py", "exit_code": 0, "status": "PASS", "skipped": 0, "timed_out": false},
+    {"command": ".\\.venv\\Scripts\\python.exe -m unittest -q tests.test_l1_ingestion_plan_contracts tests.test_l1_ingestion_shadow tests.test_l1_ingestion_checkpoint tests.test_ingestion_l2_boundary tests.test_conditional_ingestion_reasoning tests.test_l1_provider_boundary", "exit_code": 0, "status": "PASS", "skipped": 0, "timed_out": false},
+    {"command": ".\\.venv\\Scripts\\python.exe tools/validate_dual_pipeline_contracts.py", "exit_code": 0, "status": "PASS", "skipped": 0, "timed_out": false}
+  ],
+  "provider_initialization_count": 0,
+  "provider_call_count": 0,
+  "graph_mutation_count": 0,
+  "next_wave_authorized": true,
+  "artifacts": [
+    "ingestion-l1-ledger-policy",
+    "ingestion-shadow-step-receipt",
+    "ingestion-shadow-checkpoint",
+    "reports/l1_agentic_augmentation/wave-11/l1-agentic-wave-11-20260806/ingestion-shadow-ledger-evaluation.json"
+  ],
+  "exit_gate_verdicts": {
+    "wave10_predecessor_terminal": true,
+    "contracts_and_fixtures_validate": true,
+    "shadow_interrupt_and_resume_equivalent": true,
+    "checkpoint_drift_fails_closed": true,
+    "enforced_schedule_requires_equivalence": true,
+    "intake_v1_runtime_unchanged": true,
+    "provider_calls_zero": true,
+    "graph_mutations_zero": true
+  },
+  "rollback_control": "Keep the ledger runtime default off and use the v1 sequential intake engine. Remove only the shadow-ledger artifacts as one unit if no longer needed; do not wire an enforced schedule into intake without a fresh adapter-by-adapter equivalence proof and explicit approval.",
+  "cache_namespace_disposition": "No live ingestion cache behavior changed. Shadow checkpoints are written only to a caller-supplied run-scoped path and use exclusive atomic creation.",
+  "extensions": {
+    "execution_posture": "SHADOW_MODEL_ONLY_NO_INTAKE_EXECUTOR_INTEGRATION",
+    "evaluation_report_sha256": "eb8615b2231015d9280ad64c2a08567b26ba36274b1b377a7987d315e1e2013d",
+    "evaluation_report_digest": "e2a05d5a68afb9087a3e49d2723a8726c2e5c788b3a6a582ee3cc3b5205c2c16",
+    "ingestion_planning_sha256": "e1b634cc0129f1ee7dceb22d2f77f70f108ada99ee6dc0bcfdcc75f013a531be",
+    "contract_validator_sha256": "be6dcaa34ba984aec20ace1e912ca77816726bfdfc4fbc34ee692832bd686444",
+    "documentation_sha256": "6027bb9dc46aa17c83a60417130318b5dfc252208a1154f5eec890999c11dc9e"
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "approved_g1_canonical_sha256": "fc66acab477eb6a129e84d4dc724fb5bedb6b42795b355633f8859c3d4a6377a",
+  "approved_g1_inline_sha256": "b60ab2de033dfc71caebbc5dacc6892a882a913f155c859be0747d6f5d029c13",
+  "baseline_database_sha256": "9dc863b58bac213661d97b62508f32f886e62498b4db532d6438cc0fe0b7fdf2",
+  "baseline_zip_sha256": "adf77b2cbb5df66e9d3c33fbd6970a89e23643879fd2068155849ef248e13408",
+  "candidate_database_sha256": "5a376919027b37b1b3c566074a8923b18fe842f70d38a5459534e3eaa52f8b0a",
+  "canonical_serialization_sha256": "a68cd6ff4361aa8e2b1caedad50879ebb0e23a36ae7f8b84bde0ffebad77dce5",
+  "component_counts": {
+    "alias": {
+      "after": "393/388",
+      "before": "393/388",
+      "delta": "0/0"
+    },
+    "assertion_approval": {
+      "after": "1014 approval-linked assertions",
+      "before": "0 approval-linked assertions",
+      "delta": "1014 updates"
+    },
+    "claim": {
+      "after": "520/520",
+      "before": "520/520",
+      "delta": "0/0"
+    },
+    "current_views": {
+      "after": "989/595/871/0/597",
+      "before": "1466/0/0/1462/989",
+      "delta": "-477/+595/+871/-1462/-392"
+    },
+    "edge": {
+      "after": "1026/1014",
+      "before": "1026/1014",
+      "delta": "0/0"
+    },
+    "governance_approval": {
+      "after": "2",
+      "before": "0",
+      "delta": "2"
+    },
+    "node": {
+      "after": "632",
+      "before": "632",
+      "delta": "0"
+    },
+    "node_card_map": {
+      "after": "1566/3620",
+      "before": "1566/3620",
+      "delta": "0/0"
+    },
+    "operational_ledger": {
+      "after": "1/9/1/29/15/1/1",
+      "before": "0/0/0/0/0/0/0",
+      "delta": "1/9/1/29/15/1/1"
+    },
+    "query_definition": {
+      "after": "18",
+      "before": "18",
+      "delta": "9 updates"
+    },
+    "schema_objects": {
+      "after": "85/40/40/47",
+      "before": "81/37/11/39",
+      "delta": "4/3/29/8"
+    },
+    "search_document": {
+      "after": "2094/1223",
+      "before": "2094/2094",
+      "delta": "0/-871"
+    },
+    "search_fts": {
+      "after": "1223",
+      "before": "2094",
+      "delta": "-871"
+    },
+    "semantic_registry": {
+      "after": "563",
+      "before": "501",
+      "delta": "62"
+    },
+    "source": {
+      "after": "147",
+      "before": "147",
+      "delta": "0"
+    },
+    "validation": {
+      "after": "173",
+      "before": "173",
+      "delta": "0"
+    }
+  },
+  "graph_delta_rows": [
+    {
+      "baseline": "147",
+      "change": "No source row is added, changed, superseded, or deleted.",
+      "component_key": "source",
+      "delta": "0",
+      "graph_component": "Legacy sources",
+      "proposed_or_actual": "147",
+      "retrieval_rationale": "NA"
+    },
+    {
+      "baseline": "632",
+      "change": "No canonical node identity, name, type, state, or active flag changes.",
+      "component_key": "node",
+      "delta": "0",
+      "graph_component": "Legacy nodes",
+      "proposed_or_actual": "632",
+      "retrieval_rationale": "NA"
+    },
+    {
+      "baseline": "393/388",
+      "change": "Alias rows remain intact; new triggers block preferred ambiguous aliases and unregistered state values.",
+      "component_key": "alias",
+      "delta": "0/0",
+      "graph_component": "Legacy / canonical aliases",
+      "proposed_or_actual": "393/388",
+      "retrieval_rationale": "NA"
+    },
+    {
+      "baseline": "1026/1014",
+      "change": "No relationship row is removed or semantically rewritten; symmetric projection and cardinality enforcement change future writes and retrieval only.",
+      "component_key": "edge",
+      "delta": "0/0",
+      "graph_component": "Legacy edges / edge-backed assertions",
+      "proposed_or_actual": "1026/1014",
+      "retrieval_rationale": "NA"
+    },
+    {
+      "baseline": "520/520",
+      "change": "All claim text and lineage remain unchanged; candidate claims stay noncanonical and move out of authoritative FTS.",
+      "component_key": "claim",
+      "delta": "0/0",
+      "graph_component": "Legacy claims / claim-backed assertions",
+      "proposed_or_actual": "520/520",
+      "retrieval_rationale": "NA"
+    },
+    {
+      "baseline": "173",
+      "change": "No validation state, owner, due date, priority, or question changes.",
+      "component_key": "validation",
+      "delta": "0",
+      "graph_component": "Validations",
+      "proposed_or_actual": "173",
+      "retrieval_rationale": "NA"
+    },
+    {
+      "baseline": "1566/3620",
+      "change": "Rows remain unchanged; canonical_route becomes non-bypassable and legacy mappings become trigger-synchronized derivatives.",
+      "component_key": "node_card_map",
+      "delta": "0/0",
+      "graph_component": "Legacy node-card mappings / canonical routes",
+      "proposed_or_actual": "1566/3620",
+      "retrieval_rationale": "NA"
+    },
+    {
+      "baseline": "0 approval-linked assertions",
+      "change": "Backfill the prior V48 integrated approval reference on 989 canonical and 25 historical edge-backed assertions; candidate assertions remain unapproved.",
+      "component_key": "assertion_approval",
+      "delta": "1014 updates",
+      "graph_component": "Assertion approval lineage",
+      "proposed_or_actual": "1014 approval-linked assertions",
+      "retrieval_rationale": "Binds accepted and historical assertions to the exact approval lineage used for canonical-promotion and audit checks."
+    },
+    {
+      "baseline": "501",
+      "change": "Add 20 assertion-predicate contracts and 42 controlled values covering atomicity, origin, confidence, materiality, classification, date posture, literal types, and approval status.",
+      "component_key": "semantic_registry",
+      "delta": "62",
+      "graph_component": "Executable semantic registries",
+      "proposed_or_actual": "563",
+      "retrieval_rationale": "Enables deterministic predicate/object-kind checks, validation filtering, conflict semantics, and fail-closed writes."
+    },
+    {
+      "baseline": "0",
+      "change": "Register the historical V48 implementation approval and the future digest-bound V48.1 remediation approval; future ingestion requires a scoped active record.",
+      "component_key": "governance_approval",
+      "delta": "2",
+      "graph_component": "Authoritative approval records",
+      "proposed_or_actual": "2",
+      "retrieval_rationale": "Prevents arbitrary approval strings from promoting candidate knowledge and makes canonical lineage queryable."
+    },
+    {
+      "baseline": "81/37/11/39",
+      "change": "Add governance_approval, assertion_predicate_registry, assertion_conflict, and staged_source; add decision-safe/candidate/symmetric views, semantic guards, route synchronization, assertion-driven FTS synchronization, and supporting indexes.",
+      "component_key": "schema_objects",
+      "delta": "4/3/29/8",
+      "graph_component": "SQLite tables / views / triggers / explicit indexes",
+      "proposed_or_actual": "85/40/40/47",
+      "retrieval_rationale": "Prevents invalid states at write time and provides one authoritative current, conflict, routing, and search path."
+    },
+    {
+      "baseline": "1466/0/0/1462/989",
+      "change": "v_current_assertion becomes canonical-only; v_decision_safe_assertion requires accepted validation and support evidence; candidate/needs-review rows move to a separate view; conflict logic uses scope, temporal overlap, cardinality, and explicit conflict records; symmetric accepted edges gain reverse projections.",
+      "component_key": "current_views",
+      "delta": "-477/+595/+871/-1462/-392",
+      "graph_component": "Current / decision-safe / candidate assertions / reported conflict pairs / canonical-edge projections",
+      "proposed_or_actual": "989/595/871/0/597",
+      "retrieval_rationale": "Separates fact, candidate, and review postures; removes false conflicts; supports bidirectional symmetric traversal without silently upgrading unreviewed material."
+    },
+    {
+      "baseline": "2094/2094",
+      "change": "Retain every search_document row but mark 477 candidate claims and 394 needs-review assertions ineligible for authoritative retrieval.",
+      "component_key": "search_document",
+      "delta": "0/-871",
+      "graph_component": "Search documents / authoritative-eligible documents",
+      "proposed_or_actual": "2094/1223",
+      "retrieval_rationale": "Preserves staged search lineage while preventing candidate and review-pending content from surfacing as approved current knowledge."
+    },
+    {
+      "baseline": "2094",
+      "change": "Rebuild external-content FTS from 628 current canonical nodes plus 595 decision-safe assertions; state-change triggers keep it synchronized.",
+      "component_key": "search_fts",
+      "delta": "-871",
+      "graph_component": "Authoritative FTS rows",
+      "proposed_or_actual": "1223",
+      "retrieval_rationale": "Eliminates candidate, rejected, superseded, future, and needs-review leakage from full-text answers."
+    },
+    {
+      "baseline": "18",
+      "change": "Update current claim, relationship, conflict, evidence, safe-abstention, FTS, one-hop, two-hop, and source-attribution SQL to use the new authority views and source-version fields.",
+      "component_key": "query_definition",
+      "delta": "9 updates",
+      "graph_component": "Canonical query definitions",
+      "proposed_or_actual": "18",
+      "retrieval_rationale": "Routes all decision-safe queries through the same canonical, evidence-backed, temporal, and approval-aware representations."
+    },
+    {
+      "baseline": "0/0/0/0/0/0/0",
+      "change": "Persist the V48.1 migration, nine material release audit events, expanded release-gate execution, 15 graph-health measurements, and tested backup/restore run. No fake production ingestion or promotion event is inserted.",
+      "component_key": "operational_ledger",
+      "delta": "1/9/1/29/15/1/1",
+      "graph_component": "Migration / audit / gate-run / gate-result / metric / backup / restore records",
+      "proposed_or_actual": "1/9/1/29/15/1/1",
+      "retrieval_rationale": "Makes the database able to explain which migration and controls produced the candidate and distinguishes real operations from scratch-only tests."
+    }
+  ],
+  "implementation": {
+    "authoritative_current_assertions": 989,
+    "candidate_or_review_assertions": 871,
+    "canonical_edge_projections": 597,
+    "decision_safe_assertions": 595,
+    "eligible_search_documents": 1223,
+    "explicit_indexes_before_after_delta": "39 → 47 (+8)",
+    "fts_indexed_documents": 1223,
+    "governance_approvals": 2,
+    "new_controlled_values": 42,
+    "operational_ledger_counts": {
+      "audit_event": 9,
+      "backup_run": 1,
+      "ingestion_run": 0,
+      "operational_metric": 15,
+      "promotion_event": 0,
+      "quality_gate_result": 29,
+      "quality_gate_run": 1,
+      "restore_run": 1,
+      "schema_migration": 1
+    },
+    "predicate_contracts": 20,
+    "reported_conflict_pairs": 0,
+    "tables_before_after_delta": "81 → 85 (+4)",
+    "triggers_before_after_delta": "11 → 40 (+29)",
+    "views_before_after_delta": "37 → 40 (+3)"
+  },
+  "out_of_envelope_changes": [],
+  "preservation": {
+    "assertion_approval_lineage_updates": 1014,
+    "identity_merges": 0,
+    "legacy_semantic_rows_added": 0,
+    "legacy_semantic_rows_deleted": 0,
+    "legacy_semantic_rows_modified": 0,
+    "legacy_sources_nodes_edges_claims_aliases_validations_mappings_routes_history": "PASS",
+    "search_eligibility_state_updates": 871,
+    "unapproved_account_facts": 0,
+    "unapproved_route_changes": 0
+  },
+  "quality": {
+    "acceptance": "27/27 PASS",
+    "graph_health": "15/15 PASS",
+    "release_gate": "29/29 PASS",
+    "retrieval": "21/21 PASS"
+  },
+  "record_id": "R1-G1-V48.1-CONFORMANCE-REMEDIATION-001",
+  "record_type": "actual_graph_delta",
+  "status": "PASS",
+  "unapproved_semantic_delta": 0
+}

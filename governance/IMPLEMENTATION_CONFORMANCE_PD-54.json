@@ -1,0 +1,39 @@
+{
+  "approval_decision_id": "PD-54-SCOPED-RELEASE-DELTA-AND-EVALUATION-PERFORMANCE",
+  "approval_chronology": {
+    "approval_at": "2026-09-07T13:29:04Z",
+    "first_canonical_write_at": "2026-09-07T13:43:14Z",
+    "result": "pass",
+    "source_order": "User instruction preceded implementation and validation."
+  },
+  "effective_version": "54.0",
+  "status": "approved_active",
+  "summary": "Enforces scoped release delta calculation to isolate baseline clearance debt and mandates query encoding caching and vectorized scoring in retrieval release evaluations.",
+  "governed_components": [
+    "AGENTS.md",
+    ".agents/hooks.json",
+    ".agents/rules/ingestion-lifecycle.md",
+    ".agents/rules/runtime-evidence.md",
+    ".agents/skills/nee-release/SKILL.md",
+    ".agents/skills/nee-ingestion/SKILL.md",
+    ".githooks/pre-commit",
+    ".githooks/pre-push",
+    "documentation/BGE_M3_RETRIEVAL_RELEASE_GATE.md",
+    "dual_pipeline/index.py",
+    "dual_pipeline/retrieval_release.py",
+    "dual_pipeline/retrieval_suite.py",
+    "tests/test_retrieval_release_evaluation.py"
+  ],
+  "verification": {
+    "test_suite": "tests/test_retrieval_release_evaluation.py",
+    "test_cases": [
+      "test_scoped_release_delta_isolates_run_changes_from_baseline_debt",
+      "test_evaluate_case_uses_cached_query_encoding"
+    ],
+    "benchmark_evaluation_id": "retrieval-release-evaluation-release-receipt-ec481f3a76a44b5993670e0cc063",
+    "observed_latency_ms": 1641.0,
+    "gates_passed": 11,
+    "total_gates": 11,
+    "status": "PASS"
+  }
+}

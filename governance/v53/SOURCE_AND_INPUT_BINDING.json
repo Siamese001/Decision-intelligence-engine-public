@@ -1,0 +1,11 @@
+{
+  "cold_archive_ref": "cold_archive://active-input/Pasted text(4).txt",
+  "generated_at": "2026-07-13T22:48:40Z",
+  "identity_caveat": "Brian unresolved; no mapping to Brien Muschett",
+  "input_artifact_hashes": {
+    "Pasted text(4).txt": "9efbaaa5ab8921f371ae6e966428825c5b1ab7bed3492a8beaa99cf37b92811c",
+    "USER_PARTICIPANT_CORRECTION.txt": "0ce849ee84a2bc0f41db702c88784b4127b3ac101d6a33b5e6f5830089348dca"
+  },
+  "raw_artifact_in_package": false,
+  "source_id": "source_sherpa_andy_lillian_meeting_2026_07_13"
+}

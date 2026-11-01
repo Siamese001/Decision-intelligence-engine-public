@@ -1,0 +1,20 @@
+{
+  "collapsed_conflicts": 0,
+  "preserved_conflicts": [
+    {
+      "sources": [
+        "S49-08",
+        "S49-09"
+      ],
+      "topic": "AI-assisted developer productivity",
+      "treatment": "Preserve both context-specific randomized results; no universal effect selected."
+    },
+    {
+      "sources": [
+        "S49-02"
+      ],
+      "topic": "Announced versus completed Apex Global-Google AI product",
+      "treatment": "Announcement retained; completion remains search_incomplete."
+    }
+  ]
+}

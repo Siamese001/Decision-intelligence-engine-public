@@ -1,0 +1,9 @@
+{
+  "baseline_graph_sha256": "fdd7015357f41bc8a3ee8424522f4199c95be9352b8df269c7af7e230a0fdb05",
+  "baseline_policy_sha256": "0b840894add8dc6f71c22178000b55959524b28526ecc01bb199af2bb44ff0d2",
+  "baseline_zip_sha256": "86167a71dfb25dbe80e51b77f3d23c747675ad2310b707fcdcb89f0c9dd793f9",
+  "checked_at": "2026-07-13T11:32:12Z",
+  "expected_baseline_graph_sha256": "fdd7015357f41bc8a3ee8424522f4199c95be9352b8df269c7af7e230a0fdb05",
+  "expected_baseline_zip_sha256": "86167a71dfb25dbe80e51b77f3d23c747675ad2310b707fcdcb89f0c9dd793f9",
+  "status": "PASS"
+}

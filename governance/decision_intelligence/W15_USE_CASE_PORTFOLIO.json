@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_use_case_portfolio",
+  "portfolio_id": "nee-ai-decision-intelligence-priority-use-cases",
+  "status": "CANDIDATE_EVALUATION_ONLY",
+  "use_cases": [
+    {
+      "use_case_id": "ai-pdlc-pov",
+      "question": "What should PartnerAdvisory's POV be around AI-PDLC for NEA, given current project history, status, and pain points?",
+      "scope_id": "nea-ai-pdlc",
+      "audience": "internal_slalom",
+      "required_dimensions": ["delivery", "readiness"],
+      "claim_ids": ["claim-ai-pdlc-pov"],
+      "candidate_answer_sections": ["current_status", "evidence", "counterevidence", "gaps", "candidate_pov"]
+    },
+    {
+      "use_case_id": "ai-productivity-metrics",
+      "question": "Based on current NEA learnings, charters, progress, and pain points, which AI productivity metrics are candidates to drive the most value?",
+      "scope_id": "nea-ai-productivity",
+      "audience": "internal_slalom",
+      "required_dimensions": ["capacity", "adoption", "value"],
+      "claim_ids": ["claim-ai-productivity-metrics"],
+      "candidate_answer_sections": ["current_status", "evidence", "counterevidence", "gaps", "candidate_metrics"]
+    },
+    {
+      "use_case_id": "agentic-readiness",
+      "question": "Where could an agentic AI intervention credibly reduce delivery friction while respecting current NEA ownership, status, and evidence boundaries?",
+      "scope_id": "nea-agentic-readiness",
+      "audience": "internal_slalom",
+      "required_dimensions": ["dependency", "readiness", "delivery"],
+      "claim_ids": ["claim-agentic-readiness"],
+      "candidate_answer_sections": ["current_status", "evidence", "counterevidence", "gaps", "candidate_intervention"]
+    }
+  ],
+  "guardrail": "These are question contracts, not factual assertions, approved recommendations, or graph mutations."
+}

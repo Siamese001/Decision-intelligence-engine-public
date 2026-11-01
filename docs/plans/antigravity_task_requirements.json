@@ -1,0 +1,1095 @@
+{
+  "contract_id": "urn:nee:antigravity-task-requirements:1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Antigravity Seven-Task Requirements & Dual-Mode Procedural Inventory",
+  "created_at": "2026-10-07T09:30:00Z",
+  "branch": "docs/antigravity-dual-mode-restoration-rca",
+  "baseline_commit": "96a0ee879a911ea7431983b80764cd5ae9cb2ae8",
+  "rewrite_commit": "68ba6d56c0c5aabc2664f0cdd1618e262b57ce77",
+  "merge_commit": "f54762198f7183e2ec9e37859feafc8828dd5681",
+  "archive_source_directory": "docs/plans/scheduled_task_review_sources",
+  "canonical_prompts_directory": "automations/prompts",
+  "export_target_directory": "artifacts/exports/scheduled_tasks_hardened",
+  "summary": "Seven task inventories mapping every prior stage, check, approval, output and recovery rule to retained, corrected or explicitly superseded behavior across both scheduled and interactive modes.",
+  "rollback_governance": {
+    "status": "REJECTED",
+    "rejected_recipe_command": "cp docs/plans/scheduled_task_review_sources/*.md automations/prompts/",
+    "rejection_rationale": "Wildcard copy cp docs/plans/scheduled_task_review_sources/*.md automations/prompts/ fails closed because filenames do not match: 4 out of 7 tasks have different basenames between the archive and canonical prompt paths (graph_hygiene_agent.md vs knowledge_graph_hygiene_scheduled_task.md, pr_queue_observer_prompt.md vs pr_queue_observer_scheduled_task.md, storage_hygiene_agent.md vs storage_repository_hygiene_scheduled_task.md, worktree_coverage_agent.md vs worktree_coverage_cleanup_scheduled_task.md). Furthermore, the archive directory includes README.md, which would overwrite automations/prompts/README.md with unrelated index content. Running the wildcard copy leaves 4 compressed prompt files completely untouched and adds 7 orphaned files. Rollback and restoration must be strictly deterministic per-task file mappings.",
+    "exact_filename_mappings": [
+      {
+        "task_id": "knowledge_graph_hygiene",
+        "archive_filename": "knowledge_graph_hygiene_scheduled_task.md",
+        "canonical_prompt_filename": "graph_hygiene_agent.md",
+        "export_filename": "knowledge_graph_hygiene_scheduled_task.md",
+        "archive_matches_prompt_filename": false,
+        "canonical_prompt": "automations/prompts/graph_hygiene_agent.md"
+      },
+      {
+        "task_id": "storage_repository_hygiene",
+        "archive_filename": "storage_repository_hygiene_scheduled_task.md",
+        "canonical_prompt_filename": "storage_hygiene_agent.md",
+        "export_filename": "storage_repository_hygiene_scheduled_task.md",
+        "archive_matches_prompt_filename": false,
+        "canonical_prompt": "automations/prompts/storage_hygiene_agent.md"
+      },
+      {
+        "task_id": "weekly_market_intelligence",
+        "archive_filename": "weekly_market_intelligence_scheduled_task.md",
+        "canonical_prompt_filename": "weekly_market_intelligence_agent.md",
+        "export_filename": "weekly_market_intelligence_scheduled_task.md",
+        "archive_matches_prompt_filename": false,
+        "canonical_prompt": "automations/prompts/weekly_market_intelligence_agent.md"
+      },
+      {
+        "task_id": "worktree_coverage_cleanup",
+        "archive_filename": "worktree_coverage_cleanup_scheduled_task.md",
+        "canonical_prompt_filename": "worktree_coverage_agent.md",
+        "export_filename": "worktree_coverage_cleanup_scheduled_task.md",
+        "archive_matches_prompt_filename": false,
+        "canonical_prompt": "automations/prompts/pr_queue_observer_agent.md"
+      },
+      {
+        "task_id": "repository_antipattern_audit",
+        "archive_filename": "repository_antipattern_audit_scheduled_task.md",
+        "canonical_prompt_filename": "repository_antipattern_audit_agent.md",
+        "export_filename": "repository_antipattern_audit_scheduled_task.md",
+        "archive_matches_prompt_filename": false,
+        "canonical_prompt": "automations/prompts/ssot_drift_remediation_agent.md"
+      },
+      {
+        "task_id": "ssot_drift_remediation",
+        "archive_filename": "ssot_drift_remediation_scheduled_task.md",
+        "canonical_prompt_filename": "ssot_drift_remediation_agent.md",
+        "export_filename": "ssot_drift_remediation_scheduled_task.md",
+        "archive_matches_prompt_filename": false,
+        "canonical_prompt": "automations/prompts/ssot_drift_remediation_agent.md"
+      },
+      {
+        "task_id": "pr_queue_observer",
+        "archive_filename": "pr_queue_observer_scheduled_task.md",
+        "canonical_prompt_filename": "pr_queue_observer_agent.md",
+        "export_filename": "pr_queue_observer_scheduled_task.md",
+        "archive_matches_prompt_filename": false,
+        "canonical_prompt": "automations/prompts/pr_queue_observer_agent.md"
+      }
+    ]
+  },
+  "tasks": {
+    "knowledge_graph_hygiene": {
+      "task_id": "knowledge_graph_hygiene",
+      "title": "Knowledge Graph Hygiene Agent",
+      "canonical_prompt_path": "automations/prompts/graph_hygiene_agent.md",
+      "archive_source_path": "docs/plans/scheduled_task_review_sources/knowledge_graph_hygiene_scheduled_task.md",
+      "export_target_path": "artifacts/exports/scheduled_tasks_hardened/knowledge_graph_hygiene_scheduled_task.md",
+      "cadence": "0 5 * * * (Daily at 05:00 UTC)",
+      "hashes": {
+        "baseline_commit_96a0ee879": "fc57db16e8a67ae3445b8856cf94d6a19ecd86734dff014e9893f16140ef87bb",
+        "archive_source": "af09b1ca72d7f8c5963719bc52db237de876c51aa86fa80de5c59986594976e6",
+        "current_prompt": "0999d05ebca5b09f341705a94526186cf3df33cff2309a6b819d2aaac2763108",
+        "replacement_export": "8a664b81c29541affa6c4de88292f686385ea46d7bd31e9d0b42be4e1120dbd8",
+        "unrestored_prompt_f54762198": "b3ae9a745f41e8081bec09e6ca94f3578fd6d4c34a8a58c3e378137adb73d145",
+        "restored_prompt": "e7804864a18bceec5f937c41662af23ff488782c3daa5cf3ee3cf804218427a7"
+      },
+      "scheduled_behavior": "Full audit, preview, exact findings/handoff; apply nothing to live graph; end with OPERATOR_INPUT_REQUIRED if issues found or COMPLETE if clean",
+      "interactive_behavior": "Review waves; approve scoped repair via atomic ask_user_question; verify and recover",
+      "requirements": [
+        {
+          "id": "REQ-KGH-01",
+          "name": "Pre-flight Environment & Runtime Inventory",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Run python -m dual_pipeline.runtime_evidence inventory; record runtime root, active generation, embedding backend, model; read active_pair.json and record PRE_GRAPH_SHA256 and generation.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Preserved from canonical baseline. Validates environment isolation and captures immutable pre-flight hash baseline.",
+          "mandatory_verification_tokens": [
+            "runtime_evidence inventory",
+            "PRE_GRAPH_SHA256",
+            "active_pair.json"
+          ]
+        },
+        {
+          "id": "REQ-KGH-02",
+          "name": "Pre-Hygiene State Snapshot & Lock Diagnostics",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Take graphdb_snapshot_state (id pre-hygiene-<date>), write to reports/hygiene/pre_snapshot_<MM-DD-YYYY>.json, run graphdb_diagnose_locks, verify PRAGMA integrity_check == ok and PRAGMA foreign_key_check returns 0 rows.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Preserves mandatory pre-snapshot file and lock check before inspection.",
+          "mandatory_verification_tokens": [
+            "graphdb_snapshot_state",
+            "pre_snapshot_",
+            "graphdb_diagnose_locks",
+            "PRAGMA integrity_check",
+            "PRAGMA foreign_key_check"
+          ]
+        },
+        {
+          "id": "REQ-KGH-03",
+          "name": "14-Table Baseline Accounting & Grounding Ratio",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Record baseline counts for all 14 tables (node, source, source_version, extraction_run, evidence_item, assertion, assertion_evidence, search_document, search_fts, audit_event, dense_vector, sparse_weight, colbert_token, retrieval_record), orphan count, and grounding ratio.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Essential accounting floor lost in compression; restored as mandatory check.",
+          "mandatory_verification_tokens": [
+            "14 rows",
+            "evidence_item",
+            "assertion_evidence",
+            "colbert_token",
+            "grounding ratio"
+          ]
+        },
+        {
+          "id": "REQ-KGH-04",
+          "name": "Graphdb Rollback Copy Creation",
+          "category": "recovery_rule",
+          "source_origin": "both",
+          "prior_behavior": "Before any change, create a rollback copy of the graph file and active_pair.json under backups/hygiene_<MM-DD-YYYY>/ after a WAL checkpoint; record copy hash.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Guarantees zero-risk recovery before any live mutation can occur.",
+          "mandatory_verification_tokens": [
+            "backups/hygiene_",
+            "active_pair.json",
+            "WAL checkpoint"
+          ]
+        },
+        {
+          "id": "REQ-KGH-05",
+          "name": "Five Adversarial Reviewers Discovery",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Execute discovery using graphdb-inspector on live graph with 5 reviewers: Structural Inspector (duplicates, orphans), Timeline Detective (bad dates, contradictions), Fact-Checker (missing evidence links), Security Officer (unauthorized changes; check hitl_decision_ledger.json for intentional duplicates), and Presiding Judge (weigh findings, discard false alarms).",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "All five reviewer roles must be explicitly declared and executed.",
+          "mandatory_verification_tokens": [
+            "Structural Inspector",
+            "Timeline Detective",
+            "Fact-Checker",
+            "Security Officer",
+            "Presiding Judge"
+          ]
+        },
+        {
+          "id": "REQ-KGH-06",
+          "name": "Isolated Remediation Branch / Worktree Creation",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "If remediation is required, create an isolated branch/worktree (e.g. git checkout -b fix/graph-hygiene-remediation-<MM-DD-YYYY>) before writing any fix script. Never edit on main.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Enforces Invariant 8 (no direct commits or edits on main).",
+          "mandatory_verification_tokens": [
+            "fix/graph-hygiene-remediation-",
+            "Never edit on `main`"
+          ]
+        },
+        {
+          "id": "REQ-KGH-07",
+          "name": "Wave-Based Implementation Plan & Dry-Run Preview",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Write implementation_plan.md with sequential waves (scope, deliverables, acceptance criteria, check command); run each wave as dry-run preview first showing projected counts in plain English without writes.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Standard wave-based execution with zero speculative writes.",
+          "mandatory_verification_tokens": [
+            "implementation_plan.md",
+            "dry-run preview",
+            "projected counts"
+          ]
+        },
+        {
+          "id": "REQ-KGH-08",
+          "name": "Atomic HITL Wave Approval Gate",
+          "category": "approval",
+          "source_origin": "both",
+          "prior_behavior": "In MODE: interactive, present each wave via ask_user_question one wave at a time with plain-English options, recommended option, and confidence score. In MODE: scheduled, apply NOTHING, terminate with OPERATOR_INPUT_REQUIRED if findings exist or COMPLETE if clean.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Scheduled runs must never wait on interactive chat and must never self-approve.",
+          "mandatory_verification_tokens": [
+            "ask_user_question",
+            "OPERATOR_INPUT_REQUIRED",
+            "apply NOTHING",
+            "confidence score"
+          ]
+        },
+        {
+          "id": "REQ-KGH-09",
+          "name": "Post-Verification Per Wave with Rollback on Failure",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Verify PRAGMA integrity_check == ok, FK violations == 0, orphan count <= baseline, grounding ratio >= baseline (100% on touched assertions), sidecars IN_SYNC, vector health HEALTHY, itemized assertion delta matches approved plan. If any check fails, restore rollback copy and report BLOCKED reason POST_VERIFICATION_FAILED.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Rigorous gate preventing dirty or corrupted graph state.",
+          "mandatory_verification_tokens": [
+            "POST_VERIFICATION_FAILED",
+            "IN_SYNC",
+            "HEALTHY",
+            "restore the rollback copy"
+          ]
+        },
+        {
+          "id": "REQ-KGH-10",
+          "name": "Plain-English Completion Report & 14-Table Delta Output",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "Output Executive Summary, Five Reviewers findings, Wave Implementation Status Table, Granular Graph DB Delta Table (14 tables, applied before/after), Itemized Assertions Table, fingerprint explanation. Missing data fails closed with POST_DELTA_MISSING.",
+          "disposition": "corrected",
+          "target_mode": "both",
+          "remediation_notes": "Correct export runner binding: export pointed to a test verifier instead of real audit runner.",
+          "mandatory_verification_tokens": [
+            "Granular Graph DB Delta Table",
+            "Itemized Assertions Table",
+            "POST_DELTA_MISSING",
+            "Wave Implementation Status Table"
+          ]
+        }
+      ]
+    },
+    "storage_repository_hygiene": {
+      "task_id": "storage_repository_hygiene",
+      "title": "Storage & Repository Clutter Hygiene Agent",
+      "canonical_prompt_path": "automations/prompts/storage_hygiene_agent.md",
+      "archive_source_path": "docs/plans/scheduled_task_review_sources/storage_repository_hygiene_scheduled_task.md",
+      "export_target_path": "artifacts/exports/scheduled_tasks_hardened/storage_repository_hygiene_scheduled_task.md",
+      "cadence": "0 4 * * * (Daily at 04:00 UTC)",
+      "hashes": {
+        "baseline_commit_96a0ee879": "d02f00084bc91a048f17ff28a6943f58066e82e364cb2d3bdabf8f8386816a4d",
+        "archive_source": "9675316974d6bde5a21b754ce515a00f01d595967ba8cb6ac8ef8663fb207dc0",
+        "current_prompt": "1c5d1a69071a7f6324781825b3786e4756cc4c7b06212048b374b82a8a806cd7",
+        "replacement_export": "fc6b2c39c302edb9ee17d4022f156bc3f05103eb66ff718dad0141e656b0a112",
+        "unrestored_prompt_f54762198": "25e5cf7768a84008373b8c4e918385448d3b94959033ba49921b6ac744c80f86",
+        "restored_prompt": "faf5f4330b37aea263490e1aa65666bb6bf55b6047de699d6538ef8c0647babe"
+      },
+      "scheduled_behavior": "Complete inventory, retention/pinning, sealed candidates; report-only without mutation; end with COMPLETE or OPERATOR_INPUT_REQUIRED",
+      "interactive_behavior": "Review categories G0-G7; exact subset filtering; quarantine, verify, restore",
+      "requirements": [
+        {
+          "id": "REQ-SRH-01",
+          "name": "Phase 0 Preamble & Path Roles",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Mode detection (default SCHEDULED), path role separation ($REPO_ROOT vs $WT chore/storage-hygiene-<MM-DD-YYYY>), tooling preflight, pre-run baseline recording, global invariants enforcement.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Restores strict separation between repository root and governed worktree.",
+          "mandatory_verification_tokens": [
+            "Phase 0: Mandatory Preamble",
+            "Mode detection",
+            "chore/storage-hygiene-"
+          ]
+        },
+        {
+          "id": "REQ-SRH-02",
+          "name": "Target Scope Classification & Active Generation Pinning",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Classify target scopes: Scope A1 (Generations: active pinned, older unpinned are candidates), Scope A2 (Audio cache: output/transcript_cache/), Scope B1 (reports/), Scope B2 (Repository root clutter), Scope C (Stale hygiene worktrees, report-only).",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Active generation must always be pinned and immune to quarantine.",
+          "mandatory_verification_tokens": [
+            "Scope A1",
+            "Scope A2",
+            "Scope B1",
+            "Scope B2",
+            "active_pair.json"
+          ]
+        },
+        {
+          "id": "REQ-SRH-03",
+          "name": "Planning Run & Candidate Sealing with SHA-256",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Execute dry-run inventory via python tools/storage_hygiene_core/apply.py --dry-run; emit manifest to reports/storage_hygiene/<run_id>/manifest.json; record SHA-256 digests of all candidate files.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Dry-run inventory seals candidate digests before any decision or movement.",
+          "mandatory_verification_tokens": [
+            "tools/storage_hygiene_core/apply.py",
+            "--dry-run",
+            "manifest.json"
+          ]
+        },
+        {
+          "id": "REQ-SRH-04",
+          "name": "Scheduled Mode Read-Only Inventory Execution",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "In SCHEDULED mode: run planning inventory only; emit report to reports/storage_hygiene/scheduled_<date>.md; apply zero file movements or deletions; terminate with COMPLETE (or OPERATOR_INPUT_REQUIRED if candidates found).",
+          "disposition": "retained",
+          "target_mode": "scheduled",
+          "remediation_notes": "Unattended cron must never execute quarantine moves or git deletions.",
+          "mandatory_verification_tokens": [
+            "MODE: scheduled",
+            "strictly read-only",
+            "OPERATOR_INPUT_REQUIRED"
+          ]
+        },
+        {
+          "id": "REQ-SRH-05",
+          "name": "Atomic HITL Gates G0 through G7",
+          "category": "approval",
+          "source_origin": "both",
+          "prior_behavior": "In INTERACTIVE mode: present atomic ask_user_question gates one at a time: G0 (Category selection), G1 (Generation candidates subset), G2 (Audio cache subset), G3 (Reports subset), G4 (Root clutter subset), G5 (Stale worktrees), G6 (Execution confirmation), G7 (Post-mutation verify/rollback confirmation). Record choices in hitl_decision_ledger.json.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Restores full G0-G7 atomic selection flow dropped in 68ba6d56c.",
+          "mandatory_verification_tokens": [
+            "G0",
+            "G1",
+            "G2",
+            "G3",
+            "G4",
+            "G6",
+            "G7",
+            "hitl_decision_ledger.json"
+          ]
+        },
+        {
+          "id": "REQ-SRH-06",
+          "name": "Filtered Plan Construction",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Construct a filtered plan JSON restricting candidates strictly to the approved subset across categories (compensating for apply_quarantine taking all A1/A2 candidates by default).",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Critical safety mechanism to prevent bulk unapproved moves.",
+          "mandatory_verification_tokens": [
+            "Filtered plan",
+            "apply_quarantine",
+            "approved subset"
+          ]
+        },
+        {
+          "id": "REQ-SRH-07",
+          "name": "Pre-Apply Drift & Safety Re-check",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Immediately before quarantine execution, re-verify candidate file hashes against planning digests and verify active generation has not changed. If hash mismatch detected, abort with DRIFT_DETECTED.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Prevents race conditions or concurrent modifications from moving altered files.",
+          "mandatory_verification_tokens": [
+            "Pre-apply drift",
+            "DRIFT_DETECTED"
+          ]
+        },
+        {
+          "id": "REQ-SRH-08",
+          "name": "Non-Destructive Quarantine Move (A1/A2)",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Move approved A1 and A2 files to .quarantine/<run_id>/ preserving directory structure; emit quarantine receipt.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Files are never permanently deleted; quarantine preserves full recovery path.",
+          "mandatory_verification_tokens": [
+            ".quarantine/",
+            "quarantine receipt"
+          ]
+        },
+        {
+          "id": "REQ-SRH-09",
+          "name": "Git Actions for Reports & Clutter (B1/B2)",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Perform git rm/clean for approved B1/B2 files strictly inside isolated worktree $WT; never commit to main.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Confines all git index modifications to feature worktree.",
+          "mandatory_verification_tokens": [
+            "Git actions for B1",
+            "$WT",
+            "Never commit directly to `main`"
+          ]
+        },
+        {
+          "id": "REQ-SRH-10",
+          "name": "Zero-Graph-Mutation Proof & Post-Checks",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Re-run runtime evidence inventory and verify active graph SHA-256 is byte-identical to pre-run baseline. Any mutation fails closed.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Proves storage hygiene never touched live graph data.",
+          "mandatory_verification_tokens": [
+            "Zero-graph-mutation proof",
+            "byte-identical"
+          ]
+        },
+        {
+          "id": "REQ-SRH-11",
+          "name": "Rollback Procedure from Quarantine Manifest",
+          "category": "recovery_rule",
+          "source_origin": "both",
+          "prior_behavior": "On operator request or any failed post-check, atomic restore of quarantined files back to original locations using quarantine manifest; revert worktree branch commits.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Guarantees zero data loss with instant reversibility.",
+          "mandatory_verification_tokens": [
+            "Rollback",
+            "restore",
+            "quarantine manifest"
+          ]
+        },
+        {
+          "id": "REQ-SRH-12",
+          "name": "Exhaustive Reason-Code Catalog",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "Include exhaustive verbatim reason codes: CLEAN_NO_ACTION, QUARANTINE_APPLIED, MUTATION_ROLLED_BACK, DRIFT_DETECTED, UNAUTHORIZED_WRITE_BLOCKED, etc.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Standardized reason codes for deterministic parsing.",
+          "mandatory_verification_tokens": [
+            "Reason-Code Catalog",
+            "CLEAN_NO_ACTION",
+            "QUARANTINE_APPLIED"
+          ]
+        }
+      ]
+    },
+    "weekly_market_intelligence": {
+      "task_id": "weekly_market_intelligence",
+      "title": "Weekly Market Intelligence Agent",
+      "canonical_prompt_path": "automations/prompts/weekly_market_intelligence_agent.md",
+      "archive_source_path": "docs/plans/scheduled_task_review_sources/weekly_market_intelligence_scheduled_task.md",
+      "export_target_path": "artifacts/exports/scheduled_tasks_hardened/weekly_market_intelligence_scheduled_task.md",
+      "cadence": "0 6 * * 1 (Mondays at 06:00 UTC)",
+      "hashes": {
+        "baseline_commit_96a0ee879": "4769280c90d408db1ac99e23e5f2c235644f4e7980601b60a0dc0bda7ccee859",
+        "archive_source": "88b5c7cebd2cf9f25173bac8e9704fdf4871c386940be6c2a1e14910594cdaaf",
+        "current_prompt": "446164c630da348e6b5e7256e4aa373fa96d9ffe8c277774dd68c6b557ee6db6",
+        "replacement_export": "5e9bfe262b17f123834c62a1fb1626ae98cef9b036404240142b45ee39138a48",
+        "unrestored_prompt_f54762198": "d8ad0608888d5580a516821f3c87a751c42fecba0d858372e4c88b2205356c05",
+        "restored_prompt": "8e26fa1c20fd031f00df8e5d670fb1c94d777e85b2e411e0780e5232dd3b6239"
+      },
+      "scheduled_behavior": "Research, briefing compilation, active ingestion intent; emits pending approval request when unauthenticated; terminates cleanly without waiting for chat input",
+      "interactive_behavior": "Review exact delta; authentic human approval; resume run through publication and activation",
+      "requirements": [
+        {
+          "id": "REQ-WMI-01",
+          "name": "Stage 0 Pre-flight Baseline",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Read-only preflight: runtime evidence inventory, read active_pair.json (PRE_GRAPH_SHA256, generation), take graphdb_snapshot_state (id pre-weekly-MM-DD-YYYY), diagnose locks, verify PRAGMA integrity_check == ok, FK violations == 0, 14-table baseline counts.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Establishes verified pre-run baseline before research and ingestion.",
+          "mandatory_verification_tokens": [
+            "STAGE 0: PRE-FLIGHT BASELINE",
+            "PRE_GRAPH_SHA256",
+            "pre_snapshot_"
+          ]
+        },
+        {
+          "id": "REQ-WMI-02",
+          "name": "Stage 1 Bounded Web Research",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Execute 3 to 5 bounded search_web calls focusing on Apex Global, Apex Utility, NEER, FPSC, FERC regulatory and market intelligence.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Controlled research budget prevents search loop exhaustion.",
+          "mandatory_verification_tokens": [
+            "STAGE 1: RESEARCH",
+            "search_web",
+            "Apex Global",
+            "Apex Utility"
+          ]
+        },
+        {
+          "id": "REQ-WMI-03",
+          "name": "Stage 2 Structured Briefing Compilation",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "Compile structured intelligence document: documents/market_intelligence/weekly_update_MM-DD-YYYY.md with sections: Executive Summary, Market Intelligence Signals, Decision Intelligence Framing (with Observed At / Stale After dates), Source Provenance table.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Standardized document artifact formatted for pipeline ingestion.",
+          "mandatory_verification_tokens": [
+            "STAGE 2: COMPILE BRIEFING",
+            "documents/market_intelligence/weekly_update_",
+            "Decision Intelligence Framing"
+          ]
+        },
+        {
+          "id": "REQ-WMI-04",
+          "name": "Stage 3 Governed Ingestion with Active Intent",
+          "category": "stage",
+          "source_origin": "96a0ee879",
+          "prior_behavior": "Run python nee.py ingest-document with --project project_nexus, --audiences 'internal_slalom,nee-engineering', --provider llm, --max-judge-retries 2, --enforce-worktree. Produces graph_delta_preview.json and graph_delta_preview.md.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Active ingestion intent baseline preserved from 96a0ee879; supersedes archive dry-run-only.",
+          "mandatory_verification_tokens": [
+            "STAGE 3: GOVERNED INGEST",
+            "market_intelligence",
+            "graph_delta_preview.json"
+          ]
+        },
+        {
+          "id": "REQ-WMI-05",
+          "name": "Archive Dry-Run-Only Policy Superseded",
+          "category": "stage",
+          "source_origin": "archive",
+          "prior_behavior": "Archive specified --dry-run-graph flag forcing zero graph mutation in all cases.",
+          "disposition": "explicitly_superseded",
+          "target_mode": "both",
+          "remediation_notes": "The older archive's dry-run-only policy is superseded by the active ingestion approval continuation baseline.",
+          "mandatory_verification_tokens": [
+            "approval continuation",
+            "AWAITING_APPROVAL"
+          ]
+        },
+        {
+          "id": "REQ-WMI-06",
+          "name": "Stage 4 Post-Verification & Approval Request Persistence",
+          "category": "approval",
+          "source_origin": "96a0ee879",
+          "prior_behavior": "If CLI returns status: 'AWAITING_APPROVAL': verify approval_request_id and request file exists under approval_requests/<approval_request_id>.json; record directive_id and proposed_delta_digest; verify graph remains unchanged pending approval. Scheduled run terminates cleanly without hanging.",
+          "disposition": "retained",
+          "target_mode": "scheduled",
+          "remediation_notes": "Scheduled runs persist the resumable approval request and exit without blocking on chat.",
+          "mandatory_verification_tokens": [
+            "AWAITING_APPROVAL",
+            "approval_request_id",
+            "approval_requests/"
+          ]
+        },
+        {
+          "id": "REQ-WMI-07",
+          "name": "Stage 5 Completion Card",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "Emit Completion Card in chat with Document path, Terminal Outcome (COMPLETE, AWAITING_APPROVAL, BLOCKED), Approval Request details, Projected Delta Table, Itemized Assertions Table, Stage Status Table, Top 3 Strategic Takeaways.",
+          "disposition": "corrected",
+          "target_mode": "both",
+          "remediation_notes": "Corrected contradiction where weekly decline was mislabeled as no-op complete; decline records DECLINED.",
+          "mandatory_verification_tokens": [
+            "STAGE 5: COMPLETION CARD",
+            "Terminal Outcome",
+            "Top 3 Strategic Takeaways"
+          ]
+        },
+        {
+          "id": "REQ-WMI-08",
+          "name": "Stage 6 Interactive Approval & Continuation",
+          "category": "approval",
+          "source_origin": "96a0ee879",
+          "prior_behavior": "In MODE: interactive: check preconditions (AWAITING_APPROVAL, graph unchanged, production pair active, rollback copy created in backups/weekly_market_intel_MM-DD-YYYY/). Call ask_user_question ONCE atomically. On approval, resume same run through publication and activation.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Operator review resumes the existing run; never requires duplicate extraction or re-prompting.",
+          "mandatory_verification_tokens": [
+            "STAGE 6: INTERACTIVE PROMOTION",
+            "ask_user_question",
+            "backups/weekly_market_intel_"
+          ]
+        },
+        {
+          "id": "REQ-WMI-09",
+          "name": "Reconciliation of Export Readiness & Registration",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "Export claimed 'Ready for overwrite/paste' while weekly prompt header explicitly prohibited autonomous registration.",
+          "disposition": "corrected",
+          "target_mode": "both",
+          "remediation_notes": "Export prompt restored from compressed 38-line stub to full 162-line procedural body.",
+          "mandatory_verification_tokens": [
+            "weekly_market_intelligence",
+            "Operator Authorized Only"
+          ]
+        }
+      ]
+    },
+    "worktree_coverage_cleanup": {
+      "task_id": "worktree_coverage_cleanup",
+      "title": "Worktree Coverage & Cleanup Agent",
+      "canonical_prompt_path": "automations/prompts/pr_queue_observer_agent.md",
+      "archive_source_path": "docs/plans/scheduled_task_review_sources/worktree_coverage_cleanup_scheduled_task.md",
+      "export_target_path": "artifacts/exports/scheduled_tasks_hardened/worktree_coverage_cleanup_scheduled_task.md",
+      "cadence": "0 6 * * * (Daily at 06:30 UTC)",
+      "hashes": {
+        "baseline_commit_96a0ee879": "9de2398137026fb49be33abf777b5f4ffce77a71de4fca152136acb98edabf95",
+        "archive_source": "6135e8b65813b77d21d6ac998ad6f3d14af62e6cfdd0f3c958cf098279ef287d",
+        "current_prompt": "0468af450a0fe824558d72ab3e0829f2a6a6699cebc176d35d8ae08fb5f8e189",
+        "replacement_export": "615f59efc3b5f2e1762486a26a17352c5ef06d435c1e9e7a935abf8eebf605f7",
+        "unrestored_prompt_f54762198": "615f59efc3b5f2e1762486a26a17352c5ef06d435c1e9e7a935abf8eebf605f7",
+        "restored_prompt": "6ccb25939aed9c167a14a951cad7b51f1862fd5ca0025ad0396ac3f18656f2a9"
+      },
+      "scheduled_behavior": "Enumerate directories and stashes; protect deliverables/recovery; report coverage to JSON/MD; end with COMPLETE or OPERATOR_INPUT_REQUIRED",
+      "interactive_behavior": "Per-item recovery or cleanup selection; dry-run confirm-token governed action; rescan",
+      "requirements": [
+        {
+          "id": "REQ-WCC-01",
+          "name": "Zero Data Loss Invariant for Meeting Deliverables",
+          "category": "recovery_rule",
+          "source_origin": "both",
+          "prior_behavior": "Never delete, prune, or overwrite any directory containing uncommitted meeting deliverables (01_*, output/**, transcripts, audio). Deliverables can only be recovered into authentic Git branches.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Strict protection of production deliverables against automated pruning.",
+          "mandatory_verification_tokens": [
+            "Zero Data Loss Invariant",
+            "01_*",
+            "output/**",
+            "uncommitted meeting deliverables"
+          ]
+        },
+        {
+          "id": "REQ-WCC-02",
+          "name": "Confirmation-Token Bound Pruning",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Destructive or pruning commands require an explicit, cryptographically verifiable --confirm-token generated by python tools/pr_governance.py prune-worktrees --dry-run.",
+          "disposition": "corrected",
+          "target_mode": "interactive",
+          "remediation_notes": "Prevents unverified or accidental worktree deletion via cryptographically verifiable confirm token; obsoletes stale prune-worktrees command.",
+          "mandatory_verification_tokens": [
+            "--confirm-token"
+          ]
+        },
+        {
+          "id": "REQ-WCC-03",
+          "name": "Pre-flight Worktree & Stash Inventory",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Check git status and branch. Run inventory inspection: python tools/pr_governance.py list --worktree-only --json. Verify all .worktrees/ entries and stashes are accounted for under INV-WT-COVERAGE.",
+          "disposition": "corrected",
+          "target_mode": "both",
+          "remediation_notes": "Full enumeration of all worktrees and stashes via supported inventory command; obsoletes stale list --worktree-only command.",
+          "mandatory_verification_tokens": [
+            "pr_governance.py inventory --json",
+            "INV-WT-COVERAGE"
+          ]
+        },
+        {
+          "id": "REQ-WCC-04",
+          "name": "Scheduled Mode Read-Only Coverage Reporting",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "In SCHEDULED mode: write coverage output to reports/worktree_coverage/coverage_<MM-DD-YYYY>.json. If worktrees have ORPHAN_DELIVERABLES, do NOT prune; output Executive Summary highlighting orphans and terminate with OPERATOR_INPUT_REQUIRED. If clean, terminate with COMPLETE.",
+          "disposition": "retained",
+          "target_mode": "scheduled",
+          "remediation_notes": "Automated run provides complete visibility without executing deletions.",
+          "mandatory_verification_tokens": [
+            "reports/worktree_coverage/coverage_",
+            "ORPHAN_DELIVERABLES",
+            "OPERATOR_INPUT_REQUIRED"
+          ]
+        },
+        {
+          "id": "REQ-WCC-05",
+          "name": "Interactive Mode Per-Item Decision & Recovery Flow",
+          "category": "approval",
+          "source_origin": "both",
+          "prior_behavior": "In INTERACTIVE mode: for each item in priority tier W: if ORPHAN_DELIVERABLES, present recovery options via ask_user_question (Option 1: Recover to dedicated branch feat/<slug>, Option 2: Quarantine deliverables, Option 3: Leave for manual inspection) and record choice in hitl_decision_ledger.json. If EMPTY_STUB or MERGED_BRANCH, run dry-run to obtain confirm token, present pruning option via ask_user_question, and execute prune-worktrees with --confirm-token. Re-run inventory to verify clean state.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Restores per-item recovery action sequence dropped in compressed prompt.",
+          "mandatory_verification_tokens": [
+            "ask_user_question",
+            "ORPHAN_DELIVERABLES",
+            "EMPTY_STUB",
+            "--confirm-token",
+            "hitl_decision_ledger.json"
+          ]
+        },
+        {
+          "id": "REQ-WCC-06",
+          "name": "Worktree Implementation Status Table",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "Emit final report featuring Executive Summary, Worktree & Stash Coverage Status, and Wave Implementation Status Table.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Standardized executive reporting format.",
+          "mandatory_verification_tokens": [
+            "Worktree & Stash Coverage Status",
+            "Wave Implementation Status Table"
+          ]
+        }
+      ]
+    },
+    "repository_antipattern_audit": {
+      "task_id": "repository_antipattern_audit",
+      "title": "Repository Anti-Pattern & Architecture Auditor",
+      "canonical_prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "archive_source_path": "docs/plans/scheduled_task_review_sources/repository_antipattern_audit_scheduled_task.md",
+      "export_target_path": "artifacts/exports/scheduled_tasks_hardened/repository_antipattern_audit_scheduled_task.md",
+      "cadence": "0 7 * * * (Daily at 07:00 UTC)",
+      "hashes": {
+        "baseline_commit_96a0ee879": "33cfce90a4a16e81252bc189a85ac66b6250c3021ef8388dc6ed6ddf6cb185c8",
+        "archive_source": "3982bd519c8769874e1212a24733e4fb717503a2b8ec6c3ea8f212e4de0418b4",
+        "current_prompt": "7d46c35b4c6b489d68dfa087b699af1fe63a48a21269ad8a5e9e848174195003",
+        "replacement_export": "bdda9c1eec3e786f34498490fa582cd14e528b4b2bde52cc21f6514203c1a87b",
+        "unrestored_prompt_f54762198": "bdda9c1eec3e786f34498490fa582cd14e528b4b2bde52cc21f6514203c1a87b",
+        "restored_prompt": "0414eab1db26a1589ee1bd652ceb6ddff284f49c846b6a3304da0eb4e98908c3"
+      },
+      "scheduled_behavior": "Complete bounded audit suite; durable findings; scorecard generation; end with COMPLETE or OPERATOR_INPUT_REQUIRED",
+      "interactive_behavior": "Select refactoring waves; approve scoped remediations via ask_user_question; patch and verify in isolated worktree",
+      "requirements": [
+        {
+          "id": "REQ-RAA-01",
+          "name": "Safety Rules & Worktree Isolation Invariant",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Zero Direct-to-Main Invariant (never audit or mutate on main; run in dedicated worktree chore/repository-antipattern-audit-<stamp>); Zero Graph Mutation Invariant (audits are strictly static analysis and AST inspection); No Unsolicited Refactoring.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Enforces strict isolation of architectural audits from production main and graph data.",
+          "mandatory_verification_tokens": [
+            "Zero Direct-to-Main Invariant",
+            "Zero Graph Mutation Invariant",
+            "chore/repository-antipattern-audit-"
+          ]
+        },
+        {
+          "id": "REQ-RAA-02",
+          "name": "Four-Tool Bounded Discovery Suite",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Execute discovery tools: .venv/bin/python tools/audit_agentic_boundaries.py, .venv/bin/python tools/run_governance_linters.py, .venv/bin/python tools/lint_anti_hardcoding.py, .venv/bin/python tools/audit_governance_harmonization.py --output-dir reports/governance-harmonization.",
+          "disposition": "corrected",
+          "target_mode": "both",
+          "remediation_notes": "Corrected tooling references to reconcile with active repository linters.",
+          "mandatory_verification_tokens": [
+            "audit_agentic_boundaries.py",
+            "run_governance_linters.py",
+            "lint_anti_hardcoding.py",
+            "audit_governance_harmonization.py"
+          ]
+        },
+        {
+          "id": "REQ-RAA-03",
+          "name": "Executive Health Scorecard Output",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "Output Executive Health Scorecard evaluating 4 dimensions: Architecture Health, Agentic Integrity, Complexity Debt (module line budgets <=400 lines), and Refactor Risk.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Standardized executive summary dimensions.",
+          "mandatory_verification_tokens": [
+            "Executive Health Scorecard",
+            "Architecture Health",
+            "Agentic Integrity",
+            "Complexity Debt",
+            "Refactor Risk"
+          ]
+        },
+        {
+          "id": "REQ-RAA-04",
+          "name": "Scheduled Mode Execution & High-Severity Handoff",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "In SCHEDULED mode: run discovery tools; emit scorecard and findings; if high-severity anti-patterns exist (monolithic modules >400 lines, credential SSOT violations), terminate with OPERATOR_INPUT_REQUIRED and instruct operator to run in interactive mode; if clean, terminate with COMPLETE.",
+          "disposition": "retained",
+          "target_mode": "scheduled",
+          "remediation_notes": "Automated schedule reports findings without mutating codebase.",
+          "mandatory_verification_tokens": [
+            "MODE: scheduled",
+            "OPERATOR_INPUT_REQUIRED",
+            "monolithic modules >400 lines"
+          ]
+        },
+        {
+          "id": "REQ-RAA-05",
+          "name": "Interactive Mode Remediation Wave Selection & Approval",
+          "category": "approval",
+          "source_origin": "both",
+          "prior_behavior": "In INTERACTIVE mode: present findings scorecard and itemized anti-pattern clusters; for each priority remediation wave, present calibrated options via ask_user_question; log decisions in hitl_decision_ledger.json; execute approved wave plan or produce finalized audit report artifact.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Restores interactive remediation selection lost in compression.",
+          "mandatory_verification_tokens": [
+            "ask_user_question",
+            "hitl_decision_ledger.json",
+            "remediation wave"
+          ]
+        },
+        {
+          "id": "REQ-RAA-06",
+          "name": "Granular Anti-Pattern Inventory & Wave Table",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "Output Granular Anti-Pattern Inventory covering module size overruns, credential isolation, layer boundaries, and the Wave Implementation Status Table.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Ensures all architectural findings are transparently itemized.",
+          "mandatory_verification_tokens": [
+            "Granular Anti-Pattern Inventory",
+            "Wave Implementation Status Table"
+          ]
+        }
+      ]
+    },
+    "ssot_drift_remediation": {
+      "task_id": "ssot_drift_remediation",
+      "title": "Daily SSOT Drift Remediation Agent",
+      "canonical_prompt_path": "automations/prompts/ssot_drift_remediation_agent.md",
+      "archive_source_path": "docs/plans/scheduled_task_review_sources/ssot_drift_remediation_scheduled_task.md",
+      "export_target_path": "artifacts/exports/scheduled_tasks_hardened/ssot_drift_remediation_scheduled_task.md",
+      "cadence": "0 3 * * * (Daily at 03:00 UTC)",
+      "hashes": {
+        "baseline_commit_96a0ee879": "f01d46e89228b601e74d1557bbf9d6fafb045c897e03142e0a40f12ef5c19d04",
+        "archive_source": "1d06e25bbd1b14e6581b9fdbf9a2ebcd579842e8b6018c99c50bfaadc78d69c0",
+        "current_prompt": "7d46c35b4c6b489d68dfa087b699af1fe63a48a21269ad8a5e9e848174195003",
+        "replacement_export": "b7c09569e7ef64a8342ad4b9e46b48d30441e15931e9abc607d6aaca2ff53cea",
+        "unrestored_prompt_f54762198": "b7c09569e7ef64a8342ad4b9e46b48d30441e15931e9abc607d6aaca2ff53cea",
+        "restored_prompt": "d65d0ffd5c1fa8a436921085b575746868d02efb7bbcbce708ab9f64e0f50785"
+      },
+      "scheduled_behavior": "Configuration, hardcoding, and boundary checks; bounded scan; handoff; end with COMPLETE or OPERATOR_INPUT_REQUIRED",
+      "interactive_behavior": "Approve bounded repair; execute in refactor/ worktree; rerun checks; retain failure evidence",
+      "requirements": [
+        {
+          "id": "REQ-SDR-01",
+          "name": "Phase 1 Bounded Scope Analysis",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Scan bounded context or recently modified files to prevent context exhaustion; check configuration drift (.env.example vs config.py vs runtime usage); check SSOT violations respecting domain boundaries; check hardcoded magic numbers and paths.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Preserves bounded scan policy and domain boundary respect.",
+          "mandatory_verification_tokens": [
+            "Bounded Scan",
+            "Config Drift",
+            "SSOT Violations",
+            "Respect Domain Boundaries"
+          ]
+        },
+        {
+          "id": "REQ-SDR-02",
+          "name": "Secret Flagging Without Auto-Remediation",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "If hardcoded credentials, API keys, or active secrets are identified, DO NOT auto-remediate. Flag for human review; never output credential values in plans, logs, or reports.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Enforces Invariant 4 (Credential Isolation & Zero Egress).",
+          "mandatory_verification_tokens": [
+            "Secret Flagging",
+            "DO NOT auto-remediate",
+            "credentials"
+          ]
+        },
+        {
+          "id": "REQ-SDR-03",
+          "name": "Phase 2 Wave-Based Planning & HITL Gate",
+          "category": "approval",
+          "source_origin": "both",
+          "prior_behavior": "Develop strict wave-based implementation plan (implementation_plan.md) with Objective, Deliverables, Acceptance Criteria, Runtime Receipt command. Stop and request HITL approval before proceeding to implementation.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Planning mode requires operator review before code modifications.",
+          "mandatory_verification_tokens": [
+            "implementation_plan.md",
+            "Stop and request HITL approval"
+          ]
+        },
+        {
+          "id": "REQ-SDR-04",
+          "name": "Phase 3 Governed Refactor Worktree Execution",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Create worktree via python tools/pr_governance.py start refactor/daily-drift-fix-<date> (refactor/ taxonomy). Execute wave plan sequentially within worktree. Mandatory testing after each wave.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Enforces refactor/ branch taxonomy and worktree isolation.",
+          "mandatory_verification_tokens": [
+            "refactor/daily-drift-fix-",
+            "Mandatory Testing"
+          ]
+        },
+        {
+          "id": "REQ-SDR-05",
+          "name": "Wave Abort & Immediate Reversion on Test Failure",
+          "category": "recovery_rule",
+          "source_origin": "both",
+          "prior_behavior": "If tests fail, abort the wave and revert changes immediately; do not proceed to next wave; retain failure evidence.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Fail-closed recovery on test breakage.",
+          "mandatory_verification_tokens": [
+            "revert changes immediately",
+            "abort the wave"
+          ]
+        },
+        {
+          "id": "REQ-SDR-06",
+          "name": "Mode Differentiation (Scheduled vs Interactive)",
+          "category": "stage",
+          "source_origin": "archive",
+          "prior_behavior": "In SCHEDULED mode: run Phase 1 only, report violations, apply NOTHING, end with OPERATOR_INPUT_REQUIRED if drift detected or COMPLETE if clean. In INTERACTIVE mode: run Analysis, Planning, and Implementation phases with per-wave HITL approvals.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Explicit dual-mode rule added from archive specification.",
+          "mandatory_verification_tokens": [
+            "MODE: scheduled",
+            "apply NOTHING",
+            "OPERATOR_INPUT_REQUIRED",
+            "MODE: interactive"
+          ]
+        },
+        {
+          "id": "REQ-SDR-07",
+          "name": "Branch Review & PR Queue Submission",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "Generate summary of branch readiness via python tools/pr_governance.py review <branch> and submit PR queue summary.",
+          "disposition": "retained",
+          "target_mode": "interactive",
+          "remediation_notes": "Integration with governed PR queue pipeline.",
+          "mandatory_verification_tokens": [
+            "pr_governance.py review",
+            "PR queue summary"
+          ]
+        }
+      ]
+    },
+    "pr_queue_observer": {
+      "task_id": "pr_queue_observer",
+      "title": "Antigravity PR Queue Observer",
+      "canonical_prompt_path": "automations/prompts/pr_queue_observer_agent.md",
+      "archive_source_path": "docs/plans/scheduled_task_review_sources/pr_queue_observer_scheduled_task.md",
+      "export_target_path": "artifacts/exports/scheduled_tasks_hardened/pr_queue_observer_scheduled_task.md",
+      "cadence": "0 9 * * 1-5 (Weekdays at 9:00 AM ET)",
+      "hashes": {
+        "baseline_commit_96a0ee879": "42b6f188de8cd48df1865d9033c8af904af53d6354cacfffd4ec1ffc7d1e1bfb",
+        "archive_source": "420f3b8593536d79f3116c3e8744441951a6f9b956a0430d194c4c8deb6c27a0",
+        "current_prompt": "0468af450a0fe824558d72ab3e0829f2a6a6699cebc176d35d8ae08fb5f8e189",
+        "replacement_export": "e641e92efefe9ee6a971bf70e2fbc667cdfbe7fa6e6d98beae422e1233eff92e",
+        "unrestored_prompt_f54762198": "e641e92efefe9ee6a971bf70e2fbc667cdfbe7fa6e6d98beae422e1233eff92e",
+        "restored_prompt": "c1718fbfcfbd7b8b9825bdc36f947470cf8f0257504170f735dcee0b0f8bd8cc"
+      },
+      "scheduled_behavior": "Meaningful-change detection; quiet unchanged runs; observation-only authority",
+      "interactive_behavior": "On-demand explanation and inspection with observation-only authority; interactive mode explicitly qualified",
+      "requirements": [
+        {
+          "id": "REQ-PQO-01",
+          "name": "Absolute Read-Only Observation Authority",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Changes NO branches, plans, policy, source, stashes, graph data, or worktree registrations. Performs analysis and notification assessment only in BOTH scheduled and interactive modes.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Read-only authority is invariant across both modes.",
+          "mandatory_verification_tokens": [
+            "Read-Only Invariant",
+            "changes NO branches",
+            "observation-only"
+          ]
+        },
+        {
+          "id": "REQ-PQO-02",
+          "name": "Single-Run Lock Acquisition & Release",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Acquire single-run file lock at reports/pr_queue_observer/observer.lock; if held by active PID, abort with ObserverLockCollisionError; release lock on teardown.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Prevents concurrent execution collisions.",
+          "mandatory_verification_tokens": [
+            "Single-Run Lock",
+            "observer.lock",
+            "Lock Teardown"
+          ]
+        },
+        {
+          "id": "REQ-PQO-03",
+          "name": "Snapshot Collection & Decision Evaluation",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "Run python -B tools/pr_queue_observer.py --json or invoke run_observation(repo_root=ROOT); collect QueueSnapshot and evaluate decisions.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Engine collects registered worktrees, stashes, and branch progress.",
+          "mandatory_verification_tokens": [
+            "pr_queue_observer.py",
+            "QueueSnapshot"
+          ]
+        },
+        {
+          "id": "REQ-PQO-04",
+          "name": "Comparison Against Last Accepted Snapshot",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Compare current snapshot against reports/pr_queue_observer/last_accepted_snapshot.json; compute rank transitions, newly introduced branches/worktrees/stashes, progress reversals, and failure signatures.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "State comparison drives meaningful change detection.",
+          "mandatory_verification_tokens": [
+            "last_accepted_snapshot.json",
+            "Comparison Against Last Accepted Snapshot"
+          ]
+        },
+        {
+          "id": "REQ-PQO-05",
+          "name": "Notification Deduplication & Quiet Unchanged Runs",
+          "category": "output",
+          "source_origin": "both",
+          "prior_behavior": "In SCHEDULED mode: if terminal_outcome == 'NO_NOTIFICATION', log run receipt quietly and emit zero alert text; notify only on meaningful changes, new work, lost progress, or required HITL decisions.",
+          "disposition": "retained",
+          "target_mode": "scheduled",
+          "remediation_notes": "Prevents spamming chat during unattended recurring runs.",
+          "mandatory_verification_tokens": [
+            "Notification Deduplication",
+            "NO_NOTIFICATION",
+            "NOTIFICATION_EMITTED"
+          ]
+        },
+        {
+          "id": "REQ-PQO-06",
+          "name": "Interactive Observation & On-Demand Explanation",
+          "category": "stage",
+          "source_origin": "both",
+          "prior_behavior": "PR observer registry previously excluded interactive mode. Explicit interactive mode allows operator on-demand inspection, detailed explanation of blockers, rank changes, and uncommitted stashes.",
+          "disposition": "corrected",
+          "target_mode": "interactive",
+          "remediation_notes": "Interactive mode explicitly added to specification and task registry with read-only authority.",
+          "mandatory_verification_tokens": [
+            "MODE: interactive",
+            "on-demand explanation",
+            "read-only"
+          ]
+        },
+        {
+          "id": "REQ-PQO-07",
+          "name": "Host Sleep Tolerance & Zero Replay Storms",
+          "category": "recovery_rule",
+          "source_origin": "both",
+          "prior_behavior": "Tolerates laptop sleep intervals without executing retroactive replay storms; preserves last accepted snapshot.",
+          "disposition": "retained",
+          "target_mode": "scheduled",
+          "remediation_notes": "Essential for developer laptop scheduled execution.",
+          "mandatory_verification_tokens": [
+            "Sleeping Host",
+            "replay storms"
+          ]
+        },
+        {
+          "id": "REQ-PQO-08",
+          "name": "Explicit Registration Authority Precondition",
+          "category": "check",
+          "source_origin": "both",
+          "prior_behavior": "Repository prompts alone do not establish registration; autonomous registration is forbidden; registration requires explicit operator instruction.",
+          "disposition": "retained",
+          "target_mode": "both",
+          "remediation_notes": "Requires human authorization before schedule registration.",
+          "mandatory_verification_tokens": [
+            "Activation Authority",
+            "Operator Authorized Only"
+          ]
+        }
+      ]
+    }
+  }
+}

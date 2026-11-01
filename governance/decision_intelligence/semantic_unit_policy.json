@@ -1,0 +1,110 @@
+{
+  "approval_id": "directive-semantic-unit-policy-w2-v1",
+  "candidate_lane_passages": {
+    "answer_use": "candidate_hypothesis",
+    "embed_candidate_passages": true,
+    "lane": "candidate",
+    "strategy": "partitioned_candidate_lane",
+    "target_assertion_statuses": [
+      "needs_review",
+      "unreviewed"
+    ]
+  },
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "6a826c8cbf6ffff932c8259a8ef46902859444b647dd69bdcdebda9fd1525cdc"
+  },
+  "contract_id": "urn:nee:dual-pipeline:semantic-unit-policy:1.0.0",
+  "created_at": "2026-10-04T12:09:40Z",
+  "decontextualization_template": {
+    "fallback_template": "{subject_name} {predicate_phrase} {claim}.",
+    "strategy": "fully_qualified_contextual_tuple",
+    "template": "{subject_name} {predicate_phrase} {claim}. Scope: {scope_text}. Speaker: {speaker}. Date: {date}."
+  },
+  "ledger_reference": {
+    "decisions": [
+      {
+        "action": "APPROVE",
+        "decision_id": "op-semantic-unit-w2-01-passage-windowing",
+        "selected_option": "windowed_passage_aggregation_400_1200",
+        "signature": "2f28118c76f3e9f394405a91004231154dfe6548a8a8f7336669841589df1c0b"
+      },
+      {
+        "action": "APPROVE",
+        "decision_id": "op-semantic-unit-w2-02-proposition-eligibility",
+        "selected_option": "literal_claims_and_propositions_only",
+        "signature": "9b6f6f759779a6c697cd34b93769875389577be94cb75b552698f05f544b886d"
+      },
+      {
+        "action": "APPROVE",
+        "decision_id": "op-semantic-unit-w2-03-decontextualization-template",
+        "selected_option": "fully_qualified_contextual_tuple",
+        "signature": "89799112b1e1d5341cc50949f7650c1f94d2c128c9fca6fbb0f1a1200ecb1b8d"
+      },
+      {
+        "action": "APPROVE",
+        "decision_id": "op-semantic-unit-w2-04-candidate-lane-passages",
+        "selected_option": "partitioned_candidate_lane",
+        "signature": "95f86b7f02d6ad444d5a94ce276feaa649fec87e181b58858629ab4eeb98b278"
+      },
+      {
+        "action": "APPROVE",
+        "decision_id": "op-semantic-unit-w2-05-profile-hop-budget",
+        "selected_option": "1_hop_direct_neighbors",
+        "signature": "abbb4e5ff53586910979be93fed32193a7f42a54637d7ac26b9936807df5253b"
+      },
+      {
+        "action": "APPROVE",
+        "decision_id": "op-semantic-unit-w2-06-passage-security-inheritance",
+        "selected_option": "most_restrictive_high_water_mark",
+        "signature": "61a48a9276f2aa11ee0fb1f9b428868044578bfe94689c3fc6a8bda94d775e96"
+      }
+    ],
+    "decisions_count": 6,
+    "directive_id": "directive-semantic-unit-policy-w2-v1",
+    "ledger_path": "hitl_decision_ledger.json"
+  },
+  "passage_security_inheritance": {
+    "audience_intersection": true,
+    "classification_rank": "highest_rank_among_supported_assertions",
+    "inheritance_rule": "most_restrictive_high_water_mark",
+    "strategy": "most_restrictive_high_water_mark"
+  },
+  "passage_windowing": {
+    "boundary_strategy": "native_section_and_slide",
+    "deduplication": "quote_fingerprint",
+    "max_chars": 1200,
+    "merge_adjacent_quotes": true,
+    "min_chars": 400,
+    "same_source_version_only": true,
+    "strategy": "windowed_passage_aggregation_400_1200"
+  },
+  "policy_id": "semantic-unit-policy-v1",
+  "policy_version": "1.0.0",
+  "profile_hop_budget": {
+    "allowed_edge_dispositions": [
+      "approved",
+      "canonical"
+    ],
+    "max_hops": 1,
+    "neighbor_limit_per_entity": 50,
+    "strategy": "1_hop_direct_neighbors"
+  },
+  "proposition_eligibility": {
+    "eligible_assertion_types": [
+      "decision",
+      "direct_statement",
+      "extracted_claim",
+      "hypothesis",
+      "human_interpretation",
+      "confirmed_canonical_fact",
+      "action_item"
+    ],
+    "exclude_structural_edges": true,
+    "require_literal_claim": true,
+    "strategy": "literal_claims_and_propositions_only"
+  },
+  "schema_version": "1.0.0",
+  "status": "approved"
+}

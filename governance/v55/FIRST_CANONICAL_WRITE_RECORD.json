@@ -1,0 +1,22 @@
+{
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "first_canonical_write_at_utc": "2026-07-14T18:28:17Z",
+  "implementation_normalization": "Exact approved bytes were copied. An initial post-write comparison removed the frontmatter separator and its following blank line, producing a false-negative mirror check; the boundary logic was corrected without changing policy bytes.",
+  "implemented_files": [
+    {
+      "after_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+      "approved_after_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+      "before_sha256": "c736087c1ef6c646b3ae3b5a54b43074e5285f36434bcf24ccb0fce2e826ce70",
+      "conforms": true,
+      "path": "PROJECT_INSTRUCTIONS.md"
+    },
+    {
+      "after_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+      "approved_after_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+      "before_sha256": "4f1885acfa7f82c577abb4506cdbd52c343cabbc404f37d198670d705e8a1697",
+      "conforms": true,
+      "path": "cards/NEE_99_Project_Instructions.md"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,61 @@
+{
+  "artifact_id": "l1-wave-09-completion",
+  "artifacts": [
+    "reports/l1_agentic_augmentation/wave-09/l1-agentic-wave-09-20260806/wave-09-preflight-denial.json",
+    "documentation/L1_AGENTIC_AUGMENTATION_GAP_ANALYSIS.md"
+  ],
+  "base_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "branch": "codex/l1-agentic-gap-analysis",
+  "cache_namespace_disposition": "The bounded cache namespace remains disabled for replay/writeback. This terminal denial changes no cache, runtime, graph, index, provider, release, or activation state.",
+  "canonical_digest": {"algorithm": "sha256", "scope": "artifact_without_canonical_digest", "value": "d9f0e3be336113a7810e25bba3fd8318a857e08d479a49289664181002ef32b2"},
+  "changed_files": [
+    "documentation/L1_AGENTIC_AUGMENTATION_GAP_ANALYSIS.md",
+    "governance/dual_pipeline/l1_agentic/wave-09-completion.json",
+    "reports/l1_agentic_augmentation/wave-09/l1-agentic-wave-09-20260806/wave-09-preflight-denial.json"
+  ],
+  "commands": [
+    {"command": ".\\.venv\\Scripts\\python.exe -m dual_pipeline.runtime_evidence inventory", "exit_code": 0, "skipped": 0, "status": "PASS", "timed_out": false},
+    {"command": ".\\.venv\\Scripts\\python.exe -m dual_pipeline.runtime_evidence claim --repository-root . --kind l1-terminal-absent --backend bge-m3 --scope-root . --complete-scope; verify the expected exit code is 2 and return 0 only for that denial", "exit_code": 0, "skipped": 0, "status": "PASS", "timed_out": false},
+    {"command": ".\\.venv\\Scripts\\python.exe -m unittest -q tests.test_l1_query_evaluation tests.test_runtime_evidence_claims tests.test_l1_query_cli", "exit_code": 0, "skipped": 0, "status": "PASS", "timed_out": false},
+    {"command": ".\\.venv\\Scripts\\python.exe tools/validate_dual_pipeline_contracts.py", "exit_code": 0, "skipped": 0, "status": "PASS", "timed_out": false}
+  ],
+  "contract_id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+  "contract_inventory_digest": "04d949415ac697ba5340c33573f2aadb5544b49682b05232bad305db58aed2c6",
+  "exit_gate_verdicts": {
+    "wave8_predecessor_passes": true,
+    "inventory_executed": true,
+    "explicit_operator_deployment_scope_supplied": false,
+    "scoped_runtime_claim_supported": false,
+    "e3_exact_pair_evaluation_passed": false,
+    "e4_provider_scope_applicable": false,
+    "activation_executed": false,
+    "terminal_denial_recorded": true,
+    "effective_mode_remains_off": true,
+    "provider_calls_zero": true,
+    "graph_mutations_zero": true
+  },
+  "extensions": {
+    "wave8_completion_digest": "bfbf44bab40a52058285b201843647ea3d5f209309b0d62f6f9473b55d82ef15",
+    "terminal_outcome": "DENY",
+    "decision_type": "technical_preflight_denial",
+    "inventory_digest": "a9fc0f99d43138e23a674207237eb1ef8cfd36665e8a73f3a77d022251c1491b",
+    "scoped_claim_digest": "93b7940468e37a7dfe3953ba959120f5b52e1c3ffbab943cbdeb780e2850e99c",
+    "denial_report_sha256": "3b418447abf21e16b18fcd9cfa36a29153277fb616031cb7e584f874ab9b14e1",
+    "plan_sha256": "e2bc032c453cd39a5edc943a8fc7cdd324f9fe3fadd8e320321f8ba7f29d40c0",
+    "e3_status": "NOT_EXECUTED_NO_EXACT_SCOPE",
+    "e4_status": "NOT_APPLICABLE_NO_CURRENT_AUTHORIZATION",
+    "activation_status": "NOT_EXECUTED_DENIED",
+    "working_tree_result": true
+  },
+  "graph_mutation_count": 0,
+  "next_wave_authorized": true,
+  "policy_digest": "d523e6e236d363706c5a523680930b2d6b919049094ca21743d929d1f7ae5e39",
+  "predecessor_receipt_digest": "bfbf44bab40a52058285b201843647ea3d5f209309b0d62f6f9473b55d82ef15",
+  "program_id": "NEE-KG-DUAL-PIPELINE-01",
+  "provider_call_count": 0,
+  "provider_initialization_count": 0,
+  "result_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "rollback_control": "No activation occurred. Keep l1-controller-mode off, retain the denial and inventory evidence, and require a new exact-scope E3/E4 approval workflow before retrying bounded canary execution.",
+  "schema_version": "1.0.0",
+  "wave_id": "W9"
+}

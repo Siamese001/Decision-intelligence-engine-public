@@ -1,0 +1,15 @@
+wave_number: 12
+wave_id: "Wave 12: Qualify cross-pipeline benefits and authorize staged rollout"
+description: "Verify the integrated changes improve real tasks, remain bounded under concurrency/failure, and can be independently disabled or reversed"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_agentic_program_e2e.py"
+  - "tests/adversarial/test_agentic_program_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_12.yaml"
+  - "governance/agentic_opportunities/cross_entrypoint_pilot_manifest.json"
+criteria:
+  - "Cover ingestion, documents, query/decision and both live delivery paths under cancellation, restart, concurrent roots, schema drift, injection and revoked/changed approval"
+  - "Independent evaluators measure actual task outcomes at equivalent boundaries"
+  - "Each capability meets Wave 1 frozen practical-gain/latency/cost criteria with adequate sample coverage; otherwise it stays disabled"
+  - "Operator-approved narrow pilots are required for any production claim"

@@ -235,6 +235,17 @@ def discover_governance_files() -> list[Path]:
     files.extend(_collect_githook_files(GITHOOKS_DIR))
     if TOOLS_DIR.is_dir():
         files.extend(sorted(p for p in TOOLS_DIR.glob("*.py") if p.is_file()))
+    for root_doc in (
+        "README.md",
+        "ARCHITECTURE.md",
+        "BASELINE_NOTICE.md",
+        "MANIFEST.md",
+        "CHANGELOG.md",
+        "pr_queue_architecture_ssot.md",
+    ):
+        rd = REPO_ROOT / root_doc
+        if rd.is_file():
+            files.append(rd)
     if WORKFLOWS_DIR.is_dir():
         files.extend(sorted(WORKFLOWS_DIR.glob("*.yml")))
         files.extend(sorted(WORKFLOWS_DIR.glob("*.yaml")))

@@ -1,0 +1,20 @@
+{
+  "allowed_audiences": [],
+  "approval_source": "<explicit statement or artifact>",
+  "approved_at": "<RFC3339>",
+  "approved_file_paths": [],
+  "approver": "<name or user>",
+  "baseline_graph_sha256": "<sha256>",
+  "baseline_zip_sha256": "<sha256>",
+  "card_proposal_sha256": "<sha256 or signed zero-change digest>",
+  "decision_id": "<stable-id>",
+  "expiration": null,
+  "g1_inline_output_sha256": "<sha256 of exact generated three-table G1 output>",
+  "graph_proposal_sha256": "<sha256 or signed zero-change digest>",
+  "implementation_normalization_allowance": [],
+  "inline_output_gate_required": true,
+  "input_artifact_hashes": {},
+  "limitations": [],
+  "scope": {},
+  "status": "approved"
+}

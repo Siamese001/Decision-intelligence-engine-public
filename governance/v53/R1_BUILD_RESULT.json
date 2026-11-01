@@ -1,0 +1,19 @@
+{
+  "approval_decision_id": "AD-V53-SHERPA-ANDY-LILLIAN-2026-001",
+  "control_policy": "PD-53-NATURAL-LANGUAGE-APPROVAL-BINDING",
+  "database_sha256": "5c326c4825c9ad3621a014361257f13d8fa4a9637196d6473281af06ae03d7a3",
+  "exact_card_delta": "4/4",
+  "exact_graph_delta": "139/139",
+  "g1_gate_o1": "e500b9e48e4b459c619b920793036f9124e1b32c4128c5fe4d2c48f794eb82ce",
+  "generated_at": "2026-07-13T22:48:43Z",
+  "hitl_caveat": "Brian identity unresolved",
+  "implementation_id": "R1-V53-SHERPA-ANDY-LILLIAN-2026-001",
+  "integrity_and_foreign_keys": "PASS",
+  "migration_rollback": "PASS",
+  "r1_gate_o1": "c605a19a85b3ca86ffb80680c6fc3474a6ec09695ebf4a378e761ff65422e759",
+  "release_state": "approved_current",
+  "release_version": "53.0",
+  "retrieval": "21/21 PASS",
+  "status": "PASS",
+  "successor_zip_authorized": true
+}

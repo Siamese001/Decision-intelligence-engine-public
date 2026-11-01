@@ -31,6 +31,11 @@ PROHIBITED_HITL_BADGE_PATTERN: re.Pattern[str] = re.compile(
     re.IGNORECASE,
 )
 
+PROHIBITED_DOMAIN_ENTITY_PATTERN: re.Pattern[str] = re.compile(
+    r"(?:Dan\\s\+Okray|Project\\s\+Lens.*Project\\s\+Nexus|Project\\s\+Nexus.*Project\\s\+Jarvis)",
+    re.IGNORECASE,
+)
+
 UNAMBIGUOUS_LEAF_FALLBACK_KEYS: Set[str] = {
     "ambiguity_margin_threshold",
     "consensus_threshold",
@@ -338,6 +343,18 @@ class UnifiedSSOTASTVisitor(ast.NodeVisitor):
                         line_number=line_no,
                         rule="HARDCODED_HITL_CONFIDENCE_BADGE",
                         detail=f"Hardcoded legacy HITL confidence badge in '{val[:60]}'. Use QuestionBuilder and format_option_text.",
+                    )
+                )
+            if PROHIBITED_DOMAIN_ENTITY_PATTERN.search(val) and self.rel_path != "tools/ssot_config_engine/ast_rules.py":
+                self.violations.append(
+                    SSOTASTViolation(
+                        file_path=self.rel_path,
+                        line_number=line_no,
+                        rule="HARDCODED_DOMAIN_ENTITY_PATTERN",
+                        detail=(
+                            f"Hardcoded domain project/stakeholder pattern in '{val[:60]}'. "
+                            "Resolve dynamically from config/governance/project_registry.json."
+                        ),
                     )
                 )
         self.generic_visit(node)

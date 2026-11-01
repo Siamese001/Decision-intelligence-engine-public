@@ -1,0 +1,462 @@
+{
+  "actual_card_diff_sha256": "660bdcb43120058ea8be7fb9a4250112545b40dca49626aeb2fb8b3c35c306e0",
+  "actual_graph_delta_sha256": "fa55b3e1b207e6d5a8109de4744f4df33c0f9e25795769d3bcf4c2dfb7dfd749",
+  "affected_card_ids": [
+    "NEE_06",
+    "NEE_10"
+  ],
+  "approval_decision_id": "AD-V48.2-PartnerAdvisory-NEA-PARTNERSHIP-2026-001",
+  "approved_card_diff_sha256": "6d10cccccd62f3e9ecdaa2369a16af6b9ae6567d4ad4aff22a03f15467451080",
+  "approved_graph_delta_sha256": "4314d5307e03d8ac61df52dbae93fbfa6b71f7f9ddd9de5be29de0c74af05f9f",
+  "baseline_immutability_result": {
+    "baseline_graph_sha256_after": "5a376919027b37b1b3c566074a8923b18fe842f70d38a5459534e3eaa52f8b0a",
+    "baseline_graph_sha256_before": "5a376919027b37b1b3c566074a8923b18fe842f70d38a5459534e3eaa52f8b0a",
+    "baseline_zip_sha256_after": "713d3d35301a492396c7c066e7962e8f70b2e22bbb541c895fb9ae028543dbd6",
+    "baseline_zip_sha256_before": "713d3d35301a492396c7c066e7962e8f70b2e22bbb541c895fb9ae028543dbd6",
+    "status": "PASS"
+  },
+  "changed_file_inventory": [
+    "CHANGELOG.md",
+    "MANIFEST.md",
+    "QA_REPORT.md",
+    "README.md",
+    "approvals/v48.2/APPROVAL_BUNDLE_MANIFEST.json",
+    "approvals/v48.2/APPROVAL_RECORD.json",
+    "approvals/v48.2/C1_V48_2_PROPOSED_CARD_DELTA.json",
+    "approvals/v48.2/EXACT_APPROVAL_STATEMENT.txt",
+    "approvals/v48.2/G1_GATE_O1_INLINE_TABLES.md",
+    "approvals/v48.2/G1_V48_2_PROPOSED_GRAPH_DELTA.json",
+    "approvals/v48.2/GATE_O1_VALIDATION.json",
+    "approvals/v48.2/PREWRITE_REVALIDATION.json",
+    "database/canonical_database.json",
+    "database/database_inventory.json",
+    "database/database_inventory_v48_2.json",
+    "database/object_inventory.csv",
+    "database/object_inventory_v48_2.csv",
+    "database/schema_v48_2.sql",
+    "database/table_row_counts.csv",
+    "database/table_row_counts_v48_2.csv",
+    "exports/open_questions.csv",
+    "exports/p0_p1_action_register.csv",
+    "exports/p1_validation_sprint_plan.csv",
+    "exports/source_lineage.csv",
+    "exports/v48_2_action_delta.csv",
+    "exports/v48_2_assertion_delta.csv",
+    "exports/v48_2_assertion_evidence_delta.csv",
+    "exports/v48_2_evidence_delta.csv",
+    "exports/v48_2_p1_validation_sprint_delta.csv",
+    "exports/v48_2_route_delta.csv",
+    "exports/v48_2_search_document_delta.csv",
+    "exports/v48_2_source_delta.csv",
+    "exports/v48_2_validation_delta.csv",
+    "governance/v48.2/BASELINE_IMMUTABILITY.json",
+    "governance/v48.2/CHANGED_FILE_INVENTORY.json",
+    "governance/v48.2/IMPLEMENTATION_NORMALIZATION_RECORD.json",
+    "governance/v48.2/R1_ACTUAL_CARD_DELTA.json",
+    "governance/v48.2/R1_ACTUAL_GRAPH_DELTA.json",
+    "governance/v48.2/R1_BUILD_RESULT.json",
+    "governance/v48.2/R1_GATE_O1_INLINE_TABLES.md",
+    "governance/v48.2/R1_GATE_O1_VALIDATION.json",
+    "governance/v48.2/R1_IMPLEMENTATION_CONFORMANCE.json",
+    "graph/nee_graph.sqlite",
+    "inputs/slalom_nea_partnership_2026_source_pointer.json",
+    "manifest.json",
+    "metrics/graph_health_table.csv",
+    "metrics/graph_health_table.md",
+    "metrics/graph_health_table_v48_2.csv",
+    "metrics/graph_health_table_v48_2.md",
+    "metrics/metrics_v48_2.json",
+    "migrations/0003_v48_2_slalom_nea_partnership/README.md",
+    "migrations/0003_v48_2_slalom_nea_partnership/forward.py",
+    "migrations/0003_v48_2_slalom_nea_partnership/migration.py",
+    "migrations/0003_v48_2_slalom_nea_partnership/rollback.py",
+    "migrations/0003_v48_2_slalom_nea_partnership/validate.py",
+    "migrations/apply_v48_2.py",
+    "migrations/rollback_v48_2.py",
+    "migrations/validate_v48_2.py",
+    "performance/benchmark_v48_2.json",
+    "performance/benchmark_v48_2.md",
+    "performance/performance_report.md",
+    "performance/performance_results.json",
+    "release_gate_report.md",
+    "release_notes.md",
+    "release_state.json",
+    "reports/V48_1_VS_V48_2_COMPARISON.json",
+    "reports/V48_1_VS_V48_2_COMPARISON.md",
+    "reports/V48_2_CONFORMANCE_REPORT.json",
+    "reports/V48_2_CONFORMANCE_REPORT.md",
+    "reports/backup_restore_evidence.json",
+    "reports/backup_restore_evidence_v48_2.json",
+    "reports/package_integrity_v48_2.json",
+    "reports/release_gate_results.json",
+    "reports/release_gate_results_v48_2.json",
+    "reports/release_gate_v48_2.md",
+    "retrieval_tests/retrieval_results.json",
+    "retrieval_tests/retrieval_results_v48_2.json",
+    "rollback/baseline/nee_graph_v48.1.sqlite",
+    "rollback/baseline/nee_graph_v48.1.sqlite.sha256",
+    "tests/release_gate_v48_2.py",
+    "tests/run_v48_2_acceptance.py",
+    "tests/v48_2_acceptance_report.md",
+    "tests/v48_2_acceptance_results.json",
+    "tools/build_v48_2_release.py"
+  ],
+  "component_counts": {
+    "alias": {
+      "after": "393",
+      "before": "393",
+      "delta": "0"
+    },
+    "assertion": {
+      "after": "1548",
+      "before": "1534",
+      "delta": "14"
+    },
+    "assertion_evidence": {
+      "after": "1560",
+      "before": "1546",
+      "delta": "14"
+    },
+    "canonical_route": {
+      "after": "3634",
+      "before": "3620",
+      "delta": "14"
+    },
+    "claim": {
+      "after": "520 / 477",
+      "before": "520 / 477",
+      "delta": "0 / 0"
+    },
+    "edge": {
+      "after": "1026 / 1000",
+      "before": "1026 / 1000",
+      "delta": "0 / 0"
+    },
+    "evidence_item": {
+      "after": "1560",
+      "before": "1546",
+      "delta": "14"
+    },
+    "node": {
+      "after": "632 / 628",
+      "before": "632 / 628",
+      "delta": "0 / 0"
+    },
+    "node_card_map": {
+      "after": "1566",
+      "before": "1566",
+      "delta": "0"
+    },
+    "p0_p1_action_register": {
+      "after": "94",
+      "before": "93",
+      "delta": "1"
+    },
+    "p1_validation_sprint": {
+      "after": "97",
+      "before": "96",
+      "delta": "1"
+    },
+    "search_document": {
+      "after": "2108",
+      "before": "2094",
+      "delta": "14"
+    },
+    "source": {
+      "after": "148",
+      "before": "147",
+      "delta": "1"
+    },
+    "source_version": {
+      "after": "148",
+      "before": "147",
+      "delta": "1"
+    },
+    "validation": {
+      "after": "174",
+      "before": "173",
+      "delta": "1"
+    }
+  },
+  "drift_result": "none",
+  "first_canonical_write_at": "2026-07-12T21:40:55Z",
+  "g1_inline_output_sha256": "eba7949073ce7aaf1a479cf8462590550da1ce555f79ab8cd58c2193e106f47f",
+  "implementation_id": "IMP-V48.2-PartnerAdvisory-NEA-PARTNERSHIP-001",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Route 10 source-attributed candidate assertions covering product-first behavior, visible/no-surprises delivery, capacity versus PartnerAdvisory-led lanes, the Solutions Lead/EM/Tech Lead pattern, and working norms.",
+        "card": "NEE_06",
+        "change_type": "route",
+        "defense_or_evidence": "Slides 4-7 provide direct internal briefing evidence, while the card already owns the co-delivery/co-hydrated operating-model topic; no prose duplication is warranted.",
+        "retrieval_improvement": "Primary assertion-to-card routes surface exact slide evidence and dated source posture from the established operating-model home."
+      },
+      {
+        "addition": "Route 4 candidate assertions covering the technical/interview bar, named staffing-screening process, and travel expectation, plus one P1 identity/authority validation.",
+        "card": "NEE_10",
+        "change_type": "route",
+        "defense_or_evidence": "Slides 5 and 8 directly support the source-attributed talent details, but named decision rights and current location/travel expectations are not authoritative without validation.",
+        "retrieval_improvement": "Routes make talent and identity-sensitive evidence discoverable from the stakeholder/credentialing home while the P1 gate blocks official-current use."
+      }
+    ],
+    "graph_delta_rows": [
+      {
+        "baseline": "147",
+        "change": "Add one distinct confidential internal PPTX source; do not merge it with the v17 curated staffing source.",
+        "component_key": "source",
+        "delta": "1",
+        "graph_component": "Sources",
+        "proposed_or_actual": "148",
+        "retrieval_rationale": "Exact source-table lookup and immutable provenance distinguish the direct 2026 deck from prior curated synthesis."
+      },
+      {
+        "baseline": "147",
+        "change": "Add one immutable source version with raw-artifact and normalized-content fingerprints.",
+        "component_key": "source_version",
+        "delta": "1",
+        "graph_component": "Source versions",
+        "proposed_or_actual": "148",
+        "retrieval_rationale": "Fingerprint and content hash enable exact version identity, deduplication, and evidence-chain traversal."
+      },
+      {
+        "baseline": "632 / 628",
+        "change": "No node additions, merges, status changes, or retirements.",
+        "component_key": "node",
+        "delta": "0 / 0",
+        "graph_component": "Nodes — total / active",
+        "proposed_or_actual": "632 / 628",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "393",
+        "change": "No legacy or canonical alias additions; named people remain literal source mentions.",
+        "component_key": "alias",
+        "delta": "0",
+        "graph_component": "Aliases",
+        "proposed_or_actual": "393",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1026 / 1000",
+        "change": "No legacy relationship additions or changes.",
+        "component_key": "edge",
+        "delta": "0 / 0",
+        "graph_component": "Edges — total / active",
+        "proposed_or_actual": "1026 / 1000",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "520 / 477",
+        "change": "No legacy claim additions or changes; ingestion is canonical-candidate-only.",
+        "component_key": "claim",
+        "delta": "0 / 0",
+        "graph_component": "Claims — total / active",
+        "proposed_or_actual": "520 / 477",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "173",
+        "change": "Add one owned, dated P1 item for staffing/hiring identities, effective date, and decision authority.",
+        "component_key": "validation",
+        "delta": "1",
+        "graph_component": "Validation items",
+        "proposed_or_actual": "174",
+        "retrieval_rationale": "Safety gating blocks current/official use of slide-8 decision-right claims until named authority and effective date are confirmed."
+      },
+      {
+        "baseline": "1566",
+        "change": "No node-to-card mapping changes.",
+        "component_key": "node_card_map",
+        "delta": "0",
+        "graph_component": "Node-to-card mappings",
+        "proposed_or_actual": "1566",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1534",
+        "change": "Add 14 atomic, source-attributed candidate assertions with currentness unknown.",
+        "component_key": "assertion",
+        "delta": "14",
+        "graph_component": "Canonical assertion rows",
+        "proposed_or_actual": "1548",
+        "retrieval_rationale": "Subject-indexed candidate assertions add precise product-engineering, delivery-model, role, screening, and travel retrieval without entering decision-safe views."
+      },
+      {
+        "baseline": "1546",
+        "change": "Add one exact slide locator for each proposed candidate assertion.",
+        "component_key": "evidence_item",
+        "delta": "14",
+        "graph_component": "Evidence items",
+        "proposed_or_actual": "1560",
+        "retrieval_rationale": "Exact slide locators provide citation-grade lineage and allow claim-by-claim inspection."
+      },
+      {
+        "baseline": "1546",
+        "change": "Link each candidate assertion to its direct slide evidence; no independent corroboration claimed.",
+        "component_key": "assertion_evidence",
+        "delta": "14",
+        "graph_component": "Assertion-evidence links",
+        "proposed_or_actual": "1560",
+        "retrieval_rationale": "Direct links make support chains deterministic while preserving same-source/non-independent posture."
+      },
+      {
+        "baseline": "3620",
+        "change": "Add ten primary candidate routes to NEE_06 and four to NEE_10.",
+        "component_key": "canonical_route",
+        "delta": "14",
+        "graph_component": "Canonical routes",
+        "proposed_or_actual": "3634",
+        "retrieval_rationale": "Card routing surfaces operating-model evidence in NEE_06 and talent/identity evidence in NEE_10 without card-body duplication."
+      },
+      {
+        "baseline": "2094",
+        "change": "Add candidate review projections; keep authoritative FTS eligibility at zero.",
+        "component_key": "search_document",
+        "delta": "14",
+        "graph_component": "Search documents",
+        "proposed_or_actual": "2108",
+        "retrieval_rationale": "Candidate review queries gain deterministic titles/bodies while authoritative FTS ranking remains unchanged."
+      },
+      {
+        "baseline": "96",
+        "change": "Add the staffing-authority validation to a coherent talent-governance lane.",
+        "component_key": "p1_validation_sprint",
+        "delta": "1",
+        "graph_component": "P1 validation sprint items",
+        "proposed_or_actual": "97",
+        "retrieval_rationale": "Lane-based retrieval groups the identity/authority question with near-term staffing decisions."
+      },
+      {
+        "baseline": "93",
+        "change": "Add one owner/due-date action to obtain current authoritative evidence.",
+        "component_key": "p0_p1_action_register",
+        "delta": "1",
+        "graph_component": "P0/P1 action-register rows",
+        "proposed_or_actual": "94",
+        "retrieval_rationale": "Owner and due-date retrieval exposes the exact evidence request and blocked use."
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "No nodes or entity relationships are added; candidate literal assertions and routes do not create operational node orphans.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No person, location, role, or source node is created; the new artifact remains a source-table record and named people remain unlinked literals.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "6 quarantined candidate groups → 6 quarantined candidate groups (+0 high-impact duplicates)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Legacy edges are unchanged and no entity-object assertion is added; each candidate assertion has one distinct fingerprint.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No new relationship vocabulary or entity relationship is introduced; all new assertions use the registered literal predicate HAS_CLAIM_TEXT.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The legacy claim layer is unchanged; every proposed candidate assertion separately includes subject, source/version, route, confidence, HITL, temporal posture, and exact evidence.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The new material source has artifact and content hashes, immutable version fingerprint, date precision/status, authority rank, scope, posture, and cold-archive pointer.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All proposed assertions record the document snapshot date and estimated date status, while currentness remains unknown; no dated source is promoted as current independent truth.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No person node, alias, affiliation, or decision-right edge is created. Slide-8 names remain literal source mentions behind one P1 validation.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 unresolved canonical collisions → 0 unresolved canonical collisions (+0; four unlinked full-name mentions remain review-gated)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The new P1 item has one owner (Amit Ayer), a due date of 2026-07-24, required evidence, blocked use, and a coherent sprint/action lane.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0/109 breaches (0.0000%) → 0/110 breaches (0.0000%) (+0 breaches)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All 21 cases pass on the simulated database. New assertions remain candidate/currentness-unknown and are excluded from authoritative FTS and decision-safe views.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0 failures / 21 cases → 0 failures / 21 cases (+0 failures)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "inline_output_gate_result": "pass",
+  "lineage_currentness_audience_hitl_results": {
+    "allowed_audiences": [
+      "internal_working_team",
+      "slalom_account_leadership"
+    ],
+    "authoritative_search_leakage": 0,
+    "new_assertions": 14,
+    "new_candidate_assertions": 14,
+    "new_source_id": "source_slalom_nea_partnership_briefing_2026_07_12",
+    "p1_due_date": "2026-07-24",
+    "p1_owner": "Amit Ayer",
+    "p1_validation_id": "validation_slalom_nea_staffing_authority_2026_07_12_p1",
+    "raw_pptx_packaged": false,
+    "status": "PASS"
+  },
+  "packaging_gate_result": "pass",
+  "qa_summary": {
+    "acceptance": "17/17 PASS",
+    "backup_restore": "PASS",
+    "metrics": "PASS",
+    "migration": "PASS",
+    "performance": "PASS",
+    "release_gate": "19/19 PASS",
+    "retrieval": "21/21 PASS"
+  },
+  "r1_inline_output_sha256": "eba7949073ce7aaf1a479cf8462590550da1ce555f79ab8cd58c2193e106f47f",
+  "release_state": "candidate",
+  "schema_and_integrity_results": {
+    "clean_schema_rebuild": {
+      "explicit_indexes": 47,
+      "foreign_key_violations": [],
+      "integrity_check": [
+        "ok"
+      ],
+      "result": "PASS",
+      "tables": 85,
+      "triggers": 40,
+      "views": 40
+    },
+    "foreign_key_violations": [],
+    "integrity_check": [
+      "ok"
+    ],
+    "quick_check": [
+      "ok"
+    ]
+  },
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

@@ -1,0 +1,255 @@
+{
+  "actual_card_diff_sha256": "a8b367ab3a83f2f9d42bd5770656ff03b2a9fc67c544ae3d0de334f40ff65fd9",
+  "actual_graph_delta_sha256": "1b919f9a4418b19f5ca75bf156dca6793301e4795ea0944b2895f97709e75c9b",
+  "approval_decision_id": "AD-V49-EXTERNAL-EVIDENCE-GAP-ROUTING-2026-001",
+  "approval_precedes_first_canonical_write": true,
+  "approved_card_diff_sha256": "35a5febfb0e20ad5f32fa4ee2d746e2736e426682b51edbb740ee1c22563c137",
+  "approved_graph_delta_sha256": "78afcfa635f391714584a41cc43357e15a8a772531301d30a13026d1f7940692",
+  "baseline_immutability_result": "PASS",
+  "changed_file_inventory": "governance/v49/CHANGED_FILE_INVENTORY.json",
+  "drift_result": "PASS",
+  "first_canonical_write_at": "2026-07-13T08:04:35Z",
+  "g1_inline_output_sha256": "e3f28d8d72fa92fe4b70f692cf56b3d6e2ffb75161692f54e2424d103d0e6069",
+  "implementation_id": "R1-V49-EXTERNAL-EVIDENCE-001",
+  "inline_gate_output": {
+    "graph_delta_rows": [
+      {
+        "baseline": "148",
+        "change": "Add 13 distinct external public sources with authority, currentness, independence, access and use boundaries.",
+        "component_key": "source",
+        "delta": "13",
+        "graph_component": "Sources",
+        "proposed_or_actual": "161",
+        "retrieval_rationale": "Exact source identifiers, URLs and immutable version metadata support deterministic provenance and deduplication."
+      },
+      {
+        "baseline": "148",
+        "change": "Add one immutable metadata/version record for each proposed external source.",
+        "component_key": "source_version",
+        "delta": "13",
+        "graph_component": "Source versions",
+        "proposed_or_actual": "161",
+        "retrieval_rationale": "Version fingerprints support exact evidence-chain traversal without embedding raw copyrighted web content."
+      },
+      {
+        "baseline": "632 / 628",
+        "change": "No node additions, merges, retirements or status changes; public entities are mapped only to existing graph objects.",
+        "component_key": "node",
+        "delta": "0 / 0",
+        "graph_component": "Nodes — total / active",
+        "proposed_or_actual": "632 / 628",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "393",
+        "change": "No alias or identity-resolution change.",
+        "component_key": "alias",
+        "delta": "0",
+        "graph_component": "Aliases",
+        "proposed_or_actual": "393",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1026 / 1000",
+        "change": "No legacy or canonical entity relationship change.",
+        "component_key": "edge",
+        "delta": "0 / 0",
+        "graph_component": "Edges — total / active",
+        "proposed_or_actual": "1026 / 1000",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "520 / 477",
+        "change": "No legacy claim-table change; proposed content remains in candidate assertion/evidence architecture.",
+        "component_key": "claim",
+        "delta": "0 / 0",
+        "graph_component": "Claims — total / active",
+        "proposed_or_actual": "520 / 477",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "174",
+        "change": "No validation status, owner, due-date or resolution change. The complete open queue is classified only in review exports.",
+        "component_key": "validation",
+        "delta": "0",
+        "graph_component": "Validation items",
+        "proposed_or_actual": "174",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1566",
+        "change": "No node-card mapping change.",
+        "component_key": "node_card_map",
+        "delta": "0",
+        "graph_component": "Node-to-card mappings",
+        "proposed_or_actual": "1566",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1548",
+        "change": "Add 18 atomic candidate assertions that separate public fact, announcement, empirical result, outcome boundary and reference practice.",
+        "component_key": "assertion",
+        "delta": "18",
+        "graph_component": "Canonical assertion rows",
+        "proposed_or_actual": "1566",
+        "retrieval_rationale": "Subject-indexed candidate assertions permit exact source-attributed review while canonical and authoritative retrieval eligibility remain zero."
+      },
+      {
+        "baseline": "1560",
+        "change": "Add one exact URL/title locator for each proposed assertion.",
+        "component_key": "evidence_item",
+        "delta": "18",
+        "graph_component": "Evidence items",
+        "proposed_or_actual": "1578",
+        "retrieval_rationale": "Evidence locators provide deterministic claim-to-source lineage and expose authority/use boundaries."
+      },
+      {
+        "baseline": "1560",
+        "change": "Link each candidate assertion to one retained evidence item; no independent corroboration is overstated.",
+        "component_key": "assertion_evidence",
+        "delta": "18",
+        "graph_component": "Assertion-evidence links",
+        "proposed_or_actual": "1578",
+        "retrieval_rationale": "Direct support links make the evidence chain queryable and preserve single-lineage status."
+      },
+      {
+        "baseline": "3634",
+        "change": "Add primary candidate routes to NEE_01, NEE_06, NEE_07, NEE_09 and NEE_10.",
+        "component_key": "canonical_route",
+        "delta": "18",
+        "graph_component": "Canonical routes",
+        "proposed_or_actual": "3652",
+        "retrieval_rationale": "Route-specific retrieval surfaces public facts and external practices from established card homes without duplicating or editing card prose."
+      },
+      {
+        "baseline": "2108",
+        "change": "Add candidate review projections with retrieval_eligible=0.",
+        "component_key": "search_document",
+        "delta": "18",
+        "graph_component": "Search documents",
+        "proposed_or_actual": "2126",
+        "retrieval_rationale": "Deterministic review projections support direct candidate inspection while authoritative FTS and decision-safe answers remain unchanged."
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "No nodes or entity relationships are added; every candidate assertion uses an existing active subject and a primary card route.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No node, alias or identity operation is proposed; public names remain source metadata or map to already existing organization nodes.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "6 quarantined candidate groups → 6 quarantined candidate groups (+0 high-impact duplicates)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No edge is added. Exact source-title/URL checks found no proposed source duplicate, and candidate assertion fingerprints are unique.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No relationship vocabulary or entity edge is added; assertions use registered literal predicate HAS_CLAIM_TEXT.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Legacy claims are unchanged. Every proposed assertion has subject, source/version, exact evidence, route, confidence, temporal posture, audience, HITL and use boundary.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All 13 proposed material sources include organization, title, type, date posture, retrieval date, URL, scope, authority, independence, currentness, access and use limitations.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Each proposed assertion records valid_from, date precision/status and current/future/historical posture; planned milestones are not promoted as completed.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No person identity, public-profile match, organization merge, alias, role, reporting line or decision-right operation is proposed.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 unresolved canonical collisions → 0 unresolved canonical collisions (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No validation row changes. The review bundle preserves all open P0/P1 items, due dates and accountable owners in the routing and internal-evidence queues.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0/110 breaches (0.0000%) → 0/110 breaches (0.0000%) (+0 breaches)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Simulation preserves baseline decision-safe and authoritative FTS eligibility because all new assertions and search projections have retrieval_eligible=0.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0 failures / 21 cases → 0 failures / 21 cases (+0 failures)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "inline_output_gate_result": "pass",
+  "lineage_currentness_audience_hitl_results": {
+    "all_new_assertions_hitl_required": true,
+    "allowed_audiences": [
+      "internal_working_team",
+      "slalom_account_leadership"
+    ],
+    "authoritative_search_leakage": 0,
+    "new_candidate_assertions": 18,
+    "new_decision_safe_assertions": 0,
+    "new_retrieval_eligible_assertions": 0,
+    "new_sources": 13
+  },
+  "packaging_gate_result": "pass",
+  "qa_summary": {
+    "acceptance": "PASS",
+    "approved_additive_operations": "116/116 exact",
+    "backup_restore": "PASS",
+    "canonical_card_bytes": "19/19 unchanged",
+    "clean_schema_rebuild": "PASS",
+    "exact_digest_bound_approval": "PASS",
+    "existing_semantic_rows_preserved": "PASS",
+    "gate_o1_g1_r1": "PASS / PASS",
+    "graph_health_metrics": "PASS",
+    "migration_apply_idempotency_exact_rollback": "PASS",
+    "performance_gate": "PASS",
+    "retrieval_suite": "21/21 PASS",
+    "sqlite_integrity_foreign_keys": "PASS / 0 violations"
+  },
+  "r1_inline_output_sha256": "e3f28d8d72fa92fe4b70f692cf56b3d6e2ffb75161692f54e2424d103d0e6069",
+  "release_state": "candidate",
+  "schema_and_integrity_results": {
+    "database_integrity": "PASS",
+    "foreign_key_violations": [],
+    "schema_rebuild": {
+      "explicit_indexes": 47,
+      "foreign_key_violations": [],
+      "integrity_check": [
+        "ok"
+      ],
+      "result": "PASS",
+      "tables": 85,
+      "triggers": 40,
+      "views": 40
+    }
+  },
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

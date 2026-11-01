@@ -1,0 +1,46 @@
+{
+  "canonical_serialization_sha256": "177f633f7cff592a312adb22826d4dabdaef2ff7f98ec57e86516de784f1b0c3",
+  "card_reconciliation": "PASS",
+  "card_row_count": 1,
+  "count_reconciliation_failures": [],
+  "gate_id": "O1-R1-V48.1-CONFORMANCE-REMEDIATION-001",
+  "graph_row_count": 16,
+  "headers": [
+    [
+      " Graph component",
+      "Baseline",
+      "Proposed / actual",
+      "Delta",
+      "What changed",
+      "Retrieval rationale "
+    ],
+    [
+      " Metric",
+      "Result",
+      "Pass threshold",
+      "Status",
+      "Comment / required improvement "
+    ],
+    [
+      " Card",
+      "Addition",
+      "Change type",
+      "Defense / evidence",
+      "Retrieval improvement "
+    ]
+  ],
+  "inline_output_sha256": "013de320d2d5883633c10b654f8763d459884ca663990bf29c7cc5d0545a0bff",
+  "metric_failures": [],
+  "metric_row_count": 10,
+  "nonzero_delta_rationale_failures": [],
+  "record_type": "gate_o1_validation",
+  "result": "PASS",
+  "stage": "R1",
+  "table_count": 3,
+  "table_order": [
+    "Graph Delta and Retrieval Impact",
+    "Mandatory Graph Metrics",
+    "Card Additions and Retrieval Impact"
+  ],
+  "zero_delta_rationale_failures": []
+}

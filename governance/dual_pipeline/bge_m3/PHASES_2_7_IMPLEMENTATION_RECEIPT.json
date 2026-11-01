@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_type": "bge-m3-phases-2-7-implementation",
+  "generated_at": "2026-07-22T10:59:09Z",
+  "status": "BLOCKED_EXTERNAL_INPUTS",
+  "implementation_status": "PASS",
+  "production_execution_status": "NOT_RUN",
+  "git": {
+    "branch": "main",
+    "phase_1_base_commit": "1f6cb1bcb850351cf403707ae54a1b8f51e9cf5f",
+    "implementation_commit": "740aea3d876d8e545722b74f1805b47387a716f3",
+    "implementation_tree": "6c6abbfb9a95e459f4d27b73a91875161f456cc1"
+  },
+  "phase_results": [
+    {
+      "phase": 2,
+      "name": "controlled runtime bootstrap and exact dependency closure",
+      "status": "PASS",
+      "evidence": {
+        "python": "CPython 3.12.10 x64",
+        "runtime_lock": "requirements/runtime-cu128.lock.txt",
+        "runtime_lock_sha256": "f8705fea69fdd2c17d94af3605caa715764c3e1932f569f41886f5354ee536f8",
+        "expected_distributions": 73,
+        "installed_distributions": 74,
+        "allowed_bootstrap_distributions": [
+          "pip"
+        ],
+        "missing": [],
+        "extra": [],
+        "version_mismatches": {},
+        "pip_check": "PASS"
+      }
+    },
+    {
+      "phase": 3,
+      "name": "immutable official BGE-M3 provisioning and provenance",
+      "status": "PASS",
+      "evidence": {
+        "model_id": "BAAI/bge-m3",
+        "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+        "snapshot_file_count": 30,
+        "snapshot_size_bytes": 4587317404,
+        "canonical_manifest_digest": "a598d96187ae03e498914543ca2637b95ef61c496faf4d5d9e471764f893905e",
+        "manifest_file": "C:\\NEE\\models\\bge-m3\\bge-m3-manifest-5617a9f61b028005a4858fdac845db406aefb181.json",
+        "manifest_file_sha256": "e8783fde43eab8f82ee03e31ee252c5f29d1655ecea8f2253355909eb3340f9b"
+      }
+    },
+    {
+      "phase": 4,
+      "name": "offline CUDA runtime qualification",
+      "status": "PASS",
+      "evidence": {
+        "torch": "2.11.0+cu128",
+        "cuda_runtime": "12.8",
+        "device": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU",
+        "compute_capability": [
+          12,
+          0
+        ],
+        "backend": "flagembedding-bge-m3",
+        "dense_sparse_colbert": "PASS",
+        "cuda_residency": "PASS",
+        "repeat_determinism": "PASS",
+        "receipt": "C:\\NEE\\evidence\\bge-m3-runtime-qualification-5617a9f61b028005a4858fdac845db406aefb181-v2.json",
+        "receipt_digest": "3bcf04393145c0c3959905de165922d8d485be2ae556be14789b174a2dd7f595",
+        "receipt_file_sha256": "b2b076aff1d38555e9d4c4933d87face85883b5d572aacc150c17aa129703f6c",
+        "production_release_authorized": false
+      }
+    },
+    {
+      "phase": 5,
+      "name": "fail-closed infrastructure and production preflight",
+      "status": "PASS",
+      "evidence": {
+        "infrastructure_preflight": "PASS",
+        "production_execution_ready": false,
+        "runtime_root_remained_empty": true,
+        "seed_graph_integrity": "PASS",
+        "tracked_secret_scan": "PASS",
+        "receipt": "C:\\NEE\\evidence\\bge-m3-preflight-infrastructure-5617a9f61b028005a4858fdac845db406aefb181-v3.json",
+        "receipt_digest": "06e51f98e17432f42e84ad78c67cbd42db3df9cec73908e9958fac566702375b",
+        "receipt_file_sha256": "fef4f4885e0c28c6fe7eb2ec71b634398d121d68053583c39daedee11ea08019"
+      }
+    },
+    {
+      "phase": 6,
+      "name": "immutable hybrid sidecar and paired release controls",
+      "status": "PASS",
+      "evidence": {
+        "sidecar": "C:\\NEE\\index-qualification\\5617a9f61b028005a4858fdac845db406aefb181\\sidecar.sqlite",
+        "sidecar_sha256": "87bd7e44601ad3df71e26c67ca78f0fad3877926070216328f68a4bc9a4b4975",
+        "sqlite_integrity": "ok",
+        "foreign_key_violations": 0,
+        "records": 1180,
+        "dense_records": 1180,
+        "sparse_records": 1180,
+        "colbert_records": 1180,
+        "dense_dimensions": 1024,
+        "colbert_dimensions": 1024,
+        "approved_lane_records": 702,
+        "candidate_lane_records": 478,
+        "external_public_lane_records": 0,
+        "lane_contamination_count": 0,
+        "seed_graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+        "active_production_pair_mutated": false
+      }
+    },
+    {
+      "phase": 7,
+      "name": "real-input governed production qualification",
+      "status": "BLOCKED_EXTERNAL_INPUTS",
+      "implementation": "PASS",
+      "execution": "NOT_RUN",
+      "evidence": {
+        "strict_preflight_status": "FAIL",
+        "failed_checks": [
+          "production_authorization"
+        ],
+        "production_execution_ready": false,
+        "runtime_root_remained_empty": true,
+        "receipt": "C:\\NEE\\evidence\\bge-m3-preflight-strict-blocked-5617a9f61b028005a4858fdac845db406aefb181-v2.json",
+        "receipt_digest": "deb209001d8c5e73be6938db575984f2c7eef282730bcbb76dacc7b7a163e421",
+        "receipt_file_sha256": "23ba8d07b15fbc1f255c55da8e6b5def6dd644fc90f293e533433675514abb6e"
+      },
+      "external_requirements": {
+        "trust_policy_status": "UNCONFIGURED",
+        "trust_policy_owner": "NEE deployment identity and security owner",
+        "missing_paths": [
+          "C:\\NEE\\input\\real-copilot.json",
+          "C:\\NEE\\input\\real-architecture.json",
+          "C:\\NEE\\input\\real-pdlc-question.txt",
+          "C:\\NEE\\auth\\qualification.jwt",
+          "C:\\NEE\\auth\\issuer-public.pem",
+          "C:\\NEE\\auth\\qualification-request.json"
+        ],
+        "additional_required_controls": [
+          "owner-approved configured issuer, audience, and public-key digest",
+          "short-lived RS256 token bound to exact input, approval, capability, and model-manifest digests",
+          "governed approval identifier",
+          "required HITL decisions for emitted review items",
+          "fresh action-bound authorization for normal activation and rollback"
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "unit_tests": {
+      "command": ".\\.venv\\Scripts\\python.exe -m unittest discover -v",
+      "exit_code": 0,
+      "tests_run": 115,
+      "duration_seconds": 301.104,
+      "result": "OK"
+    },
+    "contract_validation": {
+      "command": ".\\.venv\\Scripts\\python.exe tools/validate_dual_pipeline_contracts.py",
+      "status": "PASS",
+      "schemas": 15,
+      "artifact_contracts": 14,
+      "valid_fixtures": 14,
+      "invalid_fixtures_rejected": 9,
+      "provider_calls": 0,
+      "runtime_mutations": 0
+    },
+    "compileall": "PASS",
+    "git_diff_check": "PASS",
+    "runtime_dependency_verifier": "PASS",
+    "tracked_secret_scan": {
+      "status": "PASS",
+      "tracked_file_count": 1559,
+      "findings": []
+    },
+    "independent_review": "NO_REMAINING_P0_OR_P1_FINDINGS"
+  },
+  "non_claims": [
+    "No real-input production qualification was executed.",
+    "No production release or activation is authorized by the model-runtime receipt.",
+    "No active production graph/index pair was changed.",
+    "No JWT, private key, approval, or HITL decision was generated or inferred.",
+    "No remote branch was pushed by this implementation receipt."
+  ],
+  "receipt_digest": "67c4a0b735627d3c6394a0e9b313d281fb9bf1abbd2e9cd8bca9172dd9f5b176"
+}

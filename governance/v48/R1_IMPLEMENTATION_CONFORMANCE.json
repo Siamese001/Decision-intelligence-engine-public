@@ -1,0 +1,37 @@
+{
+  "actual_card_delta_canonical_sha256": "9d3ea2c211759b44a53b0e33e8e30720760e1338603de6d2e126d2c49e6e2ded",
+  "actual_graph_delta_canonical_sha256": "3ef2207b5143e89e9b7643306501b5e4add0bef58d3558f9f632dbae005fff37",
+  "approval_predates_first_write": true,
+  "approval_timestamp": "2026-07-12T12:34:09Z",
+  "approved_c1_canonical_sha256": "bc643ccabd9e769d2bc2cf60b01a489dfb8f38553e6d793051ce6cf7d4c058f9",
+  "approved_g1_canonical_sha256": "13f99411128954538589c8be241f341df9e97d3578dde486432e3a76dd213c7a",
+  "approved_g1_o1_sha256": "b61f9fef1cf36ede9ee211036389de4a08b49a349f87d26d94d17b6648028486",
+  "baseline_binding": {
+    "approved_c1_canonical_sha256": "bc643ccabd9e769d2bc2cf60b01a489dfb8f38553e6d793051ce6cf7d4c058f9",
+    "approved_g1_canonical_sha256": "13f99411128954538589c8be241f341df9e97d3578dde486432e3a76dd213c7a",
+    "approved_g1_o1_sha256": "b61f9fef1cf36ede9ee211036389de4a08b49a349f87d26d94d17b6648028486",
+    "baseline_database_sha256": "2a55957f0164140eef2bbb519c94b12a5f5bbc3a206faf13d4cc9d69d4274f09",
+    "baseline_zip_sha256": "68fcaf1f634608d769bfa93827dc26c24fe892253dc8cd9e6a761673d8744a27"
+  },
+  "candidate_database_sha256": "9dc863b58bac213661d97b62508f32f886e62498b4db532d6438cc0fe0b7fdf2",
+  "canonical_serialization_sha256": "0c435a18ca66d105f0b47facf748425b7acd6011b8115f4aee235d5940250da6",
+  "card_zero_delta": true,
+  "conformance_id": "R1-V48-INTEGRATED-HARDENING-001",
+  "first_canonical_write_at": "2026-07-12T12:35:41Z",
+  "graph_health": "PASS",
+  "implementation_normalization_id": "IN-V48-LEGACY-REBUILD-001",
+  "normalization_classification": "nonsemantic_execution_repair",
+  "out_of_envelope_semantic_changes": 0,
+  "promotion_to_approved_current": false,
+  "r1_gate_o1_inline_sha256": "c64d9f545e94f6acb7916c7a38e85a46078af205cc41654b323bd77bdf52e562",
+  "r1_gate_o1_validation": "PASS",
+  "record_type": "implementation_conformance",
+  "release_state": "candidate",
+  "release_version": "48.0",
+  "retrieval_cases": {
+    "passed": 21,
+    "total": 21
+  },
+  "semantic_row_delta_from_normalization": 0,
+  "status": "PASS"
+}

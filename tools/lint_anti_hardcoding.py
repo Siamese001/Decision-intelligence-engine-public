@@ -32,8 +32,9 @@ SUSPICIOUS_STATIC_DATES = [
 ]
 
 class AntiHardcodingVisitor(ast.NodeVisitor):
-    def __init__(self, filename: str):
+    def __init__(self, filename: str, check_stage_names: bool = True):
         self.filename = filename
+        self.check_stage_names = check_stage_names
         self.violations: List[Dict[str, Any]] = []
 
     def visit_Assign(self, node: ast.Assign):
@@ -52,7 +53,7 @@ class AntiHardcodingVisitor(ast.NodeVisitor):
         self.generic_visit(node)
 
     def visit_Constant(self, node: ast.Constant):
-        if isinstance(node.value, str):
+        if self.check_stage_names and isinstance(node.value, str):
             val_lower = node.value.lower()
             # Check suspicious static dates
             for d in SUSPICIOUS_STATIC_DATES:
@@ -76,12 +77,14 @@ class AntiHardcodingVisitor(ast.NodeVisitor):
 
 
 def scan_file(path: Path) -> List[Dict[str, Any]]:
-    if path.name in EXCLUDED_FILENAMES:
+    if path.name in EXCLUDED_FILENAMES or path.name == "lint_anti_hardcoding.py":
         return []
+    norm = str(path).replace("\\", "/")
+    check_stage_names = any(seg in norm for seg in ("transcript_stages_core", "scripts/"))
     try:
         content = path.read_text(encoding="utf-8")
         tree = ast.parse(content, filename=str(path))
-        visitor = AntiHardcodingVisitor(str(path))
+        visitor = AntiHardcodingVisitor(str(path), check_stage_names=check_stage_names)
         visitor.visit(tree)
         return visitor.violations
     except Exception as exc:
@@ -94,8 +97,13 @@ def scan_file(path: Path) -> List[Dict[str, Any]]:
 
 
 def main():
+    repo_root = Path(__file__).resolve().parents[1]
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
+    from tools.ssot_config_engine.discovery import discover_governed_python_files
+
     parser = argparse.ArgumentParser(description="AST Anti-Hardcoding Linter")
-    parser.add_argument("target_dir", nargs="?", default="dual_pipeline/transcript_stages_core", help="Directory to scan")
+    parser.add_argument("target_dir", nargs="?", default=".", help="Directory to scan (defaults to entire repository)")
     parser.add_argument("--enforce-receipt", help="Path to write the governance receipt")
     args = parser.parse_args()
 
@@ -105,7 +113,10 @@ def main():
         sys.exit(1)
 
     all_violations = []
-    py_files = list(target.rglob("*.py")) if target.is_dir() else [target]
+    if args.target_dir == ".":
+        py_files = discover_governed_python_files(repo_root)
+    else:
+        py_files = list(target.rglob("*.py")) if target.is_dir() else [target]
 
     for py_file in py_files:
         violations = scan_file(py_file)

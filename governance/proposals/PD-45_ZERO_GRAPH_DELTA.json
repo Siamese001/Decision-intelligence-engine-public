@@ -1,0 +1,39 @@
+{
+  "baseline_graph_sha256": "1dd1f557279a1f0c43d7f420f954494c76ef4a74cd638cb4d9e6a0317d9f629a",
+  "baseline_zip_sha256": "714b3468810e44abed9ed30c2721dfcf39eca6016996cb99d258d4bea9867531",
+  "canonical_serialization_sha256": "2f1f56bcb2de27285c768d91f6475af53c6a2c4bd8e2c361e27df18cf8a2902c",
+  "component_counts": {
+    "action": 0,
+    "alias": 0,
+    "claim": 0,
+    "controlled_state_change": 0,
+    "edge": 0,
+    "evidence": 0,
+    "migration": 0,
+    "node": 0,
+    "node_card_map": 0,
+    "register_row": 0,
+    "source": 0,
+    "validation": 0
+  },
+  "generated_at": "2026-07-11T10:49:16Z",
+  "input_artifact_hashes": {
+    "NEE_RCA_PRE_MUTATION_GRAPH_CARD_APPROVAL_GATES_2026-07-11.md": "64fb190c10ec7e5c2e94bc54fb8ed47c760fc886aaafcf96160d29634e3ee74c"
+  },
+  "notes": [
+    "This is an instruction-only C6 activation release under Section 6.5.",
+    "The prior unapproved v45 attachment mutations are not ratified or imported."
+  ],
+  "operations": [],
+  "policy_sha256": "735f683daa97a0b34c48846ab73934dac02846c6cb406c3d3abc84a440d41638",
+  "proposal_id": "G1-PD-45-CONTROL-ACTIVATION-ZERO-GRAPH",
+  "proposal_type": "proposed_graph_delta",
+  "scope": "Account knowledge graph and all meaning-bearing graph/register rows",
+  "status": "approved_zero_change",
+  "zero_change_declarations": {
+    "graph_database_byte_identical_to_v44": true,
+    "no_attachment_semantic_delta_applied": true,
+    "no_graph_export_regenerated_from_new_semantics": true,
+    "no_graph_migration_added": true
+  }
+}

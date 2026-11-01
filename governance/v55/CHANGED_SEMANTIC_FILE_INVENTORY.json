@@ -1,0 +1,31 @@
+{
+  "account_graph_delta": 0,
+  "actual_semantic_changes": [
+    {
+      "after_bytes": 81264,
+      "after_sha256": "25baa44e7902bc8e99aac14a74c476ec1cf7853b8bd1da1fb4aae3177455c77d",
+      "before_bytes": 74326,
+      "before_sha256": "c736087c1ef6c646b3ae3b5a54b43074e5285f36434bcf24ccb0fce2e826ce70",
+      "classification": "generated_policy_mirror",
+      "path": "PROJECT_INSTRUCTIONS.md"
+    },
+    {
+      "after_bytes": 81542,
+      "after_sha256": "5b5e905e57b026b1a404918515b09eda9b6f25b7f8f7a25dda5fa27295d34269",
+      "before_bytes": 74604,
+      "before_sha256": "4f1885acfa7f82c577abb4506cdbd52c343cabbc404f37d198670d705e8a1697",
+      "classification": "canonical_policy_card",
+      "path": "cards/NEE_99_Project_Instructions.md"
+    }
+  ],
+  "approved_semantic_files": [
+    "PROJECT_INSTRUCTIONS.md",
+    "cards/NEE_99_Project_Instructions.md"
+  ],
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "non_policy_card_delta": 0,
+  "status": "PASS",
+  "unapproved_semantic_additions": [],
+  "unapproved_semantic_changes": [],
+  "unapproved_semantic_deletions": []
+}

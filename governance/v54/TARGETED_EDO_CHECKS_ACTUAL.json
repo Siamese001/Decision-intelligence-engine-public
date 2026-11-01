@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "check": "EDO node states enterprise-wide NEE boundary",
+      "detail": {
+        "active": 1,
+        "canonical_name": "Enterprise Data Office / EDO",
+        "currentness_state": "current",
+        "description": "Enterprise-wide data office spanning NEE business and technology domains; distinct from and not subordinate to NEE IT / Enterprise IT.",
+        "lifecycle_state": "active",
+        "node_id": "org_edo",
+        "retrieval_eligibility": "eligible",
+        "status": "current enterprise-wide NEE horizontal layer; June 15, 2026 controls operational workstream status"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "No active current EDO subordinate-to-NEE-IT relationship",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "NEE contains EDO as active enterprise horizontal layer",
+      "detail": {
+        "assertion_id": "asrt_v54_e0daa44d245df45dfc0a97b0d1e3d2d0",
+        "edge_id": "edge_v54_org_nee_has_horizontal_layer_org_edo"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Pod 4 canonical aliases inactive",
+      "detail": [
+        {
+          "active": 0,
+          "canonical_alias_id": "calias_6829e05df1d5bfc33dc57c10",
+          "valid_to": "2026-06-14"
+        },
+        {
+          "active": 0,
+          "canonical_alias_id": "calias_acef7b67b10162013321967f",
+          "valid_to": "2026-06-14"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "Pod 4 umbrella node is historical and ineligible",
+      "detail": {
+        "active": 0,
+        "currentness_state": "historical",
+        "lifecycle_state": "inactive",
+        "retrieval_eligibility": "historical_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Exactly eight June 15 direct EDO workstreams remain current",
+      "detail": {
+        "count": 8,
+        "edge_ids": [
+          "edge_v36_edo_portfolio_has_asset_data_product",
+          "edge_v36_edo_portfolio_has_atlas",
+          "edge_v36_edo_portfolio_has_digital_thread",
+          "edge_v36_edo_portfolio_has_dqt",
+          "edge_v36_edo_portfolio_has_e_c_data_product",
+          "edge_v36_edo_portfolio_has_edo_activation",
+          "edge_v36_edo_portfolio_has_gridopti",
+          "edge_v36_edo_portfolio_has_trade_floor"
+        ],
+        "extra": [],
+        "missing": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "June 15 authority assertion is accepted canonical current",
+      "detail": {
+        "assertion_id": "asrt_claim_claim_v36_edo_eight_workstream_program_view_2026_06_15",
+        "canonical_status": "canonical",
+        "currentness_state": "current",
+        "retrieval_eligible": 1,
+        "validation_state": "accepted_legacy"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "No active Pod 4 node routes",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "No eligible search projection for superseded EDO-under-NEE-IT assertions",
+      "detail": [],
+      "status": "PASS"
+    }
+  ],
+  "database_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "passed": 9,
+  "summary": "9/9 actual",
+  "total": 9
+}

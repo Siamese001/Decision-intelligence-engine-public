@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_w7_ai_use_case_qualification_contract",
+  "contract_id": "nee-decision-intelligence-w7-ai-use-case-qualification",
+  "contract_version": "2026-08-10.1",
+  "status": "IMPLEMENTED_PROVIDER_FREE_W6_GUARDED",
+  "purpose": "Qualify the highest-value NEA AI decision questions as source-bound candidate answers while proving that stale, conflicting, untrusted, or contract-invalid inputs fail closed.",
+  "portfolio_source": "governance/decision_intelligence/W15_USE_CASE_PORTFOLIO.json",
+  "qualified_use_cases": [
+    "ai-pdlc-pov",
+    "ai-productivity-metrics",
+    "agentic-readiness"
+  ],
+  "answer_postures": [
+    "CANDIDATE_ONLY",
+    "NO_ANSWER"
+  ],
+  "required_cases": [
+    "AI-PDLC POV with source-bound support and counterevidence",
+    "AI productivity metrics with visible counterevidence gap",
+    "agentic readiness with source-bound support and counterevidence",
+    "missing required project status blocks answer",
+    "conflicting project status produces NO_ANSWER",
+    "untrusted strategic evidence produces NO_ANSWER",
+    "undeclared answer section is rejected"
+  ],
+  "invariants": [
+    "Every candidate answer retains the portfolio question, declared sections, current as-of and known-at times, and source assertion lineage.",
+    "A candidate answer is never an approved POV, KPI commitment, intervention, graph fact, release, or client-delivery authorization.",
+    "Missing, stale, future, or conflicting project observations produce NO_ANSWER rather than a fabricated recommendation.",
+    "Untrusted or conflicted strategic evidence produces NO_ANSWER.",
+    "Support-only evidence exposes counterevidence_not_found and remains CANDIDATE_ONLY.",
+    "Use-case answer sections are closed-world and cannot be silently broadened.",
+    "The qualification evaluator is provider-free, graph-mutation-free, and release-activation-free."
+  ],
+  "dependencies": {
+    "w3_temporal_observations": "required",
+    "w5_trust_foundation": "required",
+    "w6_strategic_evidence": "required",
+    "w15_use_case_portfolio": "source contract reused; portfolio remains declarative"
+  },
+  "gate": {
+    "provider_calls_allowed": 0,
+    "graph_mutations_allowed": 0,
+    "release_activation_allowed": false,
+    "required_runtime_proofs": [
+      "all three portfolio use cases evaluated",
+      "hard-negative states match expected fail-closed outcomes",
+      "source assertion lineage is nonempty for candidate outputs",
+      "candidate-only posture is preserved",
+      "graph hash is unchanged"
+    ],
+    "next_step": "Source-bound retrieval may consume the qualified use cases directly; no separate W8-W10 review or operations wave is required."
+  }
+}

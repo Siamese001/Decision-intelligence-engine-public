@@ -1,0 +1,133 @@
+{
+  "approved_c1_canonical_sha256": "35a5febfb0e20ad5f32fa4ee2d746e2736e426682b51edbb740ee1c22563c137",
+  "canonical_serialization_sha256": "a8b367ab3a83f2f9d42bd5770656ff03b2a9fc67c544ae3d0de334f40ff65fd9",
+  "card_count": 19,
+  "cards": [
+    {
+      "after_sha256": "3d5471267fc701828c851ea34a25bf6879e26fd5e66225d19a04bcca7c4d3098",
+      "before_sha256": "3d5471267fc701828c851ea34a25bf6879e26fd5e66225d19a04bcca7c4d3098",
+      "changed": false,
+      "path": "cards/NEE_00_Authority_Source_Map_and_Synthesis_Protocol.md"
+    },
+    {
+      "after_sha256": "6b2fd784bcff90ff2990364586b0a5ea7b90119d2d5b1d4506336deb44127164",
+      "before_sha256": "6b2fd784bcff90ff2990364586b0a5ea7b90119d2d5b1d4506336deb44127164",
+      "changed": false,
+      "path": "cards/NEE_01_Executive_Account_Thesis.md"
+    },
+    {
+      "after_sha256": "5ab5a706fe2cf9371c62101317bef591457c54a9759b948cc09ad1597d25d976",
+      "before_sha256": "5ab5a706fe2cf9371c62101317bef591457c54a9759b948cc09ad1597d25d976",
+      "changed": false,
+      "path": "cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md"
+    },
+    {
+      "after_sha256": "92e865d20fca1547fd43fec364d26548cd08093ba657c10944d267cd635fc47e",
+      "before_sha256": "92e865d20fca1547fd43fec364d26548cd08093ba657c10944d267cd635fc47e",
+      "changed": false,
+      "path": "cards/NEE_03_SOW_Commercial_and_Contract_Guardrails.md"
+    },
+    {
+      "after_sha256": "c69953b55c7dd87e4f8ee9fe1bc4cebcf9cc650100da6da682c2adc1d73a1684",
+      "before_sha256": "c69953b55c7dd87e4f8ee9fe1bc4cebcf9cc650100da6da682c2adc1d73a1684",
+      "changed": false,
+      "path": "cards/NEE_04_NEA_Q3_Capacity_Charters_and_Strategic_Capacity_Lens.md"
+    },
+    {
+      "after_sha256": "da637bb1257723f5587a353fe081ed226b24da8319f6ccaf1e8d9999d36892d5",
+      "before_sha256": "da637bb1257723f5587a353fe081ed226b24da8319f6ccaf1e8d9999d36892d5",
+      "changed": false,
+      "path": "cards/NEE_05_Chakra_Synthesis_and_August_Rebaseline.md"
+    },
+    {
+      "after_sha256": "a036dce5c62d51f41e551184c6379c308f017dcd85a9d0b1418a7b7c016def65",
+      "before_sha256": "a036dce5c62d51f41e551184c6379c308f017dcd85a9d0b1418a7b7c016def65",
+      "changed": false,
+      "path": "cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md"
+    },
+    {
+      "after_sha256": "8b66f057c736398a90cfd9e16f13a3635ded09300fadf0546ed7b4470bae9cfc",
+      "before_sha256": "8b66f057c736398a90cfd9e16f13a3635ded09300fadf0546ed7b4470bae9cfc",
+      "changed": false,
+      "path": "cards/NEE_07_AI_SDLC_Evals_Survey_and_Control_Framework.md"
+    },
+    {
+      "after_sha256": "240f9e2d66762e84e3c0461d7b31a7221e19583fd0367bbf0f23f964cd8adafd",
+      "before_sha256": "240f9e2d66762e84e3c0461d7b31a7221e19583fd0367bbf0f23f964cd8adafd",
+      "changed": false,
+      "path": "cards/NEE_08_Monthly_Strategic_Engineering_Partner_Forum.md"
+    },
+    {
+      "after_sha256": "90238fab380e08f47dc08cf4958a115946101903e75218d9a9b2197200d4964f",
+      "before_sha256": "90238fab380e08f47dc08cf4958a115946101903e75218d9a9b2197200d4964f",
+      "changed": false,
+      "path": "cards/NEE_09_Utility_Thought_Leadership_and_REWIRE_AMWE_Agenda.md"
+    },
+    {
+      "after_sha256": "f0d1b5b4f042ae5bd3ac02d131b68c348c951ad15fab3352877d2f5d1c040345",
+      "before_sha256": "f0d1b5b4f042ae5bd3ac02d131b68c348c951ad15fab3352877d2f5d1c040345",
+      "changed": false,
+      "path": "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md"
+    },
+    {
+      "after_sha256": "56a953541e581b5fbf632e14bbe82837d78b9cdde3287bef1589882307a5a37a",
+      "before_sha256": "56a953541e581b5fbf632e14bbe82837d78b9cdde3287bef1589882307a5a37a",
+      "changed": false,
+      "path": "cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md"
+    },
+    {
+      "after_sha256": "422307b33436a7e62fa58e272337377539bbb820912ebc72f8f8b2aff2b0db20",
+      "before_sha256": "422307b33436a7e62fa58e272337377539bbb820912ebc72f8f8b2aff2b0db20",
+      "changed": false,
+      "path": "cards/NEE_12_AI_Hub_Sherpa_DevHub_PGD_Platform_Lessons.md"
+    },
+    {
+      "after_sha256": "24c242b63d1bfa897a977d29c8124f1e3e8d41f3df65de274302930f3d65b858",
+      "before_sha256": "24c242b63d1bfa897a977d29c8124f1e3e8d41f3df65de274302930f3d65b858",
+      "changed": false,
+      "path": "cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md"
+    },
+    {
+      "after_sha256": "75b96bbf9f6665e08999ff8661fd99b058a416e7ff2d2c275b88209ef1af1d99",
+      "before_sha256": "75b96bbf9f6665e08999ff8661fd99b058a416e7ff2d2c275b88209ef1af1d99",
+      "changed": false,
+      "path": "cards/NEE_14_Trading_ETRM_and_Pricing_Models.md"
+    },
+    {
+      "after_sha256": "e00d4498fc4a67a358cd4f1b1abb0852457958c3cb06f9d10132784ba42aa6f4",
+      "before_sha256": "e00d4498fc4a67a358cd4f1b1abb0852457958c3cb06f9d10132784ba42aa6f4",
+      "changed": false,
+      "path": "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md"
+    },
+    {
+      "after_sha256": "097131a93cbb585f9f615a519174adf7a2a6ead45041a7a4ca9955328e8292f9",
+      "before_sha256": "097131a93cbb585f9f615a519174adf7a2a6ead45041a7a4ca9955328e8292f9",
+      "changed": false,
+      "path": "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md"
+    },
+    {
+      "after_sha256": "36cef5c925c23a0a020a1c8cd9885da370e1f60a2f40f028148eff10109d9b94",
+      "before_sha256": "36cef5c925c23a0a020a1c8cd9885da370e1f60a2f40f028148eff10109d9b94",
+      "changed": false,
+      "path": "cards/NEE_22_Digital_Sherpa_A2A_and_Platform_Advisor_Context.md"
+    },
+    {
+      "after_sha256": "0b840894add8dc6f71c22178000b55959524b28526ecc01bb199af2bb44ff0d2",
+      "before_sha256": "0b840894add8dc6f71c22178000b55959524b28526ecc01bb199af2bb44ff0d2",
+      "changed": false,
+      "path": "cards/NEE_99_Project_Instructions.md"
+    }
+  ],
+  "changed_card_count": 0,
+  "record_id": "R1-ACTUAL-CARD-DELTA-V49-001",
+  "record_type": "actual_card_delta",
+  "route_only_cards": [
+    "NEE_01",
+    "NEE_06",
+    "NEE_07",
+    "NEE_09",
+    "NEE_10"
+  ],
+  "status": "PASS",
+  "unlisted_cards_unchanged": true
+}

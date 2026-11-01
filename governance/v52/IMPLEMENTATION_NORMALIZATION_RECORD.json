@@ -1,0 +1,28 @@
+{
+  "approval_decision_id": "AD-V52-UPLOADED-MATERIALS-2026-001",
+  "approved_normalizations": [
+    {
+      "action": "Replace the Phase A scratch-only simulation approval row in place with actual digest-bound approval metadata.",
+      "component": "governance_approval",
+      "result": "PASS",
+      "semantic_effect": "None beyond recording actual approval lineage. The approval_reference used by the 29 approved assertions is preserved."
+    },
+    {
+      "action": "Restore the row to exact V51 baseline values after exact operation application.",
+      "component": "write_control",
+      "result": "PASS",
+      "semantic_effect": "None. No legacy-write permission or active transaction is introduced."
+    },
+    {
+      "action": "Generate deterministic exports, metrics, inventories, migration/rollback evidence, R1/O1 records, release documentation, manifest, and external checksum.",
+      "component": "release derivatives and metadata",
+      "result": "PASS",
+      "semantic_effect": "None beyond representing the approved canonical state."
+    }
+  ],
+  "generated_at": "2026-07-13T19:56:00Z",
+  "implementation_id": "R1-V52-UPLOADED-MATERIALS-2026-001",
+  "out_of_envelope_differences": [],
+  "semantic_drift": false,
+  "status": "PASS"
+}

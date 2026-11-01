@@ -1,0 +1,301 @@
+{
+  "actual_card_diff_sha256": "9f95da157e8907d5f3cc14325c59a1e19ab7789cc5a79c0218d8f0775caa0cf5",
+  "actual_graph_delta_sha256": "749826e67654f74d9d8a9c67cdf9fb74318d50639f2297be8c13b077ace36a69",
+  "affected_card_ids": [
+    "NEE_99"
+  ],
+  "approval_chronology": {
+    "approval_at": "2026-07-11T15:01:34Z",
+    "first_canonical_write_at": "2026-07-11T15:01:35Z",
+    "result": "pass",
+    "source_order": "User approval turn precedes the first tool write; recorded seconds are normalized because exact UI timestamp was unavailable."
+  },
+  "approval_decision_id": "PD-47.1-THREE-TABLE-INLINE-OUTPUT-GATE",
+  "approved_card_diff_sha256": "9f95da157e8907d5f3cc14325c59a1e19ab7789cc5a79c0218d8f0775caa0cf5",
+  "approved_graph_delta_sha256": "749826e67654f74d9d8a9c67cdf9fb74318d50639f2297be8c13b077ace36a69",
+  "approved_policy_proposal_sha256": "afcfa949755115c38db28b146b8453402ccb4ba75796513b53a56162a853ae10",
+  "baseline_immutability_result": {
+    "baseline_graph_sha256": "4eb895a6b79eba6b57d1092f169ee9145371255137c9a70e2dda6d9022ce480b",
+    "baseline_zip_current_sha256": "4bc0ae8709f979a272d1d248116b37900b01f72ca40803052a1819853c77fa24",
+    "baseline_zip_sha256": "4bc0ae8709f979a272d1d248116b37900b01f72ca40803052a1819853c77fa24",
+    "status": "pass"
+  },
+  "changed_file_count": 24,
+  "changed_file_inventory": [
+    "CHANGELOG.md",
+    "MANIFEST.md",
+    "PROJECT_INSTRUCTIONS.md",
+    "QA_REPORT.md",
+    "README.md",
+    "approvals/PD-47.1-THREE-TABLE-INLINE-OUTPUT-GATE.json",
+    "cards/NEE_99_Project_Instructions.md",
+    "exports/v47_1_inline_output_gate_activation_qa.json",
+    "exports/v47_1_inline_output_gate_activation_summary.json",
+    "exports/v47_1_policy_change_diff.md",
+    "governance/IMPLEMENTATION_CONFORMANCE_PD-47.1.json",
+    "governance/PROTOCOL_DECISION_PD-47.1_THREE_TABLE_INLINE_OUTPUT_GATE.md",
+    "governance/inline/PD-47_1_G1_INLINE_GATE_OUTPUT.md",
+    "governance/inline/PD-47_1_R1_INLINE_GATE_OUTPUT.md",
+    "governance/proposals/PD-47_1_THREE_TABLE_INLINE_OUTPUT_GATE.json",
+    "governance/proposals/PD-47_1_ZERO_GRAPH_DELTA.json",
+    "governance/proposals/PD-47_1_ZERO_NONPOLICY_CARD_DELTA.json",
+    "governance/templates/approval_record.template.json",
+    "governance/templates/card_delta_proposal.template.json",
+    "governance/templates/conformance_record.template.json",
+    "governance/templates/graph_delta_proposal.template.json",
+    "tests/test_nee_pre_mutation_gate.py",
+    "tools/README.md",
+    "tools/nee_pre_mutation_gate.py"
+  ],
+  "component_counts": {
+    "alias": {
+      "after": "393",
+      "before": "393",
+      "delta": "+0"
+    },
+    "claim": {
+      "after": "515 / 472",
+      "before": "515 / 472",
+      "delta": "+0 / +0"
+    },
+    "edge": {
+      "after": "1,021 / 995",
+      "before": "1,021 / 995",
+      "delta": "+0 / +0"
+    },
+    "node": {
+      "after": "628",
+      "before": "628",
+      "delta": "+0"
+    },
+    "node_card_map": {
+      "after": "1,555",
+      "before": "1,555",
+      "delta": "+0"
+    },
+    "source": {
+      "after": "143",
+      "before": "143",
+      "delta": "+0"
+    },
+    "validation": {
+      "after": "171",
+      "before": "171",
+      "delta": "+0"
+    }
+  },
+  "drift_result": "none",
+  "first_canonical_write_at": "2026-07-11T15:01:35Z",
+  "g1_inline_output_sha256": "69820885081dea1b146bcceae27535607a1a8a514131b1a59dbf735c9681e784",
+  "gate_tool_tests": {
+    "result": "OK",
+    "status": "pass",
+    "tests": 14
+  },
+  "graph_zero_delta_verification": {
+    "graph_database_byte_identical": true,
+    "graph_migrations_byte_identical": true,
+    "status": "pass"
+  },
+  "implementation_id": "I1-R1-PD-47.1-THREE-TABLE-INLINE-OUTPUT-GATE-ACTIVATION",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Add Gate O1, the exact three-table contract, machine-readable output fields, approval/conformance hash binding, and packaging enforcement.",
+        "card": "NEE_99",
+        "change_type": "control_policy",
+        "defense_or_evidence": "The user required exactly three inline outputs and explicitly requested V47.1 with gates and inline output gates.",
+        "retrieval_improvement": "Forces every future graph, metric, card, and route change into a compact visible decision surface, reducing omitted routing, disambiguation, and retrieval-impact evidence."
+      }
+    ],
+    "graph_delta_rows": [
+      {
+        "baseline": "143",
+        "change": "No source records changed.",
+        "component_key": "source",
+        "delta": "+0",
+        "graph_component": "Sources",
+        "proposed_or_actual": "143",
+        "retrieval_rationale": "Preserves the exact governed source inventory while the release changes only review controls."
+      },
+      {
+        "baseline": "628",
+        "change": "No graph nodes changed.",
+        "component_key": "node",
+        "delta": "+0",
+        "graph_component": "Nodes",
+        "proposed_or_actual": "628",
+        "retrieval_rationale": "Preserves entity identity and existing node-ranking behavior."
+      },
+      {
+        "baseline": "393",
+        "change": "No aliases changed.",
+        "component_key": "alias",
+        "delta": "+0",
+        "graph_component": "Aliases",
+        "proposed_or_actual": "393",
+        "retrieval_rationale": "Preserves exact-name and alternate-name matching behavior."
+      },
+      {
+        "baseline": "1,021 / 995",
+        "change": "No relationships changed.",
+        "component_key": "edge",
+        "delta": "+0 / +0",
+        "graph_component": "Edges — total / active",
+        "proposed_or_actual": "1,021 / 995",
+        "retrieval_rationale": "Preserves lineage and traversal results; V47.1 only makes edge deltas visible and validated."
+      },
+      {
+        "baseline": "515 / 472",
+        "change": "No claims changed.",
+        "component_key": "claim",
+        "delta": "+0 / +0",
+        "graph_component": "Claims — total / active",
+        "proposed_or_actual": "515 / 472",
+        "retrieval_rationale": "Preserves semantic answer content while forcing future claim changes into a visible, reconciled table."
+      },
+      {
+        "baseline": "171",
+        "change": "No validation items changed.",
+        "component_key": "validation",
+        "delta": "+0",
+        "graph_component": "Validation items",
+        "proposed_or_actual": "171",
+        "retrieval_rationale": "Preserves currentness and HITL behavior while requiring future movements to be shown inline."
+      },
+      {
+        "baseline": "1,555",
+        "change": "No routes changed.",
+        "component_key": "node_card_map",
+        "delta": "+0",
+        "graph_component": "Node-to-card mappings",
+        "proposed_or_actual": "1,555",
+        "retrieval_rationale": "Preserves current card retrieval routes while making future route additions visible in both graph and card tables."
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "0 → 0 (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "5.13% → 5.13% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100% → 100% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "97.90% → 97.90% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "95.33% → 95.33% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 → 0 (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0/5 → 0/5 (+0)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "inline_output_gate": {
+    "affected_cards_and_routes_enforced": true,
+    "approval_and_conformance_hash_binding_enforced": true,
+    "extra_inline_content_rejected": true,
+    "graph_arithmetic_enforced": true,
+    "metric_order_threshold_status_enforced": true,
+    "metric_rows": 10,
+    "required_components_enforced": true,
+    "status": "pass",
+    "table_count": 3
+  },
+  "inline_output_gate_result": "pass",
+  "lineage_currentness_audience_hitl_results": {
+    "status": "not_applicable_zero_knowledge_delta"
+  },
+  "non_policy_card_zero_delta_verification": {
+    "cards_checked": 18,
+    "changed_cards": [],
+    "status": "pass"
+  },
+  "packaging_gate_result": "pass",
+  "policy_change": {
+    "baseline_policy_body_sha256": "ea94485dd1206891c4b4317083ee7a83c2eb902fbdd7cc585b4d31e95fc6fe68",
+    "change_class": "C6",
+    "control_card": "NEE_99",
+    "implemented_policy_body_sha256": "b784a88893bea7dee2861ff1cb6e77f4ea04f322216e57b04c4c69da4dd9702e",
+    "implemented_policy_card_sha256": "11bc9acfc576803ffb963bac907c6b589f0b88c199406e4964b48d3ca79cef21",
+    "policy_version": "47.1",
+    "root_mirror": "PROJECT_INSTRUCTIONS.md"
+  },
+  "policy_mirror_verification": {
+    "body_identical": true,
+    "declared_hash_matches": true,
+    "status": "pass"
+  },
+  "r1_inline_output_sha256": "69820885081dea1b146bcceae27535607a1a8a514131b1a59dbf735c9681e784",
+  "release_state": "candidate",
+  "schema_and_integrity_results": {
+    "ontology_unchanged": true,
+    "relationship_vocabulary_unchanged": true,
+    "schema_unchanged": true,
+    "sqlite_foreign_key_violations": 0,
+    "sqlite_integrity_check": "ok"
+  },
+  "scope_verification": {
+    "graph_zero_delta_verified": true,
+    "non_policy_card_zero_delta_verified": true,
+    "status": "pass",
+    "unapproved_files": []
+  },
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

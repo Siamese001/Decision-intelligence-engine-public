@@ -1,0 +1,20 @@
+wave_number: 2
+wave_id: "Wave 2: Require genuine replay and prove governed application"
+description: "Make proposed learning replayable, approval-bound, effective at consumers and exactly reversible"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_learning_qualification_e2e.py"
+  - "tests/adversarial/test_learning_qualification_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_2.yaml"
+criteria:
+  - "Scanner-generated parameter proposals reach their correct simulator via category-first dispatch"
+  - "Empty, default, or self-certified test-supplied scores cannot qualify"
+  - "Prediction cannot access ground truth labels in holdout replay evaluation"
+  - "Missing, stale, or tampered replay blocks UWG parameter application"
+  - "Bidirectional absent-key restoration on rollback in ParameterRegistry and UWG"
+  - "Compare-and-swap conflict rejection prevents applying stale proposals"
+  - "Duplicate apply rejection enforces idempotent commit lifecycle"
+  - "Partial failure rollback restores parameters to pristine prior state"
+  - "Same-process and next-session consumer visibility verified"
+  - "Unsupported proposal categories and alias lanes fail closed without emitting APPLIED"

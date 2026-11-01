@@ -1,0 +1,75 @@
+{
+  "artifact_id": "l1-wave-03-completion",
+  "artifacts": [
+    "dual_pipeline/query_planning.py",
+    "tests/test_l1_query_planning.py",
+    "contracts/dual_pipeline/schemas/query-plan-v3.schema.json",
+    "documentation/L1_AGENTIC_AUGMENTATION_GAP_ANALYSIS.md"
+  ],
+  "base_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "branch": "codex/l1-agentic-gap-analysis",
+  "cache_namespace_disposition": "No runtime cache namespace introduced.",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "37ec96a9317adecba03ccf6a5a9c9685cc7cd8e2c9d7b532ef2cb172be1da539"
+  },
+  "changed_files": [
+    "documentation/L1_AGENTIC_AUGMENTATION_GAP_ANALYSIS.md",
+    "dual_pipeline/query_planning.py",
+    "governance/dual_pipeline/l1_agentic/wave-03-completion.json",
+    "tests/test_l1_query_plan_contracts.py",
+    "tests/test_l1_query_planning.py"
+  ],
+  "commands": [
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -m unittest -v tests.test_l1_control tests.test_l1_provider_boundary tests.test_l1_query_plan_contracts tests.test_l1_query_baseline tests.test_l1_query_planning tests.test_query_coverage_manifest tests.test_ingestion_l2_boundary tests.test_conditional_ingestion_reasoning tests.test_eval_assurance",
+      "exit_code": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "timed_out": false
+    },
+    {
+      "command": ".\\.venv\\Scripts\\python.exe tools/validate_dual_pipeline_contracts.py",
+      "exit_code": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "timed_out": false
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+  "contract_inventory_digest": "a414fc86ef89c37edacd07873a1231cd1adf7a468b4a62d594e03de110d9fbd1",
+  "exit_gate_verdicts": {
+    "golden_plans_all_query_types": true,
+    "v2_off_mode_byte_equal": true,
+    "requirement_query_digest_bound": true,
+    "refinability_closed": true,
+    "exact_duplicate_grouping_only": true,
+    "target_cap_explicit": true,
+    "shadow_provider_calls_zero": true,
+    "shadow_graph_mutations_zero": true,
+    "runtime_mode_off": true
+  },
+  "extensions": {
+    "wave2_completion_digest": "e19cbc650c72a36c063e0bceeed5229a4f56f801bbdc0d5f09eb11c499abebf0",
+    "query_planning_sha256": "b86b67f11a5f6cd0f2a213bcb2aadaa0314e2d0538cb21eaa1316eb06859134a",
+    "query_planning_test_sha256": "0ed722344e5b810731b02b0d87362e628b0ff31a749fc728e28f2aa2d0590d2a",
+    "query_plan_v3_schema_sha256": "97974d759fc365bb30a90153f2eef4f2183abe29be2d2dec0a9db4a740e30700",
+    "focused_regression_tests": 70,
+    "contract_schemas": 83,
+    "contract_artifacts": 82,
+    "invalid_fixtures_rejected": 44,
+    "working_tree_result": true
+  },
+  "graph_mutation_count": 0,
+  "next_wave_authorized": true,
+  "policy_digest": "d523e6e236d363706c5a523680930b2d6b919049094ca21743d929d1f7ae5e39",
+  "predecessor_receipt_digest": "e19cbc650c72a36c063e0bceeed5229a4f56f801bbdc0d5f09eb11c499abebf0",
+  "program_id": "NEE-KG-DUAL-PIPELINE-01",
+  "provider_call_count": 0,
+  "provider_initialization_count": 0,
+  "result_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "rollback_control": "Remove the Wave 3 query-planning module, tests, documentation status, and this completion receipt; no runtime rollback is required because bounded mode remains rejected and the production path remains v2/off.",
+  "schema_version": "1.0.0",
+  "wave_id": "W3"
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_type": "wave_runtime_receipt",
+  "wave": "Wave 1",
+  "wave_title": "High-Reasoning Speaker Disambiguation Engine (L1.5-Disambiguate)",
+  "executed_at": "2026-09-09T19:03:57.433034+00:00",
+  "runtime_environment": "c:\\Git\\decision-intelligence-engine\\.venv\\Scripts\\python.exe",
+  "terminal_result": "PASS",
+  "wave_status": "COMPLETE",
+  "acceptance_criteria": {
+    "verbatim_text_lock": "PASS (292/292 turns identical spoken text)",
+    "ambiguity_gating_25_pct_margin": "PASS (delta >= 0.25 required for direct attribution, ambiguous preserved as room mic)",
+    "gate_1_2_manifest_compliance": "PASS (valid segments, collective:room-mic, allowed_owner_ids)",
+    "pipeline_integration": "PASS (L1ForensicCognition invokes SpeakerDisambiguator when shared_room_mics configured)",
+    "unit_and_integration_tests": "PASS (26/26 tests passing in 0.25s)"
+  },
+  "scope_inputs": {
+    "dual_pipeline/speaker_disambiguation.py": "8fe3665d042a23abc420e4af49d3feea2bf7bf873f23c21d1523e8f195edf645",
+    "tests/test_speaker_disambiguation.py": "b50558022da808eb847f9b166e9339f56f477784ab0c9261644d2b280eca3303",
+    "tests/test_raw_transcript_pipeline.py": "17938e02caf5fc9faa81d8464875b97fe83bec67fc1ddbf94fcc9fba96168fed",
+    "FPL_Rewire_Transcript_Attributed_08.28.2026.md": "f06b067cb37a827ca52765a2c5f982abb302cef075ed076333335b960c747614"
+  },
+  "telemetry": {
+    "total_parsed_turns_real_transcript": 292,
+    "total_room_mic_turns": 198,
+    "directly_attributed_turns": 20,
+    "shared_room_preserved_turns": 178,
+    "speaker_distribution": {
+      "NEA/Apex Utility (room)": 178,
+      "Sharon Diaram": 6,
+      "Reid Schenk": 3,
+      "Daniel Brankin": 5,
+      "Diana Valencia": 6
+    },
+    "confidence_margin_threshold": 0.25
+  },
+  "receipt_digest": "771d82b7ed1762a396a9a54e95cf760029425773987ff38988709d8b5f2ca059"
+}

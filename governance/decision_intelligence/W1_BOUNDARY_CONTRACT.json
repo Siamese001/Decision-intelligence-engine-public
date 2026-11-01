@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_boundary_contract",
+  "contract_id": "nee-decision-intelligence-boundaries",
+  "contract_version": "2026-08-08.1",
+  "status": "DESIGN_BOUNDARY_ONLY",
+  "purpose": "Define which records may be treated as NEE facts, dated observations, derived decision intelligence, or private overlays. The contract is enforced fail-closed by audit and future write paths; it does not rewrite the current graph.",
+  "system_of_record": {
+    "name": "NEE Knowledge Base",
+    "role": "Durable evidence and canonical fact system of record",
+    "allowed_mutation_path": "Existing governed ingestion and exact approval-bound release lifecycle only",
+    "derived_content_policy": "Derived recommendations, POVs, hypotheses, and briefings do not become canonical facts through use or adoption."
+  },
+  "lanes": {
+    "canonical_fact": {
+      "storage": "nee_knowledge_base.assertion",
+      "authority": "evidence_bound",
+      "purpose": "A proposition supported by governed source evidence and admitted to the canonical fact lane.",
+      "required_fields": [
+        "assertion_id",
+        "primary_source_id",
+        "extraction_run_id_or_explicit_legacy_lineage",
+        "validation_state",
+        "canonical_status",
+        "currentness_state",
+        "valid_from_or_explicit_unknown",
+        "recorded_at",
+        "allowed_audiences_json"
+      ],
+      "admission": {
+        "canonical_status": "canonical",
+        "canonical_eligible": 1,
+        "retrieval_eligible": 1,
+        "forbidden_assertion_types": [
+          "human_interpretation",
+          "recommendation",
+          "hypothesis",
+          "pov"
+        ]
+      },
+      "answer_rule": "Facts must carry source, as-of/currentness, audience, and confidence context. Missing or expired time evidence is not permission to infer current truth."
+    },
+    "dated_observation": {
+      "storage": "nee_knowledge_base.assertion_or_typed_observation",
+      "authority": "source_bound_observation",
+      "purpose": "An immutable, dated observation about delivery, schedule, scope, capacity, readiness, adoption, value, dependency, or decision state.",
+      "target_assertion_types": [
+        "status_snapshot",
+        "metric_observation",
+        "decision_observation",
+        "dependency_observation",
+        "readiness_observation"
+      ],
+      "required_temporal_fields": [
+        "observed_at",
+        "recorded_at",
+        "source_as_of",
+        "stale_after",
+        "valid_from",
+        "valid_to_or_open_interval"
+      ],
+      "answer_rule": "Observations are append-only. A newer observation supersedes an older one; omission is not resolution. Expired observations resolve to STALE_OR_UNKNOWN."
+    },
+    "derived_decision_intelligence": {
+      "storage": "derived_artifact_store_or_decision_workspace",
+      "authority": "non_authoritative_synthesis",
+      "purpose": "A bounded change brief, decision inbox item, readiness gap, dependency warning, meeting brief, POV, metric proposal, hypothesis, or recommendation.",
+      "required_fields": [
+        "artifact_id",
+        "source_assertion_ids",
+        "evidence_packet_digest",
+        "counterevidence_ids_or_explicit_none",
+        "author_or_agent_identity",
+        "audience",
+        "review_state",
+        "created_at",
+        "expires_at",
+        "validation_questions",
+        "falsification_metric_or_explicit_not_applicable"
+      ],
+      "admission": {
+        "canonical_status": "not_applicable",
+        "canonical_eligible": 0,
+        "retrieval_eligible": 0,
+        "requires_explicit_evidence_links": true,
+        "requires_counterevidence_check": true
+      },
+      "answer_rule": "A derived answer must label itself as derived, state assumptions and uncertainty, expose counterevidence, and never upgrade itself to fact because a user accepted it."
+    },
+    "private_overlay": {
+      "storage": "separate_overlay_store",
+      "authority": "private_context_only",
+      "purpose": "PartnerAdvisory account strategy, personal coaching, career planning, or other restricted context that is not part of the NEE client knowledge base.",
+      "required_fields": [
+        "overlay_record_id",
+        "owner",
+        "audience",
+        "classification",
+        "created_at",
+        "expiry_or_review_date",
+        "source_reference"
+      ],
+      "flow": {
+        "may_read_client_facts": true,
+        "may_write_client_facts": false,
+        "may_influence_client_audience_answers": false,
+        "default_retrieval": "excluded",
+        "requires_explicit_scope": true
+      },
+      "answer_rule": "Private context can shape a private planning answer only when explicitly requested and authorized. It must never alter, rank, or contaminate client facts or client-facing recommendations."
+    }
+  },
+  "audience_registry": {
+    "nee-engineering": {
+      "exposure": "client_internal",
+      "description": "NEE engineering/client operational audience",
+      "may_retrieve": ["canonical_fact", "dated_observation", "derived_decision_intelligence"]
+    },
+    "client_approved_external": {
+      "exposure": "client_external",
+      "description": "Client-approved external delivery audience",
+      "may_retrieve": ["canonical_fact", "dated_observation", "derived_decision_intelligence"]
+    },
+    "internal_slalom": {
+      "exposure": "slalom_internal",
+      "description": "PartnerAdvisory internal audience",
+      "may_retrieve": ["canonical_fact", "dated_observation", "derived_decision_intelligence"]
+    },
+    "internal_working_team": {
+      "exposure": "slalom_internal",
+      "description": "Restricted PartnerAdvisory delivery working team",
+      "may_retrieve": ["canonical_fact", "dated_observation", "derived_decision_intelligence"]
+    },
+    "slalom_account_leadership": {
+      "exposure": "slalom_restricted",
+      "description": "Restricted PartnerAdvisory account leadership audience",
+      "may_retrieve": ["private_overlay", "canonical_fact", "dated_observation", "derived_decision_intelligence"]
+    },
+    "private_personal": {
+      "exposure": "private",
+      "description": "Personal/private planning audience",
+      "may_retrieve": ["private_overlay"],
+      "graph_admission": "forbidden"
+    }
+  },
+  "flow_rules": [
+    {
+      "rule_id": "W1-F01",
+      "rule": "Canonical NEE facts may be used by derived intelligence only through explicit evidence links.",
+      "failure": "Reject the derived artifact or mark it incomplete."
+    },
+    {
+      "rule_id": "W1-F02",
+      "rule": "Derived intelligence may not be stored as canonical current retrieval-eligible assertions.",
+      "failure": "Fail the boundary audit and quarantine the artifact."
+    },
+    {
+      "rule_id": "W1-F03",
+      "rule": "A query scope may not combine client audiences with private or PartnerAdvisory-restricted overlay records.",
+      "failure": "Fail closed with an audience boundary error."
+    },
+    {
+      "rule_id": "W1-F04",
+      "rule": "Confidential records may not be exposed to a client audience without explicit client-approved classification and provenance.",
+      "failure": "Suppress the record and emit an audit event."
+    },
+    {
+      "rule_id": "W1-F05",
+      "rule": "Stale, missing, or conflicting observations resolve to STALE_OR_UNKNOWN or CONFLICT, never an inferred green state.",
+      "failure": "Return the uncertainty state and the evidence dates."
+    },
+    {
+      "rule_id": "W1-F06",
+      "rule": "Private overlays are one-way context and cannot write back to the NEE Knowledge Base or change client-facing rankings.",
+      "failure": "Reject the operation and record a policy violation."
+    }
+  ],
+  "migration_posture": {
+    "current_graph_action": "AUDIT_ONLY",
+    "derived_assertions_found_in_current_fact_lane": 17,
+    "known_audience_labels_in_current_graph": [
+      "client_approved_external",
+      "internal_slalom",
+      "internal_working_team",
+      "nee-engineering",
+      "slalom_account_leadership"
+    ],
+    "next_wave_actions": [
+      "Create explicit lane metadata and typed observation contracts.",
+      "Quarantine derived canonical assertions through an approval-bound migration proposal.",
+      "Add audience-isolation negative tests before any graph mutation.",
+      "Keep private overlay storage and retrieval out of the NEE Knowledge Base release path."
+    ]
+  },
+  "gate": {
+    "provider_calls_allowed": 0,
+    "graph_mutations_allowed": 0,
+    "release_activation_allowed": false,
+    "pass_conditions": [
+      "Policy JSON parses and its audience registry is closed-world.",
+      "Boundary audit is reproducible against the exact active graph.",
+      "The audit reports current violations without rewriting them.",
+      "Active graph hash is unchanged before and after the audit."
+    ]
+  }
+}

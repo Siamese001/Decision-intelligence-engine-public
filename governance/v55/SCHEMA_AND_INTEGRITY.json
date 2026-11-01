@@ -1,0 +1,19 @@
+{
+  "baseline_graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "foreign_key_check": [],
+  "graph_byte_identity": true,
+  "graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "integrity_check": [
+    "ok"
+  ],
+  "migration_delta": 0,
+  "ontology_delta": 0,
+  "quick_check": [
+    "ok"
+  ],
+  "relationship_vocabulary_delta": 0,
+  "route_delta": 0,
+  "schema_delta": 0,
+  "status": "PASS"
+}

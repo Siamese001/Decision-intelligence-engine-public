@@ -1,0 +1,397 @@
+{
+  "applied_row_counts": {
+    "assertion": 1534,
+    "assertion_evidence": 1546,
+    "canonical_alias": 388,
+    "canonical_route": 3620,
+    "controlled_value_registry": 79,
+    "edge_type_domain_range": 236,
+    "edge_type_registry": 124,
+    "entity_resolution_candidate": 9,
+    "entity_resolution_candidate_member": 18,
+    "evidence_item": 1546,
+    "extraction_run": 1,
+    "graph_quality_exception": 18,
+    "legacy_alias_canonical_map": 393,
+    "legacy_claim_assertion_map": 520,
+    "legacy_edge_assertion_map": 1026,
+    "node_state": 632,
+    "node_type_registry": 31,
+    "property_registry": 31,
+    "query_definition": 18,
+    "search_document": 2094,
+    "source_version": 147,
+    "write_control": 1
+  },
+  "approval_revalidation": {
+    "approval_bundle_manifest": "PASS",
+    "baseline_db_sha256": "2a55957f0164140eef2bbb519c94b12a5f5bbc3a206faf13d4cc9d69d4274f09",
+    "baseline_zip_sha256": "68fcaf1f634608d769bfa93827dc26c24fe892253dc8cd9e6a761673d8744a27",
+    "c1_canonical_sha256": "bc643ccabd9e769d2bc2cf60b01a489dfb8f38553e6d793051ce6cf7d4c058f9",
+    "g1_canonical_sha256": "13f99411128954538589c8be241f341df9e97d3578dde486432e3a76dd213c7a",
+    "o1_markdown_sha256": "b61f9fef1cf36ede9ee211036389de4a08b49a349f87d26d94d17b6648028486",
+    "policy_sha256": "e09f60241146d071d31daa9febb1d7578c850e9287b1352710e55a5a3f9f4da1"
+  },
+  "approved_due_date_updates": 8,
+  "candidate_database": {
+    "path": "/mnt/data/nee_v48_integrated_build/work/NEE_v48.0/graph/nee_graph.sqlite",
+    "sha256": "9dc863b58bac213661d97b62508f32f886e62498b4db532d6438cc0fe0b7fdf2",
+    "size_bytes": 15269888
+  },
+  "completed_at": "2026-07-12T12:35:43Z",
+  "conformance": {
+    "approved_due_dates": {
+      "count": 8,
+      "result": "PASS",
+      "updates": [
+        {
+          "actual_due_date": "2026-07-25",
+          "expected_due_date": "2026-07-25",
+          "owner": "Amit / Andrew",
+          "priority": "P1",
+          "result": "PASS",
+          "status": "open",
+          "validation_id": "validation_v40_gemini_agent_governance_p1"
+        },
+        {
+          "actual_due_date": "2026-07-15",
+          "expected_due_date": "2026-07-15",
+          "owner": "Amit / Account lead",
+          "priority": "P0",
+          "result": "PASS",
+          "status": "open",
+          "validation_id": "validation_v40_gemini_executed_commercial_authority_p0"
+        },
+        {
+          "actual_due_date": "2026-07-25",
+          "expected_due_date": "2026-07-25",
+          "owner": "Andrew",
+          "priority": "P1",
+          "result": "PASS",
+          "status": "open",
+          "validation_id": "validation_v40_gemini_instance_architecture_p1"
+        },
+        {
+          "actual_due_date": "2026-07-25",
+          "expected_due_date": "2026-07-25",
+          "owner": "Amit",
+          "priority": "P1",
+          "result": "PASS",
+          "status": "open",
+          "validation_id": "validation_v40_gemini_license_metric_p1"
+        },
+        {
+          "actual_due_date": "2026-07-25",
+          "expected_due_date": "2026-07-25",
+          "owner": "Amit / Andrew",
+          "priority": "P1",
+          "result": "PASS",
+          "status": "open",
+          "validation_id": "validation_v40_gemini_q3_q4_roadmap_p1"
+        },
+        {
+          "actual_due_date": "2026-07-25",
+          "expected_due_date": "2026-07-25",
+          "owner": "Amit",
+          "priority": "P1",
+          "result": "PASS",
+          "status": "open",
+          "validation_id": "validation_v40_gemini_team_reconciliation_p1"
+        },
+        {
+          "actual_due_date": "2026-07-15",
+          "expected_due_date": "2026-07-15",
+          "owner": "Amit / Technical lead",
+          "priority": "P0",
+          "result": "PASS",
+          "status": "open",
+          "validation_id": "validation_v40_nee_ai_sunset_scope_timing_p0"
+        },
+        {
+          "actual_due_date": "2026-07-25",
+          "expected_due_date": "2026-07-25",
+          "owner": "Amit",
+          "priority": "P1",
+          "result": "PASS",
+          "status": "open",
+          "validation_id": "validation_v40_stefanos_formal_decision_rights_p1"
+        }
+      ]
+    },
+    "approved_rowsets": {
+      "assertion": {
+        "actual_canonical_rows_sha256": "0ce8896c189c792e26ee9d0bef605e08d78592599272467dee246e2bde4be114",
+        "actual_count": 1534,
+        "expected_canonical_rows_sha256": "0ce8896c189c792e26ee9d0bef605e08d78592599272467dee246e2bde4be114",
+        "expected_count": 1534,
+        "result": "PASS"
+      },
+      "assertion_evidence": {
+        "actual_canonical_rows_sha256": "4a115a733b5f27f74f3ac88ca3187f712cf32488de69d619f753aa971308e180",
+        "actual_count": 1546,
+        "expected_canonical_rows_sha256": "4a115a733b5f27f74f3ac88ca3187f712cf32488de69d619f753aa971308e180",
+        "expected_count": 1546,
+        "result": "PASS"
+      },
+      "canonical_alias": {
+        "actual_canonical_rows_sha256": "642aa11dcd8eb397ff31f4ee3d46fb58f83dc6e01b1a26f8a2e11a27e2552cf6",
+        "actual_count": 388,
+        "expected_canonical_rows_sha256": "642aa11dcd8eb397ff31f4ee3d46fb58f83dc6e01b1a26f8a2e11a27e2552cf6",
+        "expected_count": 388,
+        "result": "PASS"
+      },
+      "canonical_route": {
+        "actual_canonical_rows_sha256": "b4899f0c6eb5e401e91c6bcc82c6f8bcd5e0572400550866cb5c314a61564be7",
+        "actual_count": 3620,
+        "expected_canonical_rows_sha256": "b4899f0c6eb5e401e91c6bcc82c6f8bcd5e0572400550866cb5c314a61564be7",
+        "expected_count": 3620,
+        "result": "PASS"
+      },
+      "controlled_value_registry": {
+        "actual_canonical_rows_sha256": "d88a27778d5ab94f9573c7590f99926bb3f021486c23e217ec84717183b7a1e4",
+        "actual_count": 79,
+        "expected_canonical_rows_sha256": "d88a27778d5ab94f9573c7590f99926bb3f021486c23e217ec84717183b7a1e4",
+        "expected_count": 79,
+        "result": "PASS"
+      },
+      "edge_type_domain_range": {
+        "actual_canonical_rows_sha256": "b33008495d601b840c335b4d72a4c78a056ea1d0a502565115c9153fc67c3cd2",
+        "actual_count": 236,
+        "expected_canonical_rows_sha256": "b33008495d601b840c335b4d72a4c78a056ea1d0a502565115c9153fc67c3cd2",
+        "expected_count": 236,
+        "result": "PASS"
+      },
+      "edge_type_registry": {
+        "actual_canonical_rows_sha256": "8fddf448bc9cf31999a903ff237919e24c73c5db6d0781a71fb773c1f3a39d31",
+        "actual_count": 124,
+        "expected_canonical_rows_sha256": "8fddf448bc9cf31999a903ff237919e24c73c5db6d0781a71fb773c1f3a39d31",
+        "expected_count": 124,
+        "result": "PASS"
+      },
+      "entity_resolution_candidate": {
+        "actual_canonical_rows_sha256": "4802015430b19f7d7cf6be64c2ac0d2260587903bc2fd2e187276160f38e1cac",
+        "actual_count": 9,
+        "expected_canonical_rows_sha256": "4802015430b19f7d7cf6be64c2ac0d2260587903bc2fd2e187276160f38e1cac",
+        "expected_count": 9,
+        "result": "PASS"
+      },
+      "entity_resolution_candidate_member": {
+        "actual_canonical_rows_sha256": "da971bd5418a8290e0374d4ca3a592d3860014ad29035acfc8f640ea68f518c0",
+        "actual_count": 18,
+        "expected_canonical_rows_sha256": "da971bd5418a8290e0374d4ca3a592d3860014ad29035acfc8f640ea68f518c0",
+        "expected_count": 18,
+        "result": "PASS"
+      },
+      "evidence_item": {
+        "actual_canonical_rows_sha256": "44f7f3cfc9c2b72fed84f4d4c95741f126c2eb0bb0bc608a7335211963e56ca5",
+        "actual_count": 1546,
+        "expected_canonical_rows_sha256": "44f7f3cfc9c2b72fed84f4d4c95741f126c2eb0bb0bc608a7335211963e56ca5",
+        "expected_count": 1546,
+        "result": "PASS"
+      },
+      "extraction_run": {
+        "actual_canonical_rows_sha256": "dc178104811690381bfbd97056d9dea4449958e292f83f1938d81f0ca9c24047",
+        "actual_count": 1,
+        "expected_canonical_rows_sha256": "dc178104811690381bfbd97056d9dea4449958e292f83f1938d81f0ca9c24047",
+        "expected_count": 1,
+        "result": "PASS"
+      },
+      "graph_quality_exception": {
+        "actual_canonical_rows_sha256": "04a16ce78bacb9b96ee987703d7eff9c7090e0f732faad6299960a9ddccedabe",
+        "actual_count": 18,
+        "expected_canonical_rows_sha256": "04a16ce78bacb9b96ee987703d7eff9c7090e0f732faad6299960a9ddccedabe",
+        "expected_count": 18,
+        "result": "PASS"
+      },
+      "legacy_alias_canonical_map": {
+        "actual_canonical_rows_sha256": "22f6656757e9d59a01c2a01b5a89ce5f1a3753f6842aec1fc3f8ff5cb8d353a8",
+        "actual_count": 393,
+        "expected_canonical_rows_sha256": "22f6656757e9d59a01c2a01b5a89ce5f1a3753f6842aec1fc3f8ff5cb8d353a8",
+        "expected_count": 393,
+        "result": "PASS"
+      },
+      "legacy_claim_assertion_map": {
+        "actual_canonical_rows_sha256": "fcb03e0591e0c1172da16fa7e909b28b7ffb0d947eb9ecb862df0885cc5cfab9",
+        "actual_count": 520,
+        "expected_canonical_rows_sha256": "fcb03e0591e0c1172da16fa7e909b28b7ffb0d947eb9ecb862df0885cc5cfab9",
+        "expected_count": 520,
+        "result": "PASS"
+      },
+      "legacy_edge_assertion_map": {
+        "actual_canonical_rows_sha256": "dc1c6fcfa39cb8ded8c5cb31fc675f7a0addcba1ea626c5c0fe734cf39bfaf21",
+        "actual_count": 1026,
+        "expected_canonical_rows_sha256": "dc1c6fcfa39cb8ded8c5cb31fc675f7a0addcba1ea626c5c0fe734cf39bfaf21",
+        "expected_count": 1026,
+        "result": "PASS"
+      },
+      "node_state": {
+        "actual_canonical_rows_sha256": "48d51754a298840d51a722d925fb5cee10051067134e9bcacea69712372c36c9",
+        "actual_count": 632,
+        "expected_canonical_rows_sha256": "48d51754a298840d51a722d925fb5cee10051067134e9bcacea69712372c36c9",
+        "expected_count": 632,
+        "result": "PASS"
+      },
+      "node_type_registry": {
+        "actual_canonical_rows_sha256": "ebe8c69b42e3ea68fff71951d5d2f18d5593e2058726a224d026db41fdc88a58",
+        "actual_count": 31,
+        "expected_canonical_rows_sha256": "ebe8c69b42e3ea68fff71951d5d2f18d5593e2058726a224d026db41fdc88a58",
+        "expected_count": 31,
+        "result": "PASS"
+      },
+      "property_registry": {
+        "actual_canonical_rows_sha256": "6754c1d1a49ed388de7fb73402ce7be850323a31c90973c75f6b876653a62a1b",
+        "actual_count": 31,
+        "expected_canonical_rows_sha256": "6754c1d1a49ed388de7fb73402ce7be850323a31c90973c75f6b876653a62a1b",
+        "expected_count": 31,
+        "result": "PASS"
+      },
+      "query_definition": {
+        "actual_canonical_rows_sha256": "77ea129b24946cd084c637de2eb25efcf298b92eaea96bb4c95a248fbe66fab3",
+        "actual_count": 18,
+        "expected_canonical_rows_sha256": "77ea129b24946cd084c637de2eb25efcf298b92eaea96bb4c95a248fbe66fab3",
+        "expected_count": 18,
+        "result": "PASS"
+      },
+      "search_document": {
+        "actual_canonical_rows_sha256": "193d3442d7c6dda3565f59a757670c035737be747af953b2a987a4ce4ecfc798",
+        "actual_count": 2094,
+        "expected_canonical_rows_sha256": "193d3442d7c6dda3565f59a757670c035737be747af953b2a987a4ce4ecfc798",
+        "expected_count": 2094,
+        "result": "PASS"
+      },
+      "source_version": {
+        "actual_canonical_rows_sha256": "bbf6d741470d2d0f6f10f18535b6caccd13b6781541191b948a9c2d876f35579",
+        "actual_count": 147,
+        "expected_canonical_rows_sha256": "bbf6d741470d2d0f6f10f18535b6caccd13b6781541191b948a9c2d876f35579",
+        "expected_count": 147,
+        "result": "PASS"
+      },
+      "write_control": {
+        "actual_canonical_rows_sha256": "c7b3292389563b1d9c90a3aad64915022491e117ca2e5799b7bdb37637b560d0",
+        "actual_count": 1,
+        "expected_canonical_rows_sha256": "c7b3292389563b1d9c90a3aad64915022491e117ca2e5799b7bdb37637b560d0",
+        "expected_count": 1,
+        "result": "PASS"
+      }
+    },
+    "foreign_key_violations": [],
+    "fts": {
+      "result": "PASS",
+      "search_document_count": 2094,
+      "search_fts_count": 2094
+    },
+    "integrity_check": [
+      "ok"
+    ],
+    "legacy_tables_unchanged_except_approved_due_dates": {
+      "alias": {
+        "after": {
+          "canonical_rows_sha256": "5e280928cd8034bc585290fc017d8810820d19a4412b5775f808acb5371fdc0f",
+          "row_count": 393
+        },
+        "before": {
+          "canonical_rows_sha256": "5e280928cd8034bc585290fc017d8810820d19a4412b5775f808acb5371fdc0f",
+          "row_count": 393
+        },
+        "result": "PASS"
+      },
+      "card": {
+        "after": {
+          "canonical_rows_sha256": "53af8221c20875fd01f10caf53e0e05426747e1be13bb7c831b541365e2c9c04",
+          "row_count": 19
+        },
+        "before": {
+          "canonical_rows_sha256": "53af8221c20875fd01f10caf53e0e05426747e1be13bb7c831b541365e2c9c04",
+          "row_count": 19
+        },
+        "result": "PASS"
+      },
+      "claim": {
+        "after": {
+          "canonical_rows_sha256": "8531078cf0ba51758f1a7364582bc06e644b7ac2947d17fadd7484390657864e",
+          "row_count": 520
+        },
+        "before": {
+          "canonical_rows_sha256": "8531078cf0ba51758f1a7364582bc06e644b7ac2947d17fadd7484390657864e",
+          "row_count": 520
+        },
+        "result": "PASS"
+      },
+      "edge": {
+        "after": {
+          "canonical_rows_sha256": "c226ed1f4833fad016e02aac393342cd2286cd8b2c330a7dfcbf170bd50e0068",
+          "row_count": 1026
+        },
+        "before": {
+          "canonical_rows_sha256": "c226ed1f4833fad016e02aac393342cd2286cd8b2c330a7dfcbf170bd50e0068",
+          "row_count": 1026
+        },
+        "result": "PASS"
+      },
+      "node": {
+        "after": {
+          "canonical_rows_sha256": "e5f77827e9793519f9f627498a42b36d0be4482bbd8b23abc9b82197ead65954",
+          "row_count": 632
+        },
+        "before": {
+          "canonical_rows_sha256": "e5f77827e9793519f9f627498a42b36d0be4482bbd8b23abc9b82197ead65954",
+          "row_count": 632
+        },
+        "result": "PASS"
+      },
+      "node_card_map": {
+        "after": {
+          "canonical_rows_sha256": "1848ba561c335482b31f1d645fe5587c0843db44dc7a2d7d6f6b848fbd9dced7",
+          "row_count": 1566
+        },
+        "before": {
+          "canonical_rows_sha256": "1848ba561c335482b31f1d645fe5587c0843db44dc7a2d7d6f6b848fbd9dced7",
+          "row_count": 1566
+        },
+        "result": "PASS"
+      },
+      "source": {
+        "after": {
+          "canonical_rows_sha256": "2d4ccbac0da5bdf57ae25164d85183b7d8f9600ba68a43f5e338f84ddfb08124",
+          "row_count": 147
+        },
+        "before": {
+          "canonical_rows_sha256": "2d4ccbac0da5bdf57ae25164d85183b7d8f9600ba68a43f5e338f84ddfb08124",
+          "row_count": 147
+        },
+        "result": "PASS"
+      }
+    },
+    "quick_check": [
+      "ok"
+    ],
+    "result": "PASS"
+  },
+  "first_canonical_write_at": "2026-07-12T12:35:41Z",
+  "normalization": {
+    "approved_sql_sha256": "b675471e17dd8b4d430f812347b817bcf9f976d59b043e47f9a6998c880bf5b0",
+    "classification": "nonsemantic_execution_repair",
+    "dependent_view_strategy": "drop all 29 baseline views before reconstruction; recreate byte-identical definitions; then apply three approved currentness-safe replacements",
+    "legacy_priority_allowlist": [
+      "P0",
+      "P1",
+      "P1 currentness validation",
+      "P2",
+      "P2 currentness",
+      "P2 currentness validation",
+      "P2 external-safe wording",
+      "P3",
+      "currentness validation",
+      "external-safe wording verification"
+    ],
+    "normalization_id": "IN-V48-LEGACY-REBUILD-001",
+    "normalized_sql_sha256": "e5047630dfbead9c2cf47f98f46d9c7d084d0a3487252e7b5ab7f5422e32ca1d",
+    "reason": "The approved SQL otherwise fails because views reference dropped tables and preserved baseline priority strings include descriptive legacy variants.",
+    "semantic_row_delta": 0
+  },
+  "pre_migration_backup": {
+    "path": "/mnt/data/nee_v48_integrated_build/backups/nee_graph_v47.2_pre_v48.sqlite",
+    "sha256": "2a55957f0164140eef2bbb519c94b12a5f5bbc3a206faf13d4cc9d69d4274f09"
+  },
+  "status": "applied"
+}

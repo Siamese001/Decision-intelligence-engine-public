@@ -1,0 +1,19 @@
+wave_number: 3
+wave_id: "Wave 3: Complete durable, scoped outcome and feedback integration"
+description: "Connect actual delivered answers, ingestion repairs and authenticated corrections to one trustworthy event-to-proposal loop"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_outcome_to_proposal_e2e.py"
+  - "tests/adversarial/test_outcome_lineage_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/wave_3.yaml"
+criteria:
+  - "Native SQLite and string feedback produce correctly typed cohorts through real handlers"
+  - "Capture success, failure, and abstention with authentic timestamps and denominators"
+  - "Crash, restart, retry, and durable cursor tracking neither lose nor duplicate events"
+  - "Duplicate receipt files neither lose nor inflate eligible failure evidence"
+  - "Repeated operator corrections are deduplicated and do not inflate confirmation counts"
+  - "Operator retractions exclude invalidated corrections from cohort aggregation"
+  - "Cross-engagement event isolation prevents multi-tenant or cross-engagement leakage"
+  - "Proposal inspection resolves each source digest, keeping source unavailability explicit"
+  - "Zero foreground learning or external model call added during event-to-proposal processing"

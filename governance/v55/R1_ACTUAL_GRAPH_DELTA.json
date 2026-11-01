@@ -1,0 +1,355 @@
+{
+  "actual_graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "approved_graph_proposal_sha256": "c0b3d1687b29caa8fc8714b44b7381c699473e0fd7252c24d1394dcfece621e7",
+  "baseline_graph_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "baseline_zip_sha256": "608409bdc6a092b86cd10a877af70789efb1b227aa4c1d93c11f1ad990b15c00",
+  "canonical_serialization_sha256": "730e762e557737adc8448178a70295d03554bd8b849b316fa410e8cff6803b86",
+  "change_class": "C6 protocol-only activation; account graph zero change",
+  "component_counts": {
+    "aliases": {
+      "baseline": 429,
+      "delta": 0,
+      "proposed": 429
+    },
+    "assertion_evidence": {
+      "baseline": 1729,
+      "delta": 0,
+      "proposed": 1729
+    },
+    "assertions": {
+      "baseline": 1687,
+      "delta": 0,
+      "proposed": 1687
+    },
+    "canonical_aliases": {
+      "baseline": 424,
+      "delta": 0,
+      "proposed": 424
+    },
+    "canonical_routes": {
+      "baseline": 3948,
+      "delta": 0,
+      "proposed": 3948
+    },
+    "claim_assertion_maps": {
+      "baseline": 583,
+      "delta": 0,
+      "proposed": 583
+    },
+    "claims": {
+      "baseline": 583,
+      "delta": 0,
+      "proposed": 583
+    },
+    "edge_assertion_maps": {
+      "baseline": 1071,
+      "delta": 0,
+      "proposed": 1071
+    },
+    "edges": {
+      "baseline": 1071,
+      "delta": 0,
+      "proposed": 1071
+    },
+    "evidence_items": {
+      "baseline": 1617,
+      "delta": 0,
+      "proposed": 1617
+    },
+    "node_card_maps": {
+      "baseline": 1624,
+      "delta": 0,
+      "proposed": 1624
+    },
+    "node_states": {
+      "baseline": 652,
+      "delta": 0,
+      "proposed": 652
+    },
+    "nodes": {
+      "baseline": 652,
+      "delta": 0,
+      "proposed": 652
+    },
+    "search_documents": {
+      "baseline": 2271,
+      "delta": 0,
+      "proposed": 2271
+    },
+    "source_versions": {
+      "baseline": 174,
+      "delta": 0,
+      "proposed": 174
+    },
+    "sources": {
+      "baseline": 174,
+      "delta": 0,
+      "proposed": 174
+    },
+    "validations": {
+      "baseline": 184,
+      "delta": 0,
+      "proposed": 184
+    }
+  },
+  "conformance": {
+    "component_counts_unchanged": true,
+    "graph_byte_identity": true,
+    "schema_ontology_relationship_route_migration_delta": 0,
+    "unapproved_graph_operations": 0
+  },
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "derivative_impact": "No account-knowledge derivative will be regenerated in the protocol-only activation. NEE_00 and other non-policy propagation are deferred to a separately authorized full-system release.",
+  "generated_at_utc": "2026-07-14T18:31:48Z",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Mandatory post-synthesis HITL clarification prompts for every detected unresolved inconsistency, overlap, and open question; explicit no-issue declaration; QA and answer-packet contracts.",
+        "card": "NEE_99",
+        "change_type": "policy body + frontmatter + generated root mirror",
+        "defense_or_evidence": "Direct user request dated 2026-07-14; closes the control gap where ambiguity can remain implicit after synthesis.",
+        "retrieval_improvement": "Makes update and query outputs expose unresolved boundaries immediately after synthesis instead of silently collapsing them."
+      }
+    ],
+    "g1_inline_output_sha256": "ed76033b149f883ae5d93cbcc730a2b205a7f9c26999cefaab3127687a3f49af",
+    "graph_delta_rows": [
+      {
+        "baseline": "174",
+        "change": "No semantic graph change.",
+        "component_key": "sources",
+        "delta": "0",
+        "graph_component": "Sources",
+        "proposed_or_actual": "174",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "174",
+        "change": "No semantic graph change.",
+        "component_key": "source_versions",
+        "delta": "0",
+        "graph_component": "Source versions",
+        "proposed_or_actual": "174",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1617",
+        "change": "No semantic graph change.",
+        "component_key": "evidence_items",
+        "delta": "0",
+        "graph_component": "Evidence items",
+        "proposed_or_actual": "1617",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "652",
+        "change": "No semantic graph change.",
+        "component_key": "nodes",
+        "delta": "0",
+        "graph_component": "Nodes",
+        "proposed_or_actual": "652",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "652",
+        "change": "No semantic graph change.",
+        "component_key": "node_states",
+        "delta": "0",
+        "graph_component": "Node states",
+        "proposed_or_actual": "652",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "429",
+        "change": "No semantic graph change.",
+        "component_key": "aliases",
+        "delta": "0",
+        "graph_component": "Aliases",
+        "proposed_or_actual": "429",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "424",
+        "change": "No semantic graph change.",
+        "component_key": "canonical_aliases",
+        "delta": "0",
+        "graph_component": "Canonical aliases",
+        "proposed_or_actual": "424",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1071",
+        "change": "No semantic graph change.",
+        "component_key": "edges",
+        "delta": "0",
+        "graph_component": "Edges",
+        "proposed_or_actual": "1071",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "583",
+        "change": "No semantic graph change.",
+        "component_key": "claims",
+        "delta": "0",
+        "graph_component": "Claims",
+        "proposed_or_actual": "583",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1687",
+        "change": "No semantic graph change.",
+        "component_key": "assertions",
+        "delta": "0",
+        "graph_component": "Assertions",
+        "proposed_or_actual": "1687",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1729",
+        "change": "No semantic graph change.",
+        "component_key": "assertion_evidence",
+        "delta": "0",
+        "graph_component": "Assertion-evidence links",
+        "proposed_or_actual": "1729",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "583",
+        "change": "No semantic graph change.",
+        "component_key": "claim_assertion_maps",
+        "delta": "0",
+        "graph_component": "Claim-assertion lineage maps",
+        "proposed_or_actual": "583",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1071",
+        "change": "No semantic graph change.",
+        "component_key": "edge_assertion_maps",
+        "delta": "0",
+        "graph_component": "Edge-assertion lineage maps",
+        "proposed_or_actual": "1071",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "3948",
+        "change": "No semantic graph change.",
+        "component_key": "canonical_routes",
+        "delta": "0",
+        "graph_component": "Canonical routes",
+        "proposed_or_actual": "3948",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "1624",
+        "change": "No semantic graph change.",
+        "component_key": "node_card_maps",
+        "delta": "0",
+        "graph_component": "Node-to-card mappings",
+        "proposed_or_actual": "1624",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "184",
+        "change": "No semantic graph change.",
+        "component_key": "validations",
+        "delta": "0",
+        "graph_component": "Validations",
+        "proposed_or_actual": "184",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "2271",
+        "change": "No semantic graph change.",
+        "component_key": "search_documents",
+        "delta": "0",
+        "graph_component": "Search documents",
+        "proposed_or_actual": "2271",
+        "retrieval_rationale": "NA"
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "Protocol-only proposal; the account graph is byte-identical and no orphan can be introduced.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No node, identity, or alias operation is proposed.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "5 quarantined candidate groups → 5 quarantined candidate groups (+0; 0 new high-impact duplicates)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No edge or relationship operation is proposed.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No ontology or relationship vocabulary changes.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No claim or assertion operation is proposed.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No canonical source is added or changed; the user instruction is bound only as review-bundle input evidence.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No time-sensitive graph proposition changes.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No identity resolution or merge is proposed.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 unresolved canonical collisions → 0 unresolved canonical collisions (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No validation queue operation is proposed.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0.0000% (0/114 undated) → 0.0000% (0/114 undated) (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The graph and current retrieval corpus remain unchanged; activation testing will add focused policy-behavior cases at R1.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0 failures / 21 cases → 0 failures / 21 cases (+0 failures)",
+        "status": "PASS"
+      }
+    ],
+    "inline_output_gate_result": "PASS"
+  },
+  "operations": [],
+  "operations_applied": 0,
+  "operations_approved": 0,
+  "record_id": "R1-PD55-ACTUAL-GRAPH-DELTA-2026-07-14-001",
+  "stage": "R1",
+  "status": "implemented_conforming",
+  "zero_change_declarations": {
+    "account_graph_byte_identity_required": true,
+    "non_policy_card_delta": 0,
+    "semantic_graph_delta": 0
+  }
+}

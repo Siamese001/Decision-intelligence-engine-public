@@ -1,0 +1,12 @@
+wave: 0
+name: "Unblock, baseline & measurement harness"
+status: "COMPLETE"
+gates:
+  - id: "G0.1"
+    description: "Import smoke test"
+    type: "boolean"
+    required: true
+  - id: "G0.2"
+    description: "Baseline receipt present"
+    type: "boolean"
+    required: true

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "graph_delta_sha256": "a68cd6ff4361aa8e2b1caedad50879ebb0e23a36ae7f8b84bde0ffebad77dce5",
+  "card_delta_sha256": "ef4695fa94a81bfb7697e432519df062ae8fef749bc81ae446f30cfcfbd5c510",
+  "inline_sha256": "013de320d2d5883633c10b654f8763d459884ca663990bf29c7cc5d0545a0bff",
+  "validation_sha256": "177f633f7cff592a312adb22826d4dabdaef2ff7f98ec57e86516de784f1b0c3",
+  "conformance_sha256": "c903dfd9d7fdfadaf1851e3cf790900658b6645b4553e4b7c67cfdede53fcd70"
+}

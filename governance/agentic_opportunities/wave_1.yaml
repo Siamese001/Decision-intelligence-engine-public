@@ -1,0 +1,19 @@
+wave_number: 1
+wave_id: "Wave 1: Establish trustworthy entry-point and evaluation baselines"
+description: "Map workflows to producers/consumers/evaluators and correct qualification semantics before expanding autonomy"
+surface_catalog: "governance/agentic_opportunities/surface_catalog.yaml"
+test_suites:
+  - "tests/end_to_end/test_agentic_baseline_e2e.py"
+  - "tests/adversarial/test_agentic_evidence_adversarial.py"
+artifacts:
+  - "governance/agentic_opportunities/entrypoint_exposure_catalog.json"
+  - "governance/agentic_opportunities/frozen_cohort_manifest.json"
+  - "governance/agentic_opportunities/surface_catalog.yaml"
+criteria:
+  - "Truthful evaluator_kind labeling in dual_pipeline/evals/answer_eval_core/"
+  - "Semantic judge separated from structural heuristic scoring"
+  - "Terminal task success gating in dual_pipeline/evals/trajectory/"
+  - "Adaptation attempts separated from genuine successful recovery"
+  - "Unknown optimal steps explicitly prevent false efficiency score"
+  - "Surface catalog maps 8/8 required modalities across repository workflows"
+  - "Frozen cohort manifest establishes explicit sample denominators and clean/adversarial holdouts"

@@ -1,0 +1,424 @@
+{
+  "actual_card_diff_sha256": "3780118e0850b1fa421a4dc4b8a634032158dc421662203de652eecbad919c4a",
+  "actual_graph_delta_sha256": "238e5c5ca82a40671c477c900ffca9cfba80f06718d0cbbaafc63d978f905048",
+  "affected_card_ids": [
+    "NEE_02",
+    "NEE_06",
+    "NEE_10",
+    "NEE_11",
+    "NEE_13",
+    "NEE_16"
+  ],
+  "approval_decision_id": "AD-V54-EDO-AUTHORITY-BOUNDARY-2026-001",
+  "approval_precedes_first_write": true,
+  "approved_card_diff_sha256": "e8e1bf3649331a618a2d59cd06ac6d10a63203edf56a990344ee39dbb7145d22",
+  "approved_graph_delta_sha256": "67c169ddf19bde78ef7f3f35f3ef21520d503aeda0b80a0633f3ab1eb7d571e4",
+  "automatic_release_state_activation": {
+    "decision_id": "PD-51.1-AUTO-PROMOTION-AFTER-R1-O1",
+    "result": "approved_current",
+    "separate_promotion_step": false
+  },
+  "baseline_graph_sha256": "5c326c4825c9ad3621a014361257f13d8fa4a9637196d6473281af06ae03d7a3",
+  "baseline_immutability_result": "PASS",
+  "baseline_zip_sha256": "c3c6e3c6142dfa4278cb46feaf9b3a3f492c1a4c5fd233080eb7e7914115a9fb",
+  "card_conformance": {
+    "body_changes": "3/3",
+    "c1": "6/6",
+    "result": "PASS",
+    "route_only": "3/3",
+    "unlisted_card_changes": 0
+  },
+  "changed_file_inventory": {
+    "count": 143,
+    "path": "governance/v54/CHANGED_FILE_INVENTORY.json",
+    "unapproved_semantic_changes": 0
+  },
+  "component_counts": {
+    "alias": {
+      "after": 429,
+      "before": 429,
+      "delta": 0
+    },
+    "assertion": {
+      "after": "1687 / 1553",
+      "before": "1682 / 1563",
+      "delta": "5 / -10"
+    },
+    "assertion_evidence": {
+      "after": 1729,
+      "before": 1720,
+      "delta": 9
+    },
+    "canonical_alias": {
+      "after": "424 / 422",
+      "before": "424 / 424",
+      "delta": "0 / -2"
+    },
+    "canonical_route": {
+      "after": "3948 / 3943",
+      "before": "3940 / 3939",
+      "delta": "8 / 4"
+    },
+    "card": {
+      "after": 19,
+      "before": 19,
+      "delta": 0
+    },
+    "claim": {
+      "after": "583 / 519",
+      "before": "580 / 520",
+      "delta": "3 / -1"
+    },
+    "edge": {
+      "after": "1071 / 1033",
+      "before": "1069 / 1041",
+      "delta": "2 / -8"
+    },
+    "evidence_item": {
+      "after": 1617,
+      "before": 1614,
+      "delta": 3
+    },
+    "legacy_claim_assertion_map": {
+      "after": 583,
+      "before": 580,
+      "delta": 3
+    },
+    "legacy_edge_assertion_map": {
+      "after": 1071,
+      "before": 1069,
+      "delta": 2
+    },
+    "node": {
+      "after": "652 / 646",
+      "before": "652 / 647",
+      "delta": "0 / -1"
+    },
+    "node_card_map": {
+      "after": 1624,
+      "before": 1628,
+      "delta": -4
+    },
+    "node_state": {
+      "after": "652 / 646",
+      "before": "652 / 647",
+      "delta": "0 / -1"
+    },
+    "search_document": {
+      "after": "2271 / 1352",
+      "before": "2262 / 1346",
+      "delta": "9 / 6"
+    },
+    "source": {
+      "after": 174,
+      "before": 173,
+      "delta": 1
+    },
+    "source_version": {
+      "after": 174,
+      "before": 173,
+      "delta": 1
+    },
+    "validation": {
+      "after": 184,
+      "before": 184,
+      "delta": 0
+    }
+  },
+  "drift_result": "no_drift",
+  "first_canonical_write_at": "2026-07-14T15:54:53Z",
+  "g1_inline_output_sha256": "5fba145d46be68c54d3e95813e3c53bb1563cbc7bd444a39d16af177f8f33c40",
+  "generated_at": "2026-07-14T16:20:00Z",
+  "graph_operation_conformance": "125/125 exact under approved normalization",
+  "implementation_id": "R1-V54-EDO-AUTHORITY-BOUNDARY-2026-001",
+  "inline_gate_output": {
+    "card_rows": [
+      {
+        "addition": "Deactivated the retired Pod 4 node route; no card-body bytes change.",
+        "card": "NEE_02",
+        "change_type": "route",
+        "defense_or_evidence": "Direct user instruction to remove Pod 4 from current graph retrieval; June 15 direct workstreams remain routed.",
+        "retrieval_improvement": "Prevents portfolio/status routing from resolving through the obsolete umbrella."
+      },
+      {
+        "addition": "Corrected historical operating-model wording: EDO is enterprise-wide across NEE and not subordinate to NEE IT.",
+        "card": "NEE_06",
+        "change_type": "body+frontmatter",
+        "defense_or_evidence": "Direct user boundary correction; historical whiteboard lineage remains explicitly labeled.",
+        "retrieval_improvement": "Makes org-boundary synthesis decision-safe while preserving historical context."
+      },
+      {
+        "addition": "Corrected Josh Millar / EDO treatment and route the new confirmed leadership claim.",
+        "card": "NEE_10",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Existing user-confirmed Josh leadership plus the July 14 correction that EDO is not under NEE IT.",
+        "retrieval_improvement": "Exact stakeholder/org lookup no longer returns the false subordinate relationship."
+      },
+      {
+        "addition": "Deactivated the retired Pod 4 reuse route; no card-body bytes change.",
+        "card": "NEE_11",
+        "change_type": "route",
+        "defense_or_evidence": "Pod 4 is historical-only; reuse retrieval should resolve to direct GridOpti, Atlas, Trade Floor, Digital Thread, and E&C patterns.",
+        "retrieval_improvement": "Removes umbrella routing ambiguity from architecture-pattern traversal."
+      },
+      {
+        "addition": "Established June 15 as controlling current EDO authority, retire Pod 4 current treatment, and harden EDO as enterprise-wide across NEE.",
+        "card": "NEE_13",
+        "change_type": "body+frontmatter+route",
+        "defense_or_evidence": "Direct July 14 user correction plus the formal June 15 EDO status source and existing eight-workstream evidence.",
+        "retrieval_improvement": "Currentness ranking, exact-match lookup, and graph traversal converge on the eight direct workstreams and correct enterprise boundary."
+      },
+      {
+        "addition": "Deactivated the retired Pod 4 provenance route while preserving historical source lineage; no card-body bytes change.",
+        "card": "NEE_16",
+        "change_type": "route",
+        "defense_or_evidence": "Retirement preserves source evidence but removes the obsolete node from current route resolution.",
+        "retrieval_improvement": "Keeps provenance auditable without making the historical umbrella a current retrieval destination."
+      }
+    ],
+    "graph_delta_rows": [
+      {
+        "baseline": "173",
+        "change": "Added one direct user-correction source; strengthen the June 15 EDO source posture and notes.",
+        "component_key": "source",
+        "delta": "1",
+        "graph_component": "Sources",
+        "proposed_or_actual": "174",
+        "retrieval_rationale": "Provides exact provenance for the authority, Pod 4 retirement, and enterprise-boundary correction."
+      },
+      {
+        "baseline": "173",
+        "change": "Added one hash-bound user source version; update the June 15 version scope/posture.",
+        "component_key": "source_version",
+        "delta": "1",
+        "graph_component": "Source versions",
+        "proposed_or_actual": "174",
+        "retrieval_rationale": "Makes source ranking, scope, date precision, and current-authority traversal explicit."
+      },
+      {
+        "baseline": "1614",
+        "change": "Added three exact proposition-level evidence items from the July 14 instruction.",
+        "component_key": "evidence_item",
+        "delta": "3",
+        "graph_component": "Evidence items",
+        "proposed_or_actual": "1617",
+        "retrieval_rationale": "Lets every corrected authority/boundary assertion cite the exact user-confirmed proposition."
+      },
+      {
+        "baseline": "652 / 647",
+        "change": "Updated EDO, NEE, NEE IT, and June-source nodes; retire the Pod 4 umbrella from active retrieval.",
+        "component_key": "node",
+        "delta": "0 / -1",
+        "graph_component": "Nodes (total / active)",
+        "proposed_or_actual": "652 / 646",
+        "retrieval_rationale": "Stops exact node lookup from treating Pod 4 as current and makes EDO’s enterprise-wide boundary explicit."
+      },
+      {
+        "baseline": "652 / 647",
+        "change": "Updated five authority/currentness states; Pod 4 becomes historical-only and the June source becomes a connected controlling source.",
+        "component_key": "node_state",
+        "delta": "0 / -1",
+        "graph_component": "Node states (total / current eligible)",
+        "proposed_or_actual": "652 / 646",
+        "retrieval_rationale": "Removes Pod 4 from current retrieval while retaining lineage and makes the June source eligible as an authoritative graph context."
+      },
+      {
+        "baseline": "429",
+        "change": "Reclassify two Pod 4 alias rows as historical lineage; row count is unchanged.",
+        "component_key": "alias",
+        "delta": "0",
+        "graph_component": "Legacy aliases",
+        "proposed_or_actual": "429",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "424 / 424",
+        "change": "Deactivated the canonical “Pod 4: Data Products” and “EDO Data Products” aliases effective June 15.",
+        "component_key": "canonical_alias",
+        "delta": "0 / -2",
+        "graph_component": "Canonical aliases (total / active)",
+        "proposed_or_actual": "424 / 422",
+        "retrieval_rationale": "Prevents exact alias resolution from returning the obsolete umbrella as a current workstream."
+      },
+      {
+        "baseline": "1069 / 1041",
+        "change": "Added the enterprise-wide NEE→EDO boundary and June-source context edges; supersede two under-IT, three Pod 4, and five March snapshot edges.",
+        "component_key": "edge",
+        "delta": "2 / -8",
+        "graph_component": "Edges (total / unsuperseded)",
+        "proposed_or_actual": "1071 / 1033",
+        "retrieval_rationale": "Current traversal now reaches exactly the June 15 eight-workstream view and no longer traverses EDO as subordinate to NEE IT."
+      },
+      {
+        "baseline": "580 / 520",
+        "change": "Added three corrected claims, strengthen two existing claims, and supersede four obsolete current claims.",
+        "component_key": "claim",
+        "delta": "3 / -1",
+        "graph_component": "Claims (total / unsuperseded)",
+        "proposed_or_actual": "583 / 519",
+        "retrieval_rationale": "Current claim retrieval returns the enterprise boundary, June 15 authority, and Pod 4 retirement instead of dated umbrella framing."
+      },
+      {
+        "baseline": "1682 / 1563",
+        "change": "Added five accepted canonical assertions, promote the June 15 authority assertion, reconcile one historical whiteboard assertion, and supersede fourteen conflicting assertions.",
+        "component_key": "assertion",
+        "delta": "5 / -10",
+        "graph_component": "Assertions (total / retrieval eligible)",
+        "proposed_or_actual": "1687 / 1553",
+        "retrieval_rationale": "Decision-safe retrieval now excludes subordinate/Pod 4/March-snapshot assertions and promotes the controlling authority facts."
+      },
+      {
+        "baseline": "1720",
+        "change": "Added nine support links across the five new assertions and the promoted June 15 authority assertion.",
+        "component_key": "assertion_evidence",
+        "delta": "9",
+        "graph_component": "Assertion-evidence links",
+        "proposed_or_actual": "1729",
+        "retrieval_rationale": "Preserves direct citation chains for every corrected high-materiality assertion."
+      },
+      {
+        "baseline": "580",
+        "change": "Added three compatibility mappings for the new claims.",
+        "component_key": "legacy_claim_assertion_map",
+        "delta": "3",
+        "graph_component": "Claim-assertion lineage maps",
+        "proposed_or_actual": "583",
+        "retrieval_rationale": "Keeps legacy claim IDs and canonical assertions traversable together."
+      },
+      {
+        "baseline": "1069",
+        "change": "Added two compatibility mappings for the new boundary/source-context edges.",
+        "component_key": "legacy_edge_assertion_map",
+        "delta": "2",
+        "graph_component": "Edge-assertion lineage maps",
+        "proposed_or_actual": "1071",
+        "retrieval_rationale": "Keeps new edge IDs linked to their canonical assertions for graph and compatibility queries."
+      },
+      {
+        "baseline": "3940 / 3939",
+        "change": "Added eight claim/assertion routes and deactivate four Pod 4 node routes.",
+        "component_key": "canonical_route",
+        "delta": "8 / 4",
+        "graph_component": "Canonical routes (total / active)",
+        "proposed_or_actual": "3948 / 3943",
+        "retrieval_rationale": "Routes corrected facts to NEE_10/NEE_13 and removes the obsolete umbrella from portfolio, reuse, pattern, and provenance destinations."
+      },
+      {
+        "baseline": "1628",
+        "change": "Removed four derived Pod 4 node-card mappings when their routes are deactivated.",
+        "component_key": "node_card_map",
+        "delta": "-4",
+        "graph_component": "Node-to-card mappings",
+        "proposed_or_actual": "1624",
+        "retrieval_rationale": "Eliminates stale current card destinations for the retired umbrella while the inactive route rows preserve audit lineage."
+      },
+      {
+        "baseline": "184",
+        "change": "Resolved EDO placement and close Pod 4 reconciliation; retain only exact-title/lineage validation where still open.",
+        "component_key": "validation",
+        "delta": "0",
+        "graph_component": "Validations",
+        "proposed_or_actual": "184",
+        "retrieval_rationale": "NA"
+      },
+      {
+        "baseline": "2262 / 1346",
+        "change": "Added nine corrected claim/assertion projections, update twenty-one affected projections, and suppress superseded eligible projections.",
+        "component_key": "search_document",
+        "delta": "9 / 6",
+        "graph_component": "Search documents (total / eligible)",
+        "proposed_or_actual": "2271 / 1352",
+        "retrieval_rationale": "Lexical and FTS retrieval converge on enterprise-wide EDO, June 15 authority, and the eight direct workstreams."
+      },
+      {
+        "baseline": "19",
+        "change": "No graph card-row count change; C1 implemented three body/frontmatter revisions and three route-only impacts.",
+        "component_key": "card",
+        "delta": "0",
+        "graph_component": "Cards",
+        "proposed_or_actual": "19",
+        "retrieval_rationale": "NA"
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "No operational orphan is introduced. The June 15 source is connected to EDO; the retired Pod 4 node is historical-only, not an operational orphan.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No node or identity is merged or added. Pod 4 is retired in place so its historical identity remains auditable.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "5 candidate groups → 5 candidate groups (+0; 0 new high-impact duplicates)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The two new relationships use distinct registered predicates and subjects; conflicting old edges are superseded rather than duplicated.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No new relationship vocabulary is introduced; HAS_HORIZONTAL_LAYER/CONTAINS and DATED_SNAPSHOT_OF/CONTEXT_FOR are already registered families.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All 583 implemented claims retain subject, source, card route, confidence, HITL posture, evidence, and assertion lineage.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The new user source/version is hash-bound with exact date, scope, posture, authority rank, and cold pointer; June 15 metadata remains complete.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "June 15 controls retirement/current-workstream dates; July 14 controls the direct enterprise-boundary correction. Historical assertions receive explicit valid-to dates.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "100.0000% → 100.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "No person or organization identity resolution is changed. The Pod 4 umbrella is retired, not merged into any one current workstream.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 unresolved → 0 unresolved (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "The two affected validation rows remain closed or explicitly scoped; no new open P0/P1 item is created.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0.0000% → 0.0000% (+0.0000 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "All 21 permanent semantic cases and the V54 authority count-lock pass on the implemented graph; the nine targeted EDO authority/boundary checks pass 9/9.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0 failures / 21 cases; 0/9 targeted checks → 0 failures / 21 cases; 9/9 targeted checks (+0 suite failures; +9 targeted passes)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "inline_output_gate_result": "pass",
+  "lineage_currentness_audience_hitl_results": "PASS — June 15 authority is evidence-linked and current; Pod 4 remains historical lineage only; enterprise boundary is direct-user-confirmed; no audience expansion or blocked-use leakage.",
+  "packaging_gate_result": "pass",
+  "r1_inline_output_sha256": "6784ba01a6638c6decf2cae37b7867e93c439c647a7de6c97bcd0ed3cdc87289",
+  "release_state": "approved_current",
+  "schema_and_integrity_results": "PASS — schema, ontology, relationship vocabulary, SQLite integrity, quick check, foreign keys, and FTS synchronization all pass.",
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

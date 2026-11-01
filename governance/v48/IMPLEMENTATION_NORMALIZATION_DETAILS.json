@@ -1,0 +1,21 @@
+{
+  "approved_sql_sha256": "b675471e17dd8b4d430f812347b817bcf9f976d59b043e47f9a6998c880bf5b0",
+  "classification": "nonsemantic_execution_repair",
+  "dependent_view_strategy": "drop all 29 baseline views before reconstruction; recreate byte-identical definitions; then apply three approved currentness-safe replacements",
+  "legacy_priority_allowlist": [
+    "P0",
+    "P1",
+    "P1 currentness validation",
+    "P2",
+    "P2 currentness",
+    "P2 currentness validation",
+    "P2 external-safe wording",
+    "P3",
+    "currentness validation",
+    "external-safe wording verification"
+  ],
+  "normalization_id": "IN-V48-LEGACY-REBUILD-001",
+  "normalized_sql_sha256": "e5047630dfbead9c2cf47f98f46d9c7d084d0a3487252e7b5ab7f5422e32ca1d",
+  "reason": "The approved SQL otherwise fails because views reference dropped tables and preserved baseline priority strings include descriptive legacy variants.",
+  "semantic_row_delta": 0
+}

@@ -1,0 +1,60 @@
+{
+  "component_counts": {
+    "alias": 429,
+    "assertion_evidence": 1729,
+    "assertion_retrieval_eligible": 1553,
+    "assertion_total": 1687,
+    "canonical_alias_active": 422,
+    "canonical_alias_total": 424,
+    "canonical_edges": 638,
+    "canonical_route_active": 3943,
+    "canonical_route_total": 3948,
+    "card": 19,
+    "claim_total": 583,
+    "claim_unsuperseded": 519,
+    "current_assertions": 1085,
+    "decision_safe_assertions": 702,
+    "edge_total": 1071,
+    "edge_unsuperseded": 1033,
+    "evidence_chain": 1729,
+    "evidence_item": 1617,
+    "fts_documents": 1352,
+    "governance_approval": 7,
+    "legacy_claim_assertion_map": 583,
+    "legacy_edge_assertion_map": 1071,
+    "node_active": 646,
+    "node_card_map": 1624,
+    "node_state_current_eligible": 646,
+    "node_total": 652,
+    "query_definitions": 18,
+    "search_document_eligible": 1352,
+    "search_document_total": 2271,
+    "source": 174,
+    "source_version": 174,
+    "validation": 184
+  },
+  "database_inventory": {
+    "database_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+    "generated_at": "2026-07-14T16:20:00Z",
+    "index_count": 47,
+    "object_inventory_sha256": "ebef64bd48042f54fa80cf18d8cfcdd1a6e4b3244b836387e1e14f24f622f226",
+    "release_version": "54.0",
+    "row_counts_sha256": "3d62b7d04cf603a3ced6ca78b47f3e462012d0bea815358008386de1835f83c9",
+    "schema_sha256": "36b39347eb7ebb1059cca255e50ed0c71e678fc93f262d88660870e0b097831f",
+    "table_count": 85,
+    "trigger_count": 40,
+    "view_count": 40
+  },
+  "database_sha256": "a780950fffe48e3dbc3e6509f7af8cfd5afef2e2117e0b3437f2afeb11a8129f",
+  "foreign_key_violations": [],
+  "integrity_check": [
+    "ok"
+  ],
+  "ontology_changed": false,
+  "quick_check": [
+    "ok"
+  ],
+  "relationship_vocabulary_changed": false,
+  "schema_changed": false,
+  "status": "PASS"
+}

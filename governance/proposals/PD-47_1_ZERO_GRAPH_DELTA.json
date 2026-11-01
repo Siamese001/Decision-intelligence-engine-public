@@ -1,0 +1,199 @@
+{
+  "baseline_graph_sha256": "4eb895a6b79eba6b57d1092f169ee9145371255137c9a70e2dda6d9022ce480b",
+  "baseline_zip_sha256": "4bc0ae8709f979a272d1d248116b37900b01f72ca40803052a1819853c77fa24",
+  "canonical_serialization_sha256": "749826e67654f74d9d8a9c67cdf9fb74318d50639f2297be8c13b077ace36a69",
+  "component_counts": {
+    "alias": {
+      "after": "393",
+      "before": "393",
+      "delta": "+0"
+    },
+    "claim": {
+      "after": "515 / 472",
+      "before": "515 / 472",
+      "delta": "+0 / +0"
+    },
+    "edge": {
+      "after": "1,021 / 995",
+      "before": "1,021 / 995",
+      "delta": "+0 / +0"
+    },
+    "node": {
+      "after": "628",
+      "before": "628",
+      "delta": "+0"
+    },
+    "node_card_map": {
+      "after": "1,555",
+      "before": "1,555",
+      "delta": "+0"
+    },
+    "source": {
+      "after": "143",
+      "before": "143",
+      "delta": "+0"
+    },
+    "validation": {
+      "after": "171",
+      "before": "171",
+      "delta": "+0"
+    }
+  },
+  "generated_at": "2026-07-11T15:07:43Z",
+  "inline_gate_output": {
+    "graph_delta_rows": [
+      {
+        "baseline": "143",
+        "change": "No source records changed.",
+        "component_key": "source",
+        "delta": "+0",
+        "graph_component": "Sources",
+        "proposed_or_actual": "143",
+        "retrieval_rationale": "Preserves the exact governed source inventory while the release changes only review controls."
+      },
+      {
+        "baseline": "628",
+        "change": "No graph nodes changed.",
+        "component_key": "node",
+        "delta": "+0",
+        "graph_component": "Nodes",
+        "proposed_or_actual": "628",
+        "retrieval_rationale": "Preserves entity identity and existing node-ranking behavior."
+      },
+      {
+        "baseline": "393",
+        "change": "No aliases changed.",
+        "component_key": "alias",
+        "delta": "+0",
+        "graph_component": "Aliases",
+        "proposed_or_actual": "393",
+        "retrieval_rationale": "Preserves exact-name and alternate-name matching behavior."
+      },
+      {
+        "baseline": "1,021 / 995",
+        "change": "No relationships changed.",
+        "component_key": "edge",
+        "delta": "+0 / +0",
+        "graph_component": "Edges — total / active",
+        "proposed_or_actual": "1,021 / 995",
+        "retrieval_rationale": "Preserves lineage and traversal results; V47.1 only makes edge deltas visible and validated."
+      },
+      {
+        "baseline": "515 / 472",
+        "change": "No claims changed.",
+        "component_key": "claim",
+        "delta": "+0 / +0",
+        "graph_component": "Claims — total / active",
+        "proposed_or_actual": "515 / 472",
+        "retrieval_rationale": "Preserves semantic answer content while forcing future claim changes into a visible, reconciled table."
+      },
+      {
+        "baseline": "171",
+        "change": "No validation items changed.",
+        "component_key": "validation",
+        "delta": "+0",
+        "graph_component": "Validation items",
+        "proposed_or_actual": "171",
+        "retrieval_rationale": "Preserves currentness and HITL behavior while requiring future movements to be shown inline."
+      },
+      {
+        "baseline": "1,555",
+        "change": "No routes changed.",
+        "component_key": "node_card_map",
+        "delta": "+0",
+        "graph_component": "Node-to-card mappings",
+        "proposed_or_actual": "1,555",
+        "retrieval_rationale": "Preserves current card retrieval routes while making future route additions visible in both graph and card tables."
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "0 → 0 (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "5.13% → 5.13% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "100% → 100% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "97.90% → 97.90% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "95.33% → 95.33% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "0 → 0 (+0)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "0.00% → 0.00% (+0.00 pp)",
+        "status": "PASS"
+      },
+      {
+        "comment": "Zero account-graph delta; the baseline value is preserved and the row is now mandatory in generated output.",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "0/5 → 0/5 (+0)",
+        "status": "PASS"
+      }
+    ]
+  },
+  "input_artifact_hashes": {},
+  "notes": [
+    "C6 protocol-only activation under Section 6.5.",
+    "The metric values are unchanged because the account graph is byte-identical."
+  ],
+  "operations": [],
+  "policy_sha256": "ea94485dd1206891c4b4317083ee7a83c2eb902fbdd7cc585b4d31e95fc6fe68",
+  "proposal_id": "G1-PD-47.1-CONTROL-ACTIVATION-ZERO-GRAPH",
+  "proposal_type": "proposed_graph_delta",
+  "scope": "Account graph and all meaning-bearing graph/register rows",
+  "status": "approved_zero_change",
+  "zero_change_declarations": {
+    "graph_database_byte_identical_to_v47": true,
+    "graph_migrations_byte_identical_to_v47": true,
+    "no_graph_export_regenerated_from_new_semantics": true,
+    "no_semantic_graph_delta_applied": true
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "actual_card_diff_sha256": "df4515832760739b2667c089831e611659e7f5ca124b4b574ad56b6d07038076",
+  "actual_graph_delta_sha256": "5479e2c53d004cb42a6c382275de4bbbea7045a1e8ed62fdf38383c1c0e6149d",
+  "actual_graph_operations_sha256": "5479e2c53d004cb42a6c382275de4bbbea7045a1e8ed62fdf38383c1c0e6149d",
+  "approval_decision_id": "AD-46-LINKEDIN-PROFILE-RECONCILIATION",
+  "approved_card_diff_sha256": "e15e8726cb388dbdd8f4b77e962c3a4c6dc70c6079569d388e2b6976e3f834b5",
+  "approved_card_state_sha256": "df4515832760739b2667c089831e611659e7f5ca124b4b574ad56b6d07038076",
+  "approved_graph_delta_sha256": "a01a6927aa6329b3d13459b2d4561004fdc59b5d61aef2f36c706b0763f5f5d5",
+  "approved_graph_operations_sha256": "5479e2c53d004cb42a6c382275de4bbbea7045a1e8ed62fdf38383c1c0e6149d",
+  "baseline_existing_row_immutability": {
+    "alias": {
+      "baseline_rows": 392,
+      "changed": 0,
+      "missing": 0
+    },
+    "card": {
+      "baseline_rows": 19,
+      "changed": 0,
+      "missing": 0
+    },
+    "claim": {
+      "baseline_rows": 508,
+      "changed": 0,
+      "missing": 0
+    },
+    "claim_confidence_hitl_matrix": {
+      "baseline_rows": 508,
+      "changed": 0,
+      "missing": 0
+    },
+    "claim_hitl_validation_queue": {
+      "baseline_rows": 366,
+      "changed": 0,
+      "missing": 0
+    },
+    "daily_ingest_event": {
+      "baseline_rows": 26,
+      "changed": 0,
+      "missing": 0
+    },
+    "edge": {
+      "baseline_rows": 997,
+      "changed": 0,
+      "missing": 0
+    },
+    "node": {
+      "baseline_rows": 602,
+      "changed": 0,
+      "missing": 0
+    },
+    "node_card_map": {
+      "baseline_rows": 1503,
+      "changed": 0,
+      "missing": 0
+    },
+    "p0_p1_action_register": {
+      "baseline_rows": 92,
+      "changed": 0,
+      "missing": 0
+    },
+    "p1_validation_sprint": {
+      "baseline_rows": 94,
+      "changed": 0,
+      "missing": 0
+    },
+    "source": {
+      "baseline_rows": 119,
+      "changed": 0,
+      "missing": 0
+    },
+    "source_request_matrix": {
+      "baseline_rows": 59,
+      "changed": 0,
+      "missing": 0
+    },
+    "validation_queue": {
+      "baseline_rows": 168,
+      "changed": 0,
+      "missing": 0
+    }
+  },
+  "baseline_immutability_result": {
+    "baseline_graph_sha256": "1dd1f557279a1f0c43d7f420f954494c76ef4a74cd638cb4d9e6a0317d9f629a",
+    "baseline_zip_sha256_after": "5867d91777779f820ad0afdd71dc71a9417648c8551d585988df8551afc6dde3",
+    "baseline_zip_sha256_before": "5867d91777779f820ad0afdd71dc71a9417648c8551d585988df8551afc6dde3",
+    "status": "pass"
+  },
+  "card_conformance": {
+    "card_spine_unchanged": true,
+    "changed_paths": [
+      "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+      "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md",
+      "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md"
+    ],
+    "exact_hash_match": true,
+    "unlisted_cards_unchanged": true
+  },
+  "changed_file_inventory": [
+    "CHANGELOG.md",
+    "MANIFEST.md",
+    "QA_REPORT.md",
+    "README.md",
+    "approvals/AD-46-LINKEDIN-PROFILE-RECONCILIATION.json",
+    "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+    "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md",
+    "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+    "exports/open_questions.csv",
+    "exports/source_lineage.csv",
+    "exports/source_request_matrix.csv",
+    "exports/stakeholder_map.csv",
+    "exports/v46_alias_delta.csv",
+    "exports/v46_card_change_matrix.csv",
+    "exports/v46_claim_confidence_hitl_matrix.csv",
+    "exports/v46_claim_confidence_hitl_summary.csv",
+    "exports/v46_claim_delta.csv",
+    "exports/v46_daily_ingest_event_delta.csv",
+    "exports/v46_edge_delta.csv",
+    "exports/v46_graph_delta_summary.csv",
+    "exports/v46_graph_delta_summary.json",
+    "exports/v46_graph_delta_summary.md",
+    "exports/v46_hitl_claim_validation_queue.csv",
+    "exports/v46_linkedin_profile_registry.csv",
+    "exports/v46_node_card_map_delta.csv",
+    "exports/v46_node_delta.csv",
+    "exports/v46_qa_summary.json",
+    "exports/v46_regeneration_summary.json",
+    "exports/v46_source_delta.csv",
+    "exports/v46_source_request_delta.csv",
+    "exports/v46_validation_delta.csv",
+    "exports/validation_queue.csv",
+    "governance/IMPLEMENTATION_CONFORMANCE_V46_LINKEDIN_PROFILE_RECONCILIATION.json",
+    "governance/implementation/ACTUAL_V46_CARD_DELTA.json",
+    "governance/implementation/ACTUAL_V46_GRAPH_DELTA.json",
+    "governance/proposals/C1_V46_LINKEDIN_PROFILE_RECONCILIATION.json",
+    "governance/proposals/G1_V46_LINKEDIN_PROFILE_RECONCILIATION.json",
+    "graph/migrations/v46_linkedin_stakeholder_profile_reconciliation.sql",
+    "graph/nee_graph.sqlite",
+    "inputs/linkedin_profile_urls_2026-07-11.txt",
+    "intake/V46_LINKEDIN_STAKEHOLDER_PROFILE_RECONCILIATION_2026_07_11.md"
+  ],
+  "drift_result": "none",
+  "first_canonical_write_at": "2026-07-11T12:05:53Z",
+  "generated_at": "2026-07-11T12:05:53Z",
+  "implementation_id": "I1-V46-LINKEDIN-PROFILE-RECONCILIATION-2026-07-11",
+  "lineage_currentness_audience_hitl_results": {
+    "allowed_audiences": [
+      "internal_account_team"
+    ],
+    "canonical_renames": 0,
+    "existing_role_or_relationship_assertions_changed": 0,
+    "identity_merges": 0,
+    "open_p2_validations": 3,
+    "pointer_authority_only": true,
+    "raw_linkedin_payloads_packaged": false,
+    "status": "pass",
+    "url_only_boundary": true
+  },
+  "manifest_results": {
+    "entries": 473,
+    "failures": []
+  },
+  "packaging_gate_result": "pass",
+  "release_state": "candidate",
+  "schema_and_integrity_results": {
+    "claim_fts_parity": true,
+    "foreign_key_violations": 0,
+    "migration_replay_counts_match": true,
+    "migration_replay_foreign_keys": 0,
+    "migration_replay_integrity": "ok",
+    "node_fts_parity": true,
+    "relationship_vocabulary_unchanged": true,
+    "schema_unchanged": true,
+    "sqlite_integrity": "ok"
+  },
+  "status": "pass",
+  "unapproved_semantic_changes": []
+}

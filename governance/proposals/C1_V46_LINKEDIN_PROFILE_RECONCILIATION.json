@@ -1,0 +1,110 @@
+{
+  "baseline_package": "NEE_v45",
+  "baseline_zip_filename": "NEE_v45(3).zip",
+  "baseline_zip_sha256": "5867d91777779f820ad0afdd71dc71a9417648c8551d585988df8551afc6dde3",
+  "canonical_serialization_sha256": "e15e8726cb388dbdd8f4b77e962c3a4c6dc70c6079569d388e2b6976e3f834b5",
+  "card_count_before": 19,
+  "card_count_proposed_after": 19,
+  "card_spine_unchanged": true,
+  "cards": [
+    {
+      "before_sha256": "868e509329a7cd9156babfb82dae07ddb6d4bc66e90ac6db0e9c4889c698e84e",
+      "card_id": "NEE_10",
+      "frontmatter_changes": {},
+      "impact_types": [
+        "provenance",
+        "identity_resolution",
+        "validation_routing"
+      ],
+      "path": "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+      "proposed_after_sha256": "ab3b0c470c05a45e4072eb796b36e3a3ecc901f23a241573760770484208c49d",
+      "rationale": "Expose the governed profile-pointer ingest and two new candidate identities without asserting current organizational facts.",
+      "rollback_or_forward_repair": "Remove the appended v46 section and regenerate derivatives; the pre-v46 card body remains byte-identical to the baseline.",
+      "routing_changes": [
+        "Adds explicit v46 source/identity/validation routes; no card-home or card-spine change."
+      ],
+      "supporting_graph_items": [
+        "claim_v46_linkedin_registry_scope",
+        "claim_v46_matt_martinello_public_profile",
+        "claim_v46_francisco_guzman_public_profile"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md\n+++ b/cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md\n@@ -393,3 +393,23 @@\n - `Rianne Donst` remains separate from the earlier first-name-only `Rianne` record.\n - The roster's `NEA/TC` label for Brett Gavagni and Rianne Donst is preserved verbatim and not translated into an organization edge.\n - **Damyn Gessler has a preserved source conflict:** the July 11 roster labels him NEA while the June 29 status packet labels him PartnerAdvisory. Current affiliation is blocked pending validation.\n+\n+## v46 LinkedIn profile-pointer reconciliation\n+\n+**Posture:** 23 user-supplied external public-profile URLs received 2026-07-11; pointer-only and source-attributed. No LinkedIn page content, title, employer, reporting line, ownership, RACI, decision right, delivery-accountability field, or effective date is asserted by this ingest.\n+\n+| Result | Count / treatment |\n+|---|---|\n+| Unique profile URLs proposed for registration | 23 |\n+| Existing canonical stakeholder nodes reused | 21 |\n+| New candidate stakeholder identity nodes | 2 — Matt Martinello; Francisco Guzman |\n+| Existing role, title, reporting, ownership, RACI, decision-right, or delivery-accountability changes | 0 |\n+\n+### New candidate identity records\n+\n+| Person | Profile pointer | Allowed use before internal validation |\n+|---|---|---|\n+| Matt Martinello | https://www.linkedin.com/in/matt-martinello-21a1297a/ | Internal identity lookup and explicitly source-attributed URL reference only; current internal title, affiliation, scope, reporting line, effective date, and decision rights remain P2. |\n+| Francisco Guzman | https://www.linkedin.com/in/francisco-guzman-a5179b12/ | Internal identity lookup and explicitly source-attributed URL reference only; current internal title, affiliation, scope, reporting line, effective date, and decision rights remain P2. |\n+\n+The remaining 21 URLs are proposed as `SOURCED_FROM` pointers to existing canonical stakeholders. The complete registry is `exports/v46_linkedin_profile_registry.csv`.\n"
+    },
+    {
+      "before_sha256": "5c6eedac726d6e4f8f9b43a117f0f991a80c11a4bef7cd30aa103a5f16dbad9b",
+      "card_id": "NEE_15",
+      "frontmatter_changes": {},
+      "impact_types": [
+        "provenance",
+        "identity_resolution",
+        "validation_routing"
+      ],
+      "path": "cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md",
+      "proposed_after_sha256": "c6b5a782d58c04db5ae3f7edd84c452bb664c8ffc4a609b9cffa46d2a2b5caa9",
+      "rationale": "Record the reversible Mandy alias, Gordon duplicate candidate, and Steve/Rich no-rename controls.",
+      "rollback_or_forward_repair": "Remove the appended v46 section and regenerate derivatives; the pre-v46 card body remains byte-identical to the baseline.",
+      "routing_changes": [
+        "Adds explicit v46 source/identity/validation routes; no card-home or card-spine change."
+      ],
+      "supporting_graph_items": [
+        "alias_v46_mandy_bambenek_hopmann",
+        "edge_v46_gordon_paynter_duplicate_candidate",
+        "claim_v46_steve_barr_profile_handle_no_rename",
+        "claim_v46_rich_argentieri_profile_display_boundary"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md\n+++ b/cards/NEE_15_Glossary_Aliases_and_Name_Resolution.md\n@@ -242,3 +242,11 @@\n - Represented `FastPass Orchestrator + License.AI` as a source-scoped combined group with `INCLUDES` links; canonical components remain separate.\n - Preserved raw Billing row cells and marked the left-shift repair as candidate.\n - Added candidate identity links for Jake/Jacob, Nick/Nicholas, Miles/Miles Erickson, Matt K/Matthew Koch, and Justin/Justin Muskivitch. No aliases or merges were created for those candidates.\n+\n+## v46 public-profile identity controls\n+\n+- **Mandy Hopmann:** propose `Mandy Bambenek Hopmann` as a high-confidence, reversible retrieval alias from the user-supplied full-name profile URL. Canonical name remains Mandy Hopmann.\n+- **Gordon Paynter:** the v45 baseline contains `person_gordon_paynter` and `stakeholder_gordon_paynter`. Propose only a `CANDIDATE_FOR` duplicate-resolution edge. Do not merge, redirect, retire, or migrate relationships until P2 approval identifies the surviving record and rollback path.\n+- **Steve Barr:** the supplied URL handle is `stevenrbarr`. Preserve the Steve Barr canonical record; do not add a Steven Barr alias or rename from the handle alone.\n+- **Richard Argentieri:** the supplied URL handle is surname-only (`argentieri`). Preserve the existing Richard Argentieri canonical-name lock and do not add Rich/Rich Argentieri aliases without an explicit policy decision.\n+- **Identity merges proposed or completed in v46:** 0.\n"
+    },
+    {
+      "before_sha256": "d6da26fbb161a5903fb15c4dfac07389a7633d6da599e7d97d43dd9ef8d3a778",
+      "card_id": "NEE_16",
+      "frontmatter_changes": {},
+      "impact_types": [
+        "provenance",
+        "identity_resolution",
+        "validation_routing"
+      ],
+      "path": "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md",
+      "proposed_after_sha256": "b7b3db7d6606407d6812c47d767a41f7222dde3aa14956e35db126b62a0d603f",
+      "rationale": "Record exact input provenance, pointer-only authority, retrieval boundary, artifact hygiene, and registry route.",
+      "rollback_or_forward_repair": "Remove the appended v46 section and regenerate derivatives; the pre-v46 card body remains byte-identical to the baseline.",
+      "routing_changes": [
+        "Adds explicit v46 source/identity/validation routes; no card-home or card-spine change."
+      ],
+      "supporting_graph_items": [
+        "source_v46_linkedin_stakeholder_reconciliation_2026_07_11",
+        "claim_v46_linkedin_registry_scope"
+      ],
+      "unified_or_section_diff": "--- a/cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md\n+++ b/cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md\n@@ -406,3 +406,12 @@\n | Raw artifact in package | No |\n \n The package includes normalized CSV derivatives that preserve every raw cell, including the blank H header and the Billing row overflow. The raw XLSX remains outside the active package under the default packaging rule. `source_date=2026-07-11` records receipt, not business-effective currentness.\n+\n+## v46 external public-profile provenance\n+\n+- **Input:** 23 unique LinkedIn profile URLs supplied directly by the user on 2026-07-11.\n+- **Representation:** one external-public-profile source record and source node per URL, plus one package-reconciliation source.\n+- **Retrieval boundary:** URL-only. No LinkedIn page content, HTML, image, screenshot, cookie, or profile payload was collected or relied upon.\n+- **Authority boundary:** authoritative for the exact supplied URL and the governed identity-routing proposal only; not authoritative for profile contents, current title, affiliation, reporting line, ownership, RACI, decision rights, delivery accountability, or effective date.\n+- **Artifact hygiene:** no raw LinkedIn payload is included. Only governed URL pointers, concise reconciliation notes, graph lineage, validation routes, and derivatives are proposed.\n+- **Registry:** `exports/v46_linkedin_profile_registry.csv`.\n"
+    }
+  ],
+  "generated_at": "2026-07-11T11:43:28Z",
+  "input_artifact_hashes": {
+    "inputs/linkedin_profile_urls_2026-07-11.txt": "6b94f27c4c036842d5ad8183f30538a26d93751e8fa184da019d8ed00635a912"
+  },
+  "policy_sha256": "d0a27207d1c49be6d853cf9ceb7dde957c64c36e6645c2576c223819537695a2",
+  "proposal_id": "C1-V46-LINKEDIN-PROFILE-RECONCILIATION-2026-07-11",
+  "proposal_type": "proposed_card_delta",
+  "status": "proposed",
+  "target_package": "NEE_v46",
+  "unlisted_cards_unchanged": true,
+  "zero_change_declarations": {
+    "NEE_00": "no_change",
+    "NEE_01": "no_change",
+    "NEE_02": "no_change",
+    "NEE_03": "no_change",
+    "NEE_04": "no_change",
+    "NEE_05": "no_change",
+    "NEE_06": "no_change",
+    "NEE_07": "no_change",
+    "NEE_08": "no_change",
+    "NEE_09": "no_change",
+    "NEE_11": "no_change",
+    "NEE_12": "no_change",
+    "NEE_13": "no_change",
+    "NEE_14": "no_change",
+    "NEE_22": "no_change",
+    "NEE_99": "no_change",
+    "card_spine": "no_change",
+    "root_PROJECT_INSTRUCTIONS": "no_change"
+  }
+}

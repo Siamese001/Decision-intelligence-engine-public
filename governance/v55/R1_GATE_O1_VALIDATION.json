@@ -1,0 +1,24 @@
+{
+  "actual_card_delta_sha256": "af273a87e8c2c33d294f9eac43f95e65a880305fad919a493f46855c2566d79a",
+  "actual_graph_delta_sha256": "730e762e557737adc8448178a70295d03554bd8b849b316fa410e8cff6803b86",
+  "checks": {
+    "actual_rows_reconcile_to_approved_proposals": true,
+    "all_metrics_pass": true,
+    "all_zero_graph_rows_render_NA": true,
+    "card_rows": 1,
+    "exact_heading_order": [
+      "Graph Delta and Retrieval Impact",
+      "Mandatory Graph Metrics",
+      "Card Additions and Retrieval Impact"
+    ],
+    "exact_markdown_table_count": 3,
+    "graph_rows": 17,
+    "metric_rows": 10,
+    "no_extra_inline_content": true
+  },
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "gate": "O1",
+  "rendered_sha256": "ed76033b149f883ae5d93cbcc730a2b205a7f9c26999cefaab3127687a3f49af",
+  "stage": "R1",
+  "status": "PASS"
+}

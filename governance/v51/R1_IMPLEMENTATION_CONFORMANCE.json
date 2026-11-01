@@ -1,0 +1,85 @@
+{
+  "actual_card_diff_sha256": "0076129e98b89d1f3b0a48d61101cead6c149784edfe9f3b09701bba10388930",
+  "actual_graph_delta_sha256": "b52851d1bb0a56e371951e434c96245486d88f9c93ed063a894ec39626ea26a4",
+  "affected_card_ids": [
+    "NEE_01",
+    "NEE_02",
+    "NEE_04",
+    "NEE_05",
+    "NEE_06",
+    "NEE_07",
+    "NEE_10",
+    "NEE_11",
+    "NEE_12",
+    "NEE_13",
+    "NEE_15",
+    "NEE_16",
+    "NEE_99"
+  ],
+  "approval_decision_id": "AD-V51-IDENTITY-ROLE-STANDARDS-2026-001",
+  "approved_card_diff_sha256": "4c5083099e20e25f52acbf227ccd3ab59ad9754b7370fde15442107c99a4feed",
+  "approved_graph_delta_sha256": "abc152dcd3fe15f9e3aad5379cd4f7d65b40d7940873a5bd72213c28ada1f17f",
+  "automatic_release_state_activation": {
+    "decision_id": "PD-51.1-AUTO-PROMOTION-AFTER-R1-O1",
+    "result": "approved_current",
+    "separate_promotion_step": false
+  },
+  "baseline_graph_sha256": "e8492bafc1066352e6f57fa9bbc97bb700ccf99a0178f43b151bd67e7f9793a8",
+  "baseline_immutability_result": "PASS",
+  "baseline_zip_sha256": "d9d818a1308d284a754f967074a33d983b48688f848b24cd2d978072ce53a1c3",
+  "changed_file_count": 157,
+  "changed_file_inventory": "governance/v51/CHANGED_FILE_INVENTORY.json",
+  "drift_result": "PASS — exact Phase A graph delta; exact final authorized card bytes; only documented approval-control normalization in SQLite.",
+  "first_canonical_write_at": "2026-07-13T16:28:22Z",
+  "g1_inline_output_sha256": "e54d6d8bdba6580de153a06682541cb1e59ca72e4ac4616c96cd918b8971c421",
+  "generated_at": "2026-07-13T16:33:59Z",
+  "graph_health": {
+    "overall_status": "PASS",
+    "rows": 15
+  },
+  "implementation_id": "R1-v51-identity-role-standards-2026-07-13",
+  "inline_output_gate_result": "PASS",
+  "lineage_currentness_audience_hitl_results": {
+    "attendance_inference": 0,
+    "candidate_search_leakage": 0,
+    "needs_review_search_leakage": 0,
+    "opaque_accounts_ingested": 0,
+    "open_validations": 143,
+    "result": "PASS"
+  },
+  "migration_rollback": "PASS",
+  "packaging_gate_result": "PASS",
+  "phase_a_card_diff_sha256": "5961321c29e287257a05a743ae6a81a5d0a769916df7265b377833d7e8211ae3",
+  "r1_inline_output_sha256": "9dd98e16f0c46862a9b72c65643f275d6694672a879e4fda1068abe1976fc4ad",
+  "release_state": "approved_current",
+  "retrieval_results": {
+    "authority_layer": "PASS",
+    "cases": 21,
+    "deterministic_sha256": "83a2a7e96be48120b12eff73ca181ab5e0f46c2b2ced67f193b7c898146cbca7",
+    "failures": 0
+  },
+  "schema_and_integrity_results": {
+    "clean_schema_rebuild": {
+      "fk": [],
+      "indexes": 47,
+      "integrity": [
+        "ok"
+      ],
+      "tables": 85,
+      "triggers": 40,
+      "views": 40
+    },
+    "database_sha256": "c802383576a6556aff228ac46c36f8ad66ce440aebe21e7420bc893cb78cf781",
+    "foreign_key_violations": 0,
+    "integrity_check": [
+      "ok"
+    ],
+    "quick_check": [
+      "ok"
+    ],
+    "schema_unchanged": true
+  },
+  "status": "PASS",
+  "supplemental_policy_card_diff_sha256": "f6066d260338473e5c59180865bb1953c4d40b5ec9fda31e0690881d5ab13588",
+  "unapproved_semantic_changes": []
+}

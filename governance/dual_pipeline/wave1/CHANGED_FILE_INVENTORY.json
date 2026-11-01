@@ -1,0 +1,268 @@
+{
+  "baseline_archive": "01-NEE_v55.0_PD-55_approved_current_2026-07-14-1-.zip",
+  "baseline_archive_sha256": "1c468b5c20889eb000694fe59c59ac78f8065addc77513f9351386652ce55a93",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "inventory_without_canonical_digest",
+    "value": "eaa89593fd3ba5ac18b98e4e17ba448ed7defb41ad3a4b73ea37e9fd92e53a18"
+  },
+  "comparison": "byte-level SHA-256 against supplied v55 archive extraction",
+  "deleted_baseline_file_count": 0,
+  "deleted_baseline_files": [],
+  "initiative_id": "NEE-KG-DUAL-PIPELINE-01",
+  "inventory_version": "1.0.0",
+  "listed_new_file_count": 49,
+  "modified_baseline_file_count": 0,
+  "modified_baseline_files": [],
+  "new_file_count_including_inventory": 50,
+  "new_files": [
+    {
+      "path": "contracts/dual_pipeline/EVENT_AND_LEDGER_DEFINITIONS.md",
+      "sha256": "905734a7745bc41dd888ae4825c3b224b127c4df6338dc10560b3e7d36980404",
+      "size_bytes": 3027
+    },
+    {
+      "path": "contracts/dual_pipeline/README.md",
+      "sha256": "34db20e7e69456e7f0bf57f858b343a34fcfffd4bef93a4566294b89e215a2f7",
+      "size_bytes": 3247
+    },
+    {
+      "path": "contracts/dual_pipeline/contract_inventory.json",
+      "sha256": "8862bd1eba246019da33cefeeb2a8f88da8b4b1a7de80775d019968615f3384a",
+      "size_bytes": 4500
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/invalid/architecture-missing-region.json",
+      "sha256": "bbb8fd16b3f6aa6a6d13020d548eaa0e474835419ddd592a4c6d1ceb38a69a5a",
+      "size_bytes": 1022
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/invalid/bad-digest.json",
+      "sha256": "7439e027a34cad93d522d8fc1882538209a53ad6a73e30be908a863312e8075d",
+      "size_bytes": 815
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/invalid/copilot-missing-locator.json",
+      "sha256": "a8537706a3ca668942dc3d6134fdb84039f7b8e95ecb4d201beb3a37fbaad083",
+      "size_bytes": 1314
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/invalid/disposition-lane-contamination.json",
+      "sha256": "6793bc931a331289255e3f5be1a6641229f46452f31fa1414af8db41487d56a1",
+      "size_bytes": 1050
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/invalid/entity-naked-fuzzy.json",
+      "sha256": "ef752c2e7793216ce9b083d328136e1fd870c6498dc8d9918f50cadc4862948b",
+      "size_bytes": 1231
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/invalid/learning-auto-apply.json",
+      "sha256": "273b46f506ab1e9ec1a48b5520e25ed62deaf7120ccb66600fde0e0442bec392",
+      "size_bytes": 820
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/invalid/otel-sensitive-content.json",
+      "sha256": "adb6823f917816bbeceb33f0ea6b7c1160e7014bfbafc0e1f038e46bdead78f4",
+      "size_bytes": 1161
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/invalid/query-lane-blending.json",
+      "sha256": "cf62c6f86976173107366270f74a531d8c0c3bf155ea78dda79e122239b297a8",
+      "size_bytes": 1121
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/invalid/unknown-field.json",
+      "sha256": "afd16a4aed5c7993896bae15b1e70f719ec1c3c89801a4a2cecc1746c141b1ea",
+      "size_bytes": 859
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/architecture-diagram.json",
+      "sha256": "db3fd78bc70b3d276e25e3e82467fc7947bce1aee37212cf476154574b132f4e",
+      "size_bytes": 2048
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/copilot-meeting.json",
+      "sha256": "7ae98a7d20f2f18b75a5f1c2cbf3fec92fbe1dce2bb2ad655db0d4bc86b66e35",
+      "size_bytes": 2240
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/disposition-quarantine.json",
+      "sha256": "b8229567ec568a92c065da9cb57a6d68043348f9ae41d1eadd252adadb913d2a",
+      "size_bytes": 1127
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/entity-resolution-ambiguous.json",
+      "sha256": "955eacb3b1d8a5c1cbe46703c6b5c96506ea5fd22a463666d2cac4a37411ba2d",
+      "size_bytes": 1727
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/graph-change-set.json",
+      "sha256": "d96b5c873c5cc68466c781b46a077af1c37534b32d65d09907e61825e11aa849",
+      "size_bytes": 1412
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/hitl-decision.json",
+      "sha256": "8e7db80215d21c1d96264a7f3f1e04724f3a5674bb88bb22dbfc2d2d9f5896f8",
+      "size_bytes": 1236
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/ingestion-plan.json",
+      "sha256": "e4436d89b264160cf425959750913fc6385ac439220cbdc810678ca8459fa5d4",
+      "size_bytes": 1869
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/learning-change-proposal.json",
+      "sha256": "0290d80277b23a836b09a22bd2c9c07dd11b0111710e4fe2feabae6e534c6644",
+      "size_bytes": 1051
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/learning-event.json",
+      "sha256": "08b1133c0b02c0badaf67a4899b816a2ecf8d5c927a02008cbda6979d5951dba",
+      "size_bytes": 1512
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/normalized-candidate-bundle.json",
+      "sha256": "67009885d48022b07fab6316f30c09f0d268dfd955d3f2bc9b6383e8a2a23958",
+      "size_bytes": 3066
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/otel-event.json",
+      "sha256": "e151806dc04a7ca27116561a36ddb0ac282d498b1c280959662a28a85109d9c3",
+      "size_bytes": 1171
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/pdlc-query-plan.json",
+      "sha256": "70468676bdeeb3f2332b77910f23059e9885f949f885737166ac881d2f3f29c8",
+      "size_bytes": 1544
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/retrieval-record-candidate-action.json",
+      "sha256": "42d0843d764e68845f69912a2f05019833c3d31d65d80b08fd4a904d6fdec800",
+      "size_bytes": 1096
+    },
+    {
+      "path": "contracts/dual_pipeline/fixtures/valid/route-decision.json",
+      "sha256": "61e61bb02a59577844d2984b3bec58668949170b8074a16e9e6251bc4b9bf5ff",
+      "size_bytes": 969
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/architecture-diagram-intake.schema.json",
+      "sha256": "b61cdf1fd1c5660d513ef56ac592f43195f8f2007bf2df3d3aa699ab91636bbd",
+      "size_bytes": 4131
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/assertion-disposition.schema.json",
+      "sha256": "f7fbfd32c70275fe0a66c34fb2f7ac987f760c54deb789942bd14aec26178da3",
+      "size_bytes": 2456
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/common.schema.json",
+      "sha256": "e661fdb626fa1d38796338b7330f3735fec45eaaba026dde2a863805e53975d1",
+      "size_bytes": 5796
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/copilot-intake.schema.json",
+      "sha256": "8d57cef28d5be58c6888cbee860bbc50887a421f671bffacd7277b7f93dcf387",
+      "size_bytes": 4634
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/entity-resolution.schema.json",
+      "sha256": "dd7015b718856b4242ccddc94532727056045ee61ed8826c015990f8588431bb",
+      "size_bytes": 3605
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/graph-change-set.schema.json",
+      "sha256": "f1490fd6b402f41dd0fb41d5bd6cefa6755a3327c2f4e7ae0224aba64457f37a",
+      "size_bytes": 3234
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/hitl-decision.schema.json",
+      "sha256": "b9aca1db5007a34687b4efae07cfb233569583919ae644ce1b0c3f911667a40f",
+      "size_bytes": 2412
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/ingestion-plan.schema.json",
+      "sha256": "5b18d58be97082105785284423544dc7628f51558ba5dd49aacbc9734673335b",
+      "size_bytes": 4064
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/learning-change-proposal.schema.json",
+      "sha256": "c856c7397cd37dd8067fdb6669289a40014ee08730c99bad57dc155ea9478011",
+      "size_bytes": 1980
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/learning-event.schema.json",
+      "sha256": "341470fb694dd523438dd75b40e3d463a6c77a32dcae9d29b841d4ef7e5ede1b",
+      "size_bytes": 2904
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/normalized-candidate-bundle.schema.json",
+      "sha256": "49c9157bf57a6da6ae5f77e2e28c6b47a246bf6b75a637eaea5ffaf5cb4cb44f",
+      "size_bytes": 3412
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/otel-event-envelope.schema.json",
+      "sha256": "061ddc011eeff9fd1084c2f77fc526f122e143274ae880b4cd1170da73df5e02",
+      "size_bytes": 2994
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/query-plan.schema.json",
+      "sha256": "0447dbe4b73e40d1da6284fff34dd2c367fea94cb7ada5927aeb724368c1ceb9",
+      "size_bytes": 3137
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/retrieval-record.schema.json",
+      "sha256": "642adf31d0866f607463054dde5efc70afc4cee8355ecf417a1acc3f59c872a0",
+      "size_bytes": 2553
+    },
+    {
+      "path": "contracts/dual_pipeline/schemas/route-decision.schema.json",
+      "sha256": "9be3ee3c9bb704c3ec4195a1019c5dceaaa0723bed8e7a5a7b4f29a43f0865b9",
+      "size_bytes": 2117
+    },
+    {
+      "path": "governance/dual_pipeline/wave1/WAVE_1_COMPLETION.json",
+      "sha256": "1b7b7f1c97fbf93fd4a812336f82edd1c552bd2a8f39acfc44cd81c000ae90e6",
+      "size_bytes": 6190
+    },
+    {
+      "path": "governance/dual_pipeline/wave1/WAVE_1_COMPLETION.md",
+      "sha256": "0af09d3d218100610443b9cd67a012fac4e4907f956d1c59f4600179357b3947",
+      "size_bytes": 2172
+    },
+    {
+      "path": "tests/dual_pipeline_wave1_acceptance_report.md",
+      "sha256": "4d8e77348d5848dd863444fba3f6809a02a6597db33ba7c036fbad8558ce5e64",
+      "size_bytes": 344
+    },
+    {
+      "path": "tests/dual_pipeline_wave1_acceptance_results.json",
+      "sha256": "c4df1f84286d4459c1a8bb2cda14d6dafcf0c775149b20d896809cb76ad13ee7",
+      "size_bytes": 724
+    },
+    {
+      "path": "tests/dual_pipeline_wave1_contract_validation_results.json",
+      "sha256": "54b06778854a5669ab9cea22be700d5d0a03c9677e924f029de900e0b02df7e9",
+      "size_bytes": 14666
+    },
+    {
+      "path": "tests/dual_pipeline_wave1_retrieval_regression_results.json",
+      "sha256": "732adec33cd4410c48f4fd2349a139eb5f385c94787be5d6b619976f522340de",
+      "size_bytes": 48587
+    },
+    {
+      "path": "tests/test_dual_pipeline_wave1.py",
+      "sha256": "3900c17a124f6320e18d741d8519df4acf8d19e5de464b129eaef15a7e0a653c",
+      "size_bytes": 10641
+    },
+    {
+      "path": "tools/validate_dual_pipeline_contracts.py",
+      "sha256": "528990225b23665791c38edb71320d8dba5c9328957193b030f2f24b45fab732",
+      "size_bytes": 29411
+    }
+  ],
+  "self_excluded": true,
+  "self_path": "governance/dual_pipeline/wave1/CHANGED_FILE_INVENTORY.json",
+  "wave": 1
+}

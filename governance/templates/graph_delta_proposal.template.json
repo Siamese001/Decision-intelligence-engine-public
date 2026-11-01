@@ -1,0 +1,157 @@
+{
+  "baseline_graph_sha256": "<sha256>",
+  "baseline_zip_sha256": "<sha256>",
+  "canonical_serialization_sha256": "<sha256 excluding this field>",
+  "component_counts": {
+    "alias": {
+      "after": "<count>",
+      "before": "<count>",
+      "delta": "<signed delta>"
+    },
+    "claim": {
+      "after": "<total / active>",
+      "before": "<total / active>",
+      "delta": "<signed total / active delta>"
+    },
+    "edge": {
+      "after": "<total / active>",
+      "before": "<total / active>",
+      "delta": "<signed total / active delta>"
+    },
+    "node": {
+      "after": "<count>",
+      "before": "<count>",
+      "delta": "<signed delta>"
+    },
+    "node_card_map": {
+      "after": "<count>",
+      "before": "<count>",
+      "delta": "<signed delta>"
+    },
+    "source": {
+      "after": "<count>",
+      "before": "<count>",
+      "delta": "<signed delta>"
+    },
+    "validation": {
+      "after": "<count>",
+      "before": "<count>",
+      "delta": "<signed delta>"
+    }
+  },
+  "generated_at": "<RFC3339>",
+  "inline_gate_output": {
+    "graph_delta_rows": [
+      {
+        "baseline": "<before count>",
+        "change": "<compact exact change>",
+        "component_key": "<source|node|alias|edge|claim|validation|node_card_map|other changed component>",
+        "delta": "<signed delta>",
+        "graph_component": "<display label>",
+        "proposed_or_actual": "<after count>",
+        "retrieval_rationale": "<NA when delta is all-zero; otherwise exact-match, disambiguation, lineage, routing, ranking, currentness, or safety mechanism>"
+      }
+    ],
+    "graph_metric_rows": [
+      {
+        "comment": "<comment>",
+        "metric": "Operational orphan rate",
+        "pass_threshold": "≤5% and no increase",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      },
+      {
+        "comment": "<comment>",
+        "metric": "Duplicate node count",
+        "pass_threshold": "0 new high-impact duplicates",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      },
+      {
+        "comment": "<comment>",
+        "metric": "Duplicate edge rate",
+        "pass_threshold": "≤1% unexplained and no increase",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      },
+      {
+        "comment": "<comment>",
+        "metric": "Rare edge-type rate",
+        "pass_threshold": "≤25% or no increase",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      },
+      {
+        "comment": "<comment>",
+        "metric": "Claim completeness",
+        "pass_threshold": "100%",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      },
+      {
+        "comment": "<comment>",
+        "metric": "Source metadata completeness",
+        "pass_threshold": "≥95%; 100% for material sources",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      },
+      {
+        "comment": "<comment>",
+        "metric": "Temporal completeness",
+        "pass_threshold": "≥90% and no decrease",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      },
+      {
+        "comment": "<comment>",
+        "metric": "High-impact identity collisions",
+        "pass_threshold": "0 unresolved",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      },
+      {
+        "comment": "<comment>",
+        "metric": "P0/P1 SLA breach rate",
+        "pass_threshold": "0%",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      },
+      {
+        "comment": "<comment>",
+        "metric": "Decision-safe answer regression",
+        "pass_threshold": "0 regression on approved test set",
+        "result": "<before → after (delta)>",
+        "status": "<PASS|FAIL|N/A|EXCEPTION>"
+      }
+    ]
+  },
+  "input_artifact_hashes": {
+    "<filename>": "<sha256>"
+  },
+  "operations": [
+    {
+      "allowed_audiences": [],
+      "before": null,
+      "card_routes": [],
+      "classification": null,
+      "confidence_dimensions": {},
+      "derivative_impact": [],
+      "hitl": {},
+      "identity_and_duplicate_analysis": {},
+      "materiality": null,
+      "object_type": "<source|evidence|node|edge|claim|alias|node_card_map|validation|action|register_row|controlled_state>",
+      "operation_type": "<add|update|supersede|retire|delete|no_change>",
+      "proposed_after": {},
+      "proposed_id": "<stable-id>",
+      "rollback_or_forward_repair": null,
+      "source_authority": null,
+      "supporting_evidence": [],
+      "temporal_posture": null
+    }
+  ],
+  "policy_sha256": "<sha256>",
+  "proposal_id": "G1-<stable-id>",
+  "proposal_type": "proposed_graph_delta",
+  "status": "proposed",
+  "zero_change_declarations": {}
+}

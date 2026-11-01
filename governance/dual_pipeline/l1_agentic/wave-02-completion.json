@@ -1,0 +1,69 @@
+{
+  "artifact_id": "l1-wave-02-completion",
+  "artifacts": [
+    "dual_pipeline/l1_control.py",
+    "tests/test_l1_control.py",
+    "tests/test_l1_provider_boundary.py",
+    "contracts/dual_pipeline/schemas/l1-wave-receipt.schema.json"
+  ],
+  "base_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "branch": "codex/l1-agentic-gap-analysis",
+  "cache_namespace_disposition": "No runtime cache namespace introduced.",
+  "canonical_digest": {
+    "algorithm": "sha256",
+    "scope": "artifact_without_canonical_digest",
+    "value": "e19cbc650c72a36c063e0bceeed5229a4f56f801bbdc0d5f09eb11c499abebf0"
+  },
+  "changed_files": [
+    "dual_pipeline/l1_control.py",
+    "governance/dual_pipeline/l1_agentic/wave-02-completion.json",
+    "tests/test_l1_control.py",
+    "tests/test_l1_provider_boundary.py"
+  ],
+  "commands": [
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -m unittest -v tests.test_l1_control tests.test_l1_provider_boundary",
+      "exit_code": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "timed_out": false
+    },
+    {
+      "command": ".\\.venv\\Scripts\\python.exe tools/validate_dual_pipeline_contracts.py",
+      "exit_code": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "timed_out": false
+    }
+  ],
+  "contract_id": "urn:nee:dual-pipeline:l1-wave-receipt:1.0.0",
+  "contract_inventory_digest": "a414fc86ef89c37edacd07873a1231cd1adf7a468b4a62d594e03de110d9fbd1",
+  "exit_gate_verdicts": {
+    "policy_strictly_loaded": true,
+    "pre_action_budget_guard": true,
+    "progress_requires_new_coverage": true,
+    "terminal_reduction_closed": true,
+    "attempt_chain_validated": true,
+    "provider_boundary_static_check": true,
+    "filesystem_and_clock_free": true,
+    "runtime_mode_off": true
+  },
+  "extensions": {
+    "wave1_completion_digest": "4a8eea6c68914d879954921cf3fc1e4ec23791efbf25d5180310f3d121975077",
+    "kernel_sha256": "adec8e46540fabf69ebdca5222214deb2a1785d4930dcb830222d19ce3c4dbfc",
+    "kernel_test_sha256": "d3ebf448c3ce4ace614c02ce1ccd64c6aa72b7c412a61224202ba653e19eb732",
+    "boundary_test_sha256": "7f77b7c8ab46b5144639d5313a2f8447d1462f49c7b6d974a492fc9cb75aef1c",
+    "working_tree_result": true
+  },
+  "graph_mutation_count": 0,
+  "next_wave_authorized": true,
+  "policy_digest": "d523e6e236d363706c5a523680930b2d6b919049094ca21743d929d1f7ae5e39",
+  "predecessor_receipt_digest": "4a8eea6c68914d879954921cf3fc1e4ec23791efbf25d5180310f3d121975077",
+  "program_id": "NEE-KG-DUAL-PIPELINE-01",
+  "provider_call_count": 0,
+  "provider_initialization_count": 0,
+  "result_commit": "de14722d90243fcb1cd7ee513f23d180da33527d",
+  "rollback_control": "Remove the pure L1 kernel, its tests, and this completion receipt; no runtime rollback is required because no runtime path imports the kernel.",
+  "schema_version": "1.0.0",
+  "wave_id": "W2"
+}

@@ -1,0 +1,20 @@
+{
+  "baseline_graph_sha256": "5c326c4825c9ad3621a014361257f13d8fa4a9637196d6473281af06ae03d7a3",
+  "changed_card_bytes": [
+    "cards/NEE_06_CoDelivery_CoHydrated_Operating_Model.md",
+    "cards/NEE_10_Stakeholders_Champions_Org_Credentialing_Open_Questions.md",
+    "cards/NEE_13_EDO_Data_Product_and_Operating_Model_Patterns.md"
+  ],
+  "policy_sha256": "4f1885acfa7f82c577abb4506cdbd52c343cabbc404f37d198670d705e8a1697",
+  "release_graph_sha256": "5f7df305176e9ffd1365b33fb9f0d5a7f2c5b6a670a92c803f7153d48a6010a8",
+  "root_policy_mirror_sha256": "c736087c1ef6c646b3ae3b5a54b43074e5285f36434bcf24ccb0fce2e826ce70",
+  "route_only_card_impacts": [
+    "cards/NEE_02_Portfolio_Status_and_Project_Dossiers.md",
+    "cards/NEE_11_Cross_Workstream_Synthesis_and_Reuse_Map.md",
+    "cards/NEE_16_Source_Provenance_and_Cold_Archive_Pointer.md"
+  ],
+  "schema_changed": false,
+  "status": "PASS",
+  "unapproved_semantic_changes": 0,
+  "unlisted_card_changes": []
+}

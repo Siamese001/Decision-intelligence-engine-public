@@ -1,0 +1,1074 @@
+{
+  "actual_operation_count": 48,
+  "actual_operations": [
+    {
+      "after": {
+        "authority_rank": 4,
+        "cold_archive_ref": "chat://NEE/2026-07-11/lancey-role-location",
+        "created_at": "2026-07-11T20:30:00Z",
+        "notes": "Exact user statements preserved in inputs/user_chat_evidence_2026-07-11.md, E4.",
+        "source_date": "2026-07-11",
+        "source_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "source_name": "User confirmation — Lancey NEA Product Manager and Juno Beach context",
+        "source_posture": "User-confirmed exact propositions in chat: Lancey Lexima is an NEA Product Manager and has Juno Beach context as of 2026-07-11. Authoritative only for those propositions; does not establish permanent office, charter-specific decision rights, reporting changes, or any other Product Manager location.",
+        "source_type": "user_hitl"
+      },
+      "object_type": "source",
+      "operation_type": "add",
+      "proposed_id": "source::source_chat_lancey_role_location_confirmation_2026_07_11"
+    },
+    {
+      "after": {
+        "authority_rank": 4,
+        "cold_archive_ref": "chat://NEE/2026-07-11/lancey-lunch-pm-outreach",
+        "created_at": "2026-07-11T20:30:00Z",
+        "notes": "Exact user statements and sent outreach text preserved in inputs/user_chat_evidence_2026-07-11.md, E3–E5.",
+        "source_date": "2026-07-11",
+        "source_id": "source_chat_lancey_lunch_and_pm_outreach_2026_07_11",
+        "source_name": "User action context — Lancey lunch and PM-priority outreach",
+        "source_posture": "User-confirmed private-coaching action context: lunch with Lancey on 2026-07-14 and outreach already sent to Dan, Stephane, and Andrew. Authoritative for the planned action and sent-message status only; not for recipients’ answers or the resulting priority ranking.",
+        "source_type": "user_action_context"
+      },
+      "object_type": "source",
+      "operation_type": "add",
+      "proposed_id": "source::source_chat_lancey_lunch_and_pm_outreach_2026_07_11"
+    },
+    {
+      "after": {
+        "authority_rank": 4,
+        "cold_archive_ref": "chat://NEE/2026-07-11/rich-pm-feedback-ux-cadence",
+        "created_at": "2026-07-11T20:30:00Z",
+        "notes": "Exact user text preserved in inputs/user_chat_evidence_2026-07-11.md, E1.",
+        "source_date": "2026-07-11",
+        "source_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "source_name": "User-attributed feedback — Rich PM leadership gap and UX research cadence",
+        "source_posture": "Amit-attributed internal feedback. Strong evidence that Amit reported the feedback; not independent proof that Rich used the exact wording, that the condition applies to every Product Manager, or that it is formal NEA policy. Humanity / UX team identity, frequency, target standard, and currentness require validation.",
+        "source_type": "user_attributed_feedback"
+      },
+      "object_type": "source",
+      "operation_type": "add",
+      "proposed_id": "source::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11"
+    },
+    {
+      "after": {
+        "authority_rank": 4,
+        "cold_archive_ref": "chat://NEE/2026-07-11/linkedin-name-spelling-rule",
+        "created_at": "2026-07-11T20:30:00Z",
+        "notes": "Exact user statements preserved in inputs/user_chat_evidence_2026-07-11.md, E6.",
+        "source_date": "2026-07-11",
+        "source_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "source_name": "User instruction — LinkedIn display name controls personal-name spelling",
+        "source_posture": "Explicit user instruction for NEE identity handling. Authoritative for the proposed spelling rule only: after the person/profile match is correctly resolved, the LinkedIn profile display name controls spelling. It does not make URL slugs authoritative, prove identity equivalence, or establish role, affiliation, reporting line, ownership, decision rights, or currentness. Activation requires exact G1/C1 approval.",
+        "source_type": "user_instruction"
+      },
+      "object_type": "source",
+      "operation_type": "add",
+      "proposed_id": "source::source_chat_linkedin_person_name_spelling_rule_2026_07_11"
+    },
+    {
+      "after": {
+        "active": 1,
+        "canonical_name": "User confirmation — Lancey NEA Product Manager and Juno Beach context",
+        "created_at": "2026-07-11T20:30:00Z",
+        "description": "User-confirmed exact propositions in chat: Lancey Lexima is an NEA Product Manager and has Juno Beach context as of 2026-07-11. Authoritative only for those propositions; does not establish permanent office, charter-specific decision rights, reporting changes, or any other Product Manager location.",
+        "display_name": "User confirmation — Lancey NEA Product Manager and Juno Beach context",
+        "node_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "node_type": "source",
+        "status": "proposed governed chat source; activation requires G1/C1 approval",
+        "updated_at": "2026-07-11T20:30:00Z"
+      },
+      "object_type": "node",
+      "operation_type": "add",
+      "proposed_id": "node::source_chat_lancey_role_location_confirmation_2026_07_11"
+    },
+    {
+      "after": {
+        "active": 1,
+        "canonical_name": "User action context — Lancey lunch and PM-priority outreach",
+        "created_at": "2026-07-11T20:30:00Z",
+        "description": "User-confirmed private-coaching action context: lunch with Lancey on 2026-07-14 and outreach already sent to Dan, Stephane, and Andrew. Authoritative for the planned action and sent-message status only; not for recipients’ answers or the resulting priority ranking.",
+        "display_name": "User action context — Lancey lunch and PM-priority outreach",
+        "node_id": "source_chat_lancey_lunch_and_pm_outreach_2026_07_11",
+        "node_type": "source",
+        "status": "proposed governed chat source; activation requires G1/C1 approval",
+        "updated_at": "2026-07-11T20:30:00Z"
+      },
+      "object_type": "node",
+      "operation_type": "add",
+      "proposed_id": "node::source_chat_lancey_lunch_and_pm_outreach_2026_07_11"
+    },
+    {
+      "after": {
+        "active": 1,
+        "canonical_name": "User-attributed feedback — Rich PM leadership gap and UX research cadence",
+        "created_at": "2026-07-11T20:30:00Z",
+        "description": "Amit-attributed internal feedback. Strong evidence that Amit reported the feedback; not independent proof that Rich used the exact wording, that the condition applies to every Product Manager, or that it is formal NEA policy. Humanity / UX team identity, frequency, target standard, and currentness require validation.",
+        "display_name": "User-attributed feedback — Rich PM leadership gap and UX research cadence",
+        "node_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "node_type": "source",
+        "status": "proposed governed chat source; activation requires G1/C1 approval",
+        "updated_at": "2026-07-11T20:30:00Z"
+      },
+      "object_type": "node",
+      "operation_type": "add",
+      "proposed_id": "node::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11"
+    },
+    {
+      "after": {
+        "active": 1,
+        "canonical_name": "User instruction — LinkedIn display name controls personal-name spelling",
+        "created_at": "2026-07-11T20:30:00Z",
+        "description": "Explicit user instruction for NEE identity handling. Authoritative for the proposed spelling rule only: after the person/profile match is correctly resolved, the LinkedIn profile display name controls spelling. It does not make URL slugs authoritative, prove identity equivalence, or establish role, affiliation, reporting line, ownership, decision rights, or currentness. Activation requires exact G1/C1 approval.",
+        "display_name": "User instruction — LinkedIn display name controls personal-name spelling",
+        "node_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "node_type": "source",
+        "status": "proposed governed chat source; activation requires G1/C1 approval",
+        "updated_at": "2026-07-11T20:30:00Z"
+      },
+      "object_type": "node",
+      "operation_type": "add",
+      "proposed_id": "node::source_chat_linkedin_person_name_spelling_rule_2026_07_11"
+    },
+    {
+      "after": {
+        "active": 1,
+        "canonical_name": "Lancey Lexima",
+        "created_at": "2026-07-09T03:30:00Z",
+        "description": "NEA Product Manager and Technical Product Management context; reports to Jarod Bryant. User-confirmed on 2026-07-11 as an NEA Product Manager with Juno Beach context. Existing charter-specific Product Manager assignments remain source-attributed to Colleen's undated roster; decision rights and permanent-office status beyond the confirmed proposition are not inferred.",
+        "display_name": "Lancey Lexima",
+        "node_id": "stakeholder_lancey_lexima",
+        "node_type": "stakeholder",
+        "status": "confirmed canonical stakeholder; NEA Product Manager and Juno Beach context user-confirmed 2026-07-11",
+        "updated_at": "2026-07-11T20:30:00Z"
+      },
+      "object_type": "node",
+      "operation_type": "update",
+      "proposed_id": "node::stakeholder_lancey_lexima"
+    },
+    {
+      "after": {
+        "active": 1,
+        "canonical_name": "Juno Beach location",
+        "created_at": "2026-07-10T19:30:00Z",
+        "description": "Location dimension for charter leadership mapping. The earlier meeting notes transcribed “Juneau”; Juno Beach is the canonical location spelling. Amit directly confirmed Lancey Lexima’s Juno Beach context on 2026-07-11. All other person-level location assignments still require exact confirmation; no permanent-office inference is made from meeting location alone.",
+        "display_name": "Juno Beach",
+        "node_id": "location_juno_beach",
+        "node_type": "org",
+        "status": "canonical location spelling; Lancey context confirmed; other person assignments require validation",
+        "updated_at": "2026-07-11T20:30:00Z"
+      },
+      "object_type": "node",
+      "operation_type": "update",
+      "proposed_id": "node::location_juno_beach"
+    },
+    {
+      "after": {
+        "confidence": "confirmed",
+        "created_at": "2026-07-11T20:30:00Z",
+        "description": "Amit confirmed Lancey Lexima’s Juno Beach context on 2026-07-11. This supports relationship planning and the July 14 lunch; it does not independently establish permanent office location or other PM locations.",
+        "edge_id": "edge_chat_lancey_lane_context_for_juno_beach_2026_07_11",
+        "edge_type": "LANE_CONTEXT_FOR",
+        "evidence_posture": "user-confirmed exact proposition",
+        "from_node_id": "stakeholder_lancey_lexima",
+        "hitl_required": 0,
+        "materiality": "high",
+        "source_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "superseded_by": null,
+        "to_node_id": "location_juno_beach",
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Amit",
+        "validation_priority": null
+      },
+      "object_type": "edge",
+      "operation_type": "add",
+      "proposed_id": "edge::edge_chat_lancey_lane_context_for_juno_beach_2026_07_11"
+    },
+    {
+      "after": {
+        "confidence": "confirmed",
+        "created_at": "2026-07-11T20:30:00Z",
+        "description": "Routes Lancey’s user-confirmed NEA Product Manager and Juno Beach context to the exact chat source.",
+        "edge_id": "edge_chat_lancey_sourced_from_role_location_confirmation_2026_07_11",
+        "edge_type": "SOURCED_FROM",
+        "evidence_posture": "user-confirmed source lineage",
+        "from_node_id": "stakeholder_lancey_lexima",
+        "hitl_required": 0,
+        "materiality": "medium",
+        "source_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "superseded_by": null,
+        "to_node_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Amit",
+        "validation_priority": null
+      },
+      "object_type": "edge",
+      "operation_type": "add",
+      "proposed_id": "edge::edge_chat_lancey_sourced_from_role_location_confirmation_2026_07_11"
+    },
+    {
+      "after": {
+        "confidence": "medium",
+        "created_at": "2026-07-11T20:30:00Z",
+        "description": "Amit attributes to Rich a concern that some Product Managers act as feature-intake owners rather than product leaders and do not consistently test requests against cost-out or business value. Attribution and target operating standard require validation before formal use.",
+        "edge_id": "edge_chat_rich_feedback_source_for_nea_product_manager_2026_07_11",
+        "edge_type": "FEEDBACK_SOURCE_FOR",
+        "evidence_posture": "user-attributed internal feedback",
+        "from_node_id": "person_rich_argentieri",
+        "hitl_required": 1,
+        "materiality": "high",
+        "source_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "superseded_by": null,
+        "to_node_id": "role_nea_product_manager",
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Dan / Stephane / Andrew",
+        "validation_priority": "P1"
+      },
+      "object_type": "edge",
+      "operation_type": "add",
+      "proposed_id": "edge::edge_chat_rich_feedback_source_for_nea_product_manager_2026_07_11"
+    },
+    {
+      "after": {
+        "confidence": "medium",
+        "created_at": "2026-07-11T20:30:00Z",
+        "description": "Routes the PM product-leadership and user-evidence cadence hypotheses to the exact user-attributed chat source without treating them as formal NEA policy.",
+        "edge_id": "edge_chat_cohydrated_model_sourced_from_pm_feedback_2026_07_11",
+        "edge_type": "SOURCED_FROM",
+        "evidence_posture": "user-attributed internal feedback",
+        "from_node_id": "model_cohydrated_operating_model",
+        "hitl_required": 1,
+        "materiality": "high",
+        "source_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "superseded_by": null,
+        "to_node_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Dan / Stephane / Andrew",
+        "validation_priority": "P1"
+      },
+      "object_type": "edge",
+      "operation_type": "add",
+      "proposed_id": "edge::edge_chat_cohydrated_model_sourced_from_pm_feedback_2026_07_11"
+    },
+    {
+      "after": {
+        "confidence": "confirmed",
+        "created_at": "2026-07-11T20:30:00Z",
+        "description": "Routes the proposed LinkedIn display-name spelling rule to the explicit user instruction. Identity equivalence and organizational facts remain separate propositions.",
+        "edge_id": "edge_chat_name_policy_sourced_from_linkedin_spelling_rule_2026_07_11",
+        "edge_type": "SOURCED_FROM",
+        "evidence_posture": "explicit user instruction; policy activation pending digest-bound approval",
+        "from_node_id": "control_v25_canonical_alias_policy",
+        "hitl_required": 0,
+        "materiality": "high",
+        "source_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "superseded_by": null,
+        "to_node_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Amit",
+        "validation_priority": null
+      },
+      "object_type": "edge",
+      "operation_type": "add",
+      "proposed_id": "edge::edge_chat_name_policy_sourced_from_linkedin_spelling_rule_2026_07_11"
+    },
+    {
+      "after": {
+        "card_id": "NEE_10",
+        "claim_id": "claim_chat_lancey_is_nea_product_manager_2026_07_11",
+        "claim_text": "Amit directly confirmed on 2026-07-11 that Lancey Lexima is an NEA Product Manager. This exact confirmation does not independently establish charter-specific decision rights or update every undated roster assignment.",
+        "confidence": "confirmed",
+        "created_at": "2026-07-11T20:30:00Z",
+        "evidence_posture": "user-confirmed exact proposition",
+        "hitl_required": 0,
+        "materiality": "high",
+        "source_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "subject_node_id": "stakeholder_lancey_lexima",
+        "superseded_by": null,
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Amit",
+        "validation_priority": null
+      },
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim::claim_chat_lancey_is_nea_product_manager_2026_07_11"
+    },
+    {
+      "after": {
+        "card_id": "NEE_10",
+        "claim_id": "claim_chat_lancey_juno_beach_context_2026_07_11",
+        "claim_text": "Amit directly confirmed Lancey Lexima’s Juno Beach context on 2026-07-11. Use this for relationship planning and the July 14 lunch; do not infer permanent office status or another person’s location.",
+        "confidence": "confirmed",
+        "created_at": "2026-07-11T20:30:00Z",
+        "evidence_posture": "user-confirmed exact proposition",
+        "hitl_required": 0,
+        "materiality": "high",
+        "source_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "subject_node_id": "stakeholder_lancey_lexima",
+        "superseded_by": null,
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Amit",
+        "validation_priority": null
+      },
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim::claim_chat_lancey_juno_beach_context_2026_07_11"
+    },
+    {
+      "after": {
+        "card_id": "NEE_06",
+        "claim_id": "claim_chat_rich_pm_product_leadership_gap_2026_07_11",
+        "claim_text": "Amit attributes to Rich Argentieri a concern that some NEA Product Managers are acting as feature-intake owners rather than product leaders and may approve requests such as “leather seats” without first testing cost-out, reliability, adoption, risk, or measurable business value.",
+        "confidence": "medium",
+        "created_at": "2026-07-11T20:30:00Z",
+        "evidence_posture": "user-attributed internal feedback; not formal NEA policy",
+        "hitl_required": 1,
+        "materiality": "high",
+        "source_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "subject_node_id": "role_nea_product_manager",
+        "superseded_by": null,
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Dan / Stephane / Andrew",
+        "validation_priority": "P1"
+      },
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim::claim_chat_rich_pm_product_leadership_gap_2026_07_11"
+    },
+    {
+      "after": {
+        "card_id": "NEE_06",
+        "claim_id": "claim_chat_nea_ux_research_cadence_constraint_2026_07_11",
+        "claim_text": "Amit reports that Humanity / UX Product Managers can take longer to complete user research and field studies than NEA's current tempo allows. The responsible team identity, frequency, acceptable minimum evidence, and target operating standard remain unvalidated.",
+        "confidence": "medium",
+        "created_at": "2026-07-11T20:30:00Z",
+        "evidence_posture": "user-reported internal data point; scope and attribution require validation",
+        "hitl_required": 1,
+        "materiality": "high",
+        "source_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "subject_node_id": "model_cohydrated_operating_model",
+        "superseded_by": null,
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Dan / Stephane / Andrew",
+        "validation_priority": "P1"
+      },
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim::claim_chat_nea_ux_research_cadence_constraint_2026_07_11"
+    },
+    {
+      "after": {
+        "card_id": "NEE_15",
+        "claim_id": "claim_chat_linkedin_display_name_spelling_authority_2026_07_11",
+        "claim_text": "For a correctly resolved person/profile match, use the LinkedIn profile display name as the canonical personal-name spelling. A URL slug, search snippet, nickname/full-name similarity, or candidate profile does not prove spelling or identity; the rule does not establish role, affiliation, reporting line, ownership, decision rights, or currentness.",
+        "confidence": "confirmed",
+        "created_at": "2026-07-11T20:30:00Z",
+        "evidence_posture": "explicit user instruction; policy activation pending exact G1/C1 approval",
+        "hitl_required": 0,
+        "materiality": "high",
+        "source_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "subject_node_id": "control_v25_canonical_alias_policy",
+        "superseded_by": null,
+        "updated_at": "2026-07-11T20:30:00Z",
+        "validation_owner": "Amit",
+        "validation_priority": null
+      },
+      "object_type": "claim",
+      "operation_type": "add",
+      "proposed_id": "claim::claim_chat_linkedin_display_name_spelling_authority_2026_07_11"
+    },
+    {
+      "after": {
+        "claim_id": null,
+        "created_at": "2026-07-11T20:30:00Z",
+        "due_date": "2026-07-14",
+        "edge_id": null,
+        "node_id": "role_nea_product_manager",
+        "owner": "Dan / Stephane / Andrew",
+        "priority": "P1",
+        "resolution": null,
+        "resolved_at": null,
+        "status": "open",
+        "validation_id": "val_chat_juno_beach_pm_priority_map_p1",
+        "validation_question": "Which 2–4 additional Juno Beach Product Managers should Amit prioritize after Lancey, and for each person what product lane, actual decision authority, reason to meet, and relationship sequence are supported?"
+      },
+      "object_type": "validation",
+      "operation_type": "add",
+      "proposed_id": "validation::val_chat_juno_beach_pm_priority_map_p1"
+    },
+    {
+      "after": {
+        "claim_id": "claim_chat_rich_pm_product_leadership_gap_2026_07_11",
+        "created_at": "2026-07-11T20:30:00Z",
+        "due_date": "2026-07-21",
+        "edge_id": "edge_chat_rich_feedback_source_for_nea_product_manager_2026_07_11",
+        "node_id": "model_cohydrated_operating_model",
+        "owner": "Dan / Stephane / Andrew",
+        "priority": "P1",
+        "resolution": null,
+        "resolved_at": null,
+        "status": "open",
+        "validation_id": "val_chat_pm_product_leadership_and_fast_evidence_standard_p1",
+        "validation_question": "What exact Product Manager operating expectations do Rich and Chakra want applied consistently across Juno Beach and Saint Paul, including the minimum business-value case and minimum viable user evidence required before saying yes to a feature?"
+      },
+      "object_type": "validation",
+      "operation_type": "add",
+      "proposed_id": "validation::val_chat_pm_product_leadership_and_fast_evidence_standard_p1"
+    },
+    {
+      "after": {
+        "claim_id": "claim_v44_nick_nicholas_identity_candidate",
+        "created_at": "2026-07-11T00:34:03Z",
+        "due_date": "2026-07-24",
+        "edge_id": "edge_v44_nick_krivov_candidate_for_nicholas_krivov",
+        "node_id": "unresolved_nick_krivov_roster_2026_07_11",
+        "owner": "Colleen / Amit",
+        "priority": "P1",
+        "resolution": null,
+        "resolved_at": null,
+        "status": "open",
+        "validation_id": "val_v44_nick_krivov_identity_p1",
+        "validation_question": "Resolve each Nick Krivov / Nicholas Krivov roster mention to the correct LinkedIn profile using the profile display name and other direct identity evidence; then confirm whether the FastPass/License and Mercury Product Manager assignments are current. Do not merge the records or choose a canonical spelling from nickname/full-name variants alone."
+      },
+      "object_type": "validation",
+      "operation_type": "update",
+      "proposed_id": "validation::val_v44_nick_krivov_identity_p1"
+    },
+    {
+      "after": {
+        "card_id": "NEE_10",
+        "node_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_lancey_role_location_confirmation_2026_07_11::NEE_10"
+    },
+    {
+      "after": {
+        "card_id": "NEE_16",
+        "node_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_lancey_role_location_confirmation_2026_07_11::NEE_16"
+    },
+    {
+      "after": {
+        "card_id": "NEE_10",
+        "node_id": "source_chat_lancey_lunch_and_pm_outreach_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_lancey_lunch_and_pm_outreach_2026_07_11::NEE_10"
+    },
+    {
+      "after": {
+        "card_id": "NEE_16",
+        "node_id": "source_chat_lancey_lunch_and_pm_outreach_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_lancey_lunch_and_pm_outreach_2026_07_11::NEE_16"
+    },
+    {
+      "after": {
+        "card_id": "NEE_06",
+        "node_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11::NEE_06"
+    },
+    {
+      "after": {
+        "card_id": "NEE_10",
+        "node_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11::NEE_10"
+    },
+    {
+      "after": {
+        "card_id": "NEE_16",
+        "node_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11::NEE_16"
+    },
+    {
+      "after": {
+        "card_id": "NEE_00",
+        "node_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_linkedin_person_name_spelling_rule_2026_07_11::NEE_00"
+    },
+    {
+      "after": {
+        "card_id": "NEE_15",
+        "node_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_linkedin_person_name_spelling_rule_2026_07_11::NEE_15"
+    },
+    {
+      "after": {
+        "card_id": "NEE_16",
+        "node_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_linkedin_person_name_spelling_rule_2026_07_11::NEE_16"
+    },
+    {
+      "after": {
+        "card_id": "NEE_99",
+        "node_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "role": "2026-07-11 governed chat-source route"
+      },
+      "object_type": "node_card_map",
+      "operation_type": "add",
+      "proposed_id": "node_card_map::source_chat_linkedin_person_name_spelling_rule_2026_07_11::NEE_99"
+    },
+    {
+      "after": {
+        "action_id": "action_chat_lancey_lunch_pm_product_leadership_2026_07_14",
+        "action_title": "Use Lancey lunch to validate Juno Beach PM priorities and Product Manager operating expectations",
+        "artifact_needed": "Private lunch notes plus a PM priority map with product lane, decision authority, reason to meet, sequence, and unresolved questions.",
+        "blocked_until": "No external blocker. Use Dan/Stephane/Andrew responses if received; otherwise use Lancey as the anchor and preserve unknowns.",
+        "created_at": "2026-07-11T20:30:00Z",
+        "decision_needed": "Identify the next 2–4 Juno Beach Product Managers to meet and pressure-test the business-value and fast-evidence expectations Rich/Chakra want Product Managers to apply.",
+        "due_date": "2026-07-14",
+        "lane": "NEA Product Management / Juno Beach",
+        "owner": "Amit",
+        "priority": "P1",
+        "recommended_next_step": "Ask Lancey where Product Managers need to get sharper on saying no, linking requests to business value, and moving faster with sufficient—not exhaustive—user evidence; ask which 2–4 Juno Beach peers should follow.",
+        "source_validation_id": "val_chat_juno_beach_pm_priority_map_p1",
+        "status": "open",
+        "supporting_context": "Lancey is user-confirmed as an NEA Product Manager with Juno Beach context. Lunch is scheduled for 2026-07-14. Amit already sent Dan, Stephane, and Andrew the PM-priority questions; no response is inferred."
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "p0_p1_action_register::action_chat_lancey_lunch_pm_product_leadership_2026_07_14"
+    },
+    {
+      "after": {
+        "allowed_use_before_validation": "Internal planning only. Lancey is confirmed; all other Juno Beach PM priorities remain unknown.",
+        "artifact_needed": "Named PM priority map with product lane, decision authority, evidence, relationship owner, and sequence.",
+        "card_route": "NEE_10",
+        "created_at": "2026-07-11T20:30:00Z",
+        "decision_needed": "Choose the next 2–4 PM relationships after Lancey without inferring location or decision rights from the roster alone.",
+        "due_date": "2026-07-14",
+        "lane": "NEA Product Management / Juno Beach",
+        "owner": "Dan / Stephane / Andrew",
+        "question": "Which 2–4 additional Juno Beach Product Managers should Amit prioritize after Lancey, and for each person what product lane, actual decision authority, reason to meet, and relationship sequence are supported?",
+        "sprint_item_id": "p1_chat_juno_beach_pm_priority_map_2026_07_11",
+        "status": "open",
+        "target_output": "A 2–4 person validated Juno Beach PM shortlist and rationale.",
+        "validation_id": "val_chat_juno_beach_pm_priority_map_p1"
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "p1_validation_sprint::p1_chat_juno_beach_pm_priority_map_2026_07_11"
+    },
+    {
+      "after": {
+        "allowed_use_before_validation": "Use only as attributed internal feedback and a candidate operating-model question; do not state as formal NEA policy or as true of every PM.",
+        "artifact_needed": "Validated PM operating-standard statement, decision test, and minimum viable discovery/evidence cadence.",
+        "card_route": "NEE_06",
+        "created_at": "2026-07-11T20:30:00Z",
+        "decision_needed": "Define the smallest consistent Product Manager decision standard that balances business value, cost/risk, and fast user evidence across Juno Beach and Saint Paul.",
+        "due_date": "2026-07-21",
+        "lane": "NEA Product Management operating model",
+        "owner": "Dan / Stephane / Andrew",
+        "question": "What exact Product Manager operating expectations do Rich and Chakra want applied consistently across Juno Beach and Saint Paul, including the minimum business-value case and minimum viable user evidence required before saying yes to a feature?",
+        "sprint_item_id": "p1_chat_pm_product_leadership_standard_2026_07_11",
+        "status": "open",
+        "target_output": "A concise Product Manager expectation model and explicit gaps PartnerAdvisory may help address.",
+        "validation_id": "val_chat_pm_product_leadership_and_fast_evidence_standard_p1"
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "p1_validation_sprint::p1_chat_pm_product_leadership_standard_2026_07_11"
+    },
+    {
+      "after": {
+        "best_validation_source": "Direct answers from Dan, Stephane, and Andrew; corroborate with current org/location data and Lancey during the 2026-07-14 lunch.",
+        "card_route": "NEE_10",
+        "claim_or_question": "Which 2–4 additional Juno Beach Product Managers should Amit prioritize after Lancey, and for each person what product lane, actual decision authority, reason to meet, and relationship sequence are supported?",
+        "created_at": "2026-07-11T20:30:00Z",
+        "current_allowed_use": "Internal relationship planning only; do not name additional Juno Beach PMs as confirmed.",
+        "current_confidence": "low beyond Lancey",
+        "delete_or_hide_if": "Remove a candidate from the priority map if current accountable sources contradict location, role, or priority.",
+        "internal_doc_needed": "Current NEA Product Manager org/location roster or accountable-owner confirmation.",
+        "linked_validation_id": "val_chat_juno_beach_pm_priority_map_p1",
+        "owner_confirmation_needed": "Yes — Dan / Stephane / Andrew, with Lancey as a corroborating Product Manager source.",
+        "promote_to_high_if": "Accountable leadership directly confirms person, current lane, decision authority, and priority.",
+        "promote_to_medium_if": "Two internal sources agree on person, product lane, and Juno Beach context.",
+        "request_id": "src_req_chat_juno_beach_pm_priority_map_2026_07_11",
+        "web_search_allowed": "No for internal location and decision-right facts; LinkedIn may verify spelling only after identity match."
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "source_request_matrix::src_req_chat_juno_beach_pm_priority_map_2026_07_11"
+    },
+    {
+      "after": {
+        "best_validation_source": "Direct Rich/Chakra expectation through Dan, Stephane, and Andrew, plus accountable PM/engineering leader confirmation and examples.",
+        "card_route": "NEE_06",
+        "claim_or_question": "What exact Product Manager operating expectations do Rich and Chakra want applied consistently across Juno Beach and Saint Paul, including the minimum business-value case and minimum viable user evidence required before saying yes to a feature?",
+        "created_at": "2026-07-11T20:30:00Z",
+        "current_allowed_use": "Internal hypothesis and meeting question only.",
+        "current_confidence": "medium as attributed feedback; unknown as formal standard",
+        "delete_or_hide_if": "Hide or supersede the attributed interpretation if direct feedback contradicts the meaning, scope, or attribution.",
+        "internal_doc_needed": "Any current NEA PM role expectations, prioritization rubric, research/discovery cadence, or decision-rights artifact.",
+        "linked_validation_id": "val_chat_pm_product_leadership_and_fast_evidence_standard_p1",
+        "owner_confirmation_needed": "Yes — Dan / Stephane / Andrew; Rich/Chakra or delegated accountable leader for formalization.",
+        "promote_to_high_if": "Rich/Chakra or an explicitly delegated accountable leader approves the exact operating standard and scope.",
+        "promote_to_medium_if": "Two internal leaders corroborate the same expectation and scope.",
+        "request_id": "src_req_chat_pm_product_leadership_standard_2026_07_11",
+        "web_search_allowed": "External product-management research may inform options but cannot establish NEA policy or Rich/Chakra expectations."
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "source_request_matrix::src_req_chat_pm_product_leadership_standard_2026_07_11"
+    },
+    {
+      "after": {
+        "cards_touched": "NEE_00, NEE_06, NEE_10, NEE_15, NEE_16, NEE_99",
+        "claims_added": 5,
+        "created_at": "2026-07-11T20:30:00Z",
+        "edges_added": 5,
+        "event_date": "2026-07-11",
+        "event_id": "ingest_chat_pm_product_leadership_2026_07_11",
+        "hitl_flags_added": 2,
+        "nodes_added": 4,
+        "proposed_plan_ref": "governance/proposals/G1_PM_PRODUCT_LEADERSHIP_JUNO_BEACH_2026_07_11.json",
+        "source_label": "User chat — Lancey, Juno Beach PM priorities, Rich/UX feedback, and LinkedIn spelling rule",
+        "source_posture": "Four governed chat-source records; exact user confirmation, private action context, attributed feedback, and explicit user instruction are kept separate.",
+        "summary": "Proposes 4 sources/source nodes, 2 node updates, 5 edges, 5 claims, 2 validations plus one validation wording update, 11 routes, and supporting execution registers. Existing Colleen roster assignments are not re-ingested."
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "daily_ingest_event::ingest_chat_pm_product_leadership_2026_07_11"
+    },
+    {
+      "after": {
+        "allowed_use_before_validation": "Internal use within the exact confirmed/instructed scope.",
+        "card_id": "NEE_10",
+        "claim_id": "claim_chat_lancey_is_nea_product_manager_2026_07_11",
+        "claim_text": "Amit directly confirmed on 2026-07-11 that Lancey Lexima is an NEA Product Manager. This exact confirmation does not independently establish charter-specific decision rights or update every undated roster assignment.",
+        "confidence": "confirmed",
+        "confidence_definition": "User/source-confirmed within the exact stated authority posture.",
+        "confidence_score": 1.0,
+        "created_at": "2026-07-11T20:30:00Z",
+        "delete_or_hide_if": "Supersede only if the user corrects the exact proposition or policy instruction.",
+        "evidence_posture": "user-confirmed exact proposition",
+        "hitl_required": 0,
+        "hitl_review_gate": "not_required",
+        "hitl_review_reason": "Exact user-confirmed proposition or explicit user instruction within a narrow authority boundary.",
+        "linked_validation_ids": null,
+        "linked_validation_questions": null,
+        "materiality": "high",
+        "promote_to_high_if": "Already confirmed within the stated boundary; broader propositions require separate evidence.",
+        "promote_to_medium_if": "Already confirmed within the stated boundary.",
+        "required_evidence": "Exact user statement and bounded source posture.",
+        "required_validation_route": "No additional factual validation for the exact proposition; canonical mutation remains blocked by G1/C1 approval.",
+        "source_authority_rank": 4,
+        "source_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "source_name": "User confirmation — Lancey NEA Product Manager and Juno Beach context",
+        "source_posture": "User-confirmed exact propositions in chat: Lancey Lexima is an NEA Product Manager and has Juno Beach context as of 2026-07-11. Authoritative only for those propositions; does not establish permanent office, charter-specific decision rights, reporting changes, or any other Product Manager location.",
+        "subject_name": "Lancey Lexima",
+        "subject_node_id": "stakeholder_lancey_lexima",
+        "subject_type": "stakeholder",
+        "validation_due_dates": null,
+        "validation_needed": 0,
+        "validation_owner": "Amit",
+        "validation_priority": null
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "claim_confidence_hitl_matrix::claim_chat_lancey_is_nea_product_manager_2026_07_11"
+    },
+    {
+      "after": {
+        "allowed_use_before_validation": "Internal use within the exact confirmed/instructed scope.",
+        "card_id": "NEE_10",
+        "claim_id": "claim_chat_lancey_juno_beach_context_2026_07_11",
+        "claim_text": "Amit directly confirmed Lancey Lexima’s Juno Beach context on 2026-07-11. Use this for relationship planning and the July 14 lunch; do not infer permanent office status or another person’s location.",
+        "confidence": "confirmed",
+        "confidence_definition": "User/source-confirmed within the exact stated authority posture.",
+        "confidence_score": 1.0,
+        "created_at": "2026-07-11T20:30:00Z",
+        "delete_or_hide_if": "Supersede only if the user corrects the exact proposition or policy instruction.",
+        "evidence_posture": "user-confirmed exact proposition",
+        "hitl_required": 0,
+        "hitl_review_gate": "not_required",
+        "hitl_review_reason": "Exact user-confirmed proposition or explicit user instruction within a narrow authority boundary.",
+        "linked_validation_ids": null,
+        "linked_validation_questions": null,
+        "materiality": "high",
+        "promote_to_high_if": "Already confirmed within the stated boundary; broader propositions require separate evidence.",
+        "promote_to_medium_if": "Already confirmed within the stated boundary.",
+        "required_evidence": "Exact user statement and bounded source posture.",
+        "required_validation_route": "No additional factual validation for the exact proposition; canonical mutation remains blocked by G1/C1 approval.",
+        "source_authority_rank": 4,
+        "source_id": "source_chat_lancey_role_location_confirmation_2026_07_11",
+        "source_name": "User confirmation — Lancey NEA Product Manager and Juno Beach context",
+        "source_posture": "User-confirmed exact propositions in chat: Lancey Lexima is an NEA Product Manager and has Juno Beach context as of 2026-07-11. Authoritative only for those propositions; does not establish permanent office, charter-specific decision rights, reporting changes, or any other Product Manager location.",
+        "subject_name": "Lancey Lexima",
+        "subject_node_id": "stakeholder_lancey_lexima",
+        "subject_type": "stakeholder",
+        "validation_due_dates": null,
+        "validation_needed": 0,
+        "validation_owner": "Amit",
+        "validation_priority": null
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "claim_confidence_hitl_matrix::claim_chat_lancey_juno_beach_context_2026_07_11"
+    },
+    {
+      "after": {
+        "allowed_use_before_validation": "Internal attributed hypothesis only; not formal policy or population-wide fact.",
+        "card_id": "NEE_06",
+        "claim_id": "claim_chat_rich_pm_product_leadership_gap_2026_07_11",
+        "claim_text": "Amit attributes to Rich Argentieri a concern that some NEA Product Managers are acting as feature-intake owners rather than product leaders and may approve requests such as “leather seats” without first testing cost-out, reliability, adoption, risk, or measurable business value.",
+        "confidence": "medium",
+        "confidence_definition": "Dated user-attributed internal feedback; requires corroboration for formal or population-wide use.",
+        "confidence_score": 0.65,
+        "created_at": "2026-07-11T20:30:00Z",
+        "delete_or_hide_if": "Hide, supersede, or retain only as historical/source-attributed if direct evidence contradicts attribution, scope, or currentness.",
+        "evidence_posture": "user-attributed internal feedback; not formal NEA policy",
+        "hitl_required": 1,
+        "hitl_review_gate": "required",
+        "hitl_review_reason": "Required before formal/current-state use because attribution, population scope, and target operating standard are unvalidated.",
+        "linked_validation_ids": "val_chat_pm_product_leadership_and_fast_evidence_standard_p1",
+        "linked_validation_questions": "What exact Product Manager operating expectations do Rich and Chakra want applied consistently across Juno Beach and Saint Paul, including the minimum business-value case and minimum viable user evidence required before saying yes to a feature?",
+        "materiality": "high",
+        "promote_to_high_if": "Accountable leadership confirms the exact wording, scope, and currentness.",
+        "promote_to_medium_if": "Two current internal sources corroborate the same proposition and scope.",
+        "required_evidence": "Direct accountable-owner confirmation, current internal artifacts, and concrete examples.",
+        "required_validation_route": "Dan / Stephane / Andrew; accountable NEA leadership for formalization.",
+        "source_authority_rank": 4,
+        "source_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "source_name": "User-attributed feedback — Rich PM leadership gap and UX research cadence",
+        "source_posture": "Amit-attributed internal feedback. Strong evidence that Amit reported the feedback; not independent proof that Rich used the exact wording, that the condition applies to every Product Manager, or that it is formal NEA policy. Humanity / UX team identity, frequency, target standard, and currentness require validation.",
+        "subject_name": "NEA product manager role pattern",
+        "subject_node_id": "role_nea_product_manager",
+        "subject_type": "role_group",
+        "validation_due_dates": "2026-07-21",
+        "validation_needed": 1,
+        "validation_owner": "Dan / Stephane / Andrew",
+        "validation_priority": "P1"
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "claim_confidence_hitl_matrix::claim_chat_rich_pm_product_leadership_gap_2026_07_11"
+    },
+    {
+      "after": {
+        "allowed_use_before_validation": "Internal attributed hypothesis only; not formal policy or population-wide fact.",
+        "card_id": "NEE_06",
+        "claim_id": "claim_chat_nea_ux_research_cadence_constraint_2026_07_11",
+        "claim_text": "Amit reports that Humanity / UX Product Managers can take longer to complete user research and field studies than NEA's current tempo allows. The responsible team identity, frequency, acceptable minimum evidence, and target operating standard remain unvalidated.",
+        "confidence": "medium",
+        "confidence_definition": "Dated user-attributed internal feedback; requires corroboration for formal or population-wide use.",
+        "confidence_score": 0.65,
+        "created_at": "2026-07-11T20:30:00Z",
+        "delete_or_hide_if": "Hide, supersede, or retain only as historical/source-attributed if direct evidence contradicts attribution, scope, or currentness.",
+        "evidence_posture": "user-reported internal data point; scope and attribution require validation",
+        "hitl_required": 1,
+        "hitl_review_gate": "required",
+        "hitl_review_reason": "Required before formal/current-state use because attribution, population scope, and target operating standard are unvalidated.",
+        "linked_validation_ids": "val_chat_pm_product_leadership_and_fast_evidence_standard_p1",
+        "linked_validation_questions": "What exact Product Manager operating expectations do Rich and Chakra want applied consistently across Juno Beach and Saint Paul, including the minimum business-value case and minimum viable user evidence required before saying yes to a feature?",
+        "materiality": "high",
+        "promote_to_high_if": "Accountable leadership confirms the exact wording, scope, and currentness.",
+        "promote_to_medium_if": "Two current internal sources corroborate the same proposition and scope.",
+        "required_evidence": "Direct accountable-owner confirmation, current internal artifacts, and concrete examples.",
+        "required_validation_route": "Dan / Stephane / Andrew; accountable NEA leadership for formalization.",
+        "source_authority_rank": 4,
+        "source_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "source_name": "User-attributed feedback — Rich PM leadership gap and UX research cadence",
+        "source_posture": "Amit-attributed internal feedback. Strong evidence that Amit reported the feedback; not independent proof that Rich used the exact wording, that the condition applies to every Product Manager, or that it is formal NEA policy. Humanity / UX team identity, frequency, target standard, and currentness require validation.",
+        "subject_name": "Co-hydrated PartnerAdvisory / NEA operating model",
+        "subject_node_id": "model_cohydrated_operating_model",
+        "subject_type": "operating_model",
+        "validation_due_dates": "2026-07-21",
+        "validation_needed": 1,
+        "validation_owner": "Dan / Stephane / Andrew",
+        "validation_priority": "P1"
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "claim_confidence_hitl_matrix::claim_chat_nea_ux_research_cadence_constraint_2026_07_11"
+    },
+    {
+      "after": {
+        "allowed_use_before_validation": "Internal use within the exact confirmed/instructed scope.",
+        "card_id": "NEE_15",
+        "claim_id": "claim_chat_linkedin_display_name_spelling_authority_2026_07_11",
+        "claim_text": "For a correctly resolved person/profile match, use the LinkedIn profile display name as the canonical personal-name spelling. A URL slug, search snippet, nickname/full-name similarity, or candidate profile does not prove spelling or identity; the rule does not establish role, affiliation, reporting line, ownership, decision rights, or currentness.",
+        "confidence": "confirmed",
+        "confidence_definition": "User/source-confirmed within the exact stated authority posture.",
+        "confidence_score": 1.0,
+        "created_at": "2026-07-11T20:30:00Z",
+        "delete_or_hide_if": "Supersede only if the user corrects the exact proposition or policy instruction.",
+        "evidence_posture": "explicit user instruction; policy activation pending exact G1/C1 approval",
+        "hitl_required": 0,
+        "hitl_review_gate": "not_required",
+        "hitl_review_reason": "Exact user-confirmed proposition or explicit user instruction within a narrow authority boundary.",
+        "linked_validation_ids": null,
+        "linked_validation_questions": null,
+        "materiality": "high",
+        "promote_to_high_if": "Already confirmed within the stated boundary; broader propositions require separate evidence.",
+        "promote_to_medium_if": "Already confirmed within the stated boundary.",
+        "required_evidence": "Exact user statement and bounded source posture.",
+        "required_validation_route": "No additional factual validation for the exact proposition; canonical mutation remains blocked by G1/C1 approval.",
+        "source_authority_rank": 4,
+        "source_id": "source_chat_linkedin_person_name_spelling_rule_2026_07_11",
+        "source_name": "User instruction — LinkedIn display name controls personal-name spelling",
+        "source_posture": "Explicit user instruction for NEE identity handling. Authoritative for the proposed spelling rule only: after the person/profile match is correctly resolved, the LinkedIn profile display name controls spelling. It does not make URL slugs authoritative, prove identity equivalence, or establish role, affiliation, reporting line, ownership, decision rights, or currentness. Activation requires exact G1/C1 approval.",
+        "subject_name": "v25 canonical stakeholder-name policy",
+        "subject_node_id": "control_v25_canonical_alias_policy",
+        "subject_type": "control_protocol",
+        "validation_due_dates": null,
+        "validation_needed": 0,
+        "validation_owner": "Amit",
+        "validation_priority": null
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "claim_confidence_hitl_matrix::claim_chat_linkedin_display_name_spelling_authority_2026_07_11"
+    },
+    {
+      "after": {
+        "allowed_use_before_validation": "Internal attributed hypothesis only; not formal policy or population-wide fact.",
+        "card_id": "NEE_06",
+        "claim_id": "claim_chat_rich_pm_product_leadership_gap_2026_07_11",
+        "claim_text": "Amit attributes to Rich Argentieri a concern that some NEA Product Managers are acting as feature-intake owners rather than product leaders and may approve requests such as “leather seats” without first testing cost-out, reliability, adoption, risk, or measurable business value.",
+        "confidence": "medium",
+        "confidence_score": 0.65,
+        "created_at": "2026-07-11T20:30:00Z",
+        "hitl_required": 1,
+        "hitl_review_gate": "required",
+        "hitl_review_reason": "Required before formal/current-state use because attribution, population scope, and target operating standard are unvalidated.",
+        "linked_validation_ids": "val_chat_pm_product_leadership_and_fast_evidence_standard_p1",
+        "linked_validation_questions": "What exact Product Manager operating expectations do Rich and Chakra want applied consistently across Juno Beach and Saint Paul, including the minimum business-value case and minimum viable user evidence required before saying yes to a feature?",
+        "materiality": "high",
+        "required_evidence": "Direct accountable-owner confirmation, current internal artifacts, and concrete examples.",
+        "required_validation_route": "Dan / Stephane / Andrew; accountable NEA leadership for formalization.",
+        "review_id": "review_claim_chat_rich_pm_product_leadership_gap_2026_07_11",
+        "review_sort_order": "P1|high|2026-07-21|claim_chat_rich_pm_product_leadership_gap_2026_07_11",
+        "source_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "source_name": "User-attributed feedback — Rich PM leadership gap and UX research cadence",
+        "source_posture": "Amit-attributed internal feedback. Strong evidence that Amit reported the feedback; not independent proof that Rich used the exact wording, that the condition applies to every Product Manager, or that it is formal NEA policy. Humanity / UX team identity, frequency, target standard, and currentness require validation.",
+        "subject_name": "NEA product manager role pattern",
+        "validation_due_dates": "2026-07-21",
+        "validation_owner": "Dan / Stephane / Andrew",
+        "validation_priority": "P1"
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "claim_hitl_validation_queue::claim_chat_rich_pm_product_leadership_gap_2026_07_11"
+    },
+    {
+      "after": {
+        "allowed_use_before_validation": "Internal attributed hypothesis only; not formal policy or population-wide fact.",
+        "card_id": "NEE_06",
+        "claim_id": "claim_chat_nea_ux_research_cadence_constraint_2026_07_11",
+        "claim_text": "Amit reports that Humanity / UX Product Managers can take longer to complete user research and field studies than NEA's current tempo allows. The responsible team identity, frequency, acceptable minimum evidence, and target operating standard remain unvalidated.",
+        "confidence": "medium",
+        "confidence_score": 0.65,
+        "created_at": "2026-07-11T20:30:00Z",
+        "hitl_required": 1,
+        "hitl_review_gate": "required",
+        "hitl_review_reason": "Required before formal/current-state use because attribution, population scope, and target operating standard are unvalidated.",
+        "linked_validation_ids": "val_chat_pm_product_leadership_and_fast_evidence_standard_p1",
+        "linked_validation_questions": "What exact Product Manager operating expectations do Rich and Chakra want applied consistently across Juno Beach and Saint Paul, including the minimum business-value case and minimum viable user evidence required before saying yes to a feature?",
+        "materiality": "high",
+        "required_evidence": "Direct accountable-owner confirmation, current internal artifacts, and concrete examples.",
+        "required_validation_route": "Dan / Stephane / Andrew; accountable NEA leadership for formalization.",
+        "review_id": "review_claim_chat_nea_ux_research_cadence_constraint_2026_07_11",
+        "review_sort_order": "P1|high|2026-07-21|claim_chat_nea_ux_research_cadence_constraint_2026_07_11",
+        "source_id": "source_chat_rich_pm_leadership_and_ux_timing_feedback_2026_07_11",
+        "source_name": "User-attributed feedback — Rich PM leadership gap and UX research cadence",
+        "source_posture": "Amit-attributed internal feedback. Strong evidence that Amit reported the feedback; not independent proof that Rich used the exact wording, that the condition applies to every Product Manager, or that it is formal NEA policy. Humanity / UX team identity, frequency, target standard, and currentness require validation.",
+        "subject_name": "Co-hydrated PartnerAdvisory / NEA operating model",
+        "validation_due_dates": "2026-07-21",
+        "validation_owner": "Dan / Stephane / Andrew",
+        "validation_priority": "P1"
+      },
+      "object_type": "register_row",
+      "operation_type": "add",
+      "proposed_id": "claim_hitl_validation_queue::claim_chat_nea_ux_research_cadence_constraint_2026_07_11"
+    },
+    {
+      "after": [
+        {
+          "count": 95,
+          "metric": "confidence",
+          "value": "confirmed"
+        },
+        {
+          "count": 200,
+          "metric": "confidence",
+          "value": "high"
+        },
+        {
+          "count": 5,
+          "metric": "confidence",
+          "value": "low"
+        },
+        {
+          "count": 105,
+          "metric": "confidence",
+          "value": "medium"
+        },
+        {
+          "count": 94,
+          "metric": "confidence",
+          "value": "medium-high"
+        },
+        {
+          "count": 21,
+          "metric": "confidence",
+          "value": "superseded"
+        },
+        {
+          "count": 16,
+          "metric": "hitl_review_gate",
+          "value": "HITL required before external/current-state use"
+        },
+        {
+          "count": 1,
+          "metric": "hitl_review_gate",
+          "value": "P0 external-use block"
+        },
+        {
+          "count": 37,
+          "metric": "hitl_review_gate",
+          "value": "blocked"
+        },
+        {
+          "count": 140,
+          "metric": "hitl_review_gate",
+          "value": "not_required"
+        },
+        {
+          "count": 62,
+          "metric": "hitl_review_gate",
+          "value": "recommended"
+        },
+        {
+          "count": 264,
+          "metric": "hitl_review_gate",
+          "value": "required"
+        },
+        {
+          "count": 83,
+          "metric": "materiality",
+          "value": "critical"
+        },
+        {
+          "count": 364,
+          "metric": "materiality",
+          "value": "high"
+        },
+        {
+          "count": 60,
+          "metric": "materiality",
+          "value": "medium"
+        },
+        {
+          "count": 13,
+          "metric": "materiality",
+          "value": "medium-high"
+        },
+        {
+          "count": 520,
+          "metric": "total_claims",
+          "value": "all"
+        },
+        {
+          "count": 149,
+          "metric": "validation_needed",
+          "value": "0"
+        },
+        {
+          "count": 371,
+          "metric": "validation_needed",
+          "value": "1"
+        },
+        {
+          "count": 17,
+          "metric": "validation_priority",
+          "value": "P0"
+        },
+        {
+          "count": 282,
+          "metric": "validation_priority",
+          "value": "P1"
+        },
+        {
+          "count": 1,
+          "metric": "validation_priority",
+          "value": "P1 currentness validation"
+        },
+        {
+          "count": 66,
+          "metric": "validation_priority",
+          "value": "P2"
+        },
+        {
+          "count": 2,
+          "metric": "validation_priority",
+          "value": "P2 currentness validation"
+        },
+        {
+          "count": 2,
+          "metric": "validation_priority",
+          "value": "P3"
+        },
+        {
+          "count": 1,
+          "metric": "validation_priority",
+          "value": "external-safe wording verification"
+        },
+        {
+          "count": 149,
+          "metric": "validation_priority",
+          "value": "none"
+        }
+      ],
+      "object_type": "controlled_state",
+      "operation_type": "update",
+      "proposed_id": "controlled_state::claim_confidence_hitl_summary"
+    }
+  ],
+  "actual_operations_sha256": "443608e3987e59be6a1ecdb62859a6f9bb7120fbabcdc2646ead81def9dcbdd4",
+  "approval_decision_id": "AD-47.2-PM-PRODUCT-LEADERSHIP-JUNO-BEACH",
+  "approved_g1_digest": "8ca1e7c0e878411c9188315cd82cc32f531516c1bf3477e4252c5deb2188efdc",
+  "exact_match": true,
+  "generated_at": "2026-07-11T21:02:00Z",
+  "implementation_id": "I1-V47.2-PM-PRODUCT-LEADERSHIP-JUNO-BEACH-2026-07-11",
+  "implementation_normalization": [
+    "FTS tables regenerated deterministically",
+    "SQLite physical bytes may differ; semantic rows and schema conform exactly"
+  ],
+  "unapproved_operations": []
+}

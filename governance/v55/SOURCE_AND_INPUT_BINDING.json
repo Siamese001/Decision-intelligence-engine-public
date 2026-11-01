@@ -1,0 +1,17 @@
+{
+  "baseline_zip": {
+    "filename": "NEE_v54.0_edo_authority_boundary_HITL(2).zip",
+    "sha256": "608409bdc6a092b86cd10a877af70789efb1b227aa4c1d93c11f1ad990b15c00"
+  },
+  "decision_id": "PD-55-SYNTHESIS-HITL-CLARIFICATION-PROMPTS",
+  "input_artifact_hashes": {
+    "user_approval_2026-07-14": "595ab907966095efb898df88b9c34655c4f7652d40cf89b1452518d18397db5f",
+    "user_instruction_2026-07-14": "0508c2f43a6bb00691b364cd78e858f20bb5279530bedc9f06beae3bd49b4855"
+  },
+  "proposal_hashes": {
+    "C1": "d6ed976c73c17bc99ab86fe3a775ab9610755dcd6eacdf6a1207005900101d7a",
+    "G1": "c0b3d1687b29caa8fc8714b44b7381c699473e0fd7252c24d1394dcfece621e7",
+    "G1_Gate_O1": "ed76033b149f883ae5d93cbcc730a2b205a7f9c26999cefaab3127687a3f49af"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "decision_intelligence_temporal_observation_contract",
+  "contract_id": "nee-decision-intelligence-temporal-observations",
+  "contract_version": "2026-08-10.2",
+  "status": "IMPLEMENTED_PROVIDER_FREE_W5_GUARDED",
+  "purpose": "Define immutable, source-bound observations for project status, readiness, decisions, dependencies, metrics, adoption, and value without turning a dated observation into a timeless fact.",
+  "observation_dimensions": [
+    "delivery",
+    "schedule",
+    "scope",
+    "capacity",
+    "readiness",
+    "adoption",
+    "value",
+    "dependency",
+    "decision"
+  ],
+  "required_fields": [
+    "observation_id",
+    "scope_id",
+    "dimension",
+    "value",
+    "observed_at",
+    "recorded_at",
+    "source_as_of",
+    "stale_after",
+    "valid_from",
+    "valid_to",
+    "superseded_at",
+    "superseded_by",
+    "source_assertion_ids",
+    "classification",
+    "audiences"
+  ],
+  "temporal_rules": [
+    "observed_at, recorded_at, source_as_of, stale_after, valid_from, valid_to, and superseded_at use ISO-8601 dates or timestamps.",
+    "valid_from <= observed_at <= stale_after.",
+    "valid_to is null for an open interval or is >= valid_from.",
+    "recorded_at >= observed_at and source_as_of <= recorded_at.",
+    "superseded_by requires superseded_at; superseded observations are never selected as current.",
+    "A missing observation is STALE_OR_UNKNOWN, not green.",
+    "An expired observation is STALE_OR_UNKNOWN, not current.",
+    "A projection requires an authenticated principal, a closed-world audience, an immutable source-assertion registry, and a known_at cutoff.",
+    "An observation is unavailable when recorded_at, source availability, or source_as_of is after known_at, or when a source has been revoked at known_at.",
+    "Any current observations with different values are CONFLICT until explicit supersession; a later timestamp alone is not resolution."
+  ],
+  "state_values": [
+    "CURRENT",
+    "STALE_OR_UNKNOWN",
+    "CONFLICT",
+    "FUTURE",
+    "SUPERSEDED"
+  ],
+  "projection_rules": {
+    "current": "After W5 source, access, and known_at filtering, select the latest non-superseded observation whose valid interval contains the query time and whose stale_after is not before the query time.",
+    "history": "Return all source-bound observations for the scope and dimension ordered by observed_at, recorded_at, and observation_id.",
+    "missing": "Return STALE_OR_UNKNOWN with no fabricated value.",
+    "expired": "Return STALE_OR_UNKNOWN and expose the stale_after timestamp.",
+    "conflict": "Return CONFLICT, expose all conflicting observation IDs and values, and require review before a recommendation treats one as authoritative."
+  },
+  "graph_migration_posture": {
+    "current_graph_action": "NO_MUTATION_IN_W3",
+    "target_storage": "typed status_observation and metric_observation records linked to canonical source evidence",
+    "derived_status_policy": "Current status projections remain derived views over observations; they are not mutable properties on project nodes."
+  },
+  "gate": {
+    "provider_calls_allowed": 0,
+    "graph_mutations_allowed": 0,
+    "release_activation_allowed": false,
+    "required_cases": [
+      "current observation",
+      "history with multiple dated observations",
+      "expired observation",
+      "missing observation",
+      "same-time conflicting observations",
+      "superseded observation",
+      "future observation"
+    ],
+    "w5_dependency": "W5_TRUST_FOUNDATION_CONTRACT.json"
+  }
+}
